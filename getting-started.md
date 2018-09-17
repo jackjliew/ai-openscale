@@ -19,16 +19,6 @@ lastupdated: "2018-9-14"
 This topic provides reference material and first steps to help you get started using {{site.data.keyword.aios_full}}.
 {: shortdesc}
 
-## Try the {{site.data.keyword.aios_short}} demo
-{: #gs-view-demo}
-
-Experience the look and feel of {{site.data.keyword.aios_short}} by viewing an [interactive demonstration **NEED URL FROM ERIC M**]().
-
-## View the {{site.data.keyword.aios_short}} video
-{: #gs-view-demo}
-
-See a short video about {{site.data.keyword.aios_short}} [here **NEED URL FROM ERIC M**]().
-
 ## Complete the tutorial (recommended)
 {: #gs-tutorial}
 
