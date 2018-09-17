@@ -1,0 +1,41 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="ai-openscale" audience="service" href="/docs/services/ai-openscale/getting-started.html"}
+AI OpenScale
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    tutorial.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Configuring AI OpenScale
+        connect-db.md
+        connect-wml.md
+        connect-deploy.md
+
+    {: .topicgroup}
+    Working with monitors
+        monitor-overview.md        
+        monitor-fairness.md
+        monitor-accuracy.md
+        monitor-explain.md
+
+    {: .topicgroup}
+    Viewing and editing monitor data
+        insight-overview.md
+        insight-timechart.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API reference](https://console.bluemix.net/apidocs/ai-openscale)
+    information-security.md
+    [Watson GitHub repos](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+    {: .navgroup-end}
