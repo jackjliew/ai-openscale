@@ -22,12 +22,12 @@ This topic provides reference material and first steps to help you get started u
 ## Complete the tutorial (recommended)
 {: #gs-tutorial}
 
-A full list of prerequisites, along with step-by-step instructions for provisioning {{site.data.keyword.Bluemix_notm}} machine learning and data services, creating and deploying machine learning models, and configuring the new {{site.data.keyword.aios_full}} service to monitor your models for trust and transparency, can be [found in the tutorial](tutorial.html).
+A full list of prerequisites, along with step-by-step instructions for provisioning {{site.data.keyword.Bluemix_notm}} machine learning and data services, creating and deploying machine learning models, and configuring the new {{site.data.keyword.aios_full}} service to monitor your models for trust and transparency, can be [found in the tutorial](/docs/services/ai-openscale/tutorial.html).
 
 ## Manual configuration
 {: #gs-prereqs}
 
-The following steps outline the process that is required to configure {{site.data.keyword.aios_short}} using your own data and models. It is recommended that you [complete the tutorial[(tutorial.html) to become familiar with the process. ***At a minimum***, you will need:
+The following steps outline the process that is required to configure {{site.data.keyword.aios_short}} using your own data and models. It is recommended that you [complete the tutorial[(/docs/services/tutorial.html) to become familiar with the process. ***At a minimum***, you will need:
 
 1.  An {{site.data.keyword.aios_short}} service instance.
 
@@ -57,9 +57,9 @@ The following steps outline the process that is required to configure {{site.dat
 
     - The model can be any type (Spark ML, Deep learning, etc.), and should have an output schema defined.
 
-    - The model training data must be available in either Cloud Object Storage, or in Db2. Access to the training data is not mandatory, but without it you will not be able to configure bias checking. See [Configuring the Fairness monitor](monitor-fairness.html#config-fair) for more details.
+    - The model training data must be available in either Cloud Object Storage, or in Db2. Access to the training data is not mandatory, but without it you will not be able to configure bias checking. See [Configuring the Fairness monitor](/docs/services/ai-openscale/monitor-fairness.html#config-fair) for more details.
 
-    - If the model is accepting structured data as input, the model training data must be available in either Cloud Object Storage, or in Db2 for explainability to work. See [Configuring the Explainability monitor](monitor-explain.html#config-explain)
+    - If the model is accepting structured data as input, the model training data must be available in either Cloud Object Storage, or in Db2 for explainability to work. See [Configuring the Explainability monitor](/docs/services/ai-openscale/monitor-explain.html#config-explain)
 
     - If your model is deployed in any serve environment other than WML, you must wrap the scoring endpoint of the model in a Python function, and deploy this Python function in WML. You will also need to have the training data of your model available in Db2 or Cloud Object Storage to monitor bias for your model. Explainability and accuracy is not supported for Python functions. See more information in the [AI OpenScale Python client documentation](http://ai-openscale-python-client.mybluemix.net/).
 
@@ -110,5 +110,5 @@ You have successfully configured {{site.data.keyword.aios_short}}.
 ## Next steps
 {: #gs-next-steps}
 
-- [Configure monitors](monitor-overview.html) for each deployment you selected.
-- [View monitored data](insight-overview) in the {{site.data.keyword.aios_short}} dashboard.
+- [Configure monitors](/docs/services/ai-openscale/monitor-overview.html) for each deployment you selected.
+- [View monitored data](/docs/services/ai-openscale/insight-overview.html) in the {{site.data.keyword.aios_short}} dashboard.
