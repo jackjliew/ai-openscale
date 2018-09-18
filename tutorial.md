@@ -46,7 +46,7 @@ Login to your [IBM Cloud account](https://console.bluemix.net) with your IBM ID.
 
 ### Provision a Machine Learning service
 
-- If you do not already have a Machine Learning service associated with your account, click the **Create Resource** button or the **Catalog** menu item, filter on "Machine Learning" and click the **Machine Learning** tile:
+- If you do not already have a Machine Learning service associated with your account, click the **Create Resource** button or the **Catalog** menu item, then filter on "Machine Learning" and click the **Machine Learning** tile:
 
   ![Machine Learning](images/machine_learning.png)
   
