@@ -160,8 +160,8 @@ From the project settings tab, select **Add service** again and choose **Spark**
 
 Download the following files:
 
-- [CARS4U-Action-Recommendation-Spark.ipynb](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale)
-- [CARS4U-Business-Area-Prediction-Spark.ipynb](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale)
+- [CARS4U-Action-Recommendation-Spark.ipynb](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/CARS4U-Action-Recommendation-Spark.ipynb)
+- [CARS4U-Business-Area-Prediction-Spark.ipynb](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/CARS4U-Business-Area-Prediction-Spark.ipynb)
 
 In Watson Studio, select the **Assets** tab of your project, scroll down to the **Notebooks** section, and click the **New Notebook** button:
 
@@ -181,8 +181,8 @@ Click **Create Notebook**. Now repeat these steps for the other Spark notebook, 
 
 Download the following files:
 
-- [CARS4U-Business-Area-and-Action-AI-function.ipynb](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale)
-- [CARS4U-Satisfaction-Prediction-Keras-AI-function.ipynb](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale)
+- [CARS4U-Business-Area-and-Action-AI-function.ipynb](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/CARS4U-Business-Area-and-Action-AI-function.ipynb)
+- [CARS4U-Satisfaction-Prediction-Keras-AI-function.ipynb](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/CARS4U-Satisfaction-Prediction-Keras-AI-function.ipynb)
 
 Follow the same steps as above to add these notebooks to your project. However, use the default Python 3.5 XS runtime for them instead of your Spark instance:
 
