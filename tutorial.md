@@ -102,7 +102,7 @@ Open your existing (or newly-created) Db2 Warehouse instance and click on **Serv
 
 ### Upload training and feedback data to Db2 Warehouse
 
-Download the [car_rental_feedback_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale) and [car_rental_training_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale) files.
+Download the [car_rental_feedback_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/car_rental_feedback_data.csv) and [car_rental_training_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/car_rental_training_data.csv) files.
 
 Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console](https://console.bluemix.net), click **Manage** from the left side panel, and the click the green **Open** button.
 
