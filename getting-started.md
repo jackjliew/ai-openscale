@@ -32,7 +32,7 @@ A full list of prerequisites, along with step-by-step instructions for provision
 ## Manual configuration
 {: #gs-prereqs}
 
-The following steps outline the process that is required to configure {{site.data.keyword.aios_short}} using your own data and models. It is recommended that you [complete the tutorial[(/docs/services/ai-openscale/tutorial.html) to become familiar with the process. ***At a minimum***, you will need:
+The following steps outline the process that is required to configure {{site.data.keyword.aios_short}} using your own data and models. It is recommended that you [complete the tutorial](/docs/services/ai-openscale/tutorial.html) to become familiar with the process. ***At a minimum***, you will need:
 
 1.  An {{site.data.keyword.aios_short}} service instance.
 
