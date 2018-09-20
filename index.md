@@ -19,7 +19,7 @@ lastupdated: "2018-9-19"
 
 # About
 
-{{site.data.keyword.aios_full}} is an enterprise-grade environment for AI-infused applications, providing enterprises visibility into how AI is being built, used, and delivering return on investment at the scale of your business.
+{{site.data.keyword.aios_full}} is an enterprise-grade environment for AI-infused applications, providing enterprises visibility into how AI is being built, used, and delivering return on investment, at the scale of your business.
 {: shortdesc}
 
 ## Implementation
