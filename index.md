@@ -82,7 +82,7 @@ Table 1. Feature support details
 
 The {{site.data.keyword.aios_short}} service tooling requires the same level of browser software as is required by {{site.data.keyword.Bluemix_notm}}. See the {{site.data.keyword.Bluemix_notm}} [Prerequisites ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/overview/prereqs.html#browsers){: new_window} topic for details.
 
-## {{site.data.keyword.aios_short}} ModelOps CLI tool
+## ModelOps CLI tool
 
 The [{{site.data.keyword.aios_full}} CLI model operations tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Watson/aiopenscale-modelops-cli) allows you to execute tasks related to the lifecycle management of machine learning models. This tool is complementary to the {{site.data.keyword.Bluemix_notm}} CLI tool, augmented with the [machine learning plugin](https://www.ibm.com/support/knowledgecenter/DSXDOC/analyze-data/ml_dlaas_environment.html).
 
