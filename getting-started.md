@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-9-14"
+  years: 2018
+lastupdated: "2018-9-19"
 
 ---
 
@@ -18,6 +18,11 @@ lastupdated: "2018-9-14"
 
 This topic provides reference material and first steps to help you get started using {{site.data.keyword.aios_full}}.
 {: shortdesc}
+
+## View the {{site.data.keyword.aios_short}} demo
+{: #gs-view-demo}
+
+Experience the look and feel of {{site.data.keyword.aios_short}} by viewing an [interactive demonstration](https://www.ibm.com/cloud/garage/demo/try-ai-openscale).
 
 ## Complete the tutorial (recommended)
 {: #gs-tutorial}
