@@ -74,6 +74,8 @@ In this example of a binary classification model, you can see the confidence in 
 
 For an image classification model example, you can see which parts of an image contributed positively to the predicted outcome and which contributed negatively. In the below example, the image on the right show the parts which impacted positively to the prediction and the image on the left shows the parts of images that had a negative impact on the outcome.
 
+**Note**: Currently, explanations cannot be generated for images which are greater than 1 MB in size.
+
   ![Explainability image classification](images/insight-explain-image.png)
 
 Finally, an example of a classification model that evaluates unstructured text. The explanation shows the keywords that had a positive as well as a negative impact on the model prediction. We also show the position of the identified keywords in the original text which was fed as input to the model.
