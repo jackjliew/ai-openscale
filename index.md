@@ -44,6 +44,8 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
 
 - There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
 
+- Currently, explanations cannot be generated for images which are greater than 1 MB in size.
+
 ## Supported machine learning engines
 
 Table 1. Feature support details
