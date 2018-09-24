@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-9-14"
+  years: 2018
+lastupdated: "2018-9-19"
 
 ---
 
@@ -19,6 +19,11 @@ lastupdated: "2018-9-14"
 This topic provides reference material and first steps to help you get started using {{site.data.keyword.aios_full}}.
 {: shortdesc}
 
+## View the {{site.data.keyword.aios_short}} demo
+{: #gs-view-demo}
+
+Experience the look and feel of {{site.data.keyword.aios_short}} by viewing an [interactive demonstration](https://www.ibm.com/cloud/garage/demo/try-ai-openscale).
+
 ## Complete the tutorial (recommended)
 {: #gs-tutorial}
 
@@ -27,7 +32,7 @@ A full list of prerequisites, along with step-by-step instructions for provision
 ## Manual configuration
 {: #gs-prereqs}
 
-The following steps outline the process that is required to configure {{site.data.keyword.aios_short}} using your own data and models. It is recommended that you [complete the tutorial[(/docs/services/ai-openscale/tutorial.html) to become familiar with the process. ***At a minimum***, you will need:
+The following steps outline the process that is required to configure {{site.data.keyword.aios_short}} using your own data and models. It is recommended that you [complete the tutorial](/docs/services/ai-openscale/tutorial.html) to become familiar with the process. ***At a minimum***, you will need:
 
 1.  An {{site.data.keyword.aios_short}} service instance.
 
