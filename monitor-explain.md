@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-9-8"
+  years: 2018
+lastupdated: "2018-9-26"
 
 ---
 
@@ -35,48 +35,6 @@ Explainability shows you the underlying factors that influenced the outcome of a
     **Note**: Only classification models and python functions which have categorical output are supported. Regression models are not supported.
 
     Click **Next** to continue.
-
-1.  (Optional) - If your input type is `Numerical/categorical`, you must specify where the training data is located. Please ensure that the format of the training data is exactly the same as that expected by your model. For example, if the model expects `M` and `F` for the feature *Gender* then the training data should have `M` and `F`, not `Male` and `Female`. Currently {{site.data.keyword.aios_short}} supports Db2 database or Cloud Object Storage locations only.
-
-    First, specify the Location (either `Db2` or `Cloud Object Storage`), then:
-
-    - For a Db2 database, complete the following:
-
-      - Host name or IP address
-      - Port
-      - Database (name)
-      - Username
-      - Password
-
-      ![Specify Db2 location of training data page](images/fair-config-data-db2.png)
-
-    - For Cloud Object Storage, complete the following:
-
-      - Log-in URL
-      - Resource instance (ID)
-      - Access key
-      - Secret key
-      - API key
-
-      ![Specify Cloud Object Storage location of training data page](images/fair-config-data-cos.png)
-
-    Ensure a valid connection by clicking the **Test** button to connect to the training data. Click **Next**.
-
-    Specify the exact location in the Db2 database or Cloud Object Storage where the training data is located.
-
-    - For a Db2 database, select both a schema and a training table that includes columns expected by your model:
-
-      ![Specify Db2 location of schema and training table](images/fair-config-table-db2.png)
-
-    - For Cloud Object Storage, select a `Bucket` and a `Data Set`:
-
-      ![Specify Cloud Object Storage location of data set](images/fair-config-dset-cos.png)
-
-    Click **Next**.
-
-1.  Choose the column that contains your prediction values and click **Next**.
-
-    ![Select column label](images/fair-config-column.png)
 
 1.  Select the columns used to train the model - these are the features that your model deployment expects in a request. Click **Next**.
 

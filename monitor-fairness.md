@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-9-10"
+  years: 2018
+lastupdated: "2018-9-25"
 
 ---
 
@@ -57,59 +57,11 @@ Consider a data point where, for `Gender=Male` (Majority value), the model predi
 
     ![What is fairness? page](images/fair-what-is.png)
 
-1.  {{site.data.keyword.aios_short}} will attempt to locate your training data from themetadata stored with the model in WML. If {{site.data.keyword.aios_short}} is unable to locate training data, enter the following connection information on the *Specify the location of the training data* page. First, specify the Location (either `Db2` or `Cloud Object Storage`), then:
-
-    - For a Db2 database, complete the following:
-
-      - Host name or IP address
-      - Port
-      - Database (name)
-      - Username
-      - Password
-
-      ![Specify Db2 location of training data page](images/fair-config-data-db2.png)
-
-    - For Cloud Object Storage, complete the following:
-
-      - Log-in URL
-      - Resource instance (ID)
-      - Access key
-      - Secret key
-      - API key
-
-      ![Specify Cloud Object Storage location of training data page](images/fair-config-data-cos.png)
-
-    Ensure a valid connection by clicking the **Test** button to connect to the training data. Click **Next**.
-
-1.  Now, you need to specify the exact location of the training data in Db2 or Cloud Object Storage.
-
-    - For a Db2 database, select your schema and a training table that includes columns expected by the model schema:
-
-      ![Specify Db2 location of training table](images/fair-config-table-db2.png)
-
-    - For Cloud Object Storage, select a `Bucket` and a `Data Set`:
-
-      ![Specify Cloud Object Storage location of data set](images/fair-config-dset-cos.png)
-
-    Click **Next**.
+1.  {{site.data.keyword.aios_short}} will locate your training data from the metadata stored with the model in WML.
 
 1.  Choose the label column in the training data that contains your prediction values and click **Next**.
 
     ![Select column label](images/fair-config-column.png)
-
-1.  On the *Select the deployment prediction column* page, select the prediction column from the payload logging table. The payload logging table contains the model deployment output.
-
-    ![Select deployment prediction](images/fair-select-deploy.png)
-
-    **Note**: Unless you have manually defined the schema, the default name of the model deployment prediction column will be `prediction`.
-
-    If your payload logging table has no schema, a link directs you to the WML API (Swagger) document.
-
-    ![No schema for deployment](images/fair-select-deploy-no.png)
-
-    The page displays key information needed to make the request. **Note**: You must be familiar enough with the model to correctly structure `online_prediction_input` in the API call.
-
-    Click **Next** to continue.
 
 1.  On the *Select the features to monitor* page, find and select fairness attributes that you want to use and click **Next**.
 
@@ -147,7 +99,7 @@ Consider a data point where, for `Gender=Male` (Majority value), the model predi
 
      ![Configure ethnicity settings](images/fair-config-ethnic.png)
 
-     **Note**: The values that you enter in this screen should be those that are sent to the model scoring endpoint (and consequently will be added to the payload table). If the data is being manipulated before sending to the scoring endpoint, then enter the manipulated values. For example, if the original data had values of `Male` and `Female` for *Gender* and it was manipulated so that the data sent to the scoring endpoint was `M` and `F`, then enter `M` and `F` on this screen.
+     **Note**: The values that you enter in these screens should be those that are sent to the model scoring endpoint (and consequently will be added to the payload table). If the data is being manipulated before sending to the scoring endpoint, then enter the manipulated values. For example, if the original data had values of `Male` and `Female` for *Gender* and it was manipulated so that the data sent to the scoring endpoint was `M` and `F`, then enter `M` and `F` on this screen.
 
      Click **Next** when you are done with each feature.
 

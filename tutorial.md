@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-9-19"
+lastupdated: "2018-9-24"
 
 ---
 
@@ -211,12 +211,15 @@ Now that the machine learning model has been deployed, you can configure {{site.
   
 - There are three areas to configure. Begin by selecting **Fairness** and clicking **Begin**. You can read a description of Fairness before clicking **Next** to continue.
 
+<!---
 - Specify the location of the model training data by selecting **Db2** from the **Location** dropdown and filling out the remaining fields with the Db2 credentials created earlier before clicking **Next**.
 
 - Once the database is connected, select your schema and the training data table in the dropdowns, then click **Next**. Note that the data in the table should be in the format expected by the scoring endpoint, with an additional column containing the prediction values:
 
   ![Schema Selection](images/schema_select.png)
-  
+
+--->
+
 - Now, you must specify which column from the table contains prediction values. In this case, it's the **Action** column, so select that one and click **Next**.
 
 - You may now choose which features to monitor. In this example, we'll monitor the **Gender** feature for bias. Click on the **Gender** tile and click **Next**.
@@ -253,12 +256,15 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - First, select the type of data the deployment analyzes. The model receives numeric/categorical data, so select that option from the dropdown and click **Next**.
 
+<!---
 - The training data is located in the Db2 Warehouse instance created earlier. Add the credentials in the form, **Test** the connection, and then click **Next**.
 
 - To identify the location of the training table, set the schema to your Db2 Warehouse username, set the table to **CAR\_RENTAL\_TRAINING**, and click **Next**:
 
   ![Explainability Schema](images/explain_schema.png)
-  
+
+--->
+
 - Next, select the **Action** column, as it contains the prediction values from the machine learning service, and click **Next**.
 
 - All of the data columns are inputs to the model. Select all inputs and click **Next**:
