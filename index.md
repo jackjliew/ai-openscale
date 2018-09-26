@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-9-19"
+lastupdated: "2018-9-24"
 
 ---
 
@@ -84,7 +84,11 @@ The {{site.data.keyword.aios_short}} service tooling requires the same level of 
 
 ## ModelOps CLI tool
 
-The [{{site.data.keyword.aios_full}} CLI model operations tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Watson/aiopenscale-modelops-cli) allows you to execute tasks related to the lifecycle management of machine learning models. This tool is complementary to the {{site.data.keyword.Bluemix_notm}} CLI tool, augmented with the [machine learning plugin](https://www.ibm.com/support/knowledgecenter/DSXDOC/analyze-data/ml_dlaas_environment.html).
+The [{{site.data.keyword.aios_short}} CLI model operations tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Watson/aiopenscale-modelops-cli) allows you to execute tasks related to the lifecycle management of machine learning models. This tool is complementary to the {{site.data.keyword.Bluemix_notm}} CLI tool, augmented with the [machine learning plugin](https://www.ibm.com/support/knowledgecenter/DSXDOC/analyze-data/ml_dlaas_environment.html).
+
+## Python client
+
+The [{{site.data.keyword.aios_short}} Python client ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/) is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service on {{site.data.keyword.Bluemix_notm}}. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure a logging database, bind your machine learning engine, and select and monitor deployments. For an example using the Python client in this way, see the [Data Mart configuration and usage with ibm-ai-openscale python package ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-sample-notebooks/blob/master/Data%20Mart%20configuration%20and%20usage.ipynb) notebook.
 
 ## Next steps
 
