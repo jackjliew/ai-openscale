@@ -117,11 +117,11 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   **NOTE**: By default, the **Detect data types** option is selected.
   
-  ![Data type](data-type.png)
+  ![Data type](images/data-type.png)
 
   When selected, for columns set with the `VARCHAR` data type, the maximum number of characters allowed for that column is automatically determined by the largest data point uploaded for that column. If you expect that future data for a table column may exceed the automatically-determined maximum, simply unselect the **Detect data types** option, and edit the maximum column value manually.
 
-  ![Set data type manually](data-type-manual.png)
+  ![Set data type manually](images/data-type-manual.png)
 
 - The feedback data should now be displaying correctly in columns. Click **Next** to continue, and then click **Begin Load** to load the data.
 
