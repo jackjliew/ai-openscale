@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-9-24"
+lastupdated: "2018-9-27"
 
 ---
 
@@ -114,7 +114,15 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Click **Next** to preview the data. On the preview screen, set the **Separator** field to a semicolon (;) and make sure the **Header in first row** option is checked:
 
   ![Separator and Header](images/separator.png)
+
+  **NOTE**: By default, the **Detect data types** option is selected.
   
+  ![Data type](data-type.png)
+
+  When selected, for columns set with the `VARCHAR` data type, the maximum number of characters allowed for that column is automatically determined by the largest data point uploaded for that column. If you expect that future data for a table column may exceed the automatically-determined maximum, simply unselect the **Detect data types** option, and edit the maximum column value manually.
+
+  ![Set data type manually](data-type-manual.png)
+
 - The feedback data should now be displaying correctly in columns. Click **Next** to continue, and then click **Begin Load** to load the data.
 
 - When the data has finished loading, repeat the same steps to load the training data file, naming it CAR\_RENTAL\_TRAINING.
