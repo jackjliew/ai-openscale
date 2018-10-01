@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-9-25"
+lastupdated: "2018-10-1"
 
 ---
 
@@ -34,7 +34,7 @@ Before configuring the Fairness monitor, there a few key concepts that are criti
   
 - *Majority / Minority value*: The values of fairness attributes are split into two distinct categories: Majority and Minority. The Minority values are those which are likely to be discriminated against. In the case of a fairness attribute like **`Gender`**, the Minority values could be `Female` and `Transgender`. For a numeric fairness attribute, such as **`Age`**, the Minority values could be `[18-25]`. All other values for a given fairness attribute are then considered as Majority value, for example `Gender=Male` or `Age=[26,100]`.
   
-- Favorable / Unfavorable outcome: The output of the model is categorized as either Favorable or Unfavorable. As an example, if the model is predicting whether a person should get a loan or not, then the Favorable outcome could be `Loan Granted` or `Loan Partially Granted`, whereas the Unfavorable outcome might be `Loan Denied`. Thus, the Favorable outcome is one that is deemed as a positive outcome, while the Unfavourable outcome is deemed as being negative.
+- *Favorable / Unfavorable outcome*: The output of the model is categorized as either Favorable or Unfavorable. As an example, if the model is predicting whether a person should get a loan or not, then the Favorable outcome could be `Loan Granted` or `Loan Partially Granted`, whereas the Unfavorable outcome might be `Loan Denied`. Thus, the Favorable outcome is one that is deemed as a positive outcome, while the Unfavourable outcome is deemed as being negative.
 
 The {{site.data.keyword.aios_short}} algorithm computes bias on an hourly basis, using the last `N` records present in the payload logging table; the value of `N` is specified when configuring Fairness. The algorithm perturbs these last `N` records to generate additional data.
 

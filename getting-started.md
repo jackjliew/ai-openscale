@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-9-19"
+lastupdated: "2018-10-1"
 
 ---
 
@@ -29,8 +29,8 @@ Experience the look and feel of {{site.data.keyword.aios_short}} by viewing an [
 
 A full list of prerequisites, along with step-by-step instructions for provisioning {{site.data.keyword.Bluemix_notm}} machine learning and data services, creating and deploying machine learning models, and configuring the new {{site.data.keyword.aios_full}} service to monitor your models for trust and transparency, can be [found in the tutorial](/docs/services/ai-openscale/tutorial.html).
 
-## Manual configuration
-{: #gs-prereqs}
+## Manually configure {{site.data.keyword.aios_short}}
+{: #gs-manual}
 
 The following steps outline the process that is required to configure {{site.data.keyword.aios_short}} using your own data and models. It is recommended that you [complete the tutorial](/docs/services/ai-openscale/tutorial.html) to become familiar with the process. ***At a minimum***, you will need:
 
@@ -58,20 +58,20 @@ The following steps outline the process that is required to configure {{site.dat
 
     - To provision a new Watson Machine Learning service instance, access the [**Machine Learning** landing page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/machine-learning) in {{site.data.keyword.Bluemix_notm}}.
 
-1.  An AI model, deployed in the WML service instance, in production.
+1.  An AI model, deployed in the WML service instance.
 
     - The model can be any type (Spark ML, Deep learning, etc.), and should have an output schema defined.
 
     - The model training data must be available in either Cloud Object Storage, or in Db2. Access to the training data is not mandatory, but without it you will not be able to configure bias checking. See [Configuring the Fairness monitor](/docs/services/ai-openscale/monitor-fairness.html#config-fair) for more details.
 
-    - If the model is accepting structured data as input, the model training data must be available in either Cloud Object Storage, or in Db2 for explainability to work. See [Configuring the Explainability monitor](/docs/services/ai-openscale/monitor-explain.html#config-explain)
+    - If the model is accepting structured data as input, the model training data must be available in either Cloud Object Storage, or in Db2 for explainability to work. See [Configuring the Explainability monitor](/docs/services/ai-openscale/monitor-explain.html#config-explain).
 
-    - If your model is deployed in any serve environment other than WML, you must wrap the scoring endpoint of the model in a Python function, and deploy this Python function in WML. You will also need to have the training data of your model available in Db2 or Cloud Object Storage to monitor bias for your model. Explainability and accuracy is not supported for Python functions. See more information in the [AI OpenScale Python client documentation](http://ai-openscale-python-client.mybluemix.net/).
+    - If your AI model is deployed in a machine learning engine other than WML, you must enable payload logging for the external machine learning engine with a Python client. See [Working with other Machine Learning engines](/docs/services/ai-openscale/connect-ml.html) for more information.
 
 ## Step 1: Specify your database
 {: #gs-config-db}
 
-Your first step in the {{site.data.keyword.aios_short}} tool is to specify a database. This is the database that {{site.data.keyword.aios_short}} uses to store payload, feedback, and measurement data.
+Your first step in the {{site.data.keyword.aios_short}} tool is to specify a database. This is the database that {{site.data.keyword.aios_short}} uses to store your model deployment output, deployment feedback, and retraining data.
 
 You will also select a schema for your database. A schema is a named collection of tables in the database.
 

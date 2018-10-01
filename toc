@@ -40,4 +40,8 @@ AI OpenScale
 
     {: .navgroup id="help"}
     release-notes.md
+    
+    {: .topicgroup}
+    Developer community
+        [StackOverflow](https://stackoverflow.com/questions/tagged/ai-openscale)
     {: .navgroup-end}
