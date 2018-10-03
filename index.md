@@ -60,15 +60,15 @@ Table 1. Feature support details
 
 Table 1. Feature support details
 
-| Framework | **performance** | **Accuracy monitoring** | **Fairness detection** | **Payload logging** | **Explainability**
+| Framework | **Performance** | **Accuracy monitoring** | **Fairness detection** | **Payload logging** | **Explainability**
 |:---|:---:|:---:|:---:|:---:|:---:|
 | **spark mllib**        | Yes | Yes | Yes* | Yes | Yes* |
 | **scikit-learn**       | Yes | No | No | No | No |
 | **xgboost**            | Yes | No | No | No | No |
 | **pmml**               | Yes | No | No | No | No |
 | **spss**               | Yes | No | No | No | No |
-| **keras**              | Yes | Yes** | Yes* | Yes | Yes* |
-| **tensorflow**         | Yes | Yes** | Yes* | Yes | Yes* |
+| **keras**              | Yes | Yes** | No | Yes | Yes* |
+| **tensorflow**         | Yes | Yes** | No | Yes | Yes* |
 | **caffe**              | Yes | No | No | No | No |
 | **pytorch**            | Yes | No | No | No | No |
 | **python functions**   | Yes | No | Yes* | Yes | No ||
