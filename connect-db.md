@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-9-12"
+  years: 2018
+lastupdated: "2018-10-04"
 
 ---
 
