@@ -15,6 +15,7 @@ AI OpenScale
     Configuring AI OpenScale
         connect-db.md
         connect-wml.md
+        connect-ml.md
         connect-deploy.md
 
     {: .topicgroup}

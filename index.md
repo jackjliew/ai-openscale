@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-9-24"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -88,7 +88,7 @@ The [{{site.data.keyword.aios_short}} CLI model operations tool ![External link 
 
 ## Python client
 
-The [{{site.data.keyword.aios_short}} Python client ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/) is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service on {{site.data.keyword.Bluemix_notm}}. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure a logging database, bind your machine learning engine, and select and monitor deployments. For an example using the Python client in this way, see the [Data Mart configuration and usage with ibm-ai-openscale python package ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-sample-notebooks/blob/master/Data%20Mart%20configuration%20and%20usage.ipynb) notebook.
+The [{{site.data.keyword.aios_short}} Python client ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/) is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service on {{site.data.keyword.Bluemix_notm}}. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure a logging database, bind your machine learning engine, and select and monitor deployments. For an example using the Python client in this way, see both the [Best heart drug recommendation - model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-sample-notebooks/blob/master/Best%20heart%20drug%20recommendation%20-%20model.ipynb) and the [Data Mart configuration and usage with ibm-ai-openscale python package ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-sample-notebooks/blob/master/Data%20Mart%20configuration%20and%20usage.ipynb) notebooks.
 
 ## Next steps
 
