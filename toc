@@ -35,6 +35,7 @@ AI OpenScale
     [API reference](https://console.bluemix.net/apidocs/ai-openscale)
     [ModelOps CLI](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
     [Python Client](http://ai-openscale-python-client.mybluemix.net/)
+    activity-tracker.md
     information-security.md
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
