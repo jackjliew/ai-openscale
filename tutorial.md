@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-9-27"
+lastupdated: "2018-10-09"
 
 ---
 
@@ -350,6 +350,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
       ```curl
       bx resource service-instance '<Your_AI_OpenScale_instance_name>'
       ```
+      **Note**: If you are using the {{site.data.keyword.Bluemix_notm}} command console on Windows, replace the single quotes (') in the above commands with double quotes (").
 
 - Download [this sample feedback data iPython notebook](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/CARS4U-Sample-Feedback-Generation.ipynb) to your machine, and then add it to your Watson Studio project by clicking the **New notebook** link from the **Notebook** section of the **Assets** tab.
 
