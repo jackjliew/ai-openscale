@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-10-09"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -103,7 +103,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   ![Load Menu](images/db2_load.png)
   
-- Browse to the feedback data file, or drag and drop it into the appropriate area on the form. Click **Next**. Select a Schema from the list of load targets, and then click **New Table** on the right:
+- Browse to the feedback data file, or drag and drop it into the appropriate area on the form. Click **Next**. Select a Schema from the list of load targets; this is usually in a format like `DASH12345`. Then click **New Table** on the right:
 
   ![New Table](images/new_table.png)
   
