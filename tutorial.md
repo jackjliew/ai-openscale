@@ -95,7 +95,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Upload training and feedback data to Db2 Warehouse
 
-- Download the [car_rental_feedback_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/car_rental_feedback_data.csv) and [car_rental_training_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/car_rental_training_data.csv) files.
+- Download the [car_rental_feedback_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/car_rental_feedback_data.csv) and [car_rental_training_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/car_rental_training_data.csv) files.
 
 - Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console](https://console.bluemix.net), click **Manage** from the left side panel, and then click the green **Open** button.
 
@@ -161,7 +161,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 - Download the following file:
 
-    - [CARS4U-Action-Recommendation-Spark.ipynb](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/CARS4U-Action-Recommendation-Spark.ipynb)
+    - [CARS4U-Action-Recommendation-Spark.ipynb](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/CARS4U-Action-Recommendation-Spark.ipynb)
 
 - In Watson Studio, select the **Assets** tab of your project, scroll down to the **Notebooks** section, and click the **New Notebook** button:
 
@@ -325,7 +325,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Endpoint URL](images/endpoint_url.png)
 
-- Next, download [this sample data iPython notebook](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/CARS4U-Sample-Data-Generation.ipynb) to your machine, and then add it to your Watson Studio project by clicking the **New notebook** link from the **Notebook** section of the **Assets** tab.
+- Next, download [this sample data iPython notebook](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/CARS4U-Sample-Data-Generation.ipynb) to your machine, and then add it to your Watson Studio project by clicking the **New notebook** link from the **Notebook** section of the **Assets** tab.
 
 - Select **From file**, choose the "CARS4U-Sample-Data-Generation.ipynb" file, and select the **Default Python 3.5 Free** runtime from the dropdown. Click **Create Notebook**.
 
@@ -352,7 +352,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
       ```
       **Note**: If you are using the {{site.data.keyword.Bluemix_notm}} command console on Windows, replace the single quotes (') in the above commands with double quotes (").
 
-- Download [this sample feedback data iPython notebook](https://github.com/watson-developer-cloud/doc-tutorial-downloads/tree/master/ai-openscale/CARS4U-Sample-Feedback-Generation.ipynb) to your machine, and then add it to your Watson Studio project by clicking the **New notebook** link from the **Notebook** section of the **Assets** tab.
+- Download [this sample feedback data iPython notebook](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/CARS4U-Sample-Feedback-Generation.ipynb) to your machine, and then add it to your Watson Studio project by clicking the **New notebook** link from the **Notebook** section of the **Assets** tab.
 
 - Select **From file**, choose the "CARS4U-Sample-Feedback-Generation.ipynb" file, and select the **Default Python 3.5 Free** runtime from the dropdown. Click **Create Notebook**.
 
