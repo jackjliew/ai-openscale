@@ -173,11 +173,11 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Edit and run the Action Recommendation Spark Notebook
 
-- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `CARS4U-Action-Recommendation-Spark` notebook to edit it. In section 2 and section 4.2, replace the Db2 Warehouse credentials with the ones you created in the previous section.
+- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `CARS4U-Action-Recommendation-Spark` notebook to edit it.
 
-- In section 4, replace the Watson Machine Learning credentials with the ones you created in the previous section.
+- In section 2 "Load data", replace the Db2 service credentials with the ones you created in the previous section.
 
-- In section 6.1, replace the Spark credentials with the ones you created in the previous section.
+- In section 4 "Tip", replace the Watson Machine Learning credentials with the ones you created in the previous section.
 
 - Once you have entered your credentials, your notebook is ready to run. Click the **Kernel** menu item, and select **Restart and Run All** from the menu:
 
