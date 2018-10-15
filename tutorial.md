@@ -183,7 +183,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   ![Restart and Run](images/restart_and_run.png)
   
-  This will create, train and deploy the **CARS4U - Action Recommendation Model** in your project.
+  This will create, train and deploy the **CARS4U - Action Recommendation Model** in your project. You can verify that the model has deployed by selecting the **Deployments** tab of your Watson Studio project, and clicking the **CARS4U - Action Model Deployment** link.
 
 ## Configure {{site.data.keyword.aios_short}}
 
@@ -195,11 +195,9 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   
 - Give your service a name, select the Lite plan, and click **Create**.
 
-- Select the **Manage** tab and click the **Get Started** button. The {{site.data.keyword.aios_full}} Getting Started page opens; click **Begin**.
-
 ### Connect {{site.data.keyword.aios_short}} to your machine learning model
 
-Now that the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models.
+Now that the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models. Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Get Started** button. The {{site.data.keyword.aios_full}} Getting Started page opens; click **Begin**.
 
 - {{site.data.keyword.aios_short}} will ask for a connection to a PostgreSQL deployment. Select the one you created earlier from the **Database** dropdown, and choose the **public** schema:
 
