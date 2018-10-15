@@ -55,7 +55,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-- Make note of the Machine Learning service credentials. In your machine learning instance, click on the **Service credentials** link on the left-hand side of the page. Name the credential and click **Add**. Then, from the list of credentials, click **View credential** and copy the JSON object for later use.
+- Make note of the Machine Learning service credentials. In your machine learning instance, click on the **Service credentials** link on the left-hand side of the page. Name the credential and click **Add**. Then, from the list of credentials, click **View credential** and copy the credentials for later use.
 
 ### Provision a Spark service
 
@@ -65,7 +65,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   
 - Assign your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-- Make note of the service credentials for your Spark instance. Open your Spark instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy this JSON object for later use.
+- Make note of the service credentials for your Spark instance. Open your Spark instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
 ### Provision an Object Storage service
 
@@ -85,7 +85,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card.
 
-- Make note of the service credentials for your PostgreSQL instance. Open your existing (or newly-created) PostgreSQL instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy this JSON object for later use.
+- Make note of the service credentials for your PostgreSQL instance. Open your existing (or newly-created) PostgreSQL instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
 ### Provision a paid Db2 Warehouse service
 
@@ -95,7 +95,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   
 - Give your service a name, choose the Entry plan, and click the **Create** button.
 
-- Make note of the service credentials for your Db2 Warehouse instance. Open your existing (or newly-created) Db2 Warehouse instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy this JSON object for later use.
+- Make note of the service credentials for your Db2 Warehouse instance. Open your existing (or newly-created) Db2 Warehouse instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
 ### Upload training and feedback data to Db2 Warehouse
 
@@ -153,7 +153,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Add the Spark notebook to your Watson Studio project
 
-- Download the following file:
+- Download the following file; select "All Files" instead of ".txt" before saving to ensure the file is saved in the correct format:
 
     - [CARS4U-Action-Recommendation-Spark.ipynb](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/CARS4U-Action-Recommendation-Spark.ipynb)
 
@@ -161,7 +161,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   ![New Notebook](images/new_notebook.png)
   
-- Select the **From file** tab of the menu, and give your notebook a name:
+- Select **From file**, and then click the **Choose file** button:
 
   ![New Notebook Form](images/new_notebook_name.png)
   
