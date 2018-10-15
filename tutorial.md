@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-15"
 
 ---
 
@@ -28,9 +28,11 @@ During the tutorial, you will provision the following Lite (free) {{site.data.ke
 - Machine Learning
 - Apache Spark
 - Object Storage
-- You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}} Services:
-    - Db2 Warehouse
-    - PostgreSQL
+- Db2 Warehouse
+
+You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}} Service:
+
+- PostgreSQL
 
 ## Introduction
 
@@ -43,7 +45,7 @@ In this tutorial, you will:
 
 ## Provision {{site.data.keyword.Bluemix_notm}} Services
 
-Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net) with your IBM ID.
+Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net) with your IBM ID. When provisioning services, particularly in the case of Apache Spark, Object Storage, and Db2 Warehouse, verify that your selected organization and space are the same for all services.
 
 ### Provision a Machine Learning service
 
@@ -81,6 +83,8 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   
 - Give your service a name, choose the Standard plan, and click the **Create** button.
 
+  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card.
+
 - Make note of the service credentials for your PostgreSQL instance. Open your existing (or newly-created) PostgreSQL instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy this JSON object for later use.
 
 ### Provision a paid Db2 Warehouse service
@@ -95,7 +99,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Upload training and feedback data to Db2 Warehouse
 
-- Download the [car_rental_feedback_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/car_rental_feedback_data.csv) and [car_rental_training_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/car_rental_training_data.csv) files.
+- Download the [car_rental_training_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/car_rental_training_data.csv) file.
 
 - Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console](https://console.bluemix.net), click **Manage** from the left side panel, and then click the green **Open** button.
 
@@ -103,11 +107,11 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   ![Load Menu](images/db2_load.png)
   
-- Browse to the feedback data file, or drag and drop it into the appropriate area on the form. Click **Next**. Select a Schema from the list of load targets; this is usually in a format like `DASH12345`. Then click **New Table** on the right:
+- Browse to the training data file, or drag and drop it into the appropriate area on the form. Click **Next**. Select a Schema from the list of load targets; this is usually in a format like `DASH12345`. Then click **New Table** on the right:
 
   ![New Table](images/new_table.png)
   
-- Name your table CAR\_RENTAL\_FEEDBACK, and click the **Create** button:
+- Name your table CAR\_RENTAL\_TRAINING, and click the **Create** button:
 
   ![New Table Create](images/new_table_create.png)
   
@@ -123,17 +127,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   ![Set data type manually](images/data-type-manual.png)
 
-- The feedback data should now be displaying correctly in columns. Click **Next** to continue, and then click **Begin Load** to load the data.
-
-- When the data has finished loading, repeat the same steps to load the training data file, naming it CAR\_RENTAL\_TRAINING.
-
-### Provision {{site.data.keyword.aios_short}}
-
-- Click the **Catalog** link and filter on "OpenScale". Select the tile for {{site.data.keyword.aios_short}}:
-
-  ![AI OpenScale](images/openscale.png)
-  
-- Give your service a name, select the Lite plan, and click **Create**. You will configure {{site.data.keyword.aios_short}} after setting up models for it to monitor.
+- The training data should now be displaying correctly in columns. Click **Next** to continue, and then click **Begin Load** to load the data.
 
 ## Set up a Watson Studio project
 
@@ -179,7 +173,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Edit and run the Action Recommendation Spark Notebook
 
-- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `CARS4U-Action-Recommendation-Spark` notebook to edit it. In section 2 and section 4.2, replace the Db2 Warehouse credentials with the ones you created in the previous section, and ensure that the table name for the training data matches the one you created when loading the .CSV files.
+- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `CARS4U-Action-Recommendation-Spark` notebook to edit it. In section 2 and section 4.2, replace the Db2 Warehouse credentials with the ones you created in the previous section.
 
 - In section 4, replace the Watson Machine Learning credentials with the ones you created in the previous section.
 
@@ -193,11 +187,19 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ## Configure {{site.data.keyword.aios_short}}
 
+### Provision {{site.data.keyword.aios_short}}
+
+- If you have not already provisioned an instance of {{site.data.keyword.aios_short}}, click the **Catalog** link from your {{site.data.keyword.Bluemix_notm}} account, and filter on "OpenScale". Select the tile for {{site.data.keyword.aios_short}}:
+
+  ![AI OpenScale](images/openscale.png)
+  
+- Give your service a name, select the Lite plan, and click **Create**.
+
+- Select the **Manage** tab and click the **Get Started** button. The {{site.data.keyword.aios_full}} Getting Started page opens; click **Begin**.
+
 ### Connect {{site.data.keyword.aios_short}} to your machine learning model
 
 Now that the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models.
-
-- From the [{{site.data.keyword.Bluemix_notm}} Dashboard](https://console.bluemix.net/dashboard/apps), scroll down to the **Services** section and click on the instance of {{site.data.keyword.aios_short}} you provisioned. Select the **Manage** tab and click the **Get Started** button. The {{site.data.keyword.aios_full}} Getting Started page opens; click **Begin**.
 
 - {{site.data.keyword.aios_short}} will ask for a connection to a PostgreSQL deployment. Select the one you created earlier from the **Database** dropdown, and choose the **public** schema:
 
@@ -254,7 +256,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Multiclass](images/multiclass.png)
   
-- Next, set the accuracy threshold. Click **Next** to leave it at the default 80%. Use the slider to adjust the minimum sample size to 400, then click  **Next**.
+- Next, set the accuracy threshold. Click **Next** to leave it at the default 80%. Use the slider to adjust the minimum sample size to 40, then click  **Next**.
 
 - You can review your choices before clicking **Save** to finalize them.
 
@@ -271,9 +273,9 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Explainability Schema](images/explain_schema.png)
 
---->
-
 - Next, select the **Action** column, as it contains the prediction values from the machine learning service, and click **Next**.
+
+--->
 
 - All of the data columns are inputs to the model. Select all inputs and click **Next**:
 
@@ -293,11 +295,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Add Connected Asset](images/add_connected_assets.png)
   
-- Click the **Select source** link and choose your Db2 Warehouse instance, schema, and the CAR\_RENTAL\_FEEDBACK table, then click **Select**.
+- Click the **Select source** link and choose your Db2 Warehouse instance, schema, and the CAR\_RENTAL\_TRAINING table, then click **Select**.
   
   ![Connection Source](images/connection_source.png)
 
-- Give your asset a name, then click **Create**. Repeat the same steps to add the CAR\_RENTAL\_TRAINING table as well.
+- Give your asset a name, then click **Create**.
 
 - Now add the PostgreSQL database. In your Watson Studio project, click **Add to project** and select **Connection**.
 
@@ -337,31 +339,20 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - To enable monitoring for accuracy, you must retrain and redeploy your model with feedback data; no accuracy data will appear in the dashboard until this is done. You can generate these requests all at once by feeding sample feedback data to the model for scoring.
 
-- To do this, you will need your {{site.data.keyword.aios_short}} credentials. Perform the following steps using the {{site.data.keyword.Bluemix_notm}} [command console](https://console.bluemix.net/docs/cli/index.html#overview):
+- Download the [car_rental_feedback_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/car_rental_feedback_data.csv) file.
 
-    - Get your API key
+- In Watson Studio, select the **Assets** tab, then scroll down and select "CARS4U - Action Recommendation Model" under the **Watson Machine Learning** section.
 
-      ```curl
-      bx login --sso
-      bx iam api-key-create 'my_key'
-      ```
-    - Get your {{site.data.keyword.aios_short}} instance ID
+- Select the **Evaluation** tab. Scroll down to the "Performance Monitoring" section, and select **Edit configuration**.
 
-      ```curl
-      bx resource service-instance '<Your_AI_OpenScale_instance_name>'
-      ```
-      **Note**: If you are using the {{site.data.keyword.Bluemix_notm}} command console on Windows, replace the single quotes (') in the above commands with double quotes (").
+- Set the value for both "Auto retrain" and "Auto deploy" to `Always`, and click **Save**.
 
-- Download [this sample feedback data iPython notebook](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/CARS4U-Sample-Feedback-Generation.ipynb) to your machine, and then add it to your Watson Studio project by clicking the **New notebook** link from the **Notebook** section of the **Assets** tab.
-
-- Select **From file**, choose the "CARS4U-Sample-Feedback-Generation.ipynb" file, and select the **Default Python 3.5 Free** runtime from the dropdown. Click **Create Notebook**.
-
-- Once the notebook has opened, update the fourth code cell with your {{site.data.keyword.aios_short}} credentials. Proceed through the notebook and, for all items marked as **ACTION:**, enter the appropriate data for your {{site.data.keyword.Bluemix_notm}} services and credentials.
-
-- Once you have entered all your services and credentials, your notebook is ready to run. Click the **Kernel** menu item, and select **Restart and Run All** from the menu:
-
-  ![Restart and Run](images/restart_and_run.png)
+  ![Restart and Run](images/auto-retrain-deploy.png)
   
+- Now, click the **Add feedback data** button, and select the car_rental_feedback_data.csv you downloaded. Click the **New evaluation** button when prompted.
+
+  ![Restart and Run](images/new-eval.png)
+
   This will retrain and provide feedback data to your model.
 
 ## View the explainability for a model transaction

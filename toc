@@ -13,6 +13,7 @@ AI OpenScale
     {: .navgroup id="howto"}
     {: .topicgroup}
     Configuring AI OpenScale
+        creds.md
         connect-db.md
         connect-wml.md
         connect-ml.md
