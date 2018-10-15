@@ -34,6 +34,8 @@ You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}
 
 - PostgreSQL
 
+**Important**: The PostgreSQL database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
+
 ## Introduction
 
 In this tutorial, you will:
