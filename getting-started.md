@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-15"
 
 ---
 
@@ -24,15 +24,15 @@ This topic provides reference material and first steps to help you get started u
 
 Experience the look and feel of {{site.data.keyword.aios_short}} by viewing an [interactive demonstration](https://www.ibm.com/cloud/garage/demo/try-ai-openscale).
 
-## Complete the tutorial (recommended)
+## Complete the tutorial
 {: #gs-tutorial}
 
 A full list of prerequisites, along with step-by-step instructions for provisioning {{site.data.keyword.Bluemix_notm}} machine learning and data services, creating and deploying machine learning models, and configuring the new {{site.data.keyword.aios_full}} service to monitor your models for trust and transparency, can be [found in the tutorial](/docs/services/ai-openscale/tutorial.html).
 
-## Manually configure {{site.data.keyword.aios_short}}
+## Overview of configuration steps {{site.data.keyword.aios_short}}
 {: #gs-manual}
 
-The following steps outline the process that is required to configure {{site.data.keyword.aios_short}} using your own data and models. It is recommended that you [complete the tutorial](/docs/services/ai-openscale/tutorial.html) to become familiar with the process. ***At a minimum***, you will need:
+The following is an outline of the process that is required to configure {{site.data.keyword.aios_short}} using your own data and models. [Complete the tutorial](/docs/services/ai-openscale/tutorial.html) to become familiar with the process. ***At a minimum***, you will need:
 
 1.  An {{site.data.keyword.aios_short}} service instance.
 
@@ -71,7 +71,7 @@ The following steps outline the process that is required to configure {{site.dat
 ## Step 1: Specify your database
 {: #gs-config-db}
 
-Your first step in the {{site.data.keyword.aios_short}} tool is to specify a database. This is the database that {{site.data.keyword.aios_short}} uses to store your model deployment output, deployment feedback, and retraining data.
+Your first step in the {{site.data.keyword.aios_short}} tool is to specify a database. This is the database that {{site.data.keyword.aios_short}} uses to store payload, feedback, and measurement data.
 
 You will also select a schema for your database. A schema is a named collection of tables in the database.
 
