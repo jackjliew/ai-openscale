@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-15"
+lastupdated: "2018-10-16"
 
 ---
 
@@ -48,7 +48,7 @@ The following is an outline of the process that is required to configure {{site.
 
     **Note**: The PostgreSQL database must be present in the same {{site.data.keyword.Bluemix_notm}} account as the {{site.data.keyword.aios_short}} instance.
 
-    - To provision a new PostgreSQL database instance, access the [**Compose for PostgreSQL** landing page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/compose-for-postgresql) in {{site.data.keyword.Bluemix_notm}}.
+    - To provision a new PostgreSQL database instance, access the [**Databases for PostgreSQL** landing page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/databases-for-postgresql) in {{site.data.keyword.Bluemix_notm}}.
 
 1.  A Watson Machine Learning (WML) service instance connected to your {{site.data.keyword.Bluemix_notm}} account.
 
