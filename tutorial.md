@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-10-15"
+lastupdated: "2018-10-16"
 
 ---
 
@@ -79,7 +79,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Provision a paid PostgreSQL service
 
-- If you do not already have a PostgreSQL service associated with your account, click the **Catalog** button from the top menu, filter on "postgres", and click the **Compose for PostgreSQL** tile:
+- If you do not already have a PostgreSQL service associated with your account, click the **Catalog** button from the top menu, filter on "postgres", and click the **Databases for PostgreSQL** tile:
 
   ![Compose for PostgreSQL](images/postgres.png)
   
@@ -303,7 +303,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Now add the PostgreSQL database. In your Watson Studio project, click **Add to project** and select **Connection**.
 
-- Select your PostgreSQL instance by connecting to the **Compose for PostgreSQL** service option, and providing the credentials to your service:
+- Select your PostgreSQL instance by connecting to the **Databases for PostgreSQL** service option, and providing the credentials to your service:
 
   ![Compose Service](images/compose_service.png)
   
