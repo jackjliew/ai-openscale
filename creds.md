@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-15"
+lastupdated: "2018-10-17"
 
 ---
 
@@ -24,8 +24,8 @@ To create credentials for {{site.data.keyword.aios_short}}, complete the followi
 - Get your API key
 
     ```curl
-    bx login --sso
-    bx iam api-key-create 'my_key'
+    ibmcloud login --sso
+    ibmcloud iam api-key-create 'my_key'
     ```
 
     You will see information output like the following:
@@ -44,7 +44,7 @@ To create credentials for {{site.data.keyword.aios_short}}, complete the followi
   If you are not using the `Default` resource group, then run the following command to get your credential for {{site.data.keyword.aios_short}}:
 
    ```curl
-   bx target -g myResourceGroup
+   ibmcloud target -g myResourceGroup
    ```
 
   where `myResourceGroup` is the name of the resource group associated with your {{site.data.keyword.aios_short}} instance.
@@ -52,7 +52,7 @@ To create credentials for {{site.data.keyword.aios_short}}, complete the followi
 - Get your {{site.data.keyword.aios_short}} instance ID
 
     ```curl
-    bx resource service-instance '<Your_AI_OpenScale_instance_name>'
+    ibmcloud resource service-instance '<Your_AI_OpenScale_instance_name>'
     ```
     **Note**: If you are using the {{site.data.keyword.Bluemix_notm}} command console on Windows, replace the single quotes (') in the above commands with double quotes (").
 

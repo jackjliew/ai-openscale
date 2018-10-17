@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-9-14"
+  years: 2018
+lastupdated: "2018-10-17"
 
 ---
 
@@ -61,4 +61,4 @@ The Transactions tab ( ![Transactions tab](images/insight-transact-tab.png) ) le
 ## Help tab
 {: #insight-transact-tab}
 
-The Help tab ( ![Transactions tab](images/insight-transact-tab.png) ) provides additional information to assist you in using {{site.data.keyword.aios_short}}.
+The Help tab ( ![Transactions tab](images/insight-help-tab.png) ) provides additional information to assist you in using {{site.data.keyword.aios_short}}.
