@@ -304,10 +304,10 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Now add the PostgreSQL database. In your Watson Studio project, click **Add to project** and select **Connection**.
 
-- Select your PostgreSQL instance by connecting to the **Databases for PostgreSQL** service option, and providing the credentials to your service:
-
+- Select your PostgreSQL instance by connecting to the **Compose for PostgreSQL** service option, and providing the credentials to your service
+<!---
   ![Compose Service](images/compose_service.png)
-  
+--->  
 - Now add the payload logging table from PostgreSQL to Watson Studio.  First, find the deployment ID for your Action model. From the **Deployments** tab of your Watson Studio project, click the **CARS4U - Action Model Deployment** link. On the **Overview** tab, scroll down and make note of the model ID:
 
   ![Model ID](images/model_id.png)
