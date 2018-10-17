@@ -79,10 +79,11 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Provision a paid PostgreSQL service
 
-- If you do not already have a PostgreSQL service associated with your account, click the **Catalog** button from the top menu, filter on "postgres", and click the **Databases for PostgreSQL** tile:
+- If you do not already have a PostgreSQL service associated with your account, click the **Catalog** button from the top menu, filter on "postgres", and click the **Compose for PostgreSQL** tile.
 
+<!---
   ![Compose for PostgreSQL](images/postgres.png)
-  
+--->  
 - Give your service a name, choose the Standard plan, and click the **Create** button.
 
   **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card.
