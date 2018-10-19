@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-9-8"
+  years: 2018
+lastupdated: "2018-10-18"
 
 ---
 
@@ -56,6 +56,24 @@ This chart is showing multiple things:
 - The chart additionally shows that the population with a policy age between 5-10 years received 100% favorable outcomes. This signifies the source of the bias, which means that data in this group skewed the results, and led to an increase in the percentage of favorable outcomes for the majority class. This information can be used to identify parts of the data which can then be under-sampled when retraining the model.
 
 - Another important thing that the chart shows is the name of the table containing the data which has been identified for manual labelling. Whenever the algorithm detects bias in a model, it also identifies the data points which can be sent for manual labelling by humans. This manually-labelled data can then be used along with the original training data to retrain the model. This retrained model is likely to not have the bias. The manual labelling table is present in the PostgreSQL database associated with the {{site.data.keyword.aios_short}} instance.
+
+- Runtime and Training Data
+
+  The Runtime data / Training data switch lets you view the differences between your trained model and the data collected at runtime that triggered a Bias warning.
+
+  ![Runtime Training toggle](images/runtime_train_data.png)
+
+- View Transactions
+
+  This option allows you to view the individual transactions that contributed to bias. When you click this link:
+
+  ![View transactions](images/view_transactions.png)
+
+  a list of transactions for the past hour is listed. You can select any transaction that contributed to bias (in this case, a Prediction value of "Denied") for more details.
+
+  ![Transaction list](images/transaction_list.png)
+
+  See [Monitoring Explainability](insight-timechart.html#insight-explain) below.
 
 Note the three filters at the top of the page (Feature, Date, and Hour) that let you select a different feature or time to review details.
 
