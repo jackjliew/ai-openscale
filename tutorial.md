@@ -59,9 +59,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   ![Machine Learning](images/machine_learning.png)
   
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
-<!---
-- Make note of the Machine Learning service credentials. In your machine learning instance, click on the **Service credentials** link on the left-hand side of the page. Name the credential and click **Add**. Then, from the list of credentials, click **View credential** and copy the JSON object for later use.
---->
+
 ### Provision a Spark service
 
 - If you do not already have a Spark service associated with your account, click the **Catalog** button from the top menu, filter on "Spark", and click the **Apache Spark** tile:
@@ -69,9 +67,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   ![Apache Spark](images/spark.png)
   
 - Assign your service a name, choose the Lite (free) plan, and click the **Create** button.
-<!---
-- Make note of the service credentials for your Spark instance. Open your Spark instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy this JSON object for later use.
---->
+
 ### Provision an Object Storage service
 
 - If you do not already have an Object Storage service associated with your account, click the **Catalog** button from the top menu, filter on "object storage", and click the **Object Storage** tile:
@@ -89,9 +85,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Give your service a name, choose the Standard plan, and click the **Create** button.
 
   **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card.
-<!---
-- Make note of the service credentials for your PostgreSQL instance. Open your existing (or newly-created) PostgreSQL instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy this JSON object for later use.
---->
+
 ### Provision a paid Db2 Warehouse service
 
 - If you do not already have a Db2 Warehouse service associated with your account, click the **Catalog** button from the top menu, filter on "db2", and click the **Db2 Warehouse** tile:
@@ -99,9 +93,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   ![Db2 Warehouse](images/db2_warehouse.png)
   
 - Give your service a name, choose the Entry plan, and click the **Create** button.
-<!---
-- Make note of the service credentials for your Db2 Warehouse instance. Open your existing (or newly-created) Db2 Warehouse instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy this JSON object for later use.
---->
+
 ### Upload training data to Db2 Warehouse
 
 - Get the [drug_train_data_updated.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data_updated.csv) file.
