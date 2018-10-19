@@ -14,7 +14,11 @@ lastupdated: "2018-10-18"
 
 ---
 
-# Tutorial
+# Tutorial (Advanced)
+
+## Scenario
+
+A car rental company has collected feedback data about customer satisfaction. The presented model uses this data to predict a course of action to follow up with a customer, for example to provide a voucher for their next rental.
 
 ## Prerequisites
 
