@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-10-18"
+lastupdated: "2018-10-21"
 
 ---
 
@@ -35,9 +35,13 @@ During the tutorial, you will provision the following Lite (free) {{site.data.ke
 
 You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}} Service:
 
-- Compose for PostgreSQL
+- PostgreSQL
+
+  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card.
 
 **Important**: The PostgreSQL database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
+
+If you have already provisioned the necessary services, proceed to [Upload training and feedback data to Db2 Warehouse](tutorial.html#upload-training-and-feedback-data-to-db2-warehouse) below.
 
 ## Introduction
 
