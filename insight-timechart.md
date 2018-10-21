@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-18"
+lastupdated: "2018-10-21"
 
 ---
 
@@ -43,7 +43,7 @@ Clicking the chart opens a visualization of the data points for a monitored feat
 
   ![Time series chart](images/insight-data-detail.png)
 
-This chart is showing multiple things:
+Note the three filters at the top of the page (Feature, Date, and Hour) that let you select a different feature or time to review details. This chart is showing multiple things:
 
 - You can observe the population experiencing bias (policies that are less than 2 months old). The chart also shows the percentage of favorable outcome (50%) for this population.
 
@@ -57,25 +57,27 @@ This chart is showing multiple things:
 
 - Another important thing that the chart shows is the name of the table containing the data which has been identified for manual labelling. Whenever the algorithm detects bias in a model, it also identifies the data points which can be sent for manual labelling by humans. This manually-labelled data can then be used along with the original training data to retrain the model. This retrained model is likely to not have the bias. The manual labelling table is present in the PostgreSQL database associated with the {{site.data.keyword.aios_short}} instance.
 
-- Runtime and Training Data
+<!---
 
-  The Runtime data / Training data switch lets you view the differences between your trained model and the data collected at runtime that triggered a Bias warning.
+- *Runtime and Training Data*
+
+  The Runtime data / Training data switch lets you toggle the differences between your trained model and the data collected at runtime that is triggering a bias warning.
 
   ![Runtime Training toggle](images/runtime_train_data.png)
 
-- View Transactions
+- *View Transactions*
 
   This option allows you to view the individual transactions that contributed to bias. When you click this link:
 
   ![View transactions](images/view_transactions.png)
 
-  a list of transactions for the past hour is listed. You can select any transaction that contributed to bias (in this case, a Prediction value of "Denied") for more details.
+  a list of transactions for the past hour is listed. You will see any transaction that contributed to bias (in this case, a Prediction value of "2").
 
   ![Transaction list](images/transaction_list.png)
 
-  See [Monitoring Explainability](insight-timechart.html#insight-explain) below.
+  Copy and paste any of the transaction IDs into the Explainability tab to get details about that transaction. See [Monitoring Explainability](insight-timechart.html#insight-explain) below.
 
-Note the three filters at the top of the page (Feature, Date, and Hour) that let you select a different feature or time to review details.
+  --->
 
 ## Monitoring Explainability
 {: #insight-explain}
