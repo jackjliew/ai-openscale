@@ -48,8 +48,7 @@ If you have already provisioned the necessary services, proceed to [Upload train
 In this tutorial, you will:
 
 - Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services, and upload sample data
-- Set up a Watson Studio project, and run a Python notebook to create, train and deploy a machine learning model
-- Run Python notebooks to create data to monitor
+- Set up a Watson Studio project, and create, train and deploy a machine learning model
 - Configure and explore trust, transparency and explainability monitoring for your model
 
 ## Provision {{site.data.keyword.Bluemix_notm}} Services
