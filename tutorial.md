@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-10-21"
+lastupdated: "2018-10-22"
 
 ---
 
@@ -55,6 +55,14 @@ In this tutorial, you will:
 ## Provision {{site.data.keyword.Bluemix_notm}} Services
 
 Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net) with your IBM ID.
+
+### Create a Watson Studio account
+
+- If you do not already have a Watson Studio instance associated with your account, click the **Create Resource** button or the **Catalog** menu item, then filter on "Watson Studio" and click the **Watson Studio** tile:
+
+  ![Watson Studio](images/watson_studio.png)
+  
+- Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
 ### Provision a Machine Learning service
 
