@@ -105,9 +105,9 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 - Make note of the service credentials for your PostgreSQL instance. Open your existing (or newly-created) PostgreSQL instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
-### Provision a paid Db2 Warehouse service
+### Provision a Db2 Warehouse service
 
-- If you do not already have a Db2 Warehouse service associated with your account, click the **Catalog** button from the top menu, filter on "db2", and click the **Db2 Warehouse** tile:
+- If you do not already have a Db2 Warehouse service associated with your account, click the **Catalog** button from the top menu, filter on "db2 warehouse", and click the **Db2 Warehouse** tile:
 
   ![Db2 Warehouse](images/db2_warehouse.png)
   
@@ -220,7 +220,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 - {{site.data.keyword.aios_short}} will ask for a connection to a PostgreSQL deployment. Select the one you created earlier from the **Database** dropdown, and choose the **public** schema:
 
   ![AI OpenScale PostgreSQL](images/aios_postgres.png)
-  
+
 - Click **Next**. You will now select your instance of Watson Machine Learning from the dropdown, and click **Next** again.
 
 - You are now able to select which deployed models will be monitored by {{site.data.keyword.aios_short}}. Check the model you created and deployed; click **Next** to accept this:
@@ -379,7 +379,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 From the **Assets** tab of your Watson Studio project, click on the **Action Model Payload** link in the **Data Assets** section. There should now be at least 482 rows of payload data. Expand the _scoring\_id_ column horizontally, and copy one of the identifiers to your clipboard:
 
-  ![scoring_id](images/scoring_id.png)
+  ![scoring_id](images/scoring_id1.png)
   
 Using the [AI OpenScale dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/), click on the **Explainability** button:
   
