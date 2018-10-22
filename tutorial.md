@@ -97,9 +97,9 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card.
 
-### Provision a paid Db2 Warehouse service
+### Provision a Db2 Warehouse service
 
-- If you do not already have a Db2 Warehouse service associated with your account, click the **Catalog** button from the top menu, filter on "db2", and click the **Db2 Warehouse** tile:
+- If you do not already have a Db2 Warehouse service associated with your account, click the **Catalog** button from the top menu, filter on "db2 warehouse", and click the **Db2 Warehouse** tile:
 
   ![Db2 Warehouse](images/db2_warehouse.png)
   
