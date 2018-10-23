@@ -39,7 +39,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
 
     client = APIClient(service_credentials)
     ```
-  Credentials can be found under the *Credentials* tab of your {{site.data.keyword.aios_short}} service instance on {{site.data.keyword.Bluemix_notm}}.
+  Credentials can be found by following the steps shown in the "[Creating credentials](creds.html)" topic.
 
 - Create a schema name in your PostgreSQL database
 
