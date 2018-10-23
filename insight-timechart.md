@@ -19,10 +19,10 @@ lastupdated: "2018-10-21"
 Select a deployment from the dashboard to see monitoring data for that deployment.
 {: shortdesc}
 
-## Monitoring Fairness, Performance, and Accuracy
+## Monitoring Fairness, Requests per Minute, and Accuracy
 {: #insight-time-chart}
 
-Monitoring data for individual deployments are displayed in a time series chart. The chart tracks Fairness, Performance, and Accuracy over the last seven days.
+Monitoring data for individual deployments are displayed in a time series chart. The chart tracks Fairness, Requests per Minute, and Accuracy over the last seven days.
 
   ![Time series chart](images/insight-time-chart.png)
 
