@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-21"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -19,17 +19,21 @@ lastupdated: "2018-10-21"
 This topic provides reference material and first steps to help you get started using {{site.data.keyword.aios_full}}.
 {: shortdesc}
 
+# Before you begin
+
+## Complete the tutorial
+{: #gs-tutorial}
+
+The first thing to do is [complete the tutorial](/docs/services/ai-openscale/tutorial.html). The tutorial contains a full list of prerequisites, along with step-by-step instructions for provisioning {{site.data.keyword.Bluemix_notm}} machine learning and data services, creating and deploying a machine learning model, and configuring the new {{site.data.keyword.aios_full}} service to monitor your model for trust and transparency.
+
+# After completing the tutorial
+
 ## View the {{site.data.keyword.aios_short}} demo
 {: #gs-view-demo}
 
 Experience the look and feel of {{site.data.keyword.aios_short}} by viewing an [interactive demonstration](https://www.ibm.com/cloud/garage/demo/try-ai-openscale).
 
-## Complete the tutorial
-{: #gs-tutorial}
-
-A full list of prerequisites, along with step-by-step instructions for provisioning {{site.data.keyword.Bluemix_notm}} machine learning and data services, creating and deploying machine learning models, and configuring the new {{site.data.keyword.aios_full}} service to monitor your models for trust and transparency, can be [found in the tutorial](/docs/services/ai-openscale/tutorial.html).
-
-## Overview of {{site.data.keyword.aios_short}}
+## Read this overview of {{site.data.keyword.aios_short}}
 {: #gs-manual}
 
 {{site.data.keyword.aios_short}} provides explanations into how decisions are being made by your AI models, and automatically detect and mitigate bias to produce fair, trusted outcomes.
