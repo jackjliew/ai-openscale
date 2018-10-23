@@ -19,10 +19,10 @@ lastupdated: "2018-10-21"
 Select a deployment from the dashboard to see monitoring data for that deployment.
 {: shortdesc}
 
-## Monitoring Fairness, Requests per Minute, and Accuracy
+## Monitoring Fairness, Average Requests per Minute, and Accuracy
 {: #insight-time-chart}
 
-Monitoring data for individual deployments are displayed in a time series chart. The chart tracks Fairness, Requests per Minute, and Accuracy over the last seven days.
+Monitoring data for individual deployments are displayed in a time series chart. The chart tracks Fairness, Average Requests per Minute, and Accuracy over the last seven days.
 
   ![Time series chart](images/insight-time-chart.png)
 
@@ -32,7 +32,7 @@ Move the marker across the chart to see statistics for an individual hour. In th
 
 - ***Fairness***: Two of three Fairness features, Car Value and Area Code, met their set thresholds for approval. The third Fairness feature, Policy Age, was flagged for bias. You can also see the number of favorable outcomes (in this case percentages Approved vs. Denied) for an individual population in the features monitored for fairness.
 - ***Accuracy***: The Accuracy metric averaged 78%.
-- ***Records***: On average, 300 records were processed per minute between 1:00 and 2:00 PM CST. The throughput is computed every minute, and its average value over the course of the hour is reported in the chart.
+- ***Avg. Reqs/Min***: On average, 300 records were processed per minute between 1:00 and 2:00 PM CST. The throughput is computed every minute, and its average value over the course of the hour is reported in the chart.
 
 Select the chart to see details behind a particular Fairness statistic.
 
