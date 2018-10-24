@@ -273,7 +273,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 --->
 
-- All of the data columns, except *Drug*, are inputs to the model. Select all inputs except *Drug* and click **Next**:
+- All of the data columns, except "DRUG", are inputs to the model. Select all inputs except "DRUG" and click **Next**:
 
   ![Explainability Inputs](images/explain_inputs1.png)
   
