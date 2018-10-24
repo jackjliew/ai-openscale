@@ -22,7 +22,7 @@ lastupdated: "2018-10-23"
 This topic provides reference material to help you get started using {{site.data.keyword.aios_full}}.
 {: shortdesc}
 
-## Complete the tutorial
+## **Complete the tutorial**
 {: #gs-tutorial}
 
 The first thing to do is [complete the tutorial](/docs/services/ai-openscale/tutorial.html). The tutorial contains a full list of prerequisites, along with step-by-step instructions for provisioning {{site.data.keyword.Bluemix_notm}} machine learning and data services, creating and deploying a machine learning model, and configuring the new {{site.data.keyword.aios_full}} service to monitor your model for trust and transparency.
