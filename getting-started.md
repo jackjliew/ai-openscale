@@ -46,18 +46,18 @@ To use AI OpenScale, *at a minimum* you will need:
 
 - **A Watson Machine Learning (WML) service instance** connected to your {{site.data.keyword.Bluemix_notm}} account. This is where you store your AI models and deployments.
 
-    For the current release, only the Watson Machine Learning framework is supported.
+    **Note**: For the current release, only the Watson Machine Learning framework is supported.
     {: note}
 
-    The WML service instance must be present in the same {{site.data.keyword.Bluemix_notm}} account as the {{site.data.keyword.aios_short}} instance.
+    **Note**: The WML service instance must be present in the same {{site.data.keyword.Bluemix_notm}} account as the {{site.data.keyword.aios_short}} instance.
     {: note}
 
 - **A PostgreSQL database** connected to your {{site.data.keyword.Bluemix_notm}} account. This is where you store payload, feedback, and measurement data.
 
-    For the current release, only a PostgreSQL database is supported.
+    **Note**: For the current release, only a PostgreSQL database is supported.
     {: note}
 
-    The PostgreSQL database must be present in the same {{site.data.keyword.Bluemix_notm}} account as the {{site.data.keyword.aios_short}} instance.
+    **Note**: The PostgreSQL database must be present in the same {{site.data.keyword.Bluemix_notm}} account as the {{site.data.keyword.aios_short}} instance.
     {: note}
 
 - **An AI model**, deployed in the WML service instance.
