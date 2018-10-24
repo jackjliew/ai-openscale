@@ -9,6 +9,9 @@ lastupdated: "2018-10-23"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -16,24 +19,23 @@ lastupdated: "2018-10-23"
 # Getting started
 {: #gettingstarted}
 
-This topic provides reference material and first steps to help you get started using {{site.data.keyword.aios_full}}.
+This topic provides reference material to help you get started using {{site.data.keyword.aios_full}}.
 {: shortdesc}
-
-# Before you begin
 
 ## Complete the tutorial
 {: #gs-tutorial}
 
 The first thing to do is [complete the tutorial](/docs/services/ai-openscale/tutorial.html). The tutorial contains a full list of prerequisites, along with step-by-step instructions for provisioning {{site.data.keyword.Bluemix_notm}} machine learning and data services, creating and deploying a machine learning model, and configuring the new {{site.data.keyword.aios_full}} service to monitor your model for trust and transparency.
+{: important}
 
-# After completing the tutorial
+## After completing the tutorial
 
-## View the {{site.data.keyword.aios_short}} demo
+### View the {{site.data.keyword.aios_short}} demo
 {: #gs-view-demo}
 
 Experience the look and feel of {{site.data.keyword.aios_short}} by viewing an [interactive demonstration](https://www.ibm.com/cloud/garage/demo/try-ai-openscale).
 
-## Read this overview of {{site.data.keyword.aios_short}}
+### Read this overview of {{site.data.keyword.aios_short}}
 {: #gs-manual}
 
 {{site.data.keyword.aios_short}} provides explanations into how decisions are being made by your AI models, and automatically detect and mitigate bias to produce fair, trusted outcomes.
@@ -44,15 +46,19 @@ To use AI OpenScale, *at a minimum* you will need:
 
 - **A Watson Machine Learning (WML) service instance** connected to your {{site.data.keyword.Bluemix_notm}} account. This is where you store your AI models and deployments.
 
-    *Note*: For the current release, only the Watson Machine Learning framework is supported.
+    For the current release, only the Watson Machine Learning framework is supported.
+    {: note}
 
-    *Note*: The WML service instance must be present in the same {{site.data.keyword.Bluemix_notm}} account as the {{site.data.keyword.aios_short}} instance.
+    The WML service instance must be present in the same {{site.data.keyword.Bluemix_notm}} account as the {{site.data.keyword.aios_short}} instance.
+    {: note}
 
 - **A PostgreSQL database** connected to your {{site.data.keyword.Bluemix_notm}} account. This is where you store payload, feedback, and measurement data.
 
-    *Note*: For the current release, only a PostgreSQL database is supported.
+    For the current release, only a PostgreSQL database is supported.
+    {: note}
 
-    *Note*: The PostgreSQL database must be present in the same {{site.data.keyword.Bluemix_notm}} account as the {{site.data.keyword.aios_short}} instance.
+    The PostgreSQL database must be present in the same {{site.data.keyword.Bluemix_notm}} account as the {{site.data.keyword.aios_short}} instance.
+    {: note}
 
 - **An AI model**, deployed in the WML service instance.
 
