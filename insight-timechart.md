@@ -41,7 +41,7 @@ Select the chart to see details behind a particular Fairness statistic.
 
 Clicking the chart opens a visualization of the data points for a monitored feature at a specific hour. Following the previous example, the Policy Age feature, which has been tagged for bias, is shown.
 
-  ![Time series chart](images/insight-data-detail1.png)
+  ![Time series chart](images/insight-data-detail.png)
 
 Note the three filters at the top of the page (Feature, Date, and Hour) that let you select a different feature or time to review details. This chart is showing multiple things:
 
