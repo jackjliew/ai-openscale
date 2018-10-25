@@ -69,7 +69,7 @@ Note the three filters at the top of the page (Feature, Date, and Hour) that let
 
   ![View transactions](images/view_transactions.png)
 
-  a list of transactions for the past hour is listed. You will see any transaction that contributed to bias (in this case, a Prediction value of "2").
+  a list of transactions for the past hour is listed.
 
   ![Transaction list](images/transaction_list.png)
 
