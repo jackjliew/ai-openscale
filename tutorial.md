@@ -277,6 +277,10 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 --->
 
+- Next, select the model type. There are four possible outcomes from the model, so select **Multiclass Classification** from the dropdown and click **Next**:
+
+  ![Multiclass](images/multiclass.png)
+  
 - All of the data columns, except "DRUG", are inputs to the model. Select all inputs except "DRUG" and click **Next**:
 
   ![Explainability Inputs](images/explain_inputs1.png)
