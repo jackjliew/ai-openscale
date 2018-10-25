@@ -216,6 +216,10 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 --->
 
+- Select the model type. There are four possible outcomes from the model, so select **Multiclass Classification** from the dropdown and click **Next**:
+
+  ![Multiclass](images/multiclass.png)
+
 - Now, you must specify which column from the table contains prediction values. In this case, it's the **Drug** column, so select that one and click **Next**.
 
 - You may now choose which features to monitor. In this example, we'll monitor the **Age** and **Sex** features for bias. Click on the **Age** and **Sex** tiles, and click **Next**.
