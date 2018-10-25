@@ -30,10 +30,10 @@ The first thing to do is [complete the tutorial](/docs/services/ai-openscale/tut
 
 ## After completing the tutorial
 
-### View the {{site.data.keyword.aios_short}} demo
+### View a {{site.data.keyword.aios_short}} video
 {: #gs-view-demo}
 
-Experience the look and feel of {{site.data.keyword.aios_short}} by viewing an [interactive demonstration](https://www.ibm.com/cloud/garage/demo/try-ai-openscale).
+Explore the main features of the {{site.data.keyword.aios_short}} tooling using examples based on fraud detection and loan approval workflows by watching [this video](https://www.youtube.com/watch?v=6Ei8rPVtCf8).
 
 ### Read this overview of {{site.data.keyword.aios_short}}
 {: #gs-manual}
