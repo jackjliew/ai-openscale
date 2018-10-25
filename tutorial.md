@@ -163,7 +163,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Deploy the `Best Heart Drug Selection` model
 
-- From the **Assets** tab in your Watson Studio project, click the `drug-selection` model you just created.
+- From the **Assets** tab in your Watson Studio project, scroll to the "Watson Machine Learning models" section, and click the `drug-selection` model you just created.
 
 - Click the *Deployments* tab, then select **Add deployment**.
 
