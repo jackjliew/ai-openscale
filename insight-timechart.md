@@ -41,7 +41,7 @@ Select the chart to see details behind a particular Fairness statistic.
 
 Clicking the chart opens a visualization of the data points for a monitored feature at a specific hour. Following the previous example, the Policy Age feature, which has been tagged for bias, is shown.
 
-  ![Time series chart](images/insight-data-detail.png)
+  ![Time series chart](images/insight-data-detail1.png)
 
 Note the three filters at the top of the page (Feature, Date, and Hour) that let you select a different feature or time to review details. This chart is showing multiple things:
 
@@ -56,8 +56,6 @@ Note the three filters at the top of the page (Feature, Date, and Hour) that let
 - The chart additionally shows that the population with a policy age between 5-10 years received 100% favorable outcomes. This signifies the source of the bias, which means that data in this group skewed the results, and led to an increase in the percentage of favorable outcomes for the majority class. This information can be used to identify parts of the data which can then be under-sampled when retraining the model.
 
 - Another important thing that the chart shows is the name of the table containing the data which has been identified for manual labelling. Whenever the algorithm detects bias in a model, it also identifies the data points which can be sent for manual labelling by humans. This manually-labelled data can then be used along with the original training data to retrain the model. This retrained model is likely to not have the bias. The manual labelling table is present in the PostgreSQL database associated with the {{site.data.keyword.aios_short}} instance.
-
-<!---
 
 - *Runtime and Training Data*
 
@@ -76,8 +74,6 @@ Note the three filters at the top of the page (Feature, Date, and Hour) that let
   ![Transaction list](images/transaction_list.png)
 
   Copy and paste any of the transaction IDs into the Explainability tab to get details about that transaction. See [Monitoring Explainability](insight-timechart.html#insight-explain) below.
-
-  --->
 
 ## Monitoring Explainability
 {: #insight-explain}
