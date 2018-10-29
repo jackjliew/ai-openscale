@@ -26,6 +26,7 @@ The model uses patient data fields AGE, SEX, BP (blood pressure), CHOLESTEROL, K
 To complete this tutorial, you will need:
 
 - A [Watson Studio](https://dataplatform.ibm.com/) account.
+- An [{{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net) account.
 
 During the tutorial, you will provision the following Lite (free) {{site.data.keyword.Bluemix_notm}} Services:
 
