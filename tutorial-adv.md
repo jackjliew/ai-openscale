@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-10-22"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -20,12 +20,13 @@ lastupdated: "2018-10-22"
 
 A car rental company has collected feedback data about customer satisfaction. The presented model uses this data to predict a course of action to follow up with a customer, for example to provide a voucher for their next rental.
 
+The model uses customer data fields ID (an ID number), GENDER, STATUS (single or married), CHILDREN (number), AGE, CUSTOMER STATUS (active or inactive), CAR OWNER (yes or no), CUSTOMER SERVICE (customer comment), SATISFACTION (satisfied or unsatisfied), and BUSINESS AREA (product or service related) to predict one of four values (NA, voucher, free upgrade, on-demand pickup) for the ACTION data field.
+
 ## Prerequisites
 
 To complete this tutorial, you will need:
 
 - A [Watson Studio](https://dataplatform.ibm.com/) account.
-- An [{{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/) account
 
 During the tutorial, you will provision the following Lite (free) {{site.data.keyword.Bluemix_notm}} Services:
 
@@ -38,11 +39,11 @@ You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}
 
 - PostgreSQL
 
-  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card.
+  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a $16 refund of the cost for your first GB of storage.
 
 **Important**: The PostgreSQL database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
 
-If you have already provisioned the necessary services, proceed to [Upload training and feedback data to Db2 Warehouse](tutorial-adv.html#upload-training-and-feedback-data-to-db2-warehouse) below.
+If you have already provisioned the necessary services for example if you have completed the other tutorial, proceed to [Upload training and feedback data to Db2 Warehouse](tutorial-adv.html#upload-training-and-feedback-data-to-db2-warehouse) below.
 
 ## Introduction
 
@@ -59,7 +60,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Create a Watson Studio account
 
-- If you do not already have a Watson Studio instance associated with your account, click the **Create Resource** button or the **Catalog** menu item, then filter on "Watson Studio" and click the **Watson Studio** tile:
+- [Create a Watson Studio instance](https://console.bluemix.net/catalog/services/watson-studio) if you do not already have one associated with your account:
 
   ![Watson Studio](images/watson_studio.png)
   
@@ -67,7 +68,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Provision a Machine Learning service
 
-- If you do not already have a Machine Learning service associated with your account, click the **Create Resource** button or the **Catalog** menu item, then filter on "Machine Learning" and click the **Machine Learning** tile:
+- [Provision a Watson Machine Learning instance](https://console.bluemix.net/catalog/services/machine-learning) if you do not already have one associated with your account:
 
   ![Machine Learning](images/machine_learning.png)
   
@@ -77,7 +78,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Provision a Spark service
 
-- If you do not already have a Spark service associated with your account, click the **Catalog** button from the top menu, filter on "Spark", and click the **Apache Spark** tile:
+- [Provision a Spark service](https://console.bluemix.net/catalog/services/apache-spark) if you do not already have one associated with your account:
 
   ![Apache Spark](images/spark.png)
   
@@ -87,7 +88,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Provision an Object Storage service
 
-- If you do not already have an Object Storage service associated with your account, click the **Catalog** button from the top menu, filter on "object storage", and click the **Object Storage** tile:
+- [Provision an Object Storage service](https://console.bluemix.net/catalog/services/cloud-object-storage) if you do not already one associated with your account:
 
   ![Object Storage](images/object_storage.png)
   
@@ -95,19 +96,19 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Provision a paid PostgreSQL service
 
-- If you do not already have a PostgreSQL service associated with your account, click the **Catalog** button from the top menu, filter on "postgres", and click the **Compose for PostgreSQL** tile.
+- [Provision a paid PostgreSQL service](https://console.bluemix.net/catalog/services/compose-for-postgresql) if you do not already have one associated with your account.
 
   ![Compose for PostgreSQL](images/postgres.png)
 
 - Give your service a name, choose the Standard plan, and click the **Create** button.
 
-  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card.
+  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a $16 refund of the cost for your first GB of storage.
 
 - Make note of the service credentials for your PostgreSQL instance. Open your existing (or newly-created) PostgreSQL instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
 ### Provision a Db2 Warehouse service
 
-- If you do not already have a Db2 Warehouse service associated with your account, click the **Catalog** button from the top menu, filter on "db2 warehouse", and click the **Db2 Warehouse** tile:
+- [Provision a Db2 Warehouse service](https://console.bluemix.net/catalog/services/db2-warehouse) if you do not already have one associated with your account:
 
   ![Db2 Warehouse](images/db2_warehouse.png)
   
@@ -120,6 +121,8 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Download the [car_rental_training_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/blob/master/ai-openscale/car_rental_training_data.csv) file.
 
 - Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console](https://console.bluemix.net), click **Manage** from the left side panel, and then click the green **Open** button.
+
+- Use your Db2 credentials `username` and `password` to log in to Db2 Warehouse.
 
 - Once Db2 Warehouse has opened, click the **Menu** button and select **Load** from the dropdown:
 
@@ -153,10 +156,14 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   ![Same Account](images/same_account.png)
 
-- In Watson Studio, begin by creating a new project. Select the **Complete** tile and click **Create**:
+- In Watson Studio, begin by creating a new project. Select "Create a project":
 
-  ![Watson Studio complete](images/ws_complete.png)
-  
+  ![Watson Studio create project](images/studio_create_proj.png)
+
+- Select the **Standard** tile, to create the project:
+
+  ![Watson Studio select Standard project](images/studio_create_standard.png)
+
 - Give your project a name and description, make sure the Object Storage service you created in the previous step is selected in the **Storage** dropdown, and click **Create**.
 
 ### Associate your {{site.data.keyword.Bluemix_notm}} Services with your Watson project
@@ -221,6 +228,8 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![AI OpenScale PostgreSQL](images/aios_postgres.png)
 
+  {{site.data.keyword.aios_short}} uses a PostgreSQL database to store model deployment, output, and retraining data to deliver model health and application insights.
+
 - Click **Next**. You will now select your instance of Watson Machine Learning from the dropdown, and click **Next** again.
 
 - You are now able to select which deployed models will be monitored by {{site.data.keyword.aios_short}}. Check the model you created and deployed; click **Next** to accept this:
@@ -235,7 +244,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Action Model](images/bus_area_model.png)
   
-- There are three areas to configure. Begin by selecting **Fairness** and clicking **Begin**. You can read a description of Fairness before clicking **Next** to continue.
+- There are three areas to configure. Begin by selecting **Fairness** and clicking **Begin**. See [Understanding Fairness](monitor-fairness.html#understand-fair) to understand the Fairness monitor in detail.
 
 <!---
 - Specify the location of the model training data by selecting **Db2** from the **Location** dropdown and filling out the remaining fields with the Db2 credentials created earlier before clicking **Next**.
@@ -246,6 +255,10 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 --->
 
+- Select the [model type](monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
+
+  ![Multiclass](images/multiclass.png)
+
 - Now, you must specify which column from the table contains prediction values. In this case, it's the **Action** column, so select that one and click **Next**.
 
 - You may now choose which features to monitor. In this example, we'll monitor the **Gender** feature for bias. Click on the **Gender** tile and click **Next**.
@@ -254,9 +267,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Gender Groups](images/gender_groups.png)
   
+  The model will be flagged as biased if the Action ratios for the protected group ranges differ from the ratios for the reference group ranges. For example, if the model finds that 60% of the time a voucher was recommended for male customers, but was only recommended 20% of the time for female customers, it is biased against the protected group.
+  
 - You may now assign a fairness threshold. You will see an alert on your operations dashboard if the fairness rating falls below this threshold. Click **Next** to leave it set at the default of 80%.
 
-- You will now select favorable and unfavorable prediction values from the payload logging database. {{site.data.keyword.aios_short}} has automatically detected which column in the payload logging data contains the prediction values; those values are 0 (for no customer service action taken) or 1 - 3 (corresponding to follow-up actions, vouchers or discounts). Add these values to the form and click **Next**:
+- You will now select favorable and unfavorable prediction values from the payload logging database. {{site.data.keyword.aios_short}} has automatically detected which column in the payload logging data contains the prediction values; those values are 0 (for no customer service action taken) or 1 - 3 (corresponding to voucher, free upgrade or on-demand pickup). Add these values to the form and click **Next**:
 
   ![Positive and negative values](images/pos_and_neg.png)
   
@@ -266,11 +281,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 ### Configure accuracy monitoring
 
-- Continue to **Accuracy** and click **Begin**. You can read a description of Accuracy before clicking **Next** to continue.
+- Continue to **Accuracy** and click **Begin**. See [Accuracy - How it works](monitor-accuracy.html#how-it-works) to understand the Accuracy monitor in detail.
 
 - Select the Spark instance that you configured in a previous step from the dropdown list and click **Next**.
 
-- Next, select the model type. There are four possible outcomes from the model, so select **Multiclass Classification** from the dropdown and click **Next**:
+- Then, select the [model type](monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (four customer service action predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
 
   ![Multiclass](images/multiclass.png)
   
@@ -282,9 +297,9 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 ### Configure explainability monitoring
 
-- Continue to **Explainability** and click **Begin**. You can read a description of Explainability before clicking **Next** to continue.
+- Continue to **Explainability** and click **Begin**. See [Explainability](monitor-explain.html) to understand the Explainability monitor in detail.
 
-- First, select the type of data the deployment analyzes. The model receives numeric/categorical data, so select that option from the dropdown and click **Next**.
+- First, select the type of data the deployment analyzes. The sample model receives numeric/categorical data, so select that option from the dropdown and click **Next**. For the sample model, an example of numeric data would be the CHILDREN data column (i.e., "2"), while an example of categorical data would be the CUSTOMER_STATUS data column (i.e., "Inactive").
 
 <!---
 - The training data is located in the Db2 Warehouse instance created earlier. Add the credentials in the form, **Test** the connection, and then click **Next**.
@@ -297,6 +312,10 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 --->
 
+- Next, select the [model type](monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
+
+  ![Multiclass](images/multiclass.png)
+  
 - All of the data columns are inputs to the model. Select all inputs and click **Next**:
 
   ![Explainability Inputs](images/explain_inputs.png)
@@ -392,3 +411,7 @@ Paste the value you copied from the _scoring\_id_ column into the search box and
 You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
 
   ![View Transation](images/view_transaction.png)
+
+## Next steps
+
+- See the [Working with monitored data](insight-timechart.html) topic for more information.
