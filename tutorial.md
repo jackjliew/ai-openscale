@@ -95,7 +95,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   
 - Give your service a name, choose the Standard plan, and click the **Create** button.
 
-  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a $16 refund of the cost for your first GB of storage.
+  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
 
 ### Provision a Db2 Warehouse service
 
