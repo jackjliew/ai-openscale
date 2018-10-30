@@ -39,7 +39,7 @@ You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}
 
 - PostgreSQL
 
-  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a $16 refund of the cost for your first GB of storage.
+  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
 
 **Important**: The PostgreSQL database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
 
@@ -111,7 +111,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 - Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console](https://console.bluemix.net), click **Manage** from the left side panel, and then click the **Open** button.
 
-- Use your Db2 credentials `username` and `password` to log in to Db2 Warehouse.
+- If necessary, use your Db2 credentials `username` and `password` to log in to Db2 Warehouse.
 
 - Once Db2 Warehouse has opened, click the **Menu** button and select **Load** from the dropdown:
 
