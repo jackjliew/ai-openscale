@@ -21,7 +21,7 @@ A biomedical company that produces heart drugs has collected data about a set of
 
 The model uses patient data fields AGE, SEX, BP (blood pressure), CHOLESTEROL, K (potassium levels), and NA (sodium levels) to predict one of five values for the DRUG data field.
 
-### How {{site.data.keyword.Bluemix_notm}} can help
+### How {{site.data.keyword.aios_short}} can help
 
 - *Eliminating training data biases from the model*: The company has established evidence that shows the key factors that should influence which drug is predicted are BP, CHOLESTEROL, K and NA. AGE and SEX do play a role, but not as significant when compared to the other indicators. The company suspects that the data coming from patient trials may have suffered from biases of the practitioners for prescribing medications based on AGE and SEX. The company wants to constantly monitor for such biases being learned from the data, and flag it.
 
@@ -29,7 +29,7 @@ The model uses patient data fields AGE, SEX, BP (blood pressure), CHOLESTEROL, K
 
 - *Make the model more trustworthy*: For the successful adoption of its AI assistant, the company has received feedback from its customer base (medical practitioners, doctors) that they would not trust the AI model recommendations arbitrarily, without understanding the intuition behind why the model made any and each decision.
 
-Each of these issues will be addressed in this tutorial, through the use of {{site.data.keyword.Bluemix_notm}}:
+Each of these issues will be addressed in this tutorial, through the use of {{site.data.keyword.aios_short}}:
 
 - The Fairness monitor will flag AGE and SEX biases the model may have
 - The Accuracy monitor incorporates the feedback being provided by experts, and compares it against the production outputs of the model for the same transactions
