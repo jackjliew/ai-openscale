@@ -60,7 +60,7 @@ You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}
 
 In this tutorial, you will:
 
-- Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services, and upload sample data
+- Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services
 - Set up a Watson Studio project, and create, train and deploy a machine learning model
 - Configure and explore trust, transparency and explainability monitoring for your model
 
