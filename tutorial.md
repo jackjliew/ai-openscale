@@ -47,7 +47,6 @@ During the tutorial, you will provision the following Lite (free) {{site.data.ke
 - Machine Learning
 - Apache Spark
 - Object Storage
-- Db2 Warehouse
 
 You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}} Service:
 
@@ -111,6 +110,8 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
 
+<!---
+
 ### Provision a Db2 Warehouse service
 
 - [Provision a Db2 Warehouse service](https://console.bluemix.net/catalog/services/db2-warehouse) if you do not already have one associated with your account:
@@ -144,6 +145,8 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
   ![Separator and Header](images/separator.png)
   
 - The training data should now be displaying correctly in columns. Click **Next** to continue, and then click **Begin Load** to load the data.
+
+--->
 
 ## Set up a Watson Studio project
 
@@ -313,12 +316,14 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - You have finished configuring {{site.data.keyword.aios_short}}. It will now monitor your models and provide real-time bias detection, accuracy, and explainability. In the next steps, you will provide sample data for it to analyze.
 
-## Connect your databases to Watson Studio
+## Connect your payload logging table to Watson Studio
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Connection** from the dropdown:
 
   ![Add Connection](images/add_connection.png)
-  
+
+<!---
+
 - A list of your {{site.data.keyword.Bluemix_notm}} Services will appear. Select the Db2 instance you created earlier, and the click **Create**. You can now add the data from this database to your project. Click **Add to project** again, and selected **Connected assets**:
 
   ![Add Connected Asset](images/add_connected_assets.png)
@@ -331,9 +336,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Now add the PostgreSQL database. In your Watson Studio project, click **Add to project** and select **Connection**.
 
+--->
+
 - Select the PostgreSQL instance you created earlier and click **Create**.
   
-- Now add the payload logging table from PostgreSQL to Watson Studio.  First, find the deployment ID for your model. From the **Deployments** tab of your Watson Studio project, click the **drug-select-deploy** link. On the **Overview** tab, scroll down and make note of the model ID:
+- Now add the payload logging table from PostgreSQL to Watson Studio. First, find the deployment ID for your model. From the **Deployments** tab of your Watson Studio project, click the **drug-select-deploy** link. On the **Overview** tab, scroll down and make note of the model ID:
 
   ![Model ID](images/model_id1.png)
 
@@ -369,7 +376,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Select the **Evaluation** tab. Scroll down to the "Performance Monitoring" section, and select **Edit configuration**.
 
-- Set the value for both "Auto retrain" and "Auto deploy" to `Always`, and click **Save**.
+- Set the value for both "Auto retrain" and "Auto deploy" to `Always`, and click **Save**. Leave the other values as they are set.
 
   ![Auto retrain and auto deploy](images/auto-retrain-deploy.png)
   
