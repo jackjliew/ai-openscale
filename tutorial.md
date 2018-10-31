@@ -17,7 +17,7 @@ lastupdated: "2018-10-29"
 # Tutorial
 
 ## Scenario
-A biomedical company that produces heart drugs has collected data about a set of patients, all of whom suffered from the same illness. During their course of treatment, each patient responded to one of five medications. The presented model uses this data to predict the drug it believes to be the best choice for the patient.
+A biomedical company that produces heart drugs has collected data about a set of patients, all of whom suffered from the same illness. During their course of treatment, each patient responded to one of five medications. The company is using this data to build an AI assistant for medical practitioners, which will recommend the drug it believes to be the best choice for the patient.
 
 The model uses patient data fields AGE, SEX, BP (blood pressure), CHOLESTEROL, K (potassium levels), and NA (sodium levels) to predict one of five values for the DRUG data field.
 
