@@ -3,7 +3,7 @@
 title: Trust and transparency for your machine learning models with AI OpenScale
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
-intro: In this extended tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM AI OpenScale product to monitor your models for trust and transparency.
+intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM AI OpenScale product to monitor your models for trust and transparency.
 takeaways:
 - See how AI OpenScale provides trust and transparency for AI models
 - Understand how IBM Cloud services and Watson Studio technologies can provide a seamless, AI-driven customer experience
@@ -20,10 +20,12 @@ lastupdated: "2018-11-01"
 {{site.data.keyword.aios_full}} allows enterprises to automate and operationalize AI lifecycle in business applications, ensuring AI models are free from bias, can be easily explained and understood by business users, and are auditable in business transactions.{{site.data.keyword.aios_short}} supports AI models built and run in the tools and model serve frameworks of your choice.
 {: shortdesc}
 
-## View a {{site.data.keyword.aios_short}} video
+## Before you begin
+
+### View a {{site.data.keyword.aios_short}} video
 {: #gs-view-demo}
 
-Explore the main features of the {{site.data.keyword.aios_short}} tooling using examples based on fraud detection and loan approval workflows by watching [this video](https://www.youtube.com/watch?v=6Ei8rPVtCf8).
+Geta quick overview of {{site.data.keyword.aios_short}} by watching [this video](https://www.youtube.com/watch?v=6Ei8rPVtCf8).
 
 ## Complete this tutorial
 
