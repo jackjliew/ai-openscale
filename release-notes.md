@@ -23,4 +23,4 @@ The following new features and changes to the service are available.
 ### 17 September 2018
 {: #17September2018}
 
-- **GA Release**: Welcome to {{site.data.keyword.aios_full}}.
+- **Beta preview release**: Welcome to {{site.data.keyword.aios_full}}.
