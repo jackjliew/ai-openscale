@@ -10,24 +10,49 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-06"
 
 ---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:pre: .pre}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
 
 # Getting started
 {: #gettingstarted}
 
-{{site.data.keyword.aios_full}} allows enterprises to automate and operationalize AI lifecycle in business applications, ensuring AI models are free from bias, can be easily explained and understood by business users, and are auditable in business transactions.{{site.data.keyword.aios_short}} supports AI models built and run in the tools and model serve frameworks of your choice.
+{{site.data.keyword.aios_full}} allows enterprises to automate and operationalize AI lifecycle in business applications, ensuring AI models are free from bias, can be easily explained and understood by business users, and are auditable in business transactions. {{site.data.keyword.aios_short}} supports AI models built and run in the tools and model service frameworks of your choice.
 {: shortdesc}
 
-## Before you begin
-
-### View a {{site.data.keyword.aios_short}} video
+## Overview
 {: #gs-view-demo}
 
-Geta quick overview of {{site.data.keyword.aios_short}} by watching [this video](https://www.youtube.com/watch?v=6Ei8rPVtCf8).
+Get a quick overview of {{site.data.keyword.aios_short}} by watching this video.
 
-## Complete this tutorial
+<p>
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" id="youtubeplayer" title="Trust and Transparency in AI" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/6Ei8rPVtCf8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+  </div>
+</p>
+
+## Tutorial objectives
+
+In this tutorial, you will:
+
+- Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services
+- Set up a Watson Studio project, and create, train and deploy a machine learning model
+- Configure and explore trust, transparency and explainability monitoring for your model
+
+## Tutorial use case and the value of {{site.data.keyword.aios_short}}
 
 A biomedical company that produces heart drugs has collected data about a set of patients, all of whom suffered from the same illness. During their course of treatment, each patient responded to one of five medications. The company is using this data to build an AI assistant for medical practitioners, which will recommend the drug it believes to be the best choice for the patient.
 
@@ -37,134 +62,98 @@ The model uses patient data fields AGE, SEX, BP (blood pressure), CHOLESTEROL, K
 
 ### How {{site.data.keyword.aios_short}} can help
 
-- *Eliminate training data biases from the model*: The company has established evidence that shows the key factors that should influence which drug is predicted are BP, CHOLESTEROL, K and NA. AGE and SEX do play a role, but not as significant when compared to the other indicators. The company suspects that the data coming from patient trials may have suffered from biases of the practitioners for prescribing medications based on AGE and SEX. The company wants to constantly monitor for such biases being learned from the data, and flag it.
+- *Identify run-time bias in the model*: The company has established evidence that shows the key factors that should influence which drug is predicted are BP, CHOLESTEROL, K and NA. AGE and SEX do play a role, but they're not as significant when compared to the other indicators. The company suspects that the data coming from patient trials might have suffered from biases of the practitioners for prescribing medications based on AGE and SEX. The company wants to constantly monitor for such biases being learned from the data, and flag a suspected bias.
 
-- *Constantly validate the accuracy of the model*: The company routinely evaluates the model prediction by having experts provide their own drug recommendations based on the patient data. The goal is to integrate these manual evaluations as feedback, to tell the model in real-time where it may have been wrong, and improve it over time.
+- *Constantly validate the accuracy of the model*: The company routinely evaluates the model prediction by having experts provide their own drug recommendations based on the patient data. The goal is to integrate these manual evaluations as feedback, to tell the model in real time where it might be wrong, and improve it over time.
 
-- *Make the model more trustworthy*: For the successful adoption of its AI assistant, the company has received feedback from its customer base (medical practitioners, doctors) that they would not trust the AI model recommendations arbitrarily, without understanding the intuition behind why the model made any and each decision.
+- *Make the model more trustworthy*: To achieve a successful adoption of its AI assistant, the company received feedback from its customer base of medical practitioners and doctors who said they would not trust the AI model recommendations without understanding the logic behind them.
 
 Each of these issues will be addressed in this tutorial, through the use of {{site.data.keyword.aios_short}}:
 
 - The Fairness monitor will flag AGE and SEX biases the model may have
-- The Accuracy monitor incorporates the feedback being provided by experts, and compares it against the production outputs of the model for the same transactions
+- The Accuracy monitor uses feedback generated by your experts to test the performance of the deployed model, to detect model drift
 - The Explainability monitor makes each prediction more transparent, and provides data for what features were key influencers in the prediction
 
-## Prerequisites
+## Provision prerequisite {{site.data.keyword.Bluemix_notm}} services
 
-To complete this tutorial, you will need:
+In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you need the following accounts and services.
 
-- A [Watson Studio](https://dataplatform.ibm.com/) account.
-- An [{{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net) account.
+For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard plan is needed. A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
+{: note}
 
-During the tutorial, you will provision the following Lite (free) {{site.data.keyword.Bluemix_notm}} Services:
+To provision the prerequisite services:
 
-- Machine Learning
-- Apache Spark
-- Object Storage
-
-You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}} Service:
-
-- PostgreSQL
-
-  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
-
-**Important**: The PostgreSQL database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
-
-## Introduction
-
-In this tutorial, you will:
-
-- Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services
-- Set up a Watson Studio project, and create, train and deploy a machine learning model
-- Configure and explore trust, transparency and explainability monitoring for your model
-
-## Provision {{site.data.keyword.Bluemix_notm}} services
-
-Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net) with your IBM ID.
-
-### Create a Watson Studio account
-
-- [Create a Watson Studio instance](https://console.bluemix.net/catalog/services/watson-studio) if you do not already have one associated with your account:
+1. Log in to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} with your {{site.data.keyword.ibmid}}.
+2. For each of the following services that you don't already have associated with your account, create an instance by clicking the link, giving the service a name, selecting the **Lite** (free) plan, and clicking the **Create** button:
+  - [Watson Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/watson-studio){: new_window}
 
   ![Watson Studio](images/watson_studio.png)
-  
-- Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision a Machine Learning service
-
-- [Provision a Watson Machine Learning instance](https://console.bluemix.net/catalog/services/machine-learning) if you do not already have one associated with your account:
+  - [Watson Machine Learning ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/machine-learning){: new_window}
 
   ![Machine Learning](images/machine_learning.png)
-  
-- Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision a Spark service
-
-- [Provision a Spark service](https://console.bluemix.net/catalog/services/apache-spark) if you do not already have one associated with your account:
+  - [Apache Spark ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/apache-spark){: new_window}
 
   ![Apache Spark](images/spark.png)
-  
-- Assign your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision an Object Storage service
-
-- [Provision an Object Storage service](https://console.bluemix.net/catalog/services/cloud-object-storage) if you do not already one associated with your account:
+  - [Object Storage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloud-object-storage){: new_window}
 
   ![Object Storage](images/object_storage.png)
-  
-- Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision a paid PostgreSQL service
+3. For the following service, if you don't already have an instance associated with your account, create a **paid** instance by clicking the link, giving the service a name, selecting the **Standard** (paid) plan, and clicking the **Create** button.
 
-- [Provision a paid PostgreSQL service](https://console.bluemix.net/catalog/services/compose-for-postgresql) if you do not already have one associated with your account:
+  The {{site.data.keyword.composeForPostgreSQL}} database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
+  {: important}
+
+  - [{{site.data.keyword.composeForPostgreSQL}} (paid plan) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/compose-for-postgresql){: new_window}
 
   ![Compose for PostgreSQL](images/postgres.png)
-  
-- Give your service a name, choose the Standard plan, and click the **Create** button.
 
-  **Note**: A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
+  A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
+  {: note}
 
 <!---
 
 ### Provision a Db2 Warehouse service
 
-- [Provision a Db2 Warehouse service](https://console.bluemix.net/catalog/services/db2-warehouse) if you do not already have one associated with your account:
+- [Provision a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2-warehouse){: new_window} if you do not already have one associated with your account:
 
   ![Db2 Warehouse](images/db2_warehouse.png)
-  
+
 - Give your service a name, choose the Entry plan, and click the **Create** button.
 
 ### Upload training data to Db2 Warehouse
 
 - Download the [drug_train_data_updated.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data_updated.csv) file. Be sure to save the file download as a .CSV file.
 
-- Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console](https://console.bluemix.net), click **Manage** from the left side panel, and then click the **Open** button.
+- Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window}, click **Manage** from the left side panel, and then click the **Open** button.
 
 - If necessary, use your Db2 credentials `username` and `password` to log in to Db2 Warehouse.
 
 - Once Db2 Warehouse has opened, click the **Menu** button and select **Load** from the dropdown:
 
   ![Load Menu](images/db2_load.png)
-  
+
 - Browse to the training data file, or drag and drop it into the appropriate area on the form. Click **Next**. Select a Schema from the list of load targets; this is usually in a format like `DASH12345`. Then click **New Table** on the right:
 
   ![New Table](images/new_table.png)
-  
+
 - Name your table HEART\_DRUG\_TRAINING, and click the **Create** button:
 
   ![New Table Create](images/new_table_create1.png)
-  
+
 - Click **Next** to preview the data. On the preview screen, set the **Separator** field to a semicolon (;) and make sure the **Header in first row** option is checked:
 
   ![Separator and Header](images/separator.png)
-  
+
 - The training data should now be displaying correctly in columns. Click **Next** to continue, and then click **Begin Load** to load the data.
 
 --->
 
 ## Set up a Watson Studio project
 
-- Log in to your [Watson Studio account](https://dataplatform.ibm.com/). Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.Bluemix_notm}} services:
+- Log in to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.Bluemix_notm}} services:
 
   ![Same Account](images/same_account.png)
 
@@ -175,7 +164,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Select the **Standard** tile, to create the project:
 
   ![Watson Studio select Standard project](images/studio_create_standard.png)
-  
+
 - Give your project a name and description, make sure the Object Storage service you created in the previous step is selected in the **Storage** dropdown, and click **Create**.
 
 ### Associate your {{site.data.keyword.Bluemix_notm}} Services with your Watson project
@@ -183,7 +172,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Open your Watson Studio project and select the **Settings** tab. Scroll down to the **Associated Services** section, click the **Add service** dropdown and select **Watson**:
 
   ![Add Watson Service](images/add_watson_service.png)
-  
+
 - Click the **Add** link on the **Machine Learning** tile and select the **Existing** tab. Choose the service you created in the previous section from the **Existing Service Instance** dropdown and click **Select**.
 
 - From the project settings tab, select **Add service** again and choose **Spark** from the dropdown. From the **Existing** tab, choose the Spark service you created and click **Select**.
@@ -191,11 +180,11 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 ### Add the `Best Heart Drug Selection` model
 
 - In Watson Studio, select the **Assets** tab of your project, scroll down to the **Watson Machine Learning Models** section, and click the **New Watson Machine Learning model** button.
-  
+
 - Select the **From sample** button of the *Select model type* menu, and select the `Best Heart Drug Selection` model:
 
   ![New Notebook Form](images/drug-sample-model.png)
-  
+
 - Click **Create**.
 
 ### Deploy the `Best Heart Drug Selection` model
@@ -212,10 +201,10 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 ### Provision {{site.data.keyword.aios_short}}
 
-- [Provision an {{site.data.keyword.aios_short}} service](https://console.bluemix.net/catalog/services/ai-openscale) if you do not already have one:
+- [Provision an {{site.data.keyword.aios_short}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/ai-openscale){: new_window} if you do not already have one:
 
   ![AI OpenScale](images/openscale.png)
-  
+
 - Give your service a name, select the Lite plan, and click **Create**.
 
 ### Connect {{site.data.keyword.aios_short}} to your machine learning model
@@ -233,7 +222,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 - You are now able to select which deployed models will be monitored by {{site.data.keyword.aios_short}}. Check the model you created and deployed; click **Next** to accept this:
 
   ![Models monitored](images/models_monitored1.png)
-  
+
 - Save the configuration and, when prompted, click the **Continue with Configuration** button.
 
 ### Configure Fairness monitoring
@@ -241,7 +230,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 - Select your model tile and click **Begin**:
 
   ![Action Model](images/bus_area_model1.png)
-  
+
 - There are three areas to configure. Begin by selecting **Fairness** and clicking **Begin**. See [Understanding Fairness](monitor-fairness.html#understand-fair) to understand the Fairness monitor in detail.
 
 <!---
@@ -261,13 +250,13 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - You may now choose which features to monitor for Fairness. In this example, we'll monitor the **AGE** and **SEX** features. Click on the **AGE** and **SEX** tiles, and click **Next**.
 
-- {{site.data.keyword.aios_short}} works to detect bias against a protected group in comparison to a reference group. For the current **AGE** example, add the values "49-59" and "60-75" to the **Reference group**, and the values "0-48" and "76-99" to the **Protected group**, and click **Next**:
+- {{site.data.keyword.aios_short}} works to detect bias against a protected group in comparison to a reference group. For the current **AGE** example, add the values "50-64" to the **Reference group**, and the values "0-25", "26-49", and "65-99" to the **Protected group**, and click **Next**:
 
-  ![Age Groups](images/age_groups1.png)
+  ![Age Groups](images/age_groups10.png)
 
-  The model will be flagged as biased if the drug prediction ratios for the protected group age ranges differ from the ratios for the reference group age ranges. For example, if the model finds that drug A was predicted 30% of the time for patients aged 49-59, but was predicted only 5% of the time for patients aged 76-99, it is biased against the protected group.
+  The model will be flagged as biased if the drug prediction ratios for the protected group age ranges differ from the ratios for the reference group age ranges. For example, if the model finds that drug A was predicted 30% of the time for patients aged 50-64, but was predicted only 5% of the time for patients aged 65-99, it is biased against the protected group.
 
-- You may now assign a fairness threshold for **AGE**. You will see an alert on your operations dashboard if the Fairness rating falls below this threshold. Click **Next** to leave it set at the default of 80%.
+- You may now assign a fairness threshold for **AGE**. You will see an alert on your operations dashboard if the Fairness rating falls below this threshold. Set the threshold at 90%, and click **Next**.
 
 - For the **SEX** feature, add the value "M" (male) to the **Reference group**, and the value "F" (female) to the **Protected group**, and click **Next**:
 
@@ -275,15 +264,16 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   As with **AGE**, the model will be flagged as biased for **SEX** if the drug prediction ratios for the protected group differ from the ratios for the reference group. So if the model predicts drug X for male patients 60% of the time, and for female patients 20% of the time, it is biased.
 
-- Click **Next** to leave the threshold for **SEX** at the default of 80%.
+- Set the threshold for **SEX** at 90%, and click **Next**.
 
-- You will now select favorable and unfavorable prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} has automatically detects which column in the payload logging data contains the prediction values; those values are 0-4 (each number corresponding to one of five drugs the model predicts). Add these values to the form and click **Next**:
+- You will now select favorable and unfavorable prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} will automatically detect which column in the payload logging data contains the prediction values; those values are "drugA", "drugB", "drugC", "drugX", and "drugY". Add "drugC" as Favorable, and the others as Unfavorable, to the form and click **Next**:
 
-  ![Positive and negative values](images/pos_and_neg1.png)
-  
-- Use the slider to adjust the minimum sample size to 100, then click  **Next**. Review your choices, and then click **Save**.
+  ![Positive and negative values](images/pos_and_neg10.png)
 
-  **Note**: For purposes of this tutorial, the minimum sample size has been set to 100. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
+- Use the slider to adjust the minimum sample size to 50, then click  **Next**. Review your choices, and then click **Save**.
+
+  For purposes of this tutorial, the minimum sample size has been set to 50. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
+  {: note}
 
 ### Configure accuracy monitoring
 
@@ -294,10 +284,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 - Then, select the [model type](monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
 
   ![Multiclass](images/multiclass.png)
-  
-- Next, set the accuracy threshold. Click **Next** to leave it at the default 80%. Use the slider to adjust the minimum sample size to 40, then click  **Next**.
 
-  **Note**: For purposes of this tutorial, the minimum sample size has been set to 40. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
+- Next, set the accuracy threshold to 90% and click **Next**. Use the slider to adjust the minimum sample size to 40, then click  **Next**.
+
+  For purposes of this tutorial, the minimum sample size has been set to 40. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
+  {: note}
 
 - You can review your choices before clicking **Save** to finalize them.
 
@@ -321,11 +312,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 - Next, select the [model type](monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
 
   ![Multiclass](images/multiclass.png)
-  
+
 - All of the data columns, except "DRUG" (the predicted outcome), are inputs to the model. Select all inputs except "DRUG" and click **Next**:
 
   ![Explainability Inputs](images/explain_inputs1.png)
-  
+
 - For categorical features, neither **AGE**, **NA**, nor **K** contained text, so click **Next** without selecting any. Review your input and click **Save**.
 
 - You have finished configuring {{site.data.keyword.aios_short}}. It will now monitor your models and provide real-time bias detection, accuracy, and explainability. In the next steps, you will provide sample data for it to analyze.
@@ -341,9 +332,9 @@ Now that the machine learning model has been deployed, you can configure {{site.
 - A list of your {{site.data.keyword.Bluemix_notm}} Services will appear. Select the Db2 instance you created earlier, and the click **Create**. You can now add the data from this database to your project. Click **Add to project** again, and selected **Connected assets**:
 
   ![Add Connected Asset](images/add_connected_assets.png)
-  
+
 - Click the **Select source** link and choose your Db2 Warehouse instance, schema, and the HEART\_DRUG\_TRAINING table, then click **Select**.
-  
+
   ![Connection Source](images/connection_source1.png)
 
 - Give your asset a name, then click **Create**.
@@ -353,7 +344,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 --->
 
 - Select the PostgreSQL instance you created earlier and click **Create**.
-  
+
 - Now add the payload logging table from PostgreSQL to Watson Studio. First, find the deployment ID for your model. From the **Deployments** tab of your Watson Studio project, click the **drug-select-deploy** link. On the **Overview** tab, scroll down and make note of the model ID:
 
   ![Model ID](images/model_id1.png)
@@ -363,12 +354,12 @@ Now that the machine learning model has been deployed, you can configure {{site.
 - The payload logs are named _Payload\_\<model id\>_. Locate the one that matches the drug-selection model. Click **Select**, give the table a name, and click **Create**:
 
   ![Named Asset Connection](images/named_asset_connection1.png)
-  
+
 - With the model payload added as a data asset within Watson Studio, it's now easy to share, visualize and analyze. The payload table is currently empty. Next, you will provide some data for your model to analyze.
 
 ## Provide a set of sample data to your model
 
-- When configuring {{site.data.keyword.aios_short}}, you set the threshold for fairness and accuracy monitoring to 100 requests. No data will appear in the dashboard until this threshold is met. You can generate these requests all at once by feeding the training data back to the model for scoring.
+- When configuring {{site.data.keyword.aios_short}}, you set the threshold for fairness and accuracy monitoring to 50 requests. No data will appear in the dashboard until this threshold is met. You can generate these requests all at once by feeding the training data back to the model for scoring.
 
 - To do this, download the [drug_train_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data.json) file.
 
@@ -393,33 +384,58 @@ Now that the machine learning model has been deployed, you can configure {{site.
 - Set the value for both "Auto retrain" and "Auto deploy" to `Always`, and click **Save**. Leave the other values as they are set.
 
   ![Auto retrain and auto deploy](images/auto-retrain-deploy.png)
-  
+
 - Now, click the **Add feedback data** button, and select the `drug_feedback_data.csv` you downloaded. Click the **New evaluation** button when prompted.
 
   ![New evaluation](images/new-eval.png)
 
   This will retrain and provide feedback data to your model.
 
-## View the explainability for a model transaction
+- Finally, [re-run the sample data set](getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model.
+
+## Viewing results
+
+### View insights for your deployment
+
+Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click on the **Insights** tab:
+
+  ![Insights](images/insight-dash-tab.png)
+
+The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the 90% threshold. The data and monitor settings used in this tutorial create Accuracy and Fairness alerts similar to the ones shown here.
+
+  ![Insight overview](images/insight-overview0.png)
+
+  Fairness metrics can take up to an hour to display.
+  {: important}
+
+### View monitoring data for your deployment
+
+Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment will appear. Slide the marker across the chart to select data for the timeframe during which you ran the sample data and sample feedback data. Then select the **View details** link.
+
+  ![Monitor data](images/insight-monitor-data0.png)
+
+Now, you can review the charts for the data you monitored. For this example, you can use the **Feature** drop-down to select either "AGE" or "SEX", in order to see details about the monitored data. This helps pinpoint biased metrics, so that you can adjust and redeploy your model accordingly.
+
+  ![Insight overview](images/insight-review-charts0.png)
+
+### View explainability for a model transaction
 
 From the **Assets** tab of your Watson Studio project, click on the model payload link in the **Data Assets** section. There should now be at least 181 rows of payload data. Expand the _scoring\_id_ column horizontally, and copy one of the identifiers to your clipboard:
 
   ![scoring_id](images/scoring_id.png)
-  
-Using the [AI OpenScale dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/), click on the **Explainability** button:
-  
+
+Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click on the **Explainability** tab:
+
   ![Explainability](images/explainability.png)
-  
+
 Paste the value you copied from the _scoring\_id_ column into the search box and press **Return** on your keyboard:
 
   ![Paste Transaction](images/paste_transaction.png)
-  
+
 You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
 
   ![View Transation](images/view_transaction1.png)
 
 ## Next steps
-
-- Change the **AGE** and **SEX** values of the Fairness monitor, or add additional parameters such as **CHOLESTEROL** (Reference Group="Normal", Protected Group="Low" and "High"). Then provide the sample data and sample feedback again to see how this may change the Fairness and Accuracy measurements.
 
 - See the [Working with monitored data](insight-timechart.html) topic for more information.
