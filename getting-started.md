@@ -252,7 +252,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - {{site.data.keyword.aios_short}} works to detect bias against a protected group in comparison to a reference group. For the current **AGE** example, add the values "50-64" to the **Reference group**, and the values "0-25", "26-49", and "65-99" to the **Protected group**, and click **Next**:
 
-  ![Age Groups](images/age_groups10.png)
+  ![Age Groups](images/age_groups1.png)
 
   The model will be flagged as biased if the drug prediction ratios for the protected group age ranges differ from the ratios for the reference group age ranges. For example, if the model finds that drug A was predicted 30% of the time for patients aged 50-64, but was predicted only 5% of the time for patients aged 65-99, it is biased against the protected group.
 
@@ -268,7 +268,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - You will now select favorable and unfavorable prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} will automatically detect which column in the payload logging data contains the prediction values; those values are "drugA", "drugB", "drugC", "drugX", and "drugY". Add "drugC" as Favorable, and the others as Unfavorable, to the form and click **Next**:
 
-  ![Positive and negative values](images/pos_and_neg10.png)
+  ![Positive and negative values](images/pos_and_neg1.png)
 
 - Use the slider to adjust the minimum sample size to 50, then click  **Next**. Review your choices, and then click **Save**.
 
@@ -403,7 +403,7 @@ Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph
 
 The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the 90% threshold. The data and monitor settings used in this tutorial create Accuracy and Fairness alerts similar to the ones shown here.
 
-  ![Insight overview](images/insight-overview0.png)
+  ![Insight overview](images/insight-overview.png)
 
   Fairness metrics can take up to an hour to display.
   {: important}
@@ -412,11 +412,11 @@ The Insights page provides an overview of metrics for your deployed models. You 
 
 Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment will appear. Slide the marker across the chart to select data for the timeframe during which you ran the sample data and sample feedback data. Then select the **View details** link.
 
-  ![Monitor data](images/insight-monitor-data0.png)
+  ![Monitor data](images/insight-monitor-data.png)
 
 Now, you can review the charts for the data you monitored. For this example, you can use the **Feature** drop-down to select either "AGE" or "SEX", in order to see details about the monitored data. This helps pinpoint biased metrics, so that you can adjust and redeploy your model accordingly.
 
-  ![Insight overview](images/insight-review-charts0.png)
+  ![Insight overview](images/insight-review-charts.png)
 
 ### View explainability for a model transaction
 
