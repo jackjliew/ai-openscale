@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-04"
 
 ---
 
@@ -250,13 +250,13 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - You may now choose which features to monitor for Fairness. In this example, we'll monitor the **AGE** and **SEX** features. Click on the **AGE** and **SEX** tiles, and click **Next**.
 
-- {{site.data.keyword.aios_short}} works to detect bias against a protected group in comparison to a reference group. For the current **AGE** example, add the values "50-64" to the **Reference group**, and the values "0-25", "26-49", and "65-99" to the **Protected group**, and click **Next**:
+- {{site.data.keyword.aios_short}} works to detect bias against a protected group in comparison to a reference group. For the current **AGE** example, add the values "49-59" and "60-75" to the **Reference group**, and the values "0-48" and "76-99" to the **Protected group**, and click **Next**:
 
   ![Age Groups](images/age_groups1.png)
 
-  The model will be flagged as biased if the drug prediction ratios for the protected group age ranges differ from the ratios for the reference group age ranges. For example, if the model finds that drug A was predicted 30% of the time for patients aged 50-64, but was predicted only 5% of the time for patients aged 65-99, it is biased against the protected group.
+  The model will be flagged as biased if the drug prediction ratios for the protected group age ranges differ from the ratios for the reference group age ranges. For example, if the model finds that drug A was predicted 30% of the time for patients aged 49-59, but was predicted only 5% of the time for patients aged 76-99, it is biased against the protected group.
 
-- You may now assign a fairness threshold for **AGE**. You will see an alert on your operations dashboard if the Fairness rating falls below this threshold. Set the threshold at 90%, and click **Next**.
+- You may now assign a fairness threshold for **AGE**. You will see an alert on your operations dashboard if the Fairness rating falls below this threshold. Click **Next** to leave it set at the default of 80%.
 
 - For the **SEX** feature, add the value "M" (male) to the **Reference group**, and the value "F" (female) to the **Protected group**, and click **Next**:
 
@@ -264,15 +264,15 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   As with **AGE**, the model will be flagged as biased for **SEX** if the drug prediction ratios for the protected group differ from the ratios for the reference group. So if the model predicts drug X for male patients 60% of the time, and for female patients 20% of the time, it is biased.
 
-- Set the threshold for **SEX** at 90%, and click **Next**.
+- Click **Next** to leave the threshold for **SEX** at the default of 80%.
 
-- You will now select favorable and unfavorable prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} will automatically detect which column in the payload logging data contains the prediction values; those values are "drugA", "drugB", "drugC", "drugX", and "drugY". Add "drugC" as Favorable, and the others as Unfavorable, to the form and click **Next**:
+- You will now select favorable and unfavorable prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} will automatically detect which column in the payload logging data contains the prediction values;  those values are 0-4 (each number corresponding to one of five drugs the model predicts). Add these values to the form and click **Next**:
 
   ![Positive and negative values](images/pos_and_neg1.png)
 
-- Use the slider to adjust the minimum sample size to 50, then click  **Next**. Review your choices, and then click **Save**.
+- Use the slider to adjust the minimum sample size to 100, then click  **Next**. Review your choices, and then click **Save**.
 
-  For purposes of this tutorial, the minimum sample size has been set to 50. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
+  For purposes of this tutorial, the minimum sample size has been set to 100. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
   {: note}
 
 ### Configure accuracy monitoring
@@ -285,7 +285,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Multiclass](images/multiclass.png)
 
-- Next, set the accuracy threshold to 90% and click **Next**. Use the slider to adjust the minimum sample size to 40, then click  **Next**.
+- Next, set the accuracy threshold. Click **Next** to leave it at the default 80%. Use the slider to adjust the minimum sample size to 40, then click  **Next**.
 
   For purposes of this tutorial, the minimum sample size has been set to 40. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
   {: note}
@@ -359,7 +359,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 ## Provide a set of sample data to your model
 
-- When configuring {{site.data.keyword.aios_short}}, you set the threshold for fairness and accuracy monitoring to 50 requests. No data will appear in the dashboard until this threshold is met. You can generate these requests all at once by feeding the training data back to the model for scoring.
+- When configuring {{site.data.keyword.aios_short}}, you set the threshold for fairness and accuracy monitoring to 100 requests. No data will appear in the dashboard until this threshold is met. You can generate these requests all at once by feeding the training data back to the model for scoring.
 
 - To do this, download the [drug_train_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data.json) file.
 
@@ -391,8 +391,6 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   This will retrain and provide feedback data to your model.
 
-- Finally, [re-run the sample data set](getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model.
-
 ## Viewing results
 
 ### View insights for your deployment
@@ -401,7 +399,7 @@ Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph
 
   ![Insights](images/insight-dash-tab.png)
 
-The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the 90% threshold. The data and monitor settings used in this tutorial create Accuracy and Fairness alerts similar to the ones shown here.
+The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the 80% threshold. In this example no data is below the threshold.
 
   ![Insight overview](images/insight-overview.png)
 
@@ -414,7 +412,7 @@ Select a deployment by clicking the tile on the Insights page. The monitoring da
 
   ![Monitor data](images/insight-monitor-data.png)
 
-Now, you can review the charts for the data you monitored. For this example, you can use the **Feature** drop-down to select either "AGE" or "SEX", in order to see details about the monitored data. This helps pinpoint biased metrics, so that you can adjust and redeploy your model accordingly.
+Now, you can review the charts for the data you monitored. For this example, you can use the **Feature** drop-down to select either "AGE" or "SEX", in order to see details about the monitored data.
 
   ![Insight overview](images/insight-review-charts.png)
 
