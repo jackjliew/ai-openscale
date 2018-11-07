@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-11-04"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -79,9 +79,9 @@ Each of these issues will be addressed in this tutorial, through the use of {{si
 In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you need the following accounts and services.
 
 For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard plan is needed. A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
-{: note}
+{: tip}
 
-To provision the prerequisite services:
+**Important**: For best performance, it's recommended that the prerequisite services are created in the same region as AI OpenScale. To view available locations for AI OpenScale, see [Service availability ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/resources/services_region.html){: new_window}.
 
 1. Log in to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} with your {{site.data.keyword.ibmid}}.
 2. For each of the following services that you don't already have associated with your account, create an instance by clicking the link, giving the service a name, selecting the **Lite** (free) plan, and clicking the **Create** button:
@@ -103,15 +103,14 @@ To provision the prerequisite services:
 
 3. For the following service, if you don't already have an instance associated with your account, create a **paid** instance by clicking the link, giving the service a name, selecting the **Standard** (paid) plan, and clicking the **Create** button.
 
-  The {{site.data.keyword.composeForPostgreSQL}} database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
-  {: important}
+  **Important**: The {{site.data.keyword.composeForPostgreSQL}} database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
 
   - [{{site.data.keyword.composeForPostgreSQL}} (paid plan) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/compose-for-postgresql){: new_window}
 
   ![Compose for PostgreSQL](images/postgres.png)
 
   A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
-  {: note}
+  {: tip}
 
 <!---
 
@@ -272,8 +271,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Use the slider to adjust the minimum sample size to 100, then click  **Next**. Review your choices, and then click **Save**.
 
-  For purposes of this tutorial, the minimum sample size has been set to 100. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
-  {: note}
+  **Note**: For purposes of this tutorial, the minimum sample size has been set to 100. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
 
 ### Configure accuracy monitoring
 
@@ -287,8 +285,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Next, set the accuracy threshold. Click **Next** to leave it at the default 80%. Use the slider to adjust the minimum sample size to 40, then click  **Next**.
 
-  For purposes of this tutorial, the minimum sample size has been set to 40. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
-  {: note}
+  **Note**: For purposes of this tutorial, the minimum sample size has been set to 40. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
 
 - You can review your choices before clicking **Save** to finalize them.
 
@@ -404,7 +401,7 @@ The Insights page provides an overview of metrics for your deployed models. You 
   ![Insight overview](images/insight-overview.png)
 
   Fairness metrics can take up to an hour to display.
-  {: important}
+  {: tip}
 
 ### View monitoring data for your deployment
 
