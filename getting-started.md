@@ -230,7 +230,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Action Model](images/bus_area_model1.png)
 
-- There are three areas to configure. Begin by selecting **Fairness** and clicking **Begin**. See [Understanding Fairness](monitor-fairness.html#understand-fair) to understand the Fairness monitor in detail.
+- There are three areas to configure. Begin by selecting **Fairness** and clicking **Begin**. See [Understanding Fairness](/docs/services/ai-openscale/monitor-fairness.html#understand-fair) to understand the Fairness monitor in detail.
 
 <!---
 - Specify the location of the model training data by selecting **Db2** from the **Location** dropdown and filling out the remaining fields with the Db2 credentials created earlier before clicking **Next**.
@@ -241,7 +241,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 --->
 
-- Select the [model type](monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
+- Select the [model type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
 
   ![Multiclass](images/multiclass.png)
 
@@ -275,11 +275,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 ### Configure accuracy monitoring
 
-- Continue to **Accuracy** and click **Begin**. See [Accuracy - How it works](monitor-accuracy.html#how-it-works) to understand the Accuracy monitor in detail.
+- Continue to **Accuracy** and click **Begin**. See [Accuracy - How it works](/docs/services/ai-openscale/monitor-accuracy.html#how-it-works) to understand the Accuracy monitor in detail.
 
 - Select the Spark instance that you configured in a previous step from the dropdown list and click **Next**.
 
-- Then, select the [model type](monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
+- Then, select the [model type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
 
   ![Multiclass](images/multiclass.png)
 
@@ -291,7 +291,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 ### Configure explainability monitoring
 
-- Continue to **Explainability** and click **Begin**. See [Explainability](monitor-explain.html) to understand the Explainability monitor in detail.
+- Continue to **Explainability** and click **Begin**. See [Explainability](/docs/services/ai-openscale/monitor-explain.html) to understand the Explainability monitor in detail.
 
 - First, select the type of data the deployment analyzes. The sample model receives numeric/categorical data, so select that option from the dropdown and click **Next**. For the sample model, an example of numeric data would be the AGE data column (i.e., "54"), while an example of categorical data would be the CHOLESTEROL data column (i.e., "NORMAL").
 
@@ -433,4 +433,4 @@ You will now see an explanation of how the model arrived at its conclusion, incl
 
 ## Next steps
 
-- See the [Working with monitored data](insight-timechart.html) topic for more information.
+- See the [Working with monitored data](/docs/services/ai-openscale/insight-timechart.html) topic for more information.
