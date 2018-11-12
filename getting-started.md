@@ -253,7 +253,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Age Groups](images/age_groups1.png)
 
-  The model will be flagged as biased if the drug prediction ratios for the nonitored group age ranges differ from the ratios for the reference group age ranges. For example, if the model finds that drug A was predicted 30% of the time for patients aged 49-59, but was predicted only 5% of the time for patients aged 76-99, it is biased against the monitored group.
+  The model will be flagged as biased if the drug prediction ratios for the monitored group age ranges differ from the ratios for the reference group age ranges. For example, if the model finds that drug A was predicted 30% of the time for patients aged 49-59, but was predicted only 5% of the time for patients aged 76-99, it is biased against the monitored group.
 
 - You may now assign a fairness threshold for **AGE**. You will see an alert on your operations dashboard if the Fairness rating falls below this threshold. Click **Next** to leave it set at the default of 80%.
 
