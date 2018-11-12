@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -249,23 +249,23 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - You may now choose which features to monitor for Fairness. In this example, we'll monitor the **AGE** and **SEX** features. Click on the **AGE** and **SEX** tiles, and click **Next**.
 
-- {{site.data.keyword.aios_short}} works to detect bias against a protected group in comparison to a reference group. For the current **AGE** example, add the values "49-59" and "60-75" to the **Reference group**, and the values "0-48" and "76-99" to the **Protected group**, and click **Next**:
+- {{site.data.keyword.aios_short}} works to detect bias against a monitored group in comparison to a reference group. For the current **AGE** example, add the values "49-59" and "60-75" to the **Reference group**, and the values "0-48" and "76-99" to the **Monitored group**, and click **Next**:
 
   ![Age Groups](images/age_groups1.png)
 
-  The model will be flagged as biased if the drug prediction ratios for the protected group age ranges differ from the ratios for the reference group age ranges. For example, if the model finds that drug A was predicted 30% of the time for patients aged 49-59, but was predicted only 5% of the time for patients aged 76-99, it is biased against the protected group.
+  The model will be flagged as biased if the drug prediction ratios for the monitored group age ranges differ from the ratios for the reference group age ranges. For example, if the model finds that drug A was predicted 30% of the time for patients aged 49-59, but was predicted only 5% of the time for patients aged 76-99, it is biased against the monitored group.
 
 - You may now assign a fairness threshold for **AGE**. You will see an alert on your operations dashboard if the Fairness rating falls below this threshold. Click **Next** to leave it set at the default of 80%.
 
-- For the **SEX** feature, add the value "M" (male) to the **Reference group**, and the value "F" (female) to the **Protected group**, and click **Next**:
+- For the **SEX** feature, add the value "M" (male) to the **Reference group**, and the value "F" (female) to the **Monitored group**, and click **Next**:
 
   ![Gender Groups](images/gender_groups1.png)
 
-  As with **AGE**, the model will be flagged as biased for **SEX** if the drug prediction ratios for the protected group differ from the ratios for the reference group. So if the model predicts drug X for male patients 60% of the time, and for female patients 20% of the time, it is biased.
+  As with **AGE**, the model will be flagged as biased for **SEX** if the drug prediction ratios for the monitored group differ from the ratios for the reference group. So if the model predicts drug X for male patients 60% of the time, and for female patients 20% of the time, it is biased.
 
 - Click **Next** to leave the threshold for **SEX** at the default of 80%.
 
-- You will now select favorable and unfavorable prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} will automatically detect which column in the payload logging data contains the prediction values;  those values are 0-4 (each number corresponding to one of five drugs the model predicts). Add these values to the form and click **Next**:
+- You will now select expected and unexpected prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} will automatically detect which column in the payload logging data contains the prediction values; those values are 0-4 (each number corresponding to one of five drugs the model predicts). Add these values to the form and click **Next**:
 
   ![Positive and negative values](images/pos_and_neg1.png)
 

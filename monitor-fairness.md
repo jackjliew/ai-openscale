@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-1"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -32,19 +32,19 @@ Before configuring the Fairness monitor, there a few key concepts that are criti
 
 - *Fairness attributes*: These are the model attributes for which the model is likely to exhibit bias. As an example, for the fairness attribute **`Gender`**, the model could be biased against specific gender values (`Female`, `Transgender`, etc.) Another example of a fairness attribute is **`Age`**, where the model could exhibit bias against people in an age group, like `18 to 25`.
   
-- *Majority / Minority value*: The values of fairness attributes are split into two distinct categories: Majority and Minority. The Minority values are those which are likely to be discriminated against. In the case of a fairness attribute like **`Gender`**, the Minority values could be `Female` and `Transgender`. For a numeric fairness attribute, such as **`Age`**, the Minority values could be `[18-25]`. All other values for a given fairness attribute are then considered as Majority value, for example `Gender=Male` or `Age=[26,100]`.
+- *Reference / Monitored value*: The values of fairness attributes are split into two distinct categories: Reference and Monitored. The Monitored values are those which are likely to be discriminated against. In the case of a fairness attribute like **`Gender`**, the Monitored values could be `Female` and `Transgender`. For a numeric fairness attribute, such as **`Age`**, the Monitored values could be `[18-25]`. All other values for a given fairness attribute are then considered as Reference values, for example `Gender=Male` or `Age=[26,100]`.
   
-- *Favorable / Unfavorable outcome*: The output of the model is categorized as either Favorable or Unfavorable. As an example, if the model is predicting whether a person should get a loan or not, then the Favorable outcome could be `Loan Granted` or `Loan Partially Granted`, whereas the Unfavorable outcome might be `Loan Denied`. Thus, the Favorable outcome is one that is deemed as a positive outcome, while the Unfavourable outcome is deemed as being negative.
+- *Expected / Unexpected outcome*: The output of the model is categorized as either Expected or Unexpected. As an example, if the model is predicting whether a person should get a loan or not, then the Expected outcome could be `Loan Granted` or `Loan Partially Granted`, whereas the Unexpected outcome might be `Loan Denied`. Thus, the Expected outcome is one that is deemed as a positive outcome, while the Unexpected outcome is deemed as being negative.
 
 The {{site.data.keyword.aios_short}} algorithm computes bias on an hourly basis, using the last `N` records present in the payload logging table; the value of `N` is specified when configuring Fairness. The algorithm perturbs these last `N` records to generate additional data.
 
-The perturbation is done by changing the value of the fairness attribute from Majority to Minority, or vice-versa. The perturbed data is then sent to the model to evaluate its behavior. The algorithm looks at the last `N` records in the payload table, and the behavior of the model on the perturbed data, to decide if the model is acting in a biased manner.
+The perturbation is done by changing the value of the fairness attribute from Reference to Monitored, or vice-versa. The perturbed data is then sent to the model to evaluate its behavior. The algorithm looks at the last `N` records in the payload table, and the behavior of the model on the perturbed data, to decide if the model is acting in a biased manner.
 
-A model is deemed to be biased if, across this combined dataset, the percentage of Favorable outcomes for the Minority class is less than the percentage of Favorable outcomes for the Majority class, by some threshold value. This threshold value is to be specified when configuring Fairness.
+A model is deemed to be biased if, across this combined dataset, the percentage of Expected outcomes for the Monitored class is less than the percentage of Expected outcomes for the Reference class, by some threshold value. This threshold value is to be specified when configuring Fairness.
 
 ### Example
 
-Consider a data point where, for `Gender=Male` (Majority value), the model predicts a Favorable outcome, but when the record is perturbed by changing `Gender` to `Female` (Minority value), while keeping all other feature values the same, the model predicts an Unfavorable outcome. A model overall is said to exhibit bias if there are sufficient data points (across the last `N` records in the payload table, plus the perturbed data) where the model was acting in a biased manner.
+Consider a data point where, for `Gender=Male` (Reference value), the model predicts an Expected outcome, but when the record is perturbed by changing `Gender` to `Female` (Monitored value), while keeping all other feature values the same, the model predicts an Unexpected outcome. A model overall is said to exhibit bias if there are sufficient data points (across the last `N` records in the payload table, plus the perturbed data) where the model was acting in a biased manner.
 
 ### Supported models
 
@@ -73,21 +73,21 @@ Consider a data point where, for `Gender=Male` (Majority value), the model predi
 
     Click **Next** to continue.
 
-1.  Each feature has specific requirements to configure. In this example, you define the **`Age`** ranges for a Reference (Majority) Group and a Protected (Minority) Group by manually entering values directly in each group.
+1.  Each feature has specific requirements to configure. In this example, you define the **`Age`** ranges for a Reference Group and a Monitored Group by manually entering values directly in each group.
 
-    In this example, for the **`Age`** fairness attribute, if you feel that your model is likely to be biased against people with ages between 18 and 25, then the Protected Group value will be `[18,25]` and the Reference Group value will be `[26,100]`. In case of the **`Gender`** fairness attribute, the Reference Group value might be `Male`, while the Protected Group values could be `Female` and `Transgender`.
+    In this example, for the **`Age`** fairness attribute, if you feel that your model is likely to be biased against people with ages between 18 and 25, then the Monitored Group value will be `[18-25]` and the Reference Group value will be `[26-100]`. In case of the **`Gender`** fairness attribute, the Reference Group value might be `Male`, while the Monitored Group values could be `Female` and `Transgender`.
 
     ![Configure age settings](images/fair-config-age.png)
 
     Click **Next** to continue
 
-1.  Set the threshhold limit for Fairness, for **`Age`**.
+1.  Set the threshold limit for Fairness, for **`Age`**.
 
-    A Fairness threshhold is used to specify an acceptable difference between the percentage of Favorable outcomes for the Minority group as compared to the percentage of Favorable outcomes for the Majority group.
+    A Fairness threshold is used to specify an acceptable difference between the percentage of Expected outcomes for the Monitored group as compared to the percentage of Expected outcomes for the Reference group.
 
-    Consider a model that predicts who should get a loan (`favorable outcome=loan granted`) and who shouldn’t (`unfavorable outcome=loan denied`). Further, the Minority value for age is `[18,25]`, and the Majority value is `[26,100]`. When the bias detection algorithm runs, if it finds that the percentage of Favorable outcomes for people in the age group `[18,25]` in the last `N` records plus perturbed data is `50%`, while the percentage of Favorable outcomes for people in the age group `[26,100]` is `70%`, then Fairness is computed as 50*100/70 = 71.42.
+    Consider a model that predicts who should get a loan (`expected outcome=loan granted`) and who shouldn’t (`unexpected outcome=loan denied`). Further, the Monitored value for age is `[18,25]`, and the Reference value is `[26,100]`. When the bias detection algorithm runs, if it finds that the percentage of Expected outcomes for people in the age group `[18,25]` in the last `N` records plus perturbed data is `50%`, while the percentage of Expected outcomes for people in the age group `[26,100]` is `70%`, then Fairness is computed as 50*100/70 = 71.42.
 
-    If the Fairness threshold is set to 80%, then the algorithm will flag the model as being biased, because the computed Fairness is lower than the threshhold. However, if the threshold is set to 70% then it will not report the model as being biased.
+    If the Fairness threshold is set to 80%, then the algorithm will flag the model as being biased, because the computed Fairness is lower than the threshold. However, if the threshold is set to 70% then it will not report the model as being biased.
 
     ![Configure age settings](images/fair-config-age-limit.png)
 
@@ -103,11 +103,11 @@ Consider a data point where, for `Gender=Male` (Majority value), the model predi
 
      Click **Next** when you are done with each feature.
 
-1.  Now, specify values that represent a favorable outcome for the model. Values are derived from the `label` column in the training data, if the model output schema contains a mapping column. In WML, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
+1.  Now, specify values that represent an expected outcome for the model. Values are derived from the `label` column in the training data, if the model output schema contains a mapping column. In WML, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
 
-    For example, if the `prediction` value is `1.0`, the mapping column could have a value of `Loan denied`; this implies that the prediction of the model is `Loan denied`. So, if the model output schema contains a mapping column, then specify Favorable and Unfavorable values using those present in the mapping column.
+    For example, if the `prediction` value is `1.0`, the mapping column could have a value of `Loan denied`; this implies that the prediction of the model is `Loan denied`. So, if the model output schema contains a mapping column, then specify Expected and Unexpected values using those present in the mapping column.
 
-    If, however, the mapping column is not present in the model output schema, then the Favorable and Unfavorable values need to be specified using the value of the `prediction` column (`0.0`, `1.0`, etc.)
+    If, however, the mapping column is not present in the model output schema, then the Expected and Unexpected values need to be specified using the value of the `prediction` column (`0.0`, `1.0`, etc.)
 
      ![Configure outcome](images/fair-config-outcome.png)
 
