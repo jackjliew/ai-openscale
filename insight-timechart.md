@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-21"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -30,7 +30,7 @@ Move the marker across the chart to see statistics for an individual hour. In th
 
   ![Time series chart detail](images/insight-time-detail.png)
 
-- ***Fairness***: Two of three Fairness features, Car Value and Area Code, met their set thresholds for approval. The third Fairness feature, Policy Age, was flagged for bias. You can also see the number of favorable outcomes (in this case percentages Approved vs. Denied) for an individual population in the features monitored for fairness.
+- ***Fairness***: Two of three Fairness features, Car Value and Area Code, met their set thresholds for approval. The third Fairness feature, Policy Age, was flagged for bias. You can also see the number of expected outcomes (in this case percentages Approved vs. Denied) for an individual population in the features monitored for fairness.
 - ***Accuracy***: The Accuracy metric averaged 78%.
 - ***Avg. Reqs/Min***: On average, 300 records were processed per minute between 1:00 and 2:00 PM CST. The throughput is computed every minute, and its average value over the course of the hour is reported in the chart.
 
@@ -45,15 +45,15 @@ Clicking the chart opens a visualization of the data points for a monitored feat
 
 Note the three filters at the top of the page (Feature, Date, and Hour) that let you select a different feature or time to review details. This chart is showing multiple things:
 
-- You can observe the population experiencing bias (policies that are less than 2 months old). The chart also shows the percentage of favorable outcome (50%) for this population.
+- You can observe the population experiencing bias (policies that are less than 2 months old). The chart also shows the percentage of expected outcome (50%) for this population.
 
-- The chart shows the percentage of favorable outcome (90%) for the majority population. This is the average of favorable outcome across all majority populations.
+- The chart shows the percentage of expected outcome (90%) for the reference population. This is the average of expected outcome across all reference populations.
 
-- The chart is indicating the presence of bias, because the ratio of percentage of favorable outcomes for populations with policies less than 2 months old to the percentage of favorable outcomes for the majority population is below the threshold. In other words, 0.5/0.9 = 0.55, which is less than the 0.8 threshold.
+- The chart is indicating the presence of bias, because the ratio of percentage of expected outcomes for populations with policies less than 2 months old to the percentage of expected outcomes for the reference population is below the threshold. In other words, 0.5/0.9 = 0.55, which is less than the 0.8 threshold.
 
-- The chart also shows the distribution of the majority and minority values for each distinct value of the attribute in the data from the payload table which was analyzed to identify bias. In other words, if the bias detection algorithm analyzed the last 1790 records from the payload table, then 120 of those records had policy age less than 2 months, and out of that distribution the `Not fraud` and `Fraud` outcomes are represented by the bar chart. The distribution of the payload data is shown for each distinct value of the fairness attribute (even majority values are shown). This information can be used to correlate the bias with the amount of data received by the model.
+- The chart also shows the distribution of the reference and mmoitored values for each distinct value of the attribute in the data from the payload table which was analyzed to identify bias. In other words, if the bias detection algorithm analyzed the last 1790 records from the payload table, then 120 of those records had policy age less than 2 months, and out of that distribution the `Not fraud` and `Fraud` outcomes are represented by the bar chart. The distribution of the payload data is shown for each distinct value of the fairness attribute (even reference values are shown). This information can be used to correlate the bias with the amount of data received by the model.
 
-- The chart additionally shows that the population with a policy age between 5-10 years received 100% favorable outcomes. This signifies the source of the bias, which means that data in this group skewed the results, and led to an increase in the percentage of favorable outcomes for the majority class. This information can be used to identify parts of the data which can then be under-sampled when retraining the model.
+- The chart additionally shows that the population with a policy age between 5-10 years received 100% expected outcomes. This signifies the source of the bias, which means that data in this group skewed the results, and led to an increase in the percentage of expected outcomes for the reference class. This information can be used to identify parts of the data which can then be under-sampled when retraining the model.
 
 - Another important thing that the chart shows is the name of the table containing the data which has been identified for manual labelling. Whenever the algorithm detects bias in a model, it also identifies the data points which can be sent for manual labelling by humans. This manually-labelled data can then be used along with the original training data to retrain the model. This retrained model is likely to not have the bias. The manual labelling table is present in the PostgreSQL database associated with the {{site.data.keyword.aios_short}} instance.
 

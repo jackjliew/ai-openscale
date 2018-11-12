@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -264,15 +264,15 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - You may now choose which features to monitor. In this example, we'll monitor the **Gender** feature for bias. Click on the **Gender** tile and click **Next**.
 
-- {{site.data.keyword.aios_short}} works to detect bias against a protected group in comparison to a reference group. For this example, add the value "Male" to the **Reference group**, and the value "Female" to the **Protected group**, and click **Next**:
+- {{site.data.keyword.aios_short}} works to detect bias against a monitored group in comparison to a reference group. For this example, add the value "Male" to the **Reference group**, and the value "Female" to the **Monitored group**, and click **Next**:
 
-  ![Gender Groups](images/gender_groups.png)
+  ![Gender Groups](images/gender_groups1.png)
   
-  The model will be flagged as biased if the Action ratios for the protected group ranges differ from the ratios for the reference group ranges. For example, if the model finds that 60% of the time a voucher was recommended for male customers, but was only recommended 20% of the time for female customers, it is biased against the protected group.
+  The model will be flagged as biased if the Action ratios for the monitored group ranges differ from the ratios for the reference group ranges. For example, if the model finds that 60% of the time a voucher was recommended for male customers, but was only recommended 20% of the time for female customers, it is biased against the monitored group.
   
 - You may now assign a fairness threshold. You will see an alert on your operations dashboard if the fairness rating falls below this threshold. Click **Next** to leave it set at the default of 80%.
 
-- You will now select favorable and unfavorable prediction values from the payload logging database. {{site.data.keyword.aios_short}} has automatically detected which column in the payload logging data contains the prediction values; those values are 0 (for no customer service action taken) or 1 - 3 (corresponding to voucher, free upgrade or on-demand pickup). Add these values to the form and click **Next**:
+- You will now select Expected and Unexpected prediction values from the payload logging database. {{site.data.keyword.aios_short}} has automatically detected which column in the payload logging data contains the prediction values; those values are 0 (for no customer service action taken) or 1 - 3 (corresponding to voucher, free upgrade or on-demand pickup). Add these values to the form and click **Next**:
 
   ![Positive and negative values](images/pos_and_neg.png)
   
