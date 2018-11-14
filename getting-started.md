@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -210,19 +210,33 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 Now that the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models. Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The {{site.data.keyword.aios_full}} Getting Started page opens; click **Begin**.
 
-- {{site.data.keyword.aios_short}} will ask for a connection to a PostgreSQL deployment. Select the one you created earlier from the **Database** dropdown, and choose the **public** schema:
+- Select your Watson Machine Learning instance from the drop-down, and click **Next**.
 
-  ![AI OpenScale PostgreSQL](images/aios_postgres.png)
-
-  {{site.data.keyword.aios_short}} uses a PostgreSQL database to store model deployment, output, and retraining data to deliver model health and application insights.
-
-- Click **Next**. You will now select your instance of Watson Machine Learning from the dropdown, and click **Next** again.
+  ![Set WML instance](images/gs-set-wml.png)
 
 - You are now able to select which deployed models will be monitored by {{site.data.keyword.aios_short}}. Check the model you created and deployed; click **Next** to accept this:
 
-  ![Models monitored](images/models_monitored1.png)
+  ![Select deployed models](images/gs-set-deploy.png)
 
-- Save the configuration and, when prompted, click the **Continue with Configuration** button.
+- Next, you need to choose a PostgreSQL database. You have two options: the free Lite plan database or an existing or new database. For this tutorial, select the **Use existing or purchase a new database** tile.
+
+    ![Select database](images/gs-set-lite-db.png)
+
+  **NOTE**: See more complete details about each of these options in the [Specify your database](/docs/services/ai-openscale/connect-db.html) topic.
+
+- Once you have selected the "Use existing or purchase new database" option, {{site.data.keyword.aios_short}} checks your {{site.data.keyword.Bluemix_notm}} account to locate your existing Compose for PostgreSQL database.
+
+  Select the "Public" schema from the **Schema** drop-down menu.
+
+  ![Select database](images/gs-set-schema.png)
+
+  You can also select the **Sign up for a new instance** link to purchase a new Postgres instance in {{site.data.keyword.Bluemix_notm}}.
+
+- Once you have selected a database and schema, click **Next** to review the summary data and click **Save**.
+
+  ![Select database](images/gs-setup-summary2.png)
+
+  Confirm and, when prompted, click the **Continue with Configuration** button.
 
 ### Configure Fairness monitoring
 
@@ -241,7 +255,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 --->
 
-- Select the [model type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
+- Select the [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample algorithm, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
 
   ![Multiclass](images/multiclass.png)
 
@@ -279,7 +293,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Select the Spark instance that you configured in a previous step from the dropdown list and click **Next**.
 
-- Then, select the [model type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
+- Then, select the [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample algorithm, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
 
   ![Multiclass](images/multiclass.png)
 
@@ -306,7 +320,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 --->
 
-- Next, select the [model type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample model, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
+- Next, select the [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample algorithm, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
 
   ![Multiclass](images/multiclass.png)
 
@@ -417,21 +431,21 @@ Now, you can review the charts for the data you monitored. For this example, you
 
 ### View explainability for a model transaction
 
-From the **Assets** tab of your Watson Studio project, click on the model payload link in the **Data Assets** section. There should now be at least 181 rows of payload data. Expand the _scoring\_id_ column horizontally, and copy one of the identifiers to your clipboard:
+Select the **View transactions** button from the charts for the data you monitored.
 
-  ![scoring_id](images/scoring_id.png)
+  ![View transactions](images/view_transactions.png)
+
+  a list of transactions for the past hour is listed. Copy one of the transaction IDs.
+
+  ![Transaction list](images/transaction_list.png)
 
 Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click on the **Explainability** tab:
 
   ![Explainability](images/explainability.png)
 
-Paste the value you copied from the _scoring\_id_ column into the search box and press **Return** on your keyboard:
+Paste the transaction ID value you copied into the search box and press **Return** on your keyboard. You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
 
-  ![Paste Transaction](images/paste_transaction.png)
-
-You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
-
-  ![View Transation](images/view_transaction1.png)
+  ![View Transaction](images/view_transaction1.png)
 
 ## Next steps
 

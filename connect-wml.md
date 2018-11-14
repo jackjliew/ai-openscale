@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-9-12"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-9-12"
 # Specify your Watson Machine Learning service instance
 {: #connect-wml}
 
-Your Watson Machine Learning (WML) instance is where you store your AI models and deployments.
+Your first step in the {{site.data.keyword.aios_short}} tool is to specify  a Watson Machine Learning (WML) instance. Your WML instance is where you store your AI models and deployments.
 {: shortdesc}
 
 ## Prerequisites
@@ -28,6 +28,10 @@ You should have provisioned a WML instance in the same {{site.data.keyword.Bluem
 {: #connect-config-wml}
 
 {{site.data.keyword.aios_short}} connects to AI models and deployments in a WML instance.
+
+1.  From the home page of the {{site.data.keyword.aios_short}} tool, click **Begin**.
+
+    ![Home page](images/gs-config-start.png)
 
 1.  {{site.data.keyword.aios_short}} checks your {{site.data.keyword.Bluemix_notm}} account to locate any existing WML instances. You can then select an instance from the **Watson Machine Learning service** drop-down menu.
 
