@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ai-openscale" audience="service" arm="4109554" href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
+{: .toc subcollection="ai-openscale" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
 AI OpenScale
 
     {: .navgroup id="learn"}
@@ -14,14 +14,14 @@ AI OpenScale
     {: .topicgroup}
     Configuring AI OpenScale
         creds.md
-        connect-db.md
         connect-wml.md
         connect-ml.md
         connect-deploy.md
+        connect-db.md
 
     {: .topicgroup}
     Working with monitors
-        monitor-overview.md        
+        monitor-overview.md
         monitor-fairness.md
         monitor-accuracy.md
         monitor-explain.md

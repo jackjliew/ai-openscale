@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-9-26"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -22,13 +22,13 @@ Accuracy lets you know how well your model predicts outcomes.
 ## Understanding Accuracy
 {: #understand-accuracy}
 
-Accuracy can mean different things depending on the type of the model:
+Accuracy can mean different things depending on the type of the algorithm:
 
-- *Multi-class model*: Accuracy measures the number of times any class was predicted correctly, normalized by the number of data points. For more details, see [Multi-class classification](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#multiclass-classification) in the Apache Spark documentation.
+- *Multi-class classification*: Accuracy measures the number of times any class was predicted correctly, normalized by the number of data points. For more details, see [Multi-class classification](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#multiclass-classification) in the Apache Spark documentation.
 
-- *Binary model*: For a binary model, accuracy is measured as the area under an ROC curve. See [Binary classification](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#binary-classification) in the Apache Spark documentation for more details.
+- *Binary classification*: For a binary classification algorithm, accuracy is measured as the area under an ROC curve. See [Binary classification](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#binary-classification) in the Apache Spark documentation for more details.
 
-- *Regression model*: Regression models are measured using the Coefficient of Determination, or R2. For more details, see [Regression model evaluation](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#regression-model-evaluation) in the Apache Spark documentation.
+- *Regression*: Regression algorithms are measured using the Coefficient of Determination, or R2. For more details, see [Regression model evaluation](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#regression-model-evaluation) in the Apache Spark documentation.
 
 ### How it works
 
@@ -57,7 +57,7 @@ Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points di
 
     Click **Next** to continue.
 
-1.  On the *Select model type* page, select one of the available classifications.
+1.  On the *Specify algorithm type* page, select one of the available classifications.
 
     ![Accuracy Spark instance page](images/accuracy-set-type.png)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-9-12"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -34,4 +34,4 @@ You have successfully configured {{site.data.keyword.aios_short}}.
 ### Next steps
 {: #connect-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [configure monitors for your deployments](monitor-overview.html).
+{{site.data.keyword.aios_short}} is now ready for you to [specify your database](connect-db.html).
