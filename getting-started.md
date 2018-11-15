@@ -291,9 +291,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Continue to **Accuracy** and click **Begin**. See [Accuracy - How it works](/docs/services/ai-openscale/monitor-accuracy.html#how-it-works) to understand the Accuracy monitor in detail.
 
-- Select the Spark instance that you configured in a previous step from the dropdown list and click **Next**.
-
-- Then, select the [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample algorithm, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
+- Select the [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy). For the sample algorithm, there are multiple possible outcomes (five drug predictions), so select **Multiclass Classification** from the dropdown and click **Next**:
 
   ![Multiclass](images/multiclass.png)
 
