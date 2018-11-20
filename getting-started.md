@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -152,11 +152,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 ## Set up a Watson Studio project
 
-- Log in to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.Bluemix_notm}} services:
-
-  ![Same Account](images/same_account.png)
-
-- In Watson Studio, begin by creating a new project. Select "Create a project":
+- Log in to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window} and begin by creating a new project. Select "Create a project":
 
   ![Watson Studio create project](images/studio_create_proj.png)
 
