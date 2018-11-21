@@ -386,17 +386,21 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Download the [drug_feedback_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_feedback_data.csv) file.
 
-- In Watson Studio, select the **Assets** tab, then scroll down and select the "drug-selection" model under the **Watson Machine Learning** section.
+- In {{site.data.keyword.aios_short}}, click the **Insights** tab:
 
-- Select the **Evaluation** tab. Scroll down to the "Performance Monitoring" section, and select **Edit configuration**.
+  ![Insights](images/insight-dash-tab.png)
 
-- Set the value for both "Auto retrain" and "Auto deploy" to `Always`, and click **Save**. Leave the other values as they are set.
+- Click the tile for your deployed model.
 
-  ![Auto retrain and auto deploy](images/auto-retrain-deploy.png)
+  ![Insights tab - no data](images/gs-insight-overview.png)
 
-- Now, click the **Add feedback data** button, and select the `drug_feedback_data.csv` you downloaded. Click the **New evaluation** button when prompted.
+- Now, click the **Edit** icon.
 
-  ![New evaluation](images/new-eval.png)
+  ![Edit icon - right side](images/gs-insight-edit-icon.png)
+
+- In the "Summary" side panel, select the **Add Feedback Data** button, and select the `drug_feedback_data.csv` file you downloaded.
+
+  ![Summary panel](images/gs-insight-summary-panel-2.png)
 
   This will retrain and provide feedback data to your model.
 
