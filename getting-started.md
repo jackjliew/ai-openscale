@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-11-21"
+lastupdated: "2018-11-26"
 
 ---
 
@@ -85,23 +85,23 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 --->
 
-**Important**: For best performance, it's recommended that the prerequisite services are created in the same region as {{site.data.keyword.aios_short}}. To view available locations for {{site.data.keyword.aios_short}}, see [Service availability ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/resources/services_region.html){: new_window}.
+**Important**: For best performance, it's recommended that the prerequisite services are created in the same region as {{site.data.keyword.aios_short}}. To view available locations for {{site.data.keyword.aios_short}}, see [Service availability ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources/services_region.html){: new_window}.
 
-1. Log in to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} with your {{site.data.keyword.ibmid}}.
+1. Log in to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} with your {{site.data.keyword.ibmid}}.
 2. For each of the following services that you don't already have associated with your account, create an instance by clicking the link, giving the service a name, selecting the **Lite** (free) plan, and clicking the **Create** button:
-  - [Watson Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/watson-studio){: new_window}
+  - [Watson Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-studio){: new_window}
 
   ![Watson Studio](images/watson_studio.png)
 
-  - [Watson Machine Learning ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/machine-learning){: new_window}
+  - [Watson Machine Learning ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window}
 
   ![Machine Learning](images/machine_learning.png)
 
-  - [Apache Spark ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/apache-spark){: new_window}
+  - [Apache Spark ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/apache-spark){: new_window}
 
   ![Apache Spark](images/spark.png)
 
-  - [Object Storage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloud-object-storage){: new_window}
+  - [Object Storage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}
 
   ![Object Storage](images/object_storage.png)
 
@@ -109,7 +109,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 ### Provision a Db2 Warehouse service
 
-- [Provision a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2-warehouse){: new_window} if you do not already have one associated with your account:
+- [Provision a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/db2-warehouse){: new_window} if you do not already have one associated with your account:
 
   ![Db2 Warehouse](images/db2_warehouse.png)
 
@@ -119,7 +119,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 - Download the [drug_train_data_updated.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data_updated.csv) file. Be sure to save the file download as a .CSV file.
 
-- Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window}, click **Manage** from the left side panel, and then click the **Open** button.
+- Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click **Manage** from the left side panel, and then click the **Open** button.
 
 - If necessary, use your Db2 credentials `username` and `password` to log in to Db2 Warehouse.
 
@@ -197,7 +197,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 ### Provision {{site.data.keyword.aios_short}}
 
-- [Provision a new {{site.data.keyword.aios_short}} service instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/ai-openscale){: new_window}:
+- [Provision a new {{site.data.keyword.aios_short}} service instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/ai-openscale){: new_window}:
 
   ![AI OpenScale](images/openscale.png)
 
