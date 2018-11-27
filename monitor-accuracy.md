@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-13"
+lastupdated: "2018-11-26"
 
 ---
 
@@ -36,7 +36,7 @@ You need to add manually-labelled data into your feedback table for the accuracy
 
 You can create a performance monitoring system for your predictive models by creating an evaluation instance, and then defining the metrics and triggers for the automatic retraining and deploying of the new model. Spark, Keras and TensorFlow models are supported at this stage, with the following requirements:
 
--  A training definition must be stored in the repository
+- A training definition must be stored in the repository
 - `training_data_reference` - must be defined as a part of the stored model's metadata
 - `training_definition_url` - must be defined as a part of the stored model's metadata
 
@@ -49,6 +49,8 @@ Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points di
 
     ![What is Accuracy? page](images/accuracy-what-is.png)
 
+<!---
+
 1.  If your model was created with Apache Spark, you must select a Spark instance; this will be the engine that processes model reevaluation and retraining. The system will detect any Spark instances in your IBM Cloud account.
 
     **NOTE** - if an existing Spark instance is not found, or if you want to provision a new Spark service, click the **Add new connection** link to access the Apache Spark landing page in {{site.data.keyword.Bluemix_notm}}.
@@ -56,6 +58,8 @@ Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points di
     ![Accuracy Spark instance page](images/accuracy-spark.png)
 
     Click **Next** to continue.
+
+--->
 
 1.  On the *Specify algorithm type* page, select one of the available classifications.
 
@@ -75,11 +79,19 @@ Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points di
 
      ![Configure sample size](images/accuracy-config-sample.png)
 
+1.  Finally, set a maximum sample size, to better manage the time and effort it takes to evaluate the dataset. Only the most recent records will be evaluated if this size is exceeded.
+
+     ![Configure max sample size](images/accuracy-config-sample-max.png)
+
 1.  Click the **Next** button.
 
     A summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section.
 
- Click **Save** to complete your configuration.
+Click **Save** to complete your configuration.
+
+You are now presented with the option to directly provide feedback data to your model, to evaluate for accuracy. Select the *Add Feedback Data* button to upload a comma-separated value (CSV) formatted data file, or simply choose **Exit** to skip this optional step (you will still be able to upload a CSV file for evaluation at a later time).
+
+  ![Configure max sample size](images/accuracy-send-feedback.png)
 
 ### Next steps
 {: #accuracy-next}
