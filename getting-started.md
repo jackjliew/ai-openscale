@@ -396,6 +396,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 - In the "Summary" side panel, select the **Add Feedback Data** button, and select the `drug_feedback_data.csv` file you downloaded.
 
   File sizes are currently limited to 8 MB.
+  {: note}
 
   ![Summary panel](images/gs-insight-summary-panel-2.png)
 
