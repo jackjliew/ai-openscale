@@ -393,11 +393,13 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Edit icon - right side](images/gs-insight-edit-icon.png)
 
-- In the "Summary" side panel, select the **Add Feedback Data** button, and select the `drug_feedback_data.csv` file you downloaded. Click **OK** when complete.
+- In the "Summary" side panel, select the **Add Feedback Data** button, and select the `drug_feedback_data.csv` file you downloaded.
+
+  File sizes are currently limited to 8 MB.
 
   ![Summary panel](images/gs-insight-summary-panel-2.png)
 
-  This will retrain and provide feedback data to your model.
+  Click **OK** when complete to retrain and provide feedback data to your model.
 
 - Finally, [re-run the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model.
 
