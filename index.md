@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-26"
 
 ---
 
@@ -50,10 +50,14 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
 
 Table 1. Feature support details
 
-| ML engine | **Performance** | **Accuracy monitoring** | **Fairness detection** | **Payload logging** | **Explainability**
-|:---|:---:|:---:|:---:|:---:|:---|
-| **Watson Machine Learning**  | Yes | Yes | Yes | Yes | Yes |
-| **Generic Machine Learning service**         | No | No | No | Yes | No ||
+| ML engine | **Payload logging** | **Performance monitoring** | **Accuracy monitoring** | **Bias detection** | **De-bias** | **Explainability**
+|:---|:---:|:---:|:---:|:---:|:---|:---|
+| **Watson Machine Learning**  | Yes | Yes | Yes | Yes | Yes | Yes |
+| **SPSS**  | Yes | Yes | Yes (structured data only) | No | No | No |
+| **SAS**  | No | No | No | No | No | No |
+| **MS Azure**  | Yes | Yes | Yes (structured data only) | Yes | Yes | Yes |
+| **AWS SageMaker**  | Yes | Yes | Yes (structured data only) | Yes | Yes | Yes |
+| **Generic Machine Learning service**  | Yes | Yes | Yes (structured data only) | No | No | No ||
 {: caption="Feature support details" caption-side="top"}
 
 ## Supported Watson machine learning frameworks and functions
@@ -77,6 +81,22 @@ Table 1. Feature support details
 `*` Fairness detection and explainability require payload logging to be supported; they also need a WML scoring endpoint to be available.
 
 `**` New version of model only, no evaluation.
+
+## Supported model fairness
+
+Table 1. Fairness support details
+
+| Model / Function  | **Runtime bias detection** |
+|:---|:---:|
+| **Classification models (Models which generate categorical output, for example, a model whose output is "Loan Granted" or "Loan Denied")** | Yes |
+| **Regression models (Models which generate continuous output, for example, a model that predicts the stock price of a company)** | Yes |
+| **Python function whose output is categorical** | Yes |
+| **Python function whose output is numeric** | Yes |
+| **Spark ML classification models which expect some structured data as input** | Yes |
+| **Spark ML models which do not take structured data as input, for example, text or images** | Yes |
+| **Deep learning classification models which expect some structured data as input** | Yes |
+| **Deep learning models which do not take structured data as input, for example, text or images** | Yes ||
+{: caption="Fairness support details" caption-side="top"}
 
 ## Browser support
 
