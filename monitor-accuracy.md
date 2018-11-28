@@ -91,6 +91,8 @@ Click **Save** to complete your configuration.
 
 You are now presented with the option to directly provide feedback data to your model, to evaluate for accuracy. Select the *Add Feedback Data* button to upload a comma-separated value (CSV) formatted data file, or simply choose **Exit** to skip this optional step (you will still be able to upload a CSV file for evaluation at a later time).
 
+  **Note**: File sizes are currently limited to 8MB.
+
   ![Configure max sample size](images/accuracy-send-feedback.png)
 
 ### Next steps
