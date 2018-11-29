@@ -274,9 +274,9 @@ Note the Data Mart ID is listed; this is your {{site.data.keyword.aios_short}} i
 
 - Set the threshold for **BP** at 90%, and click **Next**.
 
-- You will now select favorable and unfavorable prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} automatically detects which column in the payload logging data contains the prediction values, and presents them in the "Values from training data" section.
+- You will now select expected and unexpected prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} automatically detects which column in the payload logging data contains the prediction values, and presents them in the "Values from training data" section.
 
-  For this tutorial, those values are **drugA**, **drugB**, **drugC**, and **drugX**. Drag and drop **drugC** as a favorable value, and the others as unfavorable values, to the form and click **Next**:
+  For this tutorial, those values are **drugA**, **drugB**, **drugC**, and **drugX**. Drag and drop **drugC** as an expected value, and the others as unexpected values, to the form and click **Next**:
 
   ![Positive and negative values](images/pos_and_neg2.png)
 
