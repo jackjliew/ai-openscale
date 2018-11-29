@@ -221,11 +221,15 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   **NOTE**: See more complete details about each of these options in the [Specify your database](/docs/services/ai-openscale/connect-db.html) topic.
 
-- Review the summary data. Note the Data Mart ID is listed; this is your {{site.data.keyword.aios_short}} instance ID. Click **Save**.
+- Review the summary data and cick **Save**. Confirm and, when prompted, click the **Continue with Configuration** button.
 
   ![Select database](images/gs-setup-summary4.png)
 
-   Confirm and, when prompted, click the **Continue with Configuration** button
+<!---
+
+Note the Data Mart ID is listed; this is your {{site.data.keyword.aios_short}} instance ID.
+
+--->
 
 ### Configure Fairness monitoring
 
