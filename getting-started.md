@@ -278,7 +278,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Use the slider to adjust the minimum sample size to 100, then click  **Next**. Review your choices, and then click **Save**.
 
-  **Note**: For purposes of this tutorial, the minimum sample size has been set to 100. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
+  For purposes of this tutorial, the minimum sample size has been set to 100. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
+  {: note}
+  
+  Fairness metrics can take up to an hour to display.
+  {: tip}
 
 ### Configure accuracy monitoring
 
