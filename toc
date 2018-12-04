@@ -6,6 +6,7 @@ AI OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
+    alt-setup.md
     index.md
     tutorial-adv.md
     {: .navgroup-end}
