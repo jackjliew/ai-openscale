@@ -2,13 +2,15 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-28"
+lastupdated: "2018-12-03"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -44,17 +46,26 @@ To proceed with using the free Lite plan database, simply select that option, th
 
 ### Existing or new database
 
-Once you have selected the "Use existing or purchase new database" option, {{site.data.keyword.aios_short}} checks your {{site.data.keyword.Bluemix_notm}} account to locate any existing databases.
+1.  Once you have selected the "Use existing or purchase new database" option, {{site.data.keyword.aios_short}} checks your {{site.data.keyword.Bluemix_notm}} account to locate any existing databases.
 
-**Note**: For the current release, only a PostgreSQL database is supported.
+  For the current release, only a PostgreSQL database is supported.
+  {: note}
 
-You can select a database from the **Database** drop-down menu, and then a **Schema**:
+1.  Select your existing database from the **Database** drop-down menu, and then a **Schema**:
 
   ![Select database](images/gs-config-database3.png)
 
-  You can also select the **Sign up for a new instance** link to purchase a new Postgres instance in {{site.data.keyword.Bluemix_notm}}.
+You can also click **Select a different location** to specify a PostgreSQL database location outside of your {{site.data.keyword.Bluemix_notm}} account.
 
-Once you have selected a database and schema, click **Next** to review the summary data and click **Save**.
+1.  Select the **Database Type**, then fill in the connection information for your PostgreSQL database location and click **Connect**:
+
+  ![Select database](images/gs-config-database4.png)
+
+1.  Once you have successfully connected, you can select a schema
+
+  ![Select database](images/gs-config-database5.png)
+
+Click **Next** to review the summary data and click **Save**.
 
 ### Next steps
 {: #connect-next}
