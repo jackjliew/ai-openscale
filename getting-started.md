@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-11-28"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -205,9 +205,12 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The {{site.data.keyword.aios_full}} Getting Started page opens. Click **Begin**.
 
-- For this tutorial, select the Watson Machine Learning tile and click **Next**.
+- Select the Watson Machine Learning tile and click **Next**.
 
-- Then select your instance from the menu and click **Next**.
+- For this tutorial, select your Watson Machine Learning instance from the menu and click **Next**.
+
+  You also have the option to select a different Machine Learning location; see [Specify your Watson Machine Learning instance](/docs/services/ai-openscale/connect-wml.html) for addtional information.
+  {: note}
 
   ![Set WML instance](images/gs-set-wml.png)
 
@@ -219,7 +222,8 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
     ![Select database](images/gs-set-lite-db.png)
 
-  **NOTE**: See more complete details about each of these options in the [Specify your database](/docs/services/ai-openscale/connect-db.html) topic.
+  See more complete details about each of these options in the [Specify your database](/docs/services/ai-openscale/connect-db.html) topic.
+  {: note}
 
 - Review the summary data and cick **Save**. Confirm and, when prompted, click the **Continue with Configuration** button.
 
