@@ -202,7 +202,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 - Download the following file:
 
-    - [CARS4U Action Recommendation - model.ipynb](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/CARS4U%20action%20recommendation%20-%20model.ipynb)
+    - [CARS4U Action Recommendation - model](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/CARS4U%20action%20recommendation%20-%20model.ipynb)
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -212,7 +212,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   ![New Notebook Form](images/new_notebook_name.png)
 
-- Then click the **Choose file** button, and select the "CARS4U Action Recommendation - model.ipynb" that you downloaded:
+- Then click the **Choose file** button, and select the "CARS4U Action Recommendation - model" that you downloaded:
 
   ![New Notebook Form](images/new_notebook_name2.png)
 
@@ -292,7 +292,7 @@ The `Data Mart configuration and usage - CARS4U` notebook contains detailed inst
 
 - Download the following file:
 
-    - [Data Mart configuration and usage - CARS4U.ipynb](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Data%20Mart%20configuration%20and%20usage%20-%20CARS4U.ipynb)
+    - [Data Mart configuration and usage - CARS4U](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Data%20Mart%20configuration%20and%20usage%20-%20CARS4U.ipynb)
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -302,7 +302,7 @@ The `Data Mart configuration and usage - CARS4U` notebook contains detailed inst
 
   ![New Notebook Form](images/new_notebook_name.png)
 
-- Then click the **Choose file** button, and select the "Data Mart configuration and usage - CARS4U.ipynb" that you downloaded:
+- Then click the **Choose file** button, and select the "Data Mart configuration and usage - CARS4U" that you downloaded:
 
   ![New Notebook Form](images/new_notebook_name3.png)
 
