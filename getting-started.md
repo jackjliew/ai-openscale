@@ -430,10 +430,10 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Insights** tab.
 
+  ![Insights](images/insight-dash-tab.png)
+
   Fairness metrics can take up to an hour to display.
   {: tip}
-
-  ![Insights](images/insight-dash-tab.png)
 
 The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the 90% threshold.
 
