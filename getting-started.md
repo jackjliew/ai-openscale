@@ -386,13 +386,13 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - When configuring {{site.data.keyword.aios_short}}, you set the threshold for fairness and accuracy monitoring to 100 and 10 requests, respectively. No data will appear in the dashboard until this threshold is met. You can generate these requests all at once by feeding the training data back to the model for scoring.
 
-- To generate requests, download the [drug_train_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data.json) file.
+- To generate requests, click [drug_train_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data.json) and copy the contents of this file.
 
 - From the **Deployments** tab of your Watson Studio project, click the **drug-test-deploy** link, click the **Test** tab, and select the JSON input icon.
 
   ![JSON test](images/json_test02.png)
 
-- Now, open the `drug_train_data.json` file you downloaded, and copy the contents to the JSON field in the **Test** tab. Click the **Predict** button to send and score training payloads to your model.
+- Now, paste the contents of the `drug_train_data.json` file to the JSON field in the **Test** tab. Click the **Predict** button to send and score training payloads to your model.
 
   ![JSON predict](images/json_test03.png)
 
