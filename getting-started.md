@@ -422,7 +422,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Summary panel](images/gs-insight-summary-panel-2.png)
 
-- Finally, [re-run the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model.
+- Finally, [re-run the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model. Please note that metrics can take up to an hour to display.
 
 ## Viewing results
 
