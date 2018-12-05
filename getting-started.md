@@ -271,11 +271,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - You may now assign a fairness threshold for **SEX**. You will see an alert on your operations dashboard if the Fairness rating falls below this threshold. Set the threshold at 90%, and click **Next**.
 
-- For the **BP** feature, add the value `NORMAL` to the **Reference group**, and the values `HIGH` and `LOW` the **Monitored group**, and click **Next**:
+- For the **BP** feature, add the value `HIGH` to the **Reference group**, and the values `NORMAL` and `LOW` to the **Monitored group**, and click **Next**:
 
   ![Gender Groups](images/bp_groups.png)
 
-  As with **SEX**, the model will be flagged as biased for **BP** if the drug prediction ratios for the monitored group differ from the ratios for the reference group. So if patients with normal blood pressure receive a drug at a different ratio than patients with low or high blood pressure, the model is biased.
+  As with **SEX**, the model will be flagged as biased for **BP** if the drug prediction ratios for the monitored group differ from the ratios for the reference group. So if patients with high blood pressure receive a drug at a different ratio than patients with low or normal blood pressure, the model is biased.
 
 - Set the threshold for **BP** at 90%, and click **Next**.
 
