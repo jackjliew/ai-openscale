@@ -24,7 +24,7 @@ Specify a database for your {{site.data.keyword.aios_short}} instance to use.
 ## Connecting to your database
 {: #connect-config-db}
 
-{{site.data.keyword.aios_short}} uses a database to store payload, feedback, and measurement data. Besides selecting a database, you may also able to select a schema for your database - a schema is a named collection of tables in the database.
+{{site.data.keyword.aios_short}} uses a database to store payload, feedback, and measurement data. Besides selecting a database, you may also select a schema for your database - a schema is a named collection of tables in the database.
 
 **Note**: For the current release, only a PostgreSQL database is supported. The PostgreSQL database needs to be in the same {{site.data.keyword.Bluemix_notm}} account where the {{site.data.keyword.aios_short}} instance is located.
 
