@@ -213,7 +213,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 Now that the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models.
 
-- Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The {{site.data.keyword.aios_full}} Getting Started page opens. Click **Begin**.
+- Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance in the left-hand navigator of the catalog content page, and click the **Launch application** button. Click **Begin**.
 
 - Select the Watson Machine Learning tile and click **Next**.
 
