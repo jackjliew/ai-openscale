@@ -2,13 +2,15 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-26"
+lastupdated: "2018-12-05"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -69,7 +71,8 @@ Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points di
 
 1.  On the *Set accuracy threshold* page, select a value that represents an acceptable accuracy level.
 
-    **Note**: Accuracy is a value synthesized from relevant data science metrics associated with each particular model type. The score is a normalized measure to allow you to easily compare accuracy across different model types. In typical situations, an accuracy score of 80 is sufficient.
+    Accuracy is a value synthesized from relevant data science metrics associated with each particular model type. The score is a normalized measure to allow you to easily compare accuracy across different model types. In typical situations, an accuracy score of 80 is sufficient.
+    {: note}
 
     ![Set accuracy limit](images/accuracy-set-limit.png)
 
@@ -87,13 +90,25 @@ Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points di
 
     A summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section.
 
-Click **Save** to complete your configuration.
+1.  Click **Save** to complete your configuration.
 
-You are now presented with the option to directly provide feedback data to your model, to evaluate for accuracy. Select the *Add Feedback Data* button to upload a comma-separated value (CSV) formatted data file, or simply choose **Exit** to skip this optional step (you will still be able to upload a CSV file for evaluation at a later time).
+You are now presented with the option to directly provide feedback data to your model, to evaluate for accuracy.
 
-  **Note**: File sizes are currently limited to 8MB.
+  ![Send feedback data](images/accuracy-send-feedback.png)
 
-  ![Configure max sample size](images/accuracy-send-feedback.png)
+Select the *Add Feedback Data* button to upload a CSV-formatted data file; set the delimiter to match your data.
+
+  ![Accuracy delimiter](images/accuracy-delimit.png)
+
+File sizes are currently limited to 8MB.
+{: note}
+
+Alternately, you can publish feedback data using the provided `cURL` or `Python` code snippets.
+
+The fields and values in the code snippets need to be substituted with your real values, as the ones provided are only examples.
+{: important}
+
+You can also choose **Exit** to skip this optional step; you will still be able to upload a CSV file for evaluation at a later time.
 
 ### Next steps
 {: #accuracy-next}
