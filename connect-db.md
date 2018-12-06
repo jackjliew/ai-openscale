@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-03"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -26,9 +26,7 @@ Specify a database for your {{site.data.keyword.aios_short}} instance to use.
 
 {{site.data.keyword.aios_short}} uses a database to store payload, feedback, and measurement data. Besides selecting a database, you may also select a schema for your database - a schema is a named collection of tables in the database.
 
-**Note**: For the current release, only a PostgreSQL database is supported. The PostgreSQL database needs to be in the same {{site.data.keyword.Bluemix_notm}} account where the {{site.data.keyword.aios_short}} instance is located.
-
-1.  Choose a PostgreSQL database. You have two options: the free Lite plan database, or an existing or new database.
+1.  Choose a database. You have two options: the free Lite plan database, or an existing or new database.
 
     ![Select database](images/gs-config-database.png)
 
@@ -48,26 +46,40 @@ To proceed with using the free Lite plan database, simply select that option, th
 
 1.  Once you have selected the "Use existing or purchase new database" option, {{site.data.keyword.aios_short}} checks your {{site.data.keyword.Bluemix_notm}} account to locate any existing databases.
 
-  For the current release, only a PostgreSQL database is supported.
+    For the current release, only a PostgreSQL or Db2 database is supported.
   {: note}
 
-1.  Select your existing database from the **Database** drop-down menu, and then a **Schema**:
+1.  Select your existing database type (PostgreSQL or Db2), then a database from the **Database** drop-down menu, and then a **Schema**:
 
-  ![Select database](images/gs-config-database3.png)
+    ![Select database](images/gs-config-database3.png)
 
-You can also click **Select a different location** to specify a PostgreSQL database location outside of your {{site.data.keyword.Bluemix_notm}} account.
+1.  Optionally, you can also click **Select a different location** to specify a database location outside of your {{site.data.keyword.Bluemix_notm}} account. Select the **Database Type**, then fill in the connection information for your database location and click **Connect**:
 
-1.  Select the **Database Type**, then fill in the connection information for your PostgreSQL database location and click **Connect**:
+    ![Select database](images/gs-config-database4.png)
 
-  ![Select database](images/gs-config-database4.png)
+    Once you have successfully connected, you can select a schema.
 
-1.  Once you have successfully connected, you can select a schema
-
-  ![Select database](images/gs-config-database5.png)
+    ![Select database](images/gs-config-database5.png)
 
 Click **Next** to review the summary data and click **Save**.
 
-### Next steps
+## Sending a scoring request
+
+To configure monitors, {{site.data.keyword.aios_short}} requires you to send a scoring request, in order to begin to log the data that will be monitored.
+
+Models deployed in Watson Machine Learning are automatically scored by {{site.data.keyword.aios_short}}. If you only have models deployed in Watson Machine Learning, you will not see this screen.
+{: note:}
+
+Select a deployment, in this case "Fraud Detector", and then use the provided `cURL`, `Java`, `JavaScript`, `Python`, or `Scala` code snippets to log model deployment request and response data.
+
+The fields and values in the code snippets need to be substituted with your real values, as the ones provided are only examples.
+{: important}
+
+![Select database](images/config-send-scoring.png)
+
+Once you have run your payload logging, you will see a checkmark in the "Ready to Monitor" column for the selected deployment. Click **Configure Monitors** to continue.
+
+## Next steps
 {: #connect-next}
 
 {{site.data.keyword.aios_short}} is now ready for you to [configure monitors for your deployments](monitor-overview.html).
