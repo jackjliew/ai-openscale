@@ -34,7 +34,7 @@ AI OpenScale
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://console.bluemix.net/apidocs/ai-openscale)
+    [API reference](https://cloud.ibm.com/apidocs/ai-openscale)
     [ModelOps CLI](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
     [Python Client](http://ai-openscale-python-client.mybluemix.net/)
     activity-tracker.md
