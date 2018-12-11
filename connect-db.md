@@ -53,11 +53,13 @@ To proceed with using the free Lite plan database, simply select that option, th
 
     ![Select database](images/gs-config-database3.png)
 
-1.  Optionally, you can also click **Select a different location** to specify a database location outside of your {{site.data.keyword.Bluemix_notm}} account. Select the **Database Type**, then fill in the connection information for your database location and click **Connect**:
+    You can also click **Select a different location** to specify a database location outside of your {{site.data.keyword.Bluemix_notm}} account.
+
+1.  Select the **Database Type**, then fill in the connection information for your database location and click **Connect**:
 
     ![Select database](images/gs-config-database4.png)
 
-    Once you have successfully connected, you can select a schema.
+1.  Once you have successfully connected, you can select a schema.
 
     ![Select database](images/gs-config-database5.png)
 
