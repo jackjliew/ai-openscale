@@ -448,7 +448,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Edit icon - right side](images/gs-insight-edit-icon.png)
 
-- In the "Summary" side panel, select the **Add Feedback Data** button, and select the `drug_feedback_data.csv` file you downloaded. Set the delimiter to "comma". Click **OK** when complete.
+- In the "Summary" side panel, select the **Add Feedback Data** button, and select the `drug_feedback_data.csv` file you downloaded. Set the delimiter to "Comma(,)". Click **OK** when complete.
 
   ![Accuracy delimiter](images/accuracy-delimit.png)
 
