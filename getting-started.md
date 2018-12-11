@@ -16,6 +16,7 @@ lastupdated: "2018-12-11"
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:hide-dashboard: .hide-dashboard}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -192,12 +193,16 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 ## Configure {{site.data.keyword.aios_short}}
 
 ### Provision {{site.data.keyword.aios_short}}
+{: hide-dashboard}
 
 - [Provision a new {{site.data.keyword.aios_short}} service instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/ai-openscale){: new_window}:
+{: hide-dashboard}
 
   ![AI OpenScale](images/openscale.png)
+  {: hide-dashboard}
 
 - Give your service a name, select the Lite plan, and click **Create**.
+{: hide-dashboard}
 
 ### Connect {{site.data.keyword.aios_short}} to your machine learning model
 
