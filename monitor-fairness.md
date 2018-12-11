@@ -44,7 +44,7 @@ The perturbation is done by changing the value of the fairness attribute from Re
 
 A model is deemed to be biased if, across this combined dataset, the percentage of Favorable outcomes for the Monitored class is less than the percentage of Favorable outcomes for the Reference class, by some threshold value. This threshold value is to be specified when configuring Fairness.
 
-Fairness values can be more than 100%. This means that the Monitored group received far more favorable outcomes than the Reference group. In addition, if no new scoring requests are sent, then the Fairness value will remain constant.
+Fairness values can be more than 100%. This means that the Monitored group received more favorable outcomes than the Reference group. In addition, if no new scoring requests are sent, then the Fairness value will remain constant.
 {: note}
 
 ### Example
