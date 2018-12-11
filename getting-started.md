@@ -257,7 +257,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 ### Preparing for monitoring
 
-1.  Select your deployment, then select the *Prepare for monitoring* tile, and click **Begin**.
+1.  Now, in your {{site.data.keyword.aios_short}} instance, select your deployment, then select the *Prepare for monitoring* tile, and click **Begin**.
 
     ![Prepare for monitoring](images/config-prep-monitor.png)
 
