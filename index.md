@@ -9,6 +9,8 @@ lastupdated: "2018-11-28"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -82,8 +84,6 @@ Table 1. Feature support details
 
 `**` New version of model only, no evaluation.
 
-<!---
-
 ## Supported model fairness
 
 Table 1. Fairness support details
@@ -99,8 +99,6 @@ Table 1. Fairness support details
 | **Deep learning classification models which expect some structured data as input** | Yes |
 | **Deep learning models which do not take structured data as input, for example, text or images** | Yes ||
 {: caption="Fairness support details" caption-side="top"}
-
---->
 
 ## Browser support
 

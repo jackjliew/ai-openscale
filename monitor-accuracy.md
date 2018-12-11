@@ -63,12 +63,6 @@ Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points di
 
 --->
 
-1.  On the *Specify algorithm type* page, select one of the available classifications.
-
-    ![Accuracy Spark instance page](images/accuracy-set-type.png)
-
-    Click **Next** to continue.
-
 1.  On the *Set accuracy threshold* page, select a value that represents an acceptable accuracy level.
 
     Accuracy is a value synthesized from relevant data science metrics associated with each particular model type. The score is a normalized measure to allow you to easily compare accuracy across different model types. In typical situations, an accuracy score of 80 is sufficient.

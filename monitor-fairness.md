@@ -2,13 +2,15 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-28"
+lastupdated: "2018-12-03"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -44,7 +46,7 @@ A model is deemed to be biased if, across this combined dataset, the percentage 
 
 ### Example
 
-Consider a data point where, for `Gender=Male` (Reference value), the model predicts a Fvaorable outcome, but when the record is perturbed by changing `Gender` to `Female` (Monitored value), while keeping all other feature values the same, the model predicts an Unfavorable outcome. A model overall is said to exhibit bias if there are sufficient data points (across the last `N` records in the payload table, plus the perturbed data) where the model was acting in a biased manner.
+Consider a data point where, for `Gender=Male` (Reference value), the model predicts an Favorable outcome, but when the record is perturbed by changing `Gender` to `Female` (Monitored value), while keeping all other feature values the same, the model predicts an Unfavorable outcome. A model overall is said to exhibit bias if there are sufficient data points (across the last `N` records in the payload table, plus the perturbed data) where the model was acting in a biased manner.
 
 ### Supported models
 
@@ -56,14 +58,6 @@ Consider a data point where, for `Gender=Male` (Reference value), the model pred
 1.  From the *What is Fairness?* page, click **Next** to start the configuration process.
 
     ![What is fairness? page](images/fair-what-is.png)
-
-1.  Select the [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy) and click **Next**:
-
-    ![Multi-class](images/multiclass.png)
-
-1.  {{site.data.keyword.aios_short}} will locate your training data from the metadata stored with the model in WML.Choose the label column in the training data that contains your prediction values and click **Next**.
-
-    ![Select column label](images/fair-config-column.png)
 
 1.  On the *Select the features to monitor* page, find and select fairness attributes that you want to use and click **Next**.
 
@@ -105,7 +99,7 @@ Consider a data point where, for `Gender=Male` (Reference value), the model pred
 
      Click **Next** when you are done with each feature.
 
-1.  Now, specify values that represent a favorablr outcome for the model. Values are derived from the `label` column in the training data, if the model output schema contains a mapping column. In WML, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
+1.  Now, specify values that represent a favorable outcome for the model. Values are derived from the `label` column in the training data, if the model output schema contains a mapping column. In WML, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
 
     For example, if the `prediction` value is `1.0`, the mapping column could have a value of `Loan denied`; this implies that the prediction of the model is `Loan denied`. So, if the model output schema contains a mapping column, then specify Favorable and Unfavorable values using those present in the mapping column.
 

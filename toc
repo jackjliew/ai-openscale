@@ -25,7 +25,6 @@ AI OpenScale
         monitor-overview.md
         monitor-fairness.md
         monitor-accuracy.md
-        monitor-explain.md
 
     {: .topicgroup}
     Viewing and editing monitor data
