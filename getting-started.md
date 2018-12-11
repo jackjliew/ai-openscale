@@ -360,7 +360,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - You can review your choices before clicking **Save** to finalize them.
 
-- Finally, you're presented with an optional button to **Add Feedback Data**, along with feedback logging code snippets. See [Configuring the Accuracy monitor](/docs/services/ai-openscale/monitor-accuracy.html#config-accuracy) for details. For now, select **Exit** without pressing this button.
+- Finally, you're presented with an optional button to **Add Feedback Data**, along with feedback logging code snippets. See [Configuring the Accuracy monitor](/docs/services/ai-openscale/monitor-accuracy.html#config-accuracy) for details. For now, select **Close** without pressing this button.
 
 <!---
 
