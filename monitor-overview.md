@@ -97,7 +97,7 @@ For numeric or categorical data, you need to provide information about the train
 
   Running the Python notebook lets you capture distinct values in the schema columns, as well as the column names. In addition, you can use the notebook to pre-configure the Fairness monitor.
 
-    - Download the [sample notebook](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb), and replace any credentials with your own credentials.
+    - Download the [custom notebook](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb), and replace any credentials with your own credentials.
 
     - Review the notebook carefully, specifying data for your model where appropriate. Save the notebook.
 
