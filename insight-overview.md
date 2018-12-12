@@ -16,7 +16,7 @@ lastupdated: "2018-12-10"
 # Navigating the dashboard
 {: #insights}
 
-You can track all the deployments you are monitoring through the {{site.data.keyword.aios_short}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}}. The dashboard consists of five tabs:
+You can track all the deployments you are monitoring through the {{site.data.keyword.aios_short}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}}.
 
   ![Insight tabs](images/insight-tabs.png)
 
@@ -55,15 +55,6 @@ From here, you can directly edit the configuration settings for your deployment 
 {: #insight-transact-tab}
 
 The Transactions tab ( ![Transactions tab](images/insight-transact-tab.png) ) lets you search a specific transaction ID to explain a particular deployment transaction. For more information, see [Monitoring Explainability](insight-timechart.html#insight-explain).
-
-## AI Tools
-{: #insight-tools-tab}
-
-The AI Tools tab ( ![AI Tools tab](images/aitools.png) ) opens a dialog that provides a link to additional IBM AI tools options.
-
-- *[Watson Studio lite plan](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp)*: Watson Studio provides you with the environment and tools to analyze and visualize data, to cleanse and shape data, to ingest streaming data, or to create, train, and deploy machine learning models.
-
-- *[NeuNetS](https://dataplatform.cloud.ibm.com/ml/neunets)* (*Beta*): The Neural Network Synthesizer, or "NeuNetS", currently in beta release, allows you to synthesize AI models using {{site.data.keyword.aios_short}} technology in Watson Studio.
 
 ## Help tab
 {: #insight-transact-tab}
