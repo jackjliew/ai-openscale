@@ -72,7 +72,7 @@ To configure monitors, {{site.data.keyword.aios_short}} requires you to send a s
 Models deployed in Watson Machine Learning are automatically scored by {{site.data.keyword.aios_short}}. If you only have models deployed in Watson Machine Learning, you will not see this screen.
 {: note:}
 
-Select a deployment, in this case "Fraud Detector", and then use the provided `cURL`, `Java`, `JavaScript`, `Python`, or `Scala` code snippets to log model deployment request and response data.
+Select a deployment, in this case "Fraud Detector", and then use the provided `cURL` or `Python` code snippets to log model deployment request and response data.
 
 The fields and values in the code snippets need to be substituted with your real values, as the ones provided are only examples.
 {: important}
