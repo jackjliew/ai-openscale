@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-9-17"
+  years: 2018
+lastupdated: "2018-12-12"
 
 ---
 
@@ -15,12 +15,23 @@ lastupdated: "2018-9-17"
 
 # Release notes
 
-## Changes
+This document outlines new features and known issues for {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
+
+## 14 December 2018
+{: #14December2018}
 
 The following new features and changes to the service are available.
 
-### 17 September 2018
+### New features and changes
+
+- **GA release**
+
+    - Welcome to the General Availability (GA) release of {{site.data.keyword.aios_full_notm}}.
+
+## 17 September 2018
 {: #17September2018}
 
-- **Beta preview release**: Welcome to {{site.data.keyword.aios_full}}.
+### New features and changes
+
+- **Beta preview release** - Welcome to the beta preview release of {{site.data.keyword.aios_full_notm}}.
