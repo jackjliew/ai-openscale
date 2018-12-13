@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-5"
+lastupdated: "2018-12-13"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-12-5"
 If your AI model is deployed in a machine learning engine other than Watson Machine Learning (WML), you must enable payload logging for the external machine learning engine with a Python client.
 {: shortdesc}
 
-See more complete information in the [{{site.data.keyword.aios_short}} Python client documentation](http://ai-openscale-python-client.mybluemix.net/), and in the sample {{site.data.keyword.aios_short}} Python [client notebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks).
+See more complete information in the [{{site.data.keyword.aios_short}} Python client documentation](http://ai-openscale-python-client.mybluemix.net/), and in the sample {{site.data.keyword.aios_short}} Python [client notebooks](https://github.com/pmservice/ai-openscale-sample-notebooks).
 
 ## Before you begin
 {: #connect-prereq}
@@ -53,9 +53,11 @@ You will need to have the training data of your model available in Db2 or Cloud 
     client.data_mart.get_details()
     ```
 
-## Bind your `Custom` machine learning engine
+## Working with the Custom machine learning engine
 
-- A non-WML engine is bound as `Custom`, meaning that this is just metadata; there is no direct integration with the non-WML service.
+### Bind your Custom machine learning engine
+
+- A non-WML engine is bound as Custom, meaning that this is just metadata; there is no direct integration with the non-WML service.
 
     ```python
     custom_engine_credentials = {
@@ -76,7 +78,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
 
     ![Generic ML binding](images/ml-generic-bind.png)
 
-### Add `Custom` subscription
+### Add Custom subscription
 
 - Add subscription
 
@@ -109,7 +111,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
 
 ### Scoring and payload logging
 
-- Score your model, then convert the request and response to the form used by {{site.data.keyword.aios_short}}. For a full example, see the [IBM AI OpenScale & Custom Machine Learning notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb).
+- Score your model, then convert the request and response to the form used by {{site.data.keyword.aios_short}}. For a full example, see the [IBM AI OpenScale & Custom ML engine notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb).
 
 <!---
     ```python
@@ -185,7 +187,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
     req_response = requests.post(endpoint, json=payload, headers = headers)
     print("Request OK: " + str(req_response.ok))
     ```
-
+<!---
 ## Bind your Microsoft Azure machine learning engine
 
 ADDITIONAL INFO HERE.
@@ -283,13 +285,11 @@ ADDITIONAL INFO HERE.
     req_response = requests.post(endpoint, json=payload, headers = headers)
     print("Request OK: " + str(req_response.ok))
     ```
---->
 
 ## Bind your Amazon SageMaker machine learning engine
 
 ADDITIONAL INFO HERE.
 
-<!---
 - A non-WML engine is bound as `generic`, meaning that this is just metadata; there is no direct integration with the non-WML service.
 
     ```python

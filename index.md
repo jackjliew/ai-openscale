@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-28"
+lastupdated: "2018-12-13"
 
 ---
 
@@ -34,19 +34,38 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
 
     - [Fairness](monitor-fairness.html)
     - [Accuracy](monitor-accuracy.html)
-    - [Explainability](monitor-explain.html)
 
 - **View and edit monitored data**: The {{site.data.keyword.aios_short}} [dashboard](insight-overview.html) lets you easily view key insights and identify issues for your deployments. Visualization of individual data points for each monitored feature provides additional detail.
 
 ## Limitations
 
-- The current release only supports one PostgreSQL database, one Watson Machine Learning instance, and one instance of {{site.data.keyword.aios_short}}
+- The current release only supports one database, one Watson Machine Learning instance, and one instance of {{site.data.keyword.aios_short}}
 
-- The PostgreSQL database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
+- The database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
 
 - There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
 
 - Currently, explanations cannot be generated for images which are greater than 1 MB in size.
+
+## Supported model types
+
+Table 1. Model support details
+
+| Algorithms | **Fairness** | **Auto-debias** | **Explain** | **Accuracy** | **Fully-supported frameworks** | **Partially-supported frameworks on WML** | **[Supported as Custom environment](connect-other.html#custom-works)** |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Structured Classification** | Yes | Yes<sup>1 | Yes | Yes | Spark mllib on WML, AWS Sagemaker Native, Azure ML Studio Native | scikit-learn, spss, xgboost <sup>2 | Keras, Tensorflow, Pytorch, Caffe, and most others |
+| **Structured Regression**     | Yes | Coming soon | Yes | Yes | Spark mllib on WML, AWS Sagemaker Native, Azure ML Studio Native | scikit-learn, spss, xgboost<sup>2 | Keras, Tensorflow, Pytorch, Caffe, and most others |
+| **Text Classification**       | Ongoing active research | Ongoing active research | Limited support<sup>3 | Coming soon | No | spark mllib<sup>2 | Coming soon: Keras, Tensorflow, Pytorch, Caffe, and most others |
+| **Image Classification**      | Ongoing active research | Ongoing active research | Limited support<sup>4 | Coming soon | No | Keras<sup>2 | Coming soon: Keras, Tensorflow, Pytorch, Caffe, and most others ||
+{: caption="Model support details" caption-side="top"}
+
+<sup>1</sup> If your model / framework outputs prediction probabilities
+
+<sup>2</sup> Accuracy only
+
+<sup>3</sup> Sparkmllib
+
+<sup>4</sup> Keras, Tensorflow
 
 ## Supported machine learning engines
 
@@ -62,6 +81,7 @@ Table 1. Feature support details
 | **Generic Machine Learning service**  | Yes | Yes | Yes (structured data only) | No | No | No ||
 {: caption="Feature support details" caption-side="top"}
 
+<!---
 ## Supported Watson machine learning frameworks and functions
 
 Table 1. Feature support details
@@ -83,7 +103,9 @@ Table 1. Feature support details
 `*` Fairness detection and explainability require payload logging to be supported; they also need a WML scoring endpoint to be available.
 
 `**` New version of model only, no evaluation.
+--->
 
+<!---
 ## Supported model fairness
 
 Table 1. Fairness support details
@@ -99,6 +121,7 @@ Table 1. Fairness support details
 | **Deep learning classification models which expect some structured data as input** | Yes |
 | **Deep learning models which do not take structured data as input, for example, text or images** | Yes ||
 {: caption="Fairness support details" caption-side="top"}
+--->
 
 ## Browser support
 

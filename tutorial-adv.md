@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-11-21"
+lastupdated: "2018-12-13"
 
 ---
 
@@ -285,14 +285,14 @@ Since the machine learning model has been deployed, you can configure {{site.dat
 
 ## Create a data mart and configure performance, accuracy, and fairness monitors
 
-### Add the `Data Mart configuration and usage - CARS4U` notebook to your Watson Studio project
+### Add the `AI OpenScale and Watson ML engine` notebook to your Watson Studio project
 
-The `Data Mart configuration and usage - CARS4U` notebook contains detailed instructions for each step in the python code you will run. As you work through the notebook, spend some time to understand what each command is doing.
+The `AI OpenScale and Watson ML engine` notebook contains detailed instructions for each step in the python code you will run. As you work through the notebook, spend some time to understand what each command is doing.
 {: tip}
 
 - Download the following file:
 
-    - [Data Mart configuration and usage - CARS4U](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Data%20Mart%20configuration%20and%20usage%20-%20CARS4U.ipynb)
+    - [AI OpenScale and Watson ML engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Data%20Mart%20configuration%20and%20usage%20-%20CARS4U.ipynb)
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -302,7 +302,7 @@ The `Data Mart configuration and usage - CARS4U` notebook contains detailed inst
 
   ![New Notebook Form](images/new_notebook_name.png)
 
-- Then click the **Choose file** button, and select the "Data Mart configuration and usage - CARS4U" that you downloaded:
+- Then click the **Choose file** button, and select the "AI OpenScale and Watson ML engine" that you downloaded:
 
   ![New Notebook Form](images/new_notebook_name3.png)
 
@@ -312,9 +312,9 @@ The `Data Mart configuration and usage - CARS4U` notebook contains detailed inst
   
 - Click **Create Notebook**.
 
-### Edit and run the `Data Mart configuration and usage - CARS4U` Notebook
+### Edit and run the `AI OpenScale and Watson ML engine` Notebook
 
-- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `Data Mart configuration and usage - CARS4U` notebook to edit it.
+- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `AI OpenScale and Watson ML engine` notebook to edit it.
 
 - In section 1.1, "Installation and authentication":
 
