@@ -21,7 +21,7 @@ lastupdated: "2018-12-5"
 If your AI model is deployed in a machine learning engine other than Watson Machine Learning (WML), you must enable payload logging for the external machine learning engine with a Python client.
 {: shortdesc}
 
-See more complete information in the [{{site.data.keyword.aios_short}} Python client documentation](http://ai-openscale-python-client.mybluemix.net/), and in the sample {{site.data.keyword.aios_short}} Python [client notebooks](https://github.com/pmservice/ai-openscale-sample-notebooks).
+See more complete information in the [{{site.data.keyword.aios_short}} Python client documentation](http://ai-openscale-python-client.mybluemix.net/), and in the sample {{site.data.keyword.aios_short}} Python [client notebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks).
 
 ## Before you begin
 {: #connect-prereq}
