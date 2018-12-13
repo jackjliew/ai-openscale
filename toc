@@ -16,6 +16,9 @@ AI OpenScale
     Configuring AI OpenScale
         creds.md
         connect-wml.md
+        connect-azureml.md
+        connect-sagemaker.md
+        connect-other.md
         connect-ml.md
         connect-deploy.md
         connect-db.md
