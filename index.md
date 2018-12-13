@@ -65,7 +65,7 @@ Table 1. Model support details
 
 Table 1. Framework support details
 
-| Algorithms | **Out-of-the-box support** | **[Custom environment](connect-other.html#custom-works) or Python function support** |
+| Algorithms | **Out-of-the-box support** | **[Custom environment](connect-other.html#custom-works) and Python function support** |
 |:---|:---:|:---:|
 | **Structured Classification** | Spark mllib on WML, AWS Sagemaker Native, Azure ML Studio Native | Scikit-Learn, XGboost, SPSS, Keras, Tensorflow,  Pytorch, Caffe,  or any other framework of your choice |
 | **Structured Regression**     | Spark mllib on WML, AWS Sagemaker Native, Azure ML Studio Native | Scikit-Learn, XGboost, SPSS, Keras, Tensorflow,  Pytorch, Caffe,  or any other framework of your choice |
