@@ -29,6 +29,7 @@ The following new features and changes to the service are available.
 
     - Welcome to the General Availability (GA) release of {{site.data.keyword.aios_full_notm}}. This release contains the following features:
 
+<!---
         - __*Releases*__: {{site.data.keyword.aios_short}} is available as an IBM Cloud Standard (paid) plan, and on IBM Cloud Private for Data V1.2
 
           The IBM Neural Network Synthesizer (NeuNetS) is also available as a beta release (public cloud only). See the [NeuNetS documentation](https://dataplatform.cloud.ibm.com/ml/neunets) for more information
@@ -40,6 +41,7 @@ The following new features and changes to the service are available.
         - __*Explainability*__: Support for regression models, Python functions, and IBM Explainer, along with LIME, algorithms
 
         - __*Data Store*__: Quality monitoring without reliance on Watson Machine Learning, and Db2 support
+--->
 
 ### Known issues
 
