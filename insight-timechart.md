@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-10"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-12-10"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Working with monitored data
+# Monitoring fairness, accuracy, and explainability
 {: #insight-deploy-detail}
 
 Select a deployment from the dashboard to see monitoring data for that deployment.
