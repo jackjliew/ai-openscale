@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-13"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -54,7 +54,7 @@ Table 1. Model support details
 | Algorithms | **Fairness** | **Auto-debias** | **Explain** | **Accuracy** |
 |:---|:---:|:---:|:---:|:---:|
 | **Structured Classification** | Yes | Yes<sup>1 | Yes | Yes |
-| **Structured Regression**     | Yes | Coming soon | Yes | Yes |
+| **Structured Regression**     | Yes | Coming soon | Yes<sup>1 | Yes |
 | **Text Classification**       | No - active research topic | No - active research topic | Yes | Yes |
 | **Image Classification**      | No - active research topic | No - active research topic | Yes | Yes ||
 {: caption="Model support details" caption-side="top"}
@@ -69,8 +69,8 @@ Table 1. Framework support details
 |:---|:---:|:---:|
 | **Structured Classification** | Spark mllib on WML, AWS Sagemaker Native, Azure ML Studio Native | Scikit-Learn, XGboost, SPSS, Keras, Tensorflow,  Pytorch, Caffe,  or any other framework of your choice |
 | **Structured Regression**     | Spark mllib on WML, AWS Sagemaker Native, Azure ML Studio Native | Scikit-Learn, XGboost, SPSS, Keras, Tensorflow,  Pytorch, Caffe,  or any other framework of your choice |
-| **Text Classification**       | spark mllib | Coming soon: Keras, Tensorflow, Pytorch, Caffe, and most others |
-| **Image Classification**      | Keras | Coming soon: Keras, Tensorflow, Pytorch, Caffe, and most others ||
+| **Text Classification**       | Spark mllib on WML | Coming soon: Keras, Tensorflow, Pytorch, Caffe, and most others |
+| **Image Classification**      | Keras on WML | Coming soon: Keras, Tensorflow, Pytorch, Caffe, and most others ||
 {: caption="Framework support details" caption-side="top"}
 
 <!---
