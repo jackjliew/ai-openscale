@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-12"
+lastupdated: "2018-12-17"
 
 ---
 
@@ -35,6 +35,9 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a Mic
     ![Select Azure ML service](images/connect-azure.png)
 
 1.  Enter your credentials:
+
+    See [How to: Use the portal to create an Azure AD application and service principal that can access resources ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal) for instructions about how to get your Microsoft Azure credentials.
+    {: note}
 
     ![Enter Azure ML service credentials](images/connect-azure-cred.png)
 
