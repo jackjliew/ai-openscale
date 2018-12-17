@@ -96,7 +96,6 @@ Table 1. Feature support details
 
 `**` New version of model only, no evaluation
 
-<!---
 ## Supported model fairness
 
 Table 1. Fairness support details
