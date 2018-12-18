@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-12-11"
+lastupdated: "2018-12-18"
 
 ---
 
@@ -237,7 +237,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
   Note the Data Mart ID is listed; this is your {{site.data.keyword.aios_short}} instance ID.
   {: note}
 
-  You may see a screen similar to the below - simply select the **Configure monitors** button to complete this set-up.
+  You may see a screen similar to the below. As you will be using a GUI method to score your data, simply select the **Configure monitors** button to complete this set-up.
 
   ![Select database](images/gs-config-send-scoring.png)
 
@@ -338,9 +338,11 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 - Use the slider to adjust the minimum sample size to 100, then click  **Next**. Review your choices, and then click **Save**.
 
+  ![Positive and negative values](images/fair-summary.png)
+
   **Note**: For purposes of this tutorial, the minimum sample size has been set to 100. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
 
-  You will see the below screen that provides a debiased socring endpoint. Simply select **Close** to continue.
+  You will see the below screen that provides a debiased scoring endpoint. As you will be using a GUI method score your data, simply select **Close** to continue.
 
   ![Debias API](images/gs-insight-debias-api.png)
 
@@ -458,7 +460,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Summary panel](images/gs-insight-summary-panel-2.png)
 
-- Finally, [re-run the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model.
+- Finally, in Watson Studio, [re-run the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model. This will re-train and re-score your model.
 
 ## Viewing results
 
