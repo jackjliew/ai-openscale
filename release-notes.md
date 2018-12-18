@@ -57,7 +57,7 @@ The following new features and changes to the service are available.
 
 - **AWS SageMaker**
 
-    - __*BlazingText algorithm is not supported name must be used*__: The AWS SageMaker BlazingText algorithm input payload format is not supported in the current release of {{site.data.keyword.aios_short}}.
+    - __*BlazingText algorithm is not supported*__: The AWS SageMaker BlazingText algorithm input payload format is not supported in the current release of {{site.data.keyword.aios_short}}.
 
 ## 17 September 2018
 {: #17September2018}
