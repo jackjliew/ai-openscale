@@ -31,6 +31,8 @@ The following new features and changes to the service are available.
 
         - __*Releases*__: {{site.data.keyword.aios_short}} is available as an IBM Cloud Standard (paid) plan, and on IBM Cloud Private for Data V1.2.
 
+          If you are using {{site.data.keyword.aios_short}} on IBM Cloud Private for Data V1.2, see the documentation, including installation instructions, here: [https://cloud.ibm.com/docs/services/ai-openscale-icp/install-icp.html#install ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/docs/services/ai-openscale-icp/install-icp.html#install)
+
           An internal "lite" database provides everything you need to begin using {{site.data.keyword.aios_short}}. See the [{{site.data.keyword.aios_short}} pricing plans ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/ai-openscale) for details.
 
           In addition to AI model deployments in Watson Machine Learning, {{site.data.keyword.aios_short}} supports model deployments in Microsoft Azure, Amazon SageMaker, and Custom environments.
