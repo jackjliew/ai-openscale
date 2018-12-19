@@ -506,4 +506,4 @@ Paste the transaction ID value you copied into the search box and press **Return
   ![View Transaction](images/view_transaction1.png)
 ## Next steps
 
-- See the [Working with monitored data](/docs/services/ai-openscale/insight-timechart.html) topic for more information.
+- See the [Working with monitored data](/docs/services/ai-openscale/insight-timechart.html) topic for more information about how to read and understand your deployment insights.
