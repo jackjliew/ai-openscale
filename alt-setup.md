@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-30"
+lastupdated: "2018-12-20"
 
 ---
 
@@ -99,7 +99,7 @@ From the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.
 
   - For information about interpreting the visualization of the data points at a specifc hour, see [Working with monitored data > Data visualization](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual).
 
-    ![Age details](images/setup03.png)
+    ![Age details](images/setup03-19dec.png)
 
 ### View explainability
 {: #explain}
