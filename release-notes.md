@@ -35,7 +35,7 @@ The following new features, changes, and known issues with the service are avail
 
 - __*Free "lite" database*__: A free "lite" managed database provides everything you need to begin using {{site.data.keyword.aios_short}}. See the [{{site.data.keyword.aios_short}} pricing plans ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/ai-openscale) for details.
 
-- __*Bias monitoring*__: Support for protected attributes of type `float` and `double`, bias detection on linear regression models, and bias remediation. And {{site.data.keyword.aios_short}} can automatically de-bias your AI model for you. See [Understanding fairness](/docs/services/ai-openscale/monitor-fairness.html#understand-fair) for more information.
+- __*Bias monitoring*__: Support for protected attributes of type `float` and `double`, and bias detection on linear regression models. And {{site.data.keyword.aios_short}} can automatically de-bias your AI model for you. See [Understanding fairness](/docs/services/ai-openscale/monitor-fairness.html#understand-fair) for more information.
 
 - __*Explainability*__: Support for regression models, Python functions, and complementary contrastive explanations. See [Monitoring explainability](/docs/services/ai-openscale/insight-timechart.html#insight-explain) for more information.
 
