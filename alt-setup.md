@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-20"
+lastupdated: "2018-12-21"
 
 ---
 
@@ -87,7 +87,7 @@ From the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.
 
    - For example, the following screen shows data for a specific date and time. The dates and times vary, depending on when you run the module.
 
-   - For information about interpreting the time series chart, see [Working with monitored data > Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale/insight-timechart.html#insight-time-chart).
+   - For information about interpreting the time series chart, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale/insight-timechart.html).
 
     ![Monitor data](images/setup02.png)
 
@@ -97,7 +97,7 @@ From the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.
 
   - The next section describes how to view the factors that contribute to bias.
 
-  - For information about interpreting the visualization of the data points at a specifc hour, see [Working with monitored data > Data visualization](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual).
+  - For information about interpreting the visualization of the data points at a specific hour, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual).
 
     ![Age details](images/setup03-19dec.png)
 
@@ -120,7 +120,7 @@ From the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.
 
   - The page shows how the model arrived at its conclusion, including how confident the model is, the factors that contribute to the confidence level, and the attributes that were fed to the model.
 
-  - For information about interpreting transaction explainability, see [Working with monitored data > Monitoring Explainability](/docs/services/ai-openscale/insight-timechart.html#insight-explain).
+  - For information about interpreting transaction explainability, see [Monitoring Explainability](/docs/services/ai-openscale/insight-explain.html).
 
     ![Explain a transaction](images/setup05.png)
 
@@ -129,5 +129,5 @@ From the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.
 
 - To learn about biases, see [Fairness](/docs/services/ai-openscale/monitor-fairness.html).
 - To learn about how well your model predicts outcomes, see [Accuracy](/docs/services/ai-openscale/monitor-accuracy.html).
-- To learn how underlying factors influence outcomes, see [Explainability](/docs/services/ai-openscale/monitor-explain.html).
-- To learn about interpreting charts, data, and transactions, see [Working with monitored data](/docs/services/ai-openscale/insight-timechart.html).
+- To learn about interpreting charts and data, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale/insight-timechart.html).
+- To learn how underlying factors influence outcomes, see [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).

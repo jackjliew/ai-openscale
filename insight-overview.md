@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-10"
+lastupdated: "2018-12-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-12-10"
 # Navigating the dashboard
 {: #insights}
 
-You can track all the deployments you are monitoring through the {{site.data.keyword.aios_short}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}}.
+You can track all the deployments you are monitoring through the {{site.data.keyword.aios_short}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}}. The dashboard consists of five tabs:
 
   ![Insight tabs](images/insight-tabs.png)
 
@@ -25,7 +25,7 @@ You can track all the deployments you are monitoring through the {{site.data.key
 ## Insights
 {: #insight-dash-tab}
 
-The Insights tab ( ![Insight dashboard](images/insight-dash-tab.png) ) provides a high-level view of your deployment monitoring.
+The **Insights** tab ( ![Insight dashboard](images/insight-dash-tab.png) ) provides a high-level view of your deployment monitoring.
 
   ![Insight dashboard](images/insight-dashboard.png)
 
@@ -40,12 +40,12 @@ Each tile provides a summary of monitoring activity for that deployment. Note th
 ### Next steps
 {: #next-insight}
 
-Select any of the individual deployment tiles to view more details about that deployment. See [Working with monitoring data](insight-timechart.html).
+Select any of the individual deployment tiles to view more details about that deployment. For more information, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale/insight-timechart.html) and [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
 
 ## Configuration
 {: #insight-config-tab}
 
-The Configuration tab ( ![Config tab](images/insight-config-tab.png) ) opens a Configuration Summary for the selected deployment.
+The **Configure** tab ( ![Config tab](images/insight-config-tab.png) ) opens a Configuration Summary for the selected deployment.
 
   ![Config summary](images/insight-config-summary.png)
 
@@ -54,12 +54,12 @@ From here, you can directly edit the configuration settings for your deployment 
 ## Transactions
 {: #insight-transact-tab}
 
-The Transactions tab ( ![Transactions tab](images/insight-transact-tab.png) ) lets you search a specific transaction ID to explain a particular deployment transaction. For more information, see [Monitoring Explainability](insight-timechart.html#insight-explain).
+The **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) lets you search a specific transaction ID to explain a particular deployment transaction. For more information, see [Monitoring explainability](insight-explain.html).
 
 ## AI Tools
 {: #insight-tools-tab}
 
-The AI Tools tab ( ![AI Tools tab](images/aitools.png) ) opens a dialog that provides a link to additional IBM AI tools options:
+The **AI Tools** tab ( ![AI Tools tab](images/aitools.png) ) opens a dialog that provides a link to additional IBM AI tools options:
 
 - *[Watson Studio lite plan](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp)*: Watson Studio provides you with the environment and tools to analyze and visualize data, to cleanse and shape data, to ingest streaming data, or to create, train, and deploy machine learning models. Click the "Sign up for the free Watson Studio Lite plan" link to get Watson Studio.
 

@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-12-13"
+lastupdated: "2018-12-28"
 
 ---
 
@@ -78,7 +78,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - [Create a Watson Studio instance](https://console.bluemix.net/catalog/services/watson-studio) if you do not already have one associated with your account:
 
   ![Watson Studio](images/watson_studio.png)
-  
+
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
 ### Provision a Machine Learning service
@@ -86,7 +86,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - [Provision a Watson Machine Learning instance](https://console.bluemix.net/catalog/services/machine-learning) if you do not already have one associated with your account:
 
   ![Machine Learning](images/machine_learning.png)
-  
+
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
 - Make note of the Machine Learning service credentials. In your machine learning instance, click on the **Service credentials** link on the left-hand side of the page. Name the credential and click **Add**. Then, from the list of credentials, click **View credential** and copy the credentials for later use.
@@ -96,7 +96,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - [Provision a Spark service](https://console.bluemix.net/catalog/services/apache-spark) if you do not already have one associated with your account:
 
   ![Apache Spark](images/spark.png)
-  
+
 - Assign your service a name, choose the Lite (free) plan, and click the **Create** button.
 
 - Make note of the service credentials for your Spark instance. Open your Spark instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
@@ -106,7 +106,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - [Provision an Object Storage service](https://console.bluemix.net/catalog/services/cloud-object-storage) if you do not already one associated with your account:
 
   ![Object Storage](images/object_storage.png)
-  
+
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
 ### Provision a paid PostgreSQL service
@@ -129,7 +129,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - [Provision a Db2 Warehouse service](https://console.bluemix.net/catalog/services/db2-warehouse) if you do not already have one associated with your account:
 
   ![Db2 Warehouse](images/db2_warehouse.png)
-  
+
 - Give your service a name, choose the Entry plan, and click the **Create** button.
 
 - Make note of the service credentials for your Db2 Warehouse instance. Open your existing (or newly-created) Db2 Warehouse instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
@@ -145,21 +145,21 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Once Db2 Warehouse has opened, click the **Menu** button and select **Load** from the dropdown:
 
   ![Load Menu](images/db2_load.png)
-  
+
 - Browse to the training data file, or drag and drop it into the appropriate area on the form. Click **Next**. Select a Schema from the list of load targets; this is usually in a format like `DASH12345`. Then click **New Table** on the right:
 
   ![New Table](images/new_table.png)
-  
+
 - Name your table CAR\_RENTAL\_TRAINING, and click the **Create** button:
 
   ![New Table Create](images/new_table_create.png)
-  
+
 - Click **Next** to preview the data. On the preview screen, set the **Separator** field to a semicolon (;) and make sure the **Header in first row** option is checked:
 
   ![Separator and Header](images/separator.png)
 
   **NOTE**: By default, the **Detect data types** option is selected.
-  
+
   ![Data type](images/data-type.png)
 
   When selected, for columns set with the `VARCHAR` data type, the maximum number of characters allowed for that column is automatically determined by the largest data point uploaded for that column. If you expect that future data for a table column may exceed the automatically-determined maximum, simply unselect the **Detect data types** option, and edit the maximum column value manually.
@@ -191,7 +191,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Open your Watson Studio project and select the **Settings** tab. In the **Associated Services** section, click the **Add service** dropdown and select **Watson**:
 
   ![Add Watson Service](images/add_watson_service.png)
-  
+
 - Click the **Add** link on the **Machine Learning** tile and select the **Existing** tab. Choose the service you created in the previous section from the **Existing Service Instance** dropdown and click **Select**.
 
 - From the project settings tab, select **Add service** again and choose **Spark** from the dropdown. From the **Existing** tab, choose the Spark service you created and click **Select**.
@@ -207,7 +207,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
   ![Add Connection](images/add_notebook.png)
-  
+
 - Select **From file**:
 
   ![New Notebook Form](images/new_notebook_name.png)
@@ -219,7 +219,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - In the **Select runtime** section, choose the Spark instance you created earlier from the dropdown list:
 
   ![Spark Runtime](images/spark_runtime.png)
-  
+
 - Click **Create Notebook**.
 
 ### Edit and run the `CARS4U Action Recommendation - model` Notebook
@@ -236,7 +236,7 @@ The `CARS4U Action Recommendation - model` notebook contains detailed instructio
 - Once you have entered your credentials, your notebook is ready to run. Click the **Kernel** menu item, and select **Restart and Run All** from the menu:
 
   ![Restart and Run](images/restart_and_run.png)
-  
+
   This will create, train and deploy the **CARS4U - Action Recommendation Model** in your project. You can verify that the model has deployed by selecting the **Deployments** tab of your Watson Studio project, and clicking the **CARS4U - Area and Action Model Deployment** link.
 
 ## Configure {{site.data.keyword.aios_short}}
@@ -246,7 +246,7 @@ The `CARS4U Action Recommendation - model` notebook contains detailed instructio
 - If you have not already provisioned an instance of {{site.data.keyword.aios_short}}, click the **Catalog** link from your {{site.data.keyword.Bluemix_notm}} account, and filter on "OpenScale". Select the tile for {{site.data.keyword.aios_short}}:
 
   ![AI OpenScale](images/openscale.png)
-  
+
 - Give your service a name, select the Lite plan, and click **Create**.
 
 ### Connect {{site.data.keyword.aios_short}} to your machine learning model
@@ -297,7 +297,7 @@ The `AI OpenScale and Watson ML engine` notebook contains detailed instructions 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
   ![Add Connection](images/add_notebook.png)
-  
+
 - Select **From file**:
 
   ![New Notebook Form](images/new_notebook_name.png)
@@ -309,7 +309,7 @@ The `AI OpenScale and Watson ML engine` notebook contains detailed instructions 
 - In the **Select runtime** section, choose the Spark instance you created earlier from the dropdown list:
 
   ![Spark Runtime](images/spark_runtime.png)
-  
+
 - Click **Create Notebook**.
 
 ### Edit and run the `AI OpenScale and Watson ML engine` Notebook
@@ -327,7 +327,7 @@ The `AI OpenScale and Watson ML engine` notebook contains detailed instructions 
 - Once you have entered your credentials, your notebook is ready to run. Click the **Kernel** menu item, and select **Restart and Run All** from the menu:
 
   ![Restart and Run](images/restart_and_run.png)
-  
+
   This will set up your data mart, enable payload logging, configure and score performance, accuracy, and fairness monitors, and provide those metrics to your {{site.data.keyword.aios_short}} instance.
 
 ## Viewing results
@@ -376,4 +376,4 @@ Paste the transaction ID value you copied into the search box and press **Return
 
 ## Next steps
 
-- See the [Working with monitored data](insight-timechart.html) topic for more information.
+- Learn more about [viewing and interpreting the data](/docs/services/ai-openscale/insight-timechart.html) and [monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
