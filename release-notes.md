@@ -37,13 +37,13 @@ The following new features, changes, and known issues with the service are avail
 
 - __*Bias monitoring*__: Support for protected attributes of type `float` and `double`, and bias detection on linear regression models. And {{site.data.keyword.aios_short}} can automatically de-bias your AI model for you. See [Understanding fairness](/docs/services/ai-openscale/monitor-fairness.html#understand-fair) for more information.
 
-- __*Explainability*__: Support for regression models, Python functions, and complementary contrastive explanations. See [Monitoring explainability](/docs/services/ai-openscale/insight-timechart.html#insight-explain) for more information.
+- __*Explainability*__: Support for regression models, Python functions, and complementary contrastive explanations. See [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html) for more information.
 
 - __*Data Store*__: Quality monitoring without reliance on Watson Machine Learning, and the ability to use your own database, whether it's Db2, Postgres or Db2 on Cloud.
 
 - __*NeuNetS (Beta)*__: The IBM Neural Network Synthesizer (NeuNetS) is available as a beta release (public cloud only). See the [NeuNetS documentation](https://dataplatform.cloud.ibm.com/ml/neunets) for more information.
 
-- __*Enhanced UI*__: The {{site.data.keyword.aios_short}} UI has been improved to include a runtime histogram distribution with toggle for training data, Model ID & Versioning, and a Transaction ID table from the histogram. See [Data visualization](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual) for more information.
+- __*Enhanced UI*__: The {{site.data.keyword.aios_short}} UI has been improved to include a runtime histogram distribution with toggle for training data, Model ID & Versioning, and a Transaction ID table from the histogram. See [Visualizing data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual) for more information.
 
 - __*Alternate tutorial set-up option*__: To automate the provisioning and configuration of the required IBM Cloud services, and to see an IBM AI OpenScale application, including sample data, you can install and run a Python module. See [Installing a Python module to set up AI OpenScale](https://cloud.ibm.com/docs/services/ai-openscale/alt-setup.html)
 

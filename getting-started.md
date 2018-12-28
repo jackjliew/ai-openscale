@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018
-lastupdated: "2018-12-18"
+lastupdated: "2018-12-28"
 
 ---
 
@@ -92,19 +92,20 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 **Important**: For best performance, it's recommended that the prerequisite services are created in the same region as {{site.data.keyword.aios_short}}. To view available locations for {{site.data.keyword.aios_short}}, see [Service availability ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources/services_region.html){: new_window}.
 
-1. Log in to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} with your {{site.data.keyword.ibmid}}.
-2. For each of the following services that you don't already have associated with your account, create an instance by clicking the link, giving the service a name, selecting the **Lite** (free) plan, and clicking the **Create** button:
-  - [Watson Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-studio){: new_window}
+1.  Log in to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} with your {{site.data.keyword.ibmid}}.
+1.  For each of the following services that you don't already have associated with your account, create an instance by clicking the link, giving the service a name, selecting the **Lite** (free) plan, and clicking the **Create** button:
 
-    ![Watson Studio](images/watson_studio.png)
+    - [Watson Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-studio){: new_window}
 
-  - [Watson Machine Learning ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window}
+      ![Watson Studio](images/watson_studio.png)
 
-    ![Machine Learning](images/machine_learning.png)
+    - [Watson Machine Learning ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window}
 
-  - [Object Storage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}
+      ![Machine Learning](images/machine_learning.png)
 
-    ![Object Storage](images/object_storage.png)
+    - [Object Storage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}
+
+      ![Object Storage](images/object_storage.png)
 
 <!---
 
@@ -223,9 +224,9 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Select deployed models](images/gs-set-deploy0.png)
 
-- Next, you need to choose a PostgreSQL database. You have two options: the free Lite plan database, or an existing or new database. For this tutorial, select the **Use the free Lite plan database** tile.
+- Next, you need to choose a database. You have two options: the free Lite plan database, or an existing or new database. The existing database can be a PostgreSQL database or an IBM Db2 database. For this tutorial, select the **Use the free Lite plan database** tile.
 
-    ![Select database](images/gs-set-lite-db.png)
+    ![Select database](images/gs-set-lite-db2.png)
 
   See more complete details about each of these options in the [Specify your database](/docs/services/ai-openscale/connect-db.html) topic.
   {: note}
@@ -485,6 +486,8 @@ Select a deployment by clicking the tile on the Insights page. The monitoring da
 
 Now, you can review the charts for the data you monitored. For this example, you can use the **Feature** menu to select either "BP" or "SEX", in order to see details about the monitored data.
 
+See [Visualizing data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual) for more information about how to read these charts.
+
   ![Insight overview](images/insight-review-charts.png)
 
 ### View explainability for a model transaction
@@ -493,7 +496,7 @@ Select the **View transactions** button from the charts for the data you monitor
 
   ![View transactions](images/view_transactions.png)
 
-  a list of transactions for the past hour is listed. Copy one of the transaction IDs.
+A list of transactions for the past hour is listed. Copy one of the transaction IDs.
 
   ![Transaction list](images/transaction_list.png)
 
@@ -504,6 +507,8 @@ Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph
 Paste the transaction ID value you copied into the search box and press **Return** on your keyboard. You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
 
   ![View Transaction](images/view_transaction1.png)
-## Next steps
 
-- See the [Working with monitored data](/docs/services/ai-openscale/insight-timechart.html) topic for more information about how to read and understand your deployment insights.
+## Next steps
+{: #next}
+
+- Learn more about [viewing and interpreting the data](/docs/services/ai-openscale/insight-timechart.html) and [monitoring explainability](/docs/services/ai-openscale/insight-explain.html).

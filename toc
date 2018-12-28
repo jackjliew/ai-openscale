@@ -33,6 +33,7 @@ AI OpenScale
     Viewing and editing monitor data
         insight-overview.md
         insight-timechart.md
+        insight-explain.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -47,7 +48,7 @@ AI OpenScale
 
     {: .navgroup id="help"}
     release-notes.md
-    
+
     {: .topicgroup}
     Developer community
         [StackOverflow](https://stackoverflow.com/questions/tagged/ai-openscale)
