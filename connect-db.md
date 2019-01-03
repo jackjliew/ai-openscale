@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-17"
+  years: 2018, 2019
+lastupdated: "2019-01-02"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-12-17"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Specify your database
+# Specifying a database
 {: #connect-db}
 
 Specify a database for your {{site.data.keyword.aios_short}} instance to use.
@@ -72,7 +72,7 @@ To configure monitors, {{site.data.keyword.aios_short}} requires you to send a s
 Models deployed in Watson Machine Learning are automatically scored by {{site.data.keyword.aios_short}}. If you only have models deployed in Watson Machine Learning, you will not see this screen.
 {: note:}
 
-Select a deployment, in this case "Fraud Detector", and then use the provided `cURL` or `Python` code snippets to log model deployment request and response data.
+Select a deployment, in this case "Fraud Detector", and then use the provided `cURL` or `Python` code snippets to log model deployment request and response data. See [Payload logging for non-Watson Machine Learning service instances](connect-ml.html) for more detail.
 
 The fields and values in the code snippets need to be substituted with your real values, as the ones provided are only examples.
 {: important}

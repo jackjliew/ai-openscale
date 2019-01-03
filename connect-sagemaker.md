@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-14"
+  years: 2018, 2019
+lastupdated: "2019-01-02"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-12-14"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Specify your Amazon SageMaker service
+# Specifying an Amazon SageMaker ML service instance
 {: #connect-sage}
 
 Your first step in the {{site.data.keyword.aios_short}} tool is to specify an Amazon SageMaker service instance. Your Amazon SageMaker service instance is where you store your AI models and deployments.
