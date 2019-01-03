@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-17"
+  years: 2018, 2019
+lastupdated: "2019-01-02"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-12-17"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Specify your Azure ML service
+# Specifying a Microsoft Azure ML service instance
 {: #connect-azure}
 
 Your first step in the {{site.data.keyword.aios_short}} tool is to specify a Microsoft Azure ML service instance. Your Azure ML service instance is where you store your AI models and deployments.

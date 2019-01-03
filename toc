@@ -19,9 +19,8 @@ AI OpenScale
         connect-azureml.md
         connect-sagemaker.md
         connect-other.md
-        connect-ml.md
-        connect-deploy.md
         connect-db.md
+        connect-ml.md
 
     {: .topicgroup}
     Working with monitors
