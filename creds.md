@@ -19,7 +19,7 @@ lastupdated: "2018-10-17"
 
 # Creating credentials
 
-To create credentials for {{site.data.keyword.aios_short}}, complete the following steps using the {{site.data.keyword.Bluemix_notm}} [command console](https://console.bluemix.net/docs/cli/index.html#overview):
+To create credentials for {{site.data.keyword.aios_short}}, complete the following steps using the {{site.data.keyword.Bluemix_notm}} [command console](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use):
 
 - Get your API key
 
