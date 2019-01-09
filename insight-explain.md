@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-21"
+  years: 2018, 2019
+lastupdated: "2019-01-09"
 
 ---
 
@@ -49,16 +49,16 @@ The feature *POLICY AGE* having a value of `< 1 year` had the maximum impact in 
 
 ![Explainability binary classification](images/insight-explain-binary.png)
 
-While the charts are useful in showing the most significant factors in determining the outcome of a transaction, classification models can also include advanced explanations, detailed in the `Minimum changes for an Approved outcome` and `Minimum factors supporting this outcome` sections.
+While the charts are useful in showing the most significant factors in determining the outcome of a transaction, classification models can also include advanced explanations, detailed in the `Minimum changes for Approved outcome` and `Minimum changes for this outcome` sections.
 
 Advanced explanations are not available for regression, image, and unstructured text models.
 {: note}
 
-The `Minimum changes for an Approved outcome` tells us that, if the values of the features were changed to the values listed in this section, then the prediction of the model will change.
+The `Minimum changes for Approved outcome` tells us that, if the values of the features were changed to the values listed in this section, then the prediction of the model will change.
 
-Likewise, the `Minimum factors supporting this outcome` tells us that, even if the values of the features were changed to those listed in this section, the prediction of the model would not have changed.
+Likewise, the `Minimum changes for this outcome` tells us that, even if the values of the features were changed to those listed in this section, the prediction of the model would not have changed.
 
-Thus, these two values tell us the behaviour of the model in the vicinity of the data point for which the explanation is being generated.
+Thus, these two values tell us the behavior of the model in the vicinity of the data point for which the explanation is being generated.
 
 ![Explainability binary classification](images/insight-explain-binary2.png)
 
