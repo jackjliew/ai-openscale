@@ -9,8 +9,8 @@ takeaways:
 - Understand how IBM Cloud services and Watson Studio technologies can provide a seamless, AI-driven customer experience
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-28"
+  years: 2018, 2019
+lastupdated: "2018-01-15"
 
 ---
 
@@ -327,7 +327,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   ![Gender Groups](images/bp_groups.png)
 
-  As with **SEX**, the model will be flagged as biased for **BP** if the drug prediction ratios for the monitored group differ from the ratios for the reference group. So if patients with normal blood pressure receive a drug at a different ratio than patients with low or high blood pressure, the model is biased.
+  As with **SEX**, the model will be flagged as biased for **BP** if the drug prediction ratios for the monitored group differ from the ratios for the reference group. So if patients with high blood pressure receive a drug at a different ratio than patients with low or normal blood pressure, the model is biased.
 
 - Set the threshold for **BP** at 90%, and click **Next**.
 
@@ -343,7 +343,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
   **Note**: For purposes of this tutorial, the minimum sample size has been set to 100. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
 
-  You will see the below screen that provides a debiased scoring endpoint. As you will be using a GUI method score your data, simply select **Close** to continue.
+  You will see the below screen that provides a debiased scoring endpoint. As you will be using a GUI method to score your data, simply select **Close** to continue.
 
   ![Debias API](images/gs-insight-debias-api.png)
 
