@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-09"
+lastupdated: "2019-01-15"
 
 ---
 
@@ -26,15 +26,15 @@ For each deployment, you can see explainability data for specific transactions.
 
 In the selected deployment tile, select the **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) in the navigator and enter a transaction ID.
 
-Whenever data is sent to the model for scoring, it sets a transaction ID in the HTTP header by setting the `X-Global-Transaction-Id` field. This transaction ID gets stored in the payload table. To find an explanation of the model behavior for a particular scoring, specify the transaction ID associated with that scoring request.
+Whenever data is sent to the model for scoring, it sets a transaction ID in the HTTP header by setting the `X-Global-Transaction-Id` field. This transaction ID gets stored in the payload table. To find an explanation of the model behavior for a particular scoring, specify the transaction ID associated with that scoring request. Please note that this behavior applies only to Watson Machine Learning (WML) transactions, and is not applicable for non-WML transactions.
 {: note}
 
 ### Finding a transaction ID in {{site.data.keyword.aios_short}}
 {: #find}
 
-1. From the time chart for your deployment, slide the marker across the chart and click the **View details** link to [visualize data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual).
-2. Click the **View transactions** button to [view the list of transaction IDs](/docs/services/ai-openscale/insight-timechart.html#transactions).
-3. Copy one of the transaction IDs from the list, paste it into the search box on the **Explain a transaction** page, and press Enter.
+1.  From the time chart for your deployment, slide the marker across the chart and click the **View details** link to [visualize data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual).
+1.  Click the **View transactions** button to [view the list of transaction IDs](/docs/services/ai-openscale/insight-timechart.html#transactions).
+1.  Copy one of the transaction IDs from the list, paste it into the search box on the **Explain a transaction** page, and press Enter.
 
    See the following sections for examples of explanations for different types of models.
 
