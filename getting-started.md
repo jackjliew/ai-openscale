@@ -345,8 +345,8 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 1.  On the next screen, use the slider to adjust the minimum sample size to 10, then click  **Next**.
 
-    For purposes of this tutorial, the minimum sample size has been set to 10. Normally, a larger sample size is recommended to ensure the sample size is not too small, which would skew the results.
-  {: note}
+    For this tutorial, the minimum sample size has been set to 10. Normally, a larger sample size is recommended to ensure the sample size is not too small, which would skew the results.
+    {: note}
 
 1.  For the maximum sample size, use 10000. Click **Next**.
 
