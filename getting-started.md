@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2018-01-15"
+lastupdated: "2019-01-16"
 
 ---
 
@@ -147,23 +147,23 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 ## Set up a Watson Studio project
 
-- Log in to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window} and begin by creating a new project. Select "Create a project":
+1. Log in to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window} and begin by creating a new project. Select **Create a project**.
 
   ![Watson Studio create project](images/studio_create_proj.png)
 
-- Select the **Standard** tile, to create the project:
+1. Select the **Standard** tile.
 
   ![Watson Studio select Standard project](images/studio_create_standard.png)
 
-- Give your project a name and description, make sure the Object Storage service you created in the previous step is selected in the **Storage** menu, and click **Create**.
+1. Give your project a name and description, make sure the Object Storage service you created in the previous step is selected in the **Storage** menu, and click **Create**.
 
 ### Associate your {{site.data.keyword.Bluemix_notm}} Services with your Watson project
 
-- Open your Watson Studio project and select the **Settings** tab. Scroll down to the **Associated Services** section, click the **Add service** menu and select **Watson**:
+1. Open your Watson Studio project and select the **Settings** tab. Scroll down to the **Associated Services** section, click the **Add service** menu and select **Watson**.
 
   ![Add Watson Service](images/add_watson_service.png)
 
-- Click the **Add** link on the **Machine Learning** tile and select the **Existing** tab. Choose the service you created in the previous section from the **Existing Service Instance** menu and click **Select**.
+1. Click the **Add** link on the **Machine Learning** tile and select the **Existing** tab. Choose the service you created in the previous section from the **Existing Service Instance** menu and click **Select**.
 
 <!---
 
@@ -173,197 +173,189 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 ### Add the `Best Heart Drug Selection` model
 
-- In Watson Studio, select the **Assets** tab of your project, scroll down to the **Watson Machine Learning Models** section, and click the **New Watson Machine Learning model** button.
+1. In Watson Studio, select the **Assets** tab of your project, scroll down to the **Watson Machine Learning Models** section, and click the **New Watson Machine Learning model** button.
 
-- Select the **From sample** button of the **Select model type** menu, and select the `Best Heart Drug Selection` model:
+2. From the **Select model type** section, select **From sample** and the `Best Heart Drug Selection` model, and then click **Create**.
 
   ![New Notebook Form](images/drug-sample-model.png)
 
-- Click **Create**.
-
 ### Deploy the `Best Heart Drug Selection` model
 
-- From the **Assets** tab in your Watson Studio project, scroll to the "Watson Machine Learning models" section, and click the `drug-selection` model you just created.
+1. From the **Assets** tab in your Watson Studio project, scroll to the "Watson Machine Learning models" section, and click the `drug-selection` model you just created.
 
-- Click the **Deployments** tab, then select **Add Deployment**.
+2. Click the **Deployments** tab, then select **Add Deployment**.
 
-- Enter `drug-test-deploy` as the name for your deployment, and select the **Web service** deployment type.
+3. Enter `drug-test-deploy` as the name for your deployment, and select the **Web service** deployment type.
 
-- Click **Save**.
+4. Click **Save**.
 
 ## Configure {{site.data.keyword.aios_short}}
 
 ### Provision {{site.data.keyword.aios_short}}
 {: hide-dashboard}
 
-- [Provision a new {{site.data.keyword.aios_short}} service instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/ai-openscale){: new_window}:
+1. [Provision a new {{site.data.keyword.aios_short}} service instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/ai-openscale){: new_window}:
 {: hide-dashboard}
 
   ![AI OpenScale](images/openscale.png)
   {: hide-dashboard}
 
-- Give your service a name, select the Lite plan, and click **Create**.
+1. Give your service a name, select the Lite plan, and click **Create**.
 {: hide-dashboard}
 
 ### Connect {{site.data.keyword.aios_short}} to your machine learning model
 
 Now that the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models.
 
-- Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The {{site.data.keyword.aios_full}} Getting Started page opens. Click **Begin**.
+1. Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The {{site.data.keyword.aios_full}} Getting Started page opens. Click **Begin**.
 
-- Select the Watson Machine Learning tile and click **Next**.
+1. Select the Watson Machine Learning tile and click **Next**.
 
-- For this tutorial, select your Watson Machine Learning instance from the menu and click **Next**.
+1. For this tutorial, select your Watson Machine Learning instance from the menu and click **Next**.
 
-  You also have the option to select a different Machine Learning location; see [Specify your Watson Machine Learning instance](/docs/services/ai-openscale/connect-wml.html) for addtional information.
+  You also have the option to select a different Machine Learning location. See [Specifying a Watson Machine Learning service instance](/docs/services/ai-openscale/connect-wml.html) for additional information.
   {: note}
 
   ![Set WML instance](images/gs-set-wml.png)
 
-- You are now able to select the deployed models that will be monitored by {{site.data.keyword.aios_short}}. Check the model you created and deployed and click **Next**:
+1. You are now able to select the deployed models that will be monitored by {{site.data.keyword.aios_short}}. Select the model you created and deployed and click **Next**.
 
   ![Select deployed models](images/gs-set-deploy0.png)
 
-- Next, you need to choose a database. You have two options: the free Lite plan database, or an existing or new database. The existing database can be a PostgreSQL database or an IBM Db2 database. For this tutorial, select the **Use the free Lite plan database** tile.
+1. Next, you need to choose a database. You have two options: the free Lite plan database, or an existing or new database. The existing database can be a PostgreSQL database or an IBM Db2 database. For this tutorial, select the **Use the free Lite plan database** tile.
+
+  See more complete details about each of these options in the [Specify your database](/docs/services/ai-openscale/connect-db.html) topic.
+  {: tip}
 
     ![Select database](images/gs-set-lite-db2.png)
 
-  See more complete details about each of these options in the [Specify your database](/docs/services/ai-openscale/connect-db.html) topic.
-  {: note}
+1. Review the summary data and click **Save**. Confirm and, when prompted, click the **Continue with Configuration** button.
 
-- Review the summary data and click **Save**. Confirm and, when prompted, click the **Continue with Configuration** button.
+  A Data Mart ID is also listed, which is the same thing as an {{site.data.keyword.aios_short}} instance ID.
+  {: tip}
 
   ![Select database](images/gs-setup-summary4.png)
 
-  Note the Data Mart ID is listed; this is your {{site.data.keyword.aios_short}} instance ID.
-  {: note}
-
-  You may see a screen similar to the below. As you will be using a GUI method to score your data, simply select the **Configure monitors** button to complete this set-up.
+1. Your screen might be similar to the following screen capture. Because you will use a GUI method to score your data, simply select the **Configure Monitors** button to complete this set-up.
 
   ![Select database](images/gs-config-send-scoring.png)
 
 ### Provide a set of sample data to your model
 
-- Before you can configure your monitors, you must generate at least one scoring request against your model, in order to generate payload logging that the monitors can consume.
+Before you can configure your monitors, you must generate at least one scoring request against your model in order to generate payload logging that the monitors can consume. In this section, you will provide sample data in the form of a JSON file to generate a scoring request.
 
-- To generate the scoring request, download the [drug_train_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data.json) file.
+1. Download the [drug_train_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data.json) file.
 
-- From the **Deployments** tab of your Watson Studio project, click the **drug-test-deploy** link, click the **Test** tab, and select the JSON input icon.
+1. From the **Deployments** tab of your Watson Studio project, click the **drug-test-deploy** link, click the **Test** tab, and select the JSON input icon.
 
   ![JSON test](images/json_test02.png)
 
-- Now, open the `drug_train_data.json` file you downloaded, and copy the contents to the JSON field in the **Test** tab. Click the **Predict** button to send and score training payloads to your model.
+1. Now, open the `drug_train_data.json` file you downloaded, and copy the contents to the JSON field in the **Test** tab. Click the **Predict** button to send and score training payloads to your model.
 
   ![JSON predict](images/json_test03.png)
 
 ### Preparing for monitoring
 
-1.  Now, in your {{site.data.keyword.aios_short}} instance, select your deployment, then select the *Prepare for monitoring* tile, and click **Begin**.
+1. Now, in the {{site.data.keyword.aios_short}} instance, select your deployment, select the **Prepare for monitoring** tile, and then click **Begin**.
 
     ![Prepare for monitoring](images/config-prep-monitor.png)
 
-1.  Now you will provide information about your model and training data; click **Next**.
+1. Next you will provide information about your model and training data. Click **Next**.
 
     ![Prepare explanation](images/config-what-monitor.png)
 
-1.  From the drop-down menu, select *Numeric/categorical* as the type of data your deployment analyzes, and click **Next**.
+1. From the **Data type** menu, select **Numeric/categorical** as the type of data your deployment analyzes, and click **Next**.
 
     ![Select input type](images/config-input-monitor.png)
 
-1.  For numeric or categorical data, you need to provide information about the training data for your model, in order to configure the monitors. Select **Manually configure monitors** to provide connection information to your training data
+1. For numeric or categorical data, you need to provide information about the training data for your model in order to configure the monitors. Select **Manually configure monitors** to provide connection information to your training data.
 
     ![Select config type](images/config-manual-monitor.png)
 
-1.  Select the [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy), and click **Next**:
+1. Select the **Multi-class classification** [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy), and click **Next**.
 
     ![Multi-class](images/multiclass.png)
 
-1.  The Db2 location information for the sample data is already pre-populated on this screen - simply select **Next** to continue.
+1. The location information for the sample data is pre-populated on the following screen. Select **Next** to continue.
 
     ![Specify Db2 location of training data page](images/gs-config-train-db2-monitor.png)
 
-1.  The Schema and Table are also pre-populated:
+1. The schema and table are also pre-populated. Click **Next** to proceed.
 
     ![Specify Db2 location of schema and training table](images/gs-fair-config-table-db2.png)
 
-    Click **Next** to proceed.
+1. Now, you must specify which column from the table contains prediction values (labels). In this case, it's the **DRUG** column, so select that one and click **Next**.
 
-1.  Now, you must specify which column from the table contains prediction values (labels). In this case, it's the **DRUG** column, so select that one and click **Next**.
-
-1.  Select the columns used to train the model these are the features that your model deployment expects in a request. All the data columns are inputs to the model. Select all inputs and click **Next**:
+1. Select the columns that are used to train the model. These columns are the features that your model deployment expects in a request. All the data columns are inputs to the model, so select all the columns and click **Next**.
 
     ![Explainability Inputs](images/explain_inputs1.png)
 
-1.  For categorical features, you must identify columns which now contain integers, but originally contained text values. Select **SEX**, **BP**, and **CHOLESTEROL** only; neither **AGE**, **NA**, nor **K** contained text. Review your input and click **Save**.
+1. For categorical features, you must identify columns which now contain integers, but originally contained text values. Select **SEX**, **BP**, and **CHOLESTEROL** only; neither **AGE**, **NA**, nor **K** contained text. Review your input and click **Save**.
 
-1.  Review your selection summary and click **Save** to continue.
+1. Review your selection summary and click **Save** to continue.
 
 ### Configure Fairness monitoring
 
-- Select  **Fairness** and click **Begin**.
+1. Select  **Fairness** and click **Begin**.
 
-- Read about fairness and click **Next**. For more information, see [Understanding Fairness](/docs/services/ai-openscale/monitor-fairness.html#understand-fair).
+1. Read about fairness and click **Next**. For more information, see [Understanding Fairness](/docs/services/ai-openscale/monitor-fairness.html#understand-fair).
 
-<!---
-- Specify the location of the model training data by selecting **Db2** from the **Location** menu and filling out the remaining fields with the Db2 credentials created earlier before clicking **Next**.
+1. You may now choose which features to monitor for fairness. In this example, we'll monitor the **SEX** and **BP** (*blood pressure*) features. Click the **SEX** and **BP** tiles, and click **Next**.
 
-- Once the database is connected, select your schema and the training data table in the menus, then click **Next**. Note that the data in the table should be in the format expected by the scoring endpoint, with an additional column containing the prediction values:
-
-  ![Schema Selection](images/schema_select.png)
-
---->
-
-- You may now choose which features to monitor for fairness. In this example, we'll monitor the **SEX** and **BP** (*blood pressure*) features. Click the **SEX** and **BP** tiles, and click **Next**.
-
-- {{site.data.keyword.aios_short}} works to detect bias against a monitored group in comparison to a reference group. For the **SEX** feature, add the value `M` (*male*) to the **Reference group**, and the value `F` (*female*) to the **Monitored group**, and click **Next**:
-
-  ![Gender Groups](images/gender_groups1.png)
+1. {{site.data.keyword.aios_short}} works to detect bias against a monitored group in comparison to a reference group. For the **SEX** feature, add the value `M` (*male*) to the **Reference group**, and the value `F` (*female*) to the **Monitored group**, and click **Next**.
 
   The model will be flagged as biased for **SEX** if the drug prediction ratios for the monitored group differ from the ratios for the reference group. So if the model predicts drug X for male patients 60% of the time, and for female patients 20% of the time, it is biased.
 
-- You may now assign a fairness threshold for **SEX**. You will see an alert on your operations dashboard if the Fairness rating falls below this threshold. Set the threshold at 90%, and click **Next**.
+  ![Gender Groups](images/gender_groups1.png)
 
-- For the **BP** feature, add the value `HIGH` to the **Reference group**, and the values `LOW` and `NORMAL` to the **Monitored group**, and click **Next**:
+1. You may now assign a fairness threshold for **SEX**. You will see an alert on your operations dashboard if the Fairness rating falls below this threshold. Set the threshold at 90%, and click **Next**.
 
-  ![Gender Groups](images/bp_groups.png)
+1. For the **BP** feature, add the value `HIGH` to the **Reference group**, and the values `LOW` and `NORMAL` to the **Monitored group**, and click **Next**.
 
   As with **SEX**, the model will be flagged as biased for **BP** if the drug prediction ratios for the monitored group differ from the ratios for the reference group. So if patients with high blood pressure receive a drug at a different ratio than patients with low or normal blood pressure, the model is biased.
 
-- Set the threshold for **BP** at 90%, and click **Next**.
+  ![Gender Groups](images/bp_groups.png)
 
-- You will now select Favorable and Unfavorable prediction values from the payload logging (PostgreSQL) database. {{site.data.keyword.aios_short}} automatically detects which column in the payload logging data contains the prediction values, and presents them in the "Values from training data" section.
+1. Set the threshold for **BP** at 90%, and click **Next**.
 
-  For this tutorial, those values are **drugA**, **drugB**, **drugC**, and **drugX**. Drag and drop **drugA** and **drugC** as favorable values, and the others as unfavorable values, to the form and click **Next**:
+1. Drag and drop values from the **Values from training data** field to the **Favorable values** and **Unfavorable values** fields. For this tutorial, the favorable values are **drugA** and **drugC**. The unfavorable values are **drugB** and **drugX**. Click **Next**.
+
+  {{site.data.keyword.aios_short}} automatically detects which column in the payload logging database (PostgreSQL) contains the prediction values, and presents them in the **Values from training data** field.
+  {: note}
 
   ![Positive and negative values](images/pos_and_neg2.png)
 
-- Use the slider to adjust the minimum sample size to 100, then click  **Next**. Review your choices, and then click **Save**.
+1. Use the slider to adjust the minimum sample size to 100, then click **Next**. Review your choices and click **Save**.
 
-  ![Positive and negative values](images/fair-summary.png)
+  For this tutorial, the minimum sample size is set to 100. Normally, a larger sample size is recommended to ensure that the sample size is not too small, which would skew the results.
+  {: note}
 
-  **Note**: For purposes of this tutorial, the minimum sample size has been set to 100. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
+  ![Summary of configuration](images/fair-summary.png)
 
-  You will see the below screen that provides a debiased scoring endpoint. As you will be using a GUI method to score your data, simply select **Close** to continue.
+  You will see the following screen that provides a debiased scoring endpoint. Because you will use a GUI method to score your data, simply select **Close** to continue.
 
   ![Debias API](images/gs-insight-debias-api.png)
 
 ### Configure accuracy monitoring
 
-- Select **Accuracy** and click **Begin**.
+1. Select **Accuracy** and click **Begin**.
 
-- Read about accuracy and click **Next**. For more information, see [Accuracy - How it works](/docs/services/ai-openscale/monitor-accuracy.html#how-it-works).
+1. Read about accuracy and click **Next**. For more information, see [Accuracy - How it works](/docs/services/ai-openscale/monitor-accuracy.html#how-it-works).
 
-- Set the accuracy threshold to 90% and click **Next**.
+1. Set the accuracy threshold to 90% and click **Next**.
 
-- On the next screen, use the slider to adjust the minimum sample size to 10, then click  **Next**.
+1. On the next screen, use the slider to adjust the minimum sample size to 10, then click  **Next**.
 
-  **Note**: For purposes of this tutorial, the minimum sample size has been set to 10. Normally, a larger sample size is recommended to ensure the sample size is not too small to skew results.
+  For purposes of this tutorial, the minimum sample size has been set to 10. Normally, a larger sample size is recommended to ensure the sample size is not too small, which would skew the results.
+  {: note}
 
-- For the maximum sample size, use 10000. Click **Next**.
+1. For the maximum sample size, use 10000. Click **Next**.
 
-- You can review your choices before clicking **Save** to finalize them.
+1. Review your choices and click **Save**.
 
-- Finally, you're presented with an optional button to **Add Feedback Data**, along with feedback logging code snippets. See [Configuring the Accuracy monitor](/docs/services/ai-openscale/monitor-accuracy.html#config-accuracy) for details. For now, select **Close** without pressing this button.
+1. Finally, you're presented with an option to add feedback data, which is covered in the next section. For now, close the window without clicking the **Add Feedback Data** button.
+
+  For more details, see [Configuring the Accuracy monitor](/docs/services/ai-openscale/monitor-accuracy.html#config-accuracy).
 
 <!---
 
@@ -435,43 +427,44 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 ## Provide a set of sample feedback data to your model
 
-- To enable monitoring for accuracy, you must retrain and redeploy your model with feedback data; no accuracy data will appear in the dashboard until this is done. You can generate these requests all at once by feeding sample feedback data to the model for scoring.
+To enable monitoring for accuracy, you must retrain and redeploy your model with feedback data. Accuracy data will not appear in the dashboard until that is done. You can generate the requests all at once by adding sample feedback data to the model for scoring. For this task, you'll download a CSV file that contains sample feedback data.
 
-- Download the [drug_feedback_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_feedback_data.csv) file.
+1. Download the [drug_feedback_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_feedback_data.csv) file.
 
-- In {{site.data.keyword.aios_short}}, click the **Insights** tab:
+1. In {{site.data.keyword.aios_short}}, click the **Insights** tab.
 
   ![Insights](images/insight-dash-tab.png)
 
-- Click the tile for your deployed model.
+1. Click the tile for your deployed model.
 
   ![Insights tab - no data](images/gs-insight-overview.png)
 
-- Then, click the icon to edit the deployment configuration:
+1. Then, click the edit icon to edit the deployment configuration.
 
   ![Edit icon - right side](images/gs-insight-edit-icon.png)
 
-- In the "Summary" side panel, select the **Add Feedback Data** button, and select the `drug_feedback_data.csv` file you downloaded. Set the delimiter to "Comma(,)". Click **OK** when complete.
+1. In the Summary side panel, click the **Add Feedback Data** button, and select the `drug_feedback_data.csv` file you downloaded. Select the **Comma (,)** delimiter, and then click **OK**.
+
+  File sizes are currently limited to 8 MB.
+  {: note}
 
   ![Accuracy delimiter](images/accuracy-delimit.png)
-
-  **Note**: File sizes are currently limited to 8 MB.
 
   Adding the CSV file retrains and provides feedback data to your model.
 
   ![Summary panel](images/gs-insight-summary-panel-2.png)
 
-- Finally, in Watson Studio, [re-run the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model. This will re-train and re-score your model.
+1. Finally, in Watson Studio, [rerun the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model. Rerunning the sample data set retrains and rescores your model.
 
 ## Viewing results
 
 ### View insights for your deployment
 
-Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Insights** tab:
+1. From the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Insights** tab.
 
   ![Insights](images/insight-dash-tab.png)
 
-The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the 90% threshold.
+1. View the Insights page to see an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the 90% threshold.
 
   Fairness metrics can take up to an hour to display.
   {: tip}
@@ -480,31 +473,33 @@ The Insights page provides an overview of metrics for your deployed models. You 
 
 ### View monitoring data for your deployment
 
-Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment will appear. Slide the marker across the chart to select data for the time frame during which you ran the sample data and sample feedback data. Then select the **View details** link.
+1. Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment is shown.
+2. Slide the marker across the chart to select data for the time frame during which you ran the sample data and sample feedback data. Then select the **View details** link.
 
   ![Monitor data](images/insight-monitor-data.png)
 
-Now, you can review the charts for the data you monitored. For this example, you can use the **Feature** menu to select either "BP" or "SEX", in order to see details about the monitored data.
+1. Next, review the charts for the data you monitored. For this example, use the **Feature** menu to select either `BP` or `SEX` in order to see details about the monitored data.
 
-See [Visualizing data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual) for more information about how to read these charts.
+  See [Visualizing data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual) for more information about how to read these charts.
+  {: tip}
 
   ![Insight overview](images/insight-review-charts.png)
 
 ### View explainability for a model transaction
 
-Select the **View transactions** button from the charts for the data you monitored.
+1. Select the **View transactions** button from the charts for the data you monitored.
 
   ![View transactions](images/view_transactions.png)
 
-A list of transactions for the past hour is listed. Copy one of the transaction IDs.
+1. A list of transactions for the past hour is shown. Copy one of the transaction IDs.
 
   ![Transaction list](images/transaction_list.png)
 
-Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Explainability** tab:
+1. Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Explainability** tab.
 
   ![Explainability](images/explainability.png)
 
-Paste the transaction ID value you copied into the search box and press **Return** on your keyboard. You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
+1. Paste the transaction ID value you copied into the search box and press **Return** on your keyboard. You see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the columns that were fed to the model.
 
   ![View Transaction](images/view_transaction1.png)
 
