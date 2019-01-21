@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-17"
+lastupdated: "2019-01-21"
 
 ---
 
@@ -253,7 +253,11 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 ### Preparing for monitoring
 
-1.  Now, in the {{site.data.keyword.aios_short}} instance, select your deployment, select the **Prepare for monitoring** tile, and then click **Begin**.
+1.  Now, in the {{site.data.keyword.aios_short}} instance, select your deployment and clcik **Begin**.
+
+    ![Select deployment](images/config-select-deploy2.png)
+
+1.  Select the **Prepare for monitoring** tile, and then click **Begin**.
 
     ![Prepare for monitoring](images/config-prep-monitor.png)
 
@@ -269,7 +273,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 
     ![Select config type](images/config-manual-monitor.png)
 
-1.  Select the **Multi-class classification** [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy), and click **Next**.
+1.  The algorithm type is important for monitoring your model metrics, such as Accuracy. Because there are multiple drug predictions that the model can make, select the **Multi-class classification** [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#understand-accuracy), and click **Next**.
 
     ![Multi-class](images/multiclass.png)
 
@@ -281,7 +285,12 @@ Before you can configure your monitors, you must generate at least one scoring r
 
     ![Specify Db2 location of schema and training table](images/gs-fair-config-table-db2.png)
 
-1.  Now, you must specify which column from the table contains prediction values (labels). In this case, it's the **DRUG** column, so select that one and click **Next**.
+1.  Now, you must specify the feature which contains the answer(s) the model will predict (in other words, in your database, which column from the table contains prediction values (labels)). In this case, the model will predict drug types, so select the **DRUG** column and click **Next**.
+
+    Your training database has the values that you provided in order to train your model.
+    {: note}
+
+    ![Predict Label Input](images/gs-config-label.png)
 
 1.  Select the columns used to train the model. This is the data that your model deployment expects in a request. All the data columns are inputs to the model. Select all inputs and click **Next**.
 
@@ -319,7 +328,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 1.  Drag and drop values from the **Values from training data** field to the **Favorable values** and **Unfavorable values** fields. For this tutorial, the favorable values are **drugA** and **drugC**. The unfavorable values are **drugB** and **drugX**. Click **Next**.
 
-    {{site.data.keyword.aios_short}} automatically detects which column in the payload logging database (PostgreSQL) contains the prediction values, and presents them in the **Values from training data** field.
+    {{site.data.keyword.aios_short}} automatically detects which column in the payload logging database contains the prediction values, and presents them in the **Values from training data** field. Note that while your training database has values that you provided to train your model, the payload logging database contains feedback data collected at model runtime, that you can then optionally use to retrain and redeploy your model.
     {: note}
 
     ![Positive and negative values](images/pos_and_neg2.png)
