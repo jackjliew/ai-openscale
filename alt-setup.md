@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-21"
+  years: 2018, 2019
+lastupdated: "2019-01-17"
 
 ---
 
@@ -38,7 +38,8 @@ To automate the provisioning and configuration of the required {{site.data.keywo
 
 2. [Install any release of Python 3 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.python.org/downloads/){: new_window}.
 
-   **Note**: Python 3 includes the required pip package management system.
+  Python 3 includes the required pip package management system.
+  {: note}
 
 3. Install the `ibm-ai-openscale-cli` package by running the following command:
 
@@ -46,6 +47,9 @@ To automate the provisioning and configuration of the required {{site.data.keywo
     pip install -U ibm-ai-openscale-cli
     ```
     {: codeblock}
+
+    If more than one version of pip is installed on your system, you might need to run `pip3` instead of `pip`, as in, `pip3 install -U ibm-ai-openscale-cli`.
+    {: tip}
 
 4. If you have an existing {{site.data.keyword.pm_short}} service instance, check the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps){: new_window} to ensure that the service is managed by {{site.data.keyword.iamshort}} (IAM), not Cloud Foundry. Services managed by IAM are listed in the **Services** section.
 
@@ -99,7 +103,7 @@ From the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.
 
   - For information about interpreting the visualization of the data points at a specific hour, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual).
 
-    ![Age details](images/setup03-19dec.png)
+    ![Age details](images/setup03-jan02.png)
 
 ### View explainability
 {: #explain}
