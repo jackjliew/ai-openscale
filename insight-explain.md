@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-01-21"
 
 ---
 
@@ -36,11 +36,14 @@ Whenever data is sent to the model for scoring, it sets a transaction ID in the 
 1.  Click the **View transactions** button to [view the list of transaction IDs](/docs/services/ai-openscale/insight-timechart.html#transactions).
 1.  Copy one of the transaction IDs from the list, paste it into the search box on the **Explain a transaction** page, and press Enter.
 
-   See the following sections for examples of explanations for different types of models.
+    The list of transaction IDs also has the option to simply click the **Explain** link in the Action column for any transaction ID, which will open that transaction in the Explainability tab.
+    {: note}
+
+  See the following sections for examples of explanations for different types of models.
 
   ![Explainability transaction ID](images/insight-explain-trans-id.png)
 
-## Catagorical model example
+## Categorical model example
 {: #class}
 
 This example of explainability is for a binary classification model that approves or denies insurance claims. You can see the factors that contributed positively or negatively to the final outcome of `DENIED` in this case.
