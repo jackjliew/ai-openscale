@@ -78,7 +78,7 @@ This option allows you to view the individual transactions that contributed to b
 
 ![View transactions](images/view_transactions.png)
 
-A list of transactions for the past hour is listed. Copy any of the transaction IDs to get details about that transaction in the Explainability tab. For more information, see [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
+A list of transactions where the deployment has acted in a biased manner is listed. Click the **Explain** link for any of the transaction IDs to get details about that transaction in the Explainability tab. For more information, see [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
 
 ![Transaction list](images/transaction_list.png)
 
