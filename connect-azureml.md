@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-02"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,16 +21,16 @@ lastupdated: "2019-01-02"
 Your first step in the {{site.data.keyword.aios_short}} tool is to specify a Microsoft Azure ML service instance. Your Azure ML service instance is where you store your AI models and deployments.
 {: shortdesc}
 
-## Connect your Azure ML service instance
+## Connect your Azure ML Studio service instance
 {: #config-azure}
 
-{{site.data.keyword.aios_short}} connects to AI models and deployments in a Azure ML service instance.
+{{site.data.keyword.aios_short}} connects to AI models and deployments in a Azure ML Studio service instance.
 
 1.  From the home page of the {{site.data.keyword.aios_short}} tool, click **Begin**.
 
     ![Home page](images/gs-config-start.png)
 
-1.  Select the **Microsoft Azure** tile and click **Next**.
+1.  Select the **Microsoft Azure ML Studio** tile and click **Next**.
 
     ![Select Azure ML service](images/connect-azure.png)
 
