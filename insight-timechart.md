@@ -80,7 +80,7 @@ This option allows you to view the individual transactions that contributed to b
 
 A list of transactions where the deployment has acted in a biased manner is listed. Click the **Explain** link for any of the transaction IDs to get details about that transaction in the Explainability tab. For more information, see [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
 
-![Transaction list](images/transaction_list.png)
+![Transaction list](images/transaction_list0.png)
 
 ## Production model and De-biased model
 {: #tabs}
