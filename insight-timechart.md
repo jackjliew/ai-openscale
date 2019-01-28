@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-21"
+  years: 2018, 2019
+lastupdated: "2019-01-28"
 
 ---
 
@@ -24,11 +24,15 @@ Monitoring data for individual deployments are displayed in a time series chart.
 ## Viewing data for a deployment
 {: #view}
 
-Select a deployment from the dashboard to see monitoring data for that deployment.
+Select a deployment from the dashboard to see monitoring data for that deployment. The top of the monitoring data chart displays information about the deployed model, including when the model was last evaluated for Fairness and Accuracy, and when it will be evaluated next.
 
 ![Time series chart](images/insight-time-chart.png)
 
-Move the marker across the chart to see statistics for an individual hour. In this example, the time selected is 1:00 PM CST on September 18, which reveals the following statistics:
+Because the algorithm checks are only run every hour, there are also buttons provided to allow you to check Fairness and Accuracy on-demand. If you have not provided enough payload records (Fairness) or feedback records (Accuracy), you will see the following message, for example:
+
+![Accuracy button](images/accuracy-button.png)
+
+Next, move the marker across the chart to see statistics for an individual hour. In this example, the time selected is 1:00 PM CST on September 18, which reveals the following statistics:
 
 ![Time series chart detail](images/insight-time-detail.png)
 
