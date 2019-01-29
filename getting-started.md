@@ -462,8 +462,6 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 
     ![Summary panel](images/gs-insight-summary-panel-2.png)
 
-1.  Finally, in Watson Studio, [rerun the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model. Rerunning the sample data set rescores your model.
-
 ## Viewing results
 
 ### View insights for your deployment
