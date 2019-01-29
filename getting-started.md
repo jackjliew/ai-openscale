@@ -435,7 +435,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 ## Provide a set of sample feedback data to your model
 
-To enable monitoring for accuracy, you must retrain and redeploy your model with feedback data. Accuracy data will not appear in the dashboard until that is done. You can generate the requests all at once by adding sample feedback data to the model for scoring. For this task, you'll download a CSV file that contains sample feedback data.
+To enable monitoring for accuracy, you must provide your model with feedback data. Accuracy data will not appear in the dashboard until that is done. You can generate the requests all at once by adding sample feedback data to the model for scoring. For this task, you'll download a CSV file that contains sample feedback data.
 
 1.  Download the [drug_feedback_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_feedback_data.csv) file.
 
@@ -458,11 +458,11 @@ To enable monitoring for accuracy, you must retrain and redeploy your model with
 
     ![Accuracy delimiter](images/accuracy-delimit.png)
 
-    Adding the CSV file retrains and provides feedback data to your model.
+    Adding the CSV file provides feedback data to your model.
 
     ![Summary panel](images/gs-insight-summary-panel-2.png)
 
-1.  Finally, in Watson Studio, [rerun the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model. Rerunning the sample data set retrains and rescores your model.
+1.  Finally, in Watson Studio, [rerun the sample data set](/docs/services/ai-openscale/getting-started.html#provide-a-set-of-sample-data-to-your-model) against the updated model. Rerunning the sample data set rescores your model.
 
 ## Viewing results
 
