@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-10-17"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -18,8 +18,29 @@ lastupdated: "2018-10-17"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Creating credentials
+{: #cred-create}
 
-To create credentials for {{site.data.keyword.aios_short}}, complete the following steps using the {{site.data.keyword.Bluemix_notm}} [command console](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use):
+In order to access the {{site.data.keyword.aios_short}} REST APIs, a Platform API key and data mart (service instance) ID are required. The Platform API key gives an individual user the ability to access resources in the {{site.data.keyword.Bluemix_notm}}.
+
+For enterprise accounts, an administrator can create the data mart, and then invite other users into the account, giving those users access to a specific {{site.data.keyword.aios_short}} data mart. A user can then create their own Platform API key, and can access the same {{site.data.keyword.aios_short}} data mart; there is no conflict or security risk.
+
+To create a Platform API key, complete the following steps:
+
+- Log into [https://console.bluemix.net](https://console.bluemix.net)
+
+- Select **Manage** --> **Security** --> **Platform API Keys**
+
+    ![Platform API Keys](images/cred-api-key.png)
+
+- Create and save a Platform API key.
+
+To find your data mart (or service instance) ID:
+
+- In the {{site.data.keyword.aios_short}} **Configuration --> Summary** page, the first entry is your Data Mart (service instance) ID.
+
+    ![Data Mart ID](images/data-mart-id.png)
+
+<!---
 
 - Get your API key
 
@@ -75,3 +96,5 @@ To create credentials for {{site.data.keyword.aios_short}}, complete the followi
     ```
 
     The `GUID` value is your {{site.data.keyword.aios_short}} instance ID.
+
+--->
