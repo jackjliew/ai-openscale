@@ -43,6 +43,15 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
 
 - The database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
 
+- The Lite (free) plan has the following monthly limits:
+
+    - Two deployed models monitored
+    - 10 transactions explained
+    - 40,000 payload records (cumulative)
+    - 40,000 feedback records (cumulative)
+
+- There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
+
 - There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
 
 - Currently, explanations cannot be generated for images which are greater than 1 MB in size.
