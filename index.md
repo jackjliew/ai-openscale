@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-14"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 
@@ -46,11 +46,9 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
 - The Lite (free) plan has the following monthly limits:
 
     - Two deployed models monitored
-    - 10 transactions explained
-    - 40,000 payload records (cumulative)
-    - 40,000 feedback records (cumulative)
-
-- There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
+    - 20 transactions explained
+    - 50,000 payload records (cumulative)
+    - 50,000 feedback records (cumulative)
 
 - There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
 
