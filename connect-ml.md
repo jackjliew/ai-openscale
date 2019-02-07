@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-02"
+lastupdated: "2019-02-04"
 
 ---
 
@@ -16,15 +16,15 @@ lastupdated: "2019-01-02"
 {:screen: .screen}
 
 # Payload logging for non-Watson Machine Learning service instances
-{: #connect-ml}
+{: #cml-connect}
 
 If your AI model is deployed in a machine learning engine other than Watson Machine Learning (WML), you must enable payload logging for the external machine learning engine with a Python client.
 {: shortdesc}
 
-See more complete information in the [{{site.data.keyword.aios_short}} Python client documentation](http://ai-openscale-python-client.mybluemix.net/), and in the sample {{site.data.keyword.aios_short}} Python client notebooks that are part of the [AI OpenScale tutorials](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md).
+See more complete information in the [{{site.data.keyword.aios_short}} Python client documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/){: new_window}, and in the sample {{site.data.keyword.aios_short}} Python client notebooks that are part of the [AI OpenScale tutorials ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window}.
 
 ## Before you begin
-{: #connect-prereq}
+{: #cml-prereq}
 
 You will need to have the training data of your model available in Db2 or Cloud Object Storage to monitor bias for your model. Explainability and accuracy is not supported for Python functions.
 
@@ -41,7 +41,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
 
     client = APIClient(service_credentials)
     ```
-  Credentials can be found by following the steps shown in the "[Creating credentials](creds.html)" topic.
+  Credentials can be found by following the steps shown in the "[Creating credentials](/docs/services/ai-openscale/creds.html)" topic.
 
 - Create a schema name in your PostgreSQL database
 
@@ -54,8 +54,10 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ## Working with the Custom machine learning engine
+{: #cml-cusconfig}
 
 ### Bind your Custom machine learning engine
+{: #cml-cusbind}
 
 - A non-WML engine is bound as Custom, meaning that this is just metadata; there is no direct integration with the non-WML service.
 
@@ -79,6 +81,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ![Generic ML binding](images/ml-generic-bind.png)
 
 ### Add Custom subscription
+{: #cml-cussub}
 
 - Add subscription
 
@@ -96,6 +99,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ### Enable payload logging
+{: #cml-cusenlog}
 
 - Enable payload logging in subscription
 
@@ -110,8 +114,40 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ### Scoring and payload logging
+{: #cml-cusscore}
 
 - Score your model, then convert the request and response to the form used by {{site.data.keyword.aios_short}}. For a full example, see the [IBM AI OpenScale & Custom ML engine notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb).
+
+<!---
+    ```python
+    import urllib.request
+    import json
+
+    data = {
+            {
+             "input1":
+             [
+                {
+                  <YOUR-JSON-DATA>
+                }
+             ],
+            },
+    }
+
+    body = str.encode(json.dumps(data))
+
+    url = '<YOUR-SERVICE-URL>'
+    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
+    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+    req = urllib.request.Request(url, body, headers)
+    response = urllib.request.urlopen(req)
+
+    result = response.read()
+    result = json.loads(result.decode())['Results']['output1'][0]
+    print(json.dumps(result, indent=2))
+    ```
+--->
 
 - Store the request and response in the payload logging table
 
@@ -159,8 +195,10 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ## Working with the Microsoft Azure machine learning engine
+{: #cml-azconfig}
 
 ### Bind your MS Azure ML engine
+{: #cml-azbind}
 
 - A non-WML engine is bound as Custom, meaning that this is just metadata; there is no direct integration with the non-WML service.
 
@@ -185,6 +223,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ![Azure ML binding](images/ml-azure-bind.png)
 
 ### Add MS Azure ML subscription
+{: #cml-azsub}
 
 - Add subscription
 
@@ -208,6 +247,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ### Enable payload logging
+{: #cml-azenlog}
 
 - Enable payload logging in subscription
 
@@ -222,8 +262,40 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ### Scoring and payload logging
+{: #cml-azscore}
 
-- Score your model, then convert the request and response to the form used by {{site.data.keyword.aios_short}}. For a full example, see the [Working with Azure Machine Learning Studio Engine notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb).
+- Score your model, then convert the request and response to the form used by {{site.data.keyword.aios_short}}. For a full example, see the [Working with Azure Machine Learning Studio Engine notebook ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}.
+
+<!---
+    ```python
+    import urllib.request
+    import json
+
+    data = {
+            {
+             "input1":
+             [
+                {
+                  <YOUR-JSON-DATA>
+                }
+             ],
+            },
+    }
+
+    body = str.encode(json.dumps(data))
+
+    url = '<YOUR-SERVICE-URL>'
+    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
+    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+    req = urllib.request.Request(url, body, headers)
+    response = urllib.request.urlopen(req)
+
+    result = response.read()
+    result = json.loads(result.decode())['Results']['output1'][0]
+    print(json.dumps(result, indent=2))
+    ```
+--->
 
 - Store the request and response in the payload logging table
 
@@ -284,8 +356,10 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ## Working with the Amazon SageMaker machine learning engine
+{: #cml-smconfig}
 
 ### Bind your AWS SageMaker ML engine
+{: #cml-smbind}
 
 - A non-WML engine is bound as Custom, meaning that this is just metadata; there is no direct integration with the non-WML service.
 
@@ -309,6 +383,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ![SageMaker ML binding](images/ml-sagemaker-bind.png)
 
 ### Add Amazon SageMaker ML subscription
+{: #cml-smsub}
 
 - Add subscription
 
@@ -332,6 +407,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ### Enable payload logging
+{: #cml-smenlog}
 
 - Enable payload logging in subscription
 
@@ -346,8 +422,40 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ### Scoring and payload logging
+{: #cml-smscore}
 
-- Score your model, then convert the request and response to the form used by {{site.data.keyword.aios_short}}. For a full example, see the [Working with SageMaker Machine Learning Engine notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb).
+- Score your model, then convert the request and response to the form used by {{site.data.keyword.aios_short}}. For a full example, see the [Working with SageMaker Machine Learning Engine notebook ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}.
+
+<!---
+    ```python
+    import urllib.request
+    import json
+
+    data = {
+            {
+             "input1":
+             [
+                {
+                  <YOUR-JSON-DATA>
+                }
+             ],
+            },
+    }
+
+    body = str.encode(json.dumps(data))
+
+    url = '<YOUR-SERVICE-URL>'
+    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
+    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+    req = urllib.request.Request(url, body, headers)
+    response = urllib.request.urlopen(req)
+
+    result = response.read()
+    result = json.loads(result.decode())['Results']['output1'][0]
+    print(json.dumps(result, indent=2))
+    ```
+--->
 
 - Store the request and response in the payload logging table
 
@@ -411,8 +519,8 @@ You will need to have the training data of your model available in Db2 or Cloud 
     ```
 
 ## Next steps
-{: #connect-next}
+{: #cml-next}
 
-- To continue with the {{site.data.keyword.aios_short}} client, see the "[specify your database](connect-db.html)" topic.
+- To continue with the {{site.data.keyword.aios_short}} client, see the "[specify your database](/docs/services/ai-openscale/connect-db.html)" topic.
 
-- To continue with the Python command library, refer to the [Python client documentation](http://ai-openscale-python-client.mybluemix.net/).
+- To continue with the Python command library, refer to the [Python client documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/){: new_window}.

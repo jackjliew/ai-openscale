@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-28"
+lastupdated: "2019-02-04"
 
 ---
 
@@ -16,13 +16,13 @@ lastupdated: "2019-01-28"
 {:screen: .screen}
 
 # Monitoring Fairness, Average Requests per Minute, and Accuracy
-{: #insight-time-chart}
+{: #it-ov}
 
 Monitoring data for individual deployments are displayed in a time series chart. The chart tracks Fairness, Average Requests per Minute, and Accuracy over the last seven days.
 {: shortdesc}
 
 ## Viewing data for a deployment
-{: #view}
+{: #it-vdep}
 
 Select a deployment from the dashboard to see monitoring data for that deployment. The top of the monitoring data chart displays information about the deployed model, including when the model was last evaluated for Fairness and Accuracy, and when it will be evaluated next.
 
@@ -41,7 +41,7 @@ Next, move the marker across the chart to see statistics for an individual hour.
 - ***Avg. Reqs/Min***: On average, 300 records were processed per minute between 1:00 and 2:00 PM CST. The throughput is computed every minute, and its average value over the course of the hour is reported in the chart.
 
 ## Visualizing data for a specific hour
-{: #insight-data-visual}
+{: #it-vdet}
 
 To see details behind a particular Fairness statistic, click the **View details** link for the selected hour.
 
@@ -52,7 +52,7 @@ Note the three filters at the top of the page (Feature, Date, and Hour) that let
 ![Time series chart](images/insight-data-detail.png)
 
 ### Interpreting the chart
-{: #interpret}
+{: #it-intp}
 
 The chart shows multiple things:
 
@@ -69,14 +69,14 @@ The chart shows multiple things:
 - Another important thing that the chart shows is the name of the table containing the data which has been identified for manual labeling. Whenever the algorithm detects bias in a model, it also identifies the data points which can be sent for manual labeling by humans. This manually-labeled data can then be used along with the original training data to retrain the model. This retrained model is likely to not have the bias. The manual labeling table is present in the database associated with the {{site.data.keyword.aios_short}} instance.
 
 ## Runtime and Training Data
-{: #switch}
+{: #it-rtsw}
 
 The Runtime data / Training data switch lets you toggle the differences between your trained model and the data collected at runtime that is triggering a bias warning.
 
 ![Runtime Training toggle](images/runtime_train_data.png)
 
 ## View transactions
-{: #transactions}
+{: #it-tra}
 
 This option allows you to view the individual transactions that contributed to bias when you click the **View transactions** button.
 
@@ -87,9 +87,9 @@ A list of transactions where the deployment has acted in a biased manner is list
 ![Transaction list](images/transaction_list0.png)
 
 ## Production model and De-biased model
-{: #tabs}
+{: #it-prdb}
 
-You can use these two tabs to toggle between your production model and a de-biased model created by {{site.data.keyword.aios_short}}.
+You can use these two tabs to toggle between your production model and a de-biased model created by {{site.data.keyword.aios_short}}. See [Understanding how de-biasing works](/docs/services/ai-openscale/monitor-fairness.html#mf-debias) for more details.
 
 ![Runtime Training toggle](images/bias-debias.png)
 
@@ -98,6 +98,7 @@ Selecting the **De-biased model** tab shows you the changes in the de-biased mod
 ![Runtime Training toggle](images/insight-data-detail2.png)
 
 ### De-biasing options
+{: #it-dbo}
 
 - *Passive de-biasing* - When {{site.data.keyword.aios_short}} does bias checking, it also does a de-biasing of the data, by analyzing the behavior of the model, and identifying the data where the model is acting in a biased manner.
 

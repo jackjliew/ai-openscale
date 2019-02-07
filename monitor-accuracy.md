@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-05"
+  years: 2018, 2019
+lastupdated: "2019-02-05"
 
 ---
 
@@ -16,23 +16,24 @@ lastupdated: "2018-12-05"
 {:screen: .screen}
 
 # Accuracy
-{: #monitor-accuracy}
+{: #acc-monitor}
 
 Accuracy lets you know how well your model predicts outcomes.
 {: shortdesc}
 
 ## Understanding Accuracy
-{: #understand-accuracy}
+{: #acc-understand}
 
 Accuracy can mean different things depending on the type of the algorithm:
 
-- *Multi-class classification*: Accuracy measures the number of times any class was predicted correctly, normalized by the number of data points. For more details, see [Multi-class classification](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#multiclass-classification) in the Apache Spark documentation.
+- *Multi-class classification*: Accuracy measures the number of times any class was predicted correctly, normalized by the number of data points. For more details, see [Multi-class classification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#multiclass-classification){: new_window} in the Apache Spark documentation.
 
-- *Binary classification*: For a binary classification algorithm, accuracy is measured as the area under an ROC curve. See [Binary classification](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#binary-classification) in the Apache Spark documentation for more details.
+- *Binary classification*: For a binary classification algorithm, accuracy is measured as the area under an ROC curve. See [Binary classification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#binary-classification){: new_window} in the Apache Spark documentation for more details.
 
-- *Regression*: Regression algorithms are measured using the Coefficient of Determination, or R2. For more details, see [Regression model evaluation](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#regression-model-evaluation) in the Apache Spark documentation.
+- *Regression*: Regression algorithms are measured using the Coefficient of Determination, or R2. For more details, see [Regression model evaluation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#regression-model-evaluation){: new_window} in the Apache Spark documentation.
 
 ### How it works
+{: #acc-works}
 
 You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
 
@@ -42,10 +43,10 @@ You can create a performance monitoring system for your predictive models by cre
 - `training_data_reference` - must be defined as a part of the stored model's metadata
 - `training_definition_url` - must be defined as a part of the stored model's metadata
 
-Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points directly to provide feedback data and kick off evaluation activities. For more information, see the [WML documentation](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/ml-continuous-learning.html?audience=wdp&context=wdp).
+Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-ml-api.mybluemix.net/){: new_window} end-points directly to provide feedback data and kick off evaluation activities. For more information, see the [WML documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/ml-continuous-learning.html?audience=wdp&context=wdp){: new_window}.
 
 ## Configuring the Accuracy monitor
-{: #config-accuracy}
+{: #acc-config}
 
 1.  From the *What is Accuracy?* page, click **Next** to start the configuration process.
 
@@ -72,13 +73,9 @@ Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points di
 
     Click **Next** to continue.
 
-1.  Now, set a minimum sample size, to prevent measuring Accuracy until a minimum number of records are available in the evaluation dataset. This ensures the sample size is not too small to skew results.
+1.  Now, set minimum and maximum sample sizes. Minimum size prevents measuring Accuracy until a minimum number of records are available in the evaluation dataset; this ensures the sample size is not too small to skew results. The maximum sample size helps better manage the time and effort it takes to evaluate the dataset; only the most recent records will be evaluated if this size is exceeded.
 
      ![Configure sample size](images/accuracy-config-sample.png)
-
-1.  Finally, set a maximum sample size, to better manage the time and effort it takes to evaluate the dataset. Only the most recent records will be evaluated if this size is exceeded.
-
-     ![Configure max sample size](images/accuracy-config-sample-max.png)
 
 1.  Click the **Next** button.
 
@@ -88,7 +85,7 @@ Use the available [REST API](https://watson-ml-api.mybluemix.net/) end-points di
 
 You are now presented with the option to directly provide feedback data to your model, to evaluate for accuracy.
 
-  ![Send feedback data](images/accuracy-send-feedback.png)
+  ![Send feedback data](images/accuracy-send-feedback0.png)
 
 Select the *Add Feedback Data* button to upload a CSV-formatted data file; set the delimiter to match your data.
 
@@ -105,6 +102,6 @@ The fields and values in the code snippets need to be substituted with your real
 You can also choose **Exit** to skip this optional step; you will still be able to upload a CSV file for evaluation at a later time.
 
 ### Next steps
-{: #accuracy-next}
+{: #acc-next}
 
 From the *Configure monitors* page, you can select another monitoring category.

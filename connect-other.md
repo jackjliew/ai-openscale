@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-02"
+lastupdated: "2019-02-04"
 
 ---
 
@@ -16,35 +16,33 @@ lastupdated: "2019-01-02"
 {:screen: .screen}
 
 # Specifying a Custom ML service instance
-{: #connect-other}
+{: #co-connect}
 
 Your first step in the {{site.data.keyword.aios_short}} tool is to specify a service instance. Your service instance is where you store your AI models and deployments.
 {: shortdesc}
 
 ## Connect your Custom service instance
-{: #config-other}
+{: #co-config}
 
 {{site.data.keyword.aios_short}} connects to AI models and deployments in a service instance.
-
-### Steps to configure
 
 1.  From the home page of the {{site.data.keyword.aios_short}} tool, click **Begin**.
 
     ![Home page](images/gs-config-start.png)
 
-1.  Select the **Custom** tile and click **Next**.
+2.  Select the **Custom** tile and click **Next**.
 
     ![Select custom](images/connect-custom.png)
 
-1.  Connect to deployments by selecting one of the options:
+3.  Connect to deployments by selecting one of the options:
 
     ![Select custom](images/connect-custom-deploy.png)
 
-1.  Enter your credentials:
+4.  Enter your credentials:
 
     ![Enter service credentials](images/connect-custom-cred.png)
 
-1.  Click **Next**.
+5.  Click **Next**.
 
     - If you selected the "Enter individual scoring endpoints" tile, you must provide a deployment name and endpoint:
 
@@ -62,14 +60,14 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a ser
 
       ![Enter service credentials](images/connect-custom-apiendpoint2.png)
 
-1.  Review your selected deployments.
+6.  Review your selected deployments.
 
     ![Enter service credentials](images/connect-custom-deploy2.png)
 
-1.  Click **Next**.
+7.  Click **Next**.
 
 ### How it works
-{: #custom-works}
+{: #co-works}
 
 This image shows the Custom environment support:
 
@@ -77,15 +75,15 @@ This image shows the Custom environment support:
 
 You can also reference the following links:
 
-[AIOS payload logging API](https://console.bluemix.net/apidocs/ai-openscale#publish-scoring-payload)
+[AIOS payload logging API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/ai-openscale#publish-scoring-payload){: new_window}
 
-[Custom deployment API](https://aiopenscale-custom-deployement-spec.mybluemix.net/)
+[Custom deployment API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
 
-[Python client binding SDK](http://ai-openscale-python-client.mybluemix.net/#bindings)
+[Python client binding SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
 
-[AIOS configuration UI - sample code](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+[AIOS configuration UI - sample code ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
 
-[AIOS Python SDK](https://pypi.org/project/ibm-ai-openscale/)
+[AIOS Python SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
 
 - **Input criteria for model to support monitors**
 
@@ -114,11 +112,11 @@ You can also reference the following links:
   ```
 
   In this example, `“age”` could be a field someone is evaluating for fairness.
-  
+
   If the input is a tensor/matrix, which is transformed from the input feature space (which is often the case in deep learning from text or images), that model cannot be handled by the {{site.data.keyword.aios_short}} platform in the current release. By extension, deep learning models with text or image inputs cannot be handled for bias detection and mitigation.
-  
+
   Additionally, training data should be loaded to support Explainability.
-  
+
   For explainability on text, the full text should be one of the features. Explainability on images for a Custom model is not supported in the current release.
   {: note}
 
@@ -165,10 +163,10 @@ You can also reference the following links:
   ```
 
   In this example, `"personal”` and `“camping”` are the possible classes, and the scores in each scoring output are assigned to both classes. If the prediction probabilities are missing, bias detection will work, but auto-debias will not.
-  
+
   The above scoring output should be accessible from a live scoring endpoint which {{site.data.keyword.aios_short}} could call over REST. For AzureML, SageMaker, and WML, {{site.data.keyword.aios_short}} directly connects to the native scoring endpoints, (so you don’t have to worry about implementing the scoring spec)
 
 ### Next steps
-{: #payload-logging}
+{: #co-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [specify your database](connect-db.html).
+{{site.data.keyword.aios_short}} is now ready for you to [specify your database](/docs/services/ai-openscale/connect-db.html).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-04"
 
 ---
 
@@ -26,7 +26,7 @@ For enterprise accounts, an administrator can create the data mart, and then inv
 
 To create a Platform API key, complete the following steps:
 
-- Log into [https://console.bluemix.net](https://console.bluemix.net)
+- Log into [https://console.bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window}.
 
 - Select **Manage** --> **Security** --> **Platform API Keys**
 
