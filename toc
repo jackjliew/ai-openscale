@@ -1,8 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ai-openscale" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
-AI OpenScale
+{: .toc subcollection="openscale" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
+Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md

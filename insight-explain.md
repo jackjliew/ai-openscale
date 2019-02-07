@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-21"
+lastupdated: "2019-02-04"
 
 ---
 
@@ -16,13 +16,13 @@ lastupdated: "2019-01-21"
 {:screen: .screen}
 
 # Monitoring explainability
-{: #insight-explain}
+{: #ie-ov}
 
 For each deployment, you can see explainability data for specific transactions.
 {: shortdesc}
 
 ## Explaining transactions
-{: #view}
+{: #ie-view}
 
 In the selected deployment tile, select the **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) in the navigator and enter a transaction ID.
 
@@ -30,10 +30,10 @@ Whenever data is sent to the model for scoring, it sets a transaction ID in the 
 {: note}
 
 ### Finding a transaction ID in {{site.data.keyword.aios_short}}
-{: #find}
+{: #ie-find}
 
-1.  From the time chart for your deployment, slide the marker across the chart and click the **View details** link to [visualize data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual).
-1.  Click the **View transactions** button to [view the list of transaction IDs](/docs/services/ai-openscale/insight-timechart.html#transactions).
+1.  From the time chart for your deployment, slide the marker across the chart and click the **View details** link to [visualize data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#it-vdet).
+1.  Click the **View transactions** button to [view the list of transaction IDs](/docs/services/ai-openscale/insight-timechart.html#it-tra).
 1.  Copy one of the transaction IDs from the list, paste it into the search box on the **Explain a transaction** page, and press Enter.
 
     The list of transaction IDs also has the option to simply click the **Explain** link in the Action column for any transaction ID, which will open that transaction in the Explainability tab.
@@ -44,7 +44,7 @@ Whenever data is sent to the model for scoring, it sets a transaction ID in the 
   ![Explainability transaction ID](images/insight-explain-trans-id.png)
 
 ## Categorical model example
-{: #class}
+{: #ie-class}
 
 This example of explainability is for a binary classification model that approves or denies insurance claims. You can see the factors that contributed positively or negatively to the final outcome of `DENIED` in this case.
 
@@ -66,7 +66,7 @@ Thus, these two values tell us the behavior of the model in the vicinity of the 
 ![Explainability binary classification](images/insight-explain-binary2.png)
 
 ## Image model example
-{: #image}
+{: #ie-image}
 
 For an image classification model example of explainability, you can see which parts of an image contributed positively to the predicted outcome and which contributed negatively. In the below example, the image on the right show the parts which impacted positively to the prediction and the image on the left shows the parts of images that had a negative impact on the outcome.
 
@@ -76,7 +76,7 @@ Currently, explanations cannot be generated for images which are greater than 1 
 ![Explainability image classification](images/insight-explain-image.png)
 
 ## Unstructured text model example
-{: #unstruct}
+{: #ie-unstruct}
 
 Finally, this example of explainability shows a classification model that evaluates unstructured text. The explanation shows the keywords that had a positive as well as a negative impact on the model prediction. We also show the position of the identified keywords in the original text which was fed as input to the model.
 

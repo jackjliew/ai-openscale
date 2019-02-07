@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-21"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-12-21"
 {:screen: .screen}
 
 # Navigating the dashboard
-{: #insights}
+{: #io-ov}
 
 You can track all the deployments you are monitoring through the {{site.data.keyword.aios_short}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}}. The dashboard consists of five tabs:
 
@@ -23,7 +23,7 @@ You can track all the deployments you are monitoring through the {{site.data.key
 {: shortdesc}
 
 ## Insights
-{: #insight-dash-tab}
+{: #io-ins}
 
 The **Insights** tab ( ![Insight dashboard](images/insight-dash-tab.png) ) provides a high-level view of your deployment monitoring.
 
@@ -38,12 +38,12 @@ The **Insights** tab ( ![Insight dashboard](images/insight-dash-tab.png) ) provi
 Each tile provides a summary of monitoring activity for that deployment. Note that the `Call Center Routing` deployment tile shows no issues, indicating a fairly stable, accurate model.
 
 ### Next steps
-{: #next-insight}
+{: #io-next}
 
 Select any of the individual deployment tiles to view more details about that deployment. For more information, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale/insight-timechart.html) and [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
 
 ## Configuration
-{: #insight-config-tab}
+{: #io-conf}
 
 The **Configure** tab ( ![Config tab](images/insight-config-tab.png) ) opens a Configuration Summary for the selected deployment.
 
@@ -52,22 +52,22 @@ The **Configure** tab ( ![Config tab](images/insight-config-tab.png) ) opens a C
 From here, you can directly edit the configuration settings for your deployment monitor.
 
 ## Transactions
-{: #insight-transact-tab}
+{: #io-tran}
 
-The **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) lets you search a specific transaction ID to explain a particular deployment transaction. For more information, see [Monitoring explainability](insight-explain.html).
+The **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) lets you search a specific transaction ID to explain a particular deployment transaction. For more information, see [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
 
 ## AI Tools
-{: #insight-tools-tab}
+{: #io-too}
 
 The **AI Tools** tab ( ![AI Tools tab](images/aitools.png) ) opens a dialog that provides a link to additional IBM AI tools options:
 
-- *[Watson Studio lite plan](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp)*: Watson Studio provides you with the environment and tools to analyze and visualize data, to cleanse and shape data, to ingest streaming data, or to create, train, and deploy machine learning models. Click the "Sign up for the free Watson Studio Lite plan" link to get Watson Studio.
+- *[Watson Studio lite plan ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*: Watson Studio provides you with the environment and tools to analyze and visualize data, to cleanse and shape data, to ingest streaming data, or to create, train, and deploy machine learning models. Click the "Sign up for the free Watson Studio Lite plan" link to get Watson Studio.
 
-- *[NeuNetS](https://dataplatform.cloud.ibm.com/ml/neunets)* (*Beta*): The Neural Network Synthesizer, or "NeuNetS", currently in beta release, allows you to synthesize AI models using {{site.data.keyword.aios_short}} technology in Watson Studio. Click the "Synthesize a model" button to work with NeuNetS.
+- *[NeuNetS ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window}* (*Beta*): The Neural Network Synthesizer, or "NeuNetS", currently in beta release, allows you to synthesize AI models using {{site.data.keyword.aios_short}} technology in Watson Studio. Click the "Synthesize a model" button to work with NeuNetS.
 
   ![NeuNetS dialog](images/neunets-dialog.png)
 
 ## Help tab
-{: #insight-transact-tab}
+{: #io-help}
 
 The Help tab ( ![Transactions tab](images/insight-help-tab.png) ) provides additional information to assist you in using {{site.data.keyword.aios_short}}.

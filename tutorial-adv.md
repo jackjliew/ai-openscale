@@ -9,8 +9,8 @@ takeaways:
 - Understand how IBM Cloud services and Watson Studio technologies can provide a seamless, AI-driven customer experience
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-28"
+  years: 2018, 2019
+lastupdated: "2019-02-05"
 
 ---
 
@@ -28,19 +28,22 @@ lastupdated: "2018-12-28"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Tutorial (Advanced)
+{: #tadv-tutorial-advanced}
 
 ## Scenario
+{: #tadv-scenario}
 
 A car rental company has collected feedback data about customer satisfaction. The presented model uses this data to predict a course of action to follow up with a customer, for example to provide a voucher for their next rental.
 
 The model uses customer data fields ID (an ID number), GENDER, STATUS (single or married), CHILDREN (number), AGE, CUSTOMER STATUS (active or inactive), CAR OWNER (yes or no), CUSTOMER SERVICE (customer comment), SATISFACTION (satisfied or unsatisfied), and BUSINESS AREA (product or service related) to predict one of four values (NA, voucher, free upgrade, on-demand pickup) for the ACTION data field.
 
 ## Prerequisites
+{: #tadv-prereqs}
 
 To complete this tutorial, you will need:
 
-- A [Watson Studio](https://dataplatform.ibm.com/) account.
-- An [{{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net) account.
+- A [Watson Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window} account.
+- An [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} account.
 
 During the tutorial, you will provision the following Lite (free) {{site.data.keyword.Bluemix_notm}} Services:
 
@@ -58,9 +61,10 @@ You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}
 The PostgreSQL database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
 {: important}
 
-If you have already provisioned the necessary services for example if you have completed the other tutorial, proceed to [Set up a Watson Studio project](tutorial-adv.html#set-up-a-watson-studio-project) below.
+If you have already provisioned the necessary services for example if you have completed the other tutorial, proceed to [Set up a Watson Studio project](#tadv-setup-ws) below.
 
 ## Introduction
+{: #tadv-intro}
 
 In this tutorial, you will:
 
@@ -70,20 +74,23 @@ In this tutorial, you will:
 - View results in the {{site.data.keyword.aios_short}} Insights tab
 
 ## Provision {{site.data.keyword.Bluemix_notm}} Services
+{: #tadv-svcs}
 
-Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net) with your IBM ID. When provisioning services, particularly in the case of Apache Spark, Object Storage, and Db2 Warehouse, verify that your selected organization and space are the same for all services.
+Login to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} with your IBM ID. When provisioning services, particularly in the case of Apache Spark, Object Storage, and Db2 Warehouse, verify that your selected organization and space are the same for all services.
 
 ### Create a Watson Studio account
+{: #tadv-stac}
 
-- [Create a Watson Studio instance](https://console.bluemix.net/catalog/services/watson-studio) if you do not already have one associated with your account:
+- [Create a Watson Studio instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/watson-studio){: new_window} if you do not already have one associated with your account:
 
   ![Watson Studio](images/watson_studio.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
 ### Provision a Machine Learning service
+{: #tadv-pml}
 
-- [Provision a Watson Machine Learning instance](https://console.bluemix.net/catalog/services/machine-learning) if you do not already have one associated with your account:
+- [Provision a Watson Machine Learning instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/machine-learning){: new_window} if you do not already have one associated with your account:
 
   ![Machine Learning](images/machine_learning.png)
 
@@ -92,8 +99,9 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Make note of the Machine Learning service credentials. In your machine learning instance, click on the **Service credentials** link on the left-hand side of the page. Name the credential and click **Add**. Then, from the list of credentials, click **View credential** and copy the credentials for later use.
 
 ### Provision a Spark service
+{: #tadv-ps}
 
-- [Provision a Spark service](https://console.bluemix.net/catalog/services/apache-spark) if you do not already have one associated with your account:
+- [Provision a Spark service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/apache-spark){: new_window} if you do not already have one associated with your account:
 
   ![Apache Spark](images/spark.png)
 
@@ -102,16 +110,18 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Make note of the service credentials for your Spark instance. Open your Spark instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
 ### Provision an Object Storage service
+{: #tadv-pos}
 
-- [Provision an Object Storage service](https://console.bluemix.net/catalog/services/cloud-object-storage) if you do not already one associated with your account:
+- [Provision an Object Storage service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloud-object-storage){: new_window} if you do not already one associated with your account:
 
   ![Object Storage](images/object_storage.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
 ### Provision a paid PostgreSQL service
+{: #tadv-ppgs}
 
-- [Provision a paid PostgreSQL service](https://console.bluemix.net/catalog/services/compose-for-postgresql) if you do not already have one associated with your account.
+- [Provision a paid PostgreSQL service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/compose-for-postgresql){: new_window} if you do not already have one associated with your account.
 
   ![Compose for PostgreSQL](images/postgres.png)
 
@@ -125,8 +135,9 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 <!---
 
 ### Provision a Db2 Warehouse service
+{: #tadv-pdb2}
 
-- [Provision a Db2 Warehouse service](https://console.bluemix.net/catalog/services/db2-warehouse) if you do not already have one associated with your account:
+- [Provision a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2-warehouse){: new_window} if you do not already have one associated with your account:
 
   ![Db2 Warehouse](images/db2_warehouse.png)
 
@@ -135,10 +146,11 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Make note of the service credentials for your Db2 Warehouse instance. Open your existing (or newly-created) Db2 Warehouse instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
 ### Upload training and feedback data to Db2 Warehouse
+{: #tadv-uptf}
 
-- Download the [car_rental_training_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/blob/master/ai-openscale/car_rental_training_data.csv) file.
+- Download the [car_rental_training_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/blob/master/ai-openscale/car_rental_training_data.csv){: new_window} file.
 
-- Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console](https://console.bluemix.net), click **Manage** from the left side panel, and then click the green **Open** button.
+- Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window}, click **Manage** from the left side panel, and then click the green **Open** button.
 
 - If necessary, use your Db2 credentials `username` and `password` to log in to Db2 Warehouse.
 
@@ -171,8 +183,9 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 --->
 
 ## Set up a Watson Studio project
+{: #tadv-setup-ws}
 
-- Login to your [Watson Studio account](https://dataplatform.ibm.com/). Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.Bluemix_notm}} services:
+- Login to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.Bluemix_notm}} services:
 
   ![Same Account](images/same_account.png)
 
@@ -187,6 +200,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Give your project a name and description, make sure the Object Storage service you created in the previous step is selected in the **Storage** dropdown, and click **Create**.
 
 ### Associate your {{site.data.keyword.Bluemix_notm}} Services with your Watson project
+{: #tadv-acsw}
 
 - Open your Watson Studio project and select the **Settings** tab. In the **Associated Services** section, click the **Add service** dropdown and select **Watson**:
 
@@ -197,12 +211,13 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - From the project settings tab, select **Add service** again and choose **Spark** from the dropdown. From the **Existing** tab, choose the Spark service you created and click **Select**.
 
 ## Create and deploy a machine learning model
+{: #tadv-deploy-ml}
 
 ### Add the `CARS4U Action Recommendation - model` notebook to your Watson Studio project
 
 - Download the following file:
 
-    - [CARS4U Action Recommendation - model](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/CARS4U%20action%20recommendation%20-%20model.ipynb)
+    - [CARS4U Action Recommendation - model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/CARS4U%20action%20recommendation%20-%20model.ipynb){: new_window}
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -223,6 +238,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 - Click **Create Notebook**.
 
 ### Edit and run the `CARS4U Action Recommendation - model` Notebook
+{: #tadv-ern}
 
 The `CARS4U Action Recommendation - model` notebook contains detailed instructions for each step in the python code you will run. As you work through the notebook, spend some time to understand what each command is doing.
 {: tip}
@@ -240,16 +256,21 @@ The `CARS4U Action Recommendation - model` notebook contains detailed instructio
   This will create, train and deploy the **CARS4U - Action Recommendation Model** in your project. You can verify that the model has deployed by selecting the **Deployments** tab of your Watson Studio project, and clicking the **CARS4U - Area and Action Model Deployment** link.
 
 ## Configure {{site.data.keyword.aios_short}}
+{: #tadv-config-aios}
 
 ### Provision {{site.data.keyword.aios_short}}
+{: #tadv-paios}
 
-- If you have not already provisioned an instance of {{site.data.keyword.aios_short}}, click the **Catalog** link from your {{site.data.keyword.Bluemix_notm}} account, and filter on "OpenScale". Select the tile for {{site.data.keyword.aios_short}}:
+- If you have not already provisioned an instance of {{site.data.keyword.aios_short}}, click the **Catalog** link from your {{site.data.keyword.Bluemix_notm}} account, and filter on "OpenScale". Select the tile for {{site.data.keyword.aios_short}}.
 
+<!---
   ![AI OpenScale](images/openscale.png)
+--->
 
 - Give your service a name, select the Lite plan, and click **Create**.
 
 ### Connect {{site.data.keyword.aios_short}} to your machine learning model
+{: #tadv-cmlm}
 
 Since the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models. Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The {{site.data.keyword.aios_full}} Getting Started page opens; click **Begin**.
 
@@ -269,7 +290,8 @@ Since the machine learning model has been deployed, you can configure {{site.dat
 
     ![Select database](images/gs-set-lite-db1.png)
 
-  **NOTE**: See more complete details about each of these options in the [Specify your database](/docs/services/ai-openscale/connect-db.html) topic.
+  See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale/connect-db.html) topic.
+  {: note}
 
 - Once you have selected the "Use existing or purchase new database" option, {{site.data.keyword.aios_short}} checks your {{site.data.keyword.Bluemix_notm}} account to locate your existing Compose for PostgreSQL database.
 
@@ -284,15 +306,17 @@ Since the machine learning model has been deployed, you can configure {{site.dat
   Click **Exit to Dashboard** when prompted.
 
 ## Create a data mart and configure performance, accuracy, and fairness monitors
+{: #tadv-config-monitors}
 
 ### Add the `AI OpenScale and Watson ML engine` notebook to your Watson Studio project
+{: #tadv-aomn}
 
 The `AI OpenScale and Watson ML engine` notebook contains detailed instructions for each step in the python code you will run. As you work through the notebook, spend some time to understand what each command is doing.
 {: tip}
 
 - Download the following file:
 
-    - [AI OpenScale and Watson ML engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+    - [AI OpenScale and Watson ML engine ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -313,6 +337,7 @@ The `AI OpenScale and Watson ML engine` notebook contains detailed instructions 
 - Click **Create Notebook**.
 
 ### Edit and run the `AI OpenScale and Watson ML engine` Notebook
+{: #tadv-eromn}
 
 - From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `AI OpenScale and Watson ML engine` notebook to edit it.
 
@@ -331,8 +356,10 @@ The `AI OpenScale and Watson ML engine` notebook contains detailed instructions 
   This will set up your data mart, enable payload logging, configure and score performance, accuracy, and fairness monitors, and provide those metrics to your {{site.data.keyword.aios_short}} instance.
 
 ## Viewing results
+{: #tadv-results}
 
 ### View insights for your deployment
+{: #tadv-vide}
 
 Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click on the **Insights** tab:
 
@@ -343,6 +370,7 @@ The Insights page provides an overview of metrics for your deployed models. You 
   ![Insight overview](images/insight-overview-adv-tutorial.png)
 
 ### View monitoring data for your deployment
+{: #tadv-vmdd}
 
 Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment will appear. Slide the marker across the chart to select data for the timeframe during which you ran the notebook. Then select the **View details** link.
 
@@ -355,6 +383,7 @@ Now, you can review the charts for the data you monitored. For this example, you
 <!---
 
 ### View explainability for a model transaction
+{: #tadv-vemt}
 
 Select the **View transactions** button from the charts for the data you monitored.
 
@@ -375,5 +404,6 @@ Paste the transaction ID value you copied into the search box and press **Return
 --->
 
 ## Next steps
+{: #tadv-next}
 
 - Learn more about [viewing and interpreting the data](/docs/services/ai-openscale/insight-timechart.html) and [monitoring explainability](/docs/services/ai-openscale/insight-explain.html).

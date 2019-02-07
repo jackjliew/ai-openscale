@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-02"
+lastupdated: "2019-02-04"
 
 ---
 
@@ -16,13 +16,13 @@ lastupdated: "2019-01-02"
 {:screen: .screen}
 
 # Specifying an Amazon SageMaker ML service instance
-{: #connect-sage}
+{: #csm-connect}
 
 Your first step in the {{site.data.keyword.aios_short}} tool is to specify an Amazon SageMaker service instance. Your Amazon SageMaker service instance is where you store your AI models and deployments.
 {: shortdesc}
 
 ## Connect your Amazon SageMaker service instance
-{: #config-sage}
+{: #csm-config}
 
 {{site.data.keyword.aios_short}} connects to AI models and deployments in an Amazon SageMaker service instance.
 
@@ -47,6 +47,6 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify an Am
 1.  Click **Next**.
 
 ### Next steps
-{: #payload-logging}
+{: #csm-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [specify your database](connect-db.html).
+{{site.data.keyword.aios_short}} is now ready for you to [specify your database](/docs/services/ai-openscale/connect-db.html).
