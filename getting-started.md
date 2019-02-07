@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-05"
+lastupdated: "2019-02-07"
 
 ---
 
@@ -206,7 +206,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 {: hide-dashboard}
 {: #gs-provaios}
 
-1.  [Provision a new {{site.data.keyword.aios_short}} service instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/ai-openscale){: new_window}
+1.  [Provision a new {{site.data.keyword.aios_short}} service instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
     ![AI OpenScale](images/openscale.png)
