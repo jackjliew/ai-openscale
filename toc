@@ -13,7 +13,7 @@ Watson OpenScale
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Configuring AI OpenScale
+    Configuring Watson OpenScale
         creds.md
         connect-wml.md
         connect-azureml.md
