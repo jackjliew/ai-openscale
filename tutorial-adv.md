@@ -1,16 +1,8 @@
 ---
 
-title: Trust and transparency for your machine learning models with AI OpenScale
-description: Monitor your machine learning deployments for bias, accuracy, and explainability
-duration: 120
-intro: In this extended tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM AI OpenScale product to monitor your models for trust and transparency.
-takeaways:
-- See how AI OpenScale provides trust and transparency for AI models
-- Understand how IBM Cloud services and Watson Studio technologies can provide a seamless, AI-driven customer experience
-
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-05"
+lastupdated: "2019-02-07"
 
 ---
 
@@ -27,44 +19,35 @@ lastupdated: "2019-02-05"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Tutorial (Advanced)
-{: #tadv-tutorial-advanced}
+# Tutorial - (Advanced)
 
 ## Scenario
-{: #tadv-scenario}
+{: #crt-scenario}
 
-A car rental company has collected feedback data about customer satisfaction. The presented model uses this data to predict a course of action to follow up with a customer, for example to provide a voucher for their next rental.
+Traditional lenders are under pressure to expand their digital portfolio of financial services to a larger and more diverse audience, which requires a new approach to credit risk modeling. Their data science teams currently rely on standard modeling techniques - like decision trees and logistic regression - which work well for moderate datasets, and make recommendations that can be easily explained. This satisfies regulatory requirements that credit lending decisions must be transparent and explainable.
 
-The model uses customer data fields ID (an ID number), GENDER, STATUS (single or married), CHILDREN (number), AGE, CUSTOMER STATUS (active or inactive), CAR OWNER (yes or no), CUSTOMER SERVICE (customer comment), SATISFACTION (satisfied or unsatisfied), and BUSINESS AREA (product or service related) to predict one of four values (NA, voucher, free upgrade, on-demand pickup) for the ACTION data field.
+To provide credit access to a wider and riskier population, applicant credit histories must expand beyond traditional credit, like mortgages and car loans, to alternate credit sources like utility and mobile phone plan payment histories, plus education and job titles. These new data sources offer promise, but also introduce risk by increasing the likelihood of unexpected correlations which introduce bias based on an applicant’s age, gender, or other personal traits.
+
+The data science techniques most suited to these diverse datasets, such as gradient boosted trees and neural networks, can generate highly accurate risk models, but at a cost. Such "black box" models generate opaque predictions that must somehow become transparent, to ensure regulatory approval such as Article 22 of the General Data Protection Regulation (GDPR), or the federal Fair Credit Reporting Act (FCRA) managed by the Consumer Financial Protection Bureau.
+
+The credit risk model provided in this tutorial uses a training dataset that contains 20 attributes about each loan applicant. Two of those attributes - age and sex - can be tested for bias. For this tutorial, the focus will be on bias against sex and age.
+
+{{site.data.keyword.aios_short}} will monitor the deployed model's propensity for a favorable outcome ("No Risk") for one group (the Reference Group) over another (the Monitored Group). In this tutorial, the Monitored Group for sex is `female`, while the Monitored Group for age is `18 to 25`.
 
 ## Prerequisites
-{: #tadv-prereqs}
+{: #crt-prereqs}
 
-To complete this tutorial, you will need:
+This tutorial uses a Jupyter notebook that should be run in a Watson Studio project, using a "Python 3.5 with Spark" runtime environment. It requires service credentials for the following {{site.data.keyword.Bluemix_notm}} services:
 
-- A [Watson Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window} account.
-- An [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} account.
+- Cloud Object Storage (to store your Watson Studio project)
+- {{site.data.keyword.aios_short}}
+- Watson Machine Learning
+- Db2 Warehouse
 
-During the tutorial, you will provision the following Lite (free) {{site.data.keyword.Bluemix_notm}} Services:
-
-- Machine Learning
-- Apache Spark
-- Object Storage
-
-You will also provision the following **paid** {{site.data.keyword.Bluemix_notm}} Service:
-
-- PostgreSQL
-
-  A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
-  {: tip}
-
-The PostgreSQL database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.Bluemix_notm}} account.
-{: important}
-
-If you have already provisioned the necessary services for example if you have completed the other tutorial, proceed to [Set up a Watson Studio project](#tadv-setup-ws) below.
+The Jupyter notebook will train, create and deploy a German Credit Risk model, configure {{site.data.keyword.aios_short}} to monitor that deployment, and provide seven days' worth of historical records and measurements for viewing in the {{site.data.keyword.aios_short}} Insights dashboard. You can also optionally configure the model for continuous learning with Watson Studio and Spark.
 
 ## Introduction
-{: #tadv-intro}
+{: #crt-intro}
 
 In this tutorial, you will:
 
@@ -74,118 +57,50 @@ In this tutorial, you will:
 - View results in the {{site.data.keyword.aios_short}} Insights tab
 
 ## Provision {{site.data.keyword.Bluemix_notm}} Services
-{: #tadv-svcs}
+{: #crt-services}
 
-Login to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} with your IBM ID. When provisioning services, particularly in the case of Apache Spark, Object Storage, and Db2 Warehouse, verify that your selected organization and space are the same for all services.
+Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net) with your IBM ID. When provisioning services, particularly in the case ofDb2 Warehouse, verify that your selected organization and space are the same for all services.
 
 ### Create a Watson Studio account
-{: #tadv-stac}
+{: #crt-wstudio}
 
-- [Create a Watson Studio instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/watson-studio){: new_window} if you do not already have one associated with your account:
+- [Create a Watson Studio instance](https://console.bluemix.net/catalog/services/watson-studio) if you do not already have one associated with your account:
 
   ![Watson Studio](images/watson_studio.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision a Machine Learning service
-{: #tadv-pml}
+### Provision a Cloud Object Storage service
+{: #crt-cos}
 
-- [Provision a Watson Machine Learning instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/machine-learning){: new_window} if you do not already have one associated with your account:
-
-  ![Machine Learning](images/machine_learning.png)
-
-- Give your service a name, choose the Lite (free) plan, and click the **Create** button.
-
-- Make note of the Machine Learning service credentials. In your machine learning instance, click on the **Service credentials** link on the left-hand side of the page. Name the credential and click **Add**. Then, from the list of credentials, click **View credential** and copy the credentials for later use.
-
-### Provision a Spark service
-{: #tadv-ps}
-
-- [Provision a Spark service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/apache-spark){: new_window} if you do not already have one associated with your account:
-
-  ![Apache Spark](images/spark.png)
-
-- Assign your service a name, choose the Lite (free) plan, and click the **Create** button.
-
-- Make note of the service credentials for your Spark instance. Open your Spark instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
-
-### Provision an Object Storage service
-{: #tadv-pos}
-
-- [Provision an Object Storage service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloud-object-storage){: new_window} if you do not already one associated with your account:
+- [Provision an Object Storage service](https://console.bluemix.net/catalog/services/cloud-object-storage) if you do not already one associated with your account:
 
   ![Object Storage](images/object_storage.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision a paid PostgreSQL service
-{: #tadv-ppgs}
+### Provision a Watson Machine Learning service
+{: #crt-wml}
 
-- [Provision a paid PostgreSQL service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/compose-for-postgresql){: new_window} if you do not already have one associated with your account.
+- [Provision a Watson Machine Learning instance](https://console.bluemix.net/catalog/services/machine-learning) if you do not already have one associated with your account:
 
-  ![Compose for PostgreSQL](images/postgres.png)
+  ![Machine Learning](images/machine_learning.png)
 
-- Give your service a name, choose the Standard plan, and click the **Create** button.
-
-  A $200 {{site.data.keyword.Bluemix_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
-  {: tip}
-
-- Make note of the service credentials for your PostgreSQL instance. Open your existing (or newly-created) PostgreSQL instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
-
-<!---
+- Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
 ### Provision a Db2 Warehouse service
-{: #tadv-pdb2}
+{: #crt-db2}
 
-- [Provision a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2-warehouse){: new_window} if you do not already have one associated with your account:
+- [Provision a Db2 Warehouse service](https://console.bluemix.net/catalog/services/db2-warehouse) if you do not already have one associated with your account:
 
   ![Db2 Warehouse](images/db2_warehouse.png)
 
 - Give your service a name, choose the Entry plan, and click the **Create** button.
 
-- Make note of the service credentials for your Db2 Warehouse instance. Open your existing (or newly-created) Db2 Warehouse instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
-
-### Upload training and feedback data to Db2 Warehouse
-{: #tadv-uptf}
-
-- Download the [car_rental_training_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/blob/master/ai-openscale/car_rental_training_data.csv){: new_window} file.
-
-- Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window}, click **Manage** from the left side panel, and then click the green **Open** button.
-
-- If necessary, use your Db2 credentials `username` and `password` to log in to Db2 Warehouse.
-
-- Once Db2 Warehouse has opened, click the **Menu** button and select **Load** from the dropdown:
-
-  ![Load Menu](images/db2_load.png)
-
-- Browse to the training data file, or drag and drop it into the appropriate area on the form. Click **Next**. Select a Schema from the list of load targets; this is usually in a format like `DASH12345`. Then click **New Table** on the right:
-
-  ![New Table](images/new_table.png)
-
-- Name your table CAR\_RENTAL\_TRAINING, and click the **Create** button:
-
-  ![New Table Create](images/new_table_create.png)
-
-- Click **Next** to preview the data. On the preview screen, set the **Separator** field to a semicolon (;) and make sure the **Header in first row** option is checked:
-
-  ![Separator and Header](images/separator.png)
-
-  **NOTE**: By default, the **Detect data types** option is selected.
-
-  ![Data type](images/data-type.png)
-
-  When selected, for columns set with the `VARCHAR` data type, the maximum number of characters allowed for that column is automatically determined by the largest data point uploaded for that column. If you expect that future data for a table column may exceed the automatically-determined maximum, simply unselect the **Detect data types** option, and edit the maximum column value manually.
-
-  ![Set data type manually](images/data-type-manual.png)
-
-- The training data should now be displaying correctly in columns. Click **Next** to continue, and then click **Begin Load** to load the data.
-
---->
-
 ## Set up a Watson Studio project
-{: #tadv-setup-ws}
+{: #crt-set-wstudio}
 
-- Login to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.Bluemix_notm}} services:
+- Login to your [Watson Studio account](https://dataplatform.ibm.com/). Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.Bluemix_notm}} services:
 
   ![Same Account](images/same_account.png)
 
@@ -197,27 +112,17 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](
 
   ![Watson Studio select Standard project](images/studio_create_standard.png)
 
-- Give your project a name and description, make sure the Object Storage service you created in the previous step is selected in the **Storage** dropdown, and click **Create**.
-
-### Associate your {{site.data.keyword.Bluemix_notm}} Services with your Watson project
-{: #tadv-acsw}
-
-- Open your Watson Studio project and select the **Settings** tab. In the **Associated Services** section, click the **Add service** dropdown and select **Watson**:
-
-  ![Add Watson Service](images/add_watson_service.png)
-
-- Click the **Add** link on the **Machine Learning** tile and select the **Existing** tab. Choose the service you created in the previous section from the **Existing Service Instance** dropdown and click **Select**.
-
-- From the project settings tab, select **Add service** again and choose **Spark** from the dropdown. From the **Existing** tab, choose the Spark service you created and click **Select**.
+- Give your project a name and description, make sure the Cloud Object Storage service you created is selected in the **Storage** dropdown, and click **Create**.
 
 ## Create and deploy a machine learning model
-{: #tadv-deploy-ml}
+{: #crt-make-model}
 
-### Add the `CARS4U Action Recommendation - model` notebook to your Watson Studio project
+### Add the `German Credit Lab - OpenScale Lab instructions` notebook to your Watson Studio project
+{: #crt-add-notebook}
 
 - Download the following file:
 
-    - [CARS4U Action Recommendation - model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/CARS4U%20action%20recommendation%20-%20model.ipynb){: new_window}
+    - [German Credit Lab - OpenScale Lab instructions](https://github.com/emartensibm/german-credit/blob/master/german_credit_lab.ipynb)
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -227,183 +132,91 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](
 
   ![New Notebook Form](images/new_notebook_name.png)
 
-- Then click the **Choose file** button, and select the "CARS4U Action Recommendation - model" that you downloaded:
+- Then click the **Choose file** button, and select the "German Credit Risk - model" that you downloaded:
 
-  ![New Notebook Form](images/new_notebook_name2.png)
+  ![New Notebook Form](images/new_notebook_name2a.png)
 
-- In the **Select runtime** section, choose the Spark instance you created earlier from the dropdown list:
-
-  ![Spark Runtime](images/spark_runtime.png)
+- In the **Select runtime** section, choose a Python 3.5 with Spark option:
 
 - Click **Create Notebook**.
 
-### Edit and run the `CARS4U Action Recommendation - model` Notebook
-{: #tadv-ern}
+### Edit and run the `German Credit Risk - model` Notebook
+{: #crt-edit-notebook}
 
-The `CARS4U Action Recommendation - model` notebook contains detailed instructions for each step in the python code you will run. As you work through the notebook, spend some time to understand what each command is doing.
+The `German Credit Risk - model` notebook contains detailed instructions for each step in the Python code you will run. As you work through the notebook, take some time to understand what each command is doing.
 {: tip}
 
-- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `CARS4U Action Recommendation - model` notebook to edit it.
+- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `German Credit Risk - model` notebook to edit it.
 
-- In section 2.2, "Upload data to PostgreSQL database", replace the Postgres service credentials with the ones you created in the previous section.
+- In the "Provision services and configure credentials" section, make the following changes:
 
-- In section 4, "Store the model in the repository", under **TIP**, replace the Watson Machine Learning credentials with the ones you created in the previous section.
+    - Follow the instructions to create, copy, and paste an {{site.data.keyword.Bluemix_notm}} API key.
 
-- Once you have entered your credentials, your notebook is ready to run. Click the **Kernel** menu item, and select **Restart and Run All** from the menu:
+    - Replace the Watson Machine Learning (WML), Db2, and Spark service credentials with the ones you created previously.
 
-  ![Restart and Run](images/restart_and_run.png)
+    - If you have an already-existing schema in your Db2 instance that you would like to use for {{site.data.keyword.aios_short}} data, specify it as the SCHEMA_NAME variable. Otherwise, leave the variable set to `None` to use the default Db2 schema.
 
-  This will create, train and deploy the **CARS4U - Action Recommendation Model** in your project. You can verify that the model has deployed by selecting the **Deployments** tab of your Watson Studio project, and clicking the **CARS4U - Area and Action Model Deployment** link.
+    - If you previously configured {{site.data.keyword.aios_short}} to use a free internal PostgreSQL database as your data mart, you can switch to a new data mart that uses Db2 Warehouse. To delete your old PostgreSQL configuration and create a new one using Db2 Warehouse, set the KEEP_MY_INTERNAL_POSTGRES variable to `False`.
 
-## Configure {{site.data.keyword.aios_short}}
-{: #tadv-config-aios}
+        The notebook will remove your existing internal PostgreSQL data mart and create a new Db2 data mart with the supplied Db2 credentials. **No data migration will occur**.
+        {: important}
 
-### Provision {{site.data.keyword.aios_short}}
-{: #tadv-paios}
+- Once you have provisioned your services and entered your credentials, your notebook is ready to run. Click the **Kernel** menu item, and select **Restart & Clear Output** from the menu:
 
-- If you have not already provisioned an instance of {{site.data.keyword.aios_short}}, click the **Catalog** link from your {{site.data.keyword.Bluemix_notm}} account, and filter on "OpenScale". Select the tile for {{site.data.keyword.aios_short}}.
+  ![Restart and Clear](images/restart_and_clear.png)
 
-<!---
-  ![AI OpenScale](images/openscale.png)
---->
+- Now, run each step of the notebook in sequence. Notice what is happening at each step, as described. Complete all the steps, up through and including the steps in the "Additional data to help debugging" section.
 
-- Give your service a name, select the Lite plan, and click **Create**.
-
-### Connect {{site.data.keyword.aios_short}} to your machine learning model
-{: #tadv-cmlm}
-
-Since the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models. Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The {{site.data.keyword.aios_full}} Getting Started page opens; click **Begin**.
-
-- Select the "Watson Machine Learning" tile and click **Next**.
-
-  ![Set WML instance](images/gs-wml-default.png)
-
-- Select your Watson Machine Learning instance from the drop-down, and click **Next**.
-
-  ![Set WML instance](images/gs-set-wml.png)
-
-- You are now able to select which deployed models will be monitored by {{site.data.keyword.aios_short}}. Check the model you created and deployed; click **Next** to accept this:
-
-  ![Select deployed models](images/gs-set-deploy.png)
-
-- Next, you need to choose a PostgreSQL database. You have two options: the free Lite plan database or an existing or new database. For this tutorial, select the **Use existing or purchase a new database** tile.
-
-    ![Select database](images/gs-set-lite-db1.png)
-
-  See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale/connect-db.html) topic.
-  {: note}
-
-- Once you have selected the "Use existing or purchase new database" option, {{site.data.keyword.aios_short}} checks your {{site.data.keyword.Bluemix_notm}} account to locate your existing Compose for PostgreSQL database.
-
-  Select the "data_mart" schema from the **Schema** drop-down menu.
-
-  ![Select database](images/gs-set-schema1.png)
-
-- Once you have selected the database and schema, click **Next** to review the summary data and click **Save**.
-
-  ![Select database](images/gs-setup-summary3.png)
-
-  Click **Exit to Dashboard** when prompted.
-
-## Create a data mart and configure performance, accuracy, and fairness monitors
-{: #tadv-config-monitors}
-
-### Add the `AI OpenScale and Watson ML engine` notebook to your Watson Studio project
-{: #tadv-aomn}
-
-The `AI OpenScale and Watson ML engine` notebook contains detailed instructions for each step in the python code you will run. As you work through the notebook, spend some time to understand what each command is doing.
-{: tip}
-
-- Download the following file:
-
-    - [AI OpenScale and Watson ML engine ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
-
-- From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
-
-  ![Add Connection](images/add_notebook.png)
-
-- Select **From file**:
-
-  ![New Notebook Form](images/new_notebook_name.png)
-
-- Then click the **Choose file** button, and select the "AI OpenScale and Watson ML engine" that you downloaded:
-
-  ![New Notebook Form](images/new_notebook_name3.png)
-
-- In the **Select runtime** section, choose the Spark instance you created earlier from the dropdown list:
-
-  ![Spark Runtime](images/spark_runtime.png)
-
-- Click **Create Notebook**.
-
-### Edit and run the `AI OpenScale and Watson ML engine` Notebook
-{: #tadv-eromn}
-
-- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `AI OpenScale and Watson ML engine` notebook to edit it.
-
-- In section 1.1, "Installation and authentication":
-
-    - Under **ACTION: Get instance_id (GUID) and apikey**, follow the instructions to get your credentials. Replace the `aios_credentials` with your own.
-
-    - Next, in **ACTION: Add your Watson Machine Learning credentials here**, replace the Watson Machine Learning credentials with the ones you created previously.
-
-    - Finally, under **ACTION: Add your PostgreSQL credentials here**, replace the Postgres credentials with the ones you created previously.
-
-- Once you have entered your credentials, your notebook is ready to run. Click the **Kernel** menu item, and select **Restart and Run All** from the menu:
-
-  ![Restart and Run](images/restart_and_run.png)
-
-  This will set up your data mart, enable payload logging, configure and score performance, accuracy, and fairness monitors, and provide those metrics to your {{site.data.keyword.aios_short}} instance.
+The net result is that you will have created, trained, and deployed the **German Credit Risk Model** to your {{site.data.keyword.aios_short}} service instance. {{site.data.keyword.aios_short}} will be configured to check the model for bias against sex (in this case, Female) or age (In this case, 18-25 years old).
 
 ## Viewing results
-{: #tadv-results}
+{: #crt-view-results}
 
 ### View insights for your deployment
-{: #tadv-vide}
+{: #crt-view-insights}
 
-Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click on the **Insights** tab:
+Using the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click on the **Insights** tab:
 
   ![Insights](images/insight-dash-tab.png)
 
-The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the threshold set when running the notebook (70%). The data and settings used in this tutorial will have created Accuracy and Fairness metrics similar to the ones shown here.
+The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the threshold set when running the notebook. The data and settings used in this tutorial will have created Accuracy and Fairness metrics similar to the ones shown here.
 
-  ![Insight overview](images/insight-overview-adv-tutorial.png)
+  ![Insight overview](images/insight-overview-adv-tutorial-2.png)
 
 ### View monitoring data for your deployment
-{: #tadv-vmdd}
+{: #crt-view-mon-data}
 
-Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment will appear. Slide the marker across the chart to select data for the timeframe during which you ran the notebook. Then select the **View details** link.
+Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment will appear. Slide the marker across the chart to select data for a specific one-hour window. Then select the **View details** link.
 
-  ![Monitor data](images/insight-monitor-data1.png)
+  ![Monitor data](images/insight-monitor-data2.png)
 
-Now, you can review the charts for the data you monitored. For this example, you can use the **Feature** drop-down to select either "Children" or "Gender", in order to see details about the monitored data.
+Now, you can review the charts for the data you monitored. For this example, you can see that for the "Age" feature, the group `18 to 19` received the favorable outcome "No Risk" slightly less (76%) than the group `18 to 25` (77%).
 
-  ![Insight overview](images/insight-review-charts1.png)
-
-<!---
+  ![Insight overview](images/insight-review-charts2.png)
 
 ### View explainability for a model transaction
-{: #tadv-vemt}
+{: #crt-view-explain}
 
-Select the **View transactions** button from the charts for the data you monitored.
+Please note that if you are using the internal lite version of PostgreSQL, you may not be able to retrieve your database credentials, which will prevent you from seeing transactions.
+{: note}
+
+Select the **View transactions** button from the charts for the latest biased data.
 
   ![View transactions](images/view_transactions.png)
 
-  a list of transactions for the past hour is listed. Copy one of the transaction IDs.
+  A list of transactions where the deployment has acted in a biased manner is listed. Select one of the transactions and click the **Explain** link.
 
-  ![Transaction list](images/transaction_list.png)
+  ![Transaction list](images/transaction_list_cr.png)
 
-Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click on the **Explainability** tab:
+Now, click on the **Explainability** tab:
 
   ![Explainability](images/explainability.png)
 
 Paste the transaction ID value you copied into the search box and press **Return** on your keyboard. You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
 
-  ![View Transaction](images/view_transaction1.png)
-
---->
+  ![View Transaction](images/view_transaction_cr.png)
 
 ## Next steps
-{: #tadv-next}
+{: #crt-next-steps}
 
 - Learn more about [viewing and interpreting the data](/docs/services/ai-openscale/insight-timechart.html) and [monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
