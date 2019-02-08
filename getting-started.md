@@ -1,11 +1,11 @@
 ---
 
-title: Trust and transparency for your machine learning models with AI OpenScale
+title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
-intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM AI OpenScale product to monitor your models for trust and transparency.
+intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
 takeaways:
-- See how AI OpenScale provides trust and transparency for AI models
+- See how {{site.data.keyword.aios_short}} provides trust and transparency for AI models
 - Understand how IBM Cloud services and Watson Studio technologies can provide a seamless, AI-driven customer experience
 
 copyright:
@@ -209,7 +209,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 1.  [Provision a new {{site.data.keyword.aios_short}} service instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
-    ![AI OpenScale](images/openscale.png)
+    ![{{site.data.keyword.aios_short}}](images/openscale.png)
 --->
 
 2.  Give your service a name, select the Lite plan, and click **Create**.
@@ -371,10 +371,12 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 1.  Set the accuracy alert threshold to 90% and click **Next**.
 
-1.  On the next screen, use the sliders to adjust the minimum sample size to 10. Set the maximum sample size to 10000, then click  **Next**.
+1.  On the next screen, use the slider to adjust the minimum sample size to 10, then click  **Next**.
 
     For this tutorial, the minimum sample size has been set to 10. Normally, a larger sample size is recommended to ensure the sample size is not too small, which would skew the results.
     {: note}
+
+1.  For the maximum sample size, use 10000. Click **Next**.
 
 1.  Review your choices and click **Save**.
 
@@ -488,7 +490,7 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 ### View insights for your deployment
 {: #gs-viewin}
 
-1. From the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Insights** tab.
+1. From the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Insights** tab.
 
   ![Insights](images/insight-dash-tab.png)
 
@@ -525,7 +527,7 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 
     ![Transaction list](images/transaction_list.png)
 
-1.  Using the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Explainability** tab.
+1.  Using the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Explainability** tab.
 
     ![Explainability](images/explainability.png)
 

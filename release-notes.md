@@ -71,7 +71,7 @@ The following new features, changes, and known issues with the service are avail
 
 - __*Enhanced UI*__: The {{site.data.keyword.aios_short}} UI has been improved to include a runtime histogram distribution with toggle for training data, Model ID & Versioning, and a Transaction ID table from the histogram. See [Visualizing data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#insight-data-visual) for more information.
 
-- __*Alternate tutorial set-up option*__: To automate the provisioning and configuration of the required IBM Cloud services, and to see an IBM AI OpenScale application, including sample data, you can install and run a Python module. See [Installing a Python module to set up AI OpenScale](/docs/services/ai-openscale/alt-setup.html)
+- __*Alternate tutorial set-up option*__: To automate the provisioning and configuration of the required IBM Cloud services, and to see an IBM {{site.data.keyword.aios_full}} application, including sample data, you can install and run a Python module. See [Installing a Python module to set up {{site.data.keyword.aios_short}}](/docs/services/ai-openscale/alt-setup.html)
 
 ### Known issues
 {: #rn-12ki}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-07"
 
 ---
 
@@ -68,14 +68,14 @@ ibm-ai-openscale-cli --apikey <Your API key>
 ## Viewing results in {{site.data.keyword.aios_short}}
 {: #as-open}
 
-To view insights into the fairness and accuracy of the model, details of data that is monitored, and explainability for an individual transaction, open the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}.
+To view insights into the fairness and accuracy of the model, details of data that is monitored, and explainability for an individual transaction, open the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}.
 
-- To understand the scenario for the sample data, read [Use case and the value of AI OpenScale](/docs/services/ai-openscale/getting-started.html#gs-use).
+- To understand the scenario for the sample data, read [Use case and the value of {{site.data.keyword.aios_short}}](/docs/services/ai-openscale/getting-started.html#gs-use).
 
 ### View insights
 {: #as-insights}
 
-From the [AI OpenScale dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Insights** tab, which shows an overview of metrics for deployed models: ![Insights](images/insight-dash-tab.png)
+From the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Insights** tab, which shows an overview of metrics for deployed models: ![Insights](images/insight-dash-tab.png)
 
 - At a glance, the Insights page shows any issues with fairness and accuracy, as determined by the thresholds that are configured.
 
