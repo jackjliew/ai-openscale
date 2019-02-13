@@ -270,7 +270,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 ### Preparing for monitoring
 {: #gs-prepmon}
 
-1.  Now, in the {{site.data.keyword.aios_short}} instance, select your deployment and clcik **Begin**.
+1.  Now, in the {{site.data.keyword.aios_short}} instance, select your deployment and click **Begin**.
 
     ![Select deployment](images/config-select-deploy2.png)
 
