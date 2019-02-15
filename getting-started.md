@@ -73,6 +73,8 @@ Each of these issues will be addressed in this tutorial, through the use of {{si
 
 Instead of completing the following tutorial to explore {{site.data.keyword.aios_short}}, technical users can install a Python module that automates the provisioning and configuration of prerequisite services. This module requires that Python 3 is installed, which includes the pip package management system. For instructions, see, [Installing a Python module to set up {{site.data.keyword.aios_short}}](/docs/services/ai-openscale/alt-setup.html).
 
+Additional tutorial links may be found in the [Additional resources](/docs/services/ai-openscale/addl-rsc.html) topic.
+
 ## Tutorial objectives
 {: #gs-obj}
 
