@@ -353,10 +353,14 @@ Before you can configure your monitors, you must generate at least one scoring r
 
     ![Positive and negative values](images/pos_and_neg2.png)
 
-1.  Use the slider to adjust the minimum sample size to 100, then click **Next**. Review your choices and click **Save**.
+1.  Use the slider to adjust the minimum sample size to 100, then click **Next**.
+
+    ![Minimum size](images/gs-fair-config-sample.png)
 
     For this tutorial, the minimum sample size is set to 100. Normally, a larger sample size is recommended to ensure that the sample size is not too small, which would skew the results.
     {: note}
+
+1.  Review your choices and click **Save**.
 
     ![Summary of configuration](images/fair-summary.png)
 
