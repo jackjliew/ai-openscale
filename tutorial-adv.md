@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-07"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -117,12 +117,12 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 ## Create and deploy a machine learning model
 {: #crt-make-model}
 
-### Add the `German Credit Lab - OpenScale Lab instructions` notebook to your Watson Studio project
+### Add the `Watson OpenScale and Watson ML engine` notebook to your Watson Studio project
 {: #crt-add-notebook}
 
 - Download the following file:
 
-    - [German Credit Lab - OpenScale Lab instructions](https://github.com/emartensibm/german-credit/blob/master/german_credit_lab.ipynb)
+    - [Watson OpenScale and Watson ML engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -132,7 +132,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
   ![New Notebook Form](images/new_notebook_name.png)
 
-- Then click the **Choose file** button, and select the "German Credit Risk - model" that you downloaded:
+- Then click the **Choose file** button, and select the "Watson OpenScale and Watson ML engine.ipynb" notebook file that you downloaded:
 
   ![New Notebook Form](images/new_notebook_name2a.png)
 
@@ -140,19 +140,19 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 - Click **Create Notebook**.
 
-### Edit and run the `German Credit Risk - model` Notebook
+### Edit and run the `Watson OpenScale and Watson ML engine` notebook
 {: #crt-edit-notebook}
 
-The `German Credit Risk - model` notebook contains detailed instructions for each step in the Python code you will run. As you work through the notebook, take some time to understand what each command is doing.
+The `Watson OpenScale and Watson ML engine` notebook contains detailed instructions for each step in the Python code you will run. As you work through the notebook, take some time to understand what each command is doing.
 {: tip}
 
-- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `German Credit Risk - model` notebook to edit it.
+- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `Watson OpenScale and Watson ML engine` notebook to edit it.
 
 - In the "Provision services and configure credentials" section, make the following changes:
 
     - Follow the instructions to create, copy, and paste an {{site.data.keyword.Bluemix_notm}} API key.
 
-    - Replace the Watson Machine Learning (WML), Db2, and Spark service credentials with the ones you created previously.
+    - Replace the Watson Machine Learning (WML) and Db2 service credentials with the ones you created previously.
 
     - If you have an already-existing schema in your Db2 instance that you would like to use for {{site.data.keyword.aios_short}} data, specify it as the SCHEMA_NAME variable. Otherwise, leave the variable set to `None` to use the default Db2 schema.
 
@@ -167,7 +167,7 @@ The `German Credit Risk - model` notebook contains detailed instructions for eac
 
 - Now, run each step of the notebook in sequence. Notice what is happening at each step, as described. Complete all the steps, up through and including the steps in the "Additional data to help debugging" section.
 
-The net result is that you will have created, trained, and deployed the **German Credit Risk Model** to your {{site.data.keyword.aios_short}} service instance. {{site.data.keyword.aios_short}} will be configured to check the model for bias against sex (in this case, Female) or age (In this case, 18-25 years old).
+The net result is that you will have created, trained, and deployed the **German Credit Risk Model** to your {{site.data.keyword.aios_short}} service instance. {{site.data.keyword.aios_short}} will be configured to check the model for bias against sex (in this case, Female) or age (in this case, 18-25 years old).
 
 ## Viewing results
 {: #crt-view-results}
