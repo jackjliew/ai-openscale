@@ -22,6 +22,7 @@ Watson OpenScale
         connect-other.md
         connect-db.md
         connect-ml.md
+        config-file.md
 
     {: .topicgroup}
     Working with monitors

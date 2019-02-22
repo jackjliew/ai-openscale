@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-07"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -17,6 +17,18 @@ lastupdated: "2019-02-07"
 
 This document outlines new features and known issues for {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
+
+## 22 February 2019
+{: #rn-22February2019}
+
+The following new features and changes to the service are available.
+
+### New features and changes
+{: #rn-22February2019nf}
+
+{{site.data.keyword.aios_short}} features that have been added or enhanced since the previous release include:
+
+- __*UI updates*__: You can import a JSON file to programmatically configure all monitors and features during subscription creation. You can also export the configuration file. See the [Configure deployment subscription using JSON files](/docs/services/ai-openscale/config-file.html#cf-ov) topic for more information.
 
 ## 7 February 2019
 {: #rn-7February2019}
