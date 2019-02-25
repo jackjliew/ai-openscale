@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-04"
+lastupdated: "2019-02-25"
 
 ---
 
@@ -40,7 +40,7 @@ Each tile provides a summary of monitoring activity for that deployment. Note th
 ### Next steps
 {: #io-next}
 
-Select any of the individual deployment tiles to view more details about that deployment. For more information, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale/insight-timechart.html) and [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
+Select any of the individual deployment tiles to view more details about that deployment. For more information, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale?topic=ai-openscale-it-ov) and [Monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
 ## Configuration
 {: #io-conf}
@@ -54,7 +54,7 @@ From here, you can directly edit the configuration settings for your deployment 
 ## Transactions
 {: #io-tran}
 
-The **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) lets you search a specific transaction ID to explain a particular deployment transaction. For more information, see [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
+The **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) lets you search a specific transaction ID to explain a particular deployment transaction. For more information, see [Monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
 ## AI Tools
 {: #io-too}
