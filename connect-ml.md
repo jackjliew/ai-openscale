@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-07"
+lastupdated: "2019-02-25"
 
 ---
 
@@ -14,6 +14,10 @@ lastupdated: "2019-02-07"
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
 
 # Payload logging for non-Watson Machine Learning service instances
 {: #cml-connect}
@@ -41,7 +45,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
 
     client = APIClient(service_credentials)
     ```
-  Credentials can be found by following the steps shown in the "[Creating credentials](/docs/services/ai-openscale/creds.html)" topic.
+  Credentials can be found by following the steps shown in the "[Creating credentials](/docs/services/ai-openscale?topic=ai-openscale-cred-create" topic.
 
 - Create a schema name in your PostgreSQL database
 
@@ -116,7 +120,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
 ### Scoring and payload logging
 {: #cml-cusscore}
 
-- Score your model, then convert the request and response to the form used by {{site.data.keyword.aios_short}}. For a full example, see the [IBM {{site.data.keyword.aios_full}} & Custom ML engine notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb).
+- Score your model, then convert the request and response to the form used by {{site.data.keyword.aios_short}}. For a full example, see the [IBM {{site.data.keyword.aios_full}} & Custom ML engine notebook ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}.
 
 <!---
     ```python
@@ -504,6 +508,6 @@ You will need to have the training data of your model available in Db2 or Cloud 
 ## Next steps
 {: #cml-next}
 
-- To continue with the {{site.data.keyword.aios_short}} client, see the "[specify your database](/docs/services/ai-openscale/connect-db.html)" topic.
+- To continue with the {{site.data.keyword.aios_short}} client, see [Specifying a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db).
 
 - To continue with the Python command library, refer to the [Python client documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/){: new_window}.
