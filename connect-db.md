@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-05"
+lastupdated: "2019-02-25"
 
 ---
 
@@ -89,9 +89,12 @@ To proceed with using the free Lite plan database, simply select that option, th
 
     - Once you have successfully connected, you can select a schema.
 
+      The schema name needs to be provided explicitly if you provide a Db2 instance with limited access, which does not allow the schema name to be automatically generated. This applies to the Entry Db2 Warehouse plan.
+      {: important}
+
       ![Select schema](images/gs-config-database5.png)
 
-Click **Next** to review the summary data, then click **Save**.
+1.  Click **Next** to review the summary data, then click **Save**.
 
 ## Sending a scoring request
 {: #cdb-score}
