@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-04"
+lastupdated: "2019-02-25"
 
 ---
 
@@ -20,13 +20,13 @@ lastupdated: "2019-02-04"
 # Creating credentials
 {: #cred-create}
 
-In order to access the {{site.data.keyword.aios_short}} REST APIs, a Platform API key and data mart (service instance) ID are required. The Platform API key gives an individual user the ability to access resources in the {{site.data.keyword.Bluemix_notm}}.
+In order to access the {{site.data.keyword.aios_short}} REST APIs, a Platform API key and data mart (service instance) ID are required. The Platform API key gives an individual user the ability to access resources in the {{site.data.keyword.cloud_notm}}.
 
 For enterprise accounts, an administrator can create the data mart, and then invite other users into the account, giving those users access to a specific {{site.data.keyword.aios_short}} data mart. A user can then create their own Platform API key, and can access the same {{site.data.keyword.aios_short}} data mart; there is no conflict or security risk.
 
 To create a Platform API key, complete the following steps:
 
-- Log into [https://console.bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window}.
+- Log into [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}.
 
 - Select **Manage** --> **Security** --> **Platform API Keys**
 
@@ -58,7 +58,7 @@ To find your data mart (or service instance) ID:
     Locked       false
     UUID         ApiKey-xxxxxxxxx-afd7-xxxxx-b0e1-xxxxxxxxxxx
     ```
-- Verify the Resource Group you are using in your {{site.data.keyword.Bluemix_notm}} account.
+- Verify the Resource Group you are using in your {{site.data.keyword.cloud_notm}} account.
 
   ![Resource Group in Cloud](images/cloud-resource.png)
 
@@ -75,7 +75,7 @@ To find your data mart (or service instance) ID:
     ```curl
     ibmcloud resource service-instance '<Your_AI_OpenScale_instance_name>'
     ```
-    **Note**: If you are using the {{site.data.keyword.Bluemix_notm}} command console on Windows, replace the single quotes (') in the above commands with double quotes (").
+    **Note**: If you are using the {{site.data.keyword.cloud_notm}} command console on Windows, replace the single quotes (') in the above commands with double quotes (").
 
     You will see information output like the following:
 
