@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-04"
+lastupdated: "2019-02-25"
 
 ---
 
@@ -59,4 +59,4 @@ You should have provisioned a WML instance in the same {{site.data.keyword.Bluem
 ### Next steps
 {: #wml-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [specify your database](/docs/services/ai-openscale/connect-db.html).
+{{site.data.keyword.aios_short}} is now ready for you to [specify a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db).
