@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-04"
+lastupdated: "2019-02-25"
 
 ---
 
@@ -32,8 +32,8 @@ Whenever data is sent to the model for scoring, it sets a transaction ID in the 
 ### Finding a transaction ID in {{site.data.keyword.aios_short}}
 {: #ie-find}
 
-1.  From the time chart for your deployment, slide the marker across the chart and click the **View details** link to [visualize data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#it-vdet).
-1.  Click the **View transactions** button to [view the list of transaction IDs](/docs/services/ai-openscale/insight-timechart.html#it-tra).
+1.  From the time chart for your deployment, slide the marker across the chart and click the **View details** link to [visualize data for a specific hour](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet).
+1.  Click the **View transactions** button to [view the list of transaction IDs](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-tra).
 1.  Copy one of the transaction IDs from the list, paste it into the search box on the **Explain a transaction** page, and press Enter.
 
     The list of transaction IDs also has the option to simply click the **Explain** link in the Action column for any transaction ID, which will open that transaction in the Explainability tab.
