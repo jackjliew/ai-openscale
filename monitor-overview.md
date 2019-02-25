@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2018-02-04"
+lastupdated: "2018-02-25"
 
 ---
 
@@ -55,7 +55,7 @@ For numeric or categorical data, you need to provide information about the train
 
 - **Manually configure monitors** - Requires you to provide connection information to your training data.
 
-    - Select the [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html#acc-understand), and click **Next**:
+    - Select the [algorithm type](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-understand), and click **Next**:
 
       ![Multi-class](images/multiclass.png)
 
