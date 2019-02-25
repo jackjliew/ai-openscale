@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-04"
+lastupdated: "2019-02-25"
 
 ---
 
@@ -75,7 +75,7 @@ This image shows the Custom environment support:
 
 You can also reference the following links:
 
-[AIOS payload logging API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[AIOS payload logging API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
 
 [Custom deployment API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
 
@@ -169,4 +169,4 @@ You can also reference the following links:
 ### Next steps
 {: #co-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [specify your database](/docs/services/ai-openscale/connect-db.html).
+{{site.data.keyword.aios_short}} is now ready for you to [specify a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db).
