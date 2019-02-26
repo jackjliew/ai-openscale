@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-19"
+lastupdated: "2019-02-25"
 
 ---
 
@@ -37,7 +37,7 @@ Accuracy can mean different things depending on the type of the algorithm:
 
 You need to add manually-labelled feedback data through the {{site.data.keyword.aios_short}} UI as shown below, using a [Python client ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: new_window} or [Rest API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window}.
 
-Please review [Supported model types](/docs/services/ai-openscale/index.html##in-mod) and [Supported frameworks](/docs/services/ai-openscale/index.html#in-fram) for accuracy monitoring limitations.
+Review [Supported model types](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mod) and [Supported frameworks](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) for accuracy monitoring limitations.
 
 <!---
 You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
@@ -83,7 +83,7 @@ You are now presented with the option to directly provide feedback data to your 
 
 Select the *Add Feedback Data* button to upload a CSV-formatted data file; set the delimiter to match your data.
 
-The feedback CSV file is expected to have all feature values, and the manually-assigned target/label value. For example, the drug model training data contains feature values `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`,`"NA"`,`"K"`, and the target/label value `"DRUG"`. The feedback CSV file needs to include values for those fields; an example would look like `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. If a header is provided for the feedback CSV file, then field names are mapped using the header. Otherwise the field order **MUST** be exactly the same as in the training schema.
+The feedback CSV file is expected to have all feature values, and the manually assigned target/label value. For example, the drug model training data contains feature values `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`,`"NA"`,`"K"`, and the target/label value `"DRUG"`. The feedback CSV file needs to include values for those fields; an example would look like `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. If a header is provided for the feedback CSV file, then field names are mapped using the header. Otherwise the field order **MUST** be exactly the same as in the training schema.
 {: important}
 
   ![Accuracy delimiter](images/accuracy-delimit.png)
