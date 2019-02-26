@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-02-25"
 
 ---
 
@@ -38,7 +38,7 @@ The credit risk model provided in this tutorial uses a training dataset that con
 ## Prerequisites
 {: #crt-prereqs}
 
-This tutorial uses a Jupyter notebook that should be run in a Watson Studio project, using a "Python 3.5 with Spark" runtime environment. It requires service credentials for the following {{site.data.keyword.Bluemix_notm}} services:
+This tutorial uses a Jupyter notebook that should be run in a Watson Studio project, using a "Python 3.5 with Spark" runtime environment. It requires service credentials for the following {{site.data.keyword.cloud_notm}} services:
 
 - Cloud Object Storage (to store your Watson Studio project)
 - {{site.data.keyword.aios_short}}
@@ -52,20 +52,20 @@ The Jupyter notebook will train, create and deploy a German Credit Risk model, c
 
 In this tutorial, you will:
 
-- Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services
+- Provision {{site.data.keyword.cloud_notm}} machine learning and storage services
 - Set up a Watson Studio project, and run a Python notebook to create, train and deploy a machine learning model
 - Run a Python notebook to create a data mart, configure performance, accuracy, and fairness monitors, and create data to monitor
 - View results in the {{site.data.keyword.aios_short}} Insights tab
 
-## Provision {{site.data.keyword.Bluemix_notm}} Services
+## Provision {{site.data.keyword.cloud_notm}} Services
 {: #crt-services}
 
-Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net) with your IBM ID. When provisioning services, particularly in the case ofDb2 Warehouse, verify that your selected organization and space are the same for all services.
+Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} with your IBM ID. When provisioning services, particularly in the case ofDb2 Warehouse, verify that your selected organization and space are the same for all services.
 
 ### Create a Watson Studio account
 {: #crt-wstudio}
 
-- [Create a Watson Studio instance](https://console.bluemix.net/catalog/services/watson-studio) if you do not already have one associated with your account:
+- [Create a Watson Studio instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-studio){: new_window} if you do not already have one associated with your account:
 
   ![Watson Studio](images/watson_studio.png)
 
@@ -74,7 +74,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 ### Provision a Cloud Object Storage service
 {: #crt-cos}
 
-- [Provision an Object Storage service](https://console.bluemix.net/catalog/services/cloud-object-storage) if you do not already one associated with your account:
+- [Provision an Object Storage service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} if you do not already one associated with your account:
 
   ![Object Storage](images/object_storage.png)
 
@@ -83,7 +83,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 ### Provision a Watson Machine Learning service
 {: #crt-wml}
 
-- [Provision a Watson Machine Learning instance](https://console.bluemix.net/catalog/services/machine-learning) if you do not already have one associated with your account:
+- [Provision a Watson Machine Learning instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window} if you do not already have one associated with your account:
 
   ![Machine Learning](images/machine_learning.png)
 
@@ -92,7 +92,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 ### Provision a Db2 Warehouse service
 {: #crt-db2}
 
-- [Provision a Db2 Warehouse service](https://console.bluemix.net/catalog/services/db2-warehouse) if you do not already have one associated with your account:
+- [Provision a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/db2-warehouse) if you do not already have one associated with your account:
 
   ![Db2 Warehouse](images/db2_warehouse.png)
 
@@ -101,7 +101,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 ## Set up a Watson Studio project
 {: #crt-set-wstudio}
 
-- Login to your [Watson Studio account](https://dataplatform.ibm.com/). Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.Bluemix_notm}} services:
+- Login to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.cloud_notm}} services:
 
   ![Same Account](images/same_account.png)
 
@@ -123,7 +123,7 @@ Login to your [{{site.data.keyword.Bluemix_notm}} account](https://console.bluem
 
 - Download the following file:
 
-    - [Watson OpenScale and Watson ML engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+    - [Watson OpenScale and Watson ML engine ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -151,7 +151,7 @@ The `Watson OpenScale and Watson ML engine` notebook contains detailed instructi
 
 - In the "Provision services and configure credentials" section, make the following changes:
 
-    - Follow the instructions to create, copy, and paste an {{site.data.keyword.Bluemix_notm}} API key.
+    - Follow the instructions to create, copy, and paste an {{site.data.keyword.cloud_notm}} API key.
 
     - Replace the Watson Machine Learning (WML) and Db2 service credentials with the ones you created previously.
 
@@ -220,4 +220,4 @@ Paste the transaction ID value you copied into the search box and press **Return
 ## Next steps
 {: #crt-next-steps}
 
-- Learn more about [viewing and interpreting the data](/docs/services/ai-openscale/insight-timechart.html) and [monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
+- Learn more about [viewing and interpreting the data](/docs/services/ai-openscale?topic=ai-openscale-it-ov) and [monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
