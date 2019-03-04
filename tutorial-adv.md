@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -89,12 +89,12 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision a Db2 Warehouse service
+### Provision a Databases for PostgreSQL service
 {: #crt-db2}
 
-- [Provision a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/db2-warehouse) if you do not already have one associated with your account:
+- [Provision a Databases for PostgreSQL service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/databases-for-postgresql) if you do not already have one associated with your account:
 
-  ![Db2 Warehouse](images/db2_warehouse.png)
+  ![DB for Postgres](images/dbpostgres.png)
 
 - Give your service a name, choose the Entry plan, and click the **Create** button.
 
@@ -133,9 +133,9 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 
   ![New Notebook Form](images/new_notebook_name.png)
 
-- Then click the **Choose file** button, and select the "german_credit_risk.ipynb" notebook file that you downloaded:
+- Then click the **Choose file** button, and select the "german_credit_lab.ipynb" notebook file that you downloaded:
 
-  ![New Notebook Form](images/new_notebook_name3a.png)
+  ![New Notebook Form](images/new_notebook_name2a.png)
 
 - In the **Select runtime** section, choose a Python 3.5 with Spark option:
 
@@ -153,13 +153,13 @@ The `IBM Watson OpenScale Lab instructions` notebook contains detailed instructi
 
     - Follow the instructions to create, copy, and paste an {{site.data.keyword.cloud_notm}} API key.
 
-    - Replace the Watson Machine Learning (WML) and Db2 service credentials with the ones you created previously.
+    - Replace the Watson Machine Learning (WML) service credentials with the ones you created previously.
 
-    - If you have an already-existing schema in your Db2 instance that you would like to use for {{site.data.keyword.aios_short}} data, specify it as the SCHEMA_NAME variable. Otherwise, leave the variable set to `None` to use the default Db2 schema.
+    - Replace the DB credentials with the ones you created for Databases for PostgreSQL.
 
-    - If you previously configured {{site.data.keyword.aios_short}} to use a free internal PostgreSQL database as your data mart, you can switch to a new data mart that uses Db2 Warehouse. To delete your old PostgreSQL configuration and create a new one using Db2 Warehouse, set the KEEP_MY_INTERNAL_POSTGRES variable to `False`.
+    - If you previously configured {{site.data.keyword.aios_short}} to use a free internal PostgreSQL database as your data mart, you can switch to a new data mart that uses your Databases for PostgreSQL service. To delete your old PostgreSQL configuration and create a new one, set the KEEP_MY_INTERNAL_POSTGRES variable to `False`.
 
-        The notebook will remove your existing internal PostgreSQL data mart and create a new Db2 data mart with the supplied Db2 credentials. **No data migration will occur**.
+        The notebook will remove your existing internal PostgreSQL data mart and create a new data mart with the supplied DB credentials. **No data migration will occur**.
         {: important}
 
 - Once you have provisioned your services and entered your credentials, your notebook is ready to run. Click the **Kernel** menu item, and select **Restart & Clear Output** from the menu:
@@ -168,7 +168,7 @@ The `IBM Watson OpenScale Lab instructions` notebook contains detailed instructi
 
 - Now, run each step of the notebook in sequence. Notice what is happening at each step, as described. Complete all the steps, up through and including the steps in the "Additional data to help debugging" section.
 
-The net result is that you will have created, trained, and deployed the **German Credit Risk Model** to your {{site.data.keyword.aios_short}} service instance. {{site.data.keyword.aios_short}} will be configured to check the model for bias against sex (in this case, Female) or age (in this case, 18-25 years old).
+The net result is that you will have created, trained, and deployed the **Spark German Risk Deployment** model to your {{site.data.keyword.aios_short}} service instance. {{site.data.keyword.aios_short}} will be configured to check the model for bias against sex (in this case, Female) or age (in this case, 18-25 years old).
 
 ## Viewing results
 {: #crt-view-results}
@@ -191,7 +191,7 @@ Select a deployment by clicking the tile on the Insights page. The monitoring da
 
   ![Monitor data](images/insight-monitor-data2.png)
 
-Now, you can review the charts for the data you monitored. For this example, you can see that for the "Age" feature, the group `18 to 19` received the favorable outcome "No Risk" slightly less (76%) than the group `18 to 25` (77%).
+Now, you can review the charts for the data you monitored. For this example, you can see that for the "Sex" feature, the group `female` received the favorable outcome "No Risk" (68%) less than the group `male` (78%).
 
   ![Insight overview](images/insight-review-charts2.png)
 
@@ -201,7 +201,7 @@ Now, you can review the charts for the data you monitored. For this example, you
 Please note that if you are using the internal lite version of PostgreSQL, you may not be able to retrieve your database credentials, which will prevent you from seeing transactions.
 {: note}
 
-Select the **View transactions** button from the charts for the latest biased data.
+Select the latest biased data from the monitoring charts, then select the **View biased transactions** button.
 
   ![View transactions](images/view_transactions.png)
 
@@ -209,11 +209,7 @@ Select the **View transactions** button from the charts for the latest biased da
 
   ![Transaction list](images/transaction_list_cr.png)
 
-Now, click on the **Explainability** tab:
-
-  ![Explainability](images/explainability.png)
-
-Paste the transaction ID value you copied into the search box and press **Return** on your keyboard. You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
+You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
 
   ![View Transaction](images/view_transaction_cr.png)
 
