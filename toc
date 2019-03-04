@@ -52,5 +52,6 @@ Watson OpenScale
 
     {: .topicgroup}
     Developer community
+        [IBM Developer](https://developer.ibm.com/?s=openscale)
         [StackOverflow](https://stackoverflow.com/questions/tagged/ai-openscale)
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-02-28"
 
 ---
 
@@ -50,9 +50,15 @@ To proceed with using the free Lite plan database, simply select that option, th
 
 1.  Select your existing database type (Compose for Postgres, Database for Postgres, or Db2), then a database from the **Database** drop-down menu, and then a **Schema**:
 
+    {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model deployment output and retraining data. Lite Db2 plans are not currently supported.
+    {: note}
+
     ![Select database](images/gs-config-database3.png)
 
 1.  You can also click **Select a different location** to specify a database location outside of your {{site.data.keyword.Bluemix_notm}} account.
+
+    {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model deployment output and retraining data. Lite Db2 plans are not currently supported.
+    {: note}
 
     - Select the **Database Type** (`Compose for PostgreSQL`, `Database for PostgreSQL`, or `Db2`), then provide connection information:
 
