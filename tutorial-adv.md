@@ -118,12 +118,12 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 ## Create and deploy a machine learning model
 {: #crt-make-model}
 
-### Add the `Watson OpenScale and Watson ML engine` notebook to your Watson Studio project
+### Add the `IBM Watson OpenScale Lab instructions` notebook to your Watson Studio project
 {: #crt-add-notebook}
 
 - Download the following file:
 
-    - [Watson OpenScale and Watson ML engine ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [IBM Watson OpenScale Lab instructions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/emartensibm/german-credit/blob/master/german_credit_lab.ipynb){: new_window}
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -133,18 +133,18 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 
   ![New Notebook Form](images/new_notebook_name.png)
 
-- Then click the **Choose file** button, and select the "Watson OpenScale and Watson ML engine.ipynb" notebook file that you downloaded:
+- Then click the **Choose file** button, and select the "german_credit_risk.ipynb" notebook file that you downloaded:
 
-  ![New Notebook Form](images/new_notebook_name2a.png)
+  ![New Notebook Form](images/new_notebook_name3a.png)
 
 - In the **Select runtime** section, choose a Python 3.5 with Spark option:
 
 - Click **Create Notebook**.
 
-### Edit and run the `Watson OpenScale and Watson ML engine` notebook
+### Edit and run the `IBM Watson OpenScale Lab instructions` notebook
 {: #crt-edit-notebook}
 
-The `Watson OpenScale and Watson ML engine` notebook contains detailed instructions for each step in the Python code you will run. As you work through the notebook, take some time to understand what each command is doing.
+The `IBM Watson OpenScale Lab instructions` notebook contains detailed instructions for each step in the Python code you will run. As you work through the notebook, take some time to understand what each command is doing.
 {: tip}
 
 - From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `Watson OpenScale and Watson ML engine` notebook to edit it.
