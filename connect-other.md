@@ -38,7 +38,7 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a ser
 
     ![Select custom](images/connect-custom-deploy.png)
 
-4.  Enter your credentials:
+4.  If you selected the "Enter individual scoring endpoints" tile, enter your credentials:
 
     ![Enter service credentials](images/connect-custom-cred.png)
 
