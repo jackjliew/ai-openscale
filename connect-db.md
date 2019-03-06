@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-28"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -37,7 +37,7 @@ Specify a database for your {{site.data.keyword.aios_short}} instance to use.
 
 - The free Lite plan database is hosted, and is not directly accessible to you.
 - {{site.data.keyword.aios_full}} will have full access to your database, and thus will have full access to your data.
-- The free Lite plan database is not GDPR-compliant. If your model processes personally-identifiable information (PII), you cannot use the free Lite plan database. You must purchase a new database, or use an existing database that conforms to GDPR rules. See [Information security](/docs/services/ai-openscale/information-security.html) to learn more.
+- The free Lite plan database is not GDPR-compliant. If your model processes personally-identifiable information (PII), you cannot use the free Lite plan database. You must purchase a new database, or use an existing database that conforms to GDPR rules. See [Information security](/docs/services/ai-openscale?topic=ai-openscale-is-ov) to learn more.
 
 To proceed with using the free Lite plan database, simply select that option, then review the summary data and click **Save**.
 
@@ -110,7 +110,7 @@ To configure monitors, {{site.data.keyword.aios_short}} requires you to send a s
 Models deployed in Watson Machine Learning are automatically scored by {{site.data.keyword.aios_short}}. If you only have models deployed in Watson Machine Learning, you will not see this screen.
 {: note:}
 
-Select a deployment, in this case "Fraud Detector", and then use the provided `cURL` or `Python` code snippets to log model deployment request and response data. See [Payload logging for non-Watson Machine Learning service instances](/docs/services/ai-openscale/connect-ml.html) for more detail.
+Select a deployment, in this case "Fraud Detector", and then use the provided `cURL` or `Python` code snippets to log model deployment request and response data. See [Payload logging for non-Watson Machine Learning service instances](/docs/services/ai-openscale?topic=ai-openscale-cml-connect) for more detail.
 
 The fields and values in the code snippets need to be substituted with your real values, as the ones provided are only examples.
 {: important}
@@ -122,4 +122,4 @@ Once you have run your payload logging, you will see a checkmark in the "Ready t
 ## Next steps
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [configure monitors for your deployments](/docs/services/ai-openscale/monitor-overview.html).
+{{site.data.keyword.aios_short}} is now ready for you to [configure monitors for your deployments](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
