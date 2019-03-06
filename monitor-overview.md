@@ -31,7 +31,7 @@ Set up and enable monitors for each deployment that you are tracking with {{site
 
     ![Select deployment page](images/config-select-deploy.png)
 
-1.  Select the *Prepare for monitoring* tile, and click **Begin**.
+1.  Select the *Prepare for monitoring* tile.
 
     ![Prepare for monitoring](images/config-prep-monitor.png)
 
