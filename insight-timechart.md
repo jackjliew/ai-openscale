@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-05"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -82,7 +82,7 @@ This option allows you to view the individual transactions that contributed to b
 
 ![View transactions](images/view_transactions.png)
 
-A list of transactions where the deployment has acted in a biased manner is listed. Click the **Explain** link for any of the transaction IDs to get details about that transaction in the Explainability tab. For more information, see [Monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
+A list of transactions where the deployment has acted in a biased manner is listed. Click the **Explain** link for any of the transaction IDs to get details about that transaction in the Explainability tab. For more information, see [Monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
 Select the **All transactions** view to see all transactions from the selected feature (in this example "AGE"), and the selected period (in this example "September 15, 2018 1:00 PM"):
 
@@ -95,7 +95,7 @@ Select the **Biased transactions** view to see only the subset of transactions t
 ## Production model and De-biased model
 {: #it-prdb}
 
-You can use these two tabs to toggle between your production model and a de-biased model created by {{site.data.keyword.aios_short}}. See [Understanding how de-biasing works](/docs/services/ai-openscale/monitor-fairness.html#mf-debias) for more details.
+You can use these two tabs to toggle between your production model and a de-biased model created by {{site.data.keyword.aios_short}}. See [Understanding how de-biasing works](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-debias) for more details.
 
 ![Runtime Training toggle](images/bias-debias.png)
 
