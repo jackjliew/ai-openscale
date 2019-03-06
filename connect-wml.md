@@ -35,7 +35,7 @@ You should have provisioned a WML instance in the same {{site.data.keyword.Bluem
 
     ![Home page](images/gs-config-start.png)
 
-2.  Select the Watson Machine Learning tile and click **Next**.
+2.  Select the Watson Machine Learning tile.
 
     ![Tile selection](images/connect-wml.png)
 
