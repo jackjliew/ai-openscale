@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -45,7 +45,7 @@ Get a quick overview of {{site.data.keyword.aios_short}} by watching this video.
   </div>
 </p>
 
-## Use case and the value of {{site.data.keyword.aios_short}}
+## Use case of {{site.data.keyword.aios_short}}
 {: #gs-use}
 
 Traditional lenders are under pressure to expand their digital portfolio of financial services to a larger and more diverse audience, which requires a new approach to credit risk modeling. Their data science teams currently rely on standard modeling techniques - like decision trees and logistic regression - which work well for moderate datasets, and make recommendations that can be easily explained. This satisfies regulatory requirements that credit lending decisions must be transparent and explainable.
@@ -77,9 +77,9 @@ Each of these issues will be addressed in this tutorial, through the use of {{si
 ## Alternate setup option
 {: #gs-module}
 
-Instead of completing the following tutorial to explore {{site.data.keyword.aios_short}}, technical users can install a Python module that automates the provisioning and configuration of prerequisite services. This module requires that Python 3 is installed, which includes the pip package management system. For instructions, see, [Installing a Python module to set up {{site.data.keyword.aios_short}}](/docs/services/ai-openscale/alt-setup.html).
+Instead of completing the following tutorial to explore {{site.data.keyword.aios_short}}, technical users can install a Python module that automates the provisioning and configuration of prerequisite services. This module requires that Python 3 is installed, which includes the pip package management system. For instructions, see, [Installing a Python module to set up {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module).
 
-Additional tutorial links may be found in the [Additional resources](/docs/services/ai-openscale/addl-rsc.html) topic.
+Additional tutorial links may be found in the [Additional resources](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov) topic.
 
 ## Tutorial objectives
 {: #gs-obj}
@@ -91,7 +91,7 @@ In this tutorial, you will:
 - Configure and explore trust, transparency and explainability for your model
 
 ## Provision prerequisite {{site.data.keyword.Bluemix_notm}} services
-{: #gs-how}
+{: #gs-prps}
 
 In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you need the following accounts and services.
 
@@ -102,7 +102,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 --->
 
-**Important**: For best performance, it's recommended that the prerequisite services are created in the same region as {{site.data.keyword.aios_short}}. To view available locations for {{site.data.keyword.aios_short}}, see [Service availability ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/resources/services_region.html){: new_window}.
+**Important**: For best performance, it's recommended that the prerequisite services are created in the same region as {{site.data.keyword.aios_short}}. To view available locations for {{site.data.keyword.aios_short}}, see [Service availability](/docs/resources?topic=resources-services_region).
 
 1.  Log in to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} with your {{site.data.keyword.ibmid}}.
 1.  For each of the following services that you don't already have associated with your account, create an instance by clicking the link, giving the service a name, selecting the **Lite** (free) plan, and clicking the **Create** button:
@@ -133,7 +133,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 ### Upload training data to Db2 Warehouse
 {: #gs-traindb2}
 
-- Download the [drug_train_data_updated.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data_updated.csv) file. Be sure to save the file download as a .CSV file.
+- Download the [drug_train_data_updated.csv ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/drug_train_data_updated.csv) file. Be sure to save the file download as a .CSV file.
 
 - Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click **Manage** from the left side panel, and then click the **Open** button.
 
@@ -233,7 +233,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 1.  For this tutorial, select your Watson Machine Learning instance from the menu and click **Next**.
 
-    You also have the option to select a different Machine Learning location. See [Specifying a Watson Machine Learning service instance](/docs/services/ai-openscale/connect-wml.html) for additional information.
+    You also have the option to select a different Machine Learning location. See [Specifying a Watson Machine Learning service instance](/docs/services/ai-openscale?topic=ai-openscale-wml-connect) for additional information.
     {: note}
 
     ![Set WML instance](images/gs-set-wml.png)
@@ -244,7 +244,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 1.  Next, you need to choose a database. You have two options: the free Lite plan database, or an existing or new database. For this tutorial, select the **Use the free Lite plan database** tile.
 
-    See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale/connect-db.html) topic. The existing database can be a PostgreSQL database or a Db2 database.
+    See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db) topic. The existing database can be a PostgreSQL database or a Db2 database.
     {: tip}
 
     ![Select database](images/gs-set-lite-db2.png)
@@ -265,7 +265,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 Before you can configure your monitors, you must generate at least one scoring request against your model in order to generate payload logging that the monitors can consume. In this section, you will provide sample data in the form of a JSON file to generate a scoring request.
 
-1.  Download the [credit_payload_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) file.
+1.  Download the [credit_payload_data.json ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) file.
 
 1.  From the **Deployments** tab of your Watson Studio project, click the **credit-risk-deploy** link, click the **Test** tab, and select the JSON input icon.
 
@@ -298,7 +298,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 
     ![Select config type](images/config-manual-monitor.png)
 
-1.  The algorithm type is important for monitoring your model metrics, such as Accuracy. Because the prediction that the model can make is "Risk" or "No Risk", select the **Binary classification** [algorithm type](/docs/services/ai-openscale/monitor-accuracy.html), and click **Next**.
+1.  The algorithm type is important for monitoring your model metrics, such as Accuracy. Because the prediction that the model can make is "Risk" or "No Risk", select the **Binary classification** [algorithm type](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-understand), and click **Next**.
 
     ![Binary](images/binary.png)
 
@@ -332,7 +332,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 1.  Select **Fairness** and click **Begin**.
 
-1.  Read about fairness and click **Next**. For more information, see [Fairness](/docs/services/ai-openscale/monitor-fairness.html).
+1.  Read about fairness and click **Next**. For more information, see [Fairness](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor).
 
 1.  You may now choose which features to monitor for fairness. For each feature you select, {{site.data.keyword.aios_short}} will monitor the deployed model's propensity for a favorable outcome for one group over the other. In this example, we'll monitor the **Sex** and **Age** features.
 
@@ -381,7 +381,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 1.  Select **Accuracy** and click **Begin**.
 
-1.  Read about accuracy and click **Next**. For more information, see [Accuracy](/docs/services/ai-openscale/monitor-accuracy.html).
+1.  Read about accuracy and click **Next**. For more information, see [Accuracy](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).
 
 1.  Set the accuracy alert threshold to 90% and click **Next**.
 
@@ -396,14 +396,14 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 1.  Finally, you're presented with an option to add feedback data, which is covered in the next section. For now, close the window without clicking the **Add Feedback Data** button.
 
-    For more details, see [Configuring the Accuracy monitor](/docs/services/ai-openscale/monitor-accuracy.html#acc-config).
+    For more details, see [Configuring the Accuracy monitor](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-config).
 
 ## Provide a set of sample feedback data to your model
 {: #gs-smpfeed}
 
 To enable monitoring for accuracy, you must provide your model with feedback data. Accuracy data will not appear in the dashboard until that is done. You can generate the requests all at once by adding sample feedback data to the model for scoring. For this task, you'll download a CSV file that contains sample feedback data.
 
-1.  Download the [credit_feedback_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) file.
+1.  Download the [credit_feedback_data.csv ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) file.
 
 1.  In {{site.data.keyword.aios_short}}, click the **Insights** tab.
 
@@ -455,7 +455,7 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 
 1.  Next, review the charts for the data you monitored. For this example, use the **Feature** menu to select either `Age` or `Sex` in order to see details about the monitored data.
 
-    See [Visualizing data for a specific hour](/docs/services/ai-openscale/insight-timechart.html#it-vdet) for more information about how to read these charts.
+    See [Visualizing data for a specific hour](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet) for more information about how to read these charts.
     {: tip}
 
     ![Insight overview](images/insight-review-charts.png)
@@ -478,4 +478,4 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 ## Next steps
 {: #gs-next}
 
-- Learn more about [viewing and interpreting the data](/docs/services/ai-openscale/insight-timechart.html) and [monitoring explainability](/docs/services/ai-openscale/insight-explain.html).
+- Learn more about [viewing and interpreting the data](/docs/services/ai-openscale?topic=ai-openscale-it-ov) and [monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
