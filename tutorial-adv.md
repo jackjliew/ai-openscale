@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -191,7 +191,7 @@ Select a deployment by clicking the tile on the Insights page. The monitoring da
 
   ![Monitor data](images/insight-monitor-data2.png)
 
-Now, you can review the charts for the data you monitored. For this example, you can see that for the "Sex" feature, the group `female` received the favorable outcome "No Risk" (68%) less than the group `male` (78%).
+Now, you can review the charts for the data you monitored. For this example, you can see that for the "Sex" feature, the group `female` received the favorable outcome "No Risk" slightly less (74%) than the group `male` (78%).
 
   ![Insight overview](images/insight-review-charts2.png)
 
@@ -201,7 +201,7 @@ Now, you can review the charts for the data you monitored. For this example, you
 Please note that if you are using the internal lite version of PostgreSQL, you may not be able to retrieve your database credentials, which will prevent you from seeing transactions.
 {: note}
 
-Select the latest biased data from the monitoring charts, then select the **View biased transactions** button.
+Select the **View transactions** button from the charts for the latest biased data.
 
   ![View transactions](images/view_transactions.png)
 
