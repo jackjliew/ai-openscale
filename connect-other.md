@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -81,9 +81,9 @@ You can also reference the following links:
 
 [Python client binding SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
 
-[AIOS configuration UI - sample code ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[Working with Custom machine Learning engine ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
 
-[AIOS Python SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
+[Python SDK for IBM Watson OpenScale ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
 
 - **Input criteria for model to support monitors**
 

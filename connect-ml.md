@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -45,7 +45,7 @@ You will need to have the training data of your model available in Db2 or Cloud 
 
     client = APIClient(service_credentials)
     ```
-  Credentials can be found by following the steps shown in the "[Creating credentials](/docs/services/ai-openscale?topic=ai-openscale-cred-create" topic.
+  Credentials can be found by following the steps shown in the "[Creating credentials](/docs/services/ai-openscale?topic=ai-openscale-cred-create)" topic.
 
 - Create a schema name in your PostgreSQL database
 

@@ -2,13 +2,15 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-07"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -18,6 +20,20 @@ lastupdated: "2019-03-06"
 
 This document outlines new features and known issues for {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
+
+## 5 March 2019
+{: #rn-5March2019}
+
+The following new features and changes to the service are available.
+
+### New features and changes
+{: #rn-5March2019nf}
+
+{{site.data.keyword.aios_short}} features that have been added or enhanced since the previous release include:
+
+- __*New Credit Risk model*__: A new Credit Risk model example/tutorial is supported for all scoring engines. For more information see the [Getting started](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gettingstarted) and [Additional resources](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov#arsc-ov) topics.
+
+- __*Computing debias*__: You can toggle between your production model and a de-biased model created by {{site.data.keyword.aios_short}}. See [Production model and De-biased model](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-prdb) and [Understanding how de-biasing works](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-debias) for more information.
 
 ## 22 February 2019
 {: #rn-22February2019}
