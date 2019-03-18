@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-16"
+
+keywords: release notes, what's new 
+
+subcollection: ai-openscale
 
 ---
 

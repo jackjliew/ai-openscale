@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-16"
+
+keywords: activity, tracker, events, API, public API
+
+subcollection: ai-openscale
 
 ---
 

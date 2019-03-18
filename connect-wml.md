@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-03-16"
+
+keywords: Watson Studio, Watson Machine Learning, wml, machine learning, services
+
+subcollection: ai-openscale
 
 ---
 

@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-02-19"
+  years: 2018, 2019
+lastupdated: "2019-03-16"
+
+keywords: JSON, configuration, configuring, deployment
+
+subcollection: ai-openscale
 
 ---
 

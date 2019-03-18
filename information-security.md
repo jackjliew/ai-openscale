@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-02-25"
+  years: 2018, 2019
+lastupdated: "2019-03-16"
+
+keywords: security, information security, GDPR, 
+
+subcollection: ai-openscale
 
 ---
 

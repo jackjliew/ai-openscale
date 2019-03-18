@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-22"
+lastupdated: "2019-03-16"
+
+keywords: Microsoft Azure, ml, machine learning, services
+
+subcollection: ai-openscale
 
 ---
 

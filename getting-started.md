@@ -10,7 +10,11 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-16"
+
+keywords: ai, getting started, tutorial, understanding
+
+subcollection: ai-openscale
 
 ---
 
@@ -199,12 +203,11 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 ### Deploy the `Credit Risk` model
 {: #gs-depmod}
 
-1.  From the **Assets** tab in your Watson Studio project, scroll to the "Watson Machine Learning models" section, and click the `credit-risk` model you just created.
-
-1.  Click the **Deployments** tab, then select **Add Deployment**.
-
+1.  In your Watson Studio project, click the **Assets** tab, scroll to the **Watson Machine Learning models** section, and click the credit-risk model you just created.
+2.  In the **ACTIONS** column, click the **Actions** ![the actions icon](images/v-three-dots.png) menu and then, click **Deploy**.
+3. From the **Assets** tab in your Watson Studio project, scroll to the **Watson Machine Learning models** section, and click the `credit-risk` model you just created.
+1.  Click the **Deployments** tab, then click **Add Deployment**.
 1.  Enter `credit-risk-deploy` as the name for your deployment, and select the **Web service** deployment type.
-
 1.  Click **Save**.
 
 ## Configure {{site.data.keyword.aios_short}}
@@ -229,7 +232,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 1.  Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The {{site.data.keyword.aios_full}} Getting Started page opens. Click **Begin**.
 
-1.  Select the Watson Machine Learning tile and click **Next**.
+1.  Click the **Watson Machine Learning** tile.
 
 1.  For this tutorial, select your Watson Machine Learning instance from the menu and click **Next**.
 
@@ -325,12 +328,12 @@ Before you can configure your monitors, you must generate at least one scoring r
 
     ![Explainability Inputs](images/config_categories.png)
 
-1.  Review your selection summary and click **Save** to continue.
+1.  Review your selection summary, click **Save**, and then click **OK**.
 
 ### Configure Fairness monitoring
 {: #gs-cfgfair}
 
-1.  Select **Fairness** and click **Begin**.
+1.  Click **Fairness**.
 
 1.  Read about fairness and click **Next**. For more information, see [Fairness](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor).
 
@@ -338,7 +341,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 
     Features are monitored individually, but any debiasing will correct issues for all features together. Click the **Sex** and **Age** tiles, and click **Next**.
 
-1.  {{site.data.keyword.aios_short}} works to detect bias against a monitored group in comparison to a reference group. For the **Sex** feature, add the value `*male*` to the **Reference group**, and the value `*female*` to the **Monitored group**, and click **Next**.
+1.  {{site.data.keyword.aios_short}} works to detect bias against a monitored group in comparison to a reference group. For the **Sex** feature, add the value `male` to the **Reference group**, and the value `female` to the **Monitored group**, and click **Next**.
 
     The model will be flagged as biased for **Sex** if the Risk prediction ratios for the monitored group differ from the ratios for the reference group. So if the model predicts Risk for male customers 60% of the time, and for female customers 20% of the time, it is biased.
 
@@ -368,18 +371,18 @@ Before you can configure your monitors, you must generate at least one scoring r
     For this tutorial, the minimum sample size is set to 100. Normally, a larger sample size is recommended to ensure that the sample size is not too small, which would skew the results.
     {: note}
 
-1.  Review your choices and click **Save**.
+1.  Review your choices, click **Save**, and then click **OK**.
 
     ![Summary of configuration](images/fair-summary.png)
 
-    You will see the following screen that provides a debiased scoring endpoint. Because you will use a GUI method to score your data, simply select **Close** to continue.
+    The following window, which provides a debiased scoring endpoint, appears. Because this tutorial uses the GUI method and not the CLI to score data, to continue, click **OK**.
 
     ![Debias API](images/gs-insight-debias-api.png)
 
 ### Configure accuracy monitoring
 {: #gs-cfgac}
 
-1.  Select **Accuracy** and click **Begin**.
+1.  Click **Accuracy**.
 
 1.  Read about accuracy and click **Next**. For more information, see [Accuracy](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).
 
@@ -392,9 +395,9 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 1.  For the maximum sample size, use 10000. Click **Next**.
 
-1.  Review your choices and click **Save**.
+1.  Review your choices, click **Save**, and then click **OK**.
 
-1.  Finally, you're presented with an option to add feedback data, which is covered in the next section. For now, close the window without clicking the **Add Feedback Data** button.
+1.  Finally, you're presented with an option to add feedback data, which is covered in the next section. For now, close the window by clicking **OK**, without clicking the **Add Feedback Data** button.
 
     For more details, see [Configuring the Accuracy monitor](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-config).
 
@@ -440,7 +443,7 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 
 1. View the Insights page to see an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the 90% threshold.
 
-  Fairness metrics can take up to an hour to display.
+  Fairness and Accuracy metrics can take up to an hour to display. 
   {: tip}
 
   ![Insight overview](images/insight-overview.png)
@@ -448,8 +451,8 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 ### View monitoring data for your deployment
 {: #gs-viewmon}
 
-1.  Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment is shown.
-1.  Slide the marker across the chart to select data for the time frame during which you ran the sample data and sample feedback data. Then select the **View details** link.
+1.  Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment is shown. Note: After you upload the feedback .csv file, you may find that the Fairness or Accuracy data is not updated. To check the result immediately, click the **Check Fairness Now** or **Check Accuracy Now** button.
+1.  Slide the marker across the chart to select data for the time frame during which you ran the sample data and sample feedback data. Then click **View details**.
 
     ![Monitor data](images/insight-monitor-data.png)
 
@@ -463,15 +466,15 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 ### View explainability for a model transaction
 {: #gs-viewextx}
 
-1.  Select the **View biased transactions** button from the charts for the data you monitored.
+1.  Click the **View transactions** button from the charts for the data you monitored.
 
     ![View transactions](images/view_transactions.png)
 
-1.  A list of transactions that contributed to bias for the past hour is shown. Click the **Explain** link for one of the transaction IDs.
+1.  A list of transactions that contributed to bias for the past hour displays. To view a more detailed explanation of a particular transaction, from the **ACTION** column, click **Explain**.
 
     ![Transaction list](images/transaction_list_cr.png)
 
-1.  You will see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the columns that were fed to the model.
+1.  An explanation of how the model arrived at its conclusion displays. This explanation includes how confident the model was, the factors that contributed to the confidence level, and the columns that were fed to the model.
 
     ![View Transaction](images/view_transaction1.png)
 
