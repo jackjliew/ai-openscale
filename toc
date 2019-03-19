@@ -35,6 +35,8 @@ Watson OpenScale
         insight-overview.md
         insight-timechart.md
         insight-explain.md
+
+    openscale-recovery.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

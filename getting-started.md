@@ -12,7 +12,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-03-16"
 
-keywords: ai, getting started, tutorial, understanding
+keywords: ai, getting started, tutorial, understanding, video
 
 subcollection: ai-openscale
 
