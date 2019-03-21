@@ -1,4 +1,4 @@
 # ai-openscale
 IBM Watson OpenScale
 
-This repository is for the IBM Watson OpenScale STAGING build.
+This repository is for the IBM Watson OpenScale PRODUCTION build.
