@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-16"
+lastupdated: "2019-03-26"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -17,6 +17,7 @@ subcollection: ai-openscale
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
@@ -78,20 +79,34 @@ Table 1. Model support details
 
 <sup>1</sup> If your model / framework outputs prediction probabilities
 
-## Supported frameworks
+## Supported machine learning engines and frameworks
 {: #in-fram}
 
-Table 1. Framework support details
+The {{site.data.keyword.aios_short}} service supports the following machine learning engines:
 
-| Algorithms | **Out-of-the-box support** | **[Custom environment](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-works) or Python function support** |
-|:---|:---:|:---:|
-| **Structured Classification** | Spark mllib on WML, AWS Sagemaker Native<sup>1</sup>, Azure ML Studio Native | Scikit-Learn, XGboost, SPSS, Keras, Tensorflow,  Pytorch, Caffe,  or any other framework of your choice |
-| **Structured Regression**     | Spark mllib on WML, AWS Sagemaker Native<sup>1</sup>, Azure ML Studio Native | Scikit-Learn, XGboost, SPSS, Keras, Tensorflow,  Pytorch, Caffe,  or any other framework of your choice |
-| **Text Classification**       | Spark mllib on WML | Coming soon: Keras, Tensorflow, Pytorch, Caffe, and most others |
-| **Image Classification**      | Keras on WML | Coming soon: Keras, Tensorflow, Pytorch, Caffe, and most others ||
-{: caption="Framework support details" caption-side="top"}
+- [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
+- [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)
+- [AWS Sagemaker](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-aws-sage#frmwrks-aws-sage)
+- [Custom](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-custom#frmwrks-custom)
 
-<sup>1</sup> AWS built-in algorithms
+
+- [SAS AI Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-sas#frmwrks-sas)
+{: download}
+- [Google Cloud ML Engine](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-google#frmwrks-google)
+{: download}
+- [SPSS C&DS (ICP only)](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss)
+{: download}
+
+Full support includes the following features:
+
+- Payload logging	
+- Feedback logging	
+- Performance	Accuracy	
+- Run-time bias detection	
+- Explainability	
+- Auto-Debias
+
+
 
 ## Browser support
 {: #in-brw}

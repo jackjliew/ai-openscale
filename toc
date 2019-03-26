@@ -8,6 +8,14 @@ Watson OpenScale
     getting-started.md
     alt-setup.md
     index.md
+
+    {: .topicgroup}
+    Framework support
+        frameworks-wml-cloud.md
+        frameworks-azure-ml-studio.md
+        frameworks-aws-sagemaker.md
+        frameworks-custom.md
+
     tutorial-adv.md
     addl-rsc.md
     {: .navgroup-end}
@@ -51,6 +59,7 @@ Watson OpenScale
 
     {: .navgroup id="help"}
     release-notes.md
+    ai-openscale-faqs.md
 
     {: .topicgroup}
     Developer community

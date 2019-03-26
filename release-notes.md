@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-16"
+lastupdated: "2019-03-26"
 
 keywords: release notes, what's new 
 
@@ -19,7 +19,7 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Release notes
+# What's new
 {: #rn-relnotes}
 
 This document outlines new features and known issues for {{site.data.keyword.aios_full_notm}}.
