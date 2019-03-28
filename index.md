@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-03-28"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -30,6 +30,8 @@ subcollection: ai-openscale
 {{site.data.keyword.aios_full}} is an enterprise-grade environment for AI-infused applications, providing enterprises visibility into how AI is being built, used, and delivering return on investment, at the scale of your business.
 {: shortdesc}
 
+<p>&nbsp;</p>
+
 ## Implementation
 {: #in-imp}
 
@@ -43,6 +45,8 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
     - [Accuracy](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
 
 - **View and edit monitored data**: The {{site.data.keyword.aios_short}} [dashboard](/docs/services/ai-openscale?topic=ai-openscale-io-ov) lets you easily view key insights and identify issues for your deployments. Visualization of individual data points for each monitored feature provides additional detail.
+
+<p>&nbsp;</p>
 
 ## Limitations
 {: #in-lim}
@@ -64,6 +68,8 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
 
 - Currently, explanations cannot be generated for images which are greater than 1 MB in size.
 
+<p>&nbsp;</p>
+
 ## Supported model types
 {: #in-mod}
 
@@ -72,17 +78,19 @@ Table 1. Model support details
 | Algorithms | **Fairness** | **Auto-debias** | **Explain** | **Accuracy** |
 |:---|:---:|:---:|:---:|:---:|
 | **Structured Classification** | Yes | Yes<sup>1</sup> | Yes | Yes |
-| **Structured Regression**     | Yes | Coming soon | Yes | Yes |
-| **Text Classification**       | No - active research topic | No - active research topic | Yes | No |
-| **Image Classification**      | No - active research topic | No - active research topic | Yes | No ||
+| **Structured Regression**     | Yes | No | Yes | Yes |
+| **Text Classification**       | No | No | Yes | No |
+| **Image Classification**      | No | No | Yes | No ||
 {: caption="Model support details" caption-side="top"}
 
 <sup>1</sup> If your model / framework outputs prediction probabilities
 
+<p>&nbsp;</p>
+
 ## Supported machine learning engines and frameworks
 {: #in-fram}
 
-The {{site.data.keyword.aios_short}} service supports the following machine learning engines:
+The {{site.data.keyword.aios_short}} service supports the following machine learning engines. Each runtime supports models that are created in the following frameworks as described in the list of [Supported model types](#in-mod).
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)
@@ -97,7 +105,7 @@ The {{site.data.keyword.aios_short}} service supports the following machine lear
 - [SPSS C&DS (ICP only)](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss)
 {: download}
 
-Full support includes the following features:
+Full support includes the following features for the specific framework, problem, and data type:
 
 - Payload logging	
 - Feedback logging	
@@ -106,22 +114,28 @@ Full support includes the following features:
 - Explainability	
 - Auto-Debias
 
-
+<p>&nbsp;</p>
 
 ## Browser support
 {: #in-brw}
 
 The {{site.data.keyword.aios_short}} service tooling requires the same level of browser software as is required by {{site.data.keyword.cloud_notm}}. See the {{site.data.keyword.cloud_notm}} [Prerequisites](/docs/overview?topic=overview-prereqs-platform#browsers-platform) topic for details.
 
+<p>&nbsp;</p>
+
 ## ModelOps CLI tool
 {: #in-mop}
 
 The [{{site.data.keyword.aios_short}} CLI model operations tool ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Watson/aiopenscale-modelops-cli){: new_window} allows you to execute tasks related to the lifecycle management of machine learning models. This tool is complementary to the {{site.data.keyword.cloud_notm}} CLI tool, augmented with the [machine learning plugin ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/DSXDOC/analyze-data/ml_dlaas_environment.html){: new_window}.
 
+<p>&nbsp;</p>
+
 ## Python client
 {: #in-pyc}
 
 The [{{site.data.keyword.aios_short}} Python client ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/){: new_window} is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service on {{site.data.keyword.cloud_notm}}. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure a logging database, bind your machine learning engine, and select and monitor deployments. For examples using the Python client in this way, see the [{{site.data.keyword.aios_short}} sample notebooks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks).
+
+<p>&nbsp;</p>
 
 ## Next steps
 {: #in-next}

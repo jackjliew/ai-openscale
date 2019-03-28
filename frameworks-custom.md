@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-03-28"
 
 keywords: supported frameworks, models, model types, limitations, limits, custom machine learning engine, custom
 
@@ -26,18 +26,8 @@ subcollection: ai-openscale
 # Custom ML frameworks
 {: #frmwrks-custom}
 
-{{site.data.keyword.aios_full}} fully supports the following custom machine learning frameworks.
+{{site.data.keyword.aios_full}} fully supports the following custom machine learning frameworks:
 {: shortdesc}
-
-Full support includes the following features:
-
-- Payload logging	
-- Feedback logging	
-- Performance	Accuracy	
-- Run-time bias detection	
-- Explainability	
-- Auto-Debias
-
 
 Table 1. Framework support details
 

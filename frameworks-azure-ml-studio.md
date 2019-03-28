@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-03-28"
 
 keywords: supported frameworks, models, model types, limitations, limits, azure
 
@@ -26,18 +26,8 @@ subcollection: ai-openscale
 # Microsoft Azure ML Studio frameworks
 {: #frmwrks-azure}
 
-{{site.data.keyword.aios_full}} fully supports the following Microsoft Azure Machine Learning Studio frameworks.
+{{site.data.keyword.aios_full}} fully supports the following Microsoft Azure Machine Learning Studio frameworks:
 {: shortdesc}
-
-Full support includes the following features:
-
-- Payload logging	
-- Feedback logging	
-- Performance	Accuracy	
-- Run-time bias detection	
-- Explainability	
-- Auto-Debias
-
 
 Table 1. Framework support details
 

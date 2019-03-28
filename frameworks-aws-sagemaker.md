@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-03-28"
 
 keywords: supported frameworks, models, model types, limitations, limits, AWS, Sagemaker, Amazon
 
@@ -26,18 +26,8 @@ subcollection: ai-openscale
 # Amazon SageMaker frameworks
 {: #frmwrks-aws-sage}
 
-{{site.data.keyword.aios_full}} fully supports the following Amazon SageMaker frameworks.
+{{site.data.keyword.aios_full}} fully supports the following Amazon SageMaker frameworks:
 {: shortdesc}
-
-Full support includes the following features:
-
-- Payload logging	
-- Feedback logging	
-- Performance	Accuracy	
-- Run-time bias detection	
-- Explainability	
-- Auto-Debias
-
 
 Table 1. Framework support details
 

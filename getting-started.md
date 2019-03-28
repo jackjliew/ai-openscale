@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-26"
+lastupdated: "2019-03-28"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -433,6 +433,10 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 
 ## Viewing results
 {: #gs-viewres}
+
+After you configure accuracy monitoring, the accuracy check runs after one hour. In a production system, this makes sense so that your dashboard can accumulate feedback data. For the purposes of this tutorial, you'll probably want to trigger the accuracy check manually after you add your feedback data, so that you can see results in the **Insights** dashboard.
+
+To check the result immediately, from the **Insights** page, select a deployment, and then click the **Check Fairness Now** or **Check Accuracy Now** button.
 
 ### View insights for your deployment
 {: #gs-viewin}
