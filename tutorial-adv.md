@@ -191,32 +191,41 @@ The Insights page provides an overview of metrics for your deployed models. You 
 ### View monitoring data for your deployment
 {: #crt-view-mon-data}
 
-Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment will appear. Slide the marker across the chart to select data for a specific one-hour window. Then select the **View details** link.
+1. To view monitoring details, from the **Insights** page, click the tile that corresponds to the deployment. The monitoring data for that deployment appears. 
+2. Slide the marker across the chart to select data for a specific one-hour window. 
+3. Click the **View details** link.
 
   ![Monitor data](images/insight-monitor-data2.png)
 
-Now, you can review the charts for the data you monitored. For this example, you can see that for the "Sex" feature, the group `female` received the favorable outcome "No Risk" slightly less (74%) than the group `male` (78%).
+Now, you can review the charts for the data you monitored. For this example, you can see that for the "Sex" feature, the group `female` received the favorable outcome "No Risk" less (68%) than the group `male` (78%).
 
   ![Insight overview](images/insight-review-charts2.png)
 
 ### View explainability for a model transaction
 {: #crt-view-explain}
 
-Please note that if you are using the internal lite version of PostgreSQL, you may not be able to retrieve your database credentials, which will prevent you from seeing transactions.
+For each deployment, you can see explainability data for specific transactions.
+
+If you already know which transaction you want to view, there's a quick way to look it up with the transaction ID. After you click the deployment tile, from the navigator, click the **Explain a transaction** ![Explain a transaction tab](images/insight-transact-tab.png) icon, type the transaction ID, and press **Enter**.
+{: tip}
+
+If you use the internal lite version of PostgreSQL, you might not be able to retrieve your database credentials. This might prevent you from seeing transactions.
 {: note}
 
-Select the **View transactions** button from the charts for the latest biased data.
+1. From the charts for the latest biased data, click the **View transactions** button.
 
   ![View transactions](images/view_transactions.png)
 
-  A list of transactions where the deployment has acted in a biased manner is listed. Select one of the transactions and click the **Explain** link.
+  A list of transactions where the deployment has acted in a biased manner appears. 
+  
+2. Select one of the transactions and, from the **ACTION** column, click the **Explain** link.
 
   ![Transaction list](images/transaction_list_cr.png)
 
 You will now see an explanation of how the model arrived at its conclusion, including how confident the model was, the factors that contributed to the confidence level, and the attributes fed to the model.
 
   ![View Transaction](images/view_transaction_cr.png)
-
+  
 ## Next steps
 {: #crt-next-steps}
 
