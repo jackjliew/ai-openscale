@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-04-08"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -47,7 +47,7 @@ This tutorial uses a Jupyter notebook that should be run in a Watson Studio proj
 - Cloud Object Storage (to store your Watson Studio project)
 - {{site.data.keyword.aios_short}}
 - Watson Machine Learning
-- Db2 Warehouse
+- (Optional) Databases for PostgreSQL or Db2 Warehouse
 
 The Jupyter notebook will train, create and deploy a German Credit Risk model, configure {{site.data.keyword.aios_short}} to monitor that deployment, and provide seven days' worth of historical records and measurements for viewing in the {{site.data.keyword.aios_short}} Insights dashboard. You can also optionally configure the model for continuous learning with Watson Studio and Spark.
 
@@ -93,14 +93,18 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision a Databases for PostgreSQL service
+### (Optional) Provision a Databases for PostgreSQL or DB2 Warehouse service
 {: #crt-db2}
 
-- [Provision a Databases for PostgreSQL service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/databases-for-postgresql) if you do not already have one associated with your account:
+If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a `Databases for PostgreSQL` or `Db2 Warehouse` service to take full advantage of integration with Watson Studio and continuous learning services. If you choose not to provision a paid service, you can use the free internal PostgreSQL storage with {{site.data.keyword.aios_short}}, but you will not be able to configure continuous learning for your model.
+
+- [Provision a Databases for PostgreSQL service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/databases-for-postgresql) or [a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/db2-warehouse) if you do not already have one associated with your account:
 
   ![DB for Postgres](images/dbpostgres.png)
 
-- Give your service a name, choose the Entry plan, and click the **Create** button.
+  ![Db2 Warehouse](images/db2_warehouse.png)
+
+- Give your service a name, choose the Standard plan (Databases for PostgreSQL) or Entry plan (Db2 Warehouse), and click the **Create** button.
 
 ## Set up a Watson Studio project
 {: #crt-set-wstudio}

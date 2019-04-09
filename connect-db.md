@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-04-09"
 
 keywords: databases, connections, scoring, requests
 
@@ -33,6 +33,9 @@ Specify a database for your {{site.data.keyword.aios_short}} instance to use.
 1.  Choose a database. You have two options: the free Lite plan database, or an existing or new database.
 
     ![Select database](images/gs-config-database.png)
+
+    If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a `Databases for PostgreSQL` or `Db2 Warehouse` service to take full advantage of integration with Watson Studio and continuous learning services. If you choose not to provision a paid service, you can use the free internal PostgreSQL storage with {{site.data.keyword.aios_short}}, but you will not be able to configure continuous learning for your model.
+    {: note}
 
 ### Free Lite plan database
 {: #cdb-lite}
