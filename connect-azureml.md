@@ -19,16 +19,16 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Specifying a Microsoft Azure ML service instance
+# Specifying a Microsoft Azure ML Studio instance
 {: #connect-azure}
 
-Your first step in the {{site.data.keyword.aios_short}} tool is to specify a Microsoft Azure ML service instance. Your Azure ML service instance is where you store your AI models and deployments.
+Your first step in the {{site.data.keyword.aios_short}} tool is to specify a Microsoft Azure ML Studio instance. Your Azure ML Studio instance is where you store your AI models and deployments.
 {: shortdesc}
 
-## Connect your Azure ML Studio service instance
+## Connect your Azure ML Studio instance
 {: #ca-connect}
 
-{{site.data.keyword.aios_short}} connects to AI models and deployments in a Azure ML Studio service instance.
+{{site.data.keyword.aios_short}} connects to AI models and deployments in a Azure ML Studio instance.
 
 1.  From the home page of the {{site.data.keyword.aios_short}} tool, click **Begin**.
 
@@ -36,14 +36,14 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a Mic
 
 1.  Select the **Microsoft Azure ML Studio** tile and click **Next**.
 
-    ![Select Azure ML service](images/connect-azure.png)
+    ![Select Azure ML Studio](images/connect-azure.png)
 
 1.  Enter your credentials:
 
     See [How to: Use the portal to create an Azure AD application and service principal that can access resources ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: new_window} for instructions about how to get your Microsoft Azure credentials.
     {: note}
 
-    ![Enter Azure ML service credentials](images/connect-azure-cred.png)
+    ![Enter Azure ML Studio credentials](images/connect-azure-cred.png)
 
 1.  Click **Next**.
 
