@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-04-22"
 
 keywords: databases, connections, scoring, requests
 
@@ -114,7 +114,7 @@ To proceed with using the free Lite plan database, simply select that option, th
 
 To configure monitors, {{site.data.keyword.aios_short}} requires you to send a scoring request, in order to begin to log the data that will be monitored.
 
-Models deployed in Watson Machine Learning are automatically scored by {{site.data.keyword.aios_short}}. If you only have models deployed in Watson Machine Learning, you will not see this screen.
+Models deployed in Watson Machine Learning are automatically scored by {{site.data.keyword.aios_short}}.
 {: note:}
 
 Select a deployment, in this case "Fraud Detector", and then use the provided `cURL` or `Python` code snippets to log model deployment request and response data. See [Payload logging for non-Watson Machine Learning service instances](/docs/services/ai-openscale?topic=ai-openscale-cml-connect) for more detail.
