@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-04-25"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -38,7 +38,12 @@ Table 1. Framework support details
 | Python function | Regression | Structured |
 | XGBoost | Classification | Structured |
 | XGBoost | Regression | Structured |
+| Keras<sup>1</sup> | Classification | Structured |
+| Keras<sup>1</sup> | Regression | Structured |
 {: caption="Framework support details" caption-side="top"}
+
+<sup>1</sup>Keras support does not include support for fairness.
+{: note}
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-04-25"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -70,27 +70,11 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
 
 <p>&nbsp;</p>
 
-## Supported model types
-{: #in-mod}
-
-Table 1. Model support details
-
-| Algorithms | **Fairness** | **Auto-debias** | **Explain** | **Accuracy** |
-|:---|:---:|:---:|:---:|:---:|
-| **Structured Classification** | Yes | Yes<sup>1</sup> | Yes | Yes |
-| **Structured Regression**     | Yes | No | Yes | Yes |
-| **Text Classification**       | No | No | Yes | No |
-| **Image Classification**      | No | No | Yes | No ||
-{: caption="Model support details" caption-side="top"}
-
-<sup>1</sup> If your model / framework outputs prediction probabilities
-
-<p>&nbsp;</p>
 
 ## Supported machine learning engines and frameworks
 {: #in-fram}
 
-The {{site.data.keyword.aios_short}} service supports the following machine learning engines. Each runtime supports models that are created in the following frameworks as described in the list of [Supported model types](#in-mod).
+The {{site.data.keyword.aios_short}} service supports the following machine learning engines. Each runtime supports models that are created in the following frameworks:
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)

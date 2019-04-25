@@ -6,6 +6,7 @@ Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
+    faststart.md
     alt-setup.md
     index.md
 
@@ -58,8 +59,10 @@ Watson OpenScale
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    gettinghelp.md
     release-notes.md
     ai-openscale-faqs.md
+    [Create a support case](https://cloud.ibm.com/unifiedsupport/supportcenter)
 
     {: .topicgroup}
     Developer community

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-04-25"
 
 keywords: FAQs, frequently asked questions, questions
 
@@ -23,6 +23,7 @@ subcollection: ai-openscale
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # FAQs
 {: #wos-faqs}

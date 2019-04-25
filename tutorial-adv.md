@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-25"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -23,7 +23,7 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Tutorial - (Advanced)
+# Python SDK Tutorial (Advanced)
 {: #crt-ov}
 
 ## Scenario
@@ -126,12 +126,12 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 ## Create and deploy a machine learning model
 {: #crt-make-model}
 
-### Add the `IBM Watson OpenScale Lab instructions` notebook to your Watson Studio project
+### Add the `Working with Watson Machine Learning` notebook to your Watson Studio project
 {: #crt-add-notebook}
 
 - Download the following file:
 
-    - [IBM Watson OpenScale Lab instructions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/emartensibm/german-credit/blob/master/german_credit_lab.ipynb){: new_window}
+    - [Working with Watson Machine Learning ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
 - From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -149,13 +149,13 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 
 - Click **Create Notebook**.
 
-### Edit and run the `IBM Watson OpenScale Lab instructions` notebook
+### Edit and run the `Working with Watson Machine Learning` notebook
 {: #crt-edit-notebook}
 
-The `IBM Watson OpenScale Lab instructions` notebook contains detailed instructions for each step in the Python code you will run. As you work through the notebook, take some time to understand what each command is doing.
+The `Working with Watson Machine Learning` notebook contains detailed instructions for each step in the Python code you will run. As you work through the notebook, take some time to understand what each command is doing.
 {: tip}
 
-- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `IBM Watson OpenScale Lab instructions` notebook to edit it.
+- From the **Assets** tab in your Watson Studio project, click the **Edit** icon next to the `Working with Watson Machine Learning` notebook to edit it.
 
 - In the "Provision services and configure credentials" section, make the following changes:
 
