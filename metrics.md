@@ -28,7 +28,6 @@ Metrics are quantitative measures. You can define custom metrics, and use them a
 1. [Create a custom monitor.](#cst_mtrcs_registration)
 2. [Define the monitor.](#cst_mtrcs_monitor_definitions)
 3. [Create a custom metric.](#cst_mtrcs_metric_definations)
-3. [Set thresholds]()
 
 ## Create a custom monitor
 {: #cst_mtrcs_registration}
