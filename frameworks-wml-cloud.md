@@ -38,8 +38,8 @@ Table 1. Framework support details
 | Python function | Regression | Structured |
 | XGBoost | Classification | Structured |
 | XGBoost | Regression | Structured |
-| Keras<sup>1</sup> | Classification | Structured |
-| Keras<sup>1</sup> | Regression | Structured |
+| Keras with TensorFlow<sup>1</sup> | Classification | Structured |
+| Keras with TensorFlow<sup>1</sup> | Regression | Structured |
 {: caption="Framework support details" caption-side="top"}
 
 <sup>1</sup>Keras support does not include support for fairness.
