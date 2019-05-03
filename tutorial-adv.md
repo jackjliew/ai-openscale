@@ -64,30 +64,30 @@ In this tutorial, you will:
 ## Provision {{site.data.keyword.cloud_notm}} Services
 {: #crt-services}
 
-Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} with your IBM ID. When provisioning services, particularly in the case ofDb2 Warehouse, verify that your selected organization and space are the same for all services.
+Log in to your [{{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} with your {{site.data.keyword.ibmid}}. When provisioning services, particularly if you use Db2 Warehouse, verify that your selected organization and space are the same for all services.
 
-### Create a Watson Studio account
+### Create a {{site.data.keyword.DSX}} account
 {: #crt-wstudio}
 
-- [Create a Watson Studio instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-studio){: new_window} if you do not already have one associated with your account:
+- [Create a {{site.data.keyword.DSX}} instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-studio){: new_window} if you do not already have one associated with your account:
 
   ![Watson Studio](images/watson_studio.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision a Cloud Object Storage service
+### Provision an {{site.data.keyword.cos_full_notm}} service
 {: #crt-cos}
 
-- [Provision an Object Storage service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} if you do not already one associated with your account:
+- [Provision an {{site.data.keyword.cos_short}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} if you do not already one associated with your account:
 
   ![Object Storage](images/object_storage.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-### Provision a Watson Machine Learning service
+### Provision an {{site.data.keyword.pm_full}} service
 {: #crt-wml}
 
-- [Provision a Watson Machine Learning instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window} if you do not already have one associated with your account:
+- [Provision a {{site.data.keyword.pm_short}} instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window} if you do not already have one associated with your account:
 
   ![Machine Learning](images/machine_learning.png)
 
@@ -96,7 +96,7 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 ### (Optional) Provision a Databases for PostgreSQL or DB2 Warehouse service
 {: #crt-db2}
 
-If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a `Databases for PostgreSQL` or `Db2 Warehouse` service to take full advantage of integration with Watson Studio and continuous learning services. If you choose not to provision a paid service, you can use the free internal PostgreSQL storage with {{site.data.keyword.aios_short}}, but you will not be able to configure continuous learning for your model.
+If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a `Databases for PostgreSQL` or `Db2 Warehouse` service to take full advantage of integration with {{site.data.keyword.DSX}} and continuous learning services. If you choose not to provision a paid service, you can use the free internal PostgreSQL storage with {{site.data.keyword.aios_short}}, but you will not be able to configure continuous learning for your model.
 
 - [Provision a Databases for PostgreSQL service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/databases-for-postgresql) or [a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/db2-warehouse) if you do not already have one associated with your account:
 
@@ -106,14 +106,14 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 
 - Give your service a name, choose the Standard plan (Databases for PostgreSQL) or Entry plan (Db2 Warehouse), and click the **Create** button.
 
-## Set up a Watson Studio project
+## Set up a {{site.data.keyword.DSX}} project
 {: #crt-set-wstudio}
 
-- Login to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.cloud_notm}} services:
+- Log in to your [{{site.data.keyword.DSX}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the {{site.data.keyword.avatar}} and verify that the account you are using is the same account you used to create your {{site.data.keyword.cloud_notm}} services:
 
   ![Same Account](images/same_account.png)
 
-- In Watson Studio, begin by creating a new project. Select "Create a project":
+- In {{site.data.keyword.DSX}}, begin by creating a new project. Select "Create a project":
 
   ![Watson Studio create project](images/studio_create_proj.png)
 
@@ -123,17 +123,17 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 
 - Give your project a name and description, make sure the Cloud Object Storage service you created is selected in the **Storage** dropdown, and click **Create**.
 
-## Create and deploy a machine learning model
+## Create and deploy a {{site.data.keyword.pm_short}} model
 {: #crt-make-model}
 
-### Add the `Working with Watson Machine Learning` notebook to your Watson Studio project
+### Add the `Working with Watson Machine Learning` notebook to your {{site.data.keyword.DSX}} project
 {: #crt-add-notebook}
 
 - Download the following file:
 
     - [Working with Watson Machine Learning ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
-- From the **Assets** tab in your Watson Studio project, click the **Add to project** button and select **Notebook** from the dropdown:
+- From the **Assets** tab in your {{site.data.keyword.DSX}} project, click the **Add to project** button and select **Notebook** from the dropdown:
 
   ![Add Connection](images/add_notebook.png)
 
