@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -34,7 +34,7 @@ See more complete information in the [{{site.data.keyword.aios_short}} Python cl
 ## Before you begin
 {: #cml-prereq}
 
-You will need to have the training data of your model available in Db2 or Cloud Object Storage to monitor bias for your model. Explainability and accuracy is not supported for Python functions.
+You will need to have the training data of your model available in Db2 or Cloud Object Storage to monitor bias for your model. Explainability and accuracy is not supported for Python functions. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - Import and initiate {{site.data.keyword.aios_short}}
 

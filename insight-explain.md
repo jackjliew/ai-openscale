@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 keywords: explainability, monitoring, explain, explaining, transactions, transaction ID
 
@@ -19,7 +19,7 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Monitoring explainability
+# Explaining transactions
 {: #ie-ov}
 
 For each deployment, you can see explainability data for specific transactions.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -19,59 +19,42 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Custom metrics
+# Creating custom monitors and metrics
 {: #cst_mtrcs}
 
-Metrics are quantitative measures. You can define custom metrics, and use them alongside the standard metrics monitored in {{site.data.keyword.aios_full}}, and view them on the  {{site.data.keyword.aios_short}} Dashboard. You can create metrics definitions programatically by using the API or by using the **Create New Monitor** function. Depending on the model and feedback data, each metric is calculated periodically or continuously and stored in the data mart.
+Custom monitors consolidate a set of custom metrics that enable you to track, in a quantitative way, any aspect of your model deployment and business application. You can define custom metrics, and use them alongside the standard metrics, such as model quality, performance, or fairness metrics that are monitored in {{site.data.keyword.aios_full}}.
 {: shortdesc}
 
-1. [Create a custom monitor.](#cst_mtrcs_registration)
-2. [Define the monitor.](#cst_mtrcs_monitor_definitions)
-3. [Create a custom metric.](#cst_mtrcs_metric_definations)
+To manage custom monitors and metrics you must use the programmatic interface that is part of the Python SDK. In similar way, you can store custom metrics in the {{site.data.keyword.aios_short}} datamart to access them when needed. Custom metrics are also visualized on the {{site.data.keyword.aios_short}} Dashboard.
 
-## Create a custom monitor
-{: #cst_mtrcs_registration}
+## Managing custom metrics
+{: #cst_mtrc_mgmt}
 
-To create a monitor, you must give it a name and description.
+To work with custom metrics you must perform the following tasks:
 
-1. Click **Create New Monitor**. 
-2. Review information about custom monitors and click **Begin**.
-3. Type a monitor name and description and click **Next**.
+1. Register custom monitor with metrics definition.
+2. Enable custom monitor.
+3. Store metric values.
 
-## Define the monitor
-{: #cst_mtrcs_monitor_definitions}
+The following advanced tutorials shows how to do this:
 
-To define the monitor, you must specify the input and model types that the monitor supports. Not all metrics make sense for certain input or model types.
+- [Working with Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
-1. Select one or more of the following inputs types and click **Next**:
+You can disable and enable again custom monitoring at any time. You can remove custom monitor if you do not need it anymore.
 
-	- Numeric/Categorical Models
-	- Image Models
-	- Unstructured Text Models
-	
-2. Select the model types to support and click **Next**.
+For more information, see the [Python SDK documentation](http://ai-openscale-python-client.mybluemix.net/).
 
-## Create a custom metric
-{: #cst_mtrcs_metric_definations}
-
-In a single run, each monitor can produce multiple metrics, which are defined by a name, description, threshold values, and validation requirements.
-
-1. Type a metric name and description.
-2. Choose whether to assign upper and lower thresholds. Include corresponding values and remediation comments for each threshold that you set. Thresholds can be specified when enabling monitoring for a specific target (e.g. subscription) and updated over time.
-3. Choose whether to enforce a validation requirement, which ensures that the metric is enforced by the API.
-4. Click **Next**.
-5. Review the metric.
-6. To save the metric without adding another, click **Next**, and then click **Save**.
-7. To continue adding metrics, click the **Add another** button.
-
-When you have completed adding metrics, they appear in the list on the **Configuration** page, along with **Accuracy**, **Fairness**, and **Explainability**.
-
-## Visualizing custom metrics
+## Accessing and visualizing custom metrics
 {: #cst_mtrcs_viz}
 
-Multiple metrics that are part of a single custom monitor are visualized on a single chart that displays the following parameters:
+To access and visualize custom metrics you can use programmatic interface. The following advanced tutorials shows how to do this:
 
-- Threshold lower and upper bound values
-- Multiple time series split by the grouping property
+- [Working with Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
-![Custom metric visualisation example](https://ibm.box.com/shared/static/64kfdi6c6lpjjfw3o295hxag2deafibb.png)
+   For more information, see [the Python SDK documentation](http://ai-openscale-python-client.mybluemix.net/).
+
+Visualization of your custom metrics can be find also on the Watson OpenScale Dashboard.
+
+![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)

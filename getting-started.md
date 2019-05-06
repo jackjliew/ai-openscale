@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -58,7 +58,7 @@ To provide credit access to a wider and riskier population, applicant credit his
 
 The data science techniques most suited to these diverse datasets, such as gradient boosted trees and neural networks, can generate highly accurate risk models, but at a cost. Such "black box" models generate opaque predictions that must somehow become transparent, to ensure regulatory approval such as Article 22 of the General Data Protection Regulation (GDPR), or the federal Fair Credit Reporting Act (FCRA) managed by the Consumer Financial Protection Bureau.
 
-The credit risk model provided in this tutorial uses a training dataset that contains 20 attributes about each loan applicant. Two of those attributes - age and sex - can be tested for bias. For this tutorial, the focus will be on bias against sex and age.
+The credit risk model provided in this tutorial uses a training dataset that contains 20 attributes about each loan applicant. Two of those attributes - age and sex - can be tested for bias. For this tutorial, the focus will be on bias against sex and age. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 {{site.data.keyword.aios_short}} will monitor the deployed model's propensity for a favorable outcome ("No Risk") for one group (the Reference Group) over another (the Monitored Group). In this tutorial, the Monitored Group for sex is `female`, while the Monitored Group for age is `19 to 25`.
 
@@ -257,9 +257,9 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
     ![Select deployed models](images/gs-set-deploy0.png)
 
-1.  Next, you need to choose a database. You have two options: the free Lite plan database, or an existing or new database. For this tutorial, select the **Use the free Lite plan database** tile.
+1.  Next, you need to choose a database. You have two options: the free database, or an existing or new database. For this tutorial, select the **Use the free database hosted by {{site.data.keyword.aios_short}}** tile.
 
-    See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db) topic. The existing database can be a PostgreSQL database or a Db2 database.
+    The free database has some important limitations. It is a hosted database that does not give you separate access to it. It gives {{site.data.keyword.aios_short}} acccess to your database and data. It is not GDPR-compliant. See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db) topic. The existing database can be a PostgreSQL database or a Db2 database. 
     {: tip}
 
     ![Select database](images/gs-set-lite-db2.png)
@@ -409,7 +409,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 1.  Review your choices, click **Save**, and then click **OK**.
 
-1.  Finally, you're presented with an option to add feedback data, which is covered in the next section. For now, close the window by clicking **OK**, without clicking the **Add Feedback Data** button.
+1.  Finally, you're presented with an option to add feedback data, which is covered in the next section. For now, close the window by clicking **OK**, without clicking the **Add feedback data** button.
 
     For more details, see [Configuring the Accuracy monitor](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-config).
 
@@ -432,7 +432,7 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 
     ![Edit icon - right side](images/gs-insight-edit-icon.png)
 
-1.  In the Summary side panel, click the **Add Feedback Data** button, and select the `credit_feedback_data.csv` file you downloaded. Select the **Comma (,)** delimiter, and then click **OK**.
+1.  In the Summary side panel, click the **Add feedback data** button, and select the `credit_feedback_data.csv` file you downloaded. Select the **Comma (,)** delimiter, and then click **OK**.
 
     File sizes are currently limited to 8 MB.
     {: note}
@@ -448,7 +448,7 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 
 After you configure accuracy monitoring, the accuracy check runs after one hour. In a production system, this makes sense so that your dashboard can accumulate feedback data. For the purposes of this tutorial, you'll probably want to trigger the accuracy check manually after you add your feedback data, so that you can see results in the **Insights** dashboard.
 
-To check the result immediately, from the **Insights** page, select a deployment, and then click the **Check Fairness Now** or **Check Accuracy Now** button.
+To check the result immediately, from the **Insights** page, select a deployment, and then click the **Check Fairness Now** or **Check quality now** button.
 
 ### View insights for your deployment
 {: #gs-viewin}
@@ -467,7 +467,7 @@ To check the result immediately, from the **Insights** page, select a deployment
 ### View monitoring data for your deployment
 {: #gs-viewmon}
 
-1.  Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment is shown. Note: After you upload the feedback .csv file, you may find that the Fairness or Accuracy data is not updated. To check the result immediately, click the **Check Fairness Now** or **Check Accuracy Now** button.
+1.  Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment is shown. Note: After you upload the feedback .csv file, you may find that the Fairness or Accuracy data is not updated. To check the result immediately, click the **Check Fairness Now** or **Check quality now** button.
 1.  Slide the marker across the chart to select data for the time frame during which you ran the sample data and sample feedback data. Then click **View details**.
 
     ![Monitor data](images/insight-monitor-data.png)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 keywords: deployment, monitors, data
 
@@ -42,7 +42,7 @@ Set up and enable monitors for each deployment that you are tracking with {{site
 ## Working with data
 {: #mo-work-data}
 
-1.  Now you will provide information about your model and training data; click **Next**.
+1.  Now you will provide information about your model and training data; click **Next**. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
     ![Prepare explanation](images/config-what-monitor.png)
 

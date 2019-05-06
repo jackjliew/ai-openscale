@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 keywords: databases, connections, scoring, requests
 
@@ -30,7 +30,7 @@ Specify a database for your {{site.data.keyword.aios_short}} instance to use.
 
 {{site.data.keyword.aios_short}} uses a database to store payload, feedback, and measurement data. Besides selecting a database, you may also select a schema for your database - a schema is a named collection of tables in the database.
 
-1.  Choose a database. You have two options: the free Lite plan database, or an existing or new database.
+1.  Choose a database. You have two options: the free database, or an existing or new database.
 
     ![Select database](images/gs-config-database.png)
 
@@ -40,15 +40,17 @@ Specify a database for your {{site.data.keyword.aios_short}} instance to use.
 ### Free Lite plan database
 {: #cdb-lite}
 
-**NOTE**: The free Lite plan database has some important limitations:
+**NOTE**: The free database has some important limitations:
 
-- The free Lite plan database is hosted, and is not directly accessible to you.
+- The free database is hosted, and is not directly accessible to you.
 - {{site.data.keyword.aios_full}} will have full access to your database, and thus will have full access to your data.
-- The free Lite plan database is not GDPR-compliant. If your model processes personally-identifiable information (PII), you cannot use the free Lite plan database. You must purchase a new database, or use an existing database that conforms to GDPR rules. See [Information security](/docs/services/ai-openscale?topic=ai-openscale-is-ov) to learn more.
+- The free database is not GDPR-compliant. If your model processes personally-identifiable information (PII), you cannot use the free database. You must purchase a new database, or use an existing database that conforms to GDPR rules. See [Information security](/docs/services/ai-openscale?topic=ai-openscale-is-ov) to learn more.
 
-To proceed with using the free Lite plan database, simply select that option, then review the summary data and click **Save**.
+To proceed with using the free database, click **Use the free database hosted by {{site.data.keyword.aios_short}}** tile, then review the summary data, and click **Save**.
 
   ![Select database](images/gs-config-database2.png)
+  
+You can upgrade to another database from the free database, however it is not possible to reconfigure a Compose for Postgres, Database for Postgres, or Db2 instance to the free database. After you upgrade it is impossible to return to using the free database.
 
 ### Existing or new database
 {: #cdb-exn}
@@ -57,7 +59,7 @@ To proceed with using the free Lite plan database, simply select that option, th
 
 1.  Select your existing database type (Compose for Postgres, Database for Postgres, or Db2), then a database from the **Database** drop-down menu, and then a **Schema**:
 
-    {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model deployment output and retraining data. Lite Db2 plans are not currently supported.
+    {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model deployment output and retraining data. Lite Db2 plans are not currently supported. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![Select database](images/gs-config-database3.png)

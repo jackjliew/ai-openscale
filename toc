@@ -8,6 +8,8 @@ Watson OpenScale
     getting-started.md
     faststart.md
     alt-setup.md
+    tutorial-adv.md
+    addl-rsc.md
     index.md
 
     {: .topicgroup}
@@ -16,9 +18,6 @@ Watson OpenScale
         frameworks-azure-ml-studio.md
         frameworks-aws-sagemaker.md
         frameworks-custom.md
-
-    tutorial-adv.md
-    addl-rsc.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -34,15 +33,16 @@ Watson OpenScale
         config-file.md
 
     {: .topicgroup}
-    Working with monitors
+    Configuring monitors
         monitor-overview.md
         monitor-fairness.md
         monitor-accuracy.md
 
     {: .topicgroup}
-    Viewing and editing monitor data
+    Get insights
         insight-overview.md
         insight-timechart.md
+        analyze-metrics-transactions.md
         insight-explain.md
 
     openscale-recovery.md

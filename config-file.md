@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
-keywords: JSON, configuration, configuring, deployment
+keywords: JSON, configuration, configuring, deployment, subscription
 
 subcollection: ai-openscale
 
@@ -23,13 +23,13 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Configure deployment subscription using JSON files
+# Configure asset deployments using JSON configuration files
 {: #cf-ov}
 
-You can import a JSON file to programmatically configure all monitors and features during subscription creation. You can also export the configuration file.
+You can import a JSON file to create and configure all deployments of your asset for monitoring purpose. You can also export the configuration file to configure other assets and their deployments.
 {: shortdesc}
 
-For a good example of how to work with a JSON file to subscribe deployments, see the [Watson OpenScale One API Shot for subscription Python notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). The notebook describes how to configure an Amazon SageMaker asset subscription using a JSON file in a single API call. The remainder of this topic references this notebook.
+For a good example of how to work with a JSON file, see the [Watson OpenScale One API Shot for subscription Python notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). The notebook describes how to create and configure an Amazon SageMaker asset deployments using a JSON file in a single API call. The remainder of this topic references this notebook
 
 ## Load the JSON file content as a Python dictionary
 {: #cf-load-as-dict}
@@ -146,10 +146,10 @@ The file contains configuration data, an example of which is shown below. See th
   'timestamp': '2019-02-11T11:41:01.613Z'}}
   ```
 
-## Add subscription from the configuration file
+## Import from the configuration file
 {: #cf-subscribe}
 
-- Now, run the call to add and configure the subscription for the sample breast cancer prediction model deployment.
+- Now, run the call to add and configure the asset deployment for the sample breast cancer prediction model deployment.
 
     ```python
     subscription = client.data_mart.subscriptions.import_configuration(binding_uid=binding_uid, configuration_data=subscription_configuration)
@@ -158,7 +158,7 @@ The file contains configuration data, an example of which is shown below. See th
   The `binding_uid` parameter is optional if only one ML engine is bound.
   {: note}
 
-## Exporting your JSON file
+## Exporting to the configuration file
 {: #cf-export}
 
 - You can also export the configuration file as JSON:
@@ -170,8 +170,8 @@ The file contains configuration data, an example of which is shown below. See th
 ## Results
 {: #cf-results}
 
-The subscription is created, and the deployed model is configured for use by {{site.data.keyword.aios_short}}.
+The asset deployment is created and configured for use by {{site.data.keyword.aios_short}}.
 
 See more complete information in the [{{site.data.keyword.aios_short}} Python client documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}.
 
-You can also import and export configurations to {{site.data.keyword.aios_short}} using the [import subscription ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} and [export subscription ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} methods.
+You can also import and export configurations to {{site.data.keyword.aios_short}} using the [import subscription ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} and [export subscription ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API methods.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -75,7 +75,7 @@ The chart shows multiple things:
 ## Runtime and Training Data
 {: #it-rtsw}
 
-The Runtime data / Training data switch lets you toggle the differences between your trained model and the data collected at runtime that is triggering a bias warning.
+The Runtime data / Training data switch lets you toggle the differences between your trained model and the data collected at runtime that is triggering a bias warning. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 ![Runtime Training toggle](images/runtime_train_data.png)
 
@@ -95,7 +95,6 @@ Select the **All transactions** view to see all transactions from the selected f
 Select the **Biased transactions** view to see only the subset of transactions that received biased outcomes. Each biased transaction is compared to a similar-but-slightly-altered (perturbed) transaction that shows how changing the value of the monitored feature (AGE) will result in a favorable outcome for the biased transaction:
 
 ![Transaction list biased](images/transaction_list2.png)
-
 
 ## Production model and De-biased model
 {: #it-prdb}
