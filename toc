@@ -37,12 +37,12 @@ Watson OpenScale
         monitor-overview.md
         monitor-fairness.md
         monitor-accuracy.md
+        metrics.md
 
     {: .topicgroup}
     Get insights
         insight-overview.md
         insight-timechart.md
-        analyze-metrics-transactions.md
         insight-explain.md
 
     openscale-recovery.md

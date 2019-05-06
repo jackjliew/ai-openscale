@@ -19,7 +19,7 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Creating custom monitors and metrics
+# Creating custom monitors and metrics ![beta tag](images/beta.png)
 {: #cst_mtrcs}
 
 Custom monitors consolidate a set of custom metrics that enable you to track, in a quantitative way, any aspect of your model deployment and business application. You can define custom metrics, and use them alongside the standard metrics, such as model quality, performance, or fairness metrics that are monitored in {{site.data.keyword.aios_full}}.
@@ -57,4 +57,6 @@ To access and visualize custom metrics you can use programmatic interface. The f
 
 Visualization of your custom metrics can be find also on the Watson OpenScale Dashboard.
 
+<!---
 ![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
+--->
