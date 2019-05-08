@@ -4,6 +4,10 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-03-28"
 
+keywords: Amazon SageMaker, machine learning, services, AWS
+
+subcollection: ai-openscale
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -16,17 +20,17 @@ lastupdated: "2019-03-28"
 {:screen: .screen}
 
 # Amazon SageMaker ML サービス・インスタンスの指定
-{: #csage-sagemaker}
+{: #csm-connect}
 
-{{site.data.keyword.aios_short}} ツールでの最初の手順は、Amazon SageMaker サービス・インスタンスの指定です。Amazon SageMaker サービス・インスタンスに AI モデルとデプロイメントが保管されます。
+{{site.data.keyword.aios_short}} ツールで最初に実行するステップは、Amazon SageMaker サービス・インスタンスの指定です。Amazon SageMaker サービス・インスタンスは、AI モデルとデプロイメントの格納場所となります。
 {: shortdesc}
 
 ## Amazon SageMaker サービス・インスタンスの接続
-{: #csage-config}
+{: #csm-config}
 
-{{site.data.keyword.aios_short}} は、Amazon SageMaker サービス・インスタンス内の AI モデルとデプロイメントに接続します。
+{{site.data.keyword.aios_short}} を、Amazon SageMaker サービス・インスタンスの AI モデルとデプロイメントに接続します。
 
-1.  {{site.data.keyword.aios_short}} ツールのホーム・ページから、**「開始 (Begin)」**をクリックします。
+1.  {{site.data.keyword.aios_short}} ツールのホーム・ページで、**「開始」**をクリックします。
 
     ![ホーム・ページ](images/gs-config-start.png)
 
@@ -34,19 +38,19 @@ lastupdated: "2019-03-28"
 
     ![Amazon SageMaker サービスの選択](images/connect-sage.png)
 
-1.  以下のように、資格情報を入力します。
+1.  資格情報を入力します。
 
     ![Amazon SageMaker サービス資格情報の入力](images/connect-sage-cred.png)
 
 1.  **「次へ」**をクリックします。
 
-1.  デプロイされたモデルのリストが {{site.data.keyword.aios_short}} に表示されるので、モニターするモデルを選択します。
+1.  {{site.data.keyword.aios_short}} によって、デプロイ済みモデルがリストされるので、モニター対象となるモデルを選択します
 
-    ![Amazon SageMaker のデプロイ済みモデルの選択](images/connect-sage-deploys.png)
+    ![Amazon SageMaker デプロイ済みモデルの選択](images/connect-sage-deploys.png)
 
 1.  **「次へ」**をクリックします。
 
-## 次のステップ
-{: #csage-next}
+### 次のステップ
+{: #csm-next}
 
-{{site.data.keyword.aios_short}} で[データベースを指定](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-cdb-connect)する準備ができました。
+{{site.data.keyword.aios_short}} で[データベースを指定する](/docs/services/ai-openscale?topic=ai-openscale-connect-db)準備が整いました。

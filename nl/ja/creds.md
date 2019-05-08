@@ -4,6 +4,10 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-03-28"
 
+keywords: credentials, REST API
+
+subcollection: ai-openscale
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -18,61 +22,24 @@ lastupdated: "2019-03-28"
 {:swift: .ph data-hd-programlang='swift'}
 
 # 資格情報の作成
-{: #cred-creds}
+{: #cred-create}
 
-{{site.data.keyword.aios_short}} の資格情報を作成するには、{{site.data.keyword.cloud_notm}} [コマンド・コンソール](/docs/cli?topic=cloud-cli-ibmcloud-cli)を使用して、以下の手順を実行します。
+{{site.data.keyword.aios_short}} REST API にアクセスするには、プラットフォーム API キーとデータマート (サービス・インスタンス) ID が必要です。プラットフォーム API キーによって、各ユーザーは {{site.data.keyword.cloud_notm}} 内のリソースにアクセスできるようになります。
 
-- API 鍵を取得します。
+エンタープライズ・アカウントの場合、管理者がデータマートを作成し、他のユーザーをそのアカウントに招待し、それらのユーザーに特定の {{site.data.keyword.aios_short}} データマートへのアクセス権を付与できます。その後、ユーザーは自身のプラットフォーム API キーを作成し、同じ {{site.data.keyword.aios_short}} データマートにアクセスできます。そのため、競合やセキュリティー・リスクは生じません。
 
-    ```curl
-    ibmcloud login --sso
-    ibmcloud iam api-key-create 'my_key'
-    ```
+プラットフォーム API キーを作成するには、以下の手順を実行します。
 
-    次のような情報の出力が表示されます。
+- [{{site.data.keyword.cloud_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){: new_window} にログインします。
 
-    ```bash
-    Name         my_key
-    Created At   2018-10-09T14:04+0000
-    API Key      Tg4Gxxxxxxxxxxxxxxxxx_xxxxxxxxxxxxxxxxxQU-nE
-    Locked       false
-    UUID         ApiKey-xxxxxxxxx-afd7-xxxxx-b0e1-xxxxxxxxxxx
-    ```
-- 自分の {{site.data.keyword.cloud_notm}} アカウントで使用しているリソース・グループを確認します。
+- **「管理」**-->**「セキュリティー」**-->**「プラットフォーム API キー」**の順に選択します
 
-  ![クラウド内のリソース・グループ](images/cloud-resource.png)
+    ![プラットフォーム API キー](images/cred-api-key.png)
 
-  `デフォルト`のリソース・グループを使用していない場合は、次のコマンドを実行して、{{site.data.keyword.aios_short}} の資格情報を取得します。
+- プラットフォーム API キーを作成して保存します。
 
-   ```curl
-   ibmcloud target -g myResourceGroup
-   ```
+データマート (またはサービス・インスタンス) ID を検出するには、次のようにします。
 
-  ここで、`myResourceGroup` は、{{site.data.keyword.aios_short}} インスタンスに関連付けられているリソース・グループの名前です。
+- {{site.data.keyword.aios_short}} の**「構成」-->「サマリー」**ページの最初の項目がデータマート (サービス・インスタンス) ID です。
 
-- {{site.data.keyword.aios_short}} インスタンス ID を取得します。
-
-    ```curl
-    ibmcloud resource service-instance '<Your_AI_OpenScale_instance_name>'
-    ```
-    **注:** Windows で {{site.data.keyword.cloud_notm}} コマンド・コンソールを使用している場合は、上記のコマンドの単一引用符 (') を二重引用符 (") に置き換えてください。
-
-    次のような情報の出力が表示されます。
-
-    ```bash
-    Name:                  AI OpenScale-my_instance
-    ID:                    crn:v1:bluemix:public:aiopenscale:us-south:a/c2f2xxxxxxxxxxxx867::
-    GUID:                  03daxxxx-xxxx-xxxx-xxxx-xxxxxxxx38a7
-    Location:              us-south
-    Service Name:          aiopenscale
-    Service Plan Name:     lite
-    Resource Group Name:   Default
-    State:                 active
-    Type:                  service_instance
-    Sub Type:
-    Tags:
-    Created at:            2018-09-17T13:58:43Z
-    Updated at:
-    ```
-
-    `GUID` の値は、ご使用の {{site.data.keyword.aios_short}} インスタンス ID です。
+    ![データマート ID](images/data-mart-id.png)

@@ -4,6 +4,10 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-03-28"
 
+keywords: dashboard, navigating, navigation, insights
+
+subcollection: ai-openscale
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -16,46 +20,60 @@ lastupdated: "2019-03-28"
 {:screen: .screen}
 
 # ダッシュボードのナビゲート
-{: #iov-insights}
+{: #io-ov}
 
-{{site.data.keyword.aios_short}} ダッシュボードを介して、モニターしているすべてのデプロイメントを追跡できます。このダッシュボードは、{{site.data.keyword.aios_short}} 内へのメイン・ビューです。
+モニターしているすべてのデプロイメントは、{{site.data.keyword.aios_short}} ダッシュボードで追跡できます。ダッシュボードは、{{site.data.keyword.aios_short}} の主要なビューです。ダッシュボードは 5 つのタブで構成されています。
 
-  ![「洞察 (Insight)」タブ](images/insight-tabs.png)
+  ![「インサイト」タブ](images/insight-tabs.png)
 
 {: shortdesc}
 
-## 洞察
-{: #iov-dash-tab}
+## インサイト
+{: #io-ins}
 
-「洞察 (Insights)」タブ (![「洞察 (Insight)」ダッシュボード](images/insight-dash-tab.png)) には、デプロイメントのモニターの概略が示されます。
+**「インサイト」**タブ (![「インサイト」ダッシュボード ](images/insight-dash-tab.png)) は、デプロイメント・モニタリングの概略を示します。
 
-  ![「洞察 (Insight)」ダッシュボード](images/insight-dashboard.png)
+  ![「インサイト」ダッシュボード](images/insight-dashboard.png)
 
-- ***モニター対象デプロイメント (Deployments Monitored)*** - この例では、合計で 10 個のデプロイメントがモニターされています。10 のデプロイメントのうち 8 つは、以下の個々のタイルとして表示されます。
+- ***デプロイメント・モニター済み*** - この例では、合計 10 個のデプロイメントがモニターされています。10 個の中の 8 個のデプロイメントは、下の個々のタイルで示されます。
 
-- ***正確度のアラート (Accuracy Alerts)*** - 下記の紫の陰影が付いたタイルに、合計で 3 つの正確度のアラートが示されます。この例では、`「ドライバー・パフォーマンス (Driver Performance)」`、`「市場分析 (Market Analytics)」`、および `「価格リスク (Pricing Risk)」`の各デプロイメントに、正確度の値 `60%`、`65%`、および `79%` がそれぞれ表示されます。
+- ***正確度アラート*** - 下のタイルで合計 3 個の正確度アラートが紫の陰影付けで表されています。この例では、`Driver Performance` デプロイメント、`Market Analytics` デプロイメント、`Pricing Risk` デプロイメントで、正確度の値がそれぞれ `60%`、`65%`、`79%` になっています。
 
-- ***公平性のアラート (Fairness Alerts)*** - 合計で 6 つの公平性のアラートがあります。これらは、ともに紫の陰影付きで、小さな `BIAS` タグの付いた以下のタイルで表されます。この例では、`「ドライバー・パフォーマンス (Driver Performance)」`、`「市場分析 (Market Analytics)」`、`「法規制への適合 (Regulatory Compliance)」`、`「詐欺検出 (Fraud Detection)」`、`「プレミアム最適化 (Premium Optimization)」`、および`「被害額の見積り者 (Damage Cost Estimator)」`の各デプロイメントに、公平性の値 `59%`、`68%`、`62%`、`64%`、`79%`、および `63%` がそれぞれ表示されます。
+- ***公平性アラート*** - ここには合計 6 個の公平性アラートがあり、下のタイルでは紫の陰影付けと小さな `BIAS` タグの両方で表されます。この例では、`Driver Performance`、`Market Analytics`、`Regulatory Compliance`、`Fraud Detection`、`Premium Optimization`、および `Damage Cost Estimator` の各デプロイメントで、公平性の値がそれぞれ `59%`、`68%`、`62%`、`64%`、`79%`、`63%` になっています。
 
-各タイルには、そのデプロイメントのモニター活動のサマリーがあります。なお、`「コール・センター・ルーティング (Call Center Routing)」`デプロイメント・タイルには問題が表示されていませんが、これはかなり安定した正確なモデルであることを示しています。
+.各タイルは、そのデプロイメントのモニタリング・アクティビティーの要約を示します。`Call Center Routing` デプロイメント・タイルは何の問題も示されていないことに注目してください。これは、かなり安定した、正確なモデルであることを示しています。
 
-個々のデプロイメント・タイルのいずれかを選択して、そのデプロイメントに関する詳細を表示します。[公平性、分当たりの平均要求数、および正確度のモニター](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart)を参照してください。
+### 次のステップ
+{: #io-next}
+
+個々のデプロイメント・タイルを選択すると、そのデプロイメントについてより詳しく調べることができます。詳しくは、[公平性、毎分平均要求数、正確度のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov)および[説明可能性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。
 
 ## 構成
-{: #iov-config-tab}
+{: #io-conf}
 
-「構成 (Configuration)」タブ (![「構成 (Configuration)」タブ](images/insight-config-tab.png)) では、選択したデプロイメントの「構成のサマリー (Configuration Summary)」が開きます。
+**「構成」**タブ (![「構成」タブ](images/insight-config-tab.png)) を使用すると、選択したデプロイメントに対応する「構成の要約」が開きます。
 
-  ![構成のサマリー](images/insight-config-summary.png)
+  ![構成の要約](images/insight-config-summary.png)
 
-ここから、デプロイメント・モニターの構成設定を直接編集できます。
+この場所からデプロイメント・モニターの構成設定を直接編集できます。
 
 ## トランザクション
-{: #iov-transact-tab}
+{: #io-tran}
 
-「トランザクション (Transaction)」タブ (![「トランザクション (Transactions)」タブ](images/insight-transact-tab.png)) を使用すると、特定のデプロイメント・トランザクションを説明するための特定のトランザクション ID を検索できます。詳しくは、[説明可能性のモニター](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov)を参照してください。
+**「トランザクションの説明」**タブ (![「トランザクションの説明」タブ](images/insight-transact-tab.png)) では、個々のデプロイメント・トランザクションを説明する特定のトランザクション ID を検索できます。詳しくは、[説明可能性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。
+
+## AI ツール
+{: #io-too}
+
+**「AI ツール」**タブ (![「AI ツール」タブ](images/aitools.png)) を使用すると、追加の IBM AI ツール・オプションへのリンクがあるダイアログが開きます。
+
+- *[Watson Studio Lite プラン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*: Watson Studio は、データの分析と視覚化、データの浄化と具体化、ストリーミング・データの取り込み、または、機械学習モデルの作成、トレーニング、デプロイを行うための環境とツールを提供しています。「無料の Watson Studio ライト・プランに登録」リンクをクリックして、Watson Studio を入手してください。
+
+- *[NeuNetS ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window}* (*ベータ*): Neural Network Synthesizer (略称「NeuNetS」) は現在、ベータ版がリリースされており、Watson Studio で {{site.data.keyword.aios_short}} テクノロジーを使用して AI モデルを合成できます。「モデルの同期」ボタンをクリックして、NeuNetS を操作してください。
+
+  ![NeuNetS ダイアログ](images/neunets-dialog.png)
 
 ## 「ヘルプ」タブ
-{: #iov-help-tab}
+{: #io-help}
 
-「ヘルプ」タブ (![「トランザクション (Transactions)」タブ](images/insight-help-tab.png)) には、{{site.data.keyword.aios_short}} を使用する際に役立つ追加情報が提供されます。
+「ヘルプ」タブ (![「トランザクション」タブ](images/insight-help-tab.png)) は、{{site.data.keyword.aios_short}} の使用に際してユーザーを支援する追加情報を提供します。

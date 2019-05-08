@@ -4,6 +4,10 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-03-28"
 
+keywords: activity, tracker, events, API, public API
+
+subcollection: ai-openscale
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,17 +24,18 @@ lastupdated: "2019-03-28"
 # Activity Tracker イベント
 {: #at-events}
 
-{{site.data.keyword.cloud_notm}} アカウント内で {{site.data.keyword.aios_short}} をサービスとしてプロビジョンしたら、[{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov) で次のイベントを参照できます。
+{{site.data.keyword.aios_short}} を {{site.data.keyword.cloud_notm}} アカウントでサービスとしてプロビジョンした場合、[{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov) で以下のイベントを表示できます。
+{: shortdesc}
 
-## パブリック API に関するイベント
+## パブリック API のイベント
 {: #at-pubapi}
 
 | アクション | 説明 |
 | -- | -- |
-| aiopenscale.metrics.create | {{site.data.keyword.aios_short}} インスタンス内でメトリックを保管します |
-| aiopenscale.payload.create | {{site.data.keyword.aios_short}} インスタンス内でペイロードを記録します |
+| aiopenscale.metrics.create | {{site.data.keyword.aios_short}} インスタンスにメトリックを保管します |
+| aiopenscale.payload.create | {{site.data.keyword.aios_short}} インスタンスにペイロードを記録します |
 
-## プライベート API に関するイベント
+## プライベート API のイベント
 {: #at-priapi}
 
 | アクション | 説明 |

@@ -4,12 +4,14 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-03-28"
 
+keywords: language support, 
+
+subcollection: ai-openscale
+
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:note: .note}
-{:important: .important}
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -22,4 +24,4 @@ lastupdated: "2019-03-28"
 # サポートされる言語
 {: #sl-langs}
 
-現在、{{site.data.keyword.aios_short}} でサポートされているのは、英語のみです。
+{{site.data.keyword.aios_short}} では現在、英語のみをサポートしています。
