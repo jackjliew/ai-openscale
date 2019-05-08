@@ -1,0 +1,58 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="ai-openscale-icp" audience="service" href="/docs/services/ai-openscale-icp/getting-started.html" path="services/ai-openscale-icp"}
+Watson OpenScale for ICP for Data
+
+    {: .navgroup id="learn"}
+    install-icp.md
+    getting-started.md
+    index.md
+    tutorial-adv.md
+    addl-rsc.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Watson OpenScale の構成
+        creds.md
+        connect-wml.md
+        connect-other.md
+        connect-spss.md
+        connect-azureml.md
+        connect-sagemaker.md
+        connect-ml.md
+        connect-deploy.md
+        connect-db.md
+
+    {: .topicgroup}
+    モニターの処理
+        monitor-overview.md
+        monitor-fairness.md
+        monitor-accuracy.md
+
+    {: .topicgroup}
+    モニター・データの表示と編集
+        insight-overview.md
+        insight-timechart.md
+        insight-explain.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API リファレンス](https://cloud.ibm.com/apidocs/ai-openscale)
+    [ModelOps CLI](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
+    [Python クライアント](http://ai-openscale-python-client.mybluemix.net/)
+    activity-tracker.md
+    information-security.md
+    [Watson GitHub リポジトリー](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+    troubleshoot-icp.md
+    logs-icp.md
+
+    {: .topicgroup}
+    開発者コミュニティー
+        [StackOverflow](https://stackoverflow.com/questions/tagged/ai-openscale)
+    {: .navgroup-end}
