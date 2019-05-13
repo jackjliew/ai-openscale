@@ -34,8 +34,8 @@ IBM は、お客様やパートナーに、データ・プライバシー、セ�
 
 以下の場所で作成された {{site.data.keyword.cloud}} {{site.data.keyword.watson}} リソースの GDPR サポートを要請する必要がある場合の手順
 
--   EU 内の場合、[EU で作成された IBM Cloud Watson リソースのサポートの要求](/docs/services/watson?topic=watson-gdpr-sar#request-EU)を参照してください。
--   EU 外の場合、[EU 外のリソースのサポートの要求](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU)を参照してください。
+-   EU 内の場合、[EU で作成された IBM Cloud Watson リソースのサポートのリクエスト](/docs/services/watson?topic=watson-gdpr-sar#request-EU)を参照してください。
+-   EU 外の場合、[EU 外のリソースのサポートのリクエスト](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU)を参照してください。
 
 ## EU 一般データ保護規則 (GDPR)
 {: #is-gdpr}

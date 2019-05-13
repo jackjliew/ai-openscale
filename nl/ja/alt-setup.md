@@ -72,30 +72,30 @@ ibm-ai-openscale-cli --apikey <Your API key>
 ## {{site.data.keyword.aios_short}} における結果の表示
 {: #as-open}
 
-モデルの公平性と正確度に関するインサイト、モニター対象データの詳細、および個々のトランザクションの説明可能性を表示するには、[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を開きます。
+モデルの公平性と正解率に関する洞察、モニター対象データの詳細、および個々のトランザクションの説明性を表示するには、[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を開きます。
 
 - サンプル・データのシナリオを把握するには、[{{site.data.keyword.aios_short}} のユースケースと利用価値に関する説明](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gs-use)を参照してください。
 
-### インサイトの表示
+### 洞察の表示
 {: #as-insights}
 
-[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} で**「インサイト」**タブをクリックします。このタブには、デプロイ済みモデルのメトリック概要が示されます。![インサイト](images/insight-dash-tab.png)
+[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} で**「洞察」**タブをクリックします。このタブには、デプロイ済みモデルのメトリック概要が示されます。![洞察](images/insight-dash-tab.png)
 
-- 「インサイト」ページには、公平性と正確度に関する問題が一目で分かるように表示されます。問題の判定には、構成されたしきい値が使用されます。
+- 「洞察」ページには、公平性と正解率に関する問題が一目で分かるように表示されます。問題の判定には、構成されたしきい値が使用されます。
 
 - 各デプロイメントはタイルとして表示されます。以下の画面キャプチャーに示すように、このモジュールでは `GermanCreditRiskModel` というデプロイメントが構成されています。
 
-  ![「インサイト」の概要](images/setup01-0206.png)
+  ![「洞察」の概要](images/setup01-0206.png)
 
 ### モニタリング・データの表示
 {: #as-monitoring}
 
-1. 「インサイト」ページで `GermanCreditRiskModel` タイルをクリックして、モニター対象データに関する詳細を表示します。
+1. 「洞察」ページで `GermanCreditRiskModel` タイルをクリックして、モニター対象データに関する詳細を表示します。
 2. グラフの上でマーカーをスライドさせ、データを表示する日時期間を表示して**「詳細を表示します」**リンクをクリックします。
 
    - 例えば、以下の画面には、特定の日時のデータが表示されています。モジュールの実行タイミングによって日時は異なります。
 
-   - 時系列グラフの解釈について詳しくは、[公平性、毎分平均要求数、正確度のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
+   - 時系列グラフの解釈について詳しくは、[公平性、毎分平均リクエスト数、正解率のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
 
     ![モニター・データ](images/setup02-0206.png)
 
@@ -103,16 +103,16 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
   - 以下の画面キャプチャーでは、バイアスが存在しないことに注目してください。
 
-  - 特定時刻におけるデータ・ポイントのグラフの解釈について詳しくは、[公平性、毎分平均要求数、正確度のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp)を参照してください。
+  - 特定時刻におけるデータ・ポイントのグラフの解釈について詳しくは、[公平性、毎分平均リクエスト数、正解率のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp)を参照してください。
 
     ![詳細を表示します](images/setup03-0206.png)
 
-### 説明可能性の表示
+### 説明性の表示
 {: #as-explain}
 
 特定の期間にバイアスが存在する要因について理解するには、前のセクションの可視化画面に示されているように、**「トランザクションの表示」**ボタンを選択します。
 
-過去の時刻においてバイアスが存在するトランザクションのトランザクション ID がリストされます。このモジュールで使用されるモデルの場合、選択可能な要求においてはバイアスが存在しません。そのため、以下の画面キャプチャーでは、対象期間において表示されているトランザクションはありません。
+過去の時刻においてバイアスが存在するトランザクションのトランザクション ID がリストされます。このモジュールで使用されるモデルの場合、選択可能なリクエストにおいてはバイアスが存在しません。そのため、以下の画面キャプチャーでは、対象期間において表示されているトランザクションはありません。
 
   ![トランザクションのないトランザクション・リスト](images/setup06-0206.png)
 
@@ -122,6 +122,6 @@ ibm-ai-openscale-cli --apikey <Your API key>
 {: #as-info}
 
 - バイアスについては、[公平性](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)を参照してください。
-- モデルの予測結果の精度については、[正確度](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)を参照してください。
-- グラフとデータの解釈方法については、[公平性、毎分平均要求数、正確度のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
-- 背後にある要因が結果に及ぼす影響については、[説明可能性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。
+- モデルの予測結果の精度については、[正解率](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)を参照してください。
+- グラフとデータの解釈方法については、[公平性、毎分平均リクエスト数、正解率のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
+- 背後にある要因が結果に及ぼす影響については、[説明性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。

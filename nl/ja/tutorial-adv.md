@@ -49,7 +49,7 @@ subcollection: ai-openscale
 - Watson Machine Learning
 - (オプション) Databases for PostgreSQL または Db2 Warehouse
 
-Jupyter ノートブックは、German Credit Risk モデルをトレーニング、作成、デプロイし、デプロイメントをモニターするように {{site.data.keyword.aios_short}} を構成し、{{site.data.keyword.aios_short}} の「インサイト」ダッシュボードに表示する 7 日分の履歴レコードと測定値を提供します。また、Watson Studio と Spark を使用した継続的な学習のためにモデルを構成することもできます。
+Jupyter ノートブックは、German Credit Risk モデルをトレーニング、作成、デプロイし、デプロイメントをモニターするように {{site.data.keyword.aios_short}} を構成し、{{site.data.keyword.aios_short}} の「洞察」ダッシュボードに表示する 7 日分の履歴レコードと測定値を提供します。また、Watson Studio と Spark を使用した継続的な学習のためにモデルを構成することもできます。
 
 ## 概要
 {: #crt-intro}
@@ -58,8 +58,8 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 - {{site.data.keyword.cloud_notm}} の機械学習サービスとストレージ・サービスをプロビジョンします
 - 機械学習モデルを作成、トレーニング、およびデプロイするために、Watson Studio プロジェクトをセットアップして Python ノートブックを実行します
-- Python ノートブックを実行することによって、データマートを作成し、パフォーマンス・モニター、正確度モニター、および公平性モニターを構成し、モニター対象データを作成します
-- {{site.data.keyword.aios_short}} の「インサイト」タブで結果を表示します
+- Python ノートブックを実行することによって、データマートを作成し、パフォーマンス・モニター、正解率モニター、および公平性モニターを構成し、モニター対象データを作成します
+- {{site.data.keyword.aios_short}} の「洞察」タブで結果を表示します
 
 ## {{site.data.keyword.cloud_notm}} サービスのプロビジョン
 {: #crt-services}
@@ -181,33 +181,33 @@ IBM ID で [{{site.data.keyword.cloud_notm}} アカウント ![外部リンク�
 ## 結果の表示
 {: #crt-view-results}
 
-### デプロイメントに関するインサイトの表示
+### デプロイメントに関する洞察の表示
 {: #crt-view-insights}
 
 [{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を使用して**「Insights」**タブをクリックします。
 
-  ![インサイト](images/insight-dash-tab.png)
+  ![洞察](images/insight-dash-tab.png)
 
-「インサイト」ページには、デプロイ済みモデルのメトリックの概要が表示されます。ノートブックの実行時に設定したしきい値を下回っている公平性メトリックまたは正確度メトリックのアラートを簡単に確認できます。このチュートリアルで使用するデータと設定により、以下のような正確度メトリックと公平性メトリックが作成されます。
+「洞察」ページには、デプロイ済みモデルのメトリックの概要が表示されます。ノートブックの実行時に設定したしきい値を下回っている公平性メトリックまたは正解率メトリックのアラートを簡単に確認できます。このチュートリアルで使用するデータと設定により、以下のような正解率メトリックと公平性メトリックが作成されます。
 
-  ![「インサイト」の概要](images/insight-overview-adv-tutorial-2.png)
+  ![「洞察」の概要](images/insight-overview-adv-tutorial-2.png)
 
 ### デプロイメントのモニタリング・データの表示
 {: #crt-view-mon-data}
 
-1. モニタリングの詳細を表示するには、**「インサイト」**ページでデプロイメントに対応するタイルをクリックします。そのデプロイメントのモニタリング・データが表示されます。 
+1. モニタリングの詳細を表示するには、**「洞察」**ページでデプロイメントに対応するタイルをクリックします。そのデプロイメントのモニタリング・データが表示されます。 
 2. グラフの上でマーカーをスライドさせ、特定の 1 時間枠のデータを選択します。 
 3. **「詳細を表示します」**リンクをクリックします。
 
   ![モニター・データ](images/insight-monitor-data2.png)
 
-これで、モニターしたデータのグラフを確認できます。この例では、「Sex」フィーチャーにおいて、`female` グループが好ましい結果 (「No Risk」) になる確率 (68%) は `male` グループ (78%) より低いことがわかります。
-  ![「インサイト」の概要](images/insight-review-charts2.png)
+これで、モニターしたデータのグラフを確認できます。この例では、「Sex」項目において、`female` グループが好ましい結果 (「No Risk」) になる確率 (68%) は `male` グループ (78%) より低いことがわかります。
+  ![「洞察」の概要](images/insight-review-charts2.png)
 
-### モデル・トランザクションの説明可能性の表示
+### モデル・トランザクションの説明性の表示
 {: #crt-view-explain}
 
-デプロイメントごとに、特定のトランザクションについての説明可能性データを表示することができます。
+デプロイメントごとに、特定のトランザクションについての説明性データを表示することができます。
 
 確認するトランザクションが既に分かっている場合、トランザクション ID を使用して簡単に確認できます。デプロイメント・タイルをクリックした後で、ナビゲーターで**「トランザクションの説明」**![「トランザクションの説明」タブ](images/insight-transact-tab.png) アイコンをクリックし、トランザクション ID を入力して、**Enter** キーを押します。
 {: tip}
@@ -225,11 +225,11 @@ PostgreSQL の内部ライト・バージョンを使用している場合は、
 
   ![トランザクション・リスト](images/transaction_list_cr.png)
 
-モデルがこの結論に達した理由の説明 (モデルの信頼度、信頼性レベルに貢献した要因、モデルに取り込まれた属性など) が表示されます。
+モデルがこの結論に達した理由の説明 (モデルの確信度、確信度レベルに貢献した要因、モデルに取り込まれた属性など) が表示されます。
 
   ![トランザクションの表示](images/view_transaction_cr.png)
   
 ## 次のステップ
 {: #crt-next-steps}
 
-- 詳しくは、[データの表示と解釈](/docs/services/ai-openscale?topic=ai-openscale-it-ov)および[説明可能性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。
+- 詳しくは、[データの表示と解釈](/docs/services/ai-openscale?topic=ai-openscale-it-ov)および[説明性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。

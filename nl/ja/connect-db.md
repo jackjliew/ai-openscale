@@ -109,15 +109,15 @@ subcollection: ai-openscale
 
 1.  **「次へ」**をクリックして、要約データを確認し、**「保存」**をクリックします。
 
-## スコアリング要求の送信
+## 評価リクエストの送信
 {: #cdb-score}
 
-モニターを構成するには、モニター対象となるデータのログ記録を開始するために、スコアリング要求を送信するよう {{site.data.keyword.aios_short}} によって求められます。
+モニターを構成するには、モニター対象となるデータのログ記録を開始するために、評価リクエストを送信するよう {{site.data.keyword.aios_short}} によって求められます。
 
-Watson Machine Learning でデプロイしたモデルは {{site.data.keyword.aios_short}} によって自動的にスコアリングされます。Watson Machine Learning でデプロイしたモデルしか存在しない場合、この画面は表示されません。
+Watson Machine Learning でデプロイしたモデルは {{site.data.keyword.aios_short}} によって自動的に評価されます。Watson Machine Learning でデプロイしたモデルしか存在しない場合、この画面は表示されません。
 {: note:}
 
-デプロイメント (この場合「Fraud Detector」) を選択し、提供されている `cURL` または `Python` のコード・スニペットを使用して、モデル・デプロイメントの要求と応答のデータをログ記録します。詳細については、[Watson Machine Learning サービス以外のインスタンスのペイロード・ロギング](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)を参照してください。
+デプロイメント (この場合「Fraud Detector」) を選択し、提供されている `cURL` または `Python` のコード・スニペットを使用して、モデル・デプロイメントのリクエストと応答のデータをログ記録します。詳細については、[Watson Machine Learning サービス以外のインスタンスのペイロード・ロギング](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)を参照してください。
 
 提供されている値は単なる例であるため、コード・スニペット内のフィールドと値を、実際の値に置換する必要があります。
 {: important}

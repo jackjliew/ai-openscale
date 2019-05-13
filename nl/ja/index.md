@@ -42,9 +42,9 @@ subcollection: ai-openscale
 - **モニターの使用**: 各デプロイメントで、{{site.data.keyword.aios_short}} が対象デプロイメントをモニターする方法を構成します。以下についてモニターできます。
 
     - [公平性](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
-    - [正確度](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
+    - [正解率](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
 
-- **モニター対象データの表示と編集**: {{site.data.keyword.aios_short}}[ダッシュボード](/docs/services/ai-openscale?topic=ai-openscale-io-ov)を利用すると、主要なインサイトを簡単に確認し、デプロイメントの問題を特定できます。各モニター対象フィーチャーのそれぞれのデータ・ポイントを可視化することによって、詳細を確認できます。
+- **モニター対象データの表示と編集**: {{site.data.keyword.aios_short}}[ダッシュボード](/docs/services/ai-openscale?topic=ai-openscale-io-ov)を利用すると、主要な洞察を簡単に確認し、デプロイメントの問題を特定できます。各モニター対象項目のそれぞれのデータ・ポイントを可視化することによって、詳細を確認できます。
 
 <p>&nbsp;</p>
 
@@ -75,7 +75,7 @@ subcollection: ai-openscale
 
 表 1. モデルのサポート詳細
 
-| アルゴリズム | **公平性** | **自動バイアス排除** | **説明** | **正確度** |
+| アルゴリズム | **公平性** | **自動バイアス緩和** | **説明** | **正解率** |
 |:---|:---:|:---:|:---:|:---:|
 | **構造化分類** | はい | はい<sup>1</sup> | はい | はい |
 | **構造化回帰**     | はい | いいえ | はい | はい |
@@ -105,14 +105,14 @@ subcollection: ai-openscale
 - [SPSS C&DS (ICP のみ)](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss)
 {: download}
 
-完全なサポートには、特定のフレームワーク、問題、データ・タイプ用の以下のフィーチャーも含まれます。
+完全なサポートには、特定のフレームワーク、問題、データ・タイプ用の以下の項目も含まれます。
 
 - ペイロード・ロギング	
 - フィードバック・ロギング	
-- パフォーマンスの正確度	
+- パフォーマンスの正解率	
 - 実行時のバイアス検出	
-- 説明可能性	
-- 自動バイアス排除
+- 説明性	
+- 自動バイアス緩和
 
 <p>&nbsp;</p>
 

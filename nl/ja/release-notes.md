@@ -22,48 +22,48 @@ subcollection: ai-openscale
 # 新機能
 {: #rn-relnotes}
 
-このドキュメントでは、{{site.data.keyword.aios_full_notm}} の新しいフィーチャーと既知の問題について概説します。
+このドキュメントでは、{{site.data.keyword.aios_full_notm}} の新しい項目と既知の問題について概説します。
 {: shortdesc}
 
 ## 2019 年 3 月 5 日
 {: #rn-5March2019}
 
-本サービスに対する以下の新しいフィーチャーと変更点があります。
+本サービスに対する以下の新しい項目と変更点があります。
 
-### 新しいフィーチャーと変更点
+### 新しい項目と変更点
 {: #rn-5March2019nf}
 
-直前のリリース以降に追加または拡張された {{site.data.keyword.aios_short}} のフィーチャーには以下のものがあります。
+直前のリリース以降に追加または拡張された {{site.data.keyword.aios_short}} の項目には以下のものがあります。
 
-- __*新しい信用リスク・モデル*__: 新しい信用リスク・モデルの例/チュートリアルは、すべてのスコアリング・エンジンに対応しています。詳しくは、[入門](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gettingstarted)および[追加リソース](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov#arsc-ov)・トピックを参照してください。
+- __*新しい信用リスク・モデル*__: 新しい信用リスク・モデルの例/チュートリアルは、すべての評価エンジンに対応しています。詳しくは、[入門](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gettingstarted)および[追加リソース](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov#arsc-ov)・トピックを参照してください。
 
-- __*バイアス排除の計算*__: {{site.data.keyword.aios_short}} で作成されたバイアスが排除されたモデルと実動モデルの間で切り替えることができます。詳しくは、[実動モデルとバイアスが排除されたモデル](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-prdb)および[バイアス排除の処理の流れについて](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-debias)を参照してください。
+- __*バイアス緩和の計算*__: {{site.data.keyword.aios_short}} で作成されたバイアスが排除されたモデルと実動モデルの間で切り替えることができます。詳しくは、[実動モデルとバイアスが排除されたモデル](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-prdb)および[バイアス緩和の処理の流れについて](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-debias)を参照してください。
 
 ## 2019 年 2 月 22 日
 {: #rn-22February2019}
 
-本サービスに対する以下の新しいフィーチャーと変更点があります。
+本サービスに対する以下の新しい項目と変更点があります。
 
-### 新しいフィーチャーと変更点
+### 新しい項目と変更点
 {: #rn-22February2019nf}
 
-直前のリリース以降に追加または拡張された {{site.data.keyword.aios_short}} のフィーチャーには以下のものがあります。
+直前のリリース以降に追加または拡張された {{site.data.keyword.aios_short}} の項目には以下のものがあります。
 
-- __*UI の更新*__: JSON ファイルをインポートして、サブスクリプションの作成時にすべてのモニターとフィーチャーをプログラムで構成できます。構成ファイルをエクスポートすることもできます。詳しくは、[JSON ファイルを使用したデプロイメント・サブスクリプションの構成](/docs/services/ai-openscale?topic=ai-openscale-cf-ov)トピックを参照してください。
+- __*UI の更新*__: JSON ファイルをインポートして、サブスクリプションの作成時にすべてのモニターと項目をプログラムで構成できます。構成ファイルをエクスポートすることもできます。詳しくは、[JSON ファイルを使用したデプロイメント・サブスクリプションの構成](/docs/services/ai-openscale?topic=ai-openscale-cf-ov)トピックを参照してください。
 
 ## 2019 年 2 月 7 日
 {: #rn-7February2019}
 
-本サービスに対する以下の新しいフィーチャーと変更点があります。
+本サービスに対する以下の新しい項目と変更点があります。
 
-### 新しいフィーチャーと変更点
+### 新しい項目と変更点
 {: #rn-7February2019nf}
 
-直前のリリース以降に追加または拡張された {{site.data.keyword.aios_short}} のフィーチャーには以下のものがあります。
+直前のリリース以降に追加または拡張された {{site.data.keyword.aios_short}} の項目には以下のものがあります。
 
-- __*UI の更新*__: {{site.data.keyword.aios_short}} ユーザー・インターフェースでいくつかの機能が改善されています。これには、[オンデマンドで公平性と正確度を確認する](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdep)方法や、[公平性を示す詳細なグラフ](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-tra)からトランザクション・リストを表示できる機能などがあります。
+- __*UI の更新*__: {{site.data.keyword.aios_short}} ユーザー・インターフェースでいくつかの機能が改善されています。これには、[オンデマンドで公平性と正解率を確認する](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdep)方法や、[公平性を示す詳細なグラフ](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-tra)からトランザクション・リストを表示できる機能などがあります。
 
-- __*説明可能性の機能強化*__: 関連する肯定的 (PP) 値および関連する否定的 (PN) 値ですべての数値の精度/位取りが同一になりました。
+- __*説明性の機能強化*__: 関連する肯定的 (PP) 値および関連する否定的 (PN) 値ですべての数値の適合率/位取りが同一になりました。
 
 - __*Db2 SSL サポート*__: {{site.data.keyword.aios_short}} で DB2 資格情報を使って自己署名証明書 (Base-64 エンコード) を受け渡す機能がサポートされました。
 
@@ -74,17 +74,17 @@ subcollection: ai-openscale
 
 - **カスタム ML サービス・インスタンス**
 
-    - 現行の [Python モジュール](/docs/services/ai-openscale?topic=ai-openscale-as-module)では、カスタム・サービス・インスタンスに対して説明可能性が機能しません。これは、カスタム・サービス・インスタンスでは応答データに数値による予測が必要ですが、このモジュール・スクリプトにはそれが含まれていないためです。
+    - 現行の [Python モジュール](/docs/services/ai-openscale?topic=ai-openscale-as-module)では、カスタム・サービス・インスタンスに対して説明性が機能しません。これは、カスタム・サービス・インスタンスでは応答データに数値による予測が必要ですが、このモジュール・スクリプトにはそれが含まれていないためです。
 
 ## 2018 年 12 月 14 日
 {: #rn-14December2018}
 
-本サービスに対する以下の新しいフィーチャー、変更点、既知の問題があります。
+本サービスに対する以下の新しい項目、変更点、既知の問題があります。
 
-### 新しいフィーチャーと変更点
+### 新しい項目と変更点
 {: #rn-12nf}
 
-ベータ版以降に追加または拡張された {{site.data.keyword.aios_short}} のフィーチャーには以下のものがあります。
+ベータ版以降に追加または拡張された {{site.data.keyword.aios_short}} の項目には以下のものがあります。
 
 - __*一般出荷版*__: {{site.data.keyword.aios_full_notm}} の一般出荷版 (GA) は IBM Cloud Standard (有料) のプランです。
 
@@ -96,7 +96,7 @@ subcollection: ai-openscale
 
 - __*バイアス・モニタリング*__: タイプ `float` または `double` の保護属性と、線形回帰モデルでのバイアス検出がサポートされています。また、{{site.data.keyword.aios_short}} では自動的に AI モデルのバイアスを排除できます。詳しくは、[公平性について](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)を参照してください。
 
-- __*説明可能性*__: 回帰モデル、Python 関数、および補足的な対比的説明をサポートしています。詳しくは、[説明可能性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。
+- __*説明性*__: 回帰モデル、Python 関数、および補足的な対比的説明をサポートしています。詳しくは、[説明性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。
 
 - __*データ・ストア*__: Watson Machine Learning に依存しない品質モニタリングを利用できます。また、自分が所有するデータベース (Db2、Postgres、Db2 on Cloud など) を使用できます。
 
@@ -124,7 +124,7 @@ subcollection: ai-openscale
 ## 2018 年 9 月 17 日
 {: #rn-17September2018}
 
-### 新しいフィーチャーと変更点
+### 新しい項目と変更点
 {: #rn-17nf}
 
 - **ベータ・プレビュー・リリース** - {{site.data.keyword.aios_full_notm}} ベータ・プレビュー・リリースが公開されました。

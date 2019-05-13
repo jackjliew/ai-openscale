@@ -26,7 +26,7 @@ subcollection: ai-openscale
 # JSON ファイルを使用したデプロイメント・サブスクリプションの構成
 {: #cf-ov}
 
-JSON ファイルをインポートして、サブスクリプションの作成時にすべてのモニターとフィーチャーをプログラムで構成できます。構成ファイルをエクスポートすることもできます。
+JSON ファイルをインポートして、サブスクリプションの作成時にすべてのモニターと項目をプログラムで構成できます。構成ファイルをエクスポートすることもできます。
 {: shortdesc}
 
 JSON ファイルを使用してデプロイメントをサブスクライブする方法の優れた例については、[Watson OpenScale One API Shot for subscription Python notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb) を参照してください。このノートブックでは、1 回の API 呼び出しで、JSON ファイルを使用して Amazon SageMaker アセット・サブスクリプションを構成する方法を説明します。このトピックの以降の部分では、このノートブックを参照します。

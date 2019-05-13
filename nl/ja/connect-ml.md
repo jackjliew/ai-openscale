@@ -34,7 +34,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
 ## 始めに
 {: #cml-prereq}
 
-モデルのバイアスをモニターするためには、Db2 または Cloud Object Storage でモデルのトレーニング・データが利用できる状態でなければなりません。Python 関数では説明可能性と正確度はサポートされていません。
+モデルのバイアスをモニターするためには、Db2 または Cloud Object Storage でモデルのトレーニング・データが利用できる状態でなければなりません。Python 関数では説明性と正解率はサポートされていません。
 
 - {{site.data.keyword.aios_short}} をインポートして開始します
 
@@ -121,10 +121,10 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
-### スコアリングとペイロード・ロギング
+### 評価とペイロード・ロギング
 {: #cml-cusscore}
 
-- モデルをスコアリングします。完全なサンプルについては、[IBM {{site.data.keyword.aios_full}} & カスタム ML エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window} を参照してください。
+- モデルを評価します。完全なサンプルについては、[IBM {{site.data.keyword.aios_full}} & カスタム ML エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window} を参照してください。
 
 <!---
     ```python
@@ -157,7 +157,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     ```
 --->
 
-- ペイロード・ロギング・テーブルに要求と応答を格納します
+- ペイロード・ロギング・テーブルにリクエストと応答を格納します
 
     ```python
     records_list = [PayloadRecord(request=request_data, response=response_data, response_time=response_time), PayloadRecord(request=request_data, response=response_data, response_time=response_time)]
@@ -269,10 +269,10 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
-### スコアリングとペイロード・ロギング
+### 評価とペイロード・ロギング
 {: #cml-azscore}
 
-- モデルをスコアリングします。完全なサンプルについては、[Azure Machine Learning Studio エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window} を参照してください。
+- モデルを評価します。完全なサンプルについては、[Azure Machine Learning Studio エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window} を参照してください。
 
 <!---
     ```python
@@ -305,7 +305,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     ```
 --->
 
-- ペイロード・ロギング・テーブルに要求と応答を格納します。
+- ペイロード・ロギング・テーブルにリクエストと応答を格納します。
 
     ```python
     records_list = [PayloadRecord(request=request_data, response=response_data, response_time=response_time),
@@ -420,10 +420,10 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
-### スコアリングとペイロード・ロギング
+### 評価とペイロード・ロギング
 {: #cml-smscore}
 
-- モデルをスコアリングします。完全なサンプルについては、[SageMaker 機械学習エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window} を参照してください。
+- モデルを評価します。完全なサンプルについては、[SageMaker 機械学習エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window} を参照してください。
 
 <!---
     ```python
@@ -456,7 +456,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     ```
 --->
 
-- ペイロード・ロギング・テーブルに要求と応答を格納します。
+- ペイロード・ロギング・テーブルにリクエストと応答を格納します。
 
     ```python
     records_list = [PayloadRecord(request=request_data, response=response_data, response_time=response_time),

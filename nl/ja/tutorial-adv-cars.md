@@ -70,8 +70,8 @@ PostgreSQL データベースと Watson Machine Learning インスタンスは�
 
 - {{site.data.keyword.cloud_notm}} の機械学習サービスとストレージ・サービスをプロビジョンします
 - 機械学習モデルを作成、トレーニング、およびデプロイするために、Watson Studio プロジェクトをセットアップして Python ノートブックを実行します
-- Python ノートブックを実行することによって、データマートを作成し、パフォーマンス・モニター、正確度モニター、および公平性モニターを構成し、モニター対象データを作成します
-- {{site.data.keyword.aios_short}} の「インサイト」タブで結果を表示します
+- Python ノートブックを実行することによって、データマートを作成し、パフォーマンス・モニター、正解率モニター、および公平性モニターを構成し、モニター対象データを作成します
+- {{site.data.keyword.aios_short}} の「洞察」タブで結果を表示します
 
 ## {{site.data.keyword.cloud_notm}} サービスのプロビジョン
 {: #tadv-svcs}
@@ -305,7 +305,7 @@ IBM ID で [{{site.data.keyword.cloud_notm}} アカウント ![外部リンク�
 
  **「終了してダッシュボードを表示する」**が表示されたら、これをクリックします。
 
-## データマートの作成と、パフォーマンス・モニター、正確度モニター、公平性モニターの構成
+## データマートの作成と、パフォーマンス・モニター、正解率モニター、公平性モニターの構成
 {: #tadv-config-monitors}
 
 ### `{{site.data.keyword.aios_short}} and Watson ML engine` ノートブックを Watson Studio プロジェクトに追加する
@@ -353,36 +353,36 @@ IBM ID で [{{site.data.keyword.cloud_notm}} アカウント ![外部リンク�
 
   ![再始動して実行](images/restart_and_run.png)
 
-  これでデータマートがセットアップされ、ペイロード・ロギングが有効になり、パフォーマンス・モニター、正確度モニター、および公平性モニターが構成されてスコアリングされ、{{site.data.keyword.aios_short}} インスタンスにこれらのメトリックが提供されるようになります。
+  これでデータマートがセットアップされ、ペイロード・ロギングが有効になり、パフォーマンス・モニター、正解率モニター、および公平性モニターが構成されて評価され、{{site.data.keyword.aios_short}} インスタンスにこれらのメトリックが提供されるようになります。
 
 ## 結果の表示
 {: #tadv-results}
 
-### デプロイメントのインサイトの表示
+### デプロイメントの洞察の表示
 {: #tadv-vide}
 
 [{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を使用して**「Insights」**タブをクリックします。
 
-  ![インサイト](images/insight-dash-tab.png)
+  ![洞察](images/insight-dash-tab.png)
 
-「インサイト」ページには、デプロイ済みモデルのメトリックの概要が表示されます。ノートブックの実行時に設定したしきい値を下回っている公平性メトリックまたは正確度メトリックのアラート (70%) を簡単に確認できます。このチュートリアルで使用するデータと設定により、以下のような正確度メトリックと公平性メトリックが作成されます。
+「洞察」ページには、デプロイ済みモデルのメトリックの概要が表示されます。ノートブックの実行時に設定したしきい値を下回っている公平性メトリックまたは正解率メトリックのアラート (70%) を簡単に確認できます。このチュートリアルで使用するデータと設定により、以下のような正解率メトリックと公平性メトリックが作成されます。
 
-  ![「インサイト」の概要](images/insight-overview-adv-tutorial.png)
+  ![「洞察」の概要](images/insight-overview-adv-tutorial.png)
 
 ### デプロイメントのモニタリング・データの表示
 {: #tadv-vmdd}
 
-「インサイト」ページのタイルをクリックして、デプロイメントを選択します。そのデプロイメントのモニタリング・データが表示されます。グラフの上でマーカーをスライドさせ、このノートブックを実行した時間フレームのデータを選択します。次に、**「詳細を表示します」**リンクを選択します。
+「洞察」ページのタイルをクリックして、デプロイメントを選択します。そのデプロイメントのモニタリング・データが表示されます。グラフの上でマーカーをスライドさせ、このノートブックを実行した時間フレームのデータを選択します。次に、**「詳細を表示します」**リンクを選択します。
 
   ![モニター・データ](images/insight-monitor-data1.png)
 
-これで、モニターしたデータのグラフを確認できます。この例では、モニターしたデータに関する詳細を表示するために、**「フィーチャー」**ドロップダウンを使用して Children または Gender のいずれかを選択します。
+これで、モニターしたデータのグラフを確認できます。この例では、モニターしたデータに関する詳細を表示するために、**「項目」**ドロップダウンを使用して Children または Gender のいずれかを選択します。
 
-  ![「インサイト」の概要](images/insight-review-charts1.png)
+  ![「洞察」の概要](images/insight-review-charts1.png)
 
 <!---
 
-### モデル・トランザクションの説明可能性の表示
+### モデル・トランザクションの説明性の表示
 {: #tadv-vemt}
 
 モニターしたデータのグラフから「トランザクションの表示」ボタンを選択します。
@@ -393,11 +393,11 @@ IBM ID で [{{site.data.keyword.cloud_notm}} アカウント ![外部リンク�
 
   ![トランザクション・リスト](images/transaction_list.png)
 
-[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を使用して「説明可能性」タブをクリックします。
+[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を使用して「説明性」タブをクリックします。
 
-  ![説明可能性](images/explainability.png)
+  ![説明性](images/explainability.png)
 
-コピーしたトランザクション ID 値を検索ボックスに貼り付け、キーボードの Return キーを押します。モデルがこの結論に達した理由の説明 (モデルの信頼度、信頼性レベルに貢献した要因、モデルに取り込まれた属性など) が表示されます。
+コピーしたトランザクション ID 値を検索ボックスに貼り付け、キーボードの Return キーを押します。モデルがこの結論に達した理由の説明 (モデルの確信度、確信度レベルに貢献した要因、モデルに取り込まれた属性など) が表示されます。
 
   ![トランザクションの表示](images/view_transaction1.png)
 
@@ -406,4 +406,4 @@ IBM ID で [{{site.data.keyword.cloud_notm}} アカウント ![外部リンク�
 ## 次のステップ
 {: #tadv-next}
 
-- 詳しくは、[データの表示と解釈](/docs/services/ai-openscale?topic=ai-openscale-it-ov)および[説明可能性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。
+- 詳しくは、[データの表示と解釈](/docs/services/ai-openscale?topic=ai-openscale-it-ov)および[説明性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。
