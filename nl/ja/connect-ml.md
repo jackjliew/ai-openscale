@@ -121,7 +121,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
-### 評価とペイロード・ロギング
+### 予測とペイロード・ロギング
 {: #cml-cusscore}
 
 - モデルを評価します。完全なサンプルについては、[IBM {{site.data.keyword.aios_full}} & カスタム ML エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window} を参照してください。
@@ -269,7 +269,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
-### 評価とペイロード・ロギング
+### 予測とペイロード・ロギング
 {: #cml-azscore}
 
 - モデルを評価します。完全なサンプルについては、[Azure Machine Learning Studio エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window} を参照してください。
@@ -420,7 +420,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
-### 評価とペイロード・ロギング
+### 予測とペイロード・ロギング
 {: #cml-smscore}
 
 - モデルを評価します。完全なサンプルについては、[SageMaker 機械学習エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window} を参照してください。

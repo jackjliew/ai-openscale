@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Haute disponibilité et reprise après incident
 {: #openscale-availability-recovery}
 
-{{site.data.keyword.aios_full}} à haute disponibilité sur plusieurs sites {{site.data.keyword.cloud_notm}}, tels que Dallas et Washington.
+{{site.data.keyword.aios_full}} est à haute disponibilité sur plusieurs sites {{site.data.keyword.cloud_notm}}, tels que Dallas et Washington.
 Toutefois, la reprise après un incident potentiel affectant tout un site nécessite une planification et une préparation.
 {: shortdesc}
 

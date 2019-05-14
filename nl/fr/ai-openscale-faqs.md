@@ -33,9 +33,9 @@ Vous trouverez ici quelques-unes des questions les plus fréquemment posées par
 ## Questions
 {: #wos-faqs-questions}
 
-- [Comment convertir une colonne de prévision d'un type de données entier à un type de données catégoriel ?](#wos-faqs-convert-data-types)
+- [Comment convertir une colonne de prévision d'un type de données entier vers un type de données catégoriel ?](#wos-faqs-convert-data-types)
 
-### Comment convertir une colonne de prévision d'un type de données entier à un type de données catégoriel ?
+### Comment convertir une colonne de prévision d'un type de données entier vers un type de données catégoriel ?
 {: #wos-faqs-convert-data-types}
 
 Lors de la configuration de la surveillance de l'équité pour un modèle,

@@ -37,9 +37,9 @@ subcollection: ai-openscale
 
 - ***デプロイメント・モニター済み*** - この例では、合計 10 個のデプロイメントがモニターされています。10 個の中の 8 個のデプロイメントは、下の個々のタイルで示されます。
 
-- ***正解率アラート*** - 下のタイルで合計 3 個の正解率アラートが紫の陰影付けで表されています。この例では、`Driver Performance` デプロイメント、`Market Analytics` デプロイメント、`Pricing Risk` デプロイメントで、正解率の値がそれぞれ `60%`、`65%`、`79%` になっています。
+- ***正解率の警告*** - 下のタイルで合計 3 個の正解率の警告が紫の陰影付けで表されています。この例では、`Driver Performance` デプロイメント、`Market Analytics` デプロイメント、`Pricing Risk` デプロイメントで、正解率の値がそれぞれ `60%`、`65%`、`79%` になっています。
 
-- ***公平性アラート*** - ここには合計 6 個の公平性アラートがあり、下のタイルでは紫の陰影付けと小さな `BIAS` タグの両方で表されます。この例では、`Driver Performance`、`Market Analytics`、`Regulatory Compliance`、`Fraud Detection`、`Premium Optimization`、および `Damage Cost Estimator` の各デプロイメントで、公平性の値がそれぞれ `59%`、`68%`、`62%`、`64%`、`79%`、`63%` になっています。
+- ***公平性の警告*** - ここには合計 6 個の公平性の警告があり、下のタイルでは紫の陰影付けと小さな `BIAS` タグの両方で表されます。この例では、`Driver Performance`、`Market Analytics`、`Regulatory Compliance`、`Fraud Detection`、`Premium Optimization`、および `Damage Cost Estimator` の各デプロイメントで、公平性の値がそれぞれ `59%`、`68%`、`62%`、`64%`、`79%`、`63%` になっています。
 
 .各タイルは、そのデプロイメントのモニタリング・アクティビティーの要約を示します。`Call Center Routing` デプロイメント・タイルは何の問題も示されていないことに注目してください。これは、かなり安定した、正確なモデルであることを示しています。
 

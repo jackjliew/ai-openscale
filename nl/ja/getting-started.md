@@ -41,7 +41,7 @@ subcollection: ai-openscale
 ## 概要
 {: #gs-view-demo}
 
-以下の動画を見ると、{{site.data.keyword.aios_short}} の概要がすぐに分かります。
+{{site.data.keyword.aios_short}} の概要は、以下の動画を見て確認してください。
 
 <p>
   <div class="embed-responsive embed-responsive-16by9">
@@ -261,12 +261,12 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
 1.  以下の画面キャプチャーに似た画面が表示されるはずです。データの評価に GUI 方式を使用するため、**「モニターの構成」**ボタンを選択するだけでこのセットアップは完了します。
 
-    ![評価リクエスト・コード](images/gs-config-send-scoring.png)
+    ![予測リクエスト・コード](images/gs-config-send-scoring.png)
 
 ### モデルに一連のサンプル・データを入力する
 {: #gs-samp}
 
-モニターを構成するには、その前にモデルに対する評価リクエストを少なくとも 1 つ生成して、モニターで取り込むことができるペイロード・ロギングを生成する必要があります。このセクションでは、JSON ファイル形式でサンプル・データを提供し、評価リクエストを生成します。
+モニターを構成するには、その前にモデルに対する予測リクエストを少なくとも 1 つ生成して、モニターで取り込むことができるペイロード・ロギングを生成する必要があります。このセクションでは、JSON ファイル形式でサンプル・データを提供し、予測リクエストを生成します。
 
 1.  [credit_payload_data.json ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) ファイルをダウンロードします。
 
@@ -347,7 +347,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
     ![性別グループ](images/gender_groups1.png)
 
-1.  今度は、**「Sex」**に対する公平性のしきい値を割り当てることができます。公平性の評価がこのしきい値を下回ると、運用ダッシュボードにアラートが表示されます。しきい値を 90% に設定し、**「次へ」**をクリックします。
+1.  今度は、**「Sex」**に対する公平性のしきい値を割り当てることができます。公平性の評価がこのしきい値を下回ると、運用ダッシュボードに警告が表示されます。しきい値を 90% に設定し、**「次へ」**をクリックします。
 
 1.  **「Age」**項目については、**「参照グループ」**に値 `26-74` を追加し、**「モニター対象グループ」**に値 `19-25` を追加してから、**「次へ」**をクリックします。
 
@@ -375,7 +375,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
     ![構成の要約](images/fair-summary.png)
 
-    バイアスが排除された評価エンドポイントを示す以下のウィンドウが表示されます。このチュートリアルではデータの評価に GUI 方式を使用し、CLI は使用しないので、先に進むには**「OK」**をクリックします。
+    バイアスが排除された予測エンドポイントを示す以下のウィンドウが表示されます。このチュートリアルではデータの評価に GUI 方式を使用し、CLI は使用しないので、先に進むには**「OK」**をクリックします。
 
     ![バイアス緩和 API](images/gs-insight-debias-api.png)
 
@@ -386,7 +386,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
 1.  正解率についての説明を読み、**「次へ」**をクリックします。詳しくは、[正解率](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)を参照してください。
 
-1.  正解率のアラートしきい値を 90% に設定し、**「次へ」**をクリックします。
+1.  正解率の警告しきい値を 90% に設定し、**「次へ」**をクリックします。
 
 1.  次の画面で、スライダーを使用して最小サンプル・サイズを 10 に調整し、**「次へ」**をクリックします。
 
@@ -404,7 +404,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 ## モデルに一連のサンプル・フィードバック・データを入力する
 {: #gs-smpfeed}
 
-正解率のモニタリングを有効にするには、モデルにフィードバック・データを入力する必要があります。それを行わないと、ダッシュボードに正解率データが表示されません。評価用にモデルにサンプル・フィードバック・データを追加すると、すぐにすべてのリクエストを生成できます。このタスクのために、サンプル・フィードバック・データが含まれる CSV ファイルをダウンロードします。
+正解率のモニタリングを有効にするには、モデルにフィードバック・データを入力する必要があります。それを行わないと、ダッシュボードに正解率データが表示されません。予測用にモデルにサンプル・フィードバック・データを追加すると、すぐにすべてのリクエストを生成できます。このタスクのために、サンプル・フィードバック・データが含まれる CSV ファイルをダウンロードします。
 
 1.  [credit_feedback_data.csv ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) ファイルをダウンロードします。
 
@@ -445,7 +445,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
   ![洞察](images/insight-dash-tab.png)
 
-1. 「洞察」ページを表示して、デプロイ済みモデルのメトリックの概要を確認します。90% のしきい値を下回っている公平性メトリックまたは正解率メトリックのアラートを簡単に確認できます。
+1. 「洞察」ページを表示して、デプロイ済みモデルのメトリックの概要を確認します。90% のしきい値を下回っている公平性メトリックまたは正解率メトリックの警告を簡単に確認できます。
 
   公平性メトリックと正解率メトリックは、表示されるまで最大 1 時間かかることがあります。
   {: tip}

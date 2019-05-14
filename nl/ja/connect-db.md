@@ -109,10 +109,10 @@ subcollection: ai-openscale
 
 1.  **「次へ」**をクリックして、要約データを確認し、**「保存」**をクリックします。
 
-## 評価リクエストの送信
+## 予測リクエストの送信
 {: #cdb-score}
 
-モニターを構成するには、モニター対象となるデータのログ記録を開始するために、評価リクエストを送信するよう {{site.data.keyword.aios_short}} によって求められます。
+モニターを構成するには、モニター対象となるデータのログ記録を開始するために、予測リクエストを送信するよう {{site.data.keyword.aios_short}} によって求められます。
 
 Watson Machine Learning でデプロイしたモデルは {{site.data.keyword.aios_short}} によって自動的に評価されます。Watson Machine Learning でデプロイしたモデルしか存在しない場合、この画面は表示されません。
 {: note:}

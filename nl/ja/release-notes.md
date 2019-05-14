@@ -35,7 +35,7 @@ subcollection: ai-openscale
 
 直前のリリース以降に追加または拡張された {{site.data.keyword.aios_short}} の項目には以下のものがあります。
 
-- __*新しい信用リスク・モデル*__: 新しい信用リスク・モデルの例/チュートリアルは、すべての評価エンジンに対応しています。詳しくは、[入門](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gettingstarted)および[追加リソース](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov#arsc-ov)・トピックを参照してください。
+- __*新しい信用リスク・モデル*__: 新しい信用リスク・モデルの例/チュートリアルは、すべての予測エンジンに対応しています。詳しくは、[入門](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gettingstarted)および[追加リソース](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov#arsc-ov)・トピックを参照してください。
 
 - __*バイアス緩和の計算*__: {{site.data.keyword.aios_short}} で作成されたバイアスが排除されたモデルと実動モデルの間で切り替えることができます。詳しくは、[実動モデルとバイアスが排除されたモデル](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-prdb)および[バイアス緩和の処理の流れについて](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-debias)を参照してください。
 
