@@ -121,7 +121,8 @@ Questa immagine mostra il supporto dell'ambiente personalizzato:
 
   Inoltre, i dati di training devono essere caricati per supportare l'esplicabilità. 
 
-  Per l'esplicabilità sul testo, una delle funzioni deve essere il testo completo. L'esplicabilità sulle immagini per un modello personalizzato non è supportata nella release corrente.   {: note}
+Per l'esplicabilità sul testo, una delle funzioni deve essere il testo completo. L'esplicabilità sulle immagini per un modello personalizzato non è supportata nella release corrente.
+{: note}
 
 - **Criteri di output perché il modello supporti i monitor**
 
