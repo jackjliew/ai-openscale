@@ -49,7 +49,7 @@ subcollection: ai-openscale
 - Watson Machine Learning
 - (オプション) Databases for PostgreSQL または Db2 Warehouse
 
-Jupyter ノートブックは、German Credit Risk モデルをトレーニング、作成、デプロイし、デプロイメントをモニターするように {{site.data.keyword.aios_short}} を構成し、{{site.data.keyword.aios_short}} の「洞察」ダッシュボードに表示する 7 日分の履歴レコードと測定値を提供します。また、Watson Studio と Spark を使用した継続的な学習のためにモデルを構成することもできます。
+Jupyter ノートブックは、German Credit Risk モデルをトレーニング、作成、デプロイし、デプロイメントをモニターするように {{site.data.keyword.aios_short}} を構成し、{{site.data.keyword.aios_short}} の「洞察」ダッシュボードに表示する 7 日分の履歴レコードと指標値を提供します。また、Watson Studio と Spark を使用した継続的な学習のためにモデルを構成することもできます。
 
 ## 概要
 {: #crt-intro}
