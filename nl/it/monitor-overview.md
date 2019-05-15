@@ -50,10 +50,10 @@ Configurare e abilitare i monitor per ogni distribuzioni di cui si sta tenendo t
 
     ![Selezionare tipo di input](images/config-input-monitor.png)
 
-### Dati numerici/categoriali
+### Dati numerici/di categoria
 {: #mo-nuca}
 
-Per i dati numerici o categoriali, è necessario fornire informazioni sui dati di training per il modello, per poter configurare i monitor.
+Per i dati numerici o di categoria, è necessario fornire informazioni sui dati di training per il modello, per poter configurare i monitor.
 
   ![Selezionare tipo di configurazione](images/config-manual-monitor.png)
 

@@ -33,9 +33,9 @@ Qui è possibile trovare alcune delle domande più frequenti effettuate dagli ut
 ## Domande 
 {: #wos-faqs-questions}
 
-- [Come posso convertire una colonna di previsione da un tipo di dati numerici a un tipo di dati categoriali?](#wos-faqs-convert-data-types)
+- [Come posso convertire una colonna di previsione da un tipo di dati numerici a un tipo di dati di categoria?](#wos-faqs-convert-data-types)
 
-### Come posso convertire una colonna di previsione da un tipo di dati numerici a un tipo di dati categoriali?
+### Come posso convertire una colonna di previsione da un tipo di dati numerici a un tipo di dati di categoria?
 {: #wos-faqs-convert-data-types}
 
 Quando si configura il monitoraggio della correttezza per un modello, la colonna di previsione consente solo i valori numerici anche se l'etichetta di previsione è categoriale. Come la configuro per la funzione categoriale (cioé non numerica)? È richiesta una conversione manuale? 

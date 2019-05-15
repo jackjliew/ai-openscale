@@ -35,8 +35,8 @@ I prodotti, i servizi e altre funzionalità qui descritti non sono idonei a tutt
 
 Se occorre richiedere il supporto GDPR per le risorse {{site.data.keyword.cloud}} {{site.data.keyword.watson}} che vengono create 
 
--   Nell'Unione Europea (UE), consultare [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
--   Al di fuori dell'Unione Europea, consultare [Requesting support for resources outside the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
+-   Nell'Unione Europea (UE), consultare [Richiesta di supporto per le risorse IBM Cloud Watson create nell'Unione Europea](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
+-   Al di fuori dell'Unione Europea, consultare [Richiesta di supporto per le risorse fuori dall'Unione Europea](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
 
 ## Regolamento generale sulla protezione dei dati (GDPR) dell'Unione Europea
 {: #is-gdpr}

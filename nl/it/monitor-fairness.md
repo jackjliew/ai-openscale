@@ -71,7 +71,7 @@ Considerare un punto di dati in cui, per `Gender=Male` (valore di riferimento), 
 
 1.  Sulla pagina *Seleziona le funzioni da monitorare*, trovare e selezionare gli attributi di correttezza che si desidera utilizzare e fare clic su **Avanti**.
 
-    Sono supportate solo le funzioni di tipo di dati di correttezza categoriali, numerici (interi), mobili o doppi. Le funzioni con altri tipi di dati non sono supportate.
+    Sono supportate solo le funzioni di tipo di dati di correttezza di categoria, numerici (interi), mobili o doppi. Le funzioni con altri tipi di dati non sono supportate.
     {: note}
 
     In questo esempio, sono state selezionate le funzioni `Age`, `Gender` e `Ethnicity`.

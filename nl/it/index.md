@@ -24,7 +24,7 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Informazioni su
+# Informazioni
 {: #in-ov}
 
 {{site.data.keyword.aios_full}} è un ambiente di livello aziendale per applicazioni che utilizzano l'AI, che fornisce alle aziende visibilità su come si crea e si utilizza l'AI e il ROI che ne deriva, relativamente alla propria attività di business.

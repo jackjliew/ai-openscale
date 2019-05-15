@@ -21,10 +21,10 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Eventi del programma di traccia dell'attività 
+# Eventi di Activity Tracker
 {: #at-events}
 
-Quando si dispone di {{site.data.keyword.aios_short}} fornito come servizio nel proprio account {{site.data.keyword.cloud_notm}}, è possibile visualizzare i seguenti eventi nel programma di traccia dell'attività di  [{{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
+Quando si dispone di {{site.data.keyword.aios_short}} fornito come servizio nel proprio account {{site.data.keyword.cloud_notm}}, è possibile visualizzare i seguenti eventi in Activity Tracker di [{{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
 {: shortdesc}
 
 ## Eventi per le API pubbliche
