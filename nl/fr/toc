@@ -52,12 +52,12 @@ Watson OpenScale
     [Interface CLI ModelOps](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
     [Client Python](http://ai-openscale-python-client.mybluemix.net/)
     activity-tracker.md
-    language-support.md
     information-security.md
     [Référentiel GitHub Watson](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    gettinghelp.md
     release-notes.md
     ai-openscale-faqs.md
 
