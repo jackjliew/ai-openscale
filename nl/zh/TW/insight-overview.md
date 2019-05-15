@@ -67,7 +67,7 @@ subcollection: ai-openscale
 
 **AI 工具**標籤 (![「AI 工具」標籤](images/aitools.png)) 會開啟對話框，其中提供指向其他 IBM AI 工具選項的鏈結：
 
-- *[Watson Studio 精簡方案 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*：Watson Studio 為您提供環境和工具，來分析資料並加以視覺化、清理及體現資料、汲取串流資料，或是建立、訓練及部署機器學習模型。請按一下「註冊取得免費 Watson Studio 精簡方案」鏈結，以取得 Watson Studio。
+- *[Watson Studio Lite 方案 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*：Watson Studio 為您提供環境和工具，來分析資料並加以視覺化、清理及體現資料、汲取串流資料，或是建立、訓練及部署機器學習模型。請按一下「註冊取得免費 Watson Studio Lite 方案」鏈結，以取得 Watson Studio。
 
 - *[NeuNetS ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window}*（*測試版*）：Neural Network Synthesizer（或 "NeuNetS"）目前是測試版，可讓您使用 Watson Studio 中的 {{site.data.keyword.aios_short}} 技術來合成 AI 模型。請按一下「合成模型」按鈕，以使用 NeuNetS。
 

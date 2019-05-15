@@ -23,10 +23,10 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# 非 Watson Machine Learning 服務實例的承載內容記載
+# 非 Watson Machine Learning 服務實例的有效負載記載
 {: #cml-connect}
 
-如果您的 AI 模型部署在 Watson Machine Learning (WML) 以外的機器學習引擎中，您必須使用 Python 用戶端，針對外部機器學習引擎啟用承載內容記載。
+如果您的 AI 模型部署在 Watson Machine Learning (WML) 以外的機器學習引擎中，您必須使用 Python 用戶端，針對外部機器學習引擎啟用有效負載記載。
 {: shortdesc}
 
 請參閱 [{{site.data.keyword.aios_short}} Python 用戶端說明文件 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](http://ai-openscale-python-client.mybluemix.net/){: new_window}，以及樣本 {{site.data.keyword.aios_short}} Python 用戶端記事本（為 [{{site.data.keyword.aios_short}} 指導教學![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window} 的一部分），以取得更完整的資訊。
@@ -106,10 +106,10 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     print(subscriptions_uids)
     ```
 
-### 啟用承載內容記載
+### 啟用有效負載記載
 {: #cml-cusenlog}
 
-- 在訂閱中啟用承載內容記載
+- 在訂閱中啟用有效負載記載
 
     ```python
     subscription.payload_logging.enable()
@@ -121,7 +121,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     subscription.payload_logging.get_details()
     ```
 
-### 評分和承載內容記載
+### 評分和有效負載記載
 {: #cml-cusscore}
 
 - 對您的模型評分。如需完整範例，請參閱 [IBM {{site.data.keyword.aios_full}} 和「自訂」ML 引擎記事本 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}。
@@ -157,14 +157,14 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     ```
 --->
 
-- 將要求和回應儲存在承載內容記載表格中
+- 將要求和回應儲存在有效負載記載表格中
 
     ```python
     records_list = [PayloadRecord(request=request_data, response=response_data, response_time=response_time), PayloadRecord(request=request_data, response=response_data, response_time=response_time)]
 
     subscription.payload_logging.store(records=records_list)
     ```
-    **附註**：對於 Python 以外的語言，您也可以使用 REST API 來直接執行承載內容記載。
+    **附註**：對於 Python 以外的語言，您也可以使用 REST API 來直接執行有效負載記載。
 
     ```json
     token_endpoint = "https://iam.bluemix.net/identity/token"
@@ -254,10 +254,10 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     print(subscriptions_uids)
     ```
 
-### 啟用承載內容記載
+### 啟用有效負載記載
 {: #cml-azenlog}
 
-- 在訂閱中啟用承載內容記載
+- 在訂閱中啟用有效負載記載
 
     ```python
     subscription.payload_logging.enable()
@@ -269,7 +269,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     subscription.payload_logging.get_details()
     ```
 
-### 評分和承載內容記載
+### 評分和有效負載記載
 {: #cml-azscore}
 
 - 對您的模型評分。如需完整範例，請參閱[使用 Azure Machine Learning Studio Engine 記事本 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}。
@@ -305,7 +305,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     ```
 --->
 
-- 將要求和回應儲存在承載內容記載表格中：
+- 將要求和回應儲存在有效負載記載表格中：
 
     ```python
     records_list = [PayloadRecord(request=request_data, response=response_data, response_time=response_time),
@@ -316,7 +316,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
 
     subscription.payload_logging.store(records=records_list)
     ```
-    **附註**：對於 Python 以外的語言，您也可以使用 REST API 來直接執行承載內容記載。
+    **附註**：對於 Python 以外的語言，您也可以使用 REST API 來直接執行有效負載記載。
 
     ```json
     token_endpoint = "https://iam.bluemix.net/identity/token"
@@ -405,10 +405,10 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     print(subscriptions_uids)
     ```
 
-### 啟用承載內容記載
+### 啟用有效負載記載
 {: #cml-smenlog}
 
-- 在訂閱中啟用承載內容記載
+- 在訂閱中啟用有效負載記載
 
     ```python
     subscription.payload_logging.enable()
@@ -420,7 +420,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     subscription.payload_logging.get_details()
     ```
 
-### 評分和承載內容記載
+### 評分和有效負載記載
 {: #cml-smscore}
 
 - 對您的模型評分。如需完整範例，請參閱[使用 SageMaker Machine Learning Engine 記事本 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}。
@@ -456,7 +456,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     ```
 --->
 
-- 將要求和回應儲存在承載內容記載表格中：
+- 將要求和回應儲存在有效負載記載表格中：
 
     ```python
     records_list = [PayloadRecord(request=request_data, response=response_data, response_time=response_time),
@@ -467,7 +467,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
 
     subscription.payload_logging.store(records=records_list)
     ```
-    **附註**：對於 Python 以外的語言，您也可以使用 REST API 來直接執行承載內容記載。
+    **附註**：對於 Python 以外的語言，您也可以使用 REST API 來直接執行有效負載記載。
 
     ```json
     token_endpoint = "https://iam.bluemix.net/identity/token"

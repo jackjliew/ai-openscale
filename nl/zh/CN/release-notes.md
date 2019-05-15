@@ -65,7 +65,7 @@ subcollection: ai-openscale
 
 - __*可解释性增强功能*__：现在，所有数字在相关肯定 (PP) 值和相关否定 (PN) 值中都具有相同的精度/小数位。
 
-- __*Db2 SSL 支持*__：{{site.data.keyword.aios_short}} 支持通过 DB2 凭证传递自签名证书（Base-64 编码）。
+- __*Db2 SSL 支持*__：{{site.data.keyword.aios_short}} 支持通过 Db2 凭证传递自签名证书（Base-64 编码）。
 
 - __*IBM Cloud 数据库支持*__：{{site.data.keyword.aios_short}} 现在支持 Databases for PostgreSQL（除 Compose for PostgreSQL 和 Db2 以外）
 

@@ -42,13 +42,13 @@ subcollection: ai-openscale
 
     ![选择定制](images/connect-custom-deploy.png)
 
-4.  如果选择了“输入个人评分端点”磁贴，请输入凭证：
+4.  如果选择了“输入个别评分端点”磁贴，请输入凭证：
 
     ![输入服务凭证](images/connect-custom-cred.png)
 
 5.  单击**下一步**。
 
-    - 如果选择了“输入个人评分端点”磁贴，那么必须提供部署名称和端点：
+    - 如果选择了“输入个别评分端点”磁贴，那么必须提供部署名称和端点：
 
       ![输入服务凭证](images/connect-custom-endpoint.png)
 
@@ -85,7 +85,7 @@ subcollection: ai-openscale
 
 [Python 客户机绑定 SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
 
-[使用定制机器学习引擎 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[Working with Custom Machine Learning engine ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
 
 [Python SDK for IBM Watson OpenScale ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
 

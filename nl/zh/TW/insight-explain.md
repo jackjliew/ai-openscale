@@ -30,7 +30,7 @@ subcollection: ai-openscale
 
 在選取的部署圖磚中，選取導覽器中的**解釋交易**標籤 (![「解釋交易」標籤](images/insight-transact-tab.png))，並輸入交易 ID。
 
-每當將資料傳送給模型進行評分時，它會在 HTTP 標頭中設定 `X-Global-Transaction-Id` 欄位，以設定一個交易 ID。此交易 ID 會儲存在承載內容表格中。如果要尋找模型之特定評分行為的解釋，請指定該評分要求的相關聯交易 ID。請注意，此行為僅適用於 Watson Machine Learning (WML) 交易，而不適用於非 WML 交易。
+每當將資料傳送給模型進行評分時，它會在 HTTP 標頭中設定 `X-Global-Transaction-Id` 欄位，以設定一個交易 ID。此交易 ID 會儲存在有效負載表格中。如果要尋找模型之特定評分行為的解釋，請指定該評分要求的相關聯交易 ID。請注意，此行為僅適用於 Watson Machine Learning (WML) 交易，而不適用於非 WML 交易。
 {: note}
 
 ### 在 {{site.data.keyword.aios_short}} 中尋找交易 ID

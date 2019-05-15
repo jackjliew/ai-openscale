@@ -39,7 +39,7 @@ subcollection: ai-openscale
 
 - ***准确性警报*** - 总共 3 个准确性警报通过紫色阴影在下方的磁贴中进行表示。在此示例中，`Driver Performance`、`Market Analytics` 和 `Pricing Risk` 部署显示“准确性”值分别为 `60%`、`65%` 和 `79%`。
 
-- ***公平性警报*** - 总共有 6 个公平性警报，通过紫色阴影和 `BIAS` 小标记在下方的磁贴中进行表示。在此示例中，`Driver Performance`、`Market Analytics`、`Regulatory Compliance`、`Fraud Detection`、`Premium Optimization` 和 `Damage Cost Estimator` 部署显示“公平性”值分别为  `59%`、`68%`、`62%`、`64%`、`79%` 和 `63%`。
+- ***公平性警报*** - 总共有 6 个公平性警报，通过紫色阴影和 `BIAS` 小标记在下方的磁贴中进行表示。在此示例中，`Driver Performance`、`Market Analytics`、`Regulatory Compliance`、`Fraud Detection`、`Premium Optimization` 和 `Damage Cost Estimator` 部署显示“公平性”值分别为 `59%`、`68%`、`62%`、`64%`、`79%` 和 `63%`。
 
 每个磁贴都提供该部署的监视活动摘要。请注意，`Call Center Routing` 部署磁贴不显示任何问题，表示模型相当稳定且准确。
 

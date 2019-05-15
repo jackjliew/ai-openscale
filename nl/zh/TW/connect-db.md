@@ -28,24 +28,24 @@ subcollection: ai-openscale
 ## 連接至資料庫
 {: #cdb-connect}
 
-{{site.data.keyword.aios_short}} 使用資料庫來儲存承載內容、回饋資料和測量資料。除了選取資料庫，您也可以選取資料庫的綱目 - 綱目是資料庫中一個已命名的表格集合。
+{{site.data.keyword.aios_short}} 使用資料庫來儲存有效負載、回饋資料和測量資料。除了選取資料庫，您也可以選取資料庫的綱目 - 綱目是資料庫中一個已命名的表格集合。
 
-1.  選擇資料庫。您有兩個選項：免費「精簡」方案資料庫，或是現有或新的資料庫。
+1.  選擇資料庫。您有兩個選項：免費 Lite 方案資料庫，或是現有或新的資料庫。
 
     ![選取資料庫](images/gs-config-database.png)
 
     如果您已有一個付費 {{site.data.keyword.cloud_notm}} 帳戶，您可以佈建 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服務，以便充分利用與 Watson Studio 和持續學習服務的整合。如果您選擇不佈建付費服務，您可以將免費的內部 PostgreSQL 儲存空間與 {{site.data.keyword.aios_short}} 搭配使用，只是這就無法為模型配置持續學習。{: note}
 
-### 免費「精簡」方案資料庫
+### 免費 Lite 方案資料庫
 {: #cdb-lite}
 
-**附註**：免費「精簡」方案資料庫會有一些重要限制：
+**附註**：免費 Lite 方案資料庫會有一些重要限制：
 
-- 免費「精簡」方案資料庫是代管的，您無法直接存取。
+- 免費 Lite 方案資料庫是代管的，您無法直接存取。
 - {{site.data.keyword.aios_full}} 對您的資料庫具備完整存取權，因此也對您的資料具備完整存取權。
-- 免費「精簡」方案資料庫不符合 GDPR 規章。如果您的模型會處理個人識別資訊 (PII)，就無法使用免費「精簡」方案資料庫。您必須購買新的資料庫，或是使用符合 GDPR 規則的現有資料庫。請參閱[資訊安全](/docs/services/ai-openscale?topic=ai-openscale-is-ov)，以進一步瞭解。
+- 免費 Lite 方案資料庫不符合 GDPR 規章。如果您的模型會處理個人識別資訊 (PII)，就無法使用免費 Lite 方案資料庫。您必須購買新的資料庫，或是使用符合 GDPR 規則的現有資料庫。請參閱[資訊安全](/docs/services/ai-openscale?topic=ai-openscale-is-ov)，以進一步瞭解。
 
-如果想繼續使用免費「精簡」方案資料庫，只需選取該選項，檢閱摘要資料，並按一下**儲存**。
+如果想繼續使用免費 Lite 方案資料庫，只需選取該選項，檢閱摘要資料，並按一下**儲存**。
 
   ![選取資料庫](images/gs-config-database2.png)
 
@@ -113,14 +113,14 @@ subcollection: ai-openscale
 部署在 Watson Machine Learning 中的模型會自動由 {{site.data.keyword.aios_short}} 評分。如果您只將模型部署在 Watson Machine Learning 中，就不會看到此畫面。
 {: note:}
 
-選取一項部署，在本例中是 "Fraud Detector"，然後使用所提供的 `cURL` 或 `Python` 程式碼 Snippet，來記載模型部署要求和回應資料。如需詳細資料，請參閱[非 Watson Machine Learning 服務實例的承載內容記載](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
+選取一項部署，在本例中是 "Fraud Detector"，然後使用所提供的 `cURL` 或 `Python` 程式碼 Snippet，來記載模型部署要求和回應資料。如需詳細資料，請參閱[非 Watson Machine Learning 服務實例的有效負載記載](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
 
 程式碼 Snippet 中的欄位和值需要換成實際值，因為所提供的欄位及值只是範例。
 {: important}
 
 ![選取資料庫](images/config-send-scoring.png)
 
-執行承載內容記載之後，您會在所選部署的「準備監視」直欄中看到一個勾號。請按一下**配置監視器**以繼續。
+執行有效負載記載之後，您會在所選部署的「準備監視」直欄中看到一個勾號。請按一下**配置監視器**以繼續。
 
 ## 後續步驟
 {: #cdb-next}

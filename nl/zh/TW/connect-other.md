@@ -79,7 +79,7 @@ subcollection: ai-openscale
 
 您也可以參考下列鏈結：
 
-[AIOS 承載內容記載 API![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[AIOS 有效負載記載 API![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
 
 [自訂部署 API![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
 

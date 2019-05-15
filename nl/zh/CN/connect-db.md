@@ -119,7 +119,7 @@ Watson Machine Learning 中部署的模型由 {{site.data.keyword.aios_short}} �
 
 选择部署（在本例中为“欺诈检测器”），然后使用提供的 `cURL` 或 `Python` 代码片段来记录模型部署请求和响应数据。请参阅[非 Watson Machine Learning 服务实例的有效内容日志记录](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)以获取更多详细信息。
 
-代码片段中的字段和值需要替换为真实值，因为所提供字段和值只是示例。
+需要将代码片段中的字段和值替换为真实值，因为其中提供的值仅作参考之用。
 {: important}
 
 ![选择数据库](images/config-send-scoring.png)

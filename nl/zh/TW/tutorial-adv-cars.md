@@ -45,7 +45,7 @@ lastupdated: "2019-02-05"
 - [Watson Studio ![External link icon](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://dataplatform.ibm.com/){: new_window} 帳戶。
 - [{{site.data.keyword.cloud_notm}} ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}){: new_window} 帳戶。
 
-在本指導教學期間，您將佈建下列「精簡（免費）」{{site.data.keyword.cloud_notm}} 服務：
+在本指導教學期間，您將佈建下列 Lite（免費）{{site.data.keyword.cloud_notm}} 服務：
 
 - Machine Learning
 - Apache Spark
@@ -84,7 +84,7 @@ PostgreSQL 資料庫和 Watson Machine Learning 實例必須部署在相同的 {
 
   ![Watson Studio](images/watson_studio.png)
 
-- 為您的服務命名，選擇「精簡（免費）」方案，並按一下**建立**按鈕。
+- 為您的服務命名，選擇 Lite（免費）方案，並按一下**建立**按鈕。
 
 ### 佈建 Machine Learning 服務
 {: #tadv-pml}
@@ -93,7 +93,7 @@ PostgreSQL 資料庫和 Watson Machine Learning 實例必須部署在相同的 {
 
   ![Machine Learning](images/machine_learning.png)
 
-- 為您的服務命名，選擇「精簡（免費）」方案，並按一下**建立**按鈕。
+- 為您的服務命名，選擇 Lite（免費）方案，並按一下**建立**按鈕。
 
 - 記下 Machine Learning 服務認證。在您的機器學習實例中，按一下頁面左側的**服務認證**鏈結。為認證命名，並按一下**新增**。然後從認證清單中，按一下**檢視認證**，並且複製認證，以供之後使用。
 
@@ -104,7 +104,7 @@ PostgreSQL 資料庫和 Watson Machine Learning 實例必須部署在相同的 {
 
   ![Apache Spark](images/spark.png)
 
-- 指派名稱給您的服務，選擇「精簡（免費）」方案，並按一下**建立**按鈕。
+- 指派名稱給您的服務，選擇 Lite（免費）方案，並按一下**建立**按鈕。
 
 - 記下您 Spark 實例的服務認證。開啟 Spark 實例，並按一下左側功能表中的**服務認證**。按一下**新建認證**按鈕，為您的認證命名，並按一下**新增**。然後，按一下您剛建立之集合旁的**檢視認證**鏈結，並複製這些認證，以供之後使用。
 
@@ -115,7 +115,7 @@ PostgreSQL 資料庫和 Watson Machine Learning 實例必須部署在相同的 {
 
   ![Object Storage](images/object_storage.png)
 
-- 為您的服務命名，選擇「精簡（免費）」方案，並按一下**建立**按鈕。
+- 為您的服務命名，選擇 Lite（免費）方案，並按一下**建立**按鈕。
 
 ### 佈建付費 PostgreSQL 服務
 {: #tadv-ppgs}
@@ -257,7 +257,7 @@ PostgreSQL 資料庫和 Watson Machine Learning 實例必須部署在相同的 {
   ![{{site.data.keyword.aios_short}}](images/openscale.png)
 --->
 
-- 為您的服務命名，選取「精簡」方案，並按一下**建立**。
+- 為您的服務命名，選取 Lite 方案，並按一下**建立**。
 ### 將 {{site.data.keyword.aios_short}} 連接至您的機器學習模型
 {: #tadv-cmlm}
 
@@ -273,7 +273,7 @@ PostgreSQL 資料庫和 Watson Machine Learning 實例必須部署在相同的 {
 - 現在，您能夠選取要將哪些所部署的模型交由 {{site.data.keyword.aios_short}} 監視。請檢查您所建立和部署的模型；按**下一步**以接受此模型：
   ![選取所部署的模型](images/gs-set-deploy.png)
 
-- 接下來，您需要選擇 PostgreSQL 資料庫。您有兩個選項：免費「精簡」方案資料庫，或是現有或新的資料庫。對於本指導教學，請選取**使用現有資料庫或購買新資料庫**圖磚。
+- 接下來，您需要選擇 PostgreSQL 資料庫。您有兩個選項：免費 Lite 方案資料庫，或是現有或新的資料庫。對於本指導教學，請選取**使用現有資料庫或購買新資料庫**圖磚。
     ![選取資料庫](images/gs-set-lite-db1.png)
 
   請參閱 [指定資料庫](/docs/services/ai-openscale?topic=ai-openscale-connect-db)主題中關於每一個選項的更完整詳細資料。
@@ -333,7 +333,7 @@ PostgreSQL 資料庫和 Watson Machine Learning 實例必須部署在相同的 {
 - 輸入認證之後，您的記事本就準備好可執行。按一下**核心**功能表項目，並從功能表中選取**重新啟動並全部執行**：
   ![重新啟動並執行](images/restart_and_run.png)
 
-  這會設置資料集區，啟用承載內容記載，配置效能、精確度和公平性監視器並加以評分，以及將那些度量提供給您的 {{site.data.keyword.aios_short}} 實例。
+  這會設置資料集區，啟用有效負載記載，配置效能、精確度和公平性監視器並加以評分，以及將那些度量提供給您的 {{site.data.keyword.aios_short}} 實例。
 ## 檢視結果
 {: #tadv-results}
 
@@ -371,7 +371,7 @@ PostgreSQL 資料庫和 Watson Machine Learning 實例必須部署在相同的 {
 
   ![可解釋性](images/explainability.png)
 
-貼上您複製到搜尋方框的交易 ID 值，並按下鍵盤上的 **Return** 鍵。現在，您會看到模型是如何得出其結論的相關解釋，包括：模型的確信程度、確信層次的造成因素，以及輸送給模型的屬性。
+貼上您複製到搜尋方框的交易 ID 值，並按下鍵盤上的 **Return** 鍵。現在，您會看到模型是如何得出其結論的相關解釋，包括：模型的信賴度、確信層次的造成因素，以及輸送給模型的屬性。
 
   ![檢視交易](images/view_transaction1.png)
 

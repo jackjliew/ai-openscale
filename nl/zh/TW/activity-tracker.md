@@ -33,7 +33,7 @@ subcollection: ai-openscale
 |動作|說明|
 | -- | -- |
 | aiopenscale.metrics.create |將度量儲存在 {{site.data.keyword.aios_short}} 實例中|
-| aiopenscale.payload.create |將承載內容記載在 {{site.data.keyword.aios_short}} 實例中|
+| aiopenscale.payload.create |將有效負載記載在 {{site.data.keyword.aios_short}} 實例中|
 
 ## 專用 API 事件
 {: #at-priapi}

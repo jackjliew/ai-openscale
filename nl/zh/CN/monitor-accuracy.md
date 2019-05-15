@@ -99,7 +99,7 @@ Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "
 
 或者，可以使用提供的 `cURL` 或 `Python` 代码片段来发布反馈数据。
 
-代码片段中的字段和值需要替换为真实值，因为所提供字段和值只是示例。
+需要将代码片段中的字段和值替换为真实值，因为其中提供的值仅作参考之用。
 {: important}
 
 您还可以选择**退出**来跳过此可选步骤；您仍将可以稍后上载 CSV 文件以进行评估。

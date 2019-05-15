@@ -334,9 +334,9 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
 1.  阅读有关公平性的信息，然后单击**下一步**。有关更多信息，请参阅[公平性](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)。
 
-1.  现在，您可以选择要针对公平性监视哪些特征。对于选择的每个特征，{{site.data.keyword.aios_short}} 将监视已部署模型中一个组相对于另一个组获取有利结果的倾向。在此示例中，我们将监视 **Sex** 和 **Age** 特征。
+1.  现在，您可以选择要针对公平性监视哪些特征。对于选择的每个特征，{{site.data.keyword.aios_short}} 将监视已部署模型中一个组相对于另一个组获取有利结果的倾向。在此示例中，我们将监视**性别**和**年龄**特征。
 
-    特征单独受监视，但是任何除偏都将一起更正所有特征的问题。单击 **Sex** 和 **Age** 磁贴，然后单击**下一步**。
+    将单独监视功能部件，但任何去偏差操作都会一起更正所有功能部件的问题。单击**性别**和**年龄**磁贴，然后单击**下一步**。
 
 1.  {{site.data.keyword.aios_short}} 旨在检测受监视组的偏差（与参考组相比）。对于 **Sex** 特征，请将值 `male` 添加到**参考组**，将值 `female` 添加到**受监视组**，然后单击**下一步**。
 

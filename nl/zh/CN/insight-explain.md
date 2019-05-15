@@ -58,7 +58,7 @@ subcollection: ai-openscale
 
 虽然图表有助于显示确定事务结果的最重要因素，但分类模型还可以包含 `Minimum changes for Approved outcome` 和 `Minimum changes for this outcome` 部分中详述的高级解释。
 
-高级解释不可用于回归、图像和非结构化文本模型。
+高级解释不适用于回归、图像和非结构化文本模型。
 {: note}
 
 `Minimum changes for Approved outcome` 表明如果特征的值更改为此部分中所列的值，那么模型的预测将更改。

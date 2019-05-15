@@ -37,7 +37,7 @@ subcollection: ai-openscale
 
 這裡說明您將如何實作 {{site.data.keyword.aios_short}}：
 
-- **配置 {{site.data.keyword.aios_short}}**：透過好用的圖形環境，來[設置承載內容記載資料庫](/docs/services/ai-openscale?topic=ai-openscale-connect-db)，以及用來儲存您的 AI 模型和部署的 [Watson Machine Learning 實例](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)。
+- **配置 {{site.data.keyword.aios_short}}**：透過好用的圖形環境，來[設置有效負載記載資料庫](/docs/services/ai-openscale?topic=ai-openscale-connect-db)，以及用來儲存您的 AI 模型和部署的 [Watson Machine Learning 實例](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)。
 
 - **使用監視器**：針對每一項部署，配置 {{site.data.keyword.aios_short}} 要如何監視該部署。您可以監視：
 
@@ -55,11 +55,11 @@ subcollection: ai-openscale
 
 - 資料庫和 Watson Machine Learning 實例必須部署在相同的 {{site.data.keyword.cloud_notm}} 帳戶中。
 
-- 「精簡（免費）」方案具有下列的每月限制：
+-  Lite（免費）方案具有下列的每月限制：
 
     - 兩個受監視的所部署模型
     - 可解釋 20 項交易
-    - 50,000 筆承載內容記錄（累加）
+    - 50,000 筆有效負載記錄（累加）
     - 50,000 筆回饋記錄（累加）
 
 - {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫來儲存模型部署輸出和重新訓練資料。目前不支援「精簡 Db2」方案。
@@ -107,7 +107,7 @@ subcollection: ai-openscale
 
 完整支援包括特定架構、問題和資料類型的下列特性：
 
-- 承載內容記載	
+- 有效負載記載	
 - 回饋記載	
 - 效能精確度	
 - 執行時期偏誤偵測	

@@ -79,7 +79,7 @@ ibm-ai-openscale-cli --apikey <Your API key>
 ### 查看洞察
 {: #as-insights}
 
-从 [{{site.data.keyword.aios_short}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} 中，单击**洞察**选项卡，其中显示已部署的模型的度量概述：![Insights](images/insight-dash-tab.png)
+从 [{{site.data.keyword.aios_short}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} 中，单击**洞察**选项卡，其中显示已部署的模型的度量概述：![洞察](images/insight-dash-tab.png)
 
 - “洞察”页面概括显示根据所配置的阈值确定的任何公平性和准确性问题。
 
@@ -103,7 +103,7 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
   - 请注意，在以下截屏中，不存在任何偏差。
 
-  - 有关在特定小时解释数据点的图表的信息，请参阅[监视公平性、每分钟的平均请求数以及准确性](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp)。
+  - 有关解释特定小时所对应数据点的图表的信息，请参阅[监视公平性、每分钟的平均请求数以及准确性](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp)。
 
     ![查看详细信息](images/setup03-0206.png)
 

@@ -93,7 +93,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - 指定服务的名称，选择 Lite（免费）套餐，然后单击**创建**按钮。
 
-### （可选）供应 Databases for PostgreSQL 或 DB2 Warehouse 服务
+### （可选）供应 Databases for PostgreSQL 或 Db2 Warehouse 服务
 {: #crt-db2}
 
 如果您具有付费的 {{site.data.keyword.cloud_notm}} 帐户，那么可以供应 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服务来充分利用与 Watson Studio 和持续学习服务的集成。如果选择不供应付费服务，那么可以将免费内部 PostgreSQL 存储与 {{site.data.keyword.aios_short}} 配合使用，但是将无法为模型配置持续学习。

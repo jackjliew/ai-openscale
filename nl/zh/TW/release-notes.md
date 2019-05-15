@@ -119,7 +119,7 @@ subcollection: ai-openscale
 
 - **AWS SageMaker**
 
-    - __*不支援 BlazingText 演算法*__：在 {{site.data.keyword.aios_short}} 現行版本中，不支援 AWS SageMaker BlazingText 演算法輸入承載內容格式。
+    - __*不支援 BlazingText 演算法*__：在 {{site.data.keyword.aios_short}} 現行版本中，不支援 AWS SageMaker BlazingText 演算法輸入有效負載格式。
 
 ## 2018 年 9 月 17 日
 {: #rn-17September2018}

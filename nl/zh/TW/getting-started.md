@@ -52,13 +52,13 @@ subcollection: ai-openscale
 ## {{site.data.keyword.aios_short}} 的使用案例
 {: #gs-use}
 
-傳統的貸方是在壓力之下，將其金融服務數位投資組合推廣給更大更多元的對象，這需採用新作法來為信用風險建模。他們的資料科學團隊目前仰賴標準建模技術，例如：決策樹狀結構和邏輯迴歸（這對中型資料集來說還能應付得宜），且能做出易於解釋的建議。這符合信用貸款決策必須透明且可解釋的法規需求。
+傳統的貸方是在壓力之下，將其金融服務數位投資組合推廣給更大更多元的對象，這需採用新作法來為貸方風險建模。他們的資料科學團隊目前仰賴標準建模技術，例如：決策樹狀結構和邏輯迴歸（這對中型資料集來說還能應付得宜），且能做出易於解釋的建議。這符合信用貸款決策必須透明且可解釋的法規需求。
 
 為了能信用存取更廣且風險更高的族群，必須跳脫傳統信用（例如：抵押貸款和汽車貸款），來擴增申請者的信用歷程，以交替使用公用事業和行動電話方案付款歷程，外加教育和工作職稱。這些新的資料來源雖提供承諾，但也帶來風險，亦即，出現非預期相關性的可能性增加，會因為申請者的年齡、性別或其他個人特質而造成偏誤。
 
 大多適用於這些多樣化資料集的資料科學技術（例如：梯度提升樹狀結構和神經網路）可以產生更加精確的風險模型，只是要付出代價。這類「黑盒」模型會產生不透明的預測，而必須設法變成透明，以確保能通過法規核准，例如：「一般資料保護規章 (GDPR)」第 22 條文，或「消費者金融保護局」所管理的聯邦「公平信用報告法案 (FCRA)」。
 
-本指導教學提供的信用風險模型使用一個訓練資料集，其中含有每一個貸款申請者的 20 個相關屬性。其中兩個屬性（年齡和性別）可用來測試偏誤。在本指導教學中，焦點會放在對於性別與年齡的偏誤。
+本指導教學提供的貸方風險模型使用一個訓練資料集，其中含有每一個貸款申請者的 20 個相關屬性。其中兩個屬性（年齡和性別）可用來測試偏誤。在本指導教學中，焦點會放在對於性別與年齡的偏誤。
 
 {{site.data.keyword.aios_short}} 會監視所部署模型的有利輸出結果（「無風險」），是否較傾向於某一個群組（參照群組），且高過另一個群組（受監視群組）。在本指導教學中，性別的「受監視群組」是 `female`，而年齡的「受監視群組」是 `19 to 25`。
 
@@ -201,7 +201,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
     ![{{site.data.keyword.aios_short}}](images/openscale.png)
 --->
 
-2.  為您的服務命名，選取「精簡」方案，並按一下**建立**。
+2.  為您的服務命名，選取 Lite 方案，並按一下**建立**。
 
 ### 將 {{site.data.keyword.aios_short}} 連接至您的機器學習模型
 {: #gs-ctmod}
@@ -221,7 +221,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
     ![選取所部署的模型](images/gs-set-deploy0.png)
 
-1.  接下來，您需要選擇資料庫。您有兩個選項：免費「精簡」方案資料庫，或是現有或新的資料庫。對於本指導教學，請選取**使用免費「精簡」方案資料庫**圖磚。
+1.  接下來，您需要選擇資料庫。您有兩個選項：免費 Lite 方案資料庫，或是現有或新的資料庫。對於本指導教學，請選取**使用免費 Lite 方案資料庫**圖磚。
     請參閱[指定資料庫](/docs/services/ai-openscale?topic=ai-openscale-connect-db)主題中有關這每一個選項的完整詳細資料。現有的資料庫可以是 PostgreSQL 資料庫或 Db2 資料庫。{: tip}
 
     ![選取資料庫](images/gs-set-lite-db2.png)
@@ -238,7 +238,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 ### 提供一組樣本資料給您的模型
 {: #gs-samp}
 
-您必須先至少針對模型產生一項評分要求，以產生可供監視器取用的承載內容記載，然後您才能配置監視器。在本節中，您將以 JSON 檔案形式提供樣本資料，來產生一項評分要求。
+您必須先至少針對模型產生一項評分要求，以產生可供監視器取用的有效負載記載，然後您才能配置監視器。在本節中，您將以 JSON 檔案形式提供樣本資料，來產生一項評分要求。
 
 1.  下載 [credit_payload_data.json![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) 檔。
 
@@ -246,7 +246,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
     ![JSON 測試](images/json_test02.png)
 
-1.  現在，開啟您所下載的 `credit_payload_data.json` 檔，將內容複製到**測試**標籤中的 JSON 欄位。按一下**預測**按鈕，為訓練承載內容評分並傳送給您的模型。
+1.  現在，開啟您所下載的 `credit_payload_data.json` 檔，將內容複製到**測試**標籤中的 JSON 欄位。按一下**預測**按鈕，為訓練有效負載評分並傳送給您的模型。
 
     ![JSON 預測](images/json_test03.png)
 
@@ -285,7 +285,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
     ![指定綱目和訓練表格中的 Db2 位置](images/gs-fair-config-table-db2.png)
 
-1.  現在，您必須指定含有模型所要預測之回答的特性（亦即，在您的資料庫中，表格中的哪一個直欄含有預測值（標籤））。在本例中，模型將預測信用風險，因此請選取**風險**直欄，並按**下一步**。
+1.  現在，您必須指定含有模型所要預測之回答的特性（亦即，在您的資料庫中，表格中的哪一個直欄含有預測值（標籤））。在本例中，模型將預測貸方風險，因此請選取**風險**直欄，並按**下一步**。
 
     您的訓練資料庫具有一些您為了訓練模型而提供的值。{: note}
 
@@ -330,7 +330,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
 1.  將**來自訓練資料的值**欄位中的值，拖放至**有利值**和**不利值**欄位。對於本指導教學，有利值是**無風險**，不利值是**風險**。按**下一步**。
 
-    {{site.data.keyword.aios_short}} 會自動偵測承載內容記載中哪些直欄含有預測值，並將它們呈現在**來自訓練資料的值**欄位中。請注意，儘管您的訓練資料庫具有您提供用來訓練模型的值，承載內容記載資料庫會包含在模型執行時期所收集的回饋資料，可讓您之後選擇性地用來重新訓練和重新部署您的模型。{: note}
+    {{site.data.keyword.aios_short}} 會自動偵測有效負載記載中哪些直欄含有預測值，並將它們呈現在**來自訓練資料的值**欄位中。請注意，儘管您的訓練資料庫具有您提供用來訓練模型的值，有效負載記載資料庫會包含在模型執行時期所收集的回饋資料，可讓您之後選擇性地用來重新訓練和重新部署您的模型。{: note}
 
     ![正值和負值](images/pos_and_neg2.png)
 
@@ -444,7 +444,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
     ![交易清單](images/transaction_list_cr.png)
 
-1.  會顯示解釋，指出模型是如何得出其結論。這項解釋包括：模型的確信程度、確信層次的造成因素，以及輸送給模型的直欄。
+1.  會顯示解釋，指出模型是如何得出其結論。這項解釋包括：模型的信賴度、確信層次的造成因素，以及輸送給模型的直欄。
 
     ![檢視交易](images/view_transaction1.png)
 
