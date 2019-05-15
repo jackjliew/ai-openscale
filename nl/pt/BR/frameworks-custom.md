@@ -33,7 +33,7 @@ Tabela 1. Detalhes do suporte da estrutura
 
 | Estrutura | Tipo de problema | Tipo de Dados |
 |:---|:---:|:---:|
-| Equivalente a {{site.data.keyword.pm_full}} | Classificação | Estruturadas |
+| Equivalente a {{site.data.keyword.pm_full}} | Classificação | Estruturados |
 {: caption="Detalhes do suporte da estrutura" caption-side="top"}
 
 

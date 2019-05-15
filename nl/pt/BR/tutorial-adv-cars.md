@@ -37,7 +37,7 @@ Uma empresa de aluguel de carros coletou dados de feedback sobre a satisfação 
 
 O modelo usa o ID de campos de dados do cliente (um número de ID), GÊNERO, STATUS (solteiro ou casado), FILHOS (número), IDADE, STATUS DO CLIENTE (ativo ou inativo), PROPRIETÁRIO DO CARRO (sim ou não), ATENDIMENTO AO CLIENTE (comentário do cliente), SATISFAÇÃO (satisfeito ou insatisfeito) e ÁREA DE NEGÓCIOS (relacionada ao produto ou serviço) para prever um dos quatro valores (NA, voucher, upgrade grátis, coleta on demand) para o campo de dados AÇÃO.
 
-## pré-requisitos
+## Pré-requisitos
 {: #tadv-prereqs}
 
 Para concluir este tutorial, você precisará:

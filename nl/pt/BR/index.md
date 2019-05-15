@@ -24,7 +24,7 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# About
+# Sobre
 {: #in-ov}
 
 O {{site.data.keyword.aios_full}} é um ambiente de classificação corporativa para aplicativos desenvolvidos com IA, fornecendo visibilidade às empresas sobre como a IA está sendo construída e usada e entregando retorno sobre investimento na escala de seu negócio.

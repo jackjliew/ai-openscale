@@ -19,7 +19,7 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Monitoramento explicabilidade
+# Monitorando a explicabilidade
 {: #ie-ov}
 
 Para cada implementação, é possível ver dados de explicabilidade para transações específicas.

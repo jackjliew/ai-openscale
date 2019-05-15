@@ -23,7 +23,7 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# recursos adicionais
+# Recursos adicionais
 {: #arsc-ov}
 
 ## Tutorials (Tutoriais)

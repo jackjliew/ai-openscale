@@ -74,7 +74,7 @@ Para continuar com o uso do banco de dados do plano Lite grátis, simplesmente s
             - host ou endereço IP
             - Port (Porta)
             - Banco de dados (nome)
-            - Username
+            - Nome de usuário
             - Senha
 
             ![Specify Compose for Postgres db location](images/db-config-cpostgres.png)
@@ -85,7 +85,7 @@ Para continuar com o uso do banco de dados do plano Lite grátis, simplesmente s
             - Porta SSL
             - Certificado Codificado Base-64
             - Banco de dados (nome)
-            - Username
+            - Nome de usuário
             - Senha
 
             ![Specify Database for Postgres db location](images/db-config-dpostgres.png)
@@ -95,7 +95,7 @@ Para continuar com o uso do banco de dados do plano Lite grátis, simplesmente s
             - host ou endereço IP
             - Porta SSL
             - Banco de dados (nome)
-            - Username
+            - Nome de usuário
             - Senha
 
             ![Specify Db2 location](images/db-config-db2.png)

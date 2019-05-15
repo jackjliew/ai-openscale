@@ -25,7 +25,7 @@ subcollection: ai-openscale
 Sua primeira etapa na ferramenta {{site.data.keyword.aios_short}} é especificar uma instância do Watson Machine Learning (WML). Sua instância do WML é onde você armazena seus modelos e implementações de IA.
 {: shortdesc}
 
-## pré-requisitos
+## Pré-requisitos
 {: #wml-prereq}
 
 É necessário provisionar uma instância do WML na mesma conta do {{site.data.keyword.Bluemix_notm}} na qual a instância de serviço do {{site.data.keyword.aios_short}} está presente. Se você tiver provisionado uma instância do WML em alguma outra conta, não será possível configurar essa instância com o {{site.data.keyword.aios_short}}.

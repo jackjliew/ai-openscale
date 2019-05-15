@@ -40,7 +40,7 @@ Os bancos de dados do Compose, como o PostgreSQL, e os bancos de dados do diret�
  
 O {{site.data.keyword.cloud_notm}} oferece redundância de dados na região que permite proteção de alta disponibilidade. A IBM fornece replicação automática de dados para bancos de dados do cliente que contêm treinamento e/ou dados de modelo customizado sem custo adicional. A replicação é concluída em zonas de disponibilidade na região dentro de data centers do {{site.data.keyword.cloud_notm}}.
  
-## Fazer Backup & Restore
+## Fazer backup e restauração
 {: #openscale-restore}
 
 Os clientes são responsáveis por fazer backup e restaurar seus próprios dados, incluindo treinamento e/ou dados de modelo customizado, assim como quaisquer modelos customizados gerados pelo Cliente. Para obter instruções de backup e restauração do cliente, consulte a documentação do {{site.data.keyword.cloud_notm}}.

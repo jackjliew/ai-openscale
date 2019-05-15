@@ -73,8 +73,8 @@ Para dados numéricos ou categóricos, é necessário fornecer informações sob
             - Nome do host ou Endereço IP
             - Port
             - Banco de dados (nome)
-            - Username
-            - Password
+            - Nome de usuário
+            - Senha
 
             ![Especificar o local do Db2 da página de dados de treinamento](images/config-train-db2-monitor.png)
 
@@ -86,7 +86,7 @@ Para dados numéricos ou categóricos, é necessário fornecer informações sob
               {: important}
 
             - Instância de recurso (ID)
-            - chave de API
+            - Chave de API
 
             ![Especifique o local do Cloud Object Storage da página de dados de treinamento](images/config-train-cos-monitor.png)
 

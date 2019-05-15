@@ -62,7 +62,7 @@ Daqui, é possível editar diretamente as definições de configuração para se
 
 A guia **Explicar uma transação** (![Guia Explicar uma transação](images/insight-transact-tab.png)) permite procurar um ID de transação específico para explicar uma determinada transação de implementação. Para obter mais informações, consulte [Monitorando a explicabilidade](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
-## Ferramentas AI
+## Ferramentas de IA
 {: #io-too}
 
 A guia **Ferramentas de IA** (![Guia Ferramentas de IA](images/aitools.png)) abre um diálogo que fornece um link para opções adicionais de ferramentas de IA da IBM:

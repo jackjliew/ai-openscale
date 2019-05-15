@@ -19,7 +19,7 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# o quê há de novo
+# O quê há de novo
 {: #rn-relnotes}
 
 Este documento descreve novos recursos e problemas conhecidos para o {{site.data.keyword.aios_full_notm}}.

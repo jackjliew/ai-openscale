@@ -33,7 +33,7 @@ Tabela 1. Detalhes do suporte da estrutura
 
 | Estrutura | Tipo de problema | Tipo de Dados |
 |:---|:---:|:---:|
-| Nativo | Classificação | Estruturadas |
+| Nativo | Classificação | Estruturados |
 {: caption="Detalhes do suporte da estrutura" caption-side="top"}
 
 

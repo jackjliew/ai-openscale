@@ -42,7 +42,7 @@ Em seguida, mova o marcador do outro lado do gráfico para ver estatísticas por
 
 - ***Justiça***: dois dos três recursos de Justiça, Valor do carro e Código de área, atendem seus limites configurados para aprovação. O terceiro recurso de Justiça, Idade, foi sinalizado para propensão. Também é possível ver o número de resultados esperados (neste caso, porcentagens Aprovadas vs. Negadas) para uma população individual nos recursos monitorados para justiça.
 - ***Precisão***: a métrica de Precisão com média de 78%.
-- ***Méd. de requisitos/min***: em média, 300 registros foram processados por minuto entre 13h e 14h CST. O rendimento é calculado a cada minuto e seu valor médio durante o curso da hora é relatado no gráfico.
+- ***Méd. Requisitos/min***: em média, 300 registros foram processados por minuto entre 13h e 14h CST. O rendimento é calculado a cada minuto e seu valor médio durante o curso da hora é relatado no gráfico.
 
 ## Visualizando dados para uma hora específica
 {: #it-vdet}

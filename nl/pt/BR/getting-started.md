@@ -1,6 +1,6 @@
 ---
 
-title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
+title: Confiança e transparência para os modelos de aprendizado de máquina com o {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
 intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-04-11"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -38,7 +38,7 @@ subcollection: ai-openscale
 O {{site.data.keyword.aios_full}} permite que as empresas automatizem e operacionalizem o ciclo de vida de IA em aplicativos de negócios, assegurando que os modelos de IA sejam livres de propensão, possam ser facilmente explicados e entendidos pelos usuários de negócios e sejam auditáveis em transações de negócios. O {{site.data.keyword.aios_short}} suporta modelos de AI construídos e executados nas ferramentas e estruturas de entrega de modelo de sua escolha.
 {: shortdesc}
 
-## visão geral
+## Visão geral
 {: #gs-view-demo}
 
 Obtenha uma visão geral rápida do {{site.data.keyword.aios_short}} assistindo a este vídeo.

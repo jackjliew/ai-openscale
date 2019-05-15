@@ -39,7 +39,7 @@ O modelo de risco de crédito fornecido neste tutorial usa um conjunto de dados 
 
 O {{site.data.keyword.aios_short}} monitorará a propensão do modelo implementado para um resultado favorável ("Sem risco") para um grupo (o Grupo de referência) sobre outro (o Grupo monitorado). Neste tutorial, o Grupo monitorado para sexo é `female`, enquanto o Grupo monitorado para idade é `18 to 25`.
 
-## pré-requisitos
+## Pré-requisitos
 {: #crt-prereqs}
 
 Este tutorial usa um bloco de notas Jupyter que deve ser executado em um projeto do Watson Studio, usando um ambiente de tempo de execução "Python 3.5 com Spark". Isso requer credenciais de serviço para os serviços do {{site.data.keyword.cloud_notm}} a seguir:

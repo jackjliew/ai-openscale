@@ -26,18 +26,18 @@ subcollection: ai-openscale
 # Estruturas WML
 {: #frmwrks-wml}
 
-{{site.data.keyword.aios_full}} suporta totalmente os seguintes {{site.data.keyword.pm_full}} estruturas: 
+{{site.data.keyword.aios_full}} suporta totalmente as seguintes estruturas do {{site.data.keyword.pm_full}}:
 {: shortdesc}
 
 Tabela 1. Detalhes do suporte da estrutura
 
 | Estrutura | Tipo de problema | Tipo de Dados |
 |:---|:---:|:---:|
-| Apache Spark MLlib | Classificação | Estruturadas |
-| função Python | Classificação | Estruturadas |
-| função Python | Procedimento de | Estruturadas |
-| XGBoost | Classificação | Estruturadas |
-| XGBoost | Procedimento de | Estruturadas |
+| Apache Spark MLlib | Classificação | Estruturados |
+| função Python | Classificação | Estruturados |
+| função Python | Procedimento de | Estruturados |
+| XGBoost | Classificação | Estruturados |
+| XGBoost | Procedimento de | Estruturados |
 {: caption="Detalhes do suporte da estrutura" caption-side="top"}
 
 

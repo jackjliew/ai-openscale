@@ -19,7 +19,7 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Accuracy
+# Precisão
 {: #acc-monitor}
 
 A Precisão permite que você saiba o quão bem seu modelo prevê resultados.
