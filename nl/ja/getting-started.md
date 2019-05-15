@@ -1,6 +1,6 @@
 ---
 
-title: {{site.data.keyword.aios_short}} を使用した機械学習モデルの信頼性と透明性
+title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
 intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-06"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -121,12 +121,6 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
     ![Watson サービスの追加](images/add_watson_service.png)
 
 1.  **「Machine Learning」**タイルの**「Add」**リンクをクリックし、**「Existing」**タブを選択します。前のセクションで作成したサービスを**「Existing Service Instance」**メニューから選択し、**「Select」**をクリックします。
-
-<!---
-
-- プロジェクト設定タブから再度「Add service」を選択し、メニューから「Spark」を選択します。「Existing」タブから、作成した Spark サービスを選択し、「Select」をクリックします。
-
---->
 
 ### `Credit Risk` モデルの追加
 {: #gs-addmod}
