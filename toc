@@ -54,6 +54,7 @@ Watson OpenScale
     [Python Client](http://ai-openscale-python-client.mybluemix.net/)
     activity-tracker.md
     information-security.md
+    language-support
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
