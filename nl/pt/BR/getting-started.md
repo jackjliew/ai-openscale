@@ -100,6 +100,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
       ![Object Storage](images/object_storage.png)
 
+
 ## Configurar um projeto do Watson Studio
 {: #gs-setup}
 

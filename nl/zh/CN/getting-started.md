@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-04-11"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -60,28 +60,26 @@ subcollection: ai-openscale
 
 本教程中提供的信用风险模型使用训练数据集，其中包含有关每个贷款申请人的 20 个属性。其中两个属性（年龄和性别）可以测试有无偏差。对于本教程，重点将在于针对性别和年龄的偏差。
 
-{{site.data.keyword.aios_short}} 将监视已部署模型中一个组（参考组）相对于另一个组（受监视组）获取有利结果（“无风险”）的倾向。在本教程中，性别的受监视组为 `female`，而年龄的受监视组为 `19 to 25`。
+{{site.data.keyword.aios_short}} 将监视已部署模型中一个组（参考组）相对于另一个组（受监视组）获取有利结果（“无风险”）的倾向。在本教程中，性别的受监视组为“`女性`”，而年龄的受监视组为“`19 至 25`”。
 
-## Alternate setup option
+## 备用设置选项
 {: #gs-module}
 
-Instead of completing the following tutorial to explore {{site.data.keyword.aios_short}}, technical users can install a Python module that automates the provisioning and configuration of prerequisite services. This module requires that Python 3 is installed, which includes the pip package management system. For instructions, see, [Installing a Python module to set up {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module).
-
-Additional tutorial links may be found in the [Additional resources](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov) topic.
-
-## Tutorial objectives
+相较于完成以下教程来探索 {{site.data.keyword.aios_short}}，技术用户可以安装 Python 模块来自动供应和配置必备服务。该模块要求安装 Python 3，其中包括 pip 包管理系统。有关指示信息，请参阅[安装 Python 模块以设置{{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)。
+其他教程链接可以在[其他资源](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov)主题中找到。
+## 教程目标
 {: #gs-obj}
 
-In this tutorial, you will:
+在该教程中，您将：
 
-- Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services
-- Set up a Watson Studio project, and create, train and deploy a machine learning model
-- Configure and explore trust, transparency and explainability for your model
+- 供应 {{site.data.keyword.Bluemix_notm}} 机器学习和存储服务
+- 设置 Watson Studio 项目，然后创建、训练并部署机器学习模型
+- 配置并探索模型的信任度、透明度和可解释性
 
-## Provision prerequisite {{site.data.keyword.Bluemix_notm}} services
+## 供应必备的 {{site.data.keyword.Bluemix_notm}} 服务
 {: #gs-prps}
 
-In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you need the following accounts and services.
+除了 {{site.data.keyword.aios_short}} 之外，要完成该教程，还需要以下账户和服务。
 
 **要点**：为获取最佳性能，建议在与 {{site.data.keyword.aios_short}} 相同的区域中创建必备服务。要查看 {{site.data.keyword.aios_short}} 的可用位置，请参阅[服务可用性](/docs/resources?topic=resources-services_region)。
 
@@ -148,6 +146,10 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 {: #gs-provaios}
 
 1.  [供应新 {{site.data.keyword.aios_short}} 服务实例 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
+
+<!---
+    ![{{site.data.keyword.aios_short}}](images/openscale.png)
+--->
 
 2.  指定服务的名称，选择 Lite 套餐，然后单击**创建**。
 

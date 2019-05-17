@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-04-11"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -60,41 +60,41 @@ subcollection: ai-openscale
 
 本指導教學提供的貸方風險模型使用一個訓練資料集，其中含有每一個貸款申請者的 20 個相關屬性。其中兩個屬性（年齡和性別）可用來測試偏誤。在本指導教學中，焦點會放在對於性別與年齡的偏誤。
 
-{{site.data.keyword.aios_short}} 會監視所部署模型的有利輸出結果（「無風險」），是否較傾向於某一個群組（參照群組），且高過另一個群組（受監視群組）。在本指導教學中，性別的「受監視群組」是 `female`，而年齡的「受監視群組」是 `19 to 25`。
+{{site.data.keyword.aios_short}} 會監視所部署模型的有利輸出結果（「無風險」），是否較傾向於某一個群組（參照群組），且高過另一個群組（受監視群組）。在本指導教學中，性別的「受監視群組」是`女性`，而年齡的「受監視群組」是 `19 至 25`。
 
-## Alternate setup option
+## 替代設置選項
 {: #gs-module}
 
-Instead of completing the following tutorial to explore {{site.data.keyword.aios_short}}, technical users can install a Python module that automates the provisioning and configuration of prerequisite services. This module requires that Python 3 is installed, which includes the pip package management system. For instructions, see, [Installing a Python module to set up {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module).
+相對於完成下列指導教學來探索 {{site.data.keyword.aios_short}}，技術使用者可改以安裝 Python 模組，以自動執行必備服務的供應及配置。這個模組需要安裝含有 PIP 套件管理系統的 Python 3。如需相關指示，請參閱 [安裝 Python 模組以設置 {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)。
 
-Additional tutorial links may be found in the [Additional resources](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov) topic.
+其他的指導教學鏈結可在 [其他資源](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov)主題中找到。
 
-## Tutorial objectives
+## 指導教學目標
 {: #gs-obj}
 
-In this tutorial, you will:
+在本指導教學中，您將：
 
-- Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services
-- Set up a Watson Studio project, and create, train and deploy a machine learning model
-- Configure and explore trust, transparency and explainability for your model
-
-## Provision prerequisite {{site.data.keyword.Bluemix_notm}} services
+- 佈建 {{site.data.keyword.Bluemix_notm}} 機器學習和儲存體服務
+- 設置 Watson Studio 專案，並建立、訓練及部署一個機器學習模型
+- 配置及探索您模型的信任度、透明度和可解釋性
+## 供應必備的 {{site.data.keyword.Bluemix_notm}} 服務
 {: #gs-prps}
 
-In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you need the following accounts and services.
+除了 {{site.data.keyword.aios_short}}，如果要完成本指導教學，您需要下列帳戶和服務。
 
 **重要事項**：為取得最佳效能，建議在 {{site.data.keyword.aios_short}} 的相同地區建立必備服務。如果要檢視 {{site.data.keyword.aios_short}} 的可用位置，請參閱[服務可用性](/docs/resources?topic=resources-services_region)。
 1.  使用您的 {{site.data.keyword.ibmid}} 來登入 [{{site.data.keyword.Bluemix_notm}} 帳戶 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}){: new_window}。
 1.  請針對尚未與您帳戶產生關聯的下列每一項服務，各建立一個實例，作法是按一下鏈結，為您的服務命名，選取**精簡**（免費）方案，並按一下**建立**按鈕：
     - [Watson Studio ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/catalog/services/watson-studio){: new_window}
 
-      ![Watson Studio](images/watson_studio.png)
+   ![Watson Studio](images/watson_studio.png)
 
-    - [Watson Machine Learning ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/catalog/services/machine-learning){: new_window}
+   - [Watson Machine Learning ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/catalog/services/machine-learning){: new_window}
 
       ![Machine Learning](images/machine_learning.png)
 
     - [Object Storage ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}
+
       ![Object Storage](images/object_storage.png)
 
 ## 設置 Watson Studio 專案
