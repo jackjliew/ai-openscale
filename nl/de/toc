@@ -1,0 +1,68 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="ai-openscale" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
+Watson OpenScale
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    alt-setup.md
+    index.md
+
+    {: .topicgroup}
+    Frameworkunterstützung
+        frameworks-wml-cloud.md
+        frameworks-azure-ml-studio.md
+        frameworks-aws-sagemaker.md
+        frameworks-custom.md
+
+    tutorial-adv.md
+    addl-rsc.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Watson OpenScale konfigurieren
+        creds.md
+        connect-wml.md
+        connect-azureml.md
+        connect-sagemaker.md
+        connect-other.md
+        connect-db.md
+        connect-ml.md
+        config-file.md
+
+    {: .topicgroup}
+    Mit Überwachungen arbeiten
+        monitor-overview.md
+        monitor-fairness.md
+        monitor-accuracy.md
+
+    {: .topicgroup}
+    Überwachungsdaten anzeigen und bearbeiten
+        insight-overview.md
+        insight-timechart.md
+        insight-explain.md
+
+    openscale-recovery.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API-Referenz](https://cloud.ibm.com/apidocs/ai-openscale)
+    [ModelOps-CLI](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
+    [Python-Client](http://ai-openscale-python-client.mybluemix.net/)
+    activity-tracker.md
+    language-support.md
+    information-security.md
+    [Watson GitHub-Repositorys](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+    ai-openscale-faqs.md
+
+    {: .topicgroup}
+    Entwicklercommunity
+        [IBM Developer](https://developer.ibm.com/?s=openscale)
+        [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale)
+    {: .navgroup-end}
