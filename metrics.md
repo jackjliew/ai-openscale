@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-29"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -55,7 +55,7 @@ To access and visualize custom metrics you can use programmatic interface. The f
 
    For more information, see [the Python SDK documentation](http://ai-openscale-python-client.mybluemix.net/).
 
-Visualization of your custom metrics can be find also on the Watson OpenScale Dashboard.
+Visualization of your custom metrics appear on the {{site.data.keyword.aios_short}} Dashboard.
 
 <!---
 ![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
