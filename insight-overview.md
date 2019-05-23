@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Navigating the dashboard
 {: #io-ov}
 
-You can track all the deployments you are monitoring through the {{site.data.keyword.aios_short}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}}. The dashboard consists of five tabs:
+You can track all the deployments you are monitoring through the {{site.data.keyword.aios_short}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}}. The dashboard consists of the following tabs:
 
   ![Insight tabs](images/insight-tabs.png)
 
