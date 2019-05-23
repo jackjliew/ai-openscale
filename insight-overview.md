@@ -62,13 +62,6 @@ From here, you can directly edit the configuration settings for your deployment 
 
 Use the **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) to search a specific transaction ID to explain a particular deployment transaction. For more information, see [Monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
-## AI Tools
-{: #io-too}
-
-Use the **AI Tools** tab ( ![AI Tools tab](images/aitools.png) ) to open additional IBM AI tools and options.
-
-- *[Watson Studio lite plan ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*: Watson Studio provides you with the environment and tools to analyze and visualize data, to cleanse and shape data, to ingest streaming data, or to create, train, and deploy machine learning models. Click the "Sign up for the free Watson Studio Lite plan" link to get Watson Studio.
-
 ## Help tab
 {: #io-help}
 
