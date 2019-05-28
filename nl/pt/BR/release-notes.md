@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: release notes, what's new 
 
@@ -24,6 +24,24 @@ subcollection: ai-openscale
 
 Este documento descreve novos recursos e problemas conhecidos para o {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
+
+## 25 de abril de 2019
+{: #rn-25April2019}
+
+Os novos recursos e mudanças a seguir para o serviço estão disponíveis.
+
+### Novos Recursos e Mudanças
+{: #rn-25April2019nf}
+
+Além de melhorias de usabilidade e atualizações de segurança, nossos desenvolvedores têm estado ocupados com novos recursos. Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimorados durante as semanas anteriores incluem:
+
+- __*Tour de configuração automatizada*__: uma nova maneira guiada de para configurar seu ambiente do {{site.data.keyword.aios_short}}. Use a [Configuração automatizada](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)
+para fornecer serviços, fazer download e configurar um modelo. Você perceberá essa opção quando tiver
+uma nova instância do {{site.data.keyword.aios_short}}.
+- __*Alternar para beta*__: ![tag beta](images/beta.png) uma nova alternância, **Explorar a nova versão beta**, permite que você
+trabalhe em nosso ambiente beta, no qual é possível verificar todos os recursos mais recentes e as novas funcionalidades. Não gosta do que vê? Somente alterne de volta clicando em **Voltar para a versão original**. A configuração e os monitores não são afetados. Os recursos a seguir fazem parte do
+programa beta atual:
+    - __*Matriz de confusão*__: uma [matriz de confusão exibe](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) os falsos positivos e os falsos negativos. Clique em uma célula para visualizar o subconjunto de registros de feedback.
 
 ## 5 de Março de 2019
 {: #rn-5March2019}
@@ -99,8 +117,6 @@ Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimora
 - __*Explicabilidade*__: suporte para modelos de regressão, funções Python e explicações contrastantes complementares. Consulte [Monitorando explicabilidade](/docs/services/ai-openscale?topic=ai-openscale-ie-ov) para obter mais informações.
 
 - __*Armazenamento de dados*__: o monitoramento de qualidade sem reliance no Watson Machine Learning e a capacidade de usar seu próprio banco de dados, seja Db2, Postgres ou Db2 on Cloud.
-
-- __*NeuNetS (beta)*__: o IBM Neural Network Synthesizer (NeuNetS) está disponível como uma liberação beta (somente nuvem pública). Consulte a [documentação do NeuNetS ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window} para obter mais informações.
 
 - __*IU aprimorada*__: a IU do {{site.data.keyword.aios_short}} foi melhorada para incluir uma distribuição de histograma de tempo de execução com alternância para dados de treinamento, ID do modelo e Versão e uma tabela de ID de transação do histograma. Consulte [Visualizando dados para uma hora específica](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet) para obter mais informações.
 

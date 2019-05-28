@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: JSON, configuration, configuring, deployment
+keywords: JSON, configuration, configuring, deployment, subscription
 
 subcollection: ai-openscale
 
@@ -23,13 +23,13 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# JSON 파일을 사용하여 배치 구독을 구성하십시오.
+# JSON 구성 파일을 사용하여 자산 배치 구성
 {: #cf-ov}
 
-JSON 파일을 가져와서 구독을 작성하는 동안 프로그래밍 방식으로 모든 모니터와 기능을 구성할 수 있습니다. 또한 구성 파일을 내보낼 수 있습니다.
+JSON 파일을 가져와서 모니터링을 위해 모든 자산의 배치를 작성하고 구성할 수 있습니다. 또한 다른 자산 및 배치를 구성하기 위해 구성 파일을 내보낼 수도 있습니다.
 {: shortdesc}
 
-JSON 파일을 사용하여 작업하여 배치를 구독하는 방법에 대한 예는 [Watson OpenScale One API Shot for subscription Python notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb)을 참조하십시오. 노트북은 단일 API 호출에서 JSON 파일을 사용하여 Amazon SageMaker 자산 구독을 구성하는 방법을 설명합니다. 이 주제의 나머지는 이 노트북을 참조합니다.
+JSON 파일에 대해 작업하는 방법에 대한 좋은 예는 [Watson OpenScale One API Shot for subscription Python notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb)을 참조하십시오. Notebook에서는 JSON 파일을 사용하여 단일 API 호출로 Amazon SageMaker 자산 배치를 작성하고 구성하는 방법에 대해 설명합니다. 이 주제의 나머지 부분은 이 노트북을 참조합니다.
 
 ## JSON 파일 컨텐츠를 Python 사전으로 로드하십시오.
 {: #cf-load-as-dict}
@@ -146,10 +146,10 @@ JSON 파일을 사용하여 작업하여 배치를 구독하는 방법에 대한
   'timestamp': '2019-02-11T11:41:01.613Z'}}
   ```
 
-## 구성 파일에서 구독을 추가하십시오.
+## 구성 파일에서 가져오기
 {: #cf-subscribe}
 
-- 이제 호출을 실행하여 샘플 유방암 예측 모델 배치에 대한 구독을 추가하고 구성하십시오.
+- 이제 호출을 실행하여 샘플 유방암 예측 모델 배치에 대한 자산 배치를 추가하고 구성하십시오.
 
     ```python
     subscription = client.data_mart.subscriptions.import_configuration(binding_uid=binding_uid, configuration_data=subscription_configuration)
@@ -158,7 +158,7 @@ JSON 파일을 사용하여 작업하여 배치를 구독하는 방법에 대한
   ML 엔진이 하나만 바인드되는 경우, `binding_uid` 매개변수가 선택사항입니다.
   {: note}
 
-## JSON 파일 내보내기
+## 구성 파일로 내보내기
 {: #cf-export}
 
 - 구성 파일을 JSON으로 내보낼 수 있습니다.
@@ -170,8 +170,8 @@ JSON 파일을 사용하여 작업하여 배치를 구독하는 방법에 대한
 ## 결과
 {: #cf-results}
 
-구독이 작성되고 배치 모델이 {{site.data.keyword.aios_short}}에 의해 사용될 수 있도록 구성됩니다.
+자산 배치가 작성되고 {{site.data.keyword.aios_short}}에서 사용하도록 구성됩니다.
 
 [{{site.data.keyword.aios_short}} Python 클라이언트 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}에서 전체 정보를 참조하십시오.
 
-또한 [구독 가져오기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 및 [구독 내보내기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} 방법을 사용하여 {{site.data.keyword.aios_short}}에 대해 구성을 가져오고 내보낼 수 있습니다.
+[구독 가져오기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 및 [구독 내보내기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API 메소드를 사용하여 {{site.data.keyword.aios_short}}에 대한 구성을 가져오고 내보낼 수도 있습니다. 

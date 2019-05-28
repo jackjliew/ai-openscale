@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Microsoft Azure, ml, machine learning, services
 
@@ -19,16 +19,16 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Microsoft Azure Machine Learning-Serviceinstanz angeben
+# Microsoft Azure ML Studio-Instanz angeben
 {: #connect-azure}
 
-Als ersten Schritt im {{site.data.keyword.aios_short}}-Tool geben Sie eine Microsoft Azure ML-Serviceinstanz an. In Ihrer Azure ML-Service-Instanz speichern Sie Ihre AI-Modelle und -Bereitstellungen.
+Als ersten Schritt im {{site.data.keyword.aios_short}}-Tool geben Sie eine Microsoft Azure ML Studio-Instanz an. In der Azure ML Studio-Instanz werden die AI-Modelle und -Bereitstellungen gespeichert.
 {: shortdesc}
 
-## Azure ML Studio-Serviceinstanz verbinden
+## Verbindung zu Azure ML Studio-Instanz herstellen
 {: #ca-connect}
 
-{{site.data.keyword.aios_short}} stellt die Verbindung zu AI-Modellen und Bereitstellungen in einer Azure ML Studio-Serviceinstanz her.
+Von {{site.data.keyword.aios_short}} wird eine Verbindung zu AI-Modellen und -Bereitstellungen in einer Azure ML Studio-Instanz aufgebaut.
 
 1.  Klicken Sie auf der Startseite des {{site.data.keyword.aios_short}}-Tools auf **Beginnen**.
 
@@ -36,14 +36,14 @@ Als ersten Schritt im {{site.data.keyword.aios_short}}-Tool geben Sie eine Micro
 
 1.  Wählen Sie die Kachel **Microsoft Azure ML Studio** aus und klicken Sie auf **Weiter**.
 
-    ![Azure ML-Service auswählen](images/connect-azure.png)
+    ![Azure ML Studio auswählen](images/connect-azure.png)
 
 1.  Geben Sie Ihre Berechtigungsnachweise ein:
 
     Anweisungen dazu, wie Sie Ihre Microsoft Azure-Berechtigungsnachweise abrufen, enthält die Anleitung [How to: Use the portal to create an Azure AD application and service principal that can access resources ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: new_window}.
     {: note}
 
-    ![Berechtigungsnachweise für Azure ML-Service eingeben](images/connect-azure-cred.png)
+    ![Azure ML Studio-Berechtigungsnachweise eingeben](images/connect-azure-cred.png)
 
 1.  Klicken Sie auf **Weiter**.
 

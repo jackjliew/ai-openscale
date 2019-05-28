@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-29"
 
 keywords: databases, connections, scoring, requests
 
@@ -28,19 +28,16 @@ Spécifier une base de données pour votre instance de {{site.data.keyword.aios_
 ## Connexion à votre base de données
 {: #cdb-connect}
 
-{{site.data.keyword.aios_short}} utilise une base de données pour stocker les données de contenu, de commentaires et de mesure.
-En plus de sélectionner une base de données, vous pouvez également sélectionner un schéma pour celle-ci
+{{site.data.keyword.aios_short}} utilise une base de données pour stocker les données de contenu, de commentaires et de mesure. En plus de sélectionner une base de données, vous pouvez également sélectionner un schéma pour celle-ci
 (un schéma est une collection de tables avec un nom dans la base de données).
 
-1.  Choisissez une base de données.
-Vous avez deux options : la base de données gratuite du forfait Lite, ou une base de données existante ou nouvelle.
+1.  Choisissez une base de données. Vous avez deux options : la base de données gratuite ou une base de données existante ou nouvelle. 
 
     ![Sélection de la base de données](images/gs-config-database.png)
 
     Si vous avez un compte {{site.data.keyword.cloud_notm}} payant,
 vous pouvez mettre à disposition un service `Databases for PostgreSQL` ou `Db2 Warehouse`
-pour profiter pleinement de l'intégration avec Watson Studio et des services d'apprentissage continu.
-Si vous choisissez de ne pas mettre à disposition un service payant,
+pour profiter pleinement de l'intégration avec Watson Studio et des services d'apprentissage continu. Si vous choisissez de ne pas mettre à disposition un service payant,
 vous pouvez utiliser le stockage PostgreSQL interne gratuit
 avec {{site.data.keyword.aios_short}}, mais vous ne pourrez pas configurer l'apprentissage continu pour votre modèle.
     {: note}
@@ -48,18 +45,19 @@ avec {{site.data.keyword.aios_short}}, mais vous ne pourrez pas configurer l'app
 ### Base de données gratuite du forfait Lite
 {: #cdb-lite}
 
-**REMARQUE** : La base de données gratuite du forfait Lite comporte des limitations importantes :
+**REMARQUE** : la base de données gratuite comporte des limitations importantes :
 
-- La base de données gratuite du forfait Lite est hébergée et ne vous est pas directement accessible.
+- La base de données gratuite est hébergée et ne vous est pas directement accessible.
 - {{site.data.keyword.aios_full}} aura l'accès complet à votre base de données et donc à vos données.
-- La base de données gratuite du forfait Lite n'est pas en conformité avec le RGPD.
-Vous ne pouvez pas l'utiliser si votre modèle traite des informations à caractère personnel.
-Vous devez en acheter une nouvelle ou en utiliser une existante qui soit en conformité avec les règles du RGPD.
-Pour en savoir plus, voir [Sécurité des informations](/docs/services/ai-openscale?topic=ai-openscale-is-ov).
+- La base de données gratuite n'est pas en conformité avec le RGPD. Vous ne pouvez pas l'utiliser si votre modèle traite des informations à caractère personnel. Vous devez en acheter une nouvelle ou en utiliser une existante qui soit en conformité avec les règles du RGPD. Pour en savoir plus, voir [Sécurité des informations](/docs/services/ai-openscale?topic=ai-openscale-is-ov).
 
-Pour utiliser la base de données gratuite du plan Lite, sélectionnez cette option puis vérifiez le récapitulatif et cliquez sur **Enregistrer**.
+Pour utiliser la base de données gratuite, cliquez sur le carreau **Utiliser la base de données gratuite hébergée par {{site.data.keyword.aios_short}}**, puis vérifiez le récapitulatif et cliquez sur **Enregistrer**.
 
   ![Sélection de la base de données](images/gs-config-database2.png)
+  
+Vous pouvez effectuer une mise à niveau vers une autre base de données à partir de la base de données gratuite, mais il n'est pas possible de reconfigurer une instance Compose for Postgres, Database for Postgres ou Db2 vers la base de données gratuite. Après la mise à niveau, il est impossible de revenir à l'utilisation de la base de données gratuite. Toutes les données en cours, telles que la configuration, les résultats d'évaluation et les explications ne peuvent pas être réutilisées. En sélectionnant un autre schéma ou une autre base de données, l'environnement {{site.data.keyword.aios_short}} est entièrement réinitialisé.
+
+
 
 ### Base de données existante ou nouvelle
 {: #cdb-exn}
@@ -70,8 +68,7 @@ Pour utiliser la base de données gratuite du plan Lite, sélectionnez cette opt
 1.  Sélectionnez le type de votre base de données existante (Compose for Postgres, Database for Postgres, ou Db2)
 et une base de données dans le menu déroulant **Base de données**, puis un **schéma** :
 
-    {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker les données de sortie de déploiement et de reformation des modèles.
-Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
+    {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker les données de sortie de déploiement et de reformation des modèles. Les forfaits Db2 Lite ne sont pas pris en charge actuellement. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![Sélection de la base de données](images/gs-config-database3.png)
@@ -79,8 +76,7 @@ Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
 1.  Vous pouvez également cliquer sur **Sélectionner un autre emplacement**
 et spécifier un emplacement de base de données en dehors de votre compte {{site.data.keyword.Bluemix_notm}}.
 
-    {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker les données de sortie de déploiement et de reformation des modèles.
-Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
+    {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker les données de sortie de déploiement et de reformation des modèles. Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
     {: note}
 
     - Sélectionnez le **Type de base de données**
@@ -120,8 +116,7 @@ puis fournissez les informations de connexion :
 
     - Une fois connecté, vous pouvez sélectionner un schéma.
 
-      Le nom du schéma doit être indiqué explicitement si vous fournissez une instance de Db2 avec accès limité, ce qui ne permet pas la génération automatique du nom de schéma.
-Cela s'applique au forfait Entry Db2 Warehouse.
+      Le nom du schéma doit être indiqué explicitement si vous fournissez une instance de Db2 avec accès limité, ce qui ne permet pas la génération automatique du nom de schéma. Cela s'applique au forfait Entry Db2 Warehouse.
       {: important}
 
       ![Sélection du schéma](images/gs-config-database5.png)
@@ -135,19 +130,17 @@ Pour configurer les moniteurs, {{site.data.keyword.aios_short}} requiert que vou
 afin de commencer à journaliser les données qui seront surveillées.
 
 Les modèles déployés dans Watson Machine Learning sont évalués automatiquement par {{site.data.keyword.aios_short}}.
-Si vous n'avez que des modèles déployés dans Watson Machine Learning, vous ne verrez pas cet écran.
 {: note:}
 
 Sélectionnez un déploiement, ici "Fraud Detector", puis utilisez les fragments de code `cURL` ou `Python` fournis
-pour journaliser les données de demande et de réponse de déploiement de modèle.
-Pour plus de détails, voir [Journalisation du contenu pour les instances de service non-Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
+pour journaliser les données de demande et de réponse de déploiement de modèle. Pour plus de détails, voir [Journalisation du contenu pour les instances de service non-Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
 
-Les zones et les valeurs des fragments de code doivent être remplacées par vos valeurs réelles, car les valeurs fournies ne sont que des exemples.{: important}
+Les zones et les valeurs des fragments de code doivent être remplacées par vos valeurs réelles, car les valeurs fournies ne sont que des exemples.
+{: important}
 
 ![Sélection de la base de données](images/config-send-scoring.png)
 
-Une fois que vous aurez exécuté votre journalisation du contenu, vous verrez une coche dans la colonne "Prêt à surveiller" pour le déploiement sélectionné.
-Cliquez sur **Configurer les moniteurs** pour continuer.
+Une fois que vous aurez exécuté votre journalisation du contenu, vous verrez une coche dans la colonne "Prêt à surveiller" pour le déploiement sélectionné. Cliquez sur **Configurer les moniteurs** pour continuer.
 
 ## Etapes suivantes
 {: #cdb-next}

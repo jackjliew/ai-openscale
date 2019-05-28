@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -34,7 +34,8 @@ Consulte informações mais completas na [documentação do cliente Python do {{
 ## Antes de Começar
 {: #cml-prereq}
 
-Você precisará ter os dados de treinamento de seu modelo disponíveis no Db2 ou no Cloud Object Storage para monitorar a propensão para o seu modelo. A explicabilidade e a precisão não são suportadas para as funções Python.
+Você precisará ter os dados de treinamento de seu modelo disponíveis no Db2 ou no Cloud Object Storage para monitorar a propensão para o seu modelo. A explicabilidade e a precisão não são suportadas para as funções Python. Para
+obter mais informações sobre os dados de treinamento, veja [Por que o {{site.data.keyword.aios_short}} precisa de acesso aos meus dados de treinamento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - Importar e iniciar o {{site.data.keyword.aios_short}}
 

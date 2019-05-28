@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: accuracy, 
 
@@ -30,8 +30,7 @@ Die Genauigkeit gibt an, wie gut Ihr Modell Ergebnisse vorhersagt.
 
 Genauigkeit kann je nach Typ des Algorithmus unterschiedliche Dinge bedeuten:
 
-- *Mehrklassige Klassifikation*: Die Genauigkeit misst die Zahl der korrekten Vorhersagen einer beliebigen Klasse bei Normalisierung der Anzahl der Datenpunkte.
-Weitere Details hierzu enthält der Abschnitt [Mehrklassige Klassifikation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#multiclass-classification){: new_window} in der Dokumentation für Apache Spark.
+- *Mehrklassige Klassifikation*: Die Genauigkeit misst die Zahl der korrekten Vorhersagen einer beliebigen Klasse bei Normalisierung der Anzahl der Datenpunkte. Weitere Details hierzu enthält der Abschnitt [Mehrklassige Klassifikation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#multiclass-classification){: new_window} in der Dokumentation für Apache Spark.
 
 - *Binäre Klassifikation*: Bei einem Algorithmus für die binäre Klassifikation wird die Genauigkeit als die Fläche unter einer ROC-Kurve gemessen. Weitere Details hierzu enthält der Abschnitt [Binäre Klassifikation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#binary-classification){: new_window} in der Dokumentation für Apache Spark.
 
@@ -42,7 +41,7 @@ Weitere Details hierzu enthält der Abschnitt [Mehrklassige Klassifikation ![Sym
 
 Sie müssen wie unten gezeigt manuell bezeichnete Rückmeldedaten Über die Benutzerschnittstelle von {{site.data.keyword.aios_short}} mit einem [Python-Client ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: new_window} oder einer [Rest-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window} hinzufügen.
 
-Informieren Sie sich in den Abschnitten [Unterstützte Modelltypen](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mod) und [Unterstützte Frameworks](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) über die Einschränkungen bei der Genauigkeitsüberwachung.
+Überprüfen Sie die [unterstützten Frameworks](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) auf Einschränkungen hinsichtlich der Genauigkeitsüberwachung.
 
 <!---
 You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
@@ -65,7 +64,7 @@ Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "
 
 1.  Wählen Sie auf der Seite *Genauigkeitsschwellenwert festlegen* einen Wert aus, der einen akzeptablen Genauigkeitsgrad darstellt.
 
-    Genauigkeit ist ein Wert, der aus relevanten Data-Science-Metriken, die jedem Modelltyp zugeordnet sind, synthetisch erstellt ist. Die Bewertung ist ein normalisiertes Maß, mit dem Sie die Genauigkeit unterschiedlicher Modelltypen ohne großen Aufwand miteinander vergleichen können.  In typischen Situationen ist ein Genauigkeitswert von 80 ausreichend.
+    Genauigkeit ist ein Wert, der aus relevanten Data-Science-Metriken, die jedem Modelltyp zugeordnet sind, synthetisch erstellt ist. Die Bewertung ist ein normalisiertes Maß, mit dem Sie die Genauigkeit unterschiedlicher Modelltypen ohne großen Aufwand miteinander vergleichen können. In typischen Situationen ist ein Genauigkeitswert von 80 ausreichend.
     {: note}
 
     ![Grenzwert für Genauigkeit festlegen](images/accuracy-set-limit.png)
@@ -84,12 +83,11 @@ Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "
 
 Ihnen wird nun die Möglichkeit geboten, Ihrem Modell direkt Rückmeldedaten zur Verfügung zu stellen, die auf Genauigkeit ausgewertet werden sollen.
 
-
   ![Rückmeldedaten senden](images/accuracy-send-feedback0.png)
 
-Klicken Sie auf die Schaltfläche *Rückmeldedaten hinzufügen*, eine in Dateidatei in CSV-Format hochzuladen und legen Sie das Begrenzungszeichen fest, sodass es Ihren Daten entspricht.
+Wählen Sie die Schaltfläche *Rückmeldedaten hinzufügen* aus, um eine CSV-Datendatei hochzuladen; legen Sie den Begrenzer so fest, dass die Übereinstimmung mit den Daten sichergestellt ist.
 
-Es wird erwartet, dass die CSV-Datei mit den Rückmeldedaten alle Merkmalswerte sowie den manuell zugewiesenen Ziel-/Bezeichnungswert enthält. Beispielsweise enthalten die Trainingsdaten des Medikamentenmodells die Merkmalwerte `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`,`"NA"` und `"K"` sowie den Ziel-/Bezeichnungswert `"DRUG"`. Die CSV-Datei mit den Rückmeldedaten muss Werte für diese Felder enthalten und könnte zum Beispiel folgendermaßen aussehen: `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. Wenn für die CSV-Datei mit den Rückmeldedaten ein Header vorgesehen ist, erfolgt die Zuordnung der Feldnamen unter Verwendung des Headers. Andernfalls **MUSS** die Reihenfolge der Felder identisch mit der im Trainingsschema sein.
+Es wird erwartet, dass die CSV-Datei mit den Rückmeldedaten alle Merkmalswerte sowie den manuell zugewiesenen Ziel-/Bezeichnungswert enthält. Beispielsweise enthalten die Trainingsdaten des Medikamentenmodells die Merkmalwerte `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`,`"NA"` und `"K"` sowie den Ziel-/Bezeichnungswert `"DRUG"`. Die CSV-Datei mit den Rückmeldedaten muss Werte für diese Felder enthalten und könnte zum Beispiel folgendermaßen aussehen: `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. Wenn für die CSV-Datei mit den Rückmeldedaten ein Header vorgesehen ist, erfolgt die Zuordnung der Feldnamen unter Verwendung des Headers. Andernfalls **MUSS** die Reihenfolge der Felder identisch mit der im Trainingsschema sein. Weitere Informationen zu den Trainingsdaten finden Sie unter [Warum muss {{site.data.keyword.aios_short}} auf meine Trainingsdaten zugreifen?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 {: important}
 
 Beachten Sie, dass die von Ihrem Modell zurückgegebenen Vorhersagetypen und die Ziel-/Bezeichnungsspalte in Ihren Rückmeldedaten übereinstimmen müssen.

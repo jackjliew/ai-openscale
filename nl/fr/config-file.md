@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: JSON, configuration, configuring, deployment
+keywords: JSON, configuration, configuring, deployment, subscription
 
 subcollection: ai-openscale
 
@@ -23,18 +23,14 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Configurer un abonnement de déploiements avec des fichiers JSON
+# Configurer les déploiements d'actifs à l'aide des fichiers de configuration JSON
 {: #cf-ov}
 
-Vous pouvez importer un fichier JSON pour configurer par programme tous les moniteurs et fonctions lors de la création d'abonnement.
-Vous pouvez également exporter le fichier de configuration.
+Vous pouvez importer un fichier JSON pour créer et configurer tous les déploiements de votre actif à des fins de surveillance. Vous pouvez également exporter le fichier de configuration pour configurer d'autres actifs ainsi que leurs déploiements.
 {: shortdesc}
 
-Pour un bon exemple d'utilisation d'un fichier JSON pour abonner des déploiements, voir le
-[bloc-notes Python
-Watson OpenScale One API Shot for subscription](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb).
-Ce bloc-notes explique comment configurer un abonnement d'actif Amazon SageMaker avec un fichier JSON en un seul appel d'API.
-Le reste de cette rubrique y fait référence.
+Pour un bon exemple d'utilisation d'un fichier JSON, voir le [bloc-notes Python Watson OpenScale One API Shot for subscription](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb).
+Ce bloc-notes explique comment créer et configurer un déploiement d'actif Amazon SageMaker avec un fichier JSON en un seul appel d'API. Le reste de cette rubrique y fait référence.
 
 ## Charger le contenu du fichier JSON comme dictionnaire Python
 {: #cf-load-as-dict}
@@ -51,8 +47,7 @@ définit des données de configuration pour un modèle qui prévoit un type de c
       subscription_configuration = json.load(fp)
     ```
 
-Le fichier contient des données de configuration, dont un exemple est présenté ci-dessous.
-Pour un exemple complet du contenu de la configuration, voir le bloc-notes.
+Le fichier contient des données de configuration, dont un exemple est présenté ci-dessous. Pour un exemple complet du contenu de la configuration, voir le bloc-notes.
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
@@ -153,10 +148,10 @@ Pour un exemple complet du contenu de la configuration, voir le bloc-notes.
   'timestamp': '2019-02-11T11:41:01.613Z'}}
   ```
 
-## Ajouter l'abonnement du fichier de configuration
+## Importer à partir du fichier de configuration
 {: #cf-subscribe}
 
-- Exécutez maintenant l'appel pour ajouter et configurer l'abonnement pour l'exemple de déploiement de modèle de prévision du cancer du sein.
+- Exécutez maintenant l'appel pour ajouter et configurer le déploiement d'actif pour l'exemple de déploiement de modèle de prévision du cancer du sein.
 
     ```python
     subscription = client.data_mart.subscriptions.import_configuration(binding_uid=binding_uid, configuration_data=subscription_configuration)
@@ -165,7 +160,7 @@ Pour un exemple complet du contenu de la configuration, voir le bloc-notes.
   Le paramètre `binding_uid` est facultatif si vous ne liez qu'un seul moteur ML.
   {: note}
 
-## Exportation de votre fichier JSON
+## Exportation vers le fichier de configuration
 {: #cf-export}
 
 - Vous pouvez également exporter le fichier de configuration en JSON :
@@ -177,7 +172,7 @@ Pour un exemple complet du contenu de la configuration, voir le bloc-notes.
 ## Résultats
 {: #cf-results}
 
-L'abonnement est créé et le modèle déployé est configuré pour être utilisé par {{site.data.keyword.aios_short}}.
+Le déploiement d'actif est créé et configuré pour être utilisé par {{site.data.keyword.aios_short}}.
 
 Pour une information plus complète, voir la
 [{{site.data.keyword.aios_short}}documentation du client Python

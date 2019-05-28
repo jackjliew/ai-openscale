@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: explainability, monitoring, explain, explaining, transactions, transaction ID
 
@@ -19,7 +19,7 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 설명 가능성 모니터링
+# 트랜잭션 설명
 {: #ie-ov}
 
 각 배치에 대해 특정 트랜잭션에 대한 데이터의 설명 가능성을 볼 수 있습니다.
@@ -30,7 +30,7 @@ subcollection: ai-openscale
 
 선택된 배치 타일의 네비게이터에서 **트랜잭션 설명** 탭(![트랜잭션 설명 탭](images/insight-transact-tab.png))을 선택하고 트랜잭션 ID를 입력하십시오.
 
-스코어링을 위해 모델에 데이터를 전송할 때마다 `X-Global-Transaction-Id` 필드를 설정하여 HTTP 헤더에 트랜잭션 ID를 설정해야 합니다. 이 트랜잭션 ID는 페이로드 테이블에 저장됩니다. 특정 스코어링에 대한 모델 동작의 설명을 찾으려면 해당 스코어링 요청과 연관된 트랜잭션 ID를 지정하십시오. 이 동작은 Watson 기계 학습(WML) 트랜잭션에만 적용되며 비WML 트랜잭션에는 적용되지 않습니다.
+스코어링을 위해 모델에 데이터를 전송할 때마다 `X-Global-Transaction-Id` 필드를 설정하여 HTTP 헤더에 트랜잭션 ID를 설정해야 합니다. 이 트랜잭션 ID는 페이로드 테이블에 저장됩니다. 특정 스코어링에 대한 모델 동작의 설명을 찾으려면 해당 스코어링 요청과 연관된 트랜잭션 ID를 지정하십시오. 이 동작은 Watson Machine Learning(WML) 트랜잭션에만 적용되며 비WML 트랜잭션에는 적용되지 않습니다.
 {: note}
 
 ### {{site.data.keyword.aios_short}}에서 트랜잭션 ID 찾기

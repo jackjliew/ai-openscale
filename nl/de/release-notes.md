@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: release notes, what's new 
 
@@ -24,6 +24,20 @@ subcollection: ai-openscale
 
 In diesem Dokument werden neue Funktionen und bekannte Probleme für {{site.data.keyword.aios_full_notm}} beschrieben.
 {: shortdesc}
+
+## 25. April 2019
+{: #rn-25April2019}
+
+Die folgenden neuen Funktionen und Änderungen beim Service sind verfügbar.
+
+### Neue Funktionen und Änderungen
+{: #rn-25April2019nf}
+
+Zusätzlich zur Verbesserung der Benutzerfreundlichkeit und den Sicherheitsupdates wurden neue Funktionen entwickelt. Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden in den vergangenen Wochen hinzugefügt oder erweitert: 
+
+- __*Tour für automatisierte Konfiguration*__: Eine neue Möglichkeit, die {{site.data.keyword.aios_short}}-Umgebung anhand einer Tour einzurichten. Mit der [automatisierten Konfiguration](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) können Sie Services bereitstellen und ein Modell herunterladen und konfigurieren. Wenn Sie über eine neue Instanz von {{site.data.keyword.aios_short}} verfügen, wird diese Option angezeigt. 
+- __*Zu Beta wechseln*__: ![Beta-Tag](images/beta.png) Die neue Wechseloption **Neue Betaversion erkunden** ermöglicht es Ihnen, in der Betaumgebung zu arbeiten, in der Sie die neuesten Features und neue Funktionen erkunden können. Sie sind nicht überzeugt? Wechseln Sie einfach zurück, indem Sie auf **Zurück zur Originalversion** klicken. Die Konfiguration und die Überwachungen sind davon nicht betroffen. Die folgenden Funktionen sind Teil des aktuellen Betaprogramms: 
+    - __*Wahrheitsmatrix*__: Eine [Wahrheitsmatrix](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) zeigt die falsch-positiven und die falsch-negativen Ergebnisse an. Klicken Sie auf eine Zelle, um die Untergruppe der Rückmeldedatensätze anzuzeigen.
 
 ## 5. März 2019
 {: #rn-5March2019}
@@ -99,8 +113,6 @@ Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Beta-R
 - __*Erklärbarkeit*__: Unterstützung für Regressionsmodelle, Python-Funktionen sowie ergänzende kontrastierende Erklärungen. Weitere Informationen enthält der Abschnitt [Erklärbarkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
 - __*Datenspeicher*__: Qualitätsüberwachung, ohne auf Watson Machine Learning angewiesen zu sein, und die Möglichkeit, Ihre eigene Datenbank zu verwenden, ganz gleich, ob es sich um Db2, Postgres oder Db2 on Cloud handelt.
-
-- __*NeuNetS (Beta)*__: IBM Neural Network Synthesizer (NeuNetS) ist als Betaversion verfügbar (nur öffentliche Cloud). Weitere Informationen enthält die [Dokumentation für NeuNetS ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window}.
 
 - __*Funktional erweiterte Benutzerschnittstelle (UI)*__: Die Benutzerschnittstelle (UI) für {{site.data.keyword.aios_short}} wurde verbessert und enthält jetzt eine Laufzeithistogrammverteilung mit der Funktion zum Umschalten für Trainingsdaten, Modell-ID & Versionierung und eine Tabelle mit Transaktions-IDs aus dem Histogramm. Weitere Informationen enthält der Abschnitt [Visualisierung von Daten für eine bestimmte Uhrzeit anzeigen](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet).
 

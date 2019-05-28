@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -70,27 +70,11 @@ Aqui está como você implementará {{site.data.keyword.aios_short}}:
 
 <p>&nbsp;</p>
 
-## Tipos de Modelos Suportados
-{: #in-mod}
-
-Tabela 1. Detalhes do suporte do modelo
-
-| Algoritmos | **Justiça** | **Despropensão automática** | **Explicar** | **Precisão** |
-|:---|:---:|:---:|:---:|:---:|
-| **Classificação estruturada** | Sim | Sim<sup>1</sup> | Sim | Sim |
-| **Regressão estruturada**     | Sim | Não | Sim | Sim |
-| **Classificação de texto**       | Não | Não | Sim | Não |
-| **Classificação de imagem**      | Não | Não | Sim | Não ||
-{: caption="Detalhes do suporte do modelo" caption-side="top"}
-
-<sup>1</sup> Se seu modelo/estrutura gerar saída de probabilidades de predição
-
-<p>&nbsp;</p>
 
 ## Mecanismos e estruturas de aprendizado de máquina suportados
 {: #in-fram}
 
-O serviço {{site.data.keyword.aios_short}} suporta os mecanismos de aprendizado de máquina a seguir. Cada tempo de execução suporta modelos criados nas estruturas a seguir, conforme descrito na lista de [Tipos de modelos suportados](#in-mod).
+O serviço {{site.data.keyword.aios_short}} suporta os mecanismos de aprendizado de máquina a seguir. Cada tempo de execução suporta modelos que são criados nas estruturas a seguir:
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)

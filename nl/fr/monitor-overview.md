@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: deployment, monitors, data
 
@@ -42,7 +42,7 @@ Configurez et activez les moniteurs pour chaque déploiement que vous suivez ave
 ## Type de données
 {: #mo-work-data}
 
-1.  Vous allez maintenant fournir des informations sur votre modèle et vos données de formation ; cliquez sur **Suivant**.
+1.  Vous allez maintenant fournir des informations sur votre modèle et vos données de formation ; cliquez sur **Suivant**. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
     ![Préparation de l'explication](images/config-what-monitor.png)
 
@@ -63,10 +63,8 @@ Pour les données numériques ou catégorielles, vous devez fournir des informat
 
       ![Multi-classes](images/multiclass.png)
 
-      Assurez-vous que le format des données de formation soiit exactement celui attendu par votre modèle.
-Par exemple, si le modèle attend `M` et `F` pour la fonction *Sexe*,
-les données de formation doivent contenir `M` et `F`, et non `Masculin` et `Féminin`.
-Actuellement, {{site.data.keyword.aios_short}} supporte uniquement les emplacements de base de données Db2 ou Cloud Object Storage.
+      Assurez-vous que le format des données de formation soiit exactement celui attendu par votre modèle. Par exemple, si le modèle attend `M` et `F` pour la fonction *Sexe*,
+les données de formation doivent contenir `M` et `F`, et non `Masculin` et `Féminin`. Actuellement, {{site.data.keyword.aios_short}} supporte uniquement les emplacements de base de données Db2 ou Cloud Object Storage.
         {: important}
 
     - Indiquez l'emplacement (`Db2` ou `Cloud Object Storage`) puis :
@@ -85,8 +83,7 @@ Actuellement, {{site.data.keyword.aios_short}} supporte uniquement les emplaceme
 
             - URL de connexion
 
-              L'URL de connexion doit correspondre au paramètre de région du compartiment où se trouvent vos données de formation.
-Vous indiquerez le compartiment des données de formation à l'étape suivante.
+              L'URL de connexion doit correspondre au paramètre de région du compartiment où se trouvent vos données de formation. Vous indiquerez le compartiment des données de formation à l'étape suivante.
               {: important}
 
             - Instance de ressource (ID)
@@ -94,8 +91,7 @@ Vous indiquerez le compartiment des données de formation à l'étape suivante.
 
             ![Indication de l'emplacement Cloud Object Storage de la page des données de formation](images/config-train-cos-monitor.png)
 
-    - Assurez-vous que la connexion est valide en cliquant sur le bouton **Tester** pour vous connecter aux données de formation.
-Cliquez sur **Suivant**.
+    - Assurez-vous que la connexion est valide en cliquant sur le bouton **Tester** pour vous connecter aux données de formation. Cliquez sur **Suivant**.
 
     - Indiquez l'emplacement exact des données de formation dans la base de données Db2 ou dans Cloud Object Storage.
 
@@ -109,19 +105,16 @@ Cliquez sur **Suivant**.
 
           Cliquez sur **Suivant** pour passer à l'étape 5 ci-dessous.
 
-- **Télécharger un fichier de configuration** - Choisissez cette option si vous préférez garder privées vos données de formation.
-Vous pouvez utiliser un bloc-notes Python personnalisé pour fournir à {{site.data.keyword.aios_short}}
+- **Télécharger un fichier de configuration** - Choisissez cette option si vous préférez garder privées vos données de formation. Vous pouvez utiliser un bloc-notes Python personnalisé pour fournir à {{site.data.keyword.aios_short}}
 les informations pour analyser vos données de formation sans lui donner accès à celles-ci.
 
-  Le bloc-notes Python vous permet de capturer des valeurs distinctes dans les colonnes du schéma, ainsi que le nom des colonnes.
-Il vous permet également de préconfigurer le moniteur d'équité.
+  Le bloc-notes Python vous permet de capturer des valeurs distinctes dans les colonnes du schéma, ainsi que le nom des colonnes. Il vous permet également de préconfigurer le moniteur d'équité.
 
     - Téléchargez le [bloc-notes personnalisé
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: new_window}
 et remplacez les identifiants par les vôtres.
 
-    - Passez soigneusement en revue le bloc-notes, en indiquant les données pour votre modèle aux endroits appropriés.
-Enregistrez le bloc-notes.
+    - Passez soigneusement en revue le bloc-notes, en indiquant les données pour votre modèle aux endroits appropriés. Enregistrez le bloc-notes.
 
     - Exécutez le bloc-notes pour générer un fichier de configuration formaté en JSON.
 
@@ -131,22 +124,17 @@ Enregistrez le bloc-notes.
 
     - Cliquez sur **Suivant**.
 
-- {{site.data.keyword.aios_short}} localisera vos données de formation à partir des métadonnées stockées avec le modèle en WML.
-Choisissez la colonne de libellé dans les données de formation qui contient vos valeurs de prévision et cliquez sur **Suivant**.
+- {{site.data.keyword.aios_short}} localisera vos données de formation à partir des métadonnées stockées avec le modèle en WML. Choisissez la colonne de libellé dans les données de formation qui contient vos valeurs de prévision et cliquez sur **Suivant**.
 
   ![Sélection de la colonne de libellé](images/fair-config-column.png)
 
-- Sélectionnez les colonnes utilisées pour former le modèle ; il s'agit des fonctions attendues par votre déploiement de modèle dans une demande.
-Cliquez sur **Suivant**.
+- Sélectionnez les colonnes utilisées pour former le modèle ; il s'agit des fonctions attendues par votre déploiement de modèle dans une demande. Cliquez sur **Suivant**.
 
     ![Sélection de la colonne de libellé](images/explain-select-column.png)
 
-- Enfin, sélectionnez les colonnes qui contenaient du texte et ont été converties en entiers.
-Par exemple, si les données de formation initiales contenaient `Masculin` et `Féminin` pour *Sexe*
+- Enfin, sélectionnez les colonnes qui contenaient du texte et ont été converties en entiers. Par exemple, si les données de formation initiales contenaient `Masculin` et `Féminin` pour *Sexe*
 et qu'elles sont maintenant mappées sur `0` et `1` respectivement,
-elles contiennent maintenant les valeurs `0` et `1` pour la colonne *Sexe*.
-Identifiez ces colonnes qui contiennent maintenant des entiers mais contenaient initialement des valeurs texte.
-Cliquez sur **Suivant**.
+elles contiennent maintenant les valeurs `0` et `1` pour la colonne *Sexe*. Identifiez ces colonnes qui contiennent maintenant des entiers mais contenaient initialement des valeurs texte. Cliquez sur **Suivant**.
 
     ![Sélection de la table de données](images/explain-text-column.png)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -38,7 +38,12 @@ subcollection: ai-openscale
 | Python 函数 | 回归 | 结构化 |
 | XGBoost |分类| 结构化 |
 | XGBoost | 回归 | 结构化 |
+| Keras，含 TensorFlow<sup>1</sup> |分类| 非结构化（图像，文本）|
+| Keras，含 TensorFlow<sup>1</sup> | 回归 | 非结构化（图像，文本）|
 {: caption="框架支持详细信息" caption-side="top"}
+
+<sup>1</sup>Keras 支持不包括对公平性的支持。
+{: note}
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, fairness monitor
 
@@ -35,7 +35,7 @@ Damit das Ausgabeschema für ein Modell oder eine Funktion in Watson {{site.data
 ### Funktionsweise
 {: #mf-works}
 
-Bevor Sie die Fairnessüberwachung konfigurieren, sollten Sie sich mit einigen zentralen Konzepten vertraut machen, die Sie unbedingt verstehen sollten: 
+Bevor Sie die Fairnessüberwachung konfigurieren, sollten Sie sich mit einigen zentralen Konzepten vertraut machen, die Sie unbedingt verstehen sollten:
 
 - *Fairnessattribute*: Das sind diejenigen Modellattribute, bei denen das Modell wahrscheinlich eine Verzerrung aufweist. Für das Fairnessattribut **`Geschlecht`** könnte das Modell zum Beispiel eine Verzerrung gegenüber bestimmten Werten für das Geschlecht (`Weiblich`, `Transsexuell` usw.) aufweisen. Ein weiteres Beispiel für ein Fairnessattribut ist das **`Alter`**, bei dem das Modell gegenüber Menschen in einer bestimmten eine Verzerrung aufweisen kann, zum Beispiel in der Altersgruppe von `18 bis 25` Jahren.
 
@@ -110,7 +110,7 @@ Nehmen Sie einen Datenpunkt, bei dem das Modell für `Geschlecht=Männlich` (Ref
 
      Klicken Sie, wenn Sie die Bearbeitung für die einzelnen Merkmale abgeschlossen haben, auf **Weiter**.
 
-1.  Geben Sie nun Werte an, die ein günstiges Ergebnis für das Modell darstellen. Diese Werte werden aus der Spalte `Kennzeichnung` in den Trainingsdaten abgeleitet, sofern das Modellausgabeschema eine Zuordnungsspalte enthält. Bei WML enthält die Spalte für `Vorhersage` stets einen Wert des Typs 'double'. Anhand der Zuordnungsspalte wird angegeben, wie dieser Wert der `Vorhersage` der Klassenbezeichnung zugeordnet werden soll.
+1.  Geben Sie nun Werte an, die ein günstiges Ergebnis für das Modell darstellen. Diese Werte werden aus der Spalte `Kennzeichnung` in den [Trainingsdaten](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) abgeleitet, sofern das Modellausgabeschema eine Zuordnungsspalte enthält. Bei WML enthält die Spalte für `Vorhersage` stets einen Wert des Typs 'double'. Anhand der Zuordnungsspalte wird angegeben, wie dieser Wert der `Vorhersage` der Klassenbezeichnung zugeordnet werden soll.
 
     Wenn `Vorhersage` den Wert `1.0` hat, könnte die Zuordnungsspalte den Wert `Darlehen abgelehnt` aufweisen. Dies bedeutet, dass die Vorhersage des Modells `Darlehen abgelehnt` lautet. Wenn das Modellausgabeschema eine Zuordnungsspalte enthält, geben Sie anhand der in der Zuordnungsspalte enthaltenen Elemente die günstigen bzw. ungünstigen Werte an.
 

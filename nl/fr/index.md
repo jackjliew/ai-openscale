@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -45,16 +45,14 @@ et l'[instance de Watson Machine Learning](/docs/services/ai-openscale?topic=ai-
 dans laquelle vos modèles et déploiements d'IA seront stockés.
 
 - **Utiliser les moniteurs** :
-Configurez comment {{site.data.keyword.aios_short}} surveillera chaque déploiement.
-Vous pouvez surveiller :
+Configurez comment {{site.data.keyword.aios_short}} surveillera chaque déploiement. Vous pouvez surveiller :
 
     - l'[équité](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - l'[exactitude](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
 
 - **Afficher et modifier les données suveillées** :
 Avec le [tableau de bord](/docs/services/ai-openscale?topic=ai-openscale-io-ov) de {{site.data.keyword.aios_short}},
-vous pouvez facilement afficher des analyses clés et identifier les problèmes de vos déploiements.
-L'affichage des différents points de données pour chaque fonction surveillée fournit des détails supplémentaires.
+vous pouvez facilement afficher des analyses clés et identifier les problèmes de vos déploiements. L'affichage des différents points de données pour chaque fonction surveillée fournit des détails supplémentaires.
 
 <p>&nbsp;</p>
 
@@ -72,8 +70,7 @@ L'affichage des différents points de données pour chaque fonction surveillée 
     - 50 000 enregistrements de contenu (cumulés)
     - 50 000 enregistrements de commentaires (cumulés)
 
-- {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker les données de sortie de déploiement et de reformation des modèles.
-Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
+- {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker les données de sortie de déploiement et de reformation des modèles. Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
 
 - Il y a une limite de licence de 20 modèles déployés par instance de {{site.data.keyword.aios_short}}.
 
@@ -81,29 +78,11 @@ Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
 
 <p>&nbsp;</p>
 
-## Types de modèle pris en charge
-{: #in-mod}
-
-Tableau 1. Détails des modèles pris en charge
-
-| Algorithmes | **Equité** | **Débiaisement automatique** | **Explication** | **Exactitude** |
-|:---|:---:|:---:|:---:|:---:|
-| **Classification structurée** | Oui | Oui<sup>1</sup> | Oui | Oui |
-| **Régression structurée**     | Oui | Non | Oui | Oui |
-| **Classification de texte**       | Non | Non | Oui | Non |
-| **Classification d'image**      | Non | Non | Oui | Non ||
-{: caption="Détails des modèles pris en charge" caption-side="top"}
-
-<sup>1</sup> Si votre modèle / infrastructure génère des probabilités de prévision
-
-<p>&nbsp;</p>
 
 ## Moteurs d'apprentissage automatique et infrastructures pris en charge
 {: #in-fram}
 
-Le service {{site.data.keyword.aios_short}} prend en charge les moteurs d'apprentissage automatique suivants.
-Chaque evironnement d'exécution prend en charge les modèles créés dans les infrastructures suivantes
-comme indiqué dans la liste des [Types de modèle pris en charge](#in-mod).
+Le service {{site.data.keyword.aios_short}} prend en charge les moteurs d'apprentissage automatique suivants. Chaque evironnement d'exécution prend en charge les modèles créés dans les infrastructures suivantes : 
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)
@@ -132,8 +111,7 @@ La prise en charge complète inclut les fonctionnalités suivantes pour l'infras
 ## Navigateurs pris en charge
 {: #in-brw}
 
-Les outils du service {{site.data.keyword.aios_short}} nécessitent le même niveau de navigateur qu'{{site.data.keyword.cloud_notm}}.
-Pour le détail, voir la rubrique {{site.data.keyword.cloud_notm}} [Prérequis](/docs/overview?topic=overview-prereqs-platform#browsers-platform).
+Les outils du service {{site.data.keyword.aios_short}} nécessitent le même niveau de navigateur qu'{{site.data.keyword.cloud_notm}}. Pour le détail, voir la rubrique {{site.data.keyword.cloud_notm}} [Prérequis](/docs/overview?topic=overview-prereqs-platform#browsers-platform).
 
 <p>&nbsp;</p>
 
@@ -142,8 +120,7 @@ Pour le détail, voir la rubrique {{site.data.keyword.cloud_notm}} [Prérequis](
 
 L'[outil d'exploitation de modèle CLI {{site.data.keyword.aios_short}}
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Watson/aiopenscale-modelops-cli){: new_window}
-vous permet d'exécuter les tâches liées à la gestion du cycle de vie des modèles d'apprentissage automatique.
-Il est complémentaire à l'{{site.data.keyword.cloud_notm}} outil CLI,
+vous permet d'exécuter les tâches liées à la gestion du cycle de vie des modèles d'apprentissage automatique. Il est complémentaire à l'{{site.data.keyword.cloud_notm}} outil CLI,
 augmenté du [plugin d'apprentissage automatique
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/DSXDOC/analyze-data/ml_dlaas_environment.html){: new_window}.
 
@@ -154,11 +131,9 @@ augmenté du [plugin d'apprentissage automatique
 
 Le [client Python {{site.data.keyword.aios_short}}
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://ai-openscale-python-client.mybluemix.net/){: new_window}
-est une bibliothèque Python qui vous permet de travailler directement avec le service {{site.data.keyword.aios_short}} sur {{site.data.keyword.cloud_notm}}.
-Vous pouvez l'utiliser, à la place de l'interface utilisateur client {{site.data.keyword.aios_short}},
+est une bibliothèque Python qui vous permet de travailler directement avec le service {{site.data.keyword.aios_short}} sur {{site.data.keyword.cloud_notm}}. Vous pouvez l'utiliser, à la place de l'interface utilisateur client {{site.data.keyword.aios_short}},
 pour configurer une base de données de journalisation,
-lier votre moteur d'apprentissage automatique, et sélectionner et surveiller des déploiements directement.
-Pour des exemples utilisant le client Python ainsi, voir les
+lier votre moteur d'apprentissage automatique, et sélectionner et surveiller des déploiements directement. Pour des exemples utilisant le client Python ainsi, voir les
 [bloc-notes d'exemples {{site.data.keyword.aios_short}}
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks).
 
@@ -171,6 +146,5 @@ Pour des exemples utilisant le client Python ainsi, voir les
 - Consultez les [matériaux de Référence des API
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/ai-openscale){: new_window}.
 
-Vous avez encore des questions ?
-[Contacter IBM
+Vous avez encore des questions ? [Contacter IBM
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -38,7 +38,12 @@ subcollection: ai-openscale
 | Python 함수 | 회귀 | 정형 |
 | XGBoost | 분류 | 정형 |
 | XGBoost | 회귀 | 정형 |
+| Keras with TensorFlow<sup>1</sup> | 분류 | 비정형(이미지, 텍스트) |
+| Keras with TensorFlow<sup>1</sup> | 회귀 | 비정형(이미지, 텍스트) |
 {: caption="프레임워크 지원 세부사항" caption-side="top"}
+
+<sup>1</sup>Keras 지원에는 공정성에 대한 지원은 포함되지 않습니다.
+{: note}
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: accuracy, 
 
@@ -41,7 +41,7 @@ subcollection: ai-openscale
 
 您需要使用 [Python 客户机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: new_window} 或 [Rest API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window} 通过 {{site.data.keyword.aios_short}} UI 来添加手动标记的反馈数据，如下所示。
 
-查看[支持的模型类型](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mod)和[支持的框架](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)以了解准确性监视限制。
+请查看[支持的框架](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)以了解准确性监视限制。
 
 <!---
 You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
@@ -87,6 +87,7 @@ Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "
 选择*添加反馈数据*按钮以上载 CSV 格式的数据文件；设置定界符以匹配您的数据。
 
 反馈 CSV 文件预计具有所有特征值以及手动分配的目标/标签值。例如，药品模型训练数据包含特征值 `"AGE"`、`"SEX"`、`"BP"`、`"CHOLESTEROL"`、`"NA"`、`"K"` 以及目标/标签值 `"DRUG"`。反馈 CSV 文件需要包含这些字段的值；例如 `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`。如果为反馈 CSV 文件提供了标题，那么将使用该标题来映射字段名称。否则，字段顺序**必须**与训练模式中的顺序完全相同。
+有关训练数据的更多信息，请参阅[为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 {: important}
 
 请注意，模型返回的预测类型与反馈数据中的标签/目标列必须匹配。

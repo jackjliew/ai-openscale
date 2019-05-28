@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -34,7 +34,7 @@ subcollection: ai-openscale
 ## 開始之前
 {: #cml-prereq}
 
-Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視您模型的偏誤。對於 Python 函數，不支援可解釋性和精確度。
+Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視您模型的偏誤。對於 Python 函數，不支援可解釋性和精確度。如需訓練資料的相關資訊，請參閱 [{{site.data.keyword.aios_short}} 為何需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - 匯入並起始 {{site.data.keyword.aios_short}}
 

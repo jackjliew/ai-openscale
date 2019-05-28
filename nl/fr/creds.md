@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: credentials, REST API
 
@@ -24,13 +24,11 @@ subcollection: ai-openscale
 # Création d'identifiants
 {: #cred-create}
 
-Pour accéder aux API {{site.data.keyword.aios_short}} REST, il faut une clé d'API de plateforme et un ID de magasin de données (d'instance de service).
-La clé d'API de plateforme donne à un utilisateur la possibilité d'accéder aux ressources {{site.data.keyword.cloud_notm}}.
+Pour accéder aux API {{site.data.keyword.aios_short}} REST, il faut une clé d'API de plateforme et un ID de magasin de données (d'instance de service). La clé d'API de plateforme donne à un utilisateur la possibilité d'accéder aux ressources {{site.data.keyword.cloud_notm}}.
 
 Pour les comptes d'entreprise,
 un administrateur peut créer le magasin de données puis inviter les autres utilisateurs dans le compte
-en leur donnant l'accès à un magasin de données {{site.data.keyword.aios_short}} spécifique.
-Chaque utilisateur peut alors créer sa propre clé d'API de plateforme et accéder au même magasin de données {{site.data.keyword.aios_short}} ;
+en leur donnant l'accès à un magasin de données {{site.data.keyword.aios_short}} spécifique. Chaque utilisateur peut alors créer sa propre clé d'API de plateforme et accéder au même magasin de données {{site.data.keyword.aios_short}} ;
 il n'y a aucun risque de conflit ou de sécurité.
 
 Pour créer une clé d'API de plateforme, procédez comme suit :

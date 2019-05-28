@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -34,7 +34,7 @@ Umfassendere Informationen finden Sie in der [Dokumentation für {{site.data.key
 ## Vorbereitende Schritte
 {: #cml-prereq}
 
-Zur Überwachung der Verzerrung für Ihr Modell müssen Sie die Trainingsdaten Ihres Modells in Db2 oder Cloud Object Storage bereitstellen. Erklärbarkeit und Genauigkeit werden für Python-Funktionen nicht unterstützt.
+Zur Überwachung der Verzerrung für Ihr Modell müssen Sie die Trainingsdaten Ihres Modells in Db2 oder Cloud Object Storage bereitstellen. Erklärbarkeit und Genauigkeit werden für Python-Funktionen nicht unterstützt. Weitere Informationen zu den Trainingsdaten finden Sie unter [Warum muss {{site.data.keyword.aios_short}} auf meine Trainingsdaten zugreifen?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - {{site.data.keyword.aios_short}} importieren und initialisieren
 

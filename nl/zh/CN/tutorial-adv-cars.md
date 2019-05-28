@@ -353,7 +353,7 @@ PostgreSQL 数据库和 Watson Machine Learning 实例必须部署在同一 {{si
 
   ![重新启动并运行](images/restart_and_run.png)
 
-  这将设置数据集市，启用有效内容日志记录，对性能、准确性和公平性监视器进行配置和评分，以及将这些度量提供给 {{site.data.keyword.aios_short}} 实例。
+  这将设置数据集市，启用载荷日志记录，对性能、准确性和公平性监视器进行配置和评分，以及将这些度量提供给 {{site.data.keyword.aios_short}} 实例。
 
 ## 查看结果
 {: #tadv-results}

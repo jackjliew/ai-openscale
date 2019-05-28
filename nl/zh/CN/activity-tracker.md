@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: activity, tracker, events, API, public API
+keywords: activity, tracker, events, API, public API, subscription, binding
 
 subcollection: ai-openscale
 
@@ -33,7 +33,7 @@ subcollection: ai-openscale
 | 操作 |描述|
 | -- | -- |
 | aiopenscale.metrics.create | 存储 {{site.data.keyword.aios_short}} 实例中的度量 |
-| aiopenscale.payload.create | 记录 {{site.data.keyword.aios_short}} 实例中的有效内容 |
+| aiopenscale.payload.create | 记录 {{site.data.keyword.aios_short}} 实例中的载荷 |
 
 ## 专用 API 的事件
 {: #at-priapi}

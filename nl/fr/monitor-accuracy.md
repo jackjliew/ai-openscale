@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: accuracy, 
 
@@ -31,22 +31,19 @@ L'exactitude vous permet de savoir si votre modèle prévoit bien les résultats
 L'exactitude peut signifier différentes choses selon le type de l'algorithme :
 
 - *Classification multi-classes* :
-L'exactitude mesure le nombre de fois qu'une classe quelconque a été prévue correctement, normalisé par le nombre de points de données.
-Pour plus de détails, voir
+L'exactitude mesure le nombre de fois qu'une classe quelconque a été prévue correctement, normalisé par le nombre de points de données. Pour plus de détails, voir
 [Multi-class classification
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#multiclass-classification){: new_window}
 dans la documentation d'Apache Spark.
 
 - *Classification binaire* :
-Pour un algorithme de classification binaire, l'exactitude est mesurée comme la zone située sous une courbe ROC.
-Pour plus de détails, voir
+Pour un algorithme de classification binaire, l'exactitude est mesurée comme la zone située sous une courbe ROC. Pour plus de détails, voir
 [Binary classification
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#binary-classification){: new_window}
 dans la documentation d'Apache Spark.
 
 - *Régression* :
-Les algorithmes de régression sont mesurés à l'aide du coefficient de détermination, ou R2.
-Pour plus de détails, voir
+Les algorithmes de régression sont mesurés à l'aide du coefficient de détermination, ou R2. Pour plus de détails, voir
 [Regression model evaluation
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#regression-model-evaluation){: new_window}
 dans la documentation d'Apache Spark.
@@ -60,8 +57,7 @@ avec un [client Python
 ou une [API REST
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window}.
 
-Reportez-vous aux [Types de modèle pris en charge](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mod) et aux
-[Infrastructures prises en charge](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)
+Reportez-vous aux [Infrastructures prises en charge](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)
 pour connaître les limitations de la surveillance de l'exactitude.
 
 <!---
@@ -85,28 +81,23 @@ Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "
 
 1.  Sur la page *Définir le seuil d'exactitude*, sélectionnez une valeur représentant un niveau d'exactitude acceptable.
 
-    L'exactitude est une valeur synthétisée à partir de métriques pertinentes de sciences des données pour chaque type de modèle particulier.
-Le score est une mesure normalisée qui vous permet de la comparer facilement entre différents types de modèle.
-Dans les cas ordinaires, un score d'exactitude de 80 est suffisant.
+    L'exactitude est une valeur synthétisée à partir de métriques pertinentes de sciences des données pour chaque type de modèle particulier. Le score est une mesure normalisée qui vous permet de la comparer facilement entre différents types de modèle. Dans les cas ordinaires, un score d'exactitude de 80 est suffisant.
     {: note}
 
     ![Définir la limite d'exactitude](images/accuracy-set-limit.png)
 
     Cliquez sur **Suivant** pour continuer.
 
-1.  Maintenant, définissez les tailles d'échantillon minimale et maximale.
-La taille minimale empêche de mesurer l'exactitude
+1.  Maintenant, définissez les tailles d'échantillon minimale et maximale. La taille minimale empêche de mesurer l'exactitude
 tant qu'un nombre minimum d'enregistrements n'est pas disponible dans l'ensemble de données d'évaluation,
-afin que les résultats ne risquent pas d'être faussés.
-La taille maximale aide à mieux gérer le temps et l'effort nécessaires à l'évaluation de l'ensemble de données ;
+afin que les résultats ne risquent pas d'être faussés. La taille maximale aide à mieux gérer le temps et l'effort nécessaires à l'évaluation de l'ensemble de données ;
 si elle est dépassée, seuls les enregistrements les plus récents sont évalués.
 
      ![Configurer la taille d'échantillon](images/accuracy-config-sample.png)
 
 1.  Cliquez sur le bouton **Suivant**.
 
-    Un récapitulatif de vos sélections est présenté pour vérification.
-Pour changer quoi que ce soit, cliquez sur le lien **Modifier** correspondant.
+    Un récapitulatif de vos sélections est présenté pour vérification. Pour changer quoi que ce soit, cliquez sur le lien **Modifier** correspondant.
 
 1.  Cliquez sur **Enregistrer** pour achever la configuration.
 
@@ -117,15 +108,11 @@ Vous avez maintenant la possibilité de fournir directement des données de comm
 Cliquez sur le bouton *Ajouter des données de commentaires* pour télécharger un fichier de données au format CSV ;
 définissez le délimiteur pour qu'il corresponde à vos données.
 
-Le fichier CSV de commentaires doit avoir toutes les valeurs de fonction, ainsi que la valeur cible/libellé affectée manuellement.
-Par exemple, les données de formation du modèle de médicaments contiennent les valeurs de fonction
+Le fichier CSV de commentaires doit avoir toutes les valeurs de fonction, ainsi que la valeur cible/libellé affectée manuellement. Par exemple, les données de formation du modèle de médicaments contiennent les valeurs de fonction
 `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`,`"NA"`,`"K"`
-et la valeur cible/libellé `"DRUG"`.
-Le fichier CSV de commentaires doit comprendre des valeurs pour ces zones ;
-par exemple : `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`.
-Si un en-tête est fourni pour le fichier CSV de commentaires, les noms de zone sont mappés à partir de lui.
-Sinon, l'ordre des zones **DOIT** doit être exactement le même que dans le schéma de formation.
-{: important}
+et la valeur cible/libellé `"DRUG"`. Le fichier CSV de commentaires doit comprendre des valeurs pour ces zones ;
+par exemple : `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. Si un en-tête est fourni pour le fichier CSV de commentaires, les noms de zone sont mappés à partir de lui. Sinon, l'ordre des zones **DOIT** doit être exactement le même que dans le schéma de formation. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    {: important}
 
 Notez que les types de prévision renvoyés par votre modèle et la colonne libellé/cible de vos données de commentaires doivent correspondre.
 {: note}
@@ -137,7 +124,8 @@ La taille de fichier est actuellement limitée à 8 Mo.
 
 Vous pouvez également publier les données de commentaires à l'aide des fragments de code `cURL` ou `Python` fournis.
 
-Les zones et les valeurs des fragments de code doivent être remplacées par vos valeurs réelles, car les valeurs fournies ne sont que des exemples.{: important}
+Les zones et les valeurs des fragments de code doivent être remplacées par vos valeurs réelles, car les valeurs fournies ne sont que des exemples.
+{: important}
 
 Vous pouvez également sauter cette étape facultative en sélectionnant **Quitter** ;
 vous pourrez télécharger un fichier CSV pour l'évaluation ultérieurement.

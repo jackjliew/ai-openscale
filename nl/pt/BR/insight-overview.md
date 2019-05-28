@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: dashboard, navigating, navigation, insights
 
@@ -60,18 +60,15 @@ Daqui, é possível editar diretamente as definições de configuração para se
 ## Transações
 {: #io-tran}
 
-A guia **Explicar uma transação** (![Guia Explicar uma transação](images/insight-transact-tab.png)) permite procurar um ID de transação específico para explicar uma determinada transação de implementação. Para obter mais informações, consulte [Monitorando a explicabilidade](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
+Use a guia **Explicar uma transação** (![Guia Explicar uma transação](images/insight-transact-tab.png)) para procurar um ID de transação específico para explicar uma transação de implementação
+específica. Para obter mais informações, consulte [Monitorando a explicabilidade](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
 ## Ferramentas de IA
 {: #io-too}
 
-A guia **Ferramentas de IA** (![Guia Ferramentas de IA](images/aitools.png)) abre um diálogo que fornece um link para opções adicionais de ferramentas de IA da IBM:
+Use a guia **Ferramentas de IA** (![Guia Ferramentas de IA](images/aitools.png)) para abrir ferramentas e opções adicionais de IA da IBM.
 
 - *[Plano Lite do Watson Studio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*: o Watson Studio fornece o ambiente e as ferramentas para analisar e visualizar dados, limpar e modelar dados, ingerir dados de fluxo contínuo ou criar, treinar e implementar modelos de aprendizado de máquina. Clique no link "Inscreva-se para obter o plano Lite grátis do Watson Studio" para obter o Watson Studio.
-
-- *[NeuNetS ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window}* (*Beta*): o Neural Network Synthesizer, ou "NeuNetS", atualmente na liberação beta, permite sintetizar modelos de IA usando a tecnologia {{site.data.keyword.aios_short}} no Watson Studio. Clique no botão "Sintetizar um modelo" para trabalhar com o NeuNetS.
-
-  ![Diálogo do NeuNetS](images/neunets-dialog.png)
 
 ## Guia Ajuda
 {: #io-help}

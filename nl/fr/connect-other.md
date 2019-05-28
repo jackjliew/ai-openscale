@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: machine learning, services, ml, custom 
 
@@ -22,8 +22,7 @@ subcollection: ai-openscale
 # Spécification d'une instance de service ML personnalisé
 {: #co-connect}
 
-Votre première étape dans l'outil {{site.data.keyword.aios_short}} consiste à spécifier une instance de service.
-Votre instance de service est l'endroit où vous stockez vos modèles et déploiements d'IA.
+Votre première étape dans l'outil {{site.data.keyword.aios_short}} consiste à spécifier une instance de service. Votre instance de service est l'endroit où vous stockez vos modèles et déploiements d'IA.
 {: shortdesc}
 
 ## Connecter votre instance de service personnalisé
@@ -127,13 +126,11 @@ Vous pouvez également consulter les liens suivants :
   Si l'entrée est un tenseur/matrice,
 qui est transformé à partir de l'espace de fonctions d'entrée
 (ce qui est souvent le cas dans l'apprentissage en profondeur à partir de texte ou d'images),
-le modèle ne peut pas être traité par la plateforme {{site.data.keyword.aios_short}} dans l'édition actuelle.
-Par extension, les modèles d'apprentissage en profondeur avec des entrées texte ou images ne peuvent pas être traités pour la détection et l'atténuation de biais.
+le modèle ne peut pas être traité par la plateforme {{site.data.keyword.aios_short}} dans l'édition actuelle. Par extension, les modèles d'apprentissage en profondeur avec des entrées texte ou images ne peuvent pas être traités pour la détection et l'atténuation de biais.
 
   En outre, des données de formation doivent être chargées pour prendre en charge l'explicabilité.
 
-  Pour l'explicabilité sur du texte, le texte complet doit faire partie des fonctions.
-L'explicabilité sur les images pour un modèle personnalisé n'est pas prise en charge dans l'édition actuelle.
+  Pour l'explicabilité sur du texte, le texte complet doit faire partie des fonctions. L'explicabilité sur les images pour un modèle personnalisé n'est pas prise en charge dans l'édition actuelle.
   {: note}
 
 - **Critères de sortie pour que le modèle supporte les moniteurs**
@@ -179,12 +176,10 @@ L'explicabilité sur les images pour un modèle personnalisé n'est pas prise en
   ```
 
   Dans cet exemple, `"personal”` et `“camping”` sont les classes possibles,
-et les scores de chaque sortie d'évaluation sont affectés aux deux classes.
-S'il manque les probabilités de prévision, la détection de biais fonctionnera mais pas le débiais automatique.
+et les scores de chaque sortie d'évaluation sont affectés aux deux classes. S'il manque les probabilités de prévision, la détection de biais fonctionnera mais pas le débiais automatique.
 
   La sortie d'évaluation ci-dessus doit être accessible depuis un noeud final d'évaluation actif
-que {{site.data.keyword.aios_short}} peut appeler par REST.
-Pour AzureML, SageMaker et WML, {{site.data.keyword.aios_short}} se connecte directement aux noeuds finaux d'évaluation natifs
+que {{site.data.keyword.aios_short}} peut appeler par REST. Pour AzureML, SageMaker et WML, {{site.data.keyword.aios_short}} se connecte directement aux noeuds finaux d'évaluation natifs
 (donc vous n'avez pas à vous inquiéter de l'implémentation de la spécification d'évaluation)
 
 ### Etapes suivantes

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: JSON, configuration, configuring, deployment
+keywords: JSON, configuration, configuring, deployment, subscription
 
 subcollection: ai-openscale
 
@@ -23,13 +23,13 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Bereitstellungsabonnement mithilfe von JSON-Dateien konfigurieren
+# Assetbereitstellungen mit JSON-Konfigurationsdateien konfigurieren
 {: #cf-ov}
 
-Sie können eine JSON-Datei importieren, um alle Überwachungen und Funktionen während der Erstellung des Abonnements programmgestützt zu konfigurieren. Sie können die Konfigurationsdatei auch exportieren.
+Sie können eine JSON-Datei importieren, um alle Bereitstellungen Ihres Assets zu Überwachungszwecken zu erstellen und zu konfigurieren. Sie können die Konfigurationsdatei auch exportieren, um weitere Assets und deren Bereitstellungen zu konfigurieren.
 {: shortdesc}
 
-Ein gutes Anschauungsbeispiel dafür, wie Sie eine JSON-Datei zum Abonnieren von Bereitstellungen verwenden, enthält das [Python-Notizbuch 'Watson OpenScale: Ein API-Aufruf für Abonnements'](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). In diesem Notizbuch wird beschrieben, wie Sie ein Abonnement für Amazon SageMaker Assets-Abonnement mit einer JSON-Datei in einem einzigen API-Aufruf konfigurieren. Der Rest dieses Abschnitts bezieht sich auf dieses Notizbuch.
+Ein gutes Anschauungsbeispiel dafür, wie Sie eine JSON-Datei verwenden, enthält das [Python-Notizbuch 'Watson OpenScale: Ein API-Aufruf für Abonnements'](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). In diesem Notizbuch wird beschrieben, wie Sie eine Amazon SageMaker-Assetbereitstellung mit einer JSON-Datei in einem einzigen API-Aufruf erstellen und konfigurieren. Der Rest dieses Abschnitts bezieht sich auf dieses Notizbuch.
 
 ## Inhalt der JSON-Datei als Python-Wörterverzeichnis laden
 {: #cf-load-as-dict}
@@ -146,10 +146,10 @@ Die Datei enthält Konfigurationsdaten. Ein Beispiel dieser Daten ist unten darg
   'timestamp': '2019-02-11T11:41:01.613Z'}}
   ```
 
-## Abonnement aus der Konfigurationsdatei hinzufügen
+## Aus der Konfigurationsdatei importieren
 {: #cf-subscribe}
 
-- Führen Sie nun den Aufruf aus, um das Abonnement für die Bereitstellung des Vorhersagebeispielmodells für Brustkrebs hinzuzufügen und zu konfigurieren.
+- Führen Sie nun den Aufruf aus, um die Assetbereitstellung des Vorhersagebeispielmodells für Brustkrebs hinzuzufügen und zu konfigurieren.
 
     ```python
     subscription = client.data_mart.subscriptions.import_configuration(binding_uid=binding_uid, configuration_data=subscription_configuration)
@@ -158,7 +158,7 @@ Die Datei enthält Konfigurationsdaten. Ein Beispiel dieser Daten ist unten darg
   Der Parameter `binding_uid` ist optional, wenn nur eine ML-Engine gebunden wird.
   {: note}
 
-## JSON-Datei exportieren
+## In die Konfigurationsdatei exportieren
 {: #cf-export}
 
 - Sie können die Konfigurationsdatei auch als JSON-Datei exportieren:
@@ -170,8 +170,8 @@ Die Datei enthält Konfigurationsdaten. Ein Beispiel dieser Daten ist unten darg
 ## Ergebnisse
 {: #cf-results}
 
-Das Abonnement wird erstellt und das bereitgestellte Modell wird für die Verwendung durch {{site.data.keyword.aios_short}} konfiguriert.
+Die Assetbereitstellung wird für die Nutzung durch {{site.data.keyword.aios_short}} erstellt und konfiguriert.
 
 Umfassendere Informationen finden Sie in der [Dokumentation für {{site.data.keyword.aios_short}} Python-Clients ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}.
 
-Mithilfe der Methoden [Abonnement importieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} und [Abonnement exportieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} können Sie Konfigurationen auch in {{site.data.keyword.aios_short}} importieren und exportieren.
+Mithilfe der API-Methoden [Abonnement importieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} und [Abonnement exportieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} können Sie Konfigurationen auch in {{site.data.keyword.aios_short}} importieren und exportieren.

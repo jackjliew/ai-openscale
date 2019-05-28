@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -23,10 +23,10 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# 비Watson 기계 학습 서비스 인스턴스에 대한 페이로드 로깅
+# 비Watson Machine Learning 서비스 인스턴스에 대한 페이로드 로깅
 {: #cml-connect}
 
-사용자의 AI 모델이 Watson 기계 학습(WML) 외의 기계 학습 엔진에 배치되면 Python 클라이언트로 외부 기계 학습 엔진에 대해 로깅할 수 있도록 설정해야 합니다.
+사용자의 AI 모델이 Watson Machine Learning(WML) 외의 기계 학습 엔진에 배치되면 Python 클라이언트로 외부 기계 학습 엔진에 대해 로깅할 수 있도록 설정해야 합니다.
 {: shortdesc}
 
 [{{site.data.keyword.aios_short}} Python 클라이언트 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://ai-openscale-python-client.mybluemix.net/){: new_window} 및 [{{site.data.keyword.aios_short}} 튜토리얼 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window}의 일부인 샘플 {{site.data.keyword.aios_short}} Python 클라이언트 노트북에서 전체 정보를 볼 수 있습니다.
@@ -34,7 +34,7 @@ subcollection: ai-openscale
 ## 시작하기 전에
 {: #cml-prereq}
 
-모델의 편향성을 모니터하려면 Db2 또는 Cloud Object Storage에서 사용 가능한 모델의 교육 데이터가 필요합니다. Python 함수에 대해 설명 가능성 및 정확성은 지원되지 않습니다.
+모델의 편향성을 모니터하려면 Db2 또는 Cloud Object Storage에서 사용 가능한 모델의 훈련 데이터가 필요합니다. Python 함수에 대해 설명 가능성 및 정확성은 지원되지 않습니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
 
 - {{site.data.keyword.aios_short}}을 가져와서 시작하십시오.
 

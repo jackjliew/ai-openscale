@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -26,7 +26,7 @@ subcollection: ai-openscale
 # WML-Frameworks
 {: #frmwrks-wml}
 
-{{site.data.keyword.aios_full}} unterstützt die folgenden {{site.data.keyword.pm_full}}-Frameworks vollständig:
+{{site.data.keyword.aios_full}} unterstützt die folgenden {{site.data.keyword.pm_full}}-Frameworks vollständig: 
 {: shortdesc}
 
 Tabelle 1. Details der Frameworkunterstützung
@@ -38,7 +38,12 @@ Tabelle 1. Details der Frameworkunterstützung
 | Python-Funktion | Regression | Strukturiert |
 | XGBoost | Klassifikation | Strukturiert |
 | XGBoost | Regression | Strukturiert |
+| Keras mit TensorFlow<sup>1</sup> | Klassifikation | Unstrukturiert (Bild, Text) |
+| Keras mit TensorFlow<sup>1</sup> | Regression | Unstrukturiert (Bild, Text) |
 {: caption="Details der Frameworkunterstützung" caption-side="top"}
+
+<sup>1</sup>In der Unterstützung für Keras ist keine Unterstützung für Fairness enthalten.
+{: note}
 
 
 

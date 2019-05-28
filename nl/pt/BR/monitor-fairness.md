@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, fairness monitor
 
@@ -110,7 +110,7 @@ Considere um ponto de dados em que, para `Gender=Male` (valor de Referência), o
 
      Clique em **Avançar** quando tiver concluído com cada recurso.
 
-1.  Agora, especifique valores que representam um resultado favorável para o modelo. Os valores serão derivados da coluna `label` nos dados de treinamento, se o esquema de saída do modelo contiver uma coluna de mapeamento. No WML, a coluna `prediction` sempre tem um valor duplo. A coluna de mapeamento é usada para especificar o mapeamento desse valor `prediction` para o rótulo de classe.
+1.  Agora, especifique valores que representam um resultado favorável para o modelo. Os valores serão derivados da coluna `label` nos [dados de treinamento](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata), se o esquema de saída do modelo contiver uma coluna de mapeamento. No WML, a coluna `prediction` sempre tem um valor duplo. A coluna de mapeamento é usada para especificar o mapeamento desse valor `prediction` para o rótulo de classe.
 
     Por exemplo, se o valor `prediction` for `1.0`, a coluna de mapeamento poderá ter um valor de `Loan denied`; isso implica que a predição do modelo é `Loan denied`. Portanto, se o esquema de saída do modelo contiver uma coluna de mapeamento, especifique os valores Favoráveis e Desfavoráveis usando aqueles presentes na coluna de mapeamento.
 

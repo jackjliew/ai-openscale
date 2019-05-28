@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -35,7 +35,7 @@ subcollection: ai-openscale
 
 最适合这些多样化数据集的数据科学方法（例如梯度提升树和神经网络）可以生成高度精确的风险模型，但是存在相应的代价。此类“黑匣”模型生成的是不透明的预测，这些预测必须以某种方式变为透明，以确保获得监管批准，例如通用数据保护条例 (GDPR) 第 22 条，或由消费者金融保护局管理的联邦公平信用报告法案 (FCRA)。
 
-本教程中提供的信用风险模型使用训练数据集，其中包含有关每个贷款申请人的 20 个属性。其中两个属性（年龄和性别）可以测试有无偏差。对于本教程，重点将在于针对性别和年龄的偏差。
+本教程中提供的信用风险模型使用训练数据集，其中包含有关每个贷款申请人的 20 个属性。其中两个属性（年龄和性别）可以测试有无偏差。对于本教程，重点将在于针对性别和年龄的偏差。有关训练数据的更多信息，请参阅[为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 {{site.data.keyword.aios_short}} 将监视已部署模型中一个组（参考组）相对于另一个组（受监视组）获取有利结果（“无风险”）的倾向。在本教程中，性别的受监视组为 `female`，而年龄的受监视组为 `18 to 25`。
 
@@ -64,30 +64,30 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 ## 供应 {{site.data.keyword.cloud_notm}} 服务
 {: #crt-services}
 
-使用 IBM 标识登录到 [{{site.data.keyword.cloud_notm}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}){: new_window}。供应服务时（尤其在使用 Db2 Warehouse 的情况下），请验证所选组织和空间是否对于所有服务都相同。
+使用您的 {{site.data.keyword.ibmid}} 登录到 [{{site.data.keyword.cloud_notm}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}){: new_window}。供应服务时（尤其在使用 Db2 Warehouse 的情况下），请验证所选组织和空间是否对于所有服务都相同。
 
-### 创建 Watson Studio 帐户
+### 创建 {{site.data.keyword.DSX}} 帐户
 {: #crt-wstudio}
 
-- [创建 Watson Studio 实例 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/watson-studio){: new_window}（如果您尚未具有与帐户关联的实例）：
+- [创建 {{site.data.keyword.DSX}} 实例 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/watson-studio){: new_window}（如果您还没有与帐户关联的实例）：
 
   ![Watson Studio](images/watson_studio.png)
 
 - 指定服务的名称，选择 Lite（免费）套餐，然后单击**创建**按钮。
 
-### 供应 Cloud Object Storage 服务
+### 供应 {{site.data.keyword.cos_full_notm}} 服务
 {: #crt-cos}
 
-- [供应 Object Storage 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}（如果您尚未具有与帐户关联的服务）：
+- [供应 {{site.data.keyword.cos_short}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}（如果您还没有与帐户关联的服务）：
 
   ![Object Storage](images/object_storage.png)
 
 - 指定服务的名称，选择 Lite（免费）套餐，然后单击**创建**按钮。
 
-### 供应 Watson Machine Learning 服务
+### 供应 {{site.data.keyword.pm_full}} 服务
 {: #crt-wml}
 
-- [供应 Watson Machine Learning 实例 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/machine-learning){: new_window}（如果您尚未具有与帐户关联的实例）：
+- [供应 {{site.data.keyword.pm_short}} 实例 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/machine-learning){: new_window}（如果您还没有与帐户关联的实例）：
 
   ![Machine Learning](images/machine_learning.png)
 
@@ -96,7 +96,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 ### （可选）供应 Databases for PostgreSQL 或 Db2 Warehouse 服务
 {: #crt-db2}
 
-如果您具有付费的 {{site.data.keyword.cloud_notm}} 帐户，那么可以供应 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服务来充分利用与 Watson Studio 和持续学习服务的集成。如果选择不供应付费服务，那么可以将免费内部 PostgreSQL 存储与 {{site.data.keyword.aios_short}} 配合使用，但是将无法为模型配置持续学习。
+如果您具有付费的 {{site.data.keyword.cloud_notm}} 帐户，那么可以供应 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服务来充分利用与 {{site.data.keyword.DSX}} 和持续学习服务的集成。如果选择不供应付费服务，那么可以将免费内部 PostgreSQL 存储与 {{site.data.keyword.aios_short}} 配合使用，但是将无法为模型配置持续学习。
 
 - [供应 Databases for PostgreSQL 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/databases-for-postgresql) 或 [Db2 Warehouse 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/db2-warehouse)（如果您尚未具有与帐户关联的服务）：
 
@@ -106,14 +106,14 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - 指定服务的名称，选择 Standard 套餐 (Databases for PostgreSQL) 或 Entry 套餐 (Db2 Warehouse)，然后单击**创建**按钮。
 
-## 设置 Watson Studio 项目
+## 设置 {{site.data.keyword.DSX}} 项目
 {: #crt-set-wstudio}
 
-- 登录到 [Watson Studio 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dataplatform.ibm.com/){: new_window}。单击右上方的帐户头像图标，并验证您使用的帐户是否与用于创建 {{site.data.keyword.cloud_notm}} 服务的帐户相同：
+- 登录到 [{{site.data.keyword.DSX}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dataplatform.ibm.com/){: new_window}。单击 {{site.data.keyword.avatar}} 并验证您使用的帐户是否与用于创建 {{site.data.keyword.cloud_notm}} 服务的帐户相同：
 
   ![相同帐户](images/same_account.png)
 
-- 在 Watson Studio 中，首先创建新项目。选择“创建项目”：
+- 在 {{site.data.keyword.DSX}} 中，首先创建一个新项目。 选择“创建项目”：
 
   ![Watson Studio 创建项目](images/studio_create_proj.png)
 
@@ -123,17 +123,17 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - 指定项目的名称和描述，确保在**存储**下拉菜单中选择所创建的 Cloud Object Storage 服务，然后单击**创建**。
 
-## 创建和部署机器学习模型
+## 创建和部署 {{site.data.keyword.pm_short}} 模型
 {: #crt-make-model}
 
-### 将 `Working with Watson Machine Learning` 笔记本添加到 Watson Studio 项目
+### 将 `Working with Watson Machine Learning` 笔记本添加到 {{site.data.keyword.DSX}} 项目
 {: #crt-add-notebook}
 
 - 下载以下文件：
 
     - [Working with Watson Machine Learning ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
-- 从 Watson Studio 项目中的**资产**选项卡单击**添加到项目**按钮，然后从下拉菜单中选择**笔记本**：
+- 从 {{site.data.keyword.DSX}} 项目中的**资产**选项卡单击**添加到项目**按钮，然后从下拉菜单中选择**笔记本**：
 
   ![添加连接](images/add_notebook.png)
 

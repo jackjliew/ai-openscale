@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: deployment, monitors, data
 
@@ -42,7 +42,7 @@ subcollection: ai-openscale
 ## 处理数据
 {: #mo-work-data}
 
-1.  现在，您将提供有关模型和训练数据的信息；单击**下一步**。
+1.  现在，您将提供有关模型和训练数据的信息；单击**下一步**。有关训练数据的更多信息，请参阅[为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
     ![准备解释](images/config-what-monitor.png)
 

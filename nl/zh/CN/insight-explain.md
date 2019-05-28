@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: explainability, monitoring, explain, explaining, transactions, transaction ID
 
@@ -19,7 +19,7 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 监视可解释性
+# 解释事务
 {: #ie-ov}
 
 对于每个部署，您可以查看特定事务的可解释性数据。
@@ -30,7 +30,7 @@ subcollection: ai-openscale
 
 在所选部署磁贴中，选择导航器中的**解释事务**选项卡 (![“解释事务”选项卡](images/insight-transact-tab.png)) 并输入事务标识。
 
-只要将数据发送到模型进行评分，它就会通过设置 `X-Global-Transaction-Id` 字段在 HTTP 头中设置事务标识。此事务标识存储在有效内容表中。要针对特定评分查找模型行为的解释，请指定与该评分请求关联的事务标识。请注意，此行为仅适用于 Watson Machine Learning (WML) 事务，不适用于非 WML 事务。
+只要将数据发送到模型进行评分，它就会通过设置 `X-Global-Transaction-Id` 字段在 HTTP 头中设置事务标识。此事务标识存储在载荷表中。要针对特定评分查找模型行为的解释，请指定与该评分请求关联的事务标识。请注意，此行为仅适用于 Watson Machine Learning (WML) 事务，不适用于非 WML 事务。
 {: note}
 
 ### 在 {{site.data.keyword.aios_short}} 中查找事务标识

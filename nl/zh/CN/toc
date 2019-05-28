@@ -6,7 +6,10 @@ Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
+    faststart.md
     alt-setup.md
+    tutorial-adv.md
+    addl-rsc.md
     index.md
 
     {: .topicgroup}
@@ -14,11 +17,7 @@ Watson OpenScale
         frameworks-wml-cloud.md
         frameworks-azure-ml-studio.md
         frameworks-aws-sagemaker.md
-        frameworks-custom.md
-
-    tutorial-adv.md
-    addl-rsc.md
-    {: .navgroup-end}
+        frameworks-custom.md{: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
@@ -33,15 +32,17 @@ Watson OpenScale
         config-file.md
 
     {: .topicgroup}
-    使用监视器
+    配置监视器
         monitor-overview.md
         monitor-fairness.md
         monitor-accuracy.md
+        metrics.md
 
     {: .topicgroup}
-    查看和编辑监视器数据
+    获取洞察
         insight-overview.md
         insight-timechart.md
+        analyze-metrics-transactions.md
         insight-explain.md
 
     openscale-recovery.md
@@ -52,6 +53,7 @@ Watson OpenScale
     [ModelOps CLI](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
     [Python 客户机](http://ai-openscale-python-client.mybluemix.net/)
     activity-tracker.md
+    language-support.md
     information-security.md
     [Watson GitHub 存储库](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
@@ -60,6 +62,7 @@ Watson OpenScale
     gettinghelp.md
     release-notes.md
     ai-openscale-faqs.md
+    [创建支持案例](https://cloud.ibm.com/unifiedsupport/supportcenter)
 
     {: .topicgroup}
     开发人员社区

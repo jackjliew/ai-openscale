@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: release notes, what's new 
 
@@ -24,6 +24,20 @@ subcollection: ai-openscale
 
 本文件概述 {{site.data.keyword.aios_full_notm}} 的新特性和已知問題。
 {: shortdesc}
+
+## 2019年 4月 25 日
+{: #rn-25April2019}
+
+該服務的新特性和變更如下。
+
+### 新特性和變更
+{: #rn-25April2019nf}
+
+除了可用性改良和安全更新項目之外，我們的開發人員還忙碌於新增特性。過去這幾週所新增或加強的 {{site.data.keyword.aios_short}} 特性包括：
+
+- __*自動化設定導覽*__：設定 {{site.data.keyword.aios_short}} 環境的新導覽方式。使用[自動化設定](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)來佈建服務及下載和配置模型。當您有 {{site.data.keyword.aios_short}} 的新實例時，就會看到此選項。
+- __*切換至測試版*__：![測試版標記](images/beta.png)新的切換按鈕**探索新的測試版**可讓您在測試版環境中工作，您可以在其中檢查所有最新特性和新功能。不喜歡您看到的內容？只要按一下**回到原始版本**就可以切回。您的配置和監視器不受影響。下列功能是現行測試版程式的一部分：
+    - __*混淆矩陣*__：[混淆矩陣顯示](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx)誤肯定和誤否定。按一下資料格以檢視意見記錄的子集。
 
 ## 2019 年 3 月 5 日
 {: #rn-5March2019}
@@ -99,8 +113,6 @@ subcollection: ai-openscale
 - __*可解釋性*__：支援迴歸模型、Python 函數和補充的對比解釋。如需相關資訊，請參閱[監視可解釋性](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)。
 
 - __*資料儲存庫*__：在不倚賴 Watson Machine Learning 情況下進行品質監視，並且能夠使用您自己的資料庫，不論是 Db2、Postgres 或 Db2 on Cloud 都行。
-
-- __*NeuNetS（測試版）*__：IBM Neural Network Synthesizer (NeuNetS) 是以測試版形式提供（限公有雲）。如需相關資訊，請參閱 [NeuNetS 說明文件![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window}。
 
 - __*已加強的使用者介面*__：{{site.data.keyword.aios_short}} 使用者介面已改良，而包含直方圖分佈，可讓您從直方圖來切換顯示訓練資料、模型 ID 和版本化，以及交易 ID 表格。如需相關資訊，請參閱[將特定小時的資料視覺化](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet)。
 

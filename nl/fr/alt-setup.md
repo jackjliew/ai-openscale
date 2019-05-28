@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -38,15 +38,13 @@ vous pouvez installer un module Python.
 de mettre en service une instance de {{site.data.keyword.aios_short}}
 sans avoir à mettre à disposition et configurer les services eux-mêmes
 comme expliqué dans le tutoriel [Initiation](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted).
-- Le module Python vérifie les services dontvous disposez et crée ceux qui sont nécessaires, y compris {{site.data.keyword.aios_short}}.
-Une fois qu'il est en fonctionnement, vous pouvez lancer {{site.data.keyword.aios_short}} depuis le tableau de bord {{site.data.keyword.cloud_notm}}
+- Le module Python vérifie les services dontvous disposez et crée ceux qui sont nécessaires, y compris {{site.data.keyword.aios_short}}. Une fois qu'il est en fonctionnement, vous pouvez lancer {{site.data.keyword.aios_short}} depuis le tableau de bord {{site.data.keyword.cloud_notm}}
 pour voir comment il surveille un modèle.
 
 ## Avant de commencer
 {: #as-prereqs}
 
-1. [Créez une clé d'API {{site.data.keyword.cloud_notm}} et téléchargez-la](/docs/iam?topic=iam-userapikey#create_user_key).
-Vous aurez à l'entrer plus loin.
+1. [Créez une clé d'API {{site.data.keyword.cloud_notm}} et téléchargez-la](/docs/iam?topic=iam-userapikey#create_user_key). Vous aurez à l'entrer plus loin.
 
 2. [Installez une édition quelconque de Python 3
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.python.org/downloads/){: new_window}.
@@ -71,9 +69,7 @@ consultez le [tableau de bord {{site.data.keyword.cloud_notm}}
 pour vérifier que le service est géré par {{site.data.keyword.iamshort}} (IAM) et non par Cloud Foundry.
 
   **Important** :
-Le module regarde si une instance de {{site.data.keyword.pm_short}} est présente.
-Si c'est le cas, il l'utilise.
-Mais si votre instance est gérée par Cloud Foundry, vous devez d'abord
+Le module regarde si une instance de {{site.data.keyword.pm_short}} est présente. Si c'est le cas, il l'utilise. Mais si votre instance est gérée par Cloud Foundry, vous devez d'abord
 [la migrer dans un groupe de ressources IAM avant d'exécuter le module](/docs/resources?topic=resources-migrate#migrate).
 
 ## Exécution du module
@@ -107,8 +103,7 @@ qui affiche une vue d'ensemble des métriques des modèles déployés :
 
 - La page Analyses permet de voir d'un coup d'oeil les problèmes d'équité et d'exactitude déterminés par les seuils configurés.
 
-- Chaque déploiement est affiché sous la forme d'un carreau.
-Le module a configuré un déploiement nommé `GermanCreditRiskModel`, montré par la capture d'écran suivante :
+- Chaque déploiement est affiché sous la forme d'un carreau. Le module a configuré un déploiement nommé `GermanCreditRiskModel`, montré par la capture d'écran suivante :
 
   ![Vue d'ensemble des analyses](images/setup01-0206.png)
 
@@ -120,8 +115,7 @@ pour afficher les détails sur les données surveillées.
 2. Faites glisser le marqueur sur le graphique
 jusqu'à un jour et une heure montrant des données et cliquez sur le lien **Afficher les détails**.
 
-   - Par exemple, l'écran suivant affiche les données d'une date/heure donnée.
-Les dates et heures varient en fonction du moment où vous exécutez le module.
+   - Par exemple, l'écran suivant affiche les données d'une date/heure donnée. Les dates et heures varient en fonction du moment où vous exécutez le module.
 
    - Pour savoir comment interpréter le graphe de temps,
 voir [Surveillance de l'équité, du nombre moyen de demandes par minute et de l'exactitude](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
@@ -143,9 +137,7 @@ voir [Surveillance de l'équité, du nombre moyen de demandes par minute et de l
 Pour comprendre les facteurs contributeurs s'il y a du biais pour une certaine période,
 sélectionnez le bouton **Afficher les transactions** dans l'écran de visualisation présenté à la section précédente.
 
-Les ID des transactions de la dernière heure qui présentent un biais s'affichent.
-Pour le modèle utilisé dans ce module, il n'y a aucun biais pour les demandes disponibles.
-Par conséquent, aucune transaction n'est affichée pour la période dans la capture d'écran suivante.
+Les ID des transactions de la dernière heure qui présentent un biais s'affichent. Pour le modèle utilisé dans ce module, il n'y a aucun biais pour les demandes disponibles. Par conséquent, aucune transaction n'est affichée pour la période dans la capture d'écran suivante.
 
   ![Liste des transactions sans transaction](images/setup06-0206.png)
 

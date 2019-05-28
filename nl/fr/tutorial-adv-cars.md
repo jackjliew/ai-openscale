@@ -33,8 +33,7 @@ lastupdated: "2019-02-05"
 ## Scénario
 {: #tadv-scenario}
 
-Une société de location de voitures a recueilli des données de retour sur la satisfaction de la clientèle.
-Le modèle présenté utilise ces données pour prévoir un plan d'action à suivre avec chaque client, par exemple lui donner un bon pour sa prochaine location.
+Une société de location de voitures a recueilli des données de retour sur la satisfaction de la clientèle. Le modèle présenté utilise ces données pour prévoir un plan d'action à suivre avec chaque client, par exemple lui donner un bon pour sa prochaine location.
 
 Le modèle utilise les zones de données client ID (numéro d'identification), GENDER (sexe), STATUS (état civil : célibataire ou marié), CHILDREN (nombre d'enfants),
 AGE, CUSTOMER STATUS (état du client : actif ou inactif), CAR OWNER (propriétaire d'une voiture : oui ou non), CUSTOMER SERVICE (service client : commentaire),
@@ -61,11 +60,11 @@ Vous mettrez également à disposition le service {{site.data.keyword.cloud_notm
 
 - PostgreSQL
 
-  Un crédit {{site.data.keyword.cloud_notm}} de 200 $ peut être obtenu en passant à un compte payant avec une carte de crédit.
-Si vous avez déjà un compte payant, vous recevrez un remboursement unique de 16 $ du coût de votre premier Go de stockage, pour un mois.
+  Un crédit {{site.data.keyword.cloud_notm}} de 200 $ peut être obtenu en passant à un compte payant avec une carte de crédit. Si vous avez déjà un compte payant, vous recevrez un remboursement unique de 16 $ du coût de votre premier Go de stockage, pour un mois.
   {: tip}
 
-La base de données PostgreSQL et l'instance de Watson Machine Learning doivent être déployées dans le même compte {{site.data.keyword.cloud_notm}}.{: important}
+La base de données PostgreSQL et l'instance de Watson Machine Learning doivent être déployées dans le même compte {{site.data.keyword.cloud_notm}}.
+{: important}
 
 Si vous avez déjà mis à disposition les services nécessaires, par exemple si vous avez effectué l'autre tutoriel,
 passez à [Définissez un projet Watson Studio](#tadv-setup-ws) plus bas.
@@ -84,8 +83,7 @@ Dans ce tutoriel, vous allez :
 {: #tadv-svcs}
 
 Connectez-vous à votre [compte {{site.data.keyword.cloud_notm}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window} avec votre IBMid.
-Lors de la mise à disposition des services, en particulier dans le cas d'Apache Spark, d'Object Storage et de Db2 Warehouse,
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window} avec votre IBMid. Lors de la mise à disposition des services, en particulier dans le cas d'Apache Spark, d'Object Storage et de Db2 Warehouse,
 vérifiez que l'organisation et l'espace sélectionnés sont les mêmes pour tous les services.
 
 ### Créez un compte Watson Studio
@@ -108,10 +106,7 @@ vérifiez que l'organisation et l'espace sélectionnés sont les mêmes pour tou
 
 - Donnez un nom à votre service, choisissez le forfait Lite (gratuit) et cliquez sur le bouton **Créer**.
 
-- Notez les identifiants du service Machine Learning.
-Dans votre instance d'apprentissage automatique, cliquez sur le lien **Données d'identification du service** sur le côté gauche de la page.
-Nommez l'identifiant et cliquez sur **Ajouter**.
-Ensuite, dans la liste des identifiants, cliquez sur **Afficher l'identifiant** et copiez les identifiants pour utilisation ultérieure.
+- Notez les identifiants du service Machine Learning. Dans votre instance d'apprentissage automatique, cliquez sur le lien **Données d'identification du service** sur le côté gauche de la page. Nommez l'identifiant et cliquez sur **Ajouter**. Ensuite, dans la liste des identifiants, cliquez sur **Afficher l'identifiant** et copiez les identifiants pour utilisation ultérieure.
 
 ### Mettez à disposition un service Spark
 {: #tadv-ps}
@@ -123,10 +118,7 @@ Ensuite, dans la liste des identifiants, cliquez sur **Afficher l'identifiant** 
 
 - Affectez un nom à votre service, choisissez le forfait Lite (gratuit) et cliquez sur le bouton **Créer**.
 
-- Notez les identifiants de service de votre instance de Spark.
-Ouvrez celle-ci et cliquez sur **Données d'identification du service** dans le menu de gauche.
-Cliquez sur le bouton **Nouvel identifiant**, nommez vos identifiants et cliquez sur **Ajouter**.
-Ensuite, cliquez sur le lien **Afficher les identifiants** en regard du jeu que vous venez de créer et copiez ces identifiants pour utilisation ultérieure.
+- Notez les identifiants de service de votre instance de Spark. Ouvrez celle-ci et cliquez sur **Données d'identification du service** dans le menu de gauche. Cliquez sur le bouton **Nouvel identifiant**, nommez vos identifiants et cliquez sur **Ajouter**. Ensuite, cliquez sur le lien **Afficher les identifiants** en regard du jeu que vous venez de créer et copiez ces identifiants pour utilisation ultérieure.
 
 ### Mettez à disposition un service Object Storage
 {: #tadv-pos}
@@ -148,14 +140,10 @@ Ensuite, cliquez sur le lien **Afficher les identifiants** en regard du jeu que 
 
 - Donnez un nom à votre service, choisissez le forfait Standard et cliquez sur le bouton **Créer**.
 
-  Un crédit {{site.data.keyword.cloud_notm}} de 200 $ peut être obtenu en passant à un compte payant avec une carte de crédit.
-Si vous avez déjà un compte payant, vous recevrez un remboursement unique de 16 $ du coût de votre premier Go de stockage, pour un mois.
+  Un crédit {{site.data.keyword.cloud_notm}} de 200 $ peut être obtenu en passant à un compte payant avec une carte de crédit. Si vous avez déjà un compte payant, vous recevrez un remboursement unique de 16 $ du coût de votre premier Go de stockage, pour un mois.
   {: tip}
 
-- Notez les identifiants de service de votre instance de PostgreSQL.
-Ouvrez votre instance de PostgreSQL existante (ou nouvelle) et cliquez sur **Données d'identification du service** dans le menu de gauche.
-Cliquez sur le bouton **Nouvel identifiant**, nommez vos identifiants et cliquez sur **Ajouter**.
-Ensuite, cliquez sur le lien **Afficher les identifiants** en regard du jeu que vous venez de créer et copiez ces identifiants pour utilisation ultérieure.
+- Notez les identifiants de service de votre instance de PostgreSQL. Ouvrez votre instance de PostgreSQL existante (ou nouvelle) et cliquez sur **Données d'identification du service** dans le menu de gauche. Cliquez sur le bouton **Nouvel identifiant**, nommez vos identifiants et cliquez sur **Ajouter**. Ensuite, cliquez sur le lien **Afficher les identifiants** en regard du jeu que vous venez de créer et copiez ces identifiants pour utilisation ultérieure.
 
 <!---
 
@@ -203,8 +191,7 @@ Ensuite, cliquez sur le lien **Afficher les identifiants** en regard du jeu que 
 
   ![Définissez le type de données manuellement](images/data-type-manual.png)
 
-- Les données de formation devraient maintenant s'afficher correctement en colonnes.
-Cliquez sur **Suivant** pour continuer, puis sur **Commencer le chargement** pour charger les données.
+- Les données de formation devraient maintenant s'afficher correctement en colonnes. Cliquez sur **Suivant** pour continuer, puis sur **Commencer le chargement** pour charger les données.
 
 --->
 
@@ -212,8 +199,7 @@ Cliquez sur **Suivant** pour continuer, puis sur **Commencer le chargement** pou
 {: #tadv-setup-ws}
 
 - Connectez-vous à votre [compte Watson Studio
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://dataplatform.ibm.com/){: new_window}.
-Cliquez sur l'icône d'avatar de compte en haut à droite et vérifiez que le compte que vous utilisez
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://dataplatform.ibm.com/){: new_window}. Cliquez sur l'icône d'avatar de compte en haut à droite et vérifiez que le compte que vous utilisez
 est bien celui que vous avez utilisé pour créer vos services {{site.data.keyword.cloud_notm}} :
 
   ![Même compte](images/same_account.png)
@@ -233,19 +219,16 @@ et cliquez sur **Créer**.
 ### Associez vos services {{site.data.keyword.cloud_notm}} à votre projet Watson
 {: #tadv-acsw}
 
-- Ouvrez votre projet Watson Studio et sélectionnez l'onglet **Paramètres**.
-Dans la section **Services associés**, cliquez sur la liste déroulante **Ajouter un service**
+- Ouvrez votre projet Watson Studio et sélectionnez l'onglet **Paramètres**. Dans la section **Services associés**, cliquez sur la liste déroulante **Ajouter un service**
 et sélectionnez **Watson**:
 
   ![Ajout du service Watson](images/add_watson_service.png)
 
 - Cliquez sur le lien **Ajouter** sur le carreau **Machine Learning**
-et sélectionnez l'onglet **Existant**.
-Choisissez le service créé dans la section précédente dans la liste déroulante **Instance de service existante**
+et sélectionnez l'onglet **Existant**. Choisissez le service créé dans la section précédente dans la liste déroulante **Instance de service existante**
 et cliquez sur **Sélectionner**.
 
-- Dans l'onglet des paramètres de projet, sélectionnez à nouveau **Ajouter un service** et choisissez **Spark** dans la liste déroulante.
-Dans l'onglet **Existant**, choisissez le service Spark que vous avez créé et cliquez sur **Sélectionner**.
+- Dans l'onglet des paramètres de projet, sélectionnez à nouveau **Ajouter un service** et choisissez **Spark** dans la liste déroulante. Dans l'onglet **Existant**, choisissez le service Spark que vous avez créé et cliquez sur **Sélectionner**.
 
 ## Créez et déployez un modèle d'apprentissage automatique
 {: #tadv-deploy-ml}
@@ -279,8 +262,7 @@ cliquez sur le bouton **Ajouter au projet** et sélectionnez **Bloc-notes** dans
 ### Editez et exécutez le bloc-notes `CARS4U Action Recommendation - model`
 {: #tadv-ern}
 
-Le bloc-notes `CARS4U Action Recommendation - model` contient des instructions détaillées pour chaque étape du code Python que vous allez exécutez.
-Au fur et à mesure que vous avancerez, prenez le temps de comprendre ce que fait chaque commande.
+Le bloc-notes `CARS4U Action Recommendation - model` contient des instructions détaillées pour chaque étape du code Python que vous allez exécutez. Au fur et à mesure que vous avancerez, prenez le temps de comprendre ce que fait chaque commande.
 {: tip}
 
 - Dans l'onglet **Actifs** de votre projet Watson Studio,
@@ -291,13 +273,11 @@ cliquez sur l'icône **Editer** en regard du bloc-notes `CARS4U Action Recommend
 - Dans la section 4, "Store the model in the repository", sous **TIP**,
 remplacez les identifiants Watson Machine Learning par ceux que vous avez créés à la section précédente.
 
-- Une fois que vous avez entré vos identifiants, le bloc-notes est prêt à s'exécuter.
-Cliquez sur l'élément de menu **Noyau** et sélectionnez **Redémarrer et exécuter tout** dans le menu :
+- Une fois que vous avez entré vos identifiants, le bloc-notes est prêt à s'exécuter. Cliquez sur l'élément de menu **Noyau** et sélectionnez **Redémarrer et exécuter tout** dans le menu :
 
   ![Redémarrer et exécuter](images/restart_and_run.png)
 
-  Cela créera, formera et déploiera le modèle **CARS4U - Action Recommendation Model** dans votre projet.
-Vous pouvez vérifier que le modèle est bien déployé en sélectionnant l'onglet **Déploiements** de votre projet Watson Studio
+  Cela créera, formera et déploiera le modèle **CARS4U - Action Recommendation Model** dans votre projet. Vous pouvez vérifier que le modèle est bien déployé en sélectionnant l'onglet **Déploiements** de votre projet Watson Studio
 et en cliquant sur le lien **CARS4U - Area and Action Model Deployment**.
 
 ## Configurez {{site.data.keyword.aios_short}}
@@ -307,8 +287,7 @@ et en cliquant sur le lien **CARS4U - Area and Action Model Deployment**.
 {: #tadv-paios}
 
 - Si vous n'avez pas encore mis à disposition une instance de {{site.data.keyword.aios_short}},
-cliquez sur le lien **Catalogue** dans votre compte {{site.data.keyword.cloud_notm}} et filtrez sur "OpenScale".
-Sélectionnez le carreau de {{site.data.keyword.aios_short}}.
+cliquez sur le lien **Catalogue** dans votre compte {{site.data.keyword.cloud_notm}} et filtrez sur "OpenScale". Sélectionnez le carreau de {{site.data.keyword.aios_short}}.
 
 <!---
   ![{{site.data.keyword.aios_short}}](images/openscale.png)
@@ -320,10 +299,8 @@ Sélectionnez le carreau de {{site.data.keyword.aios_short}}.
 {: #tadv-cmlm}
 
 Comme le modèle d'apprentissage automatique est déployé,
-vous pouvez configurer {{site.data.keyword.aios_short}} pour garantir la fiabilité et la transparence de vos modèles.
-Sélectionnez l'onglet **Gérer** de votre instance de {{site.data.keyword.aios_short}}
-et cliquez sur le bouton **Lancer une application**.
-La page Initiation à {{site.data.keyword.aios_full}} s'ouvre ; cliquez sur **Commencer**.
+vous pouvez configurer {{site.data.keyword.aios_short}} pour garantir la fiabilité et la transparence de vos modèles. Sélectionnez l'onglet **Gérer** de votre instance de {{site.data.keyword.aios_short}}
+et cliquez sur le bouton **Lancer une application**. La page Initiation à {{site.data.keyword.aios_full}} s'ouvre ; cliquez sur **Commencer**.
 
 - Sélectionnez le carreau "Watson Machine Learning" et cliquez sur **Suivant**.
 
@@ -333,14 +310,11 @@ La page Initiation à {{site.data.keyword.aios_full}} s'ouvre ; cliquez sur **Co
 
   ![Définition de l'instance de WML](images/gs-set-wml.png)
 
-- Vous pouvez maintenant sélectionner les modèles déployés qui seront surveillés par {{site.data.keyword.aios_short}}.
-Cochez le modèle que vous avez créé et déployé et cliquez sur **Suivant** pour valider :
+- Vous pouvez maintenant sélectionner les modèles déployés qui seront surveillés par {{site.data.keyword.aios_short}}. Cochez le modèle que vous avez créé et déployé et cliquez sur **Suivant** pour valider :
 
   ![Sélection des modèles déployés](images/gs-set-deploy.png)
 
-- Ensuite, vous devez choisir une base de données PostgreSQL.
-Vous avez deux options : la base de données gratuite du forfait Lite, ou une base de données existante ou nouvelle.
-Pour ce tutoriel, sélectionnez le carreau **Utiliser une base de données existante ou en acheter une nouvelle**.
+- Ensuite, vous devez choisir une base de données PostgreSQL. Vous avez deux options : la base de données gratuite du forfait Lite, ou une base de données existante ou nouvelle. Pour ce tutoriel, sélectionnez le carreau **Utiliser une base de données existante ou en acheter une nouvelle**.
 
     ![Sélection d'une base de données](images/gs-set-lite-db1.png)
 
@@ -370,8 +344,7 @@ pour vérifier le récapitulatif, puis sur **Enregistrer**.
 {: #tadv-aomn}
 
 Le bloc-notes `{{site.data.keyword.aios_short}} and Watson ML engine`
-contient des instructions détaillées pour chaque étape du code Python que vous allez exécutez.
-Au fur et à mesure que vous avancerez, prenez le temps de comprendre ce que fait chaque commande.
+contient des instructions détaillées pour chaque étape du code Python que vous allez exécutez. Au fur et à mesure que vous avancerez, prenez le temps de comprendre ce que fait chaque commande.
 {: tip}
 
 - Téléchargez le fichier suivant :
@@ -407,8 +380,7 @@ cliquez sur l'icône **Editer** en regard du bloc-notes `{{site.data.keyword.aio
 
 - Dans la section 1.1, "Installation and authentication":
 
-    - Sous **ACTION: Get instance_id (GUID) and apikey**, suivez les instructions pour obtenir vos identifiants.
-Remplacez les `aios_credentials` par les vôtres.
+    - Sous **ACTION: Get instance_id (GUID) and apikey**, suivez les instructions pour obtenir vos identifiants. Remplacez les `aios_credentials` par les vôtres.
 
     - Ensuite, dans **ACTION: Add your Watson Machine Learning credentials here**,
 remplacez les identifiants Watson Machine Learning par ceux que vous avez créés précédemment.
@@ -416,8 +388,7 @@ remplacez les identifiants Watson Machine Learning par ceux que vous avez créé
     - Enfin, sous **ACTION: Add your PostgreSQL credentials here**,
 remplacez les identifiants Postgres par ceux que vous avez créés précédemment.
 
-- Une fois que vous avez entré vos identifiants, le bloc-notes est prêt à s'exécuter.
-Cliquez sur l'élément de menu **Noyau** et sélectionnez **Redémarrer et exécuter tout** dans le menu :
+- Une fois que vous avez entré vos identifiants, le bloc-notes est prêt à s'exécuter. Cliquez sur l'élément de menu **Noyau** et sélectionnez **Redémarrer et exécuter tout** dans le menu :
 
   ![Redémarrer et exécuter](images/restart_and_run.png)
 
@@ -437,25 +408,19 @@ cliquez sur l'onglet **Analyses** :
 
   ![Analyses](images/insight-dash-tab.png)
 
-La page Analyses fournit une vue d'ensemble des métriques de vos modèles déployés.
-Vous voyez des alertes pour les métriques d'équité ou d'exactitude passées sous le seuil défini lors de l'exécution du bloc-notes (70 %). 
-Les données et paramètres utilisés dans ce tutoriel auront créé des métriques d'exactitude et d'équité similaires à celles présentées ici.
+La page Analyses fournit une vue d'ensemble des métriques de vos modèles déployés. Vous voyez des alertes pour les métriques d'équité ou d'exactitude passées sous le seuil défini lors de l'exécution du bloc-notes (70 %). Les données et paramètres utilisés dans ce tutoriel auront créé des métriques d'exactitude et d'équité similaires à celles présentées ici.
 
   ![Vue d'ensemble des analyses](images/insight-overview-adv-tutorial.png)
 
 ### Affichez les données de surveillance de votre déploiement
 {: #tadv-vmdd}
 
-Sélectionnez un déploiement en cliquant sur le carreau correspondant sur la page Analyses.
-Les données de surveillance du déploiement s'affichent.
-Faites glisser le marqueur sur le graphique
-pour sélectionner les données correspondant à la période sur laquelle vous avez exécuté le bloc-notes.
-Sélectionnez ensuite le lien **Afficher les détails**.
+Sélectionnez un déploiement en cliquant sur le carreau correspondant sur la page Analyses. Les données de surveillance du déploiement s'affichent. Faites glisser le marqueur sur le graphique
+pour sélectionner les données correspondant à la période sur laquelle vous avez exécuté le bloc-notes. Sélectionnez ensuite le lien **Afficher les détails**.
 
   ![Données de surveillance](images/insight-monitor-data1.png)
 
-Vous pouvez maintenant examiner les graphiques des données que vous avez surveillées.
-Pour cet exemple,
+Vous pouvez maintenant examiner les graphiques des données que vous avez surveillées. Pour cet exemple,
 vous pouvez sélectionner "Children" ou "Gender" dans la liste déroulante **Fonction**
 pour voir les détails sur les données surveillées.
 
@@ -470,8 +435,7 @@ Cliquez sur le bouton **Afficher les transactions** dans les graphiques des donn
 
   ![Afficher les transactions](images/view_transactions.png)
 
-  La liste des transactions de la dernière heure écoulée s'affiche.
-Copiez un des ID de transaction.
+  La liste des transactions de la dernière heure écoulée s'affiche. Copiez un des ID de transaction.
 
   ![Liste des transactions](images/transaction_list.png)
 
@@ -481,8 +445,7 @@ cliquez sur l'onglet **Explicabilité** :
 
   ![Explicabilité](images/explainability.png)
 
-Collez l'ID de transaction que vous avez copié dans la zone de recherche et appuyez sur **Retour** sur votre clavier.
-Vous obtenez une explication de la façon dont le modèle est parvenu à sa conclusion,
+Collez l'ID de transaction que vous avez copié dans la zone de recherche et appuyez sur **Retour** sur votre clavier. Vous obtenez une explication de la façon dont le modèle est parvenu à sa conclusion,
 avec la confiance, les facteurs qui ont contribué au niveau de confiance et les attributs fournis.
 
   ![Afficher la transaction](images/view_transaction1.png)

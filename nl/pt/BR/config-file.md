@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: JSON, configuration, configuring, deployment
+keywords: JSON, configuration, configuring, deployment, subscription
 
 subcollection: ai-openscale
 
@@ -23,13 +23,16 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Configure a assinatura de implementação usando arquivos JSON
+# Configurar implementações de recursos usando arquivos de configuração JSON
 {: #cf-ov}
 
-É possível importar um arquivo JSON para configurar programaticamente todos os monitores e recursos durante a criação da assinatura. Também é possível exportar o arquivo de configuração.
+É possível importar um arquivo JSON para criar e configurar todas as implementações de seu recurso
+para propósitos de monitoramento. Também é possível exportar o arquivo de configuração para configurar
+outros recursos e suas implementações.
 {: shortdesc}
 
-Para obter um bom exemplo de como trabalhar com um arquivo JSON para assinar implementações, consulte o [Bloco de notas Python do Watson OpenScale One API Shot para assinatura](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). O bloco de notas descreve como configurar uma assinatura de ativo do Amazon SageMaker usando um arquivo JSON em uma única chamada da API. O restante deste tópico referencia esse bloco de notas.
+Para obter um bom exemplo de como trabalhar com um arquivo JSON, veja o [Bloco de notas Python do Watson OpenScale One API Shot para assinatura](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). O bloco de notas descreve como criar e configurar implementações de recursos do Amazon SageMaker usando um arquivo JSON em uma única
+chamada de API. O restante deste tópico faz referência a esse bloco de notas
 
 ## Carregar o conteúdo do arquivo JSON como um dicionário Python
 {: #cf-load-as-dict}
@@ -146,10 +149,11 @@ O arquivo contém dados de configuração, um exemplo do que é mostrado abaixo.
   'timestamp': '2019-02-11T11:41:01.613Z'}}
   ```
 
-## Incluir assinatura a partir do arquivo de configuração
+## Importar do arquivo de configuração
 {: #cf-subscribe}
 
-- Agora, execute a chamada para incluir e configurar a assinatura para a implementação do modelo de predição de câncer de mama de amostra.
+- Agora, execute a chamada para incluir e configurar a implementação do recurso para a implementação
+do modelo de previsão de câncer de mama de amostra.
 
     ```python
     subscription = client.data_mart.subscriptions.import_configuration (binding_uid = binding_uid, configuration_data = subscription_configuration)
@@ -158,7 +162,7 @@ O arquivo contém dados de configuração, um exemplo do que é mostrado abaixo.
   O parâmetro `binding_uid` será opcional se somente um mecanismo ML estiver ligado.
   {: note}
 
-## Exportando seu Arquivo JSON
+## Exportando para o arquivo de configuração
 {: #cf-export}
 
 - Também é possível exportar o arquivo de configuração como JSON:
@@ -170,8 +174,9 @@ O arquivo contém dados de configuração, um exemplo do que é mostrado abaixo.
 ## Resultados da pesquisa
 {: #cf-results}
 
-A assinatura é criada e o modelo implementado é configurado para uso pelo {{site.data.keyword.aios_short}}.
+A implementação do recurso é criada e configurada para uso pelo {{site.data.keyword.aios_short}}.
 
 Consulte informações mais completas na [documentação do cliente Python {{site.data.keyword.aios_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}.
 
-Também é possível importar e exportar configurações para o {{site.data.keyword.aios_short}} usando os métodos de [assinatura de importação ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} e [assinatura de exportação ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window}.
+Também é possível importar e exportar configurações para o {{site.data.keyword.aios_short}}
+usando os métodos de API [assinatura de importação ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} e [assinatura de exportação ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window}.

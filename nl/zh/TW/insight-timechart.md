@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -75,7 +75,7 @@ subcollection: ai-openscale
 ## 執行時期與訓練資料
 {: #it-rtsw}
 
-執行時期資料 / 訓練資料開關可讓您在訓練模型，與執行時期所收集會觸發偏誤警告的資料之間，切換差異。
+執行時期資料 / 訓練資料開關可讓您在訓練模型，與執行時期所收集會觸發偏誤警告的資料之間，切換差異。如需訓練資料的相關資訊，請參閱 [{{site.data.keyword.aios_short}} 為何需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 ![執行時期與訓練的切換](images/runtime_train_data.png)
 

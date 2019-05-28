@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -70,27 +70,11 @@ subcollection: ai-openscale
 
 <p>&nbsp;</p>
 
-## 支援的模型類型
-{: #in-mod}
-
-表 1. 模型支援明細
-
-|演算法|**公平性**|**自動除去偏誤**|**解釋**|**精確度**|
-|:---|:---:|:---:|:---:|:---:|
-|**結構化分類**|是|是<sup>1</sup>|是|是|
-|**結構化迴歸**|是|否|是|是|
-|**文字分類**|否|否|是|否|
-|**影像分類**|否|否|是|否||
-{: caption="模型支援明細" caption-side="top"}
-
-<sup>1</sup> 如果您的模型 / 架構會輸出預測機率
-
-<p>&nbsp;</p>
 
 ## 支援機器學習引擎和架構
 {: #in-fram}
 
-{{site.data.keyword.aios_short}} 服務支援下列機器學習引擎。如[支援的模型類型](#in-mod)清單中所述，每一個執行時期都支援在下列架構中建立的模型。
+{{site.data.keyword.aios_short}} 服務支援下列機器學習引擎。每個執行時期都支援在下列架構中建立的模型：
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)

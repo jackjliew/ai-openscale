@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -75,7 +75,8 @@ O gráfico mostra várias coisas:
 ## Dados de Tempo de Execução e Treinamento
 {: #it-rtsw}
 
-O comutador de Dados de tempo de execução/Dados de treinamento permite alternar as diferenças entre seu modelo treinado e os dados coletados no tempo de execução que está acionando um aviso de propensão.
+O comutador de Dados de tempo de execução/Dados de treinamento permite alternar as diferenças entre seu modelo treinado e os dados coletados no tempo de execução que está acionando um aviso de propensão. Para
+obter mais informações sobre os dados de treinamento, veja [Por que o {{site.data.keyword.aios_short}} precisa de acesso aos meus dados de treinamento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 ![Runtime Training toggle](images/runtime_train_data.png)
 

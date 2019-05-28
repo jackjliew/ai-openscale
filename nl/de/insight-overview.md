@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: dashboard, navigating, navigation, insights
 
@@ -60,19 +60,14 @@ Von hier aus können Sie die Konfigurationseinstellungen für Ihre Bereitstellun
 ## Transaktionen
 {: #io-tran}
 
-Die Registerkarte **Transaktion erklären** ( ![Registerkarte 'Transaktion erklären'](images/insight-transact-tab.png) ) ermöglicht die Suche einer bestimmten Transaktions-ID, um eine Erklärung einer bestimmten Bereitstellungstransaktion zu erhalten. Weitere Informationen hierzu enthält der Abschnitt [Erklärbarkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
+Mit der Registerkarte **Transaktion erklären** (![Registerkarte 'Transaktion erklären'](images/insight-transact-tab.png)) können Sie nach einer bestimmten Transaktions-ID suchen, um eine Erklärung einer bestimmten Bereitstellungstransaktion zu erhalten. Weitere Informationen hierzu enthält der Abschnitt [Erklärbarkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
 ## AI-Tools
 {: #io-too}
 
-Die Registerkarte **AI-Tools** ( ![Registerkarte 'AI-Tools'](images/aitools.png) ) öffnet einen Dialog, der einen Link zu weiteren Optionen für IBM AI-Tools enthält:
+Verwenden Sie die Registerkarte **AI-Tools** (![Registerkarte 'AI-Tools'](images/aitools.png)), um einen Dialog zu öffnen, der einen Link zu weiteren Optionen für IBM AI-Tools enthält.
 
-- *[Watson Studio-Lite-Plan ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*: Watson Studio bietet Ihnen die Umgebung und die Tools, um Daten zu analysieren und zu visualisieren, Daten zu bereinigen und zu formen (Shapedaten), Streamingdaten einzupflegen oder Machine Learning-Modelle zu erstellen, zu trainieren und bereitzustellen.
-Klicken Sie auf den Link 'Registrierung für kostenlosen Watson Studio-Lite-Plan durchführen', um Watson Studio abzurufen.
-
-- *[NeuNetS ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window}* (*Beta*): Neural Network Synthesizer bzw. 'NeuNetS' (gegenwärtig als Betaversion verfügbar) ermöglicht Ihnen die synthetische Erstellung von AI-Modellen mit {{site.data.keyword.aios_short}}-Technologie in Watson Studio. Klicken Sie auf die Schaltfläche 'Modell synthetisieren', um mit NeuNetS zu arbeiten.
-
-  ![Dialogfenster für NeuNetS](images/neunets-dialog.png)
+- *[Watson Studio-Lite-Plan ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*: Watson Studio bietet Ihnen die Umgebung und die Tools, um Daten zu analysieren und zu visualisieren, Daten zu bereinigen und zu formen (Shapedaten), Streamingdaten einzupflegen oder Machine Learning-Modelle zu erstellen, zu trainieren und bereitzustellen. Klicken Sie auf den Link 'Registrierung für kostenlosen Watson Studio-Lite-Plan durchführen', um Watson Studio abzurufen.
 
 ## Registerkarte 'Hilfe'
 {: #io-help}

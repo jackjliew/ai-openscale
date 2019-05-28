@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: security, information security, GDPR, 
 
@@ -32,7 +32,7 @@ Jeder Kunde ist für die Einhaltung der geltenden Gesetze und Verordnungen einsc
 
 Die hierin beschriebenen Produkte, Services und sonstigen Funktionen eignen sich nicht für alle Kundensituationen und sind möglicherweise nur eingeschränkt verfügbar. IBM erteilt keine Rechts- oder Steuerberatung und gibt keine Garantie bezüglich der Konformität von IBM Produkten oder Services mit den geltenden Gesetzen und gesetzlichen Bestimmungen.
 
-Wenn Sie Unterstützung zur DSGVO für {{site.data.keyword.cloud}} {{site.data.keyword.watson}}-Ressourcen anfordern möchten, die ... 
+Wenn Sie Unterstützung zur DSGVO für {{site.data.keyword.cloud}} {{site.data.keyword.watson}}-Ressourcen anfordern möchten, die ...
 
 -   ... in der Europäischen Union erstellt werden, lesen Sie [Unterstützung für IBM Cloud-Watson-Ressourcen anfordern, die in der Europäischen Union erstellt werden
 ](/docs/services/watson?topic=watson-gdpr-sar#request-EU).

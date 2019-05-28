@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Watson Studio, Watson Machine Learning, wml, machine learning, services
 
@@ -19,10 +19,10 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Watson 기계 학습 서비스 인스턴스 지정
+# Watson Machine Learning 서비스 인스턴스 지정
 {: #wml-connect}
 
-{{site.data.keyword.aios_short}} 도구에서 첫 번째 단계는 Watson 기계 학습(WML) 인스턴스를 지정하는 것입니다. WML 인스턴스는 사용자의 AI 모델 및 배치를 저장하는 곳입니다.
+{{site.data.keyword.aios_short}} 도구에서 첫 번째 단계는 Watson Machine Learning(WML) 인스턴스를 지정하는 것입니다. WML 인스턴스는 사용자의 AI 모델 및 배치를 저장하는 곳입니다.
 {: shortdesc}
 
 ## 선행 조건
@@ -30,7 +30,7 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}} 서비스 인스턴스가 있는 계정과 동일한 {{site.data.keyword.Bluemix_notm}} 계정에 프로비저닝된 WML 인스턴스가 있어야 합니다. 기타 계정에 프로비저닝된 WML 인스턴스가 있는 경우, {{site.data.keyword.aios_short}}을 사용하여 해당 인스턴스를 구성할 수 없습니다.
 
-## Watson 기계 학습 서비스 인스턴스 연결
+## Watson Machine Learning 서비스 인스턴스 연결
 {: #wml-config}
 
 {{site.data.keyword.aios_short}}은 WML 인스턴스에서 AI 모델 및 배치에 연결됩니다.
@@ -39,11 +39,11 @@ subcollection: ai-openscale
 
     ![홈 페이지](images/gs-config-start.png)
 
-2.  Watson 기계 학습 타일을 선택하십시오.
+2.  Watson Machine Learning 타일을 선택하십시오.
 
     ![타일 선택](images/connect-wml.png)
 
-3.  {{site.data.keyword.aios_short}}이 사용자의 {{site.data.keyword.Bluemix_notm}} 계정을 확인하여 기존 WML 인스턴스를 찾습니다. 그런 다음 **Watson 기계 학습 서비스** 드롭 다운 메뉴에서 인스턴스를 선택할 수 있습니다.
+3.  {{site.data.keyword.aios_short}}이 사용자의 {{site.data.keyword.Bluemix_notm}} 계정을 확인하여 기존 WML 인스턴스를 찾습니다. 그런 다음 **Watson Machine Learning 서비스** 드롭 다운 메뉴에서 인스턴스를 선택할 수 있습니다.
 
     ![WML 서비스 선택](images/gs-set-wml.png)
 

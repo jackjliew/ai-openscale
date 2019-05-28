@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -35,7 +35,7 @@ subcollection: ai-openscale
 
 그래디언트 부스티드 트리(gradient boosted tree) 및 신경망 등의 다양한 데이터세트에 가장 적합한 데이터 과학 기술은 매우 정확한 위험 모델을 생성할 수 있으나 비용을 감수해야 합니다. "블랙 박스" 모델은 GDPR(General Data Protection Regulation)의 22항 또는 소비자 금융 보호국에서 관리하는 연방 FCRA(Fair Credit Reporting Act) 등의 규제 승인을 보장하기 위해 어느정도 투명해질 필요가 있는 불투명한 예측을 생성합니다.
 
-이 튜토리얼에서 제공된 신용 위험 모델은 각 대출 신청자에 대한 20가지 속성을 포함하는 교육 데이터 세트를 사용합니다. 이러한 속성 중 두 가지인 연령 및 성별에 대해 편향성 테스트를 수행할 수 있습니다. 이 튜토리얼에서는 성별과 연령에 대한 편견에 중점을 둡니다.
+이 튜토리얼에서 제공된 신용 위험 모델은 각 대출 신청자에 대한 20가지 속성을 포함하는 훈련 데이터 세트를 사용합니다. 이러한 속성 중 두 가지인 연령 및 성별에 대해 편향성 테스트를 수행할 수 있습니다. 이 튜토리얼에서는 성별과 연령에 대한 편견에 중점을 둡니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
 
 {{site.data.keyword.aios_short}}이 배치된 모델의, 다른 그룹(모니터되는 그룹)보다 한 그룹(참조 그룹)의 선호 결과("위험 없음")를 우선하는 경향을 모니터합니다. 이 튜토리얼에서 성별에 대해 모니터되는 그룹은 `female`이며 나이에 대해 모니터되는 그룹은 `18 to 25`입니다.
 
@@ -46,7 +46,7 @@ subcollection: ai-openscale
 
 - Cloud Object Storage(Watson Studio 프로젝트를 저장하는 목적)
 - {{site.data.keyword.aios_short}}
-- Watson 기계 학습
+- Watson Machine Learning
 - (선택사항) Databases for PostgreSQL 또는 Db2 Warehouse
 
 Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치하고 {{site.data.keyword.aios_short}}을 구성하여 배치를 모니터하며 {{site.data.keyword.aios_short}} 인사이트 대시보드에서 볼 수 있도록 7일 간의 히스토리 레코드 및 측정치를 제공합니다. 또한 선택적으로 Watson Studio와 Spark로 지속적인 학습을 할 수 있도록 모델을 구성할 수 있습니다.
@@ -64,30 +64,30 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 ## {{site.data.keyword.cloud_notm}} 서비스 프로비저닝
 {: #crt-services}
 
-IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}에 로그인하십시오. 서비스를 프로비저닝할 때, 특히 Db2 Warehouse의 경우, 선택된 조직 및 공간이 모든 서비스에 대해 동일한지 확인하십시오.
+{{site.data.keyword.ibmid}}를 사용하여 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}에 로그인하십시오. 서비스를 프로비저닝할 때 특히 Db2 Warehouse를 사용하는 경우 선택한 조직 및 영역이 모든 서비스에 대해 동일한지 확인하십시오. 
 
-### Watson Studio 계정 작성
+### {{site.data.keyword.DSX}} 계정 작성
 {: #crt-wstudio}
 
-- 아직 계정과 연관된 인스턴스가 없으면 [Watson Studio 인스턴스를 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/watson-studio){: new_window}하십시오.
+- 계정과 연관된 인스턴스가 아직 없다면 [{{site.data.keyword.DSX}} 인스턴스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/watson-studio){: new_window}를 작성하십시오. 
 
   ![Watson Studio](images/watson_studio.png)
 
 - 서비스에 이름을 지정하고 Lite(무료) 플랜을 선택한 다음 **작성** 단추를 클릭하십시오.
 
-### Cloud Object Storage 서비스 프로비저닝
+### {{site.data.keyword.cos_full_notm}} 서비스 프로비저닝
 {: #crt-cos}
 
-- 아직 계정과 연관된 서비스가 없으면 [Object Storage 서비스를 프로비저닝 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}하십시오.
+- 아직 계정과 연관된 서비스가 없으면 [{{site.data.keyword.cos_short}} 서비스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}를 프로비저닝하십시오.
 
   ![Object Storage](images/object_storage.png)
 
 - 서비스에 이름을 지정하고 Lite(무료) 플랜을 선택한 다음 **작성** 단추를 클릭하십시오.
 
-### Watson 기계 학습 서비스 프로비저닝
+### {{site.data.keyword.pm_full}} 서비스 프로비저닝
 {: #crt-wml}
 
-- 아직 계정과 연관된 인스턴스가 없으면 [Watson 기계 학습 인스턴스를 프로비저닝 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/machine-learning){: new_window}하십시오.
+- 아직 계정과 연관된 인스턴스가 없다면 [{{site.data.keyword.pm_short}} 인스턴스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/machine-learning){: new_window}를 프로비저닝하십시오. 
 
   ![기계 학습](images/machine_learning.png)
 
@@ -96,7 +96,7 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 ### (선택사항) Databases for PostgreSQL 또는 DB2 Warehouse 서비스 프로비저닝
 {: #crt-db2}
 
-유료 {{site.data.keyword.cloud_notm}} 계정이 있는 경우, `Databases for PostgreSQL` 또는 `Db2 Warehouse` 서비스를 프로비저닝하여 Watson Studio 및 연속 학습 서비스와의 통합을 활용할 수 있습니다. 유료 서비스를 프로비저닝하지 않기로 선택하는 경우 무료 내부 PostgreSQL 스토리지를 {{site.data.keyword.aios_short}}과 함께 사용할 수 있으나 모델에 대한 연속 학습을 구성할 수 없습니다.
+유료 {{site.data.keyword.cloud_notm}} 계정이 있는 경우 `Databases for PostgreSQL` 또는 `Db2 Warehouse` 서비스를 프로비저닝하여 {{site.data.keyword.DSX}} 및 지속적인 학습 서비스와의 통합을 최대한 활용할 수 있습니다. 유료 서비스를 프로비저닝하지 않기로 선택하는 경우 무료 내부 PostgreSQL 스토리지를 {{site.data.keyword.aios_short}}과 함께 사용할 수 있으나 모델에 대한 연속 학습을 구성할 수 없습니다.
 
 - 아직 계정과 연관된 서비스가 없으면 [Databases for PostgreSQL 서비스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/databases-for-postgresql) 또는 [Db2 Warehouse 서비스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/db2-warehouse)를 프로비저닝하십시오.
 
@@ -106,14 +106,14 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 
 - 서비스에 이름을 지정하고 표준 플랜(Databases for PostgreSQL) 또는 입문 플랜(Db2 Warehouse)을 선택한 다음 **작성** 단추를 클릭하십시오.
 
-## Watson Studio 프로젝트 설정
+## {{site.data.keyword.DSX}} 프로젝트 설정
 {: #crt-set-wstudio}
 
-- [Watson Studio 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://dataplatform.ibm.com/){: new_window}에 로그인하십시오. 상단 오른쪽에서 계정 아바타 아이콘을 클릭하고 사용 중인 계정이 {{site.data.keyword.cloud_notm}} 서비스를 작성할 때 사용한 계정과 동일한지 확인하십시오.
+- [{{site.data.keyword.DSX}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://dataplatform.ibm.com/){: new_window}에 로그인하십시오. {{site.data.keyword.avatar}}를 클릭하고 사용하는 계정이 {{site.data.keyword.cloud_notm}} 서비스를 작성하는 데 사용한 동일한 계정인지 확인하십시오. 
 
   ![동일한 계정](images/same_account.png)
 
-- Watson Studio에서 새 프로젝트를 작성하여 시작하십시오. "프로젝트 작성"을 선택하십시오.
+- {{site.data.keyword.DSX}}에서 새 프로젝트를 작성하여 시작하십시오. "프로젝트 작성"을 선택하십시오.
 
   ![Watson Studio 프로젝트 작성](images/studio_create_proj.png)
 
@@ -123,17 +123,17 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 
 - 프로젝트에 이름과 설명을 지정하고 작성한 Cloud Object Storage 서비스가 **스토리지** 드롭 다운에서 선택되어 있는지 확인하고 **작성**을 클릭하십시오.
 
-## 기계 학습 모델 작성 및 배치
+## {{site.data.keyword.pm_short}} 모델 작성 및 배치
 {: #crt-make-model}
 
-### Watson Studio 프로젝트에 `Working with Watson Machine Learning` Notebook 추가
+### `Working with Watson Machine Learning` 노트북을 {{site.data.keyword.DSX}} 프로젝트에 추가
 {: #crt-add-notebook}
 
 - 다음 파일을 다운로드하십시오.
 
-    - [Watson 기계 학습에 대한 작업 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [Watson Machine Learning에 대한 작업 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
-- Watson Studio 프로젝트의 **자산** 탭에서 **프로젝트에 추가** 단추를 클릭하고 드롭 다운에서 **Notebook**을 선택하십시오.
+- **자산** 탭의 {{site.data.keyword.DSX}} 프로젝트에서 **프로젝트에 추가** 단추를 클릭하고 드롭 다운 메뉴에서 **노트북**을 선택하십시오. 
 
   ![연결 추가](images/add_notebook.png)
 
@@ -161,7 +161,7 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 
     - 지침에 따라 {{site.data.keyword.cloud_notm}} API 키를 작성하고 복사하여 붙여넣으십시오.
 
-    - Watson 기계 학습(WML) 서비스 인증 정보를 사용자가 앞에서 작성한 인증 정보로 대체하십시오.
+    - Watson Machine Learning(WML) 서비스 인증 정보를 사용자가 앞에서 작성한 인증 정보로 대체하십시오.
 
     - DB 인증 정보를 Databases for PostgreSQL용으로 작성한 인증 정보로 대체하십시오.
 

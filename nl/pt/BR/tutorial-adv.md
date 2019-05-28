@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -35,7 +35,8 @@ Para fornecer acesso ao crédito para uma população mais ampla e mais arriscad
 
 As técnicas de ciência de dados mais adequadas a esses diferentes conjuntos de dados, como as árvores impulsionadas por gradiente e as redes neurais, podem gerar modelos de risco altamente precisos, mas a um custo. Esses modelos de "caixa preta" geram predições opacas que devem de alguma forma se tornar transparentes, para garantir a aprovação regulamentar, como o artigo 22 do Regulamento Geral sobre a Proteção de Dados (GDPR) ou o Fair Credit Reporting Act (FCRA) federal gerenciado pelo Departamento de Proteção Financeira do Consumidor.
 
-O modelo de risco de crédito fornecido neste tutorial usa um conjunto de dados de treinamento que contém 20 atributos sobre cada requerente de empréstimo. Dois desses atributos - idade e sexo - podem ser testados para propensão. Para este tutorial, o foco será a propensão com relação a sexo e idade.
+O modelo de risco de crédito fornecido neste tutorial usa um conjunto de dados de treinamento que contém 20 atributos sobre cada requerente de empréstimo. Dois desses atributos - idade e sexo - podem ser testados para propensão. Para este tutorial, o foco será a propensão com relação a sexo e idade. Para
+obter mais informações sobre os dados de treinamento, veja [Por que o {{site.data.keyword.aios_short}} precisa de acesso aos meus dados de treinamento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 O {{site.data.keyword.aios_short}} monitorará a propensão do modelo implementado para um resultado favorável ("Sem risco") para um grupo (o Grupo de referência) sobre outro (o Grupo monitorado). Neste tutorial, o Grupo monitorado para sexo é `female`, enquanto o Grupo monitorado para idade é `18 to 25`.
 
@@ -64,30 +65,32 @@ Nesse tutorial, você irá:
 ## Provisionar Serviços do {{site.data.keyword.cloud_notm}}
 {: #crt-services}
 
-Efetue login em sua [conta do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window} com seu IBMid. Ao provisionar serviços, particularmente no caso do Db2 Warehouse, verifique se sua organização e espaço selecionados são os mesmos para todos os serviços.
+Efetue login com sua [conta do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window} com seu {{site.data.keyword.ibmid}}. Ao provisionar
+serviços, particularmente se você usar o Db2 Warehouse, verifique se sua organização e espaço selecionados
+são os mesmos para todos os serviços.
 
-### Criar uma conta do Watson Studio
+### Criar uma conta do {{site.data.keyword.DSX}}
 {: #crt-wstudio}
 
-- [Crie uma instância do Watson Studio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/watson-studio){: new_window} se você ainda não tiver uma associada à sua conta:
+- [Crie uma instância do {{site.data.keyword.DSX}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/watson-studio){: new_window} caso você ainda não tenha uma associada à sua conta:
 
   ![Watson Studio](images/watson_studio.png)
 
 - Dê ao seu serviço um nome, escolha o plano Lite (grátis) e clique no botão **Criar**.
 
-### Provisão de um serviço Cloud Object Storage
+### Provisione um serviço {{site.data.keyword.cos_full_notm}}
 {: #crt-cos}
 
-- [Provisione um serviço Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} se você ainda não tiver um associado à sua conta:
+- [Provisione um serviço do {{site.data.keyword.cos_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} caso você ainda não tenha um associado à sua conta:
 
   ![Object Storage](images/object_storage.png)
 
 - Dê ao seu serviço um nome, escolha o plano Lite (grátis) e clique no botão **Criar**.
 
-### Oferta um serviço Watson Machine Learning
+### Provisione um serviço {{site.data.keyword.pm_full}}
 {: #crt-wml}
 
-- [Provisione uma instância do Watson Machine Learning ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/machine-learning){: new_window} se você ainda não tiver uma associada à sua conta:
+- [Provisione uma instância do {{site.data.keyword.pm_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/machine-learning){: new_window} caso você ainda não tenha uma associada à sua conta:
 
   ![Machine Learning](images/machine_learning.png)
 
@@ -96,7 +99,8 @@ Efetue login em sua [conta do {{site.data.keyword.cloud_notm}} ![Ícone de link 
 ### (Opcional) Provisionar um serviço Databases for PostgreSQL ou DB2 Warehouse
 {: #crt-db2}
 
-Se você tiver uma conta paga do {{site.data.keyword.cloud_notm}}, poderá provisionar um serviço `Databases for PostgreSQL` ou `Db2 Warehouse` para tirar total proveito da integração com o Watson Studio e serviços de aprendizado contínuo. Se você escolher não provisionar um serviço pago, será possível usar o armazenamento PostgreSQL interno grátis com o {{site.data.keyword.aios_short}}, mas não será possível configurar o aprendizado contínuo para seu modelo.
+Se você tiver uma conta {{site.data.keyword.cloud_notm}} paga, poderá provisionar um
+serviço `Databases for PostgreSQL` ou `Db2 Warehouse` para aproveitar totalmente a integração com o {{site.data.keyword.DSX}} e serviços de aprendizado contínuo. Se você escolher não provisionar um serviço pago, será possível usar o armazenamento PostgreSQL interno grátis com o {{site.data.keyword.aios_short}}, mas não será possível configurar o aprendizado contínuo para seu modelo.
 
 - [Provisione um serviço Databases for PostgreSQL ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/databases-for-postgresql) ou [um serviço Db2 Warehouse ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/db2-warehouse) se você ainda não tiver um associado à sua conta:
 
@@ -106,14 +110,14 @@ Se você tiver uma conta paga do {{site.data.keyword.cloud_notm}}, poderá provi
 
 - Dê ao seu serviço um nome, escolha o plano Padrão (Databases for PostgreSQL) ou plano de Entrada (Db2 Warehouse) e clique no botão **Criar**.
 
-## Configurar um projeto do Watson Studio
+## Configurar um projeto {{site.data.keyword.DSX}}
 {: #crt-set-wstudio}
 
-- Efetue login em sua [conta do Watson Studio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://dataplatform.ibm.com/){: new_window}. Clique no ícone do avatar da conta no canto superior direito e verifique se a conta que você está usando é a mesma conta usada para criar seus serviços do {{site.data.keyword.cloud_notm}}:
+- Efetue login em sua [conta do {{site.data.keyword.DSX}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://dataplatform.ibm.com/){: new_window}. Clique em {{site.data.keyword.avatar}} e verifique se a conta que você está usando é a mesma que usou para criar seus serviços {{site.data.keyword.cloud_notm}}:
 
   ![Same Account](images/same_account.png)
 
-- No Watson Studio, inicie criando um novo projeto. Selecione "Criar um projeto":
+- No {{site.data.keyword.DSX}}, inicie criando um novo projeto. Selecione "Criar um projeto":
 
   ![Watson Studio create project](images/studio_create_proj.png)
 
@@ -123,17 +127,20 @@ Se você tiver uma conta paga do {{site.data.keyword.cloud_notm}}, poderá provi
 
 - Dê ao seu projeto um nome e uma descrição, certifique-se de que o serviço Cloud Object Storage que você criou esteja selecionado na lista suspensa **Armazenamento** e clique em **Criar**.
 
-## Criar e implementar um modelo de aprendizado de máquina
+## Criar e implementar um modelo {{site.data.keyword.pm_short}}
 {: #crt-make-model}
 
-### Incluir o bloco de notas `Working with Watson Machine Learning` em seu projeto do Watson Studio
+### Inclua o bloco de notas `Working with Watson Machine Learning` em seu
+projeto {{site.data.keyword.DSX}}
 {: #crt-add-notebook}
 
 - Faça download do seguinte arquivo:
 
-    - [Working with Watson Machine Learning ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [Trabalhando com o Watson Machine Learning ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
-- Na guia **Ativos** em seu projeto do Watson Studio, clique no botão **Incluir no projeto** e selecione **Bloco de notas** na lista suspensa:
+- Na guia **Recursos** em seu projeto {{site.data.keyword.DSX}},
+clique no botão **Incluir no projeto** e selecione **Bloco de notas**
+na lista suspensa:
 
   ![Add Connection](images/add_notebook.png)
 
@@ -188,7 +195,7 @@ Usando o [painel do {{site.data.keyword.aios_short}} ![Ícone de link externo](.
 
   ![Insights](images/insight-dash-tab.png)
 
-A página Insights fornece uma visão geral das métricas para seus modelos implementados. É possível ver facilmente os alertas para as métricas de Justiça ou Precisão que ficaram abaixo do conjunto de limites ao executar o bloco de notas. Os dados e configurações usados neste tutorial terão criado as métricas de Precisão e de Justiça semelhantes às mostradas aqui.
+A página Insights fornece uma Visão geral das métricas para seus modelos implementados. É possível ver facilmente os alertas para as métricas de Justiça ou Precisão que ficaram abaixo do conjunto de limites ao executar o bloco de notas. Os dados e configurações usados neste tutorial terão criado as métricas de Precisão e de Justiça semelhantes às mostradas aqui.
 
   ![Insight overview](images/insight-overview-adv-tutorial-2.png)
 

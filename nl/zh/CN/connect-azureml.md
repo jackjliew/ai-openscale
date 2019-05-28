@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Microsoft Azure, ml, machine learning, services
 
@@ -19,16 +19,16 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 指定 Microsoft Azure ML 服务实例
+# 指定 Microsoft Azure ML Studio 实例
 {: #connect-azure}
 
-您在 {{site.data.keyword.aios_short}} 工具中的第一步是指定 Microsoft Azure ML 服务实例。Azure ML 服务实例是存储 AI 模型和部署的位置。
+您在 {{site.data.keyword.aios_short}} 工具中的第一步是指定 Microsoft Azure ML Studio 实例。Azure ML Studio 实例是存储 AI 模型和部署的位置。
 {: shortdesc}
 
-## 连接 Azure ML Studio 服务实例
+## 连接 Azure ML Studio 实例
 {: #ca-connect}
 
-{{site.data.keyword.aios_short}} 连接到 Azure ML Studio 服务实例中的 AI 模型和部署。
+{{site.data.keyword.aios_short}} 连接到 Azure ML Studio 实例中的 AI 模型和部署。
 
 1.  从 {{site.data.keyword.aios_short}} 工具的主页中，单击**开始**。
 
@@ -36,14 +36,14 @@ subcollection: ai-openscale
 
 1.  选择 **Microsoft Azure ML Studio** 磁贴，然后单击**下一步**。
 
-    ![选择 Azure ML 服务](images/connect-azure.png)
+    ![选择 Azure ML Studio](images/connect-azure.png)
 
 1.  输入凭证：
 
     请参阅 [How to: Use the portal to create an Azure AD application and service principal that can access resources ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: new_window} 以了解有关如何获取 Microsoft Azure 凭证的指示信息。
     {: note}
 
-    ![输入 Azure ML 服务凭证](images/connect-azure-cred.png)
+    ![输入 Azure ML Studio 凭据](images/connect-azure-cred.png)
 
 1.  单击**下一步**。
 

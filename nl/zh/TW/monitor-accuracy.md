@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: accuracy, 
 
@@ -41,7 +41,7 @@ subcollection: ai-openscale
 
 您需要依如下所示，透過 {{site.data.keyword.aios_short}} 使用者介面，使用 [Python 用戶端![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: new_window} 或 [Rest API ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window}，來新增手動標示的回饋資料。
 
-如需瞭解精確度監視限制，請檢閱[支援的機型類型](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mod)和[支援的架構](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)。
+檢閱[支援的架構](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)，以了解精確度監視限制。
 
 <!---
 You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
@@ -85,9 +85,10 @@ Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "
 
   ![傳送回饋資料](images/accuracy-send-feedback0.png)
 
-選取*新增回饋資料*按鈕，以上傳 CSV 格式的資料檔；請設定符合您資料的定界字元。
+選取*新增回饋資料*按鈕，以上傳 CSV 格式的資料檔；設定符合您資料的定界字元。
 
 預期回饋 CSV 檔案應具有所有的特性值，以及具有手動指派的目標/標籤值。例如，藥物模型訓練資料含有特性值 `"AGE"`、`"SEX"`、`"BP"`、`"CHOLESTEROL"`、`"NA"`、`"K"`，以及目標/標籤值 `"DRUG"`。回饋 CSV 檔案需要包含那些欄位的值；例如：`[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`。若有針對回饋 CSV 檔案提供標頭，則會使用標頭來對映欄位名稱。否則，欄位順序**必須**與訓練綱目中的順序完全相同。
+如需訓練資料的相關資訊，請參閱 [ 為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 {: important}
 
 請注意，您模型所傳回的預測類型與回饋資料中的標籤/目標直欄必須相符。

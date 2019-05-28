@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: dashboard, navigating, navigation, insights
 
@@ -60,18 +60,14 @@ subcollection: ai-openscale
 ## 事务
 {: #io-tran}
 
-通过**解释事务**选项卡 (![“解释事务”选项卡](images/insight-transact-tab.png))，可以搜索特定事务标识来解释特定部署事务。有关更多信息，请参阅[监视可解释性](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)。
+使用**解释事务**选项卡 ( ![“解释事务”选项卡](images/insight-transact-tab.png) ) 可以搜索特定事务 ID 以解释特定部署事务。有关更多信息，请参阅[监视可解释性](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)。
 
 ## AI 工具
 {: #io-too}
 
-**AI 工具**选项卡 (![“AI 工具”选项卡](images/aitools.png)) 打开一个对话框，其中提供指向其他 IBM AI 工具选项的链接：
+使用 **AI 工具** 选项卡 (![“AI 工具”选项卡](images/aitools.png) ) 可以打开其他的 IBM AI 工具和选项。
 
 - *[Watson Studio Lite 套餐 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*：Watson Studio 为您提供环境和工具以分析和可视化数据，对数据进行清理和塑形，摄入流式数据，或者创建、训练和部署机器学习模型。单击“注册免费 Watson Studio Lite 套餐”链接以获取 Watson Studio。
-
-- *[NeuNetS ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window}* (*Beta*)：Neural Network Synthesizer（或“NeuNetS”）当前为 Beta 发行版，允许您使用 Watson Studio 中的 {{site.data.keyword.aios_short}} 技术来合成 AI 模型。单击“合成模型”按钮以使用 NeuNetS。
-
-  ![NeuNetS 对话框](images/neunets-dialog.png)
 
 ## “帮助”选项卡
 {: #io-help}

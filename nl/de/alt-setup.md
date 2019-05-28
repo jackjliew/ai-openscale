@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -43,7 +43,7 @@ Um die Einrichtung und Konfiguration der erforderlichen {{site.data.keyword.clou
 2. [Installieren Sie beliebiges Release von Python 3 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.python.org/downloads/){: new_window}.
 
   Python 3 beinhaltet das erforderliche Managementsystem für pip-Paketen.
-{: note}
+  {: note}
 
 3. Installieren Sie das Paket `ibm-ai-openscale-cli`, indem Sie folgenden Befehl ausführen:
 

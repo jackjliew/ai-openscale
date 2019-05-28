@@ -43,9 +43,7 @@ Das Modell verwendet die Kundendatenfelder ID (eine ID-Nummer), GENDER, STATUS (
 Zur vollständigen Durchführung dieses Lernprogramms müssen Sie über Folgendes verfügen:
 
 - Ein Konto bei [Watson Studio ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://dataplatform.ibm.com/){: new_window}
-
 - Ein Konto bei [{{site.data.keyword.cloud_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){: new_window}
-
 
 Im Rahmen dieses Lernprogramms werden Sie die folgenden kostenfreien {{site.data.keyword.cloud_notm}}-Services in der Lite-Version einrichten:
 
@@ -208,8 +206,7 @@ Melden Sie sich mit Ihrer IBM ID bei Ihrem [{{site.data.keyword.cloud_notm}}-Kon
 
   ![Watson-Service hinzufügen](images/add_watson_service.png)
 
-- Klicken Sie auf der Kachel **Machine Learning** auf **Hinzufügen** und wählen Sie die Registerkarte **Vorhanden** aus.
-Wählen Sie in der Dropdown-Liste **Vorhandene Service-Instanz** den Service aus, den Sie im vorherigen Abschnitt erstellt haben, und klicken Sie auf **Auswählen**.
+- Klicken Sie auf der Kachel **Machine Learning** auf **Hinzufügen** und wählen Sie die Registerkarte **Vorhanden** aus. Wählen Sie in der Dropdown-Liste **Vorhandene Service-Instanz** den Service aus, den Sie im vorherigen Abschnitt erstellt haben, und klicken Sie auf **Auswählen**.
 
 - Wählen Sie auf der Registerkarte für Projekteinstellungen erneut die Option **Service hinzufügen** aus und wählen Sie in der Dropdown-Liste **Spark** aus. Wählen Sie auf der Registerkarte **Vorhanden** den von Ihnen erstellten Spark-Service aus und klicken Sie auf **Auswählen**.
 
@@ -275,8 +272,7 @@ Das Notizbuch `CARS4U Action Recommendation - model` enthält detaillierte Anwei
 ### Verbindung von {{site.data.keyword.aios_short}} zu Ihrem Machine Learning-Modell herstellen
 {: #tadv-cmlm}
 
-Da das Machine Learning-Modell bereitgestellt worden ist, können Sie {{site.data.keyword.aios_short}} konfigurieren, um Vertrauen und Transparenz im Zusammenhang mit Ihren Modellen sicherzustellen. Wählen Sie für Ihre {{site.data.keyword.aios_short}}-Instanz die Registerkarte **Verwalten** aus und klicken Sie auf die Schaltfläche **Anwendung starten**.
-Die {{site.data.keyword.aios_full}}-Seite für 'Erste Schritte' wird geöffnet. Klicken Sie auf **Beginnen**.
+Da das Machine Learning-Modell bereitgestellt worden ist, können Sie {{site.data.keyword.aios_short}} konfigurieren, um Vertrauen und Transparenz im Zusammenhang mit Ihren Modellen sicherzustellen. Wählen Sie für Ihre {{site.data.keyword.aios_short}}-Instanz die Registerkarte **Verwalten** aus und klicken Sie auf die Schaltfläche **Anwendung starten**. Die {{site.data.keyword.aios_full}}-Seite für 'Erste Schritte' wird geöffnet. Klicken Sie auf **Beginnen**.
 
 - Wählen Sie die Kachel 'Watson Machine Learning' aus und klicken Sie auf **Weiter**.
 
@@ -295,7 +291,6 @@ Die {{site.data.keyword.aios_full}}-Seite für 'Erste Schritte' wird geöffnet. 
     ![Datenbank auswählen](images/gs-set-lite-db1.png)
 
   Ausführlichere und detaillierte Informationen zu jeder dieser Optionen enthält der Abschnitt [Datenbank angeben](/docs/services/ai-openscale?topic=ai-openscale-connect-db).
-
   {: note}
 
 - Nachdem Sie die Option 'Vorhandene Datenbank verwenden oder neue Datenbank kaufen' ausgewählt haben, überprüft {{site.data.keyword.aios_short}} Ihr {{site.data.keyword.cloud_notm}}-Konto, um Ihre vorhandene Compose for PostgreSQL-Datenbank ausfindig zu machen.

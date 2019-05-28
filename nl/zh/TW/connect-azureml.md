@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Microsoft Azure, ml, machine learning, services
 
@@ -19,16 +19,16 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 指定 Microsoft Azure ML 服務實例
+# 指定 Microsoft Azure ML Studio 實例
 {: #connect-azure}
 
-您在 {{site.data.keyword.aios_short}} 工具中的首要步驟是指定一個 Microsoft Azure ML 服務實例。您的 Azure ML 服務實例就是您儲存 AI 模型和部署的所在。
+您在 {{site.data.keyword.aios_short}} 工具中的首要步驟是指定一個 Microsoft Azure ML Studio 實例。您的 Azure ML Studio 實例就是您儲存 AI 模型和部署的所在。
 {: shortdesc}
 
-## 連接 Azure ML Studio 服務實例
+## 連接 Azure ML Studio 實例
 {: #ca-connect}
 
-{{site.data.keyword.aios_short}} 會連接至 Azure ML Studio 服務實例中的 AI 模型和部署。
+{{site.data.keyword.aios_short}} 會連接至 Azure ML Studio 實例中的 AI 模型和部署。
 
 1.  從 {{site.data.keyword.aios_short}} 工具首頁，按一下**開始**。
 
@@ -36,13 +36,13 @@ subcollection: ai-openscale
 
 1.  選取 **Microsoft Azure ML Studio** 圖磚，並按**下一步**。
 
-    ![選取 Azure ML 服務](images/connect-azure.png)
+    ![選取 Azure ML Studio](images/connect-azure.png)
 
 1.  輸入您的認證：
 
     如需如何取得 Microsoft Azure 認證的指示，請參閱[作法：使用入口網站來建立可存取資源的 Azure AD 應用程式和服務主體 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: new_window}。{: note}
 
-    ![輸入 Azure ML 服務認證](images/connect-azure-cred.png)
+    ![輸入 Azure ML Studio 認證](images/connect-azure-cred.png)
 
 1.  按**下一步**。
 

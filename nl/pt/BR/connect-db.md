@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-29"
 
 keywords: databases, connections, scoring, requests
 
@@ -30,7 +30,7 @@ Especifique um banco de dados para ser usado por sua instância do {{site.data.k
 
 O {{site.data.keyword.aios_short}} usa um banco de dados para armazenar dados de carga útil, feedback e medição. Além de selecionar um banco de dados, você também pode selecionar um esquema para seu banco de dados - um esquema é uma coleção nomeada de tabelas no banco de dados.
 
-1.  Escolha um banco de dados. Você tem duas opções: o banco de dados do plano Lite grátis ou um banco de dados novo ou existente.
+1.  Escolha um banco de dados. Você tem duas opções: o banco de dados grátis ou um banco de dados existente ou novo.
 
     ![Select database](images/gs-config-database.png)
 
@@ -40,15 +40,23 @@ O {{site.data.keyword.aios_short}} usa um banco de dados para armazenar dados de
 ### Banco de dados de plano Lite livre
 {: #cdb-lite}
 
-**NOTA**: o banco de dados do plano Lite grátis tem algumas limitações importantes:
+**NOTA**: O banco de dados grátis possui algumas limitações importantes:
 
-- O banco de dados do plano Lite grátis é hospedado e não está acessível diretamente a você.
+- O banco de dados grátis é hospedado e você não pode acessá-lo diretamente.
 - O {{site.data.keyword.aios_full}} terá acesso total a seu banco de dados e, assim, terá acesso total a seus dados.
-- O banco de dados do plano Lite grátis não é compatível com GDPR. Se seu modelo processa informações pessoalmente identificáveis (PII), não é possível usar o banco de dados do plano Lite grátis. Deve-se comprar um novo banco de dados ou usar um banco de dados existente que se adéque às regras do GDPR. Consulte [Segurança de Informações](/docs/services/ai-openscale?topic=ai-openscale-is-ov) para saber mais.
+- O banco de dados grátis não está em conformidade com o GDPR. Se o seu modelo processar informações pessoalmente identificáveis (PII), não será possível usar o banco de dados grátis. Deve-se comprar um novo banco de dados ou usar um banco de dados existente que se adéque às regras do GDPR. Consulte [Segurança de Informações](/docs/services/ai-openscale?topic=ai-openscale-is-ov) para saber mais.
 
-Para continuar com o uso do banco de dados do plano Lite grátis, simplesmente selecione essa opção e, em seguida, revise os dados de resumo e clique em **Salvar**.
+Para continuar usando o banco de dados grátis, clique no tile **Usar o banco de dados grátis hospedado pelo {{site.data.keyword.aios_short}}**, em seguida, revise os dados de resumo
+e clique em **Salvar**.
 
   ![Select database](images/gs-config-database2.png)
+  
+É possível fazer upgrade para outro banco de dados do banco de dados grátis, no entanto, não é possível reconfigurar uma instância do Compose for Postgres, do Database for Postgres ou do Db2 para o banco de dados grátis. Depois de fazer upgrade, será impossível retornar ao uso do banco de dados grátis. Todos
+os dados atuais, tais como a configuração, os resultados da pontuação e as explicações não podem ser
+reutilizados. Ao selecionar outro esquema ou banco de dados, o ambiente do {{site.data.keyword.aios_short}}
+é completamente reconfigurado.
+
+
 
 ### Banco de Dados Existente ou Novo
 {: #cdb-exn}
@@ -57,7 +65,7 @@ Para continuar com o uso do banco de dados do plano Lite grátis, simplesmente s
 
 1.  Selecione seu tipo de banco de dados existente (Compose for Postgres, Database for Postgres ou Db2), em seguida, um banco de dados no menu suspenso **Banco de dados** e, em seguida, um **Esquema**:
 
-    O {{site.data.keyword.aios_short}} usa um banco de dados PostgreSQL ou Db2 para armazenar o resultado da implementação de modelo e os dados de novo treinamento. Os planos Lite do Db2 não são suportados atualmente.
+    O {{site.data.keyword.aios_short}} usa um banco de dados PostgreSQL ou Db2 para armazenar o resultado da implementação de modelo e os dados de novo treinamento. Os planos Lite do Db2 não são suportados atualmente. Para obter mais informações sobre os dados de treinamento, veja [Por que o {{site.data.keyword.aios_short}} precisa de acesso aos meus dados de treinamento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![Select database](images/gs-config-database3.png)
@@ -72,7 +80,7 @@ Para continuar com o uso do banco de dados do plano Lite grátis, simplesmente s
         - Para um banco de dados `Compose for PostgreSQL`, conclua o seguinte:
 
             - host ou endereço IP
-            - Port (Porta)
+            - Port
             - Banco de dados (nome)
             - Nome de usuário
             - Senha
@@ -81,7 +89,7 @@ Para continuar com o uso do banco de dados do plano Lite grátis, simplesmente s
 
         - Para um banco de dados `Database for PostgreSQL`, conclua o seguinte:
 
-            - Nome do host e endereço IP
+            - Nome do host ou Endereço IP
             - Porta SSL
             - Certificado Codificado Base-64
             - Banco de dados (nome)
@@ -114,7 +122,7 @@ Para continuar com o uso do banco de dados do plano Lite grátis, simplesmente s
 
 Para configurar os monitores, o {{site.data.keyword.aios_short}} requer que você envie uma solicitação de pontuação para começar a registrar os dados que serão monitorados.
 
-Os modelos implementados no Watson Machine Learning são pontuados automaticamente pelo {{site.data.keyword.aios_short}}. Se tiver somente modelos implementados no Watson Machine Learning, você não verá essa tela.
+Os modelos implementados no Watson Machine Learning são pontuados automaticamente pelo {{site.data.keyword.aios_short}}.
 {: note:}
 
 Selecione uma implementação, neste caso, "Detector de fraude" e, em seguida, use os fragmentos de código `cURL` ou `Python` fornecidos para registrar os dados de solicitação e resposta da implementação de modelo. Consulte [Criação de log de carga útil para instâncias de serviço não do Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect) para obter mais detalhes.

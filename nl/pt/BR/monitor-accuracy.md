@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: accuracy, 
 
@@ -41,7 +41,7 @@ A Precisão pode significar coisas diferentes dependendo do tipo do algoritmo:
 
 É necessário incluir os dados de feedback rotulados manualmente por meio da IU do {{site.data.keyword.aios_short}} conforme mostrado abaixo, usando um [cliente Python ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: new_window} ou [API de Rest ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window}.
 
-Revise [Tipos de modelo suportados](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mod) e [Estruturas suportadas](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) para obter as limitações de monitoramento de precisão.
+Revise [Estruturas suportadas](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) para obter as limitações de monitoramento de precisão.
 
 <!---
 You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
@@ -85,9 +85,12 @@ Agora você é apresentado com a opção de fornecer diretamente dados de feedba
 
   ![Enviar dados de feedback](images/accuracy-send-feedback0.png)
 
-Selecione o botão *Incluir dados de feedback* para fazer upload de um arquivo de dados formatado em CSV; configure o delimitador para corresponder aos seus dados.
+Selecione o botão *Incluir dados de feedback* para fazer upload de um arquivo de
+dados formatado em CSV; configure o delimitador para corresponder aos seus dados.
 
-Espera-se que o arquivo CSV de feedback tenha todos os valores de recurso e o valor de destino/rótulo designado manualmente. Por exemplo, os dados de treinamento do modelo de remédio contém os valores de recurso `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`,`"NA"`,`"K"` e o valor de destino/rótulo `"DRUG"`. O arquivo CSV de feedback precisa incluir valores para esses campos; um exemplo seria semelhante a `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. Se um cabeçalho for fornecido para o arquivo CSV de feedback, os nomes dos campos serão mapeados usando o cabeçalho. Caso contrário, a ordem do campo **DEVE** ser exatamente a mesma que no esquema de treinamento.
+Espera-se que o arquivo CSV de feedback tenha todos os valores de recurso e o valor de destino/rótulo designado manualmente. Por exemplo, os dados de treinamento do modelo de remédio contém os valores de recurso `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`,`"NA"`,`"K"` e o valor de destino/rótulo `"DRUG"`. O arquivo CSV de feedback precisa incluir valores para esses campos; um exemplo seria semelhante a `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. Se um cabeçalho for fornecido para o arquivo CSV de feedback, os nomes dos campos serão mapeados usando o cabeçalho. Caso contrário, a ordem do campo **DEVE** ser exatamente a mesma que no esquema de treinamento. Para obter mais informações
+sobre os dados de treinamento, veja [Por
+que o {{site.data.keyword.aios_short}} precisa de acesso aos meus dados de treinamento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 {: important}
 
 Observe que os tipos de predição retornados por seu modelo e a coluna de rótulo/destino em seus dados de feedback devem corresponder.

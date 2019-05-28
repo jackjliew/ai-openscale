@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -37,9 +37,9 @@ subcollection: ai-openscale
 
 다음은 {{site.data.keyword.aios_short}}을 구현하는 방법입니다.
 
-- **{{site.data.keyword.aios_short}}** 구성: 사용하기 쉬운 그래픽 환경을 사용하여 AI 모델 및 배치가 저장되는 [페이로드 로깅 데이터베이스](/docs/services/ai-openscale?topic=ai-openscale-connect-db) 및 [Watson 기계 학습 인스턴스](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)를 설정하십시오.
+- **{{site.data.keyword.aios_short}}** 구성: 사용하기 쉬운 그래픽 환경을 사용하여 AI 모델 및 배치가 저장되는 [페이로드 로깅 데이터베이스](/docs/services/ai-openscale?topic=ai-openscale-connect-db) 및 [Watson Machine Learning 인스턴스](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)를 설정하십시오.
 
-- **모니터에 대한 작업**: 각 배치에 대해 {{site.data.keyword.aios_short}}기 해당 배치를 모니터할 방법을 구성하십시오. 다음을 모니터할 수 있습니다.
+- **모니터에 대한 작업**: 각 배치에 대해 {{site.data.keyword.aios_short}}이 해당 배치를 모니터할 방법을 구성하십시오. 다음을 모니터할 수 있습니다.
 
     - [공정성](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - [정확성](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
@@ -51,9 +51,9 @@ subcollection: ai-openscale
 ## 제한사항
 {: #in-lim}
 
-- 현재 릴리스는 하나의 데이터베이스, 하나의 Watson 기계 학습 인스턴스 및 하나의 {{site.data.keyword.aios_short}} 인스턴스만 지원합니다.
+- 현재 릴리스는 하나의 데이터베이스, 하나의 Watson Machine Learning 인스턴스 및 하나의 {{site.data.keyword.aios_short}} 인스턴스만 지원합니다.
 
-- 데이터베이스 및 Watson 기계 학습 인스턴스가 동일한 {{site.data.keyword.cloud_notm}} 계정에 배치되어야 합니다.
+- 데이터베이스 및 Watson Machine Learning 인스턴스가 동일한 {{site.data.keyword.cloud_notm}} 계정에 배치되어야 합니다.
 
 - Lite(무료) 플랜은 다음과 같은 월별 한계가 있습니다.
 
@@ -62,7 +62,7 @@ subcollection: ai-openscale
     - 50,000개의 페이로드 레코드(누적)
     - 50,000개의 피드백 레코드(누적)
 
-- {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 배치 출력 및 재교육 데이터를 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다.
+- {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 배치 출력 및 재훈련 데이터를 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다.
 
 - {{site.data.keyword.aios_short}}의 인스턴스당 20개의 배치된 모델이라는 라이센스 한계가 있습니다.
 
@@ -70,27 +70,11 @@ subcollection: ai-openscale
 
 <p>&nbsp;</p>
 
-## 지원되는 모델 유형
-{: #in-mod}
-
-표 1. 모델 지원 세부사항
-
-| 알고리즘 | **공정성** | **자동-편향성 제거** | **설명** | **정확성** |
-|:---|:---:|:---:|:---:|:---:|
-| **정형 분류** |예 | 예<sup>1</sup> |예 |예 |
-| **정형 회귀**     |예 |아니오 |예 |예 |
-| **텍스트 분류**       |아니오 |아니오 |예 |아니오 |
-| **이미지 분류**      |아니오 |아니오 |예 |아니오 ||
-{: caption="모델 지원 세부사항" caption-side="top"}
-
-<sup>1</sup> 모델/프레임워크가 예측 확률을 출력하는 경우
-
-<p>&nbsp;</p>
 
 ## 지원되는 기계 학습 엔진 및 프레임워크
 {: #in-fram}
 
-{{site.data.keyword.aios_short}} 서비스는 다음과 같은 기계 학습 엔진을 지원합니다. 각 런타임은 [지원되는 모델 유형](#in-mod) 목록에서 설명된 대로 다음 프레임워크에서 작성된 모델을 지원합니다.
+{{site.data.keyword.aios_short}} 서비스는 다음과 같은 기계 학습 엔진을 지원합니다. 각 런타임은 다음 프레임워크에서 작성되는 모델을 지원합니다.
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -26,7 +26,7 @@ subcollection: ai-openscale
 # Infrastructures WML
 {: #frmwrks-wml}
 
-{{site.data.keyword.aios_full}} prend intégralement en charge les infrastructures {{site.data.keyword.pm_full}} suivantes :
+{{site.data.keyword.aios_full}} prend intégralement en charge les infrastructures {{site.data.keyword.pm_full}} suivantes : 
 {: shortdesc}
 
 Tableau 1. Détails des infrastructures prises en charge
@@ -38,7 +38,12 @@ Tableau 1. Détails des infrastructures prises en charge
 | Fonction Python | Régression | Structuré |
 | XGBoost | Classification | Structuré |
 | XGBoost | Régression | Structuré |
+| Keras with TensorFlow<sup>1</sup> | Classification | Non structuré (image, texte) |
+| Keras with TensorFlow<sup>1</sup> | Régression | Non structuré (image, texte) |
 {: caption="Détails des infrastructures prises en charge" caption-side="top"}
+
+<sup>1</sup>La prise en charge de l'équité n'est pas incluse dans le support Keras.
+{: note}
 
 
 

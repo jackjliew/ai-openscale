@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-29"
 
 keywords: getting help, help, release notes, what's new, developer resources 
 
@@ -19,23 +19,23 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Getting help and support for {{site.data.keyword.aios_full_notm}}
+# 取得 {{site.data.keyword.aios_full_notm}} 的協助和支援
 {: #wos-get-help}
 
-If you have problems or questions when using {{site.data.keyword.aios_full}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+如果您使用 {{site.data.keyword.aios_full}} 時有問題或疑問，可以搜尋資訊或透過討論區提問來取得協助。您也可以開立支援問題單。
 {: shortdesc}
 
-When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.aios_short}} development teams.
+使用討論區來發問時，請標記您的問題，讓 {{site.data.keyword.aios_short}} 開發團隊可以看到它。
 
-If you have technical questions about {{site.data.keyword.aios_short}}, post your question on [StackOverflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/questions/tagged/watson-openscale) and tag your question with `watson-openscale`.
+如果您有關於 {{site.data.keyword.aios_short}} 的技術問題，請在 [StackOverflow ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://stackoverflow.com/questions/tagged/watson-openscale) 上張貼您的問題，並以 `watson-openscale` 標記您的問題。
 
-For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/?s=openscale) forum. Include the `openscale` tag. See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html) for more details about using the forums.
+若為服務及開始使用指示的相關問題，請使用 [IBM developerWorks dW Answers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/?s=openscale) 討論區。請包含 `openscale` 標記。如需使用討論區的詳細資料，請參閱[取得說明 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html)。
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/unifiedsupport/supportcenter) and click **Create a case**.
+如需開啟 IBM 支援問題單或支援層次及問題單嚴重性的相關資訊，請參閱[聯絡支援中心 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/unifiedsupport/supportcenter)，然後按一下**建立案例**。
 
-## Still looking for more?
+## 仍要尋找更多項目？
 {: #looking}
 
-Check out [What's new](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes) to see new features and functions organized by date.
+請查看[新增功能](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)，可看到依日期排列的新增特性及功能。
 
-If you have questions, see the [FAQs](/docs/services/ai-openscale?topic=ai-openscale-wos-faqs) for answers.
+如果您有問題，請參閱[常見問題 (FAQ)](/docs/services/ai-openscale?topic=ai-openscale-wos-faqs) 中的回答。

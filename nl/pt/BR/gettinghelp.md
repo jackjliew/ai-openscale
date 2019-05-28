@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-29"
 
 keywords: getting help, help, release notes, what's new, developer resources 
 
@@ -19,23 +19,30 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Getting help and support for {{site.data.keyword.aios_full_notm}}
+# Obtendo ajuda e suporte para o {{site.data.keyword.aios_full_notm}}
 {: #wos-get-help}
 
-If you have problems or questions when using {{site.data.keyword.aios_full}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+Se você tiver problemas ou perguntas ao usar o {{site.data.keyword.aios_full}}, poderá
+obter ajuda procurando informações ou fazendo perguntas por meio de um fórum. Também será possível abrir
+um chamado de suporte.
 {: shortdesc}
 
-When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.aios_short}} development teams.
+Ao usar os fóruns para fazer uma pergunta, marque sua pergunta para que ela seja vista pelas
+equipes de desenvolvimento do {{site.data.keyword.aios_short}}.
 
-If you have technical questions about {{site.data.keyword.aios_short}}, post your question on [StackOverflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/questions/tagged/watson-openscale) and tag your question with `watson-openscale`.
+Se você tiver perguntas técnicas sobre o {{site.data.keyword.aios_short}}, poste sua
+pergunta no [StackOverflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://stackoverflow.com/questions/tagged/watson-openscale) e marque-a com `watson-openscale`.
 
-For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/?s=openscale) forum. Include the `openscale` tag. See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html) for more details about using the forums.
+Para perguntas sobre o serviço e instruções sobre como começar a usar, use o fórum [IBM developerWorks dW Answers
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/?s=openscale). Inclua a tag openscale. Veja [Obtendo ajuda![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html) para obter mais detalhes sobre o uso dos fóruns.
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/unifiedsupport/supportcenter) and click **Create a case**.
+Para obter informações sobre a abertura de um chamado de suporte IBM ou sobre níveis de suporte
+e severidades de chamado, veja [Entrando em contato com o suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/unifiedsupport/supportcenter) e clique em **Criar um caso**.
 
-## Still looking for more?
+## Ainda à procura de mais?
 {: #looking}
 
-Check out [What's new](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes) to see new features and functions organized by date.
+Verifique [O que há de novo](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)
+para ver novos recursos e funções organizados por data.
 
-If you have questions, see the [FAQs](/docs/services/ai-openscale?topic=ai-openscale-wos-faqs) for answers.
+Se você tiver perguntas, veja as [Perguntas mais frequentes](/docs/services/ai-openscale?topic=ai-openscale-wos-faqs) para obter respostas.

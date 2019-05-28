@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-29"
 
 keywords: databases, connections, scoring, requests
 
@@ -30,7 +30,7 @@ Geben Sie eine Datenbank an, die von Ihrer {{site.data.keyword.aios_short}}-Inst
 
 {{site.data.keyword.aios_short}} verwendet eine Datenbank zum Speichern von Nutzdateninformationen, Feedbackdaten und Messdaten. Sie können nicht nur eine Datenbank auswählen, sondern bei Bedarf auch ein Schema für die ausgewählte Datenbank. Ein Schema ist eine benannte Sammlung (Gruppe) von Tabellen in der Datenbank.
 
-1.  Wählen Sie eine Datenbank aus. Dabei stehen die folgenden beiden Optionen zur Auswahl: die Datenbank für den kostenlosen Lite-Plan oder eine vorhandene oder neue Datenbank.
+1.  Wählen Sie eine Datenbank aus. Dabei stehen die folgenden beiden Optionen zur Auswahl: die kostenlose Datenbank oder eine vorhandene oder neue Datenbank.
 
     ![Datenbank auswählen](images/gs-config-database.png)
 
@@ -40,15 +40,19 @@ Geben Sie eine Datenbank an, die von Ihrer {{site.data.keyword.aios_short}}-Inst
 ### Datenbank des kostenlosen Lite-Plans
 {: #cdb-lite}
 
-**HINWEIS**: Für die kostenlose Datenbank des Lite-Plans gelten einige wichtige Einschränkungen:
+**HINWEIS**: Für die kostenlose Datenbank gelten einige wichtige Einschränkungen:
 
-- Die kostenlose Lite Plan-Datenbank wird per Hosting bereitgestellt und es kann nicht direkt auf sie zugegriffen werden.
+- Die kostenlose Datenbank wird gehostet und ist für Sie nicht direkt zugänglich.
 - {{site.data.keyword.aios_full}} hat uneingeschränkten Zugriff auf Ihre Datenbank und damit auch uneingeschränkten Zugriff auf Ihre Daten.
-- Die kostenlose Datenbank des Lite-Plans ist nicht GDPR-konform. Wenn in Ihrem Modell personenbezogene Daten verarbeitet werden, können Sie die kostenlose Datenbank des Lite-Plans nicht verwenden. In diesem Fall müssen Sie eine neue Datenbank erwerben oder eine bestehende Datenbank verwenden, die GDPR-konform ist. Näheres zu diesem Thema enthält der Abschnitt [Informationssicherheit](/docs/services/ai-openscale?topic=ai-openscale-is-ov).
+- Die kostenlose Datenbank ist nicht DSGVO-konform. Wenn von Ihrem Modell personenbezogene Angaben verarbeitet werden, dürfen Sie die kostenlose Datenbank nicht verwenden. In diesem Fall müssen Sie eine neue Datenbank erwerben oder eine bestehende Datenbank verwenden, den Regeln der DSGVO entspricht. Näheres zu diesem Thema enthält der Abschnitt [Informationssicherheit](/docs/services/ai-openscale?topic=ai-openscale-is-ov).
 
-Um mit der Verwendung der kostenlosen Datenbank des Lite-Plans fortzufahren, wählen Sie einfach diese Option aus, überprüfen Sie dann die Zusammenfassung der Angaben und klicken Sie auf **Speichern**.
+Wenn Sie mit der Verwendung der kostenlosen Datenbank fortfahren möchten, klicken Sie auf die Kachel zur **Nutzung der kostenlosen Datenbank, die von {{site.data.keyword.aios_short}} gehostet wird**, überprüfen Sie anschließend die Übersichtsdaten und klicken Sie auf **Speichern**.
 
   ![Datenbank auswählen](images/gs-config-database2.png)
+  
+Sie können für die kostenlose Datenbank ein Upgrade auf eine andere Datenbank durchführen. Es ist jedoch nicht möglich, eine Compose for Postgres-, Database for Postgres- oder Db2-Instanz für die kostenlose Datenbank zu konfigurieren. Es ist nicht möglich, nach dem Upgrade zur Verwendung der kostenlosen Datenbank zurückzukehren. Alle aktuellen Daten, wie z. B. die Konfiguration, die Scoring-Ergebnisse und die Erklärungen, können nicht wiederverwendet werden. Wenn Sie ein anderes Schema oder eine andere Datenbank auswählen, wird die {{site.data.keyword.aios_short}}-Umgebung vollständig zurückgesetzt. 
+
+
 
 ### Vorhandene oder neue Datenbank
 {: #cdb-exn}
@@ -57,7 +61,7 @@ Um mit der Verwendung der kostenlosen Datenbank des Lite-Plans fortzufahren, wä
 
 1.  Wählen Sie zunächst den Typ Ihrer vorhandenen Datenbank (Compose for Postgres, Database for Postgres oder Db2) aus und wählen Sie dann im Dropdown-Menü **Datenbank** eine Datenbank und anschließend ein **Schema** aus:
 
-    Zum Speichern von Modellbereitstellungsausgaben und Retrainingdaten verwendet {{site.data.keyword.aios_short}} eine PostgreSQL- oder Db2-Datenbank. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt.
+    Zum Speichern von Modellbereitstellungsausgaben und Retrainingdaten verwendet {{site.data.keyword.aios_short}} eine PostgreSQL- oder Db2-Datenbank. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt. Weitere Informationen zu Trainingsdaten finden Sie in [Warum benötigt {{site.data.keyword.aios_short}} Zugriff auf meine Trainingsdaten?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![Datenbank auswählen](images/gs-config-database3.png)
@@ -114,7 +118,7 @@ Um mit der Verwendung der kostenlosen Datenbank des Lite-Plans fortzufahren, wä
 
 Zum Konfigurieren von Überwachungsprogrammen erfordert {{site.data.keyword.aios_short}}, dass Sie eine Scoring-Anforderung senden, um mit der Protokollierung der Daten zu beginnen, die künftig überwacht werden.
 
-Für Modelle, die in Watson Machine Learning bereitgestellt sind, führt {{site.data.keyword.aios_short}} automatisch ein Scoring durch. Wenn Sie nur über Modelle verfügen, die in Watson Machine Learning bereitgestellt sind, wird diese Anzeige nicht angezeigt.
+Für Modelle, die in Watson Machine Learning bereitgestellt sind, führt {{site.data.keyword.aios_short}} automatisch ein Scoring durch.
 {: note:}
 
 Wählen Sie eine Bereitstellung aus, in diesem Fall 'Fraud Detector' (Betrugserkennung), und verwenden Sie dann die bereitgestellten `cURL`- oder `Python`-Code-Snippets zum Protokollieren von Daten zu den Modellbereitstellungsanforderungen und Antwortdaten. Weitere Informationen enthält der Abschnitt [Nutzdatenprotokollierung für andere Serviceinstanzen als die Watson Machine Learning-Serviceinstanz](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).

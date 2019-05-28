@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, fairness monitor
 
@@ -30,7 +30,7 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}}은 런타임 시에 배치 모델의 편향성을 검사합니다. 배치된 모델에 대한 편향성을 발견하려면 아래의 [공정성 모니터 구성](#mf-config)에서 자세히 설명하는 것과 같이 연령 또는 성별 등의 공정성 속성을 정의해야 합니다.
 
-{{site.data.keyword.aios_short}}에서 편향성 검사를 사용할 수 있도록 Watson {{site.data.keyword.pm_short}}에서 모델 또는 함수에 대한 결과 스키마를 지정하는 것은 필수입니다. 결과 스키마는 `store_model` API의 메타데이터 파트에서 `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` 특성을 사용하여 지정할 수 있습니다. 자세한 정보는 [WML 클라이언트 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://wml-api-pyclient-dev.mybluemix.net/#repository){: new_window}를 참조하십시오.
+{{site.data.keyword.aios_short}}에서 편향성 검사를 사용할 수 있도록 Watson {{site.data.keyword.pm_short}}에서 모델 또는 함수에 대한 출력 스키마를 지정하는 것은 필수입니다. 출력 스키마는 `store_model` API의 메타데이터 파트에서 `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` 특성을 사용하여 지정할 수 있습니다. 자세한 정보는 [WML 클라이언트 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://wml-api-pyclient-dev.mybluemix.net/#repository){: new_window}를 참조하십시오.
 
 ### 작동 방식
 {: #mf-works}
@@ -110,11 +110,11 @@ subcollection: ai-openscale
 
      각 특성에 대해 수행을 완료하였으면 **다음**을 클릭하십시오.
 
-1.  이제 모델에 대한 선호 결과를 표시하는 값을 지정하십시오. 모델 결과 스키마에 맵핑 열이 포함된 경우, 교육 데이터의 `label` 열에서 값이 파생됩니다. WML에서는 `prediction` 열에 항상 이중 값이 있습니다. 맵핑 열은 이 `prediction` 값을 클래스 레이블에 맵핑하는 데 사용됩니다.
+1.  이제 모델에 대한 선호 결과를 표시하는 값을 지정하십시오. 모델 출력 스키마에 맵핑 열이 있는 경우 [훈련 데이터](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)의 `label` 열에서 값이 파생됩니다. WML에서는 `prediction` 열에 항상 이중 값이 있습니다. 맵핑 열은 이 `prediction` 값을 클래스 레이블에 맵핑하는 데 사용됩니다.
 
-    예를 들어, `prediction` 값이 `1.0`이면 맵핑 열이 `Loan denied` 값을 가질 수 있습니다. 이는 모델의 예측이 `Loan denied`임을 의미합니다. 따라서 모델 결과 스키마가 맵핑 열을 포함하면 맵핑 열에 있는 해당 사항을 사용하여 선호 및 비선호 값을 지정합니다.
+    예를 들어, `prediction` 값이 `1.0`이면 맵핑 열이 `Loan denied` 값을 가질 수 있습니다. 이는 모델의 예측이 `Loan denied`임을 의미합니다. 따라서 모델 출력 스키마가 맵핑 열을 포함하면 맵핑 열에 있는 해당 사항을 사용하여 선호 및 비선호 값을 지정합니다.
 
-    단, 모델 결과 스키마에 맵핑 열이 없으면 선호 및 비선호 값이 `prediction` 열의 값(`0.0`, `1.0` 등)을 사용하여 지정되어야 합니다.
+    단, 모델 출력 스키마에 맵핑 열이 없으면 선호 및 비선호 값이 `prediction` 열의 값(`0.0`, `1.0` 등)을 사용하여 지정되어야 합니다.
 
      ![결과 구성](images/fair-config-outcome.png)
 
@@ -141,15 +141,15 @@ subcollection: ai-openscale
 
 편향성이 제거된 스코어링 엔드포인트는 배치된 모델의 일반 스코어링 엔드포인트와 완전히 동일하게 사용될 수 있습니다. 배치된 모델의 응답을 리턴하는 것 외에 `debiased_prediction` 및 `debiased_probability`라는 두 개의 추가 열을 리턴합니다.
 
-- `debiased_prediction` 열은 편향성 제거된 예측 값을 포함합니다. Watson 기계 학습(WML)의 경우, 예측의 인코딩된 표현입니다. 예를 들어, 모델 예측이 "Loan Granted" 또는 "Loan Denied"인 경우, WML이 이러한 두 값을 각각 "0.0" 및 "1.0"으로 인코딩할 수 있습니다. `debiased_prediction` 열은 편향성 제거된 예측의 인코딩된 표현 등을 포함합니다.
+- `debiased_prediction` 열은 편향성 제거된 예측 값을 포함합니다. Watson Machine Learning(WML)의 경우, 예측의 인코딩된 표현입니다. 예를 들어, 모델 예측이 "Loan Granted" 또는 "Loan Denied"인 경우, WML이 이러한 두 값을 각각 "0.0" 및 "1.0"으로 인코딩할 수 있습니다. `debiased_prediction` 열은 편향성 제거된 예측의 인코딩된 표현 등을 포함합니다.
 
 - 반면에 `debiased_probability` 열은 편향성 제거된 예측의 확률을 표시합니다. 각 값이 예측 클래스 중 하나에 속하는 편향성 제거된 예측의 확률을 나타내는 이중 값의 배열입니다.
 
-`decoded-target`으로 `modeling-role`이 있는 열을 포함하는 결과 스키마 내에 열이 있는 경우, 다른 열인 `debiased_decoded_target`도 리턴됩니다.
+`decoded-target`으로 `modeling-role`이 있는 열을 포함하는 출력 스키마 내에 열이 있는 경우, 다른 열인 `debiased_decoded_target`도 리턴됩니다.
 
 - `debiased_decoded_target` 열은 편향성 제거된 예측의 문자열 표현을 포함합니다. 예측 값이 "0.0" 또는 "1.0"인 위 예에서는 `debiased_decoded_target`이 "Loan Granted" 또는 "Loan Denied"를 포함할 것입니다.
 
-모델 수행 엔진(Watson 기계 학습, Amazon Sagemaker, Microsoft Azure ML Studio 등)에 배치된 스코어링 엔드포인트를 직접 호출하는 대신 프로덕션 애플리케이션에서 이 엔드포인트를 호출하는 것이 이상적입니다. 이 방법을 사용하면 {{site.data.keyword.aios_short}}이 `debiased` 값도 모델 배치의 페이로드 로깅 테이블에 저장합니다. 그런 다음 이 엔드포인트를 통해 수행된 모든 스코어링이 자동으로 편향성 제거됩니다.
+모델 수행 엔진(Watson Machine Learning, Amazon Sagemaker, Microsoft Azure ML Studio 등)에 배치된 스코어링 엔드포인트를 직접 호출하는 대신 프로덕션 애플리케이션에서 이 엔드포인트를 호출하는 것이 이상적입니다. 이 방법을 사용하면 {{site.data.keyword.aios_short}}이 `debiased` 값도 모델 배치의 페이로드 로깅 테이블에 저장합니다. 그런 다음 이 엔드포인트를 통해 수행된 모든 스코어링이 자동으로 편향성 제거됩니다.
 
 이 엔드포인트가 런타임 편향성을 처리하므로 페이로드 로깅 테이블에서 최신 스코어링 데이터에 대해 계속 백그라운드 검사를 실행하며 전송된 스코어링 요청을 편향성 제거하는 데 사용되는 편향성 완화 모델을 계속 업데이트합니다. 이런 방법으로 {{site.data.keyword.aios_short}}이 항상 최신 수신 데이터 및 편향성을 감지하고 완화하기 위한 동작을 사용하여 최신 상태로 유지됩니다.
 

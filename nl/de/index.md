@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -60,10 +60,9 @@ So implementieren Sie {{site.data.keyword.aios_short}}:
     - Überwachung von zwei bereitgestellten Modellen
     - Erklärung von 20 Transaktionen
     - 50.000 Datensätze für Nutzdaten (kumulativ)
-    - 50.000 Rückmeldungsdatensätze (kumulativ)
+    - 50.000 Rückmeldedatensätze (kumulativ)
 
 - Zum Speichern von Modellbereitstellungsausgaben und Retrainingdaten verwendet {{site.data.keyword.aios_short}} eine PostgreSQL- oder Db2-Datenbank. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt.
-    
 
 - Für Lizenzen gilt ein Grenzwert von 20 bereitgestellten Modellen pro Instanz von {{site.data.keyword.aios_short}}.
 
@@ -71,27 +70,11 @@ So implementieren Sie {{site.data.keyword.aios_short}}:
 
 <p>&nbsp;</p>
 
-## Unterstützte Modelltypen
-{: #in-mod}
-
-Tabelle 1. Details der Modellunterstützung
-
-| Algorithmen | **Fairness** | **Automatische Verzerrungsbereinigung** | **Erklären** | **Genauigkeit** |
-|:---|:---:|:---:|:---:|:---:|
-| **Strukturierte Klassifikation** | Ja | Ja<sup>1</sup> | Ja | Ja |
-| **Strukturierte Regression**     | Ja | Nein | Ja | Ja |
-| **Textklassifikation**           | Nein | Nein | Ja | Nein |
-| **Bildklassifikation**           | Nein | Nein | Ja | Nein ||
-{: caption="Details der Modellunterstützung" caption-side="top"}
-
-<sup>1</sup> Wenn Ihr Modell/Framework Vorhersagewahrscheinlichkeiten ausgibt
-
-<p>&nbsp;</p>
 
 ## Unterstützte Machine Learning-Engines und Frameworks
 {: #in-fram}
 
-Der {{site.data.keyword.aios_short}}-Service unterstützt die folgenden Machine Learning-Engines. Jede Laufzeit unterstützt Modelle, die in den folgenden Frameworks erstellt werden, wie in der Liste [Unterstützte Modelltypen](#in-mod) beschrieben.
+Der {{site.data.keyword.aios_short}}-Service unterstützt die folgenden Machine Learning-Engines. Jede Laufzeit unterstützt Modelle, die in den folgenden Frameworks erstellt werden:
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)

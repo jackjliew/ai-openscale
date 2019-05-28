@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -33,13 +33,11 @@ Konventionelle Kreditgeber stehen unter dem Druck, ihr digitales Portfolio an Fi
 
 Um einem breiteren Bevölkerungsanteil mit höherem Risiko Zugang zu Krediten zu ermöglichen, müssen die Bonitätsgeschichten (Kredithistorien) von Antragstellern über die herkömmlichen Kredite wie Hypotheken und KFZ-Darlehen hinausgehen und alternative Kreditquellen wie das Zahlungsverhalten gegenüber Versorgungsunternehmen und Preisplänen bei Mobilfunkanbietern sowie Bildungs- und Berufsbezeichnungen erschließen. Diese neuen Datenquellen bieten nicht nur vielversprechende Perspektiven, sondern bringen auch Risiken mit sich, indem sie die Wahrscheinlichkeit unerwarteter Korrelationen erhöhen, die aufgrund von Alter, Geschlecht oder anderen persönlichen Merkmalen eines Antragstellers Verzerrungen verursachen.
 
-Die für diese verschiedenartigen Datasets am besten geeigneten Data-Science-Techniken, wie etwa gradientengetriebene Baumstrukturen und neuronale Netze, können zwar hochpräzise Risikomodelle generieren, allerdings zu einem entsprechenden Preis.
-Derartige 'Blackbox'-Modelle generieren undurchsichtige Vorhersagen, die irgendwie transparent gemacht werden müssen, um die behördliche Genehmigung sicherzustellen, wie beispielsweise durch Artikel 22 der Datenschutz-Grundverordnung (DSGVO) oder den Fair Credit Reporting Act (FCRA), das vom Bureau of Consumer Financial Protection (BCFP) verwaltet wird.
+Die für diese verschiedenartigen Datasets am besten geeigneten Data-Science-Techniken, wie etwa gradientengetriebene Baumstrukturen und neuronale Netze, können zwar hochpräzise Risikomodelle generieren, allerdings zu einem entsprechenden Preis. Derartige 'Blackbox'-Modelle generieren undurchsichtige Vorhersagen, die irgendwie transparent gemacht werden müssen, um die behördliche Genehmigung sicherzustellen, wie beispielsweise durch Artikel 22 der Datenschutz-Grundverordnung (DSGVO) oder den Fair Credit Reporting Act (FCRA), das vom Bureau of Consumer Financial Protection (BCFP) verwaltet wird.
 
-Das in diesem Lernprogramm bereitgestellte Kreditrisikomodell verwendet ein Trainingsdataset, das 20 Attribute zu jedem Kreditantragsteller enthält. Zwei dieser Attribute - Alter und Geschlecht - können auf Verzerrungen getestet werden. In diesem Lernprogramm steht die Verzerrung bei Geschlecht und Alter im Fokus.
+Das in diesem Lernprogramm bereitgestellte Kreditrisikomodell verwendet ein Trainingsdataset, das 20 Attribute zu jedem Kreditantragsteller enthält. Zwei dieser Attribute - Alter und Geschlecht - können auf Verzerrungen getestet werden. In diesem Lernprogramm steht die Verzerrung bei Geschlecht und Alter im Fokus. Weitere Informationen zu den Trainingsdaten finden Sie unter [Warum muss {{site.data.keyword.aios_short}} auf meine Trainingsdaten zugreifen?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
-{{site.data.keyword.aios_short}} überwacht, welche Neigung zu einem günstigen Ergebnis ('Kein Risiko') das bereitgestellte Modell bei einer Gruppe (der Referenzgruppe) gegenüber einer anderen Gruppe (d. h. der überwachten Gruppe) aufweist.
-In diesem Lernprogramm ist die auf Geschlecht überwachte Gruppe `Weiblich` und die auf Alter überwachte Gruppe besteht aus Antragstellern im Alter von `18 bis 25` Jahren.
+{{site.data.keyword.aios_short}} überwacht, welche Neigung zu einem günstigen Ergebnis ('Kein Risiko') das bereitgestellte Modell bei einer Gruppe (der Referenzgruppe) gegenüber einer anderen Gruppe (d. h. der überwachten Gruppe) aufweist. In diesem Lernprogramm ist die auf Geschlecht überwachte Gruppe `Weiblich` und die auf Alter überwachte Gruppe besteht aus Antragstellern im Alter von `18 bis 25` Jahren.
 
 ## Voraussetzungen
 {: #crt-prereqs}
@@ -66,30 +64,30 @@ In diesem Lernprogramm lernen Sie Folgendes:
 ## {{site.data.keyword.cloud_notm}}-Services einrichten
 {: #crt-services}
 
-Melden Sie sich mit Ihrer IBM ID bei Ihrem [{{site.data.keyword.cloud_notm}}-Konto ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){: new_window} an. Bei der Einrichtung von Services, insbesondere bei Db2 Warehouse, müssen Sie unbedingt sicherstellen, dass für alle Services dieselbe Organisation und der derselbe Bereich (Space) ausgewählt ist.
+Melden Sie sich mit Ihrer {{site.data.keyword.ibmid}} bei Ihrem [{{site.data.keyword.cloud_notm}}-Konto ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){: new_window} an. Bei der Einrichtung von Services, insbesondere bei der Nutzung von Db2 Warehouse, müssen Sie unbedingt sicherstellen, dass für alle Services dieselbe Organisation und der derselbe Bereich ausgewählt ist.
 
-### Watson Studio-Konto erstellen
+### {{site.data.keyword.DSX}}-Konto erstellen
 {: #crt-wstudio}
 
-- Zunächst müssen Sie eine [Watson Studio-Instanz erstellen![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/watson-studio){: new_window}, sofern Ihrem Konto noch keine solche Instanz zugeordnet ist:
+- Zunächst müssen Sie eine [{{site.data.keyword.DSX}}-Instanz erstellen![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/watson-studio){: new_window}, sofern Ihrem Konto noch keine solche Instanz zugeordnet ist:
 
   ![Watson Studio](images/watson_studio.png)
 
 - Benennen Sie Ihren Service, wählen Sie den kostenlosen Plan 'Lite' aus und klicken Sie auf die Schaltfläche **Erstellen**.
 
-### Cloud Object Storage-Service einrichten
+### {{site.data.keyword.cos_full_notm}}-Service einrichten
 {: #crt-cos}
 
-- Zunächst müssen Sie einen [Object Storage-Service einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}, sofern Ihrem Konto noch keine solche Instanz zugeordnet ist:
+- Zunächst müssen Sie einen [{{site.data.keyword.cos_short}}-Service einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}, sofern Ihrem Konto noch keine solche Instanz zugeordnet ist:
 
   ![Object Storage](images/object_storage.png)
 
 - Benennen Sie Ihren Service, wählen Sie den kostenlosen Plan 'Lite' aus und klicken Sie auf die Schaltfläche **Erstellen**.
 
-### Watson Machine Learning-Service einrichten
+### {{site.data.keyword.pm_full}}-Service einrichten
 {: #crt-wml}
 
-- Zunächst müssen Sie eine [Watson Machine Learning-Instanz bereitstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/machine-learning){: new_window}, sofern Ihrem Konto noch keine solche zugeordnet ist:
+- Zunächst müssen Sie eine [{{site.data.keyword.pm_short}}-Instanz bereitstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/machine-learning){: new_window}, sofern Ihrem Konto noch keine solche zugeordnet ist:
 
   ![Machine Learning](images/machine_learning.png)
 
@@ -98,7 +96,7 @@ Melden Sie sich mit Ihrer IBM ID bei Ihrem [{{site.data.keyword.cloud_notm}}-Kon
 ### (Optional) Databases for PostgreSQL- oder DB2 Warehouse-Service einrichten
 {: #crt-db2}
 
-Wenn Sie über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto verfügen, können Sie einen Service vom Typ `Databases for PostgreSQL` oder einen `Db2 Warehouse`-Service einrichten, um die Vorteile der Integration mit Watson Studio und Services für kontinuierliches Lernen optimal zu nutzen. Wenn Sie sich gegen die Einrichtung eines gebührenpflichtigen Service entscheiden, können Sie zwar den kostenlosen internen PostgreSQL-Speicher mit {{site.data.keyword.aios_short}} verwenden, aber Sie können kein kontinuierliches Lernen für Ihr Modell konfigurieren.
+Wenn Sie über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto verfügen, können Sie einen Service vom Typ `Databases for PostgreSQL` oder einen `Db2 Warehouse`-Service einrichten, um die Vorteile der Integration mit {{site.data.keyword.DSX}} und Services für kontinuierliches Lernen optimal zu nutzen. Wenn Sie sich gegen die Einrichtung eines gebührenpflichtigen Service entscheiden, können Sie zwar den kostenlosen internen PostgreSQL-Speicher mit {{site.data.keyword.aios_short}} verwenden, aber Sie können kein kontinuierliches Lernen für Ihr Modell konfigurieren.
 
 - Zunächst müssen Sie einen [Databases for PostgreSQL-Service einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/databases-for-postgresql) oder einen [Db2 Warehouse-Service einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/db2-warehouse), sofern Ihrem Konto noch kein solcher zugeordnet ist:
 
@@ -108,14 +106,14 @@ Wenn Sie über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto v
 
 - Benennen Sie Ihren Service, wählen Sie den Plan 'Standard' (Databases for PostgreSQL) oder den Einstiegsplan (Db2 Warehouse) aus und klicken Sie auf die Schaltfläche **Erstellen**.
 
-## Watson Studio-Projekt einrichten
+## {{site.data.keyword.DSX}}-Projekt einrichten
 {: #crt-set-wstudio}
 
-- Melden Sie sich bei Ihrem [Watson Studio-Konto ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://dataplatform.ibm.com/){: new_window} an. Klicken Sie in der rechten oberen Ecke auf das Avatar-Symbol für das Konto stellen Sie sicher, dass es sich bei dem von Ihnen verwendeten Konto um dasselbe Konto handelt, mit dem Sie Ihre {{site.data.keyword.cloud_notm}}-Services erstellt haben:
+- Melden Sie sich bei Ihrem [{{site.data.keyword.DSX}}-Konto ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://dataplatform.ibm.com/){: new_window} an. Klicken Sie auf das {{site.data.keyword.avatar}} und stellen Sie sicher, dass es sich bei dem von Ihnen verwendeten Konto um dasselbe Konto handelt, mit dem Sie Ihre {{site.data.keyword.cloud_notm}}-Services erstellt haben:
 
   ![Dasselbe Konto](images/same_account.png)
 
-- Beginnen Sie in Watson Studio mit der Erstellung eines neuen Projekts. Wählen Sie 'Projekt erstellen' aus:
+- Beginnen Sie in {{site.data.keyword.DSX}} mit der Erstellung eines neuen Projekts. Wählen Sie 'Projekt erstellen' aus:
 
   ![Watson Studio - Projekt erstellen](images/studio_create_proj.png)
 
@@ -125,17 +123,17 @@ Wenn Sie über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto v
 
 - Geben Sie Ihrem Projekt einen Namen und eine Beschreibung, stellen Sie sicher, dass im Dropdown-Fenster für **Speicher** der von Ihnen erstellte Object Storage-Service ausgewählt ist, und klicken Sie auf **Erstellen**.
 
-## Machine Learning-Modell erstellen und bereitstellen
+## {{site.data.keyword.pm_short}}-Modell erstellen und bereitstellen
 {: #crt-make-model}
 
-### Notizbuch `Mit Watson Machine Learning arbeiten` zu Ihrem Watson Studio-Projekt hinzufügen
+### Notizbuch `Mit Watson Machine Learning arbeiten` zu Ihrem {{site.data.keyword.DSX}}-Projekt hinzufügen
 {: #crt-add-notebook}
 
 - Laden Sie die folgende Datei herunter:
 
     - [Mit Watson Machine Learning arbeiten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
-- Klicken Sie auf der Registerkarte **Assets** in Ihrem Watson Studio-Projekt auf die Schaltfläche **Zu Projekt hinzufügen** und wählen Sie im Dropdown-Fenster den Eintrag **Notizbuch** aus:
+- Klicken Sie auf der Registerkarte **Assets** in Ihrem {{site.data.keyword.DSX}}-Projekt auf die Schaltfläche **Zu Projekt hinzufügen** und wählen Sie im Dropdown-Fenster den Eintrag **Notizbuch** aus:
 
   ![Verbindung hinzufügen](images/add_notebook.png)
 
@@ -167,8 +165,7 @@ Das Notizbuch `Mit Watson Machine Learning arbeiten` enthält detaillierte Anwei
 
     - Ersetzen Sie die Berechtigungsnachweise für die Datenbank durch diejenigen, die Sie für Databases for PostgreSQL erstellt haben.
 
-    - Falls Sie {{site.data.keyword.aios_short}} zuvor für die Verwendung einer kostenlosen internen PostgreSQL-Datenbank als Datamart konfiguriert haben, können Sie zu einem neuen Datamart wechseln, das Ihren Databases for PostgreSQL-Service verwendet.
-Um Ihre alte PostgreSQL-Konfiguration zu löschen und eine neue zu erstellen, geben Sie für die Variable KEEP_MY_INTERNAL_POSTGRES den Wert `False` an.
+    - Falls Sie {{site.data.keyword.aios_short}} zuvor für die Verwendung einer kostenlosen internen PostgreSQL-Datenbank als Datamart konfiguriert haben, können Sie zu einem neuen Datamart wechseln, das Ihren Databases for PostgreSQL-Service verwendet. Um Ihre alte PostgreSQL-Konfiguration zu löschen und eine neue zu erstellen, geben Sie für die Variable KEEP_MY_INTERNAL_POSTGRES den Wert `False` an.
 
         Das Notizbuch entfernt Ihren bestehenden internen PostgreSQL-Datamart und erstellt mit den angegebenen DB-Berechtigungsnachweisen einen neuen Datamart. **Es findet keine Datenmigration statt**.
         {: important}
@@ -198,8 +195,7 @@ Auf der Seite 'Einsichten' können Sie sich einen Überblick über die Metriken 
 ### Überwachungsdaten für Ihre Bereitstellung anzeigen
 {: #crt-view-mon-data}
 
-1. Wenn Überwachungsdetails angezeigt werden sollen, klicken Sie auf der Seite **Einsichten** auf die Kachel, die der jeweiligen Bereitstellung entspricht. Die Überwachungsdaten für diese Bereitstellung werden angezeigt.
- 
+1. Wenn Überwachungsdetails angezeigt werden sollen, klicken Sie auf der Seite **Einsichten** auf die Kachel, die der jeweiligen Bereitstellung entspricht. Die Überwachungsdaten für diese Bereitstellung werden angezeigt. 
 2. Verschieben Sie die Markierung auf dem Diagramm, um Daten für ein bestimmtes einstündiges Zeitfenster auszuwählen. 
 3. Klicken Sie auf den Link **Details anzeigen**.
 
@@ -224,8 +220,7 @@ Wenn Sie die interne Lite-Version von PostgreSQL verwenden, können Sie Ihre Dat
 
   ![Transaktionen anzeigen](images/view_transactions.png)
 
-  Es wird eine Liste der Transaktionen angezeigt, bei denen die Bereitstellung verzerrt agiert hat.
- 
+  Es wird eine Liste der Transaktionen angezeigt, bei denen die Bereitstellung verzerrt agiert hat. 
   
 2. Wählen Sie eine der Transaktionen aus und klicken Sie in der Spalte **AKTION** auf den Link **Erklären**.
 

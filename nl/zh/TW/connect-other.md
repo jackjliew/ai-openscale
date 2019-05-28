@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: machine learning, services, ml, custom 
 
@@ -121,7 +121,8 @@ subcollection: ai-openscale
 
   此外，應載入訓練資料，以支援「可解釋性」。
 
-  對於文字的可解釋性，完整文字應為其中一項特性。在現行版本中，若為「自訂」模型，則不支援影像的可解釋性。{: note}
+  對於文字的可解釋性，完整文字應為其中一項特性。在現行版本中，若為「自訂」模型，則不支援影像的可解釋性。
+  {: note}
 
 - **支援監視器的模型輸出準則**
 

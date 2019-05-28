@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Microsoft Azure, ml, machine learning, services
 
@@ -19,16 +19,16 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Microsoft Azure ML 서비스 인스턴스 지정
+# Microsoft Azure ML Studio 인스턴스 지정
 {: #connect-azure}
 
-{{site.data.keyword.aios_short}} 도구에서 첫 번째 단계는 Microsoft Azure ML 서비스 인스턴스를 지정하는 것입니다. Azure ML 서비스 인스턴스는 사용자의 AI 모델 및 배치를 저장하는 곳입니다.
+{{site.data.keyword.aios_short}} 도구에서 첫 번째 단계는 Microsoft Azure ML Studio 인스턴스를 지정하는 것입니다. Azure ML Studio 인스턴스는 AI 모델과 배치를 저장하는 곳입니다.
 {: shortdesc}
 
-## Azure ML Studio 서비스 인스턴스 연결
+## Azure ML Studio 인스턴스 연결
 {: #ca-connect}
 
-{{site.data.keyword.aios_short}}은 Azure ML Studio 서비스 인스턴스에서 AI 모델 및 배치에 연결됩니다.
+{{site.data.keyword.aios_short}}은 Azure ML Studio 인스턴스의 AI 모델 및 배치에 연결합니다.
 
 1.  {{site.data.keyword.aios_short}} 도구의 홈 페이지에서 **시작**을 클릭하십시오.
 
@@ -36,14 +36,14 @@ subcollection: ai-openscale
 
 1.  **Microsoft Azure ML Studio** 타일을 선택하고 **다음**을 클릭하십시오.
 
-    ![Azure ML 서비스 선택](images/connect-azure.png)
+    ![Azure ML Studio 선택](images/connect-azure.png)
 
 1.  인증 정보 입력:
 
     Microsoft Azure 인증 정보를 가져오는 방법에 대한 지침은 [How to: Use the portal to create an Azure AD application and service principal that can access resources ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: new_window}를 참조하십시오.
     {: note}
 
-    ![Azure ML 서비스 인증 정보 입력](images/connect-azure-cred.png)
+    ![Azure ML Studio 신임 정보 입력](images/connect-azure-cred.png)
 
 1.  **다음**을 클릭하십시오.
 

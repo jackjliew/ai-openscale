@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Amazon SageMaker, machine learning, services, AWS
 
@@ -22,8 +22,7 @@ subcollection: ai-openscale
 # Spécification d'une instance de service Amazon SageMaker ML
 {: #csm-connect}
 
-Votre première étape dans l'outil {{site.data.keyword.aios_short}} consiste à spécifier une instance de service Amazon SageMaker.
-Votre instance de service Amazon SageMaker est l'endroit où vous stockez vos modèles et déploiements d'IA.
+Votre première étape dans l'outil {{site.data.keyword.aios_short}} consiste à spécifier une instance de service Amazon SageMaker. Votre instance de service Amazon SageMaker est l'endroit où vous stockez vos modèles et déploiements d'IA.
 {: shortdesc}
 
 ## Connectez votre instance de service Amazon SageMaker

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-29"
 
 keywords: databases, connections, scoring, requests
 
@@ -30,24 +30,29 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}} 使用資料庫來儲存有效負載、回饋資料和測量資料。除了選取資料庫，您也可以選取資料庫的綱目 - 綱目是資料庫中一個已命名的表格集合。
 
-1.  選擇資料庫。您有兩個選項：免費 Lite 方案資料庫，或是現有或新的資料庫。
+1.  選擇資料庫。您有兩個選項：免費資料庫，或是現有資料庫或新的資料庫。
 
     ![選取資料庫](images/gs-config-database.png)
 
-    如果您已有一個付費 {{site.data.keyword.cloud_notm}} 帳戶，您可以佈建 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服務，以便充分利用與 Watson Studio 和持續學習服務的整合。如果您選擇不佈建付費服務，您可以將免費的內部 PostgreSQL 儲存空間與 {{site.data.keyword.aios_short}} 搭配使用，只是這就無法為模型配置持續學習。{: note}
+    如果您已有一個付費 {{site.data.keyword.cloud_notm}} 帳戶，您可以佈建 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服務，以便充分利用與 Watson Studio 和持續學習服務的整合。如果您選擇不佈建付費服務，您可以將免費的內部 PostgreSQL 儲存空間與 {{site.data.keyword.aios_short}} 搭配使用，只是這就無法為模型配置持續學習。
+    {: note}
 
 ### 免費 Lite 方案資料庫
 {: #cdb-lite}
 
-**附註**：免費 Lite 方案資料庫會有一些重要限制：
+**附註**：免費資料庫有一些重要限制：
 
-- 免費 Lite 方案資料庫是代管的，您無法直接存取。
+- 免費資料庫是代管的，您無法直接存取。
 - {{site.data.keyword.aios_full}} 對您的資料庫具備完整存取權，因此也對您的資料具備完整存取權。
-- 免費 Lite 方案資料庫不符合 GDPR 規章。如果您的模型會處理個人識別資訊 (PII)，就無法使用免費 Lite 方案資料庫。您必須購買新的資料庫，或是使用符合 GDPR 規則的現有資料庫。請參閱[資訊安全](/docs/services/ai-openscale?topic=ai-openscale-is-ov)，以進一步瞭解。
+- 免費資料庫不符合 GDPR 標準。如果您的模型會處理個人識別資訊 (PII)，就無法使用免費資料庫。您必須購買新的資料庫，或是使用符合 GDPR 規則的現有資料庫。請參閱[資訊安全](/docs/services/ai-openscale?topic=ai-openscale-is-ov)，以進一步瞭解。
 
-如果想繼續使用免費 Lite 方案資料庫，只需選取該選項，檢閱摘要資料，並按一下**儲存**。
+若要繼續使用免費資料庫，請按一下**使用 {{site.data.keyword.aios_short}} 代管的免費資料庫**磚，然後檢閱摘要資料，並按一下**儲存**。
 
   ![選取資料庫](images/gs-config-database2.png)
+  
+您可以從免費資料庫升級至另一個資料庫，但是無法將 Compose for Postgres、Database for Postgres 或 Db2 實例重新配置到免費資料庫。升級之後，就無法回去使用免費資料庫。您將無法重複使用所有現行資料，例如配置、評分結果和說明。透過選取另一個綱目或資料庫，將 {{site.data.keyword.aios_short}} 環境完全重設。
+
+
 
 ### 現有或新的資料庫
 {: #cdb-exn}
@@ -56,13 +61,15 @@ subcollection: ai-openscale
 
 1.  選取您現有的資料庫類型（Compose for Postgres、Database for Postgres 或 Db2）、從**資料庫**下拉功能表中選取一個資料庫，然後選取一項**綱目**：
 
-    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫來儲存模型部署輸出和重新訓練資料。目前不支援「精簡 Db2」方案。{: note}
+    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫來儲存模型部署輸出和重新訓練資料。目前不支援「精簡 Db2」方案。如需訓練資料的相關資訊，請參閱 [ 為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    {: note}
 
     ![選取資料庫](images/gs-config-database3.png)
 
 1.  您也可以按一下**選取不同位置**，以指定一個位於您 {{site.data.keyword.Bluemix_notm}} 帳戶之外的資料庫位置。
 
-    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫來儲存模型部署輸出和重新訓練資料。目前不支援「精簡 Db2」方案。{: note}
+    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫來儲存模型部署輸出和重新訓練資料。目前不支援「精簡 Db2」方案。
+    {: note}
 
     - 選取**資料庫類型**（`Compose for PostgreSQL`、`Database for PostgreSQL` 或 `Db2`），然後提供連線資訊：
 
@@ -110,7 +117,7 @@ subcollection: ai-openscale
 
 如果要配置監視器，{{site.data.keyword.aios_short}} 會要求您傳送評分要求，以便開始記載將要監視的資料。
 
-部署在 Watson Machine Learning 中的模型會自動由 {{site.data.keyword.aios_short}} 評分。如果您只將模型部署在 Watson Machine Learning 中，就不會看到此畫面。
+部署在 Watson Machine Learning 中的模型會自動由 {{site.data.keyword.aios_short}} 評分。
 {: note:}
 
 選取一項部署，在本例中是 "Fraud Detector"，然後使用所提供的 `cURL` 或 `Python` 程式碼 Snippet，來記載模型部署要求和回應資料。如需詳細資料，請參閱[非 Watson Machine Learning 服務實例的有效負載記載](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。

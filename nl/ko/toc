@@ -6,7 +6,10 @@ Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
+    faststart.md
     alt-setup.md
+    tutorial-adv.md
+    addl-rsc.md
     index.md
 
     {: .topicgroup}
@@ -15,9 +18,6 @@ Watson OpenScale
         frameworks-azure-ml-studio.md
         frameworks-aws-sagemaker.md
         frameworks-custom.md
-
-    tutorial-adv.md
-    addl-rsc.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -33,15 +33,17 @@ Watson OpenScale
         config-file.md
 
     {: .topicgroup}
-    모니터에 대한 작업
+    모니터 구성
         monitor-overview.md
         monitor-fairness.md
         monitor-accuracy.md
+        metrics.md
 
     {: .topicgroup}
-    모니터 데이터 보기 및 편집
+    인사이트 확보
         insight-overview.md
         insight-timechart.md
+        analyze-metrics-transactions.md
         insight-explain.md
 
     openscale-recovery.md
@@ -52,6 +54,7 @@ Watson OpenScale
     [ModelOps CLI](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
     [Python 클라이언트](http://ai-openscale-python-client.mybluemix.net/)
     activity-tracker.md
+    language-support.md
     information-security.md
     [Watson GitHub 저장소](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
@@ -60,6 +63,7 @@ Watson OpenScale
     gettinghelp.md
     release-notes.md
     ai-openscale-faqs.md
+    [지원 사례 작성](https://cloud.ibm.com/unifiedsupport/supportcenter)
 
     {: .topicgroup}
     Developer 커뮤니티

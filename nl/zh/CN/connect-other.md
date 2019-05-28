@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: machine learning, services, ml, custom 
 
@@ -79,7 +79,7 @@ subcollection: ai-openscale
 
 您还可以参考以下链接：
 
-[AIOS 有效内容日志记录 API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[AIOS 载荷日志记录 API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
 
 [定制部署 API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
 

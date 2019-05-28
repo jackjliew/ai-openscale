@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, fairness monitor
 
@@ -110,7 +110,7 @@ subcollection: ai-openscale
 
      當您完成每一項特性時，請按**下一步**。
 
-1.  現在，請指定一些值來代表模型的有利輸出結果。如果模型輸出綱目含有對映直欄，這些值會衍生自訓練資料中的 `label` 直欄。在 WML 中，`prediction` 直欄一律具有倍精準數值。對映直欄用來指定這個 `prediction` 值指向類別標籤的對映。
+1.  現在，請指定一些值來代表模型的有利輸出結果。如果模型輸出綱目含有對映直欄，則這些值是衍生自[訓練資料](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)中的 `label` 直欄。在 WML 中，`prediction` 直欄一律具有倍精準數值。對映直欄用來指定這個 `prediction` 值指向類別標籤的對映。
 
     例如，如果 `prediction` 值是 `1.0`，對映直欄的值可能是 `Loan denied`；這意味著模型的預測是 `Loan denied`。因此，如果模型輸出綱目包含對映直欄，請使用對映直欄中的值來指定「有利」值和「不利」值。
 

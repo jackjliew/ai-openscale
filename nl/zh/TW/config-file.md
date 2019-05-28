@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: JSON, configuration, configuring, deployment
+keywords: JSON, configuration, configuring, deployment, subscription
 
 subcollection: ai-openscale
 
@@ -23,13 +23,13 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# 使用 JSON 檔案來配置部署訂閱
+# 使用 JSON 配置檔來配置資產部署
 {: #cf-ov}
 
-您可以匯入 JSON 檔案，以便在建立訂閱期間，以程式設計方式來配置所有監視器和特性。您也可以匯出配置檔。
+您可以匯入 JSON 檔案以建立及配置資產的所有部署，來進行監視。您也可以匯出配置檔，以配置其他資產及其部署。
 {: shortdesc}
 
-如需如何使用 JSON 檔案來訂閱部署的合宜範例，請參閱 [Watson OpenScale 單次呼叫 API 適用於訂閱 Python 記事本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb)。此記事本說明如何在單次 API 呼叫中，使用 JSON 檔案來配置 Amazon SageMaker 資產訂閱。這個主題的其餘部分會參照此記事本。
+如需如何使用 JSON 檔案的理想範例，請參閱 [Watson OpenScale 單次呼叫 API 適用於訂閱 Python 記事本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb)。此記事本說明如何在單次 API 呼叫中使用 JSON 檔案來建立及配置 Amazon SageMaker 資產部署。這個主題的其餘部分將參照此記事本。
 
 ## 載入 JSON 檔案以作為 Python 字典
 {: #cf-load-as-dict}
@@ -146,10 +146,10 @@ subcollection: ai-openscale
   'timestamp': '2019-02-11T11:41:01.613Z'}}
   ```
 
-## 從配置檔來新增訂閱
+## 從配置檔匯入
 {: #cf-subscribe}
 
-- 現在，請執行呼叫，以新增及配置樣本乳癌預測模型部署的訂閱。
+- 現在，執行呼叫以新增及配置用於乳癌樣本預測模型部署的資產部署。
 
     ```python
     subscription = client.data_mart.subscriptions.import_configuration(binding_uid=binding_uid, configuration_data=subscription_configuration)
@@ -157,7 +157,7 @@ subcollection: ai-openscale
 
   如果只會連結一個 ML 引擎，則 `binding_uid` 參數是選用的。{: note}
 
-## 匯出 JSON 檔案
+## 匯出至配置檔
 {: #cf-export}
 
 - 您也可以將配置檔匯出成 JSON：
@@ -169,8 +169,8 @@ subcollection: ai-openscale
 ## 結果
 {: #cf-results}
 
-已建立訂閱，並且已配置所部署的模型，以供 {{site.data.keyword.aios_short}} 使用。
+會建立及配置資產部署供 {{site.data.keyword.aios_short}} 使用。
 
 如需完整資訊，請參閱 [{{site.data.keyword.aios_short}} Python 用戶端說明文件 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}。
 
-您也可以使用[匯入訂閱 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 和[匯出訂閱 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} 方法，將配置匯入及匯出至 {{site.data.keyword.aios_short}}。
+您也可以使用[匯入訂閱 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 和[匯出訂閱 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API 方法，將配置匯入及匯出至 {{site.data.keyword.aios_short}}。

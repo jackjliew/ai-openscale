@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: JSON, configuration, configuring, deployment
+keywords: JSON, configuration, configuring, deployment, subscription
 
 subcollection: ai-openscale
 
@@ -23,13 +23,13 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# 使用 JSON 文件配置部署预订
+# 使用 JSON 配置文件来配置资产部署
 {: #cf-ov}
 
-您可以导入 JSON 文件，从而在创建预订期间以编程方式配置所有监视器和功能部件。您还可以导出配置文件。
+您可以导入 JSON 文件以创建和配置资产的所有部署，以进行监视。您还可以导出配置文件以配置其他资产及其部署。
 {: shortdesc}
 
-有关如何使用 JSON 文件来预订部署的良好示例，请参阅 [Watson OpenScale One API Shot for subscription Python 笔记本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb)。该笔记本描述如何在单个 API 调用中使用 JSON 文件来配置 Amazon SageMaker 资产预订。本主题的其余部分会引用此笔记本。
+有关如何使用 JSON 文件的范例，请参阅 [Watson OpenScale One API Shot for subscription Python 笔记本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb)。此笔记本描述如何在单个 API 调用中使用 JSON 文件来创建和配置 Amazon SageMaker 资产部署。本主题的其余部分会引用此笔记本
 
 ## 将 JSON 文件内容作为 Python 字典装入
 {: #cf-load-as-dict}
@@ -146,10 +146,10 @@ subcollection: ai-openscale
   'timestamp': '2019-02-11T11:41:01.613Z'}}
   ```
 
-## 从配置文件添加预订
+## 从配置文件导入
 {: #cf-subscribe}
 
-- 现在，运行调用以添加和配置样本乳腺癌预测模型部署的预订。
+- 现在，运行调用以添加和配置样本乳腺癌预测模型部署的资产部署。
 
     ```python
     subscription = client.data_mart.subscriptions.import_configuration(binding_uid=binding_uid, configuration_data=subscription_configuration)
@@ -158,7 +158,7 @@ subcollection: ai-openscale
   如果仅绑定了一个 ML 引擎，`binding_uid` 参数即为可选。
   {: note}
 
-## 导出 JSON 文件
+## 导出到配置文件
 {: #cf-export}
 
 - 您还可以将配置文件导出为 JSON：
@@ -170,8 +170,8 @@ subcollection: ai-openscale
 ## 结果
 {: #cf-results}
 
-系统将创建预订，并将已部署的模型配置为供 {{site.data.keyword.aios_short}} 使用。
+资产部署即已创建并配置为可供 {{site.data.keyword.aios_short}} 使用。
 
 请参阅 [{{site.data.keyword.aios_short}} Python 客户机文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window} 中的更多完整信息。
 
-您还可以使用[导入预订 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 和[导出预订 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} 方法将配置导入到 {{site.data.keyword.aios_short}} 以及从中导出配置。
+您还可以使用[导入预订 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 和[导出预订 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API 方法将配置导入到 {{site.data.keyword.aios_short}} 以及从中导出配置。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -42,14 +42,14 @@ Verschieben Sie die Markierung auf dem Diagramm, um Statistiken für eine einzel
 
 - ***Fairness***: Für zwei der drei Merkmale für Fairness, nämlich 'Fahrzeugwert' und 'Ortsnetzkennzahl', wurden die für die Genehmigung festgelegten Schwellenwerte erreicht. Das dritte Fairnessmerkmal - 'Alter' - wurde als verzerrt gekennzeichnet. Außerdem wird die Anzahl der erwarteten Ergebnisse, in diesem Fall Prozentsätze für 'Bewilligt' bzw. 'Abgelehnt', für eine einzelne Bevölkerungsgruppe in den auf Fairness überwachten Merkmalen angezeigt.
 - ***Genauigkeit***: Die Genauigkeitsmetrik betrug durchschnittlich 78 %.
-- ***Durchschnittliche Anf./Min.***: Im Durchschnitt wurden zwischen 13:00 und 14:00 Uhr (CST) 300 Datensätze pro Minute verarbeitet. Der Durchsatz wird minütlich berechnet und im Diagramm wird sein Durchschnittswert über den Verlauf der Stunde angezeigt. 
+- ***Durchschnittliche Anf./Min.***: Im Durchschnitt wurden zwischen 13:00 und 14:00 Uhr (CST) 300 Datensätze pro Minute verarbeitet. Der Durchsatz wird minütlich berechnet und im Diagramm wird sein Durchschnittswert über den Verlauf der Stunde angezeigt.
 
 ## Visualisierung von Daten für eine bestimmte Uhrzeit anzeigen
 {: #it-vdet}
 
 Wenn die Detailinformationen angezeigt werden sollen, die sich hinter einer bestimmten Statistik für Fairness verbergen, klicken Sie für die ausgewählte Uhrzeit auf den Link **Details anzeigen**.
 
-Es wird eine Visualisierung der Datenpunkte für ein überwachtes Merkmal zum ausgewählten Zeitpunkt geöffnet. Es wird das obige Beispiel des Merkmals 'Alter', das als verzerrt gekennzeichnet wurde, dargestellt. 
+Es wird eine Visualisierung der Datenpunkte für ein überwachtes Merkmal zum ausgewählten Zeitpunkt geöffnet. Es wird das obige Beispiel des Merkmals 'Alter', das als verzerrt gekennzeichnet wurde, dargestellt.
 
 Beachten Sie die drei Filter im oberen Bereich der Seite (Merkmal, Datum und Uhrzeit), die Ihnen die Auswahl eines anderen Merkmals oder eines anderen Datums bzw. einer anderen Uhrzeit zwecks Überprüfung von Details ermöglichen.
 
@@ -75,7 +75,7 @@ Das Diagramm zeigt mehrere Dinge an:
 ## Laufzeit- und Trainingsdaten
 {: #it-rtsw}
 
-Der Schieberegler 'Laufzeitdaten/Trainingsdaten' ermöglicht Ihnen, zwischen der Anzeige der Unterschiede Ihres trainierten Modells und der zur Laufzeit erfassten Daten, die eine Verzerrungswarnung auslösen, hin- und herzuschalten.
+Der Schieberegler 'Laufzeitdaten/Trainingsdaten' ermöglicht Ihnen, zwischen der Anzeige der Unterschiede Ihres trainierten Modells und der zur Laufzeit erfassten Daten, die eine Verzerrungswarnung auslösen, hin- und herzuschalten. Weitere Informationen zu den Trainingsdaten finden Sie unter [Warum muss {{site.data.keyword.aios_short}} auf meine Trainingsdaten zugreifen?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 ![Schieberegler zum Umschalten zwischen Laufzeit und Training](images/runtime_train_data.png)
 

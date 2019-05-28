@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: deployment, monitors, data
 
@@ -42,7 +42,7 @@ Richten Sie für jede Bereitstellung, die Sie mit {{site.data.keyword.aios_short
 ## Mit Daten arbeiten
 {: #mo-work-data}
 
-1.  Sie geben jetzt Informationen zu Ihrem Modell und zu Ihren Trainingsdaten an. Klicken Sie auf **Weiter**.
+1.  Sie geben jetzt Informationen zu Ihrem Modell und zu Ihren Trainingsdaten an. Klicken Sie auf **Weiter**. Weitere Informationen zu den Trainingsdaten finden Sie unter [Warum muss {{site.data.keyword.aios_short}} auf meine Trainingsdaten zugreifen?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
     ![Erklärung vorbereiten](images/config-what-monitor.png)
 

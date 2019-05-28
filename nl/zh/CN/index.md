@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -37,7 +37,7 @@ subcollection: ai-openscale
 
 以下介绍如何实施 {{site.data.keyword.aios_short}}：
 
-- **配置 {{site.data.keyword.aios_short}}**：通过易于使用的图形环境，[设置有效内容日志记录数据库](/docs/services/ai-openscale?topic=ai-openscale-connect-db)，以及 AI 模型和部署存储所在的 [Watson Machine Learning 实例](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)。
+- **配置 {{site.data.keyword.aios_short}}**：通过易于使用的图形环境，[设置载荷日志记录数据库](/docs/services/ai-openscale?topic=ai-openscale-connect-db)，以及 AI 模型和部署存储所在的 [Watson Machine Learning 实例](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)。
 
 - **使用监视器**：对于每个部署，请配置 {{site.data.keyword.aios_short}} 将如何监视该部署。您可以监视：
 
@@ -60,7 +60,7 @@ subcollection: ai-openscale
 
     - 监视两个已部署的模型
     - 解释 20 个事务
-    - 50,000 个有效内容记录（累积）
+    - 50,000 个载荷记录（累积）
     - 50,000 个反馈记录（累积）
 
 - {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 数据库来存储模型部署输出和重新训练数据。当前不支持 Lite Db2 套餐。
@@ -71,27 +71,11 @@ subcollection: ai-openscale
 
 <p>&nbsp;</p>
 
-## 支持的模型类型
-{: #in-mod}
-
-表 1. 模型支持详细信息
-
-| 算法 | **公平性** | **自动除偏** | **解释** | **准确性** |
-|:---|:---:|:---:|:---:|:---:|
-| **结构化分类** |是| 是<sup>1</sup> |是|是|
-| **结构化回归**     |是|否|是|是|
-| **文本分类**       |否|否|是|否|
-| **图像分类**       |否|否|是|否||
-{: caption="模型支持详细信息" caption-side="top"}
-
-<sup>1</sup> 如果模型/框架输出预测概率
-
-<p>&nbsp;</p>
 
 ## 支持的机器学习引擎和框架
 {: #in-fram}
 
-{{site.data.keyword.aios_short}} 服务支持以下机器学习引擎。每个运行时支持以下框架中创建的模型，如[支持的模型类型](#in-mod)列表中所述。
+{{site.data.keyword.aios_short}} 服务支持以下机器学习引擎。每个运行时支持在以下框架中创建的模型：
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)
@@ -108,7 +92,7 @@ subcollection: ai-openscale
 
 完全支持包含特定框架、问题和数据类型的以下功能：
 
-- 有效内容日志记录	
+- 载荷日志记录	
 - 反馈日志记录	
 - 性能准确性	
 - 运行时偏差检测	

@@ -6,7 +6,10 @@ Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
+    faststart.md
     alt-setup.md
+    tutorial-adv.md
+    addl-rsc.md
     index.md
 
     {: .topicgroup}
@@ -15,9 +18,6 @@ Watson OpenScale
         frameworks-azure-ml-studio.md
         frameworks-aws-sagemaker.md
         frameworks-custom.md
-
-    tutorial-adv.md
-    addl-rsc.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -33,15 +33,17 @@ Watson OpenScale
         config-file.md
 
     {: .topicgroup}
-    Mit Überwachungen arbeiten
+    Überwachungen konfigurieren
         monitor-overview.md
         monitor-fairness.md
         monitor-accuracy.md
+        metrics.md
 
     {: .topicgroup}
-    Überwachungsdaten anzeigen und bearbeiten
+    Insights abrufen
         insight-overview.md
         insight-timechart.md
+        analyze-metrics-transactions.md
         insight-explain.md
 
     openscale-recovery.md
@@ -58,8 +60,10 @@ Watson OpenScale
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    gettinghelp.md
     release-notes.md
     ai-openscale-faqs.md
+    [Supportfall erstellen](https://cloud.ibm.com/unifiedsupport/supportcenter)
 
     {: .topicgroup}
     Entwicklercommunity

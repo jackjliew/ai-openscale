@@ -58,7 +58,7 @@ lastupdated: "2019-02-05"
   신용카드를 사용하여 유료 계정으로 전환하는 것으로 $200 {{site.data.keyword.cloud_notm}} 신용을 얻을 수 있습니다. 이미 유료 계정인 경우, 한 달 동안 첫 GB의 스토리지에 대해 일회의 $16 요금 환불을 받을 수 있습니다.
   {: tip}
 
-PostgreSQL 데이터베이스 및 Watson 기계 학습 인스턴스가 동일한 {{site.data.keyword.cloud_notm}} 계정에 배치되어야 합니다.
+PostgreSQL 데이터베이스 및 Watson Machine Learning 인스턴스가 동일한 {{site.data.keyword.cloud_notm}} 계정에 배치되어야 합니다.
 {: important}
 
 필수 서비스를 이미 프로비저닝한 경우, 예를 들어, 기타 튜토리얼을 완료한 경우, 아래의 [Watson Studio 프로젝트](#tadv-setup-ws)로 진행하십시오.
@@ -90,7 +90,7 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 ### 기계 학습 서비스 프로비저닝
 {: #tadv-pml}
 
-- 아직 계정과 연관된 인스턴스가 없으면 [Watson 기계 학습 인스턴스를 프로비저닝 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/machine-learning){: new_window}하십시오.
+- 아직 계정과 연관된 인스턴스가 없으면 [Watson Machine Learning 인스턴스를 프로비저닝 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/machine-learning){: new_window}하십시오.
 
   ![기계 학습](images/machine_learning.png)
 
@@ -178,7 +178,7 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 
   ![수동으로 데이터 유형 설정](images/data-type-manual.png)
 
-- 교육 데이터가 열에 올바르게 표시되어야 합니다. 계속하려면 **다음**을 클릭한 다음 **로드 시작**을 클릭하여 데이터를 로드하십시오.
+- 훈련 데이터가 열에 올바르게 표시되어야 합니다. 계속하려면 **다음**을 클릭한 다음 **로드 시작**을 클릭하여 데이터를 로드하십시오.
 
 --->
 
@@ -247,7 +247,7 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 
 - 섹션 2.2, "PostgreSQL 데이터베이스로 데이터 업로드"에서 Postgres 서비스 인증 정보를 이전 섹션에서 사용자가 작성한 인증 정보로 대체하십시오.
 
-- 섹션 4, "저장소에 모델 저장"의 **팁** 아래에서 Watson 기계 학습 인증 정보를 이전 섹션에서 사용자가 작성한 인증 정보로 대체하십시오.
+- 섹션 4, "저장소에 모델 저장"의 **팁** 아래에서 Watson Machine Learning 인증 정보를 이전 섹션에서 사용자가 작성한 인증 정보로 대체하십시오.
 
 - 일단 인증 정보를 입력했으면 Notebook을 실행할 준비가 된 것입니다. **커널** 메뉴 항목을 클릭하고 메뉴에서 **다시 시작 및 모두 실행**을 선택하십시오.
 
@@ -274,11 +274,11 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 
 이제 기계 학습 모델이 배치되었으므로 모델의 신뢰성 및 투명성을 보장하도록 {{site.data.keyword.aios_short}}을 구성할 수 있습니다. {{site.data.keyword.aios_short}} 인스턴스의 **관리** 탭을 선택하고 **애플리케이션 시작** 단추를 클릭하십시오. {{site.data.keyword.aios_full}} 시작하기 페이지가 열립니다. **시작**을 클릭하십시오.
 
-- "Watson 기계 학습" 타일을 선택하고 **다음**을 클릭하십시오.
+- "Watson Machine Learning" 타일을 선택하고 **다음**을 클릭하십시오.
 
   ![WML 인스턴스 설정](images/gs-wml-default.png)
 
-- 드롭 다운에서 Watson 기계 학습 인스턴스를 선택하고 **다음**을 클릭하십시오.
+- 드롭 다운에서 Watson Machine Learning 인스턴스를 선택하고 **다음**을 클릭하십시오.
 
   ![WML 인스턴스 설정](images/gs-set-wml.png)
 
@@ -345,7 +345,7 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 
     - **조치: instance_id(GUID) 및 apikey 가져오기** 아래의 인증 정보를 가져오기 위한 지침을 따르십시오. `aios_credentials`를 자신의 인증 정보로 대체하십시오.
 
-    - 다음으로 **조치: 여기에 Watson 기계 학습 인증 정보 추가**에서 Watson 기계 학습 인증 정보를 사용자가 앞에서 작성한 인증 정보로 대체하십시오.
+    - 다음으로 **조치: 여기에 Watson Machine Learning 인증 정보 추가**에서 Watson Machine Learning 인증 정보를 사용자가 앞에서 작성한 인증 정보로 대체하십시오.
 
     - 마지막으로 **조치: 여기에 PostgreSQL 인증 정보 추가** 아래에서 Postgres 인증 정보를 사용자가 앞에서 작성한 인증 정보로 대체하십시오.
 

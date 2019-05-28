@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: release notes, what's new 
 
@@ -24,6 +24,20 @@ subcollection: ai-openscale
 
 本文档概述 {{site.data.keyword.aios_full_notm}} 的新功能和已知问题。
 {: shortdesc}
+
+## 2019 年 4 月 25 日
+{: #rn-25April2019}
+
+提供了以下新功能和对服务的更改。
+
+### 新功能和更改
+{: #rn-25April2019nf}
+
+除了易用性改进和安全性更新外，我们的开发者还一直在忙着增加新功能。在前几周内已经增加或增强的 {{site.data.keyword.aios_short}} 功能包括：
+
+- __*自动化设置导览*__：一种全新的导览方法，用于设置 {{site.data.keyword.aios_short}} 环境。使用[自动化设置](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)可供应服务以及下载和配置模型。当您具有 {{site.data.keyword.aios_short}} 的新实例时，您会注意到此选项。
+- __*切换到 beta 版本*__：![beta 标记](images/beta.png)一个新的切换开关**浏览新 beta 版本**让您能够使用我们的 beta 版本环境，在此环境中，您可以了解所有最新特性和新功能。不喜欢您看到的东西？只需要单击**返回到原始版本**便可以切换回来。您的配置和监视器不受影响。当前 beta 程序包含以下功能：
+    - __*混淆矩阵*__：[混淆矩阵显示](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx)误报和漏报。单击单元格可查看反馈记录的子集。
 
 ## 2019 年 3 月 5 日
 {: #rn-5March2019}
@@ -100,8 +114,6 @@ subcollection: ai-openscale
 
 - __*数据存储*__：在不依靠 Watson Machine Learning 的情况下进行质量监视，并且能够使用您自己的数据库，无论是 Db2、Postgres 还是 Db2 on Cloud 都如此。
 
-- __*NeuNetS (Beta)*__：IBM Neural Network Synthesizer (NeuNetS) 可用作 Beta 发行版（仅限公共云）。请参阅 [NeuNetS 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window} 以获取更多信息。
-
 - __*增强的 UI*__：{{site.data.keyword.aios_short}} UI 已改进为包含运行时直方图分布，其中可在训练数据、模型标识与版本控制以及直方图中的事务标识表之间进行切换。请参阅[可视化特定小时的数据](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet)以获取更多信息。
 
 - __*备用教程设置选项*__：要自动供应和配置必需的 IBM Cloud 服务，以及要查看 IBM {{site.data.keyword.aios_full}} 应用程序（包括样本数据），可以安装并运行 Python 模块。请参阅[安装 Python 模块以设置 {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)
@@ -119,7 +131,7 @@ subcollection: ai-openscale
 
 - **AWS SageMaker**
 
-    - __*不支持 BlazingText 算法*__：AWS SageMaker BlazingText 算法输入有效内容格式在 {{site.data.keyword.aios_short}} 的当前发行版中不受支持。
+    - __*不支持 BlazingText 算法*__：AWS SageMaker BlazingText 算法输入载荷格式在 {{site.data.keyword.aios_short}} 的当前发行版中不受支持。
 
 ## 2018 年 9 月 17 日
 {: #rn-17September2018}

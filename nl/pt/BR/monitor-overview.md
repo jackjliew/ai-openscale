@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: deployment, monitors, data
 
@@ -42,7 +42,8 @@ Configure e ative os monitores para cada implementação que você está rastrea
 ## Trabalhando com dados
 {: #mo-work-data}
 
-1.  Agora você fornecerá informações sobre seus dados de modelo e treinamento; clique em **Avançar**.
+1.  Agora você fornecerá informações sobre seus dados de modelo e treinamento; clique em **Avançar**. Para
+obter mais informações sobre os dados de treinamento, veja [Por que o {{site.data.keyword.aios_short}} precisa de acesso aos meus dados de treinamento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
     ![Prepare explanation](images/config-what-monitor.png)
 

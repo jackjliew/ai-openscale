@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -41,8 +41,7 @@ des
 ## Avant de commencer
 {: #cml-prereq}
 
-Vous devrez avoir les données de formation de votre modèle disponibles dans Db2 ou Cloud Object Storage pour surveiller son biais.
-L'explicabilité et l'exactitude ne sont pas prises en charge pour les fonctions Python.
+Vous devrez avoir les données de formation de votre modèle disponibles dans Db2 ou Cloud Object Storage pour surveiller son biais. L'explicabilité et l'exactitude ne sont pas prises en charge pour les fonctions Python. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - Importer et lancer {{site.data.keyword.aios_short}}
 
@@ -133,8 +132,7 @@ L'explicabilité et l'exactitude ne sont pas prises en charge pour les fonctions
 ### Evaluation et journalisation du contenu
 {: #cml-cusscore}
 
-- Evaluez votre modèle.
-Pour un exemple complet, voir le
+- Evaluez votre modèle. Pour un exemple complet, voir le
 [bloc-notes
 IBM {{site.data.keyword.aios_full}} & Custom ML Engine
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}.
@@ -285,8 +283,7 @@ IBM {{site.data.keyword.aios_full}} & Custom ML Engine
 ### Evaluation et journalisation du contenu
 {: #cml-azscore}
 
-- Evaluez votre modèle.
-Pour un exemple complet, voir le
+- Evaluez votre modèle. Pour un exemple complet, voir le
 [
 bloc-notes Working with Azure Machine Learning Studio Engine
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}.
@@ -440,8 +437,7 @@ bloc-notes Working with Azure Machine Learning Studio Engine
 ### Evaluation et journalisation du contenu
 {: #cml-smscore}
 
-- Evaluez votre modèle.
-Pour un exemple complet, voir le
+- Evaluez votre modèle. Pour un exemple complet, voir le
 [
 bloc-notes Working with SageMaker Machine Learning Engine
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}.

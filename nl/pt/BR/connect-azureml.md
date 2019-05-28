@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Microsoft Azure, ml, machine learning, services
 
@@ -19,16 +19,19 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Especificando uma instância de serviço do Microsoft Azure ML
+# Especificando uma instância do Microsoft Azure ML Studio
 {: #connect-azure}
 
-Sua primeira etapa na ferramenta {{site.data.keyword.aios_short}} é especificar uma instância de serviço do Microsoft Azure ML. Sua instância de serviço do Azure ML é onde você armazena seus modelos e implementações de IA.
+Sua primeira etapa na ferramenta {{site.data.keyword.aios_short}} é especificar uma instância
+do Microsoft Azure ML Studio. Sua instância do Azure ML Studio é onde você armazena seus modelos e
+implementações de IA.
 {: shortdesc}
 
-## Conectar sua instância de serviço do Azure ML Studio
+## Conecte sua instância do Azure ML Studio
 {: #ca-connect}
 
-O {{site.data.keyword.aios_short}} se conecta aos modelos e implementações de IA em uma instância de serviço do Azure ML Studio.
+O {{site.data.keyword.aios_short}} se conecta aos modelos e implementações de IA em uma
+instância do Azure ML Studio.
 
 1.  Na página inicial da ferramenta {{site.data.keyword.aios_short}}, clique em **Iniciar**.
 
@@ -36,14 +39,14 @@ O {{site.data.keyword.aios_short}} se conecta aos modelos e implementações de 
 
 1.  Selecione o ladrilho **Microsoft Azure ML Studio** e clique em **Avançar**.
 
-    ![Select Azure ML service](images/connect-azure.png)
+    ![Selecione o Azure ML Studio](images/connect-azure.png)
 
 1.  Insira suas credenciais:
 
     Consulte [Como: usar o portal para criar um aplicativo Azure AD e o principal do serviço que pode acessar recursos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: new_window} para obter instruções sobre como obter as credenciais do Microsoft Azure.
     {: note}
 
-    ![Enter Azure ML service credentials](images/connect-azure-cred.png)
+    ![Insira as credenciais do Azure ML Studio](images/connect-azure-cred.png)
 
 1.  Clique em **Avançar**.
 

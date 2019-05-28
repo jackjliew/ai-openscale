@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -23,10 +23,10 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# 非 Watson Machine Learning 服务实例的有效内容日志记录
+# 非 Watson Machine Learning 服务实例的载荷日志记录
 {: #cml-connect}
 
-如果 AI 模型部署在除 Watson Machine Learning (WML) 以外的其他机器学习引擎中，那么必须使用 Python 客户机为外部机器学习引擎启用有效内容日志记录。
+如果 AI 模型部署在除 Watson Machine Learning (WML) 以外的其他机器学习引擎中，那么必须使用 Python 客户机为外部机器学习引擎启用载荷日志记录。
 {: shortdesc}
 
 请参阅 [{{site.data.keyword.aios_short}} Python客户机文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标ALT=")](http://ai-openscale-python-client.mybluemix.net/){: new_window}，以及样本 {{site.data.keyword.aios_short}} Python客户机笔记本（包含 [{{site.data.keyword.aios_short}} 教程 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window}），中的更多完整信息。
@@ -34,7 +34,7 @@ subcollection: ai-openscale
 ## 开始之前
 {: #cml-prereq}
 
-您将需要在 Db2 或 Cloud Object Storage 中提供模型的训练数据，以监视模型的偏差。Python 函数不支持可解释性和准确性。
+您将需要在 Db2 或 Cloud Object Storage 中提供模型的训练数据，以监视模型的偏差。Python 函数不支持可解释性和准确性。有关训练数据的更多信息，请参阅[为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - 导入并启动 {{site.data.keyword.aios_short}}
 
@@ -106,10 +106,10 @@ subcollection: ai-openscale
     print(subscriptions_uids)
     ```
 
-### 启用有效内容日志记录
+### 启用载荷日志记录
 {: #cml-cusenlog}
 
-- 在预订中启用有效内容日志记录
+- 在预订中启用载荷日志记录
 
     ```python
     subscription.payload_logging.enable()
@@ -121,7 +121,7 @@ subcollection: ai-openscale
     subscription.payload_logging.get_details()
     ```
 
-### 评分和有效内容日志记录
+### 评分和载荷日志记录
 {: #cml-cusscore}
 
 - 对模型进行评分。有关完整示例，请参阅 [IBM {{site.data.keyword.aios_full}} 和定制 ML 引擎笔记本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}。
@@ -157,14 +157,14 @@ subcollection: ai-openscale
     ```
 --->
 
-- 在有效内容日志记录表中存储请求和响应
+- 在载荷日志记录表中存储请求和响应
 
     ```python
     records_list = [PayloadRecord(request=request_data, response=response_data, response_time=response_time), PayloadRecord(request=request_data, response=response_data, response_time=response_time)]
 
     subscription.payload_logging.store(records=records_list)
     ```
-    **注意**：对于除 Python 以外的其他语言，您还可以使用 REST API 直接执行有效内容日志记录。
+    **注意**：对于除 Python 以外的其他语言，您还可以使用 REST API 直接执行载荷日志记录。
 
     ```json
     token_endpoint = "https://iam.bluemix.net/identity/token"
@@ -254,10 +254,10 @@ subcollection: ai-openscale
     print(subscriptions_uids)
     ```
 
-### 启用有效内容日志记录
+### 启用载荷日志记录
 {: #cml-azenlog}
 
-- 在预订中启用有效内容日志记录
+- 在预订中启用载荷日志记录
 
     ```python
     subscription.payload_logging.enable()
@@ -269,7 +269,7 @@ subcollection: ai-openscale
     subscription.payload_logging.get_details()
     ```
 
-### 评分和有效内容日志记录
+### 评分和载荷日志记录
 {: #cml-azscore}
 
 - 对模型进行评分。有关完整示例，请参阅[使用 Azure Machine Learning Studio Engine 笔记本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}。
@@ -305,7 +305,7 @@ subcollection: ai-openscale
     ```
 --->
 
-- 在有效内容日志记录表中存储请求和响应：
+- 在载荷日志记录表中存储请求和响应：
 
     ```python
     records_list = [PayloadRecord(request=request_data, response=response_data, response_time=response_time),
@@ -316,7 +316,7 @@ subcollection: ai-openscale
 
     subscription.payload_logging.store(records=records_list)
     ```
-    **注意**：对于除 Python 以外的其他语言，您还可以使用 REST API 直接执行有效内容日志记录。
+    **注意**：对于除 Python 以外的其他语言，您还可以使用 REST API 直接执行载荷日志记录。
 
     ```json
     token_endpoint = "https://iam.bluemix.net/identity/token"
@@ -405,10 +405,10 @@ subcollection: ai-openscale
     print(subscriptions_uids)
     ```
 
-### 启用有效内容日志记录
+### 启用载荷日志记录
 {: #cml-smenlog}
 
-- 在预订中启用有效内容日志记录
+- 在预订中启用载荷日志记录
 
     ```python
     subscription.payload_logging.enable()
@@ -420,7 +420,7 @@ subcollection: ai-openscale
     subscription.payload_logging.get_details()
     ```
 
-### 评分和有效内容日志记录
+### 评分和载荷日志记录
 {: #cml-smscore}
 
 - 对模型进行评分。有关完整示例，请参阅[使用 SageMaker 机器学习引擎笔记本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}。
@@ -456,7 +456,7 @@ subcollection: ai-openscale
     ```
 --->
 
-- 在有效内容日志记录表中存储请求和响应：
+- 在载荷日志记录表中存储请求和响应：
 
     ```python
     records_list = [PayloadRecord(request=request_data, response=response_data, response_time=response_time),
@@ -467,7 +467,7 @@ subcollection: ai-openscale
 
     subscription.payload_logging.store(records=records_list)
     ```
-    **注意**：对于除 Python 以外的其他语言，您还可以使用 REST API 直接执行有效内容日志记录。
+    **注意**：对于除 Python 以外的其他语言，您还可以使用 REST API 直接执行载荷日志记录。
 
     ```json
     token_endpoint = "https://iam.bluemix.net/identity/token"

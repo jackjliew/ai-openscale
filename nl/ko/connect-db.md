@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-29"
 
 keywords: databases, connections, scoring, requests
 
@@ -30,7 +30,7 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}}은 데이터베이스를 사용하여 페이로드, 피드백 및 측정치 데이터를 저장합니다. 데이터베이스 선택 외에 데이터베이스에 대한 스키마도 선택할 수 있습니다. 스키마란 데이터베이스 내에 있는 테이블의 이름 지정된 콜렉션입니다.
 
-1.  데이터베이스를 선택하십시오. 두 가지 옵션, 즉, 무료 Lite 플랜 데이터베이스 및 기존 또는 신규 데이터베이스가 있습니다.
+1.  데이터베이스를 선택하십시오. 무료 데이터베이스 또는 기존/신규 데이터베이스의 두 가지 옵션이 있습니다.
 
     ![데이터베이스 선택](images/gs-config-database.png)
 
@@ -40,15 +40,19 @@ subcollection: ai-openscale
 ### 무료 Lite 플랜 데이터베이스
 {: #cdb-lite}
 
-**참고**: 무료 Lite 플랜 데이터베이스에는 몇 가지 중요한 제한사항이 있습니다.
+**참고**: 무료 데이터베이스에는 몇 가지 중요한 제한사항이 있습니다.
 
-- 무료 Lite 플랜 데이터베이스는 호스트되며 직접 액세스할 수 없습니다.
+- 무료 데이터베이스가 호스팅되며 사용자에 직접 액세스할 수 없습니다.
 - {{site.data.keyword.aios_full}}는 데이터베이스에 대한 전체 액세스 권한을 갖고 있으므로 데이터에 대한 전체 액세스 권한을 가집니다.
-- 무료 Lite 플랜 데이터베이스는 GDPR을 준수하지 않습니다. 모델이 개인적으로 구별 가능한 정보(PII)를 처리하는 경우, 무료 Lite 플랜 데이터베이스를 사용할 수 없습니다. 새 데이터베이스를 구매하거나 GDPR 규칙을 준수하는 기존 데이터베이스를 사용해야 합니다. 자세한 내용은 [정보 보안](/docs/services/ai-openscale?topic=ai-openscale-is-ov)을 참조하십시오.
+- 무료 데이터베이스는 GDPR을 준수하지 않습니다. 모델이 PII(Personally-Identifiable Information)를 처리하는 경우 무료 데이터베이스를 사용할 수 없습니다. 새 데이터베이스를 구매하거나 GDPR 규칙을 준수하는 기존 데이터베이스를 사용해야 합니다. 자세한 내용은 [정보 보안](/docs/services/ai-openscale?topic=ai-openscale-is-ov)을 참조하십시오.
 
-무료 Lite 플랜 데이터베이스를 계속 사용하려면 해당 옵션을 선택한 다음 요약 데이터를 검토하고 **저장**을 클릭하십시오.
+무료 데이터베이스를 사용하여 진행하려면 **{{site.data.keyword.aios_short}}에서 호스팅하는 무료 데이터베이스 사용** 타일을 클릭한 후 요약 데이터를 검토하고 **저장**을 클릭하십시오.
 
   ![데이터베이스 선택](images/gs-config-database2.png)
+  
+무료 데이터베이스에서 다른 데이터베이스로 업그레이드할 수 있지만 Compose for Postgres, Database for Postgres 또는 Db2 인스턴스를 무료 데이터베이스에 대해 재구성할 수는 없습니다. 업그레이드한 후에는 무료 데이터베이스를 사용하도록 돌아갈 수 없습니다. 구성, 스코어링 결과 및 설명과 같은 모든 최신 데이터를 재사용할 수 없습니다. 다른 스키마 또는 데이터베이스를 선택하면 {{site.data.keyword.aios_short}} 환경이 전체 다시 설정됩니다.
+
+
 
 ### 기존 또는 신규 데이터베이스
 {: #cdb-exn}
@@ -57,14 +61,14 @@ subcollection: ai-openscale
 
 1.  기존 데이터베이스 유형(Compose for Postgres, Database for Postgres 또는 Db2)을 선택한 다음 **데이터베이스** 드롭 다운 메뉴에서 데이터베이스를 선택하고 **스키마**를 선택하십시오.
 
-    {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 배치 출력 및 재교육 데이터를 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다.
+    {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 배치 출력 및 재훈련 데이터를 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
     {: note}
 
     ![데이터베이스 선택](images/gs-config-database3.png)
 
 1.  또한 **다른 위치 선택**을 클릭하여 {{site.data.keyword.Bluemix_notm}} 계정 외부의 데이터베이스 위치를 지정할 수 있습니다.
 
-    {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 배치 출력 및 재교육 데이터를 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다.
+    {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 배치 출력 및 재훈련 데이터를 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다.
     {: note}
 
     - **데이터베이스 유형**(`Compose for PostgreSQL`, `Database for PostgreSQL` 또는 `Db2`)를 선택한 다음 연결 정보를 제공하십시오.
@@ -114,10 +118,10 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}}은 모니터를 구성하기 위해 사용자에게 모니터될 데이터 로그를 시작하는 데 필요한 스코어링 요청을 전송하도록 요청합니다.
 
-Watson 기계 학습에 배치되는 모델은 {{site.data.keyword.aios_short}}에 의해 자동으로 스코어링됩니다. Watson 기계 학습에 배치된 모델만 있는 경우, 이 화면이 표시되지 않습니다.
+Watson Machine Learning에 배치되는 모델은 {{site.data.keyword.aios_short}}에 의해 자동으로 스코어링됩니다.
 {: note:}
 
-배치(이 경우, "Fraud Detector")를 선택한 다음 제공된 `cURL` 또는 `Python` 코드 스니펫을 사용하여 모델 배치 요청 및 응답 데이터를 로그하십시오. 자세한 내용은 [비Watson 기계 학습 서비스 인스턴스에 대한 페이로드 로깅](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)을 참조하십시오.
+배치(이 경우, "Fraud Detector")를 선택한 다음 제공된 `cURL` 또는 `Python` 코드 스니펫을 사용하여 모델 배치 요청 및 응답 데이터를 로그하십시오. 자세한 내용은 [비Watson Machine Learning 서비스 인스턴스에 대한 페이로드 로깅](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)을 참조하십시오.
 
 코드 스니펫에 제공되는 필드 및 값은 예이므로 이를 사용자의 실제 값으로 대체해야 합니다.
 {: important}

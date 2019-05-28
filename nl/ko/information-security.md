@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: security, information security, GDPR, 
 
@@ -45,7 +45,7 @@ IBM은 고객 및 파트너에게 혁신적인 데이터 개인정보 보호, �
 
 IBM은 고객 및 파트너가 GDPR을 준수하는 데 도움을 줄 수 있도록 혁신적인 데이터 개인정보 보호, 보안 및 통제 솔루션을 제공하려 노력하고 있습니다.
 
-준수 준비를 지원하기 위한 IBM의 자체 GDPR 준비 과정 및 GDPR 기능과 오퍼링에 대한 자세한 정보를 보려면 [여기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/gdpr)를 클릭하십시오.{: new_window}.
+준수 준비를 지원하기 위한 IBM의 자체 GDPR 준비 과정 및 GDPR 기능과 오퍼링에 대한 자세한 정보를 보려면 [여기를 클릭하십시오 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/gdpr){: new_window}.
 
 ## {{site.data.keyword.aios_short}}에서 데이터 레이블링 및 삭제
 {: #is-stda}
