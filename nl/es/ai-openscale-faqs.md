@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: FAQs, frequently asked questions, questions
 
@@ -23,6 +23,7 @@ subcollection: ai-openscale
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Preguntas más frecuentes
 {: #wos-faqs}
@@ -34,6 +35,7 @@ Aquí encontrará algunas de las preguntas más frecuentes de los usuarios de {{
 {: #wos-faqs-questions}
 
 - [¿Cómo convierto una columna de predicción de un tipo de datos entero a un tipo de datos categórico?](#wos-faqs-convert-data-types)
+- [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](#trainingdata)
 
 ### ¿Cómo convierto una columna de predicción de un tipo de datos entero a un tipo de datos categórico?
 {: #wos-faqs-convert-data-types}
@@ -44,5 +46,19 @@ Los datos de entrenamiento podrían tener etiquetas de clase como por ejemplo �
 
 WML tiene un concepto de esquema de salida que define el esquema de la salida del punto final de puntuación de WML y el rol de las distintas columnas. Los roles se utilizan para identificar qué columna contiene el valor de predicción, qué columna contiene la probabilidad de predicción, el valor de etiqueta de clase, etc. El esquema de salida se establece automáticamente para modelos creados utilizando el creador de modelos. También se puede establecer utilizando el cliente Python de WML. Los usuarios pueden utilizar el esquema de salida para definir una columna que contenga la representación de serie de la predicción. Para ello, se establece el valor de modeling_role para la columna en ‘decoded-target’. La documentación del cliente Python de WML está disponible en: http://wml-api-pyclient-dev.mybluemix.net/#repository. Busque “OUTPUT_DATA_SCHEMA” para comprender el esquema de salida. La API que se utilizará es la API store_model que acepta OUTPUT_DATA_SCHEMA como parámetro.
 
+### ¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?
+{: #trainingdata}
+
+Debe proporcionar {{site.data.keyword.aios_short}} acceso a los datos de entrenamiento almacenados en Db2 o {{site.data.keyword.cos_full_notm}}, o bien debe ejecutar un cuaderno que pueda acceder a los datos de entrenamiento. {{site.data.keyword.aios_short}} necesita acceder a sus datos de entrenamiento por las razones siguientes:
+
+- Para generar explicaciones contrastativas: para crear explicaciones y acceder a estadísticas, como por ejemplo el valor medio, la desviación estándar y los valores individuales de los datos de entrenamiento necesarios.
+- Para visualizar estadísticas de datos de entrenamiento: para llenar la página de detalles de sesgo, {{site.data.keyword.aios_short}} debe tener datos de entrenamiento a partir de los que generar las estadísticas.
+
+<!---
+- To compute drift: Training data is required to build the drift detection model.
+- To identify and suggest features to monitor for fairness: {{site.data.keyword.aios_short}} needs access to training data to suggest reference and monitored ranges.
+--->
+
+En el enfoque basado en cuaderno, se espera que cargue las estadísticas y otra información al configurar un despliegue en {{site.data.keyword.aios_short}}. Esto implica que {{site.data.keyword.aios_short}} ya no tiene acceso a los datos de entrenamiento fuera del cuaderno, que se ejecuta en su entorno. Solo tiene acceso a la información cargada durante la configuración.
 
 

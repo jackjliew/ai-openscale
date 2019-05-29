@@ -1,6 +1,6 @@
 ---
 
-title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
+title: Confianza y transparencia para los modelos de aprendizaje automático con {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
 intro: In this extended tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
@@ -179,6 +179,7 @@ Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enla
   ![Establezca manualmente el tipo de datos](images/data-type-manual.png)
 
 - Los datos de entrenamiento ahora se deberían visualizar correctamente en columnas. Pulse **Siguiente** para continuar y a continuación pulse **Iniciar carga** para cargar los datos.
+
 --->
 
 ## Configure un proyecto de Watson Studio
@@ -202,9 +203,11 @@ Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enla
 {: #tadv-acsw}
 
 - Abra el proyecto de Watson Studio y seleccione la pestaña **Valores**. En la sección **Servicios asociados**, pulse el menú desplegable **Añadir servicio** y seleccione **Watson**:
+
   ![Añadir servicio de Watson](images/add_watson_service.png)
 
 - Pulse el enlace **Añadir** en el mosaico **Machine Learning** y seleccione la pestaña **Existente**. Elija el servicio que ha creado en la sección anterior del menú desplegable **Instancia de servicio existente** y pulse **Seleccionar**.
+
 - En la pestaña de valores del proyecto, seleccione de nuevo **Añadir servicio** y elija **Spark** en el menú desplegable. En la pestaña **Existente**, elija el servicio Spark que ha creado y pulse **Seleccionar**.
 
 ## Cree y despliegue un modelo de aprendizaje automático
@@ -215,7 +218,9 @@ Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enla
 - Descargue el archivo siguiente:
 
     - [CARS4U Modelo de recomendación de acción ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/CARS4U%20action%20recommendation%20-%20model.ipynb){: new_window}
+
 - En la pestaña **Activos** del proyecto de Watson Studio, pulse el botón **Añadir a proyecto** y seleccione **Cuaderno** en el menú desplegable:
+
   ![Añadir conexión](images/add_notebook.png)
 
 - Seleccione **Desde archivo**:
@@ -223,9 +228,11 @@ Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enla
   ![Nuevo formulario de cuaderno](images/new_notebook_name.png)
 
 - A continuación, pulse el botón **Elegir archivo** y seleccione el cuaderno "CARS4U Modelo de recomendación de acción" que ha descargado:
+
   ![Nuevo formulario de cuaderno](images/new_notebook_name2.png)
 
 - En la sección **Seleccionar tiempo de ejecución**, elija la instancia de Spark que ha creado anteriormente en la lista desplegable:
+
   ![Tiempo de ejecución de Spark](images/spark_runtime.png)
 
 - Pulse **Crear cuaderno**.
@@ -239,6 +246,7 @@ El cuaderno `CARS4U Modelo de recomendación de acción` contiene instrucciones 
 - En la pestaña **Activos** del proyecto de Watson Studio, pulse el icono **Editar** junto al cuaderno `CARS4U Modelo de recomendación de acción` para editarlo.
 
 - En la sección 2.2, "Cargar datos a la base de datos de PostgreSQL", reemplace las credenciales de servicio de Postgres con las que ha creado en la sección anterior.
+
 - En la sección 4, "Almacenar el modelo en el repositorio", en **SUGERENCIA**, reemplace las credenciales de Watson Machine Learning con las que ha creado en la sección anterior.
 
 - Una vez que haya especificado sus credenciales, el cuaderno estará listo para ejecutarse. Pulse el elemento de menú **Kernel** y seleccione **Reiniciar y ejecutar todo** en el menú:
@@ -265,6 +273,7 @@ El cuaderno `CARS4U Modelo de recomendación de acción` contiene instrucciones 
 {: #tadv-cmlm}
 
 Puesto que el modelo de aprendizaje automático se ha desplegado, puede configurar {{site.data.keyword.aios_short}} para garantizar la confianza y transparencia con sus modelos. Seleccione la pestaña **Gestionar** de la instancia de {{site.data.keyword.aios_short}} y pulse el botón **Iniciar aplicación**. Se abre la página Cómo empezar de {{site.data.keyword.aios_full}}; pulse **Empezar**.
+
 - Seleccione el mosaico "Watson Machine Learning" y pulse **Siguiente**.
 
   ![Establecer instancia de WML](images/gs-wml-default.png)
@@ -274,20 +283,24 @@ Puesto que el modelo de aprendizaje automático se ha desplegado, puede configur
   ![Establecer instancia de WML](images/gs-set-wml.png)
 
 - Ahora puede seleccionar qué modelos desplegados supervisará {{site.data.keyword.aios_short}}. Compruebe el modelo que ha creado y desplegado; pulse **Siguiente** para aceptar esto:
+
   ![Seleccionar modelos desplegados](images/gs-set-deploy.png)
 
 - A continuación, debe elegir una base de datos de PostgreSQL. Tiene dos opciones: la base de datos del plan Lite gratuito o una base de datos nueva o existente. Para esta guía de aprendizaje, seleccione el mosaico **Utilizar una base de datos existente o adquirir una nueva**.
+
     ![Seleccionar base de datos](images/gs-set-lite-db1.png)
 
-  Consulte todos los detalles sobre cada una de estas opciones en el tema [Especificación de una base de datos](/docs/services/ai-openscale?topic=ai-openscale-connect-db).
+  Consulte toda la información detallada sobre cada una de estas opciones en el tema [Especificación de una base de datos](/docs/services/ai-openscale?topic=ai-openscale-connect-db).
   {: note}
 
 - Una vez que haya seleccionado la opción "Utilizar una base de datos existente o adquirir una nueva", {{site.data.keyword.aios_short}} compruebe su cuenta de {{site.data.keyword.cloud_notm}} para localizar la base de datos de Compose for PostgreSQL existente.
+
   Seleccione el esquema "data_mart" en el menú desplegable **Esquema**.
 
   ![Seleccionar base de datos](images/gs-set-schema1.png)
 
 - Una vez que haya seleccionado la base de datos y el esquema, pulse **Siguiente** para revisar los datos del resumen y pulse **Guardar**.
+
   ![Seleccionar base de datos](images/gs-setup-summary3.png)
 
   Pulse **Ir al panel de control** cuando se le solicite.
@@ -304,7 +317,9 @@ El cuaderno `{{site.data.keyword.aios_short}} y motor de Watson Machine Learning
 - Descargue el archivo siguiente:
 
     - [{{site.data.keyword.aios_short}} y motor de Watson Machine Learning ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+
 - En la pestaña **Activos** del proyecto de Watson Studio, pulse el botón **Añadir a proyecto** y seleccione **Cuaderno** en el menú desplegable:
+
   ![Añadir conexión](images/add_notebook.png)
 
 - Seleccione **Desde archivo**:
@@ -316,6 +331,7 @@ El cuaderno `{{site.data.keyword.aios_short}} y motor de Watson Machine Learning
   ![Nuevo formulario de cuaderno](images/new_notebook_name3.png)
 
 - En la sección **Seleccionar tiempo de ejecución**, elija la instancia de Spark que ha creado anteriormente en la lista desplegable:
+
   ![Tiempo de ejecución de Spark](images/spark_runtime.png)
 
 - Pulse **Crear cuaderno**.
@@ -350,15 +366,18 @@ Utilizando el panel de control de [{{site.data.keyword.aios_short}} ![Icono de e
   ![Detalles](images/insight-dash-tab.png)
 
 La página Detalles proporciona una descripción general de las métricas para los modelos desplegados. Puede ver fácilmente las alertas de las métricas de Equidad o Exactitud que han caído por debajo del umbral establecido al ejecutar el cuaderno (70%). Los datos y los valores utilizados en esta guía de aprendizaje habrán creado métricas de Exactitud y Equidad similares a las que se muestran aquí.
+
   ![Descripción general de Detalles](images/insight-overview-adv-tutorial.png)
 
 ### Vea los datos de supervisión de su despliegue
 {: #tadv-vmdd}
 
 Seleccione un despliegue pulsando el mosaico en la página Detalles. Aparecerán los datos de supervisión de ese despliegue. Deslice el marcador por el gráfico para seleccionar los datos del periodo de tiempo durante el que ha ejecutado el cuaderno. A continuación, seleccione, el enlace **Ver detalles**.
+
   ![Supervisar datos](images/insight-monitor-data1.png)
 
 Ahora puede revisar en los gráficos los datos que ha supervisado. Para este ejemplo, puede utilizar el menú desplegable **Característica** para seleccionar "Hijos" o "Sexo", para ver detalles sobre los datos supervisados.
+
   ![Descripción general de Detalles](images/insight-review-charts1.png)
 
 <!---

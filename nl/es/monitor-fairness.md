@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, fairness monitor
 
@@ -111,7 +111,7 @@ Considere un punto de datos donde, para `Sexo=Hombre` (Valor de referencia), el 
 
      Pulse **Siguiente** cuando haya terminado con cada una de las características.
 
-1.  Ahora, especifique valores que representen un resultado favorable para el modelo. Los valores se derivan de la columna `etiqueta` de los datos de entrenamiento, si el esquema de salida del modelo contiene una columna de correlación. En WML, la columna `predicción` siempre tiene un valor doble. La columna de correlación se utiliza para especificar la correlación de este valor `predicción` en la etiqueta de clase.
+1.  Ahora, especifique valores que representen un resultado favorable para el modelo. Los valores se derivan de la columna `etiqueta` de los [datos de entrenamiento](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata), si el esquema de salida del modelo contiene una columna de correlación. En WML, la columna `predicción` siempre tiene un valor doble. La columna de correlación se utiliza para especificar la correlación de este valor `predicción` en la etiqueta de clase.
 
     Por ejemplo, si el valor `predicción` es `1.0`, la columna de correlación podría tener un valor de `Préstamo denegado`; esto implica que la predicción del modelo es `Préstamo denegado`. Por lo tanto, si el esquema de salida del modelo contiene una columna de correlación, especifique los valores Favorable y Desfavorable utilizando aquellos presentes en la columna de correlación.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -42,7 +42,7 @@ A continuación, mueva el marcador por el gráfico para ver las estadísticas de
 
 - ***Equidad***: dos de las tres características de Equidad, Valor de vehículo y Código de área, han cumplidos sus umbrales establecidos para la aprobación. La tercera característica de Equidad, Edad, se ha marcado como sesgada. También puede ver el número de resultados esperados (en este caso los porcentajes de Aprobados vs. Denegados) para una población individual en las características cuya equidad se supervisa.
 - ***Exactitud***: el promedio de la métrica de Exactitud es del 78%.
-- ***Prom. req/mín***: de promedio, se han procesado 300 registros por minuto entre las 1:00 y 2:00 PM CST. El rendimiento se calcula cada minuto, y se informa en el gráfico de su valor promedio en el curso de la hora.
+- ***Prom. req/mín***: de promedio, se han procesado 300 registros por minuto entre las 1:00 y 2:00 PM CST. La productividad se calcula cada minuto, y se informa en el gráfico de su valor promedio en el curso de la hora.
 
 ## Visualización de los datos correspondientes a una hora específica
 {: #it-vdet}
@@ -75,7 +75,7 @@ El gráfico muestra varios elementos:
 ## Datos de tiempo de ejecución y entrenamiento
 {: #it-rtsw}
 
-El conmutador de datos de tiempo de ejecución y entrenamiento le permite alternar las diferencias entre su modelo entrenado y los datos recopilados en tiempo de ejecución que desencadenan un aviso de sesgo.
+El conmutador de datos de tiempo de ejecución y entrenamiento le permite alternar las diferencias entre su modelo entrenado y los datos recopilados en tiempo de ejecución que desencadenan un aviso de sesgo. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 ![Conmutador de entrenamiento de tiempo de ejecución](images/runtime_train_data.png)
 

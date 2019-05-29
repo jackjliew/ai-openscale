@@ -6,7 +6,10 @@ Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
+    faststart.md
     alt-setup.md
+    tutorial-adv.md
+    addl-rsc.md
     index.md
 
     {: .topicgroup}
@@ -15,9 +18,6 @@ Watson OpenScale
         frameworks-azure-ml-studio.md
         frameworks-aws-sagemaker.md
         frameworks-custom.md
-
-    tutorial-adv.md
-    addl-rsc.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -33,15 +33,17 @@ Watson OpenScale
         config-file.md
 
     {: .topicgroup}
-    Trabajar con supervisores
+    Configuración de supervisores
         monitor-overview.md
         monitor-fairness.md
         monitor-accuracy.md
+        metrics.md
 
     {: .topicgroup}
-    Visualización y edición de datos de supervisor
+    Obtener detalles
         insight-overview.md
         insight-timechart.md
+        analyze-metrics-transactions.md
         insight-explain.md
 
     openscale-recovery.md
@@ -52,6 +54,7 @@ Watson OpenScale
     [CLI de ModelOps](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
     [Cliente Python](http://ai-openscale-python-client.mybluemix.net/)
     activity-tracker.md
+    language-support.md
     information-security.md
     [Repositorio GitHub de Watson](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
@@ -60,6 +63,7 @@ Watson OpenScale
     gettinghelp.md
     release-notes.md
     ai-openscale-faqs.md
+    [Crear un caso de soporte](https://cloud.ibm.com/unifiedsupport/supportcenter)
 
     {: .topicgroup}
     Comunidad de desarrolladores

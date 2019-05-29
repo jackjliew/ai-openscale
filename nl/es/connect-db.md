@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-29"
 
 keywords: databases, connections, scoring, requests
 
@@ -30,7 +30,7 @@ Especifique una base de datos para que la utilice su instancia de {{site.data.ke
 
 {{site.data.keyword.aios_short}} utiliza una base de datos para almacenar datos de carga útil, opinión y medidas. Antes de seleccionar una base de datos, también puede seleccionar un esquema para la base de datos (un esquema es una colección con nombre de tablas de la base de datos).
 
-1.  Elija una base de datos. Tiene dos opciones: la base de datos del plan Lite gratuito o una base de datos nueva o existente.
+1.  Elija una base de datos. Tiene dos opciones: la base de datos gratuita o una base de datos nueva o existente. 
 
     ![Seleccionar base de datos](images/gs-config-database.png)
 
@@ -43,15 +43,19 @@ de PostgreSQL con {{site.data.keyword.aios_short}}, pero no podrá configurar el
 ### Base de datos del plan Lite gratuito
 {: #cdb-lite}
 
-**NOTA**: la ase de datos del plan Lite gratuito tiene algunas limitaciones importantes:
+**NOTA**: La base de datos gratuita tiene algunas limitaciones importantes:
 
-- La base de datos del plan Lite gratuito está alojada y no puede acceder a ella directamente.
+- La base de datos gratuita está alojada y no se puede acceder a ella directamente.
 - {{site.data.keyword.aios_full}} tendrá acceso completo a su base de datos, y por lo tanto tendrá acceso completo a sus datos.
-- La base de datos del plan Lite gratuito no cumple el GDPR. Si su modelo procesa información de identificación personal, no puede utilizar la base de datos del plan Lite gratuito. Debe adquirir una base de datos nueva, o utilizar una base de datos existente que cumpla las reglas del GDPR. Consulte [Seguridad de la información](/docs/services/ai-openscale?topic=ai-openscale-is-ov) para obtener más información.
+- La base de datos gratuita no cumple el GDPR. Si el modelo procesa información de identificación personal, no puede utilizar la base de datos gratuita. Debe adquirir una base de datos nueva, o utilizar una base de datos existente que cumpla las reglas del GDPR. Consulte [Seguridad de la información](/docs/services/ai-openscale?topic=ai-openscale-is-ov) para obtener más información.
 
-Para continuar utilizando la base de datos del plan Lite gratuito, seleccione simplemente la opción y a continuación revise los datos de resumen y pulse **Guardar**.
+Para continuar utilizando la base de datos gratuita, pulse el mosaico **Utilizar la base de datos gratuita alojada por {{site.data.keyword.aios_short}}** y a continuación revise los datos de resumen y pulse **Guardar**.
 
   ![Seleccionar base de datos](images/gs-config-database2.png)
+  
+Puede actualizar a otra base de datos desde la base de datos gratuita, pero no es posible volver a configurar una instancia de Compose for Postgres, Database for Postgres o Db2 para la base de datos gratuita. Después de actualizar, no es posible volver a la base de datos gratuita. Los datos actuales, como la configuración, los resultados de puntuación y las explicaciones, no se pueden volver a utilizar. Al seleccionar otro esquema o base de datos, el entorno de {{site.data.keyword.aios_short}} se restablece completamente.
+
+
 
 ### Base de datos nueva o existente
 {: #cdb-exn}
@@ -60,7 +64,7 @@ Para continuar utilizando la base de datos del plan Lite gratuito, seleccione si
 
 1.  Seleccione el tipo de base de datos existente (Compose for Postgres, Database for Postgres o Db2), una base de datos en el menú desplegable **Base de datos** y a continuación un **Esquema**:
 
-    {{site.data.keyword.aios_short}} utiliza la base de datos PostgreSQL o Db2 para almacenar datos de salida o de reentrenamiento del despliegue de modelo. Actualmente no se da soporte a los planes Lite Db2.
+    {{site.data.keyword.aios_short}} utiliza la base de datos PostgreSQL o Db2 para almacenar datos de salida o de reentrenamiento del despliegue de modelo. Actualmente no se da soporte a los planes Lite Db2. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![Seleccionar base de datos](images/gs-config-database3.png)
@@ -117,7 +121,7 @@ Para continuar utilizando la base de datos del plan Lite gratuito, seleccione si
 
 Para configurar supervisores, {{site.data.keyword.aios_short}} requiere que se envíe una solicitud de puntuación, a fin de empezar a registrar los datos que se supervisarán.
 
-{{site.data.keyword.aios_short}} puntúa automáticamente los modelos desplegados en Watson Machine Learning. Si sólo tiene modelos desplegados en Watson Machine Learning, no verá esta pantalla.
+{{site.data.keyword.aios_short}} puntúa automáticamente los modelos desplegados en Watson Machine Learning.
 {: note:}
 
 Seleccione un despliegue, en este caso "Detector de fraude" y a continuación utilice los fragmentos de código `cURL` o `Python` proporcionados para registrar los datos de solicitud y respuesta de despliegue del modelo. Consulte [Registro de carga útil para instancias de servicio que no sea Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect) para obtener más información.

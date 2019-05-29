@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: deployment, monitors, data
 
@@ -42,7 +42,7 @@ Configure y habilite los supervisores para cada despliegue del que realice el se
 ## Trabajar con datos
 {: #mo-work-data}
 
-1.  Ahora proporcionará información sobre su modelo y los datos de entrenamiento; pulse **Siguiente**.
+1.  Ahora proporcionará información sobre su modelo y los datos de entrenamiento; pulse **Siguiente**. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
     ![Preparar explicación](images/config-what-monitor.png)
 

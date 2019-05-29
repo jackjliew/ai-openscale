@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -34,7 +34,7 @@ Consulte información más completa en la [documentación del cliente Python de 
 ## Antes de empezar
 {: #cml-prereq}
 
-Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud Object Storage para supervisar si el modelo está sesgado. La explicabilidad y la exactitud no están soportadas para las funciones Python.
+Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud Object Storage para supervisar si el modelo está sesgado. La explicabilidad y la exactitud no están soportadas para las funciones Python. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - Importe e inicialice {{site.data.keyword.aios_short}}
 

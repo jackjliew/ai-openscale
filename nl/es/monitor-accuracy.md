@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: accuracy, 
 
@@ -41,7 +41,7 @@ La exactitud puede indicar distintos aspectos en función del tipo de algoritmo:
 
 Debe añadir datos de opinión etiquetados manualmente mediante la interfaz de usuario de {{site.data.keyword.aios_short}} tal como se muestra a continuación, utilizando un [cliente Python ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: new_window} o una [API REST ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window}.
 
-Revise [Tipos de modelo soportados](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mod) e [Infraestructuras soportadas](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) para ver las limitaciones de supervisión de la exactitud.
+Revise [Infraestructuras soportadas](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) para ver las limitaciones de supervisión de la exactitud.
 
 <!---
 You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
@@ -87,7 +87,7 @@ Ahora se le presenta la opción de proporcionar directamente datos de opinión a
 
 Seleccione el botón *Añadir datos de opinión* para cargar un archivo de datos con formato CSV; establezca el delimitador para que coincida con sus datos.
 
-Se espera que el archivo CSV de opinión tenga los valores de todas las características, y el valor de destino/etiqueta asignado manualmente. Por ejemplo, los datos de entrenamiento del modelo de fármacos contiene los valores de características `"EDAD"`, `"SEXO"`, `"BP"`, `"COLESTEROL"`,`"NA"`,`"K"`, y el valor de destino/etiqueta `"FÁRMACO"`. El archivo CSV de opinión debe incluir valores para estos campos; un ejemplo sería `[43, M, ALTO, NORMAL, 0.6345, 1.4587, FármacoX]`. Si se proporciona una cabecera para el archivo CSV de opinión, los nombres de campo se correlacionan utilizando esa cabecera. De lo contrario, el orden de los campos **DEBE** ser exactamente el mismo que en el esquema de entrenamiento.
+Se espera que el archivo CSV de opinión tenga los valores de todas las características, y el valor de destino/etiqueta asignado manualmente. Por ejemplo, los datos de entrenamiento del modelo de fármacos contiene los valores de características `"EDAD"`, `"SEXO"`, `"BP"`, `"COLESTEROL"`,`"NA"`,`"K"`, y el valor de destino/etiqueta `"FÁRMACO"`. El archivo CSV de opinión debe incluir valores para estos campos; un ejemplo sería `[43, M, ALTO, NORMAL, 0.6345, 1.4587, FármacoX]`. Si se proporciona una cabecera para el archivo CSV de opinión, los nombres de campo se correlacionan utilizando esa cabecera. De lo contrario, el orden de los campos **DEBE** ser exactamente el mismo que en el esquema de entrenamiento. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 {: important}
 
 Observe que los tipos de predicción que devuelve el modelo y la columna de etiqueta/destino de los datos de opinión deben coincidir.

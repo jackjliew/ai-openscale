@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: release notes, what's new 
 
@@ -24,6 +24,20 @@ subcollection: ai-openscale
 
 En este documento se describen las características nuevas y los problemas conocidos de {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
+
+## 25 de abril de 2019
+{: #rn-25April2019}
+
+Están disponibles los siguientes cambios y características nuevas en el servicio.
+
+### Características nuevas y cambios
+{: #rn-25April2019nf}
+
+Además de las mejoras de usabilidad y las actualizaciones de seguridad, nuestros desarrolladores han estado ocupados con nuevas características. Las características de {{site.data.keyword.aios_short}} que se han añadido o mejorado durante las semanas anteriores incluyen, entre otras:
+
+- __*Visita guiada de configuración automatizada*__: una manera de configurar el entorno de {{site.data.keyword.aios_short}} mediante una nueva visita guiada. Utilice la [Configuración automatizada](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) para suministrar servicios y descargar y configurar un modelo. Verá esta opción cuando tenga una instancia nueva de {{site.data.keyword.aios_short}}.
+- __*Cambiar a beta*__: ![etiqueta beta](images/beta.png) un nuevo conmutador, **Explore la nueva versión beta**, le permite trabajar en nuestro entorno beta, donde puede consultar todas las últimas características y nuevas funciones. ¿No le gusta lo que ve? Simplemente vuelva a cambiar pulsando **Volver a la versión original**. Esto no afecta a la configuración ni a los supervisores. Las prestaciones siguientes forman parte del programa beta actual:
+    - __*Confusion matrix*__: [Confusion Matrix muestra](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) los falsos positivos y los falsos negativos. Pulse en una celda para ver el subconjunto de registros de opiniones.
 
 ## 5 de marzo de 2019
 {: #rn-5March2019}
@@ -99,8 +113,6 @@ Las características de {{site.data.keyword.aios_short}} que se han añadido o m
 - __*Explicabilidad*__: soporte de modelos de regresión, funciones Python y explicaciones contrastivas complementarias. Consulte [Supervisión de la explicabilidad](/docs/services/ai-openscale?topic=ai-openscale-ie-ov) para obtener más información.
 
 - __*Almacén de datos*__: supervisión de la calidad sin depender de Watson Machine Learning, y posibilidad de utilizar su propia base de datos, ya sea Db2, Postgres o Db2 on Cloud.
-
-- __*NeuNetS (Beta)*__: IBM Neural Network Synthesizer (NeuNetS) está disponible como release beta (sólo cloud pública). Consulte la [documentación de NeuNetS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window} para obtener más información.
 
 - __*Interfaz de usuario mejorada*__: la interfaz de usuario de {{site.data.keyword.aios_short}} se ha mejorado para incluir una distribución de histograma de tiempo de ejecución con conmutación para datos de entrenamiento, ID y versiones de modelo y una tabla de ID de transacciones desde el histograma. Consulte [Visualización de datos de una hora específica](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet) para obtener más información.
 

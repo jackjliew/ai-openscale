@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -35,7 +35,7 @@ Para proporcionar acceso a crédito a una población más amplia y de mayor ries
 
 Las técnicas de ciencia de datos más adecuadas para estos diversos conjuntos de datos, tales como los árboles de potenciación del gradiente y las redes neuronales, pueden generar modelos de riesgo precisos, pero con un coste. Estos modelos "de caja negra" generan predicciones opacas que de alguna manera deben ser transparentes, a fin de garantizar la aprobación normativa, como por ejemplo el Artículo 22 de la Regulación de Protección General de Datos (GDPR) o el Fair Credit Reporting Act (FCRA) del gobierno federal de Estados Unidos que gestiona el Consumer Financial Protection Bureau.
 
-El modelo de riesgo crediticio que se proporciona en esta guía de aprendizaje utiliza un conjunto de datos de entrenamiento que contiene 20 atributos sobre cada solicitante de préstamo. Dos de estos atributos, edad y sexo, se pueden probar para comprobar si presentan algún sesgo. Para esta guía de aprendizaje, nos centraremos en el sesgo respecto a sexo y edad.
+El modelo de riesgo crediticio que se proporciona en esta guía de aprendizaje utiliza un conjunto de datos de entrenamiento que contiene 20 atributos sobre cada solicitante de préstamo. Dos de estos atributos, edad y sexo, se pueden probar para comprobar si presentan algún sesgo. Para esta guía de aprendizaje, nos centraremos en el sesgo respecto a sexo y edad. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 {{site.data.keyword.aios_short}} supervisará la propensión del modelo desplegado a un resultado favorable ("Sin riesgo") para un grupo (el grupo de referencia) respecto a otro (el grupo supervisado). En esta guía de aprendizaje, el grupo supervisado para sexo es `mujer`, mientras que el grupo supervisado por edad es `de 18 a 25`.
 
@@ -64,30 +64,30 @@ En esta guía de aprendizaje, aprenderá a:
 ## Suministre servicios de {{site.data.keyword.cloud_notm}}
 {: #crt-services}
 
-Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window} con su ID de IBM. Al suministrar servicios, especialmente en el caso de Db2 Warehouse, compruebe que su organización y espacio seleccionados son los mismos para todos los servicios.
+Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window} con su {{site.data.keyword.ibmid}}. Al suministrar servicios, especialmente si utiliza Db2 Warehouse, compruebe que su organización y espacio seleccionados son los mismos para todos los servicios.
 
-### Cree una cuenta de Watson Studio
+### Cree una cuenta de {{site.data.keyword.DSX}}
 {: #crt-wstudio}
 
-- [Cree una instancia de Watson Studio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/watson-studio){: new_window} si no tiene aún una asociada con la cuenta:
+- [Cree una instancia de {{site.data.keyword.DSX}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/watson-studio){: new_window} si no tiene aún una asociada con su cuenta:
 
   ![Watson Studio](images/watson_studio.png)
 
 - Dé un nombre al servicio, elija el plan Lite (gratuito) y pulse el botón **Crear**.
 
-### Suministre un servicio de Cloud Object Storage
+### Suministre un servicio de {{site.data.keyword.cos_full_notm}}
 {: #crt-cos}
 
-- [Suministre un servicio de Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} si no tiene aún uno asociado con su cuenta:
+- [Suministre un servicio de {{site.data.keyword.cos_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} si no tiene aún uno asociado con su cuenta:
 
   ![Object Storage](images/object_storage.png)
 
 - Dé un nombre al servicio, elija el plan Lite (gratuito) y pulse el botón **Crear**.
 
-### Suministre un servicio de Watson Machine Learning
+### Suministre un servicio de {{site.data.keyword.pm_full}}
 {: #crt-wml}
 
-- [Suministre una instancia de Watson Machine Learning ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/machine-learning){: new_window} si no tiene aún una asociada con la cuenta:
+- [Suministre una instancia de {{site.data.keyword.pm_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/machine-learning){: new_window} si no tiene aún una asociada con su cuenta:
 
   ![Machine Learning](images/machine_learning.png)
 
@@ -96,7 +96,7 @@ Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enla
 ### (Opcional) Suministre un servicio Databases for PostgreSQL o DB2 Warehouse
 {: #crt-db2}
 
-Si tiene una cuenta de {{site.data.keyword.cloud_notm}} de pago, debe suministrar un servicio `Databases for PostgreSQL` o `Db2 Warehouse` para beneficiarse completamente de la integración con Watson Studio y los servicios de aprendizaje continuo. Si elige no suministrar un servicio de pago, puede utilizar el almacenamiento PostgreSQL interno gratuito con {{site.data.keyword.aios_short}}, pero no podrá configurar el aprendizaje continuo para el modelo.
+Si tiene una cuenta de {{site.data.keyword.cloud_notm}} de pago, debe suministrar un servicio `Databases for PostgreSQL` o `Db2 Warehouse` para aprovechar todas las ventajas de la integración con {{site.data.keyword.DSX}} y los servicios de aprendizaje continuo. Si elige no suministrar un servicio de pago, puede utilizar el almacenamiento PostgreSQL interno gratuito con {{site.data.keyword.aios_short}}, pero no podrá configurar el aprendizaje continuo para el modelo.
 
 - [Suministre un servicio de Databases for PostgreSQL![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/databases-for-postgresql) o [un servicio de Db2 Warehouse ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/db2-warehouse) si no tiene aún uno asociado con la cuenta:
 
@@ -106,14 +106,14 @@ Si tiene una cuenta de {{site.data.keyword.cloud_notm}} de pago, debe suministra
 
 - Dé un nombre al servicio, elija el plan Standard (Databases for PostgreSQL) o el plan Entry (Db2 Warehouse) y pulse el botón **Crear**.
 
-## Configure un proyecto de Watson Studio
+## Configure un proyecto de {{site.data.keyword.DSX}}
 {: #crt-set-wstudio}
 
-- Inicie sesión en su [cuenta de Watson Studio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://dataplatform.ibm.com/){: new_window}. Pulse el icono de avatar de la cuenta en la esquina superior derecha y compruebe que la cuenta que utilice sea la misma cuenta que ha utilizado para crear los servicios de {{site.data.keyword.cloud_notm}}:
+- Inicie sesión en su cuenta de [{{site.data.keyword.DSX}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://dataplatform.ibm.com/){: new_window}. Pulse el {{site.data.keyword.avatar}} y compruebe que la cuenta que utilice sea la misma cuenta que ha utilizado para crear los servicios de {{site.data.keyword.cloud_notm}}:
 
   ![Misma cuenta](images/same_account.png)
 
-- En Watson Studio, empiece creando un nuevo proyecto. Seleccione "Crear un proyecto":
+- En {{site.data.keyword.DSX}}, empiece creando un nuevo proyecto. Seleccione "Crear un proyecto":
 
   ![Crear proyecto de Watson Studio](images/studio_create_proj.png)
 
@@ -123,17 +123,17 @@ Si tiene una cuenta de {{site.data.keyword.cloud_notm}} de pago, debe suministra
 
 - Dé un nombre y una descripción al proyecto, asegúrese de que el servicio de Cloud Object Storage que ha creado esté seleccionado en el menú desplegable **Almacenamiento** y pulse **Crear**.
 
-## Cree y despliegue un modelo de aprendizaje automático
+## Cree y despliegue un modelo de {{site.data.keyword.pm_short}}
 {: #crt-make-model}
 
-### Añada el cuaderno `Trabajar con Watson Machine Learning` al proyecto de Watson Studio
+### Añada el cuaderno `Trabajar con Watson Machine Learning` al proyecto de {{site.data.keyword.DSX}}
 {: #crt-add-notebook}
 
 - Descargue el archivo siguiente:
 
     - [Trabajar con Watson Machine Learning ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
-- En la pestaña **Activos** del proyecto de Watson Studio, pulse el botón **Añadir a proyecto** y seleccione **Cuaderno** en el menú desplegable:
+- En la pestaña **Activos** del proyecto de {{site.data.keyword.DSX}}, pulse el botón **Añadir a proyecto** y seleccione **Cuaderno** en el menú desplegable:
 
   ![Añadir conexión](images/add_notebook.png)
 
@@ -201,7 +201,8 @@ La página Detalles proporciona una descripción general de las métricas para l
 
   ![Supervisar datos](images/insight-monitor-data2.png)
 
-Ahora puede revisar en los gráficos los datos que ha supervisado. Para este ejemplo, puede ver que para la característica "Sexo", el grupo `mujer` ha recibido el resultado favorable "Sin riesgo" (68%) menor que el del grupo `hombre` (78%). 
+Ahora puede revisar en los gráficos los datos que ha supervisado. Para este ejemplo, puede ver que para la característica "Sexo", el grupo `mujer` ha recibido el resultado favorable "Sin riesgo" (68%) menor que el del grupo `hombre` (78%).
+
   ![Descripción general de Detalles](images/insight-review-charts2.png)
 
 ### Vea la explicabilidad de una transacción de modelo

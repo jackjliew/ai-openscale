@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -26,7 +26,7 @@ subcollection: ai-openscale
 # Infraestructuras de WML
 {: #frmwrks-wml}
 
-{{site.data.keyword.aios_full}} da completo soporte a las siguientes infraestructuras de {{site.data.keyword.pm_full}}:
+{{site.data.keyword.aios_full}} da completo soporte a las siguientes infraestructuras de {{site.data.keyword.pm_full}}: 
 {: shortdesc}
 
 Tabla 1. Detalles del soporte de las infraestructuras
@@ -38,7 +38,12 @@ Tabla 1. Detalles del soporte de las infraestructuras
 | Función de Python | Regresión | Estructurados |
 | XGBoost | Clasificación | Estructurados |
 | XGBoost | Regresión | Estructurados |
+| Keras con TensorFlow<sup>1</sup> | Clasificación | Desestructurado (imagen, texto) |
+| Keras con TensorFlow<sup>1</sup> | Regresión | Desestructurado (imagen, texto) |
 {: caption="Detalles del soporte de las infraestructuras" caption-side="top"}
+
+<sup>1</sup>El soporte de Keras no incluye el soporte de la equidad.
+{: note}
 
 
 
