@@ -25,6 +25,45 @@ subcollection: ai-openscale
 This document outlines new features for {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
 
+## 29 April 2019
+{: #rn-29April2019}
+
+The following new features and changes to the service are available.
+
+- __*Bias Visualization Enhancements*__: ![beta tag](images/beta.png) The bias visualization includes the following views: 
+
+    - Payload + Perturbed: Includes the scoring request received for the selected hour plus additional records from previous hours if the minimum number of records required for evaluation was not met. Includes additional perturbed/synthesized records used to test the model's response when the value of the monitored feature changes.
+    - Payload: The actual scoring requests received by the model for the selected hour.
+    - Training: The training data records used to train the model.
+    - Debiased: The output of the debiasing algorithm after processing the runtime and perturbed data.
+
+   For more information, see [Bias visualization](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-monitor-bias-viz).
+
+- __*Accuracy computation for de-biased output*__: Accuracy computation includes de-biased output. You can compare the accuracy of the de-biased model with the accuracy of a production model
+
+   For more information, see [Accuracy](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-debias-view).
+
+- __*Support for multiple machine learning engines*__: {{site.data.keyword.aios_short}} supports multiple machine learning engines within a single instance provided that provisioning is performed through the command line interface (CLI).
+
+   For more information, see [ModelOps CLI tool](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mop).
+
+- __*Internationalization Support*__: {{site.data.keyword.aios_short}} supports localized versions and includes processing data in supported languages. The {{site.data.keyword.aios_short}} user interface, documentation, and error messages are currently translated into the following languages: 
+    - German
+    - French
+    - Italian
+    - Spanish
+    - Brazilian Portuguese
+    - Japanese
+    - Simplified Chinese
+    - Traditional Chinese
+    - Korean
+
+   For more information (including limitations), see [Supported languages for {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-sl-langs).
+
+- __*{{site.data.keyword.pm_full}} framework enhancements*__: {{site.data.keyword.aios_short}} now supports the scikit-learn and XGBoost frameworks on the {{site.data.keyword.pm_full}} engine.
+
+   For more information, see [WML frameworks](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml).
+
 ## 25 April 2019
 {: #rn-25April2019}
 
@@ -106,7 +145,7 @@ The following new features, changes, and known issues with the service are avail
 ## Next steps
 {: #relnotes-in-next}
 
-Still have questions? 
+Still have questions?
 
 - [Limitations](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
 - [Known issues](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)

@@ -104,7 +104,7 @@ The bias visualization includes the following views:
    - Newest/latest record timestamp in the data frame for which bias has to be computed
 
   ![example of debiased data](images/debiased.png)
-
+  
 ### Example
 {: #mf-ex1}
 
