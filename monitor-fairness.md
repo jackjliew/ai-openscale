@@ -52,6 +52,27 @@ A model is deemed to be biased if, across this combined dataset, the percentage 
 Fairness values can be more than 100%. This means that the Monitored group received more favorable outcomes than the Reference group. In addition, if no new scoring requests are sent, then the Fairness value will remain constant.
 {: note}
 
+### Bias visualization
+{: #mf-monitor-bias-viz}
+
+The bias visualization includes the following views: 
+
+- **Payload + Perturbed**: Includes the scoring request received for the selected hour plus additional records from previous hours if the minimum number of records required for evaluation was not met. Includes additional perturbed/synthesized records used to test the model's response when the value of the monitored feature changes.
+
+  ![example of payload plus perturbed](images/payload&perturbed.png)
+
+- **Payload**: The actual scoring requests received by the model for the selected hour.
+
+  ![example of payload data](images/payload.png)
+
+- **Training**: The training data records used to train the model.
+
+  ![example of training data](images/training.png)
+
+- **Debiased**: The output of the debiasing algorithm after processing the runtime and perturbed data.
+
+  ![example of debiased data](images/debiased.png)
+
 ### Example
 {: #mf-ex1}
 
