@@ -52,24 +52,56 @@ A model is deemed to be biased if, across this combined dataset, the percentage 
 Fairness values can be more than 100%. This means that the Monitored group received more favorable outcomes than the Reference group. In addition, if no new scoring requests are sent, then the Fairness value will remain constant.
 {: note}
 
-### Bias visualization
+### Bias visualization ![beta tag](images/beta.png)
 {: #mf-monitor-bias-viz}
 
 The bias visualization includes the following views: 
 
 - **Payload + Perturbed**: Includes the scoring request received for the selected hour plus additional records from previous hours if the minimum number of records required for evaluation was not met. Includes additional perturbed/synthesized records used to test the model's response when the value of the monitored feature changes.
 
+   Take note of the following payload and perturbed details:
+
+   - Number of records that are read in this hour from payload table
+   - Additional records that are read from previous hours (For example, if the `min_records` value in the fairness configuration is set to 1000, and between 2pm to 3pm only 10 records are added, to meet the minimum requirement, the system would read an additional 990 records from previous hours.)
+   - Perturbed records per fairness attribute
+   - Oldest record timestamp in the data frame for which bias has to be computed
+   - Newest/latest record timestamp in the data frame for which bias has to be computed
+
   ![example of payload plus perturbed](images/payload&perturbed.png)
 
+
+
 - **Payload**: The actual scoring requests received by the model for the selected hour.
+
+   Take note of the following payload details:
+   
+   - Number of records that are read/on which debiased operation is performed from payload table
+   - Oldest record timestamp in the data frame for which bias has to be computed
+   - Newest/latest record timestamp in the data frame for which bias has to be computed
+
 
   ![example of payload data](images/payload.png)
 
 - **Training**: The training data records used to train the model.
 
-  ![example of training data](images/training.png)
+   Take note of the following training details:
+   
+   - Number of training data records. Training data is read once and distribution is stored under subscription/fairness_configuration. While computing distribution we should also find the number of training data records and store it in the same distribution. Also when training data is changed, meaning if POST /data_distribution is made again, we need to update this value under fairness_configuration/training_data_distribution. While sending the metric, we should also send this value as well.
+   - The time at which training data is last processed (first time and subsequent updates)
 
+  ![example of training data](images/training.png)
+   
+
+   
 - **Debiased**: The output of the debiasing algorithm after processing the runtime and perturbed data.
+
+   Take note of the following debiased details:
+   
+   - Number of records that are read/on which the debiased operation is performed from payload table
+   - Additional records that are read to perform bias, and thereby de-biased as well. Same number as in the `Payload + Perturbed` selection
+   - Perturbed records per fairness attribute
+   - Oldest record timestamp in the data frame for which bias has to be computed
+   - Newest/latest record timestamp in the data frame for which bias has to be computed
 
   ![example of debiased data](images/debiased.png)
 
