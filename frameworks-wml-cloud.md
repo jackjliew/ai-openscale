@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -38,6 +38,8 @@ Table 1. Framework support details
 | Python function | Regression | Structured |
 | XGBoost | Classification | Structured |
 | XGBoost | Regression | Structured |
+| scikit-learn | Classification | Structured |
+| scikit-learn | Regression | Structured |
 | Keras with TensorFlow<sup>1</sup> | Classification | Unstructured (image, text) |
 | Keras with TensorFlow<sup>1</sup> | Regression | Unstructured (image, text) |
 {: caption="Framework support details" caption-side="top"}

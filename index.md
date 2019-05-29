@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -51,9 +51,9 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
 ## Limitations
 {: #in-lim}
 
-- The current release only supports one database, one Watson Machine Learning instance, and one instance of {{site.data.keyword.aios_short}}
+- The current release only supports one database, one {{site.data.keyword.pm_full}} instance, and one instance of {{site.data.keyword.aios_short}}
 
-- The database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.cloud_notm}} account.
+- The database and {{site.data.keyword.pm_full}} instance must be deployed in the same {{site.data.keyword.cloud_notm}} account.
 
 - The Lite (free) plan has the following monthly limits:
 
@@ -62,14 +62,35 @@ Here's how you will implement {{site.data.keyword.aios_short}}:
     - 50,000 payload records (cumulative)
     - 50,000 feedback records (cumulative)
 
-- {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model deployment output and retraining data. Lite Db2 plans are not currently supported.
+- {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model related data (feedback data, scoring payload) and calculated metrics. Lite Db2 plans are not currently supported.
 
 - There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
 
-- Currently, explanations cannot be generated for images which are greater than 1 MB in size.
+- For {{site.data.keyword.pm_full}}, the payload of perturbed images being sent via the machine learning gateway cannot exceed 1 MB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
+
 
 <p>&nbsp;</p>
 
+## Known issues
+{: #rn-12ki}
+
+- **Microsoft Azure**
+
+    - Of the two types of Azure Machine Learning web services, only the `New` type is supported by {{site.data.keyword.aios_short}}. The `Classic` type is not supported.
+
+    - __*Default input name must be used*__: In the Azure web service, the default input name is `"input1"`. Currently, this field is mandated for {{site.data.keyword.aios_short}} and, if it is missing, {{site.data.keyword.aios_short}} will not work.
+
+      If your Azure web service does not use the default name, change the input field name to `"input1"`, then the code will work.
+
+- **AWS SageMaker**
+
+    - __*BlazingText algorithm is not supported*__: The AWS SageMaker BlazingText algorithm input payload format is not supported in the current release of {{site.data.keyword.aios_short}}.
+
+- **Custom ML service instance**
+
+    - The [Python module](/docs/services/ai-openscale?topic=ai-openscale-as-module) does not currently have Explainability working for the Custom service instance. This is because the Custom service instance requires a numerical prediction in the response data, which is not included with the module script.
+
+<p>&nbsp;</p>
 
 ## Supported machine learning engines and frameworks
 {: #in-fram}
@@ -127,4 +148,7 @@ The [{{site.data.keyword.aios_short}} Python client ![External link icon](../../
 - [Get started](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted) with the service.
 - View the [API Reference material ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale){: new_window}.
 
-Still have questions? [Contact IBM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.
+Still have questions? 
+
+- [What's new](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)
+- [Contact IBM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.

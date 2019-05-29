@@ -58,7 +58,7 @@ You will also provision the following **paid** {{site.data.keyword.cloud_notm}} 
   A $200 {{site.data.keyword.cloud_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
   {: tip}
 
-The PostgreSQL database and Watson Machine Learning instance must be deployed in the same {{site.data.keyword.cloud_notm}} account.
+The PostgreSQL database and {{site.data.keyword.pm_full}} instance must be deployed in the same {{site.data.keyword.cloud_notm}} account.
 {: important}
 
 If you have already provisioned the necessary services for example if you have completed the other tutorial, proceed to [Set up a Watson Studio project](#tadv-setup-ws) below.

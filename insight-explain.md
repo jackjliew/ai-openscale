@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-29"
 
 keywords: explainability, monitoring, explain, explaining, transactions, transaction ID
 
@@ -74,7 +74,7 @@ Thus, these two values tell us the behavior of the model in the vicinity of the 
 
 For an image classification model example of explainability, you can see which parts of an image contributed positively to the predicted outcome and which contributed negatively. In the below example, the image on the right show the parts which impacted positively to the prediction and the image on the left shows the parts of images that had a negative impact on the outcome.
 
-Currently, explanations cannot be generated for images which are greater than 1 MB in size.
+- For {{site.data.keyword.pm_full}}, the payload of perturbed images being sent via the machine learning gateway cannot exceed 1 MB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
 {: note}
 
 ![Explainability image classification](images/insight-explain-image.png)
