@@ -86,7 +86,7 @@ The bias visualization includes the following views:
 
    Take note of the following training details:
    
-   - Number of training data records. Training data is read once and distribution is stored under subscription/fairness_configuration. While computing distribution we should also find the number of training data records and store it in the same distribution. Also when training data is changed, meaning if POST /data_distribution is made again, we need to update this value under fairness_configuration/training_data_distribution. While sending the metric, we should also send this value as well.
+   - Number of training data records. Training data is read one time, and distribution is stored in the `subscription/fairness_configuration` variable. While computing distribution we should also find the number of training data records and store it in the same distribution. Also when training data is changed, meaning if the `POST /data_distribution` command is run again, this value is updated in the `fairness_configuration/training_data_distribution` variable. While sending the metric, we should also send this value as well.
    - The time at which training data is last processed (first time and subsequent updates)
 
   ![example of training data](images/training.png)
