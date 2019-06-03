@@ -22,18 +22,19 @@ subcollection: ai-openscale
 # Création de moniteurs et de métriques personnalisés ![balise bêta](images/beta.png)
 {: #cst_mtrcs}
 
-Les moniteurs personnalisés consolident un ensemble de métriques personnalisées qui vous permettent de suivre de manière quantitative tous les aspects de votre déploiement de modèle et de votre application métier. Vous pouvez définir des métriques personnalisées et les utiliser parallèlement aux métriques standard, telles que les métriques de qualité, de performances ou d'équité des modèles, qui sont surveillées dans {{site.data.keyword.aios_full}}.{: shortdesc}
+Les moniteurs personnalisés consolident un ensemble de métriques personnalisées qui vous permettent de suivre de manière quantitative tous les aspects de votre déploiement de modèle et de votre application métier. Vous pouvez définir des métriques personnalisées et les utiliser parallèlement aux métriques standard, telles que les métriques de qualité, de performances ou d'équité des modèles, qui sont surveillées dans {{site.data.keyword.aios_full}}.
+{: shortdesc}
 
-Pour gérer les moniteurs et les métriques personnalisés, vous devez utiliser l'interface de programmes qui fait partie du SDK Python. De la même manière, vous pouvez stocker les métriques personnalisées dans le magasin de données {{site.data.keyword.aios_short}} pour y accéder au besoin. Les mesures personnalisées sont également visualisées dans le tableau de bord de {{site.data.keyword.aios_short}}. 
+Pour gérer les moniteurs et les métriques personnalisés, vous devez utiliser l'interface de programmes qui fait partie du SDK Python. De la même manière, vous pouvez stocker les métriques personnalisées dans le magasin de données {{site.data.keyword.aios_short}} pour y accéder au besoin. Les métriques personnalisées sont également affichées dans le tableau de bord de {{site.data.keyword.aios_short}}.
 
 ## Gestion des métriques personnalisées
 {: #cst_mtrc_mgmt}
 
 Pour gérer les métriques personnalisées, vous devez effectuer les tâches suivantes :
 
-1. Enregistrer le moniteur personnalisé avec la définition des métriques. 
+1. Enregistrer le moniteur personnalisé avec la définition des métriques.
 2. Activer le moniteur personnalisé.
-3. Stocker les valeurs des métriques. 
+3. Stocker les valeurs des métriques.
 
 Les tutoriels avancés suivants montrent comment procéder :
 
@@ -54,7 +55,7 @@ Pour accéder aux métriques personnalisées et les visualiser, vous pouvez util
 
    Pour plus d'informations, consultez la [documentation du SDK Python](http://ai-openscale-python-client.mybluemix.net/).
 
-La visualisation de vos métriques personnalisées est également disponible sur le tableau de bord de Watson OpenScale.
+Vos métriques personnalisées sont affichées dans le tableau de bord de {{site.data.keyword.aios_short}}.
 
 <!---
 ![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)

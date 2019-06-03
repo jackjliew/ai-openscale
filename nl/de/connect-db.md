@@ -50,7 +50,7 @@ Wenn Sie mit der Verwendung der kostenlosen Datenbank fortfahren möchten, klick
 
   ![Datenbank auswählen](images/gs-config-database2.png)
   
-Sie können für die kostenlose Datenbank ein Upgrade auf eine andere Datenbank durchführen. Es ist jedoch nicht möglich, eine Compose for Postgres-, Database for Postgres- oder Db2-Instanz für die kostenlose Datenbank zu konfigurieren. Es ist nicht möglich, nach dem Upgrade zur Verwendung der kostenlosen Datenbank zurückzukehren. Alle aktuellen Daten, wie z. B. die Konfiguration, die Scoring-Ergebnisse und die Erklärungen, können nicht wiederverwendet werden. Wenn Sie ein anderes Schema oder eine andere Datenbank auswählen, wird die {{site.data.keyword.aios_short}}-Umgebung vollständig zurückgesetzt. 
+Sie können für die kostenlose Datenbank ein Upgrade auf eine andere Datenbank durchführen. Es ist jedoch nicht möglich, eine Compose for Postgres-, Database for Postgres- oder Db2-Instanz für die kostenlose Datenbank zu konfigurieren. Es ist nicht möglich, nach dem Upgrade zur Verwendung der kostenlosen Datenbank zurückzukehren. Alle aktuellen Daten, wie z. B. die Konfiguration, die Scoring-Ergebnisse und die Erklärungen, können nicht wiederverwendet werden. Wenn Sie ein anderes Schema oder eine andere Datenbank auswählen, wird die {{site.data.keyword.aios_short}}-Umgebung vollständig zurückgesetzt.
 
 
 
@@ -61,14 +61,14 @@ Sie können für die kostenlose Datenbank ein Upgrade auf eine andere Datenbank 
 
 1.  Wählen Sie zunächst den Typ Ihrer vorhandenen Datenbank (Compose for Postgres, Database for Postgres oder Db2) aus und wählen Sie dann im Dropdown-Menü **Datenbank** eine Datenbank und anschließend ein **Schema** aus:
 
-    Zum Speichern von Modellbereitstellungsausgaben und Retrainingdaten verwendet {{site.data.keyword.aios_short}} eine PostgreSQL- oder Db2-Datenbank. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt. Weitere Informationen zu Trainingsdaten finden Sie in [Warum benötigt {{site.data.keyword.aios_short}} Zugriff auf meine Trainingsdaten?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    {{site.data.keyword.aios_short}} verwendet eine PostgreSQL- oder Db2-Datenbank zum Speichern modellbezogener Daten (Rückmeldedaten, Scoring-Nutzdaten) und berechneter Metriken. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt. Weitere Informationen zu Trainingsdaten finden Sie in [Warum benötigt {{site.data.keyword.aios_short}} Zugriff auf meine Trainingsdaten?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![Datenbank auswählen](images/gs-config-database3.png)
 
 1.  Sie können auch auf **Anderen Standort auswählen** auswählen, um eine Speicherposition der Datenbank außerhalb Ihres {{site.data.keyword.Bluemix_notm}}-Kontos anzugeben.
 
-    Zum Speichern von Modellbereitstellungsausgaben und Retrainingdaten verwendet {{site.data.keyword.aios_short}} eine PostgreSQL- oder Db2-Datenbank. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt.
+    {{site.data.keyword.aios_short}} verwendet eine PostgreSQL- oder Db2-Datenbank zum Speichern modellbezogener Daten (Rückmeldedaten, Scoring-Nutzdaten) und berechneter Metriken. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt.
     {: note}
 
     - Wählen Sie den **Datenbanktyp** aus (`Compose for PostgreSQL`, `Database for PostgreSQL` oder `Db2`) und geben Sie dann die Verbindungsinformationen an:

@@ -27,7 +27,7 @@ subcollection: ai-openscale
 # 자동화된 설정
 {: #wos-fast-start}
 
-{{site.data.keyword.aios_short}}에서 모델을 모니터하는 방법을 빠르게 확인하려면 {{site.data.keyword.aios_short}} UI에 처음 로그인할 때 제공되는 데모 시나리오 옵션을 실행하십시오. [UI 데모에 대한 작업](#wos-work-demo)을 참조하십시오.
+{{site.data.keyword.aios_short}}에서 모델을 모니터하는 방법을 빠르게 확인하려면 {{site.data.keyword.aios_short}} UI에 처음 로그인할 때 제공되는 데모 시나리오 옵션을 실행하십시오.  [UI 데모에 대한 작업](#wos-work-demo)을 참조하십시오.
 {: shortdesc}
 
 ## 시작하기 전에
@@ -99,7 +99,7 @@ subcollection: ai-openscale
 
    ![데모를 시작합니다](images/fastpath_demo_11.35.06.png)
 
-지난 시간 동안의 트랜잭션 ID가 편향성이 있는 해당 트랜잭션에 대해 나열됩니다. 이 모듈에서 사용되는 모델의 경우 사용 가능한 요청에 대한 편향성이 있습니다. 
+지난 시간 동안의 트랜잭션 ID가 편향성이 있는 해당 트랜잭션에 대해 나열됩니다. 이 모듈에서 사용되는 모델의 경우 사용 가능한 요청에 대한 편향성이 있습니다.
 
    ![데모를 시작합니다](images/fastpath_demo_11.35.12.png)
 
@@ -110,7 +110,7 @@ subcollection: ai-openscale
 ## 둘러보기 끝내기
 {: #wos-done-demo}
 
-1. **완료** 단추를 클릭하십시오. 
+1. **완료** 단추를 클릭하십시오.
 
    ![데모를 시작합니다](images/fastpath_demo_11.37.22.png)
 

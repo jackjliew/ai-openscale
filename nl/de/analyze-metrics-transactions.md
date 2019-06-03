@@ -28,15 +28,15 @@ subcollection: ai-openscale
 ## Fairnessmetriken
 {: #anlz_metrics_fairness}
 
-Verwenden Sie die Fairnessüberwachung, um festzustellen, ob die von Ihrem Modell generierten Ergebnisse für eine überwachte Gruppe fair sind. Wenn die Fairnessüberwachung aktiviert ist, generiert sie standardmäßig jede Stunde eine Gruppe von Metriken. Sie können diese Metriken bedarfsgesteuert generieren, indem Sie auf die Schaltfläche **Qualität jetzt überprüfen** klicken oder indem Sie den Python-Client verwenden. 
+Verwenden Sie die Fairnessüberwachung, um festzustellen, ob die von Ihrem Modell generierten Ergebnisse für eine überwachte Gruppe fair sind. Wenn die Fairnessüberwachung aktiviert ist, generiert sie standardmäßig jede Stunde eine Gruppe von Metriken. Sie können diese Metriken bedarfsgesteuert generieren, indem Sie auf die Schaltfläche **Qualität jetzt überprüfen** klicken oder indem Sie den Python-Client verwenden.
 
 Fairnessmetriken werden auf der Basis der folgenden Informationen berechnet:
 
 - Scoring-Nutzdaten
 
-Für eine korrekte Überwachung muss jede Scoring-Anforderung auch in {{site.data.keyword.aios_short}} protokolliert werden. Die Protokollierung von Nutzdaten ist für {{site.data.keyword.pm_full}}-Engines automatisiert. 
+Für eine korrekte Überwachung muss jede Scoring-Anforderung auch in {{site.data.keyword.aios_short}} protokolliert werden. Die Protokollierung von Nutzdaten ist für {{site.data.keyword.pm_full}}-Engines automatisiert.
 
-Bei anderen Machine Learning-Engines können die Nutzdaten entweder über den Python-Client oder über die REST-API bereitgestellt werden. 
+Bei anderen Machine Learning-Engines können die Nutzdaten entweder über den Python-Client oder über die REST-API bereitgestellt werden.
 
 Bei Machine Learning-Engines, bei denen es sich nicht um {{site.data.keyword.pm_full}} handelt, werden durch die Fairnessüberwachung zusätzliche Scoring-Anforderung für die überwachte Bereitstellung erstellt.
 {: note}
@@ -65,9 +65,9 @@ Die folgenden Fairnessmetriken werden von {{site.data.keyword.aios_short}} unter
 #### Fairness für eine Gruppe
 {: #anlz_metrics_supfairmets_group}
 
-- **Beschreibung**: Die Neigung des Modells, günstige Ergebnisse für eine Gruppe gegenüber einer anderen Gruppe zu liefern. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
-- **Standardempfehlung**: Der verzerrungsbereinigte Scoring-Endpunkt, den Sie in Ihrer Geschäftsanwendung verwenden können, um verzerrungsbereinigte Antworten vom bereitgestellten Modell zu erhalten. 
+- **Beschreibung**: Die Neigung des Modells, günstige Ergebnisse für eine Gruppe gegenüber einer anderen Gruppe zu liefern.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
+- **Standardempfehlung**: Der verzerrungsbereinigte Scoring-Endpunkt, den Sie in Ihrer Geschäftsanwendung verwenden können, um verzerrungsbereinigte Antworten vom bereitgestellten Modell zu erhalten.
 - **Problemtyp**: Alle
 - **Datentyp**: Strukturiert
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
@@ -97,14 +97,14 @@ Source of bias is also in fairness metrics
 ## Qualitätsmetriken
 {: #anlz_metrics_quality}
 
-Verwenden Sie die Qualitätsüberwachung, um zu ermitteln, wie gut die Ergebnisse von Ihrem Modell vorhergesagt werden. Wenn die Qualitätsüberwachung aktiviert ist, generiert sie standardmäßig jede Stunde eine Gruppe von Metriken. Sie können diese Metriken bedarfsgesteuert generieren, indem Sie auf die Schaltfläche **Qualität jetzt überprüfen** klicken oder indem Sie den Python-Client verwenden. 
+Verwenden Sie die Qualitätsüberwachung, um zu ermitteln, wie gut die Ergebnisse von Ihrem Modell vorhergesagt werden. Wenn die Qualitätsüberwachung aktiviert ist, generiert sie standardmäßig jede Stunde eine Gruppe von Metriken. Sie können diese Metriken bedarfsgesteuert generieren, indem Sie auf die Schaltfläche **Qualität jetzt überprüfen** klicken oder indem Sie den Python-Client verwenden.
 
 Qualitätsmetriken werden auf der Basis der folgenden Informationen berechnet:
 
 - Manuell gekennzeichnete Rückmeldedaten
 - Überwachte Bereitstellungsantworten für diese Daten
 
-Für eine korrekte Überwachung müssen Rückmeldedaten regelmäßig in {{site.data.keyword.aios_short}} protokolliert werden. Die Rückmeldedaten können entweder über die Option "Rückmeldedaten hinzufügen" oder über den Python-Client bzw. die REST-API bereitgestellt werden. 
+Für eine korrekte Überwachung müssen Rückmeldedaten regelmäßig in {{site.data.keyword.aios_short}} protokolliert werden. Die Rückmeldedaten können entweder über die Option "Rückmeldedaten hinzufügen" oder über den Python-Client bzw. die REST-API bereitgestellt werden.
 
 Bei Machine Learning-Engines, bei denen es sich nicht um {{site.data.keyword.aios_short}} handelt, z. B. Microsoft Azure ML Studio oder Amazon Sagemaker ML, werden durch die Qualitätsüberwachung zusätzliche Scoring-Anforderungen für die überwachte Umgebung erstellt.
 {: note}
@@ -114,24 +114,24 @@ Alle Metrikwerte für einen bestimmten Zeitraum können im {{site.data.keyword.a
 ![Diagramm mit Qualitätsmetriken, das die Abweichung bei der Fläche unterhalb der ROC-Kurve anzeigt](images/quality_metrics_001.png)
 
 
-Für einige Metriken können Sie auch zugehörige Details überprüfen, wie z. B. die Wahrheitsmatrix für die binäre Klassifikation und die Klassifikation mit mehreren Klassen. 
+Klicken Sie auf das Diagramm, um zugehörige Details, wie z. B. die Wahrheitsmatrix für die binäre Klassifikation und die Klassifikation mit mehreren Klassen, die für einige Metriken zur Verfügung stehen. 
 
 ![Detailtabelle für Qualitätsmetriken](images/quality_metrics_002.png)
 
 ### Unterstützte Qualitätsmetriken
 {: #anlz_metrics_supqualdets}
 
-Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unterstützt: 
+Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unterstützt:
 
 #### Fläche unterhalb der ROC-Kurve
 {: #anlz_metrics_supqualdets_roc}
 
-- **Beschreibung**: Die Fläche, die sich unterhalb der Recall-Kurve und der Kurve für die Falsch-positiv-Rate befindet. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Die Fläche, die sich unterhalb der Recall-Kurve und der Kurve für die Falsch-positiv-Rate befindet.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Binäre Klassifikation
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -140,11 +140,11 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 {: #anlz_metrics_supqualdets_pr}
 
 - **Beschreibung**: Die Fläche, die sich unterhalb der PR-Kurve (PR = Precision Recall) befindet.
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Binäre Klassifikation
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -152,12 +152,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Proportion der erklärten Varianz
 {: #anlz_metrics_supqualdets_var}
 
-- **Beschreibung**: Die Proportion der erklärten Varianz stellt das Verhältnis der erklärten Varianz zur Zielvarianz dar. Die erklärte Varianz gibt die Differenz zwischen der Zielvarianz und der Varianz eines Vorhersagefehlers an. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Die Proportion der erklärten Varianz stellt das Verhältnis der erklärten Varianz zur Zielvarianz dar. Die erklärte Varianz gibt die Differenz zwischen der Zielvarianz und der Varianz eines Vorhersagefehlers an.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Regression
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Keine
@@ -166,11 +166,11 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 {: #anlz_metrics_supqualdets_abserror}
 
 - **Beschreibung**: Der Mittelwert der absoluten Differenz zwischen der Modellvorhersage und dem Zielwert.
-- **Standardschwellenwerte**: Oberer Grenzwert = 0,8
+- **Standardschwellenwerte**: Oberer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Regression
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Keine
@@ -178,12 +178,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Mittlerer quadratischer Fehler
 {: #anlz_metrics_supqualdets_squerror}
 
-- **Beschreibung**: Der Mittelwert der quadrierten Differenz zwischen der Modellvorhersage und dem Zielwert. 
-- **Standardschwellenwerte**: Oberer Grenzwert = 0,8
+- **Beschreibung**: Der Mittelwert der quadrierten Differenz zwischen der Modellvorhersage und dem Zielwert.
+- **Standardschwellenwerte**: Oberer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Regression
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Keine
@@ -191,12 +191,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### R im Quadrat
 {: #anlz_metrics_supqualdets_r_squared}
 
-- **Beschreibung**: Das Verhältnis der Differenz zwischen der Zielvarianz und der Varianz für einen Vorhersagefehler in Bezug zur Zielvarianz. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Das Verhältnis der Differenz zwischen der Zielvarianz und der Varianz für einen Vorhersagefehler in Bezug zur Zielvarianz.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Regression
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Keine
@@ -204,12 +204,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Wurzel für mittleren quadratischen Fehler
 {: #anlz_metrics_supqualdets_squ_errors_mean}
 
-- **Beschreibung**: Quadratwurzel des Mittelwerts der quadrierten Differenz zwischen der Modellvorhersage und dem Zielwert. 
-- **Standardschwellenwerte**: Oberer Grenzwert = 0,8
+- **Beschreibung**: Quadratwurzel des Mittelwerts der quadrierten Differenz zwischen der Modellvorhersage und dem Zielwert.
+- **Standardschwellenwerte**: Oberer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Regression
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Keine
@@ -217,12 +217,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Genauigkeit
 {: #anlz_metrics_supqualdets_acc}
 
-- **Beschreibung**: Die Proportion der richtigen Vorhersagen. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Die Proportion der richtigen Vorhersagen.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtypen**: Binäre Klassifikation und Klassifikation mit mehreren Klassen
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -230,12 +230,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Gewichtete Richtig-positiv-Rate (wTPR)
 {: #anlz_metrics_supqualdets_wtpr}
 
-- **Beschreibung**: Gewichteter Mittelwert der Klasse TPR mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Gewichteter Mittelwert der Klasse TPR mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Klassifikation mit mehreren Klassen
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -243,12 +243,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Richtig-positiv-Rate (TPR)
 {: #anlz_metrics_supqualdets_tpr}
 
-- **Beschreibung**: Anteil der richtigen Vorhersagen innerhalb der Vorhersagen in der positiven Klasse. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Anteil der richtigen Vorhersagen innerhalb der Vorhersagen in der positiven Klasse.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Binäre Klassifikation
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -256,12 +256,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Gewichtete Falsch-positiv-Rate (wFPR)
 {: #anlz_metrics_supqualdets_wfpr_weighted}
 
-- **Beschreibung**: Gewichteter Mittelwert der Klasse FPR mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Gewichteter Mittelwert der Klasse FPR mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Klassifikation mit mehreren Klassen
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -269,12 +269,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Falsch-positiv-Rate (FPR)
 {: #anlz_metrics_supqualdets_fpr_false}
 
-- **Beschreibung**: Anteil der falschen Vorhersagen innerhalb der positiven Klasse. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Anteil der falschen Vorhersagen innerhalb der positiven Klasse.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Binäre Klassifikation
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -282,12 +282,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Gewichtete Trefferquote
 {: #anlz_metrics_supqualdets_weighted_recall}
 
-- **Beschreibung**: Gewichteter Mittelwert der Trefferquote mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Gewichteter Mittelwert der Trefferquote mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Klassifikation mit mehreren Klassen
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -295,12 +295,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Trefferquote
 {: #anlz_metrics_supqualdets_recall}
 
-- **Beschreibung**: Anteil der richtigen Vorhersagen innerhalb der positiven Klasse. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Anteil der richtigen Vorhersagen innerhalb der positiven Klasse.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Binäre Klassifikation
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -308,12 +308,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Gewichtete Genauigkeit
 {: #anlz_metrics_supqualdets_wgth_prec}
 
-- **Beschreibung**: Gewichteter Mittelwert der Genauigkeit mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Gewichteter Mittelwert der Genauigkeit mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Klassifikation mit mehreren Klassen
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -321,12 +321,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Genauigkeit
 {: #anlz_metrics_supqualdets_precision}
 
-- **Beschreibung**: Anteil der richtigen Vorhersagen innerhalb der Vorhersagen in der positiven Klasse. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Anteil der richtigen Vorhersagen innerhalb der Vorhersagen in der positiven Klasse.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Binäre Klassifikation
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -334,12 +334,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Gewichtetes F1-Maß
 {: #anlz_metrics_supqualdets_wght_f1-measure}
 
-- **Beschreibung**: Gewichteter Mittelwert des F1-Maßes mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Gewichteter Mittelwert des F1-Maßes mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Klassifikation mit mehreren Klassen
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -347,12 +347,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### F1-Maß
 {: #anlz_metrics_supqualdets_f1-measr}
 
-- **Beschreibung**: Harmonisches Mittel zwischen Genauigkeit und Trefferquote. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Harmonisches Mittel zwischen Genauigkeit und Trefferquote.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Binäre Klassifikation
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
@@ -360,12 +360,12 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 #### Logarithmischer Verlust
 {: #anlz_metrics_supqualdets_log_loss}
 
-- **Beschreibung**: Mittelwert der Zielklassenwahrscheinlichkeit (Konfidenz) der Logarithmen. Wird auch als erwartete Log-Likelihood bezeichnet. 
-- **Standardschwellenwerte**: Unterer Grenzwert = 0,8
+- **Beschreibung**: Mittelwert der Zielklassenwahrscheinlichkeit (Konfidenz) der Logarithmen. Wird auch als erwartete Log-Likelihood bezeichnet.
+- **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist. 
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant. 
-   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung. 
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtypen**: Binäre Klassifikation und Klassifikation mit mehreren Klassen
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Keine
@@ -373,23 +373,23 @@ Die folgenden Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unt
 ### Unterstützte Qualitätsdetails
 {: #anlz_metrics_supqualdets_suppr_dets}
 
-Die folgenden Details für Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unterstützt: 
+Die folgenden Details für Qualitätsmetriken werden von {{site.data.keyword.aios_short}} unterstützt:
 
 #### Wahrheitsmatrix
 {: #anlz_metrics_supqualdets_confusion}
 
-Mithilfe der Wahrheitsmatrix können Sie analysieren, für welche der Rückmeldedaten die Antwort der überwachten Bereitstellung korrekt ist und für welche nicht. 
+Mithilfe der Wahrheitsmatrix können Sie analysieren, für welche der Rückmeldedaten die Antwort der überwachten Bereitstellung korrekt ist und für welche nicht.
 
 ## Leistungsmetriken
 {: #anlz_metrics_performance}
 
-Mithilfe der Leistungsüberwachung können Sie die Geschwindigkeit ermitteln, mit der Datensätze in Ihrer Bereitstellung verarbeitet werden. Die Leistungsüberwachung wird bei der Auswahl der Bereitstellung aktiviert, die mithilfe von {{site.data.keyword.aios_short}} verfolgt und überwacht werden soll. 
+Mithilfe der Leistungsüberwachung können Sie die Geschwindigkeit ermitteln, mit der Datensätze in Ihrer Bereitstellung verarbeitet werden. Die Leistungsüberwachung wird bei der Auswahl der Bereitstellung aktiviert, die mithilfe von {{site.data.keyword.aios_short}} verfolgt und überwacht werden soll.
 
 Leistungsmetriken werden auf der Basis der folgenden Informationen berechnet:
 
 - Scoring-Nutzdaten
 
-Für eine korrekte Überwachung muss jede Scoring-Anforderung auch in {{site.data.keyword.aios_short}} protokolliert werden. Die Protokollierung von Nutzdaten ist für {{site.data.keyword.pm_full}}-Engines automatisiert. Bei anderen Machine Learning-Engines können die Nutzdaten entweder über den Python-Client oder über die REST-API bereitgestellt werden. Bei der Leistungsüberwachung werden keine zusätzlichen Scoring-Anforderungen für die überwachte Bereitstellung erstellt. 
+Für eine korrekte Überwachung muss jede Scoring-Anforderung auch in {{site.data.keyword.aios_short}} protokolliert werden. Die Protokollierung von Nutzdaten ist für {{site.data.keyword.pm_full}}-Engines automatisiert. Bei anderen Machine Learning-Engines können die Nutzdaten entweder über den Python-Client oder über die REST-API bereitgestellt werden. Bei der Leistungsüberwachung werden keine zusätzlichen Scoring-Anforderungen für die überwachte Bereitstellung erstellt.
 
 Leistungsmetrikwerte für einen bestimmten Zeitraum können im {{site.data.keyword.aios_short}}-Dashboard überwacht werden:
 
@@ -398,12 +398,12 @@ Leistungsmetrikwerte für einen bestimmten Zeitraum können im {{site.data.keywo
 ### Unterstützte Leistungsmetriken
 {: #anlz_metrics_performance_supp_quality_mets}
 
-Die folgenden Leistungsmetriken werden von {{site.data.keyword.aios_short}} unterstützt: 
+Die folgenden Leistungsmetriken werden von {{site.data.keyword.aios_short}} unterstützt:
 
 #### Durchsatz
 {: #anlz_metrics_performance_supp_quality_mets_through}
 
-- **Beschreibung**: Durchschnittliche Anzahl von Scoring-Anforderungen pro Minute in einem bestimmten Zeitrahmen. 
+- **Beschreibung**: Durchschnittliche Anzahl von Scoring-Anforderungen pro Minute in einem bestimmten Zeitrahmen.
 - **Standardschwellenwerte**: Nicht zutreffend
 - **Standardempfehlung**: Nicht zutreffend
 - **Problemtyp**: Alle

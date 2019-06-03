@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: dashboard, navigating, navigation, insights
 
@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Navigazione nel dashboard
 {: #io-ov}
 
-È possibile tenere traccia di tutte le distribuzioni che si stanno monitorando tramite il dashboard {{site.data.keyword.aios_short}}. Il dashboard è la vista principale in {{site.data.keyword.aios_short}}. Il dashboard è composto di cinque schede: 
+È possibile tenere traccia di tutte le distribuzioni che si stanno monitorando tramite il dashboard {{site.data.keyword.aios_short}}. Il dashboard è la vista principale in {{site.data.keyword.aios_short}}. Il dashboard è costituito dalle seguenti schede:
 
   ![Schede Insight](images/insight-tabs.png)
 
@@ -57,21 +57,10 @@ La scheda **Configura** (![scheda Configura](images/insight-config-tab.png)) apr
 
 Da qui, è possibile modificare direttamente le impostazioni di configurazione per il monitor di distribuzione.
 
-## Transazioni 
+## Transazioni
 {: #io-tran}
 
-La scheda **Spiega una transazione** (![scheda Spiega una transazione](images/insight-transact-tab.png)) consente di ricercare un ID di transazione specifico per spiegare una specifica transazione di distribuzione. Per ulteriori informazioni, consultare [Monitoraggio esplicabilità](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
-
-## Strumenti AI
-{: #io-too}
-
-La scheda **Strumenti AI** (![scheda Strumenti AI](images/aitools.png)) apre una finestra di dialogo che fornisce un link a opzioni aggiuntive di strumenti AI di IBM:
-
-- *[Piano Lite Watson Studio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*: Watson Studio fornisce l'ambiente e gli strumenti per analizzare e  visualizzare i dati, per ripulire e modellare i dati, per inserire i dati streaming, o per creare, addestrare e distribuire modelli di machine learning. Fare clic sul link "Registrati per il piano Lite gratuito di Watson Studio" per andare a Watson Studio.
-
-- *[NeuNetS ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://dataplatform.cloud.ibm.com/ml/neunets){: new_window}* (*Beta*): Neural Network Synthesizer, o "NeuNetS", correntemente in beta release, permette di sintetizzare i modelli AI utilizzando la tecnologia {{site.data.keyword.aios_short}} in Watson Studio. Fare clic sul pulsante "Sintetizza un modello" per utilizzare NeuNetS.
-
-  ![finestra di dialogo NeuNetS](images/neunets-dialog.png)
+Utilizzare la scheda **Spiega una transazione** (![scheda Spiega una transazione](images/insight-transact-tab.png)) per ricercare un ID di transazione specifico per spiegare una specifica transazione di distribuzione. Per ulteriori informazioni, consultare [Monitoraggio esplicabilità](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
 ## Scheda Guida
 {: #io-help}

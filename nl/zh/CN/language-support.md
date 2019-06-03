@@ -24,7 +24,7 @@ subcollection: ai-openscale
 # {{site.data.keyword.aios_short}} 支持的语言
 {: #sl-langs}
 
-缺省情况下会启用语言支持，并且可以通过在 Web 浏览器中更新您的语言首选项来设置其中一种受支持语言的特定翻译用户界面。{{site.data.keyword.aios_full}} 用户界面当前已翻译为以下语言
+缺省情况下会启用语言支持。您可以通过在 Web 浏览器中更新您的语言首选项来设置其中一种受支持语言的特定已翻译用户界面。{{site.data.keyword.aios_full}} 用户界面当前已翻译为以下语言
 {: shortdesc}
 
 - 巴西葡萄牙语 (pt-br)

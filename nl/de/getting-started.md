@@ -1,6 +1,6 @@
 ---
 
-title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
+title: Vertrauen und Transparenz für Ihre Machine Learning-Modelle mit {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
 intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
@@ -280,9 +280,9 @@ Nachdem das Machine Learning-Modell bereitgestellt worden ist, können Sie {{sit
 
 Bevor Sie Ihre Überwachungen konfigurieren können, müssen Sie mindestens eine Scoring-Anforderung für Ihr Modell generieren, um eine Protokollierung von Nutzdaten zu generieren, die von den Überwachungen verarbeitet werden kann. In diesem Abschnitt stellen Sie Stichprobendaten in Form einer JSON-Datei zur Verfügung, um eine Scoring-Anforderung zu generieren.
 
-1.  Laden Sie die Datei [credit_payload_data.json ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) herunter. 
+1.  Laden Sie die Datei [credit_payload_data.json ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) herunter.
 
-1.  Klicken Sie auf der Registerkarte **Bereitstellungen** Ihres Watson Studio-Projekts auf den Link **credit-risk-deploy** und dann auf die Registerkarte **Testen** und wählen Sie das Symbol für JSON-Eingaben aus. 
+1.  Klicken Sie auf der Registerkarte **Bereitstellungen** Ihres Watson Studio-Projekts auf den Link **credit-risk-deploy** und dann auf die Registerkarte **Testen** und wählen Sie das Symbol für JSON-Eingaben aus.
 
     ![JSON-Test](images/json_test02.png)
 
@@ -468,7 +468,6 @@ Wenn Sie das Ergebnis sofort überprüfen möchten, wählen Sie auf der Seite **
 {: #gs-viewmon}
 
 1.  Wählen Sie eine Bereitstellung aus, indem Sie auf der Seite 'Einsichten' auf die entsprechende Kachel klicken. Es werden die Überwachungsdaten für diese Bereitstellung angezeigt. Hinweis: Nachdem Sie die CSV-Datei mit Rückmeldedaten hochgeladen haben, kann es sein, dass die Fairness- oder Genauigkeitsdaten nicht aktualisiert werden. Wenn Sie das Ergebnis sofort überprüfen möchten, klicken Sie auf die Schaltfläche **Fairness jetzt überprüfen** oder **Qualität jetzt überprüfen**.
-
 1.  Verschieben Sie die Markierung auf dem Diagramm, um Daten für den Zeitrahmen auszuwählen, für den Sie die Stichprobendaten und die Rückmeldestichprobendaten ausgeführt haben. Klicken Sie dann auf **Details anzeigen**.
 
     ![Daten überwachen](images/insight-monitor-data.png)

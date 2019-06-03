@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # 指定 Microsoft Azure ML Studio 實例
 {: #connect-azure}
 
-您在 {{site.data.keyword.aios_short}} 工具中的首要步驟是指定一個 Microsoft Azure ML Studio 實例。您的 Azure ML Studio 實例就是您儲存 AI 模型和部署的所在。
+您在 {{site.data.keyword.aios_short}} 工具中的首要步驟是指定 Microsoft Azure ML Studio 實例。您的 Azure ML Studio 實例就是您儲存 AI 模型和部署的所在。
 {: shortdesc}
 
 ## 連接 Azure ML Studio 實例

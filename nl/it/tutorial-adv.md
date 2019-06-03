@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-29"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -35,7 +35,7 @@ Per fornire l'accesso al credito a una popolazione più ampia e maggiormente sog
 
 Le tecniche di data science più idonee a questi dataset così diversificati, quali le strutture ad albero con potenziamento dei gradienti e le reti neurali, possono generare modelli di rischio altamente accurati ma costosi. Modelli "scatola nera" di questo tipo generano previsioni poco chiare, che in qualche modo devono essere rese trasparenti per garantire la conformità a normative quali l'Articolo 22 del GDPR (General Data Protection Regulation), o al FCRA (Fair Credit Reporting Act) federale gestito dal Consumer Financial Protection Bureau.
 
-Il modello rischio di credito fornito in questo supporto didattico utilizza un dataset di training che contiene 20 attributi relativi a ciascuno dei richiedenti di un prestito. È possibile verificare la distorsione per due di questi attributi, l'età e il sesso. Per questo supporto didattico, l'attenzione sarà rivolta alla distorsione rispetto a età e sesso.
+Il modello rischio di credito fornito in questo supporto didattico utilizza un dataset di training che contiene 20 attributi relativi a ciascuno dei richiedenti di un prestito. È possibile verificare la distorsione per due di questi attributi, l'età e il sesso. Per questo supporto didattico, l'attenzione sarà rivolta alla distorsione rispetto a età e sesso. Per ulteriori informazioni sui dati di training, consultare [Perché {{site.data.keyword.aios_short}} ha bisogno di accedere ai miei dati di training?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 {{site.data.keyword.aios_short}} monitorerà la propensione del modello distribuito per un risultato favorevole ("Nessun rischio") per un gruppo (il gruppo di riferimento) rispetto a un altro (il gruppo monitorato). In questo supporto didattico, il gruppo monitorato per il sesso è `femminile`, mentre il gruppo monitorato per l'età è `da 18 a 25`.
 
@@ -64,39 +64,39 @@ In questo supporto didattico, verranno svolte le seguenti attività:
 ## Eseguire il provisioning di servizi {{site.data.keyword.cloud_notm}}
 {: #crt-services}
 
-Accedere all'account [{{site.data.keyword.cloud_notm}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}){: new_window} con l'ID IBM. Quando si esegue il provisioning dei servizi, particolarmente nel caso di Db2 Warehouse, verificare che l'organizzazione e lo spazio selezionati siano identici per tutti i servizi.
+Accedere all'account [{{site.data.keyword.cloud_notm}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}){: new_window} con l'{{site.data.keyword.ibmid}}. Quando si esegue il provisioning dei servizi, in particolare se si utilizza Db2 Warehouse, verificare che l'organizzazione e lo spazio selezionati siano identici per tutti i servizi.
 
-### Creare un account Watson Studio
+### Creare un account {{site.data.keyword.DSX}}
 {: #crt-wstudio}
 
-- [Creare un'istanza di Watson Studio ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/watson-studio){: new_window} se non si dispone già di un'istanza associata all'account:
+- [Creare un'istanza di {{site.data.keyword.DSX}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/watson-studio){: new_window} se non si dispone già di un'istanza associata all'account:
 
   ![Watson Studio](images/watson_studio.png)
 
 - Fornire un nome al servizio, selezionare il piano Lite (gratuito) e fare clic sul pulsante **Crea**.
 
-### Eseguire il provisioning di un servizio Cloud Object Storage
+### Eseguire il provisioning di un servizio {{site.data.keyword.cos_full_notm}}
 {: #crt-cos}
 
-- [Eseguire il provisioning di un servizio Object Storage ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} se non si dispone già di un servizio associato all'account:
+- [Eseguire il provisioning di un servizio {{site.data.keyword.cos_short}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} se non si dispone già di un servizio associato all'account:
 
   ![Object Storage](images/object_storage.png)
 
 - Fornire un nome al servizio, selezionare il piano Lite (gratuito) e fare clic sul pulsante **Crea**.
 
-### Eseguire il provisioning di un servizio di Watson Machine Learning
+### Eseguire il provisioning di un servizio {{site.data.keyword.pm_full}}
 {: #crt-wml}
 
-- [Eseguire il provisioning di un'istanza di Watson Machine Learning ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/machine-learning){: new_window} se non si dispone già di un'istanza associata all'account:
+- [Eseguire il provisioning di un'istanza {{site.data.keyword.pm_short}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/machine-learning){: new_window} se non si dispone già di un servizio associato all'account:
 
   ![Machine Learning](images/machine_learning.png)
 
 - Fornire un nome al servizio, selezionare il piano Lite (gratuito) e fare clic sul pulsante **Crea**.
 
-### (Facoltativo) Eseguire il provisioning di un servizio Databases for PostgreSQL o DB2 Warehouse 
+### (Facoltativo) Eseguire il provisioning di un servizio Databases for PostgreSQL o DB2 Warehouse
 {: #crt-db2}
 
-Se si dispone di un account {{site.data.keyword.cloud_notm}} a pagamento, è possibile fornire un servizio `Databases for PostgreSQL` o `Db2 Warehouse` per sfruttare tutti i vantaggi dell'integrazione con Watson Studio e i servizi di continuous learning. Se si sceglie di non fornire un servizio a pagamento, è possibile utilizzare lo storage interno PostgreSQL gratuito con {{site.data.keyword.aios_short}}, ma non sarà possibile configurare il continuous learning per il modello.
+Se si dispone di un account {{site.data.keyword.cloud_notm}} a pagamento, è possibile fornire un servizio `Databases for PostgreSQL` o `Db2 Warehouse` per sfruttare tutti i vantaggi dell'integrazione con {{site.data.keyword.DSX}} e i servizi di continuous learning. Se si sceglie di non fornire un servizio a pagamento, è possibile utilizzare lo storage interno PostgreSQL gratuito con {{site.data.keyword.aios_short}}, ma non sarà possibile configurare il continuous learning per il modello.
 
 - [Eseguire il provisioning di un servizio Databases for PostgreSQL ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/databases-for-postgresql) o [di un servizio Db2 Warehouse ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/db2-warehouse) se non si dispone già di un servizio associato all'account:
 
@@ -106,14 +106,14 @@ Se si dispone di un account {{site.data.keyword.cloud_notm}} a pagamento, è pos
 
 - Fornire un nome al servizio, selezionare il piano Standard (Databases for PostgreSQL) o il piano Entry (Db2 Warehouse) e fare clic sul pulsante **Crea**.
 
-## Configurare un progetto Watson Studio
+## Configurare un progetto {{site.data.keyword.DSX}}
 {: #crt-set-wstudio}
 
-- Accedere all'[account Watson Studio![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://dataplatform.ibm.com/){: new_window}. Fare clic sull'icona dell'avatar dell'account nella parte in alto a destra e verificare che l'account che si sta utilizzando sia lo stesso account utilizzato per creare i servizi {{site.data.keyword.cloud_notm}}:
+- Accedere all'account [{{site.data.keyword.DSX}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://dataplatform.ibm.com/){: new_window}. Fare clic su {{site.data.keyword.avatar}} e verificare che l'account che si sta utilizzando sia lo stesso account utilizzato per creare i servizi {{site.data.keyword.cloud_notm}}:
 
   ![Stesso account](images/same_account.png)
 
-- In Watson Studio, iniziare creando un nuovo progetto. Selezionare "Crea un progetto":
+- In {{site.data.keyword.DSX}}, iniziare creando un nuovo progetto. Selezionare "Crea un progetto":
 
   ![Crea progetto Watson Studio](images/studio_create_proj.png)
 
@@ -123,17 +123,17 @@ Se si dispone di un account {{site.data.keyword.cloud_notm}} a pagamento, è pos
 
 - Fornire un nome e una descrizione al progetto, accertarsi che il servizio Cloud Object Storage creato sia selezionato nel menu a discesa **Storage** e fare clic su **Crea**.
 
-## Creare e distribuire un modello di machine learning
+## Creare e distribuire un modello di {{site.data.keyword.pm_short}}
 {: #crt-make-model}
 
-### Aggiungere il notebook `Working with Watson Machine Learning` al progetto Watson Studio
+### Aggiungere il notebook `Working with Watson Machine Learning` al progetto {{site.data.keyword.DSX}}
 {: #crt-add-notebook}
 
 - Scarica il seguente file:
 
     - [Working with Watson Machine Learning ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
-- Dalla scheda **Asset** nel progetto Watson Studio, fare clic sul pulsante **Aggiungi al progetto** e selezionare **Notebook** dal menu a discesa:
+- Dalla scheda **Asset** nel progetto {{site.data.keyword.DSX}}, fare clic sul pulsante **Aggiungi al progetto** e selezionare **Notebook** dal menu a discesa:
 
   ![Aggiungi connessione](images/add_notebook.png)
 
@@ -163,7 +163,7 @@ Il notebook `Working with Watson Machine Learning` contiene le istruzioni dettag
 
     - Sostituire le credenziali del servizio WML (Watson Machine Learning) con quelle create in precedenza.
 
-    - Sostituire le credenziali DB con quelle create per Databases for PostgreSQL. 
+    - Sostituire le credenziali DB con quelle create per Databases for PostgreSQL.
 
     - Se in precedenza è stato configurato {{site.data.keyword.aios_short}} per utilizzare un database interno PostgreSQL gratuito come data mart, è possibile passare a un nuovo data mart che utilizza il proprio servizio Databases for PostgreSQL. Per eliminare la vecchia configurazione PostgreSQL e crearne una nuova, impostare la variabile KEEP_MY_INTERNAL_POSTGRES su `False`.
 
@@ -195,8 +195,8 @@ La pagina Insight fornisce una panoramica delle metriche per i modelli distribui
 ### Visualizzare i dati di monitoraggio per la distribuzione
 {: #crt-view-mon-data}
 
-1. Per visualizzare i dettagli di monitoraggio, dalla pagina **Insight**, fare clic sul riquadro che corrisponde alla distribuzione. Vengono mostrati i dati di monitoraggio per tale distribuzione.  
-2. Scorrere il puntatore nel grafico per selezionare i dati per una finestra di un'ora specifica.  
+1. Per visualizzare i dettagli di monitoraggio, dalla pagina **Insight**, fare clic sul riquadro che corrisponde alla distribuzione. Vengono mostrati i dati di monitoraggio per tale distribuzione. 
+2. Scorrere il puntatore nel grafico per selezionare i dati per una finestra di un'ora specifica. 
 3. Fare clic sul link **Visualizza dettagli**.
 
   ![Monitoraggio dati](images/insight-monitor-data2.png)
@@ -220,7 +220,7 @@ Se si utilizza la versione lite interna di PostgreSQL, potrebbe non essere possi
 
   ![Visualizza transazioni](images/view_transactions.png)
 
-  Viene visualizzato un elenco delle transazioni in cui la distribuzione ha contribuito alla distorsione.  
+  Viene visualizzato un elenco delle transazioni in cui la distribuzione ha contribuito alla distorsione. 
   
 2. Selezionare una delle transazioni e, dalla colonna **AZIONE**, fare clic sul link **Spiega**.
 

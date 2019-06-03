@@ -59,9 +59,11 @@ vous pouvez facilement afficher des analyses clés et identifier les problèmes 
 ## Limitations
 {: #in-lim}
 
-- L'édition actuelle ne prend en charge qu'une seule base de données, une seule instance de Watson Machine Learning et une seule instance de {{site.data.keyword.aios_short}}
+- L'édition actuelle ne prend en charge qu'une seule base de données, une seule instance d'{{site.data.keyword.pm_full}}
+et une seule instance de {{site.data.keyword.aios_short}}
 
-- La base de données et l'instance de Watson Machine Learning doivent être déployées dans le même compte {{site.data.keyword.cloud_notm}}.
+- La base de données et l'instance d'{{site.data.keyword.pm_full}} doivent être déployées dans le même compte {{site.data.keyword.cloud_notm}}.
+
 
 - Le forfait Lite (gratuit) comporte les limites mensuelles suivantes :
 
@@ -70,19 +72,49 @@ vous pouvez facilement afficher des analyses clés et identifier les problèmes 
     - 50 000 enregistrements de contenu (cumulés)
     - 50 000 enregistrements de commentaires (cumulés)
 
-- {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker les données de sortie de déploiement et de reformation des modèles. Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
+- {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker
+les données se rapportant aux modèles (données de commentaires, contenu d'évaluation) et les métriques calculées.
+Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
 
 - Il y a une limite de licence de 20 modèles déployés par instance de {{site.data.keyword.aios_short}}.
 
-- Actuellement la génération d'explication n'est pas possible pour les images de plus de 1 Mo.
+- Pour {{site.data.keyword.pm_full}}, le contenu d'images perturbées envoyé via la passerelle d'apprentissage automatique ne peut pas dépasser 1 Mo.
+Afin d'éviter des problèmes de dépassement de délai, les images ne doivent pas dépasser 125 x 125 pixels
+et doivent être envoyées séquentiellement pour que l'explication de la seconde image soit demandée lorsque la première est terminée.
+
+
 
 <p>&nbsp;</p>
 
+## Problèmes connus
+{: #rn-12ki}
+
+- **Microsoft Azure**
+
+    - Des deux types de services web Azure Machine Learning, seul le `nouveau` est accepté par {{site.data.keyword.aios_short}}. Le type `classique` ne l'est pas.
+
+    - __*Il faut utiliser le nom d'entrée par défaut*__ :
+Dans le service web Azure, le nom d'entrée par défaut est `"input1"`. Cette zone est actuellement obligatoire pour {{site.data.keyword.aios_short}}, qui ne peut pas fonctionner si elle manque.
+
+      Si votre service web Azure n'utilise pas le nom par défaut, remplacez le nom d'entrée par `"input1"` et le code fonctionnera.
+
+- **AWS SageMaker**
+
+    - __*L'algorithme BlazingText n'est pas pris en charge*__ :
+Le format de contenu d'entrée de l'algorithme AWS SageMaker BlazingText n'est pas pris en charge dans l'édition actuelle de {{site.data.keyword.aios_short}}.
+
+- **Instance de service ML personnalisé**
+
+    - Avec le [module Python](/docs/services/ai-openscale?topic=ai-openscale-as-module),
+l'explicabilité ne fonctionne pas pour l'instance de service personnalisée. Ceci est dû au fait que l'instance de service personnalisée requiert une prévision numérique dans les données de réponse,
+qui n'est pas incluse avec le script du module.
+
+<p>&nbsp;</p>
 
 ## Moteurs d'apprentissage automatique et infrastructures pris en charge
 {: #in-fram}
 
-Le service {{site.data.keyword.aios_short}} prend en charge les moteurs d'apprentissage automatique suivants. Chaque evironnement d'exécution prend en charge les modèles créés dans les infrastructures suivantes : 
+Le service {{site.data.keyword.aios_short}} prend en charge les moteurs d'apprentissage automatique suivants. Chaque evironnement d'exécution prend en charge les modèles créés dans les infrastructures suivantes :
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)
@@ -146,5 +178,8 @@ lier votre moteur d'apprentissage automatique, et sélectionner et surveiller de
 - Consultez les [matériaux de Référence des API
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/ai-openscale){: new_window}.
 
-Vous avez encore des questions ? [Contacter IBM
+Vous avez encore des questions ? 
+
+- [Nouveautés](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)
+- [Contacter IBM
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.

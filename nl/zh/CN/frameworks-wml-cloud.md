@@ -38,6 +38,8 @@ subcollection: ai-openscale
 | Python 函数 | 回归 | 结构化 |
 | XGBoost |分类| 结构化 |
 | XGBoost | 回归 | 结构化 |
+| scikit-learn |分类| 结构化 |
+| scikit-learn | 回归 | 结构化 |
 | Keras，含 TensorFlow<sup>1</sup> |分类| 非结构化（图像，文本）|
 | Keras，含 TensorFlow<sup>1</sup> | 回归 | 非结构化（图像，文本）|
 {: caption="框架支持详细信息" caption-side="top"}

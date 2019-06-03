@@ -1,6 +1,6 @@
 ---
 
-title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
+title: Fiabilité et transparence pour vos modèles d'apprentissage automatique avec {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
 intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
@@ -295,7 +295,7 @@ et cliquez sur le bouton **Lancer une application**. La page Initiation à {{sit
 
 1.  Ensuite, vous devez choisir une base de données. Vous avez deux options : la base de données gratuite ou une base de données existante ou nouvelle. Pour ce tutoriel, sélectionnez le carreau **Utiliser la base de données gratuite hébergée par {{site.data.keyword.aios_short}}**.
 
-    La base de données gratuite comporte des limitations importantes. Il s'agit d'une base de données hébergée à laquelle vous n'avez pas accès séparément. Elle vous donne l'accès {{site.data.keyword.aios_short}} à votre base de données et à vos données. Elle n'est pas en conformité avec le RGPD. Pour plus de détails sur chacune de ces options, voir la rubrique [Indication d'une base de données](/docs/services/ai-openscale?topic=ai-openscale-connect-db).  La base de données existante peut être une base de données PostgreSQL ou Db2.
+    La base de données gratuite comporte des limitations importantes. Il s'agit d'une base de données hébergée à laquelle vous n'avez pas accès séparément. Elle vous donne l'accès {{site.data.keyword.aios_short}} à votre base de données et à vos données. Elle n'est pas en conformité avec le RGPD. Pour plus de détails sur chacune de ces options, voir la rubrique [Indication d'une base de données](/docs/services/ai-openscale?topic=ai-openscale-connect-db). La base de données existante peut être une base de données PostgreSQL ou Db2. 
     {: tip}
 
     ![Sélection d'une base de données](images/gs-set-lite-db2.png)
@@ -315,17 +315,12 @@ cliquez simplement sur le bouton **Configurer les moniteurs** pour terminer cett
 ### Fournissez un ensemble d'exemples de données à votre modèle
 {: #gs-samp}
 
-Pour pouvoir configurer vos moniteurs, vous devez générer au moins une demande d'évaluation de votre modèle afin de générer une journalisation de contenu qu'ils puissent consommer.
-Dans cette section, vous allez fournir des exemples de données sous la forme d'un fichier JSON pour générer une demande d'évaluation.
+Pour pouvoir configurer vos moniteurs, vous devez générer au moins une demande d'évaluation de votre modèle afin de générer une journalisation de contenu qu'ils puissent consommer. Dans cette section, vous allez fournir des exemples de données sous la forme d'un fichier JSON pour générer une demande d'évaluation.
 
 1.  Téléchargez le fichier [credit_payload_data.json
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json).
 
-
-
 1.  Dans l'onglet **Déploiements** de votre projet Watson Studio, cliquez sur le lien **credit-risk-deploy** puis sur l'onglet **Test** et sélectionnez l'icône d'entrée JSON.
-
-
 
     ![Test JSON](images/json_test02.png)
 
@@ -490,8 +485,7 @@ Pour permettre la surveillance de l'exactitude, vous devez fournir à votre mod�
     ![Icône d'édition - côté droit](images/gs-insight-edit-icon.png)
 
 1.  Dans le panneau latéral Récapitulatif, cliquez sur le bouton **Ajouter des données de commentaires**
-et sélectionnez le fichier `credit_feedback_data.csv` que vous avez téléchargé.
-Sélectionnez le délimiteur **Virgule (,)** et cliquez sur **OK**.
+et sélectionnez le fichier `credit_feedback_data.csv` que vous avez téléchargé. Sélectionnez le délimiteur **Virgule (,)** et cliquez sur **OK**.
 
     La taille de fichier est actuellement limitée à 8 Mo.
     {: note}

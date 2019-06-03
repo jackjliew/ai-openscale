@@ -51,9 +51,9 @@ So implementieren Sie {{site.data.keyword.aios_short}}:
 ## Einschränkungen
 {: #in-lim}
 
-- Das aktuelle Release unterstützt nur eine Datenbank, eine Watson Machine Learning-Instanz und eine Instanz von {{site.data.keyword.aios_short}}.
+- Das aktuelle Release unterstützt nur eine Datenbank, eine {{site.data.keyword.pm_full}}-Instanz und eine Instanz von {{site.data.keyword.aios_short}}.
 
-- Die Datenbank und die Watson Machine Learning-Instanz müssen in demselben {{site.data.keyword.cloud_notm}}-Konto bereitgestellt werden.
+- Die Datenbank und die {{site.data.keyword.pm_full}}-Instanz müssen in demselben {{site.data.keyword.cloud_notm}}-Konto bereitgestellt werden.
 
 - Für den kostenlosen Lite-Plan gelten die folgenden monatlichen Grenzwerte:
 
@@ -62,14 +62,35 @@ So implementieren Sie {{site.data.keyword.aios_short}}:
     - 50.000 Datensätze für Nutzdaten (kumulativ)
     - 50.000 Rückmeldedatensätze (kumulativ)
 
-- Zum Speichern von Modellbereitstellungsausgaben und Retrainingdaten verwendet {{site.data.keyword.aios_short}} eine PostgreSQL- oder Db2-Datenbank. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt.
+- {{site.data.keyword.aios_short}} verwendet eine PostgreSQL- oder Db2-Datenbank zum Speichern modellbezogener Daten (Rückmeldedaten, Scoring-Nutzdaten) und berechneter Metriken. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt.
 
 - Für Lizenzen gilt ein Grenzwert von 20 bereitgestellten Modellen pro Instanz von {{site.data.keyword.aios_short}}.
 
-- Für Bilder, die größer als 1 MB sind, können derzeit keine Erklärungen generiert werden.
+- Für {{site.data.keyword.pm_full}} können die Nutzdaten mit den durch Perturbation veränderten Images, die über das Machine Learning-Gateway gesendet werden, ein Volumen von 1 MB nicht überschreiten. Um Probleme aufgrund von Zeitlimitüberschreitungen zu vermeiden, dürfen Images nicht mehr als 125 x 125 Pixel aufweisen und sie müssen nacheinander gesendet werden, damit die Erklärung für das zweite Image angefordert wird, nachdem die erste abgeschlossen ist. 
+
 
 <p>&nbsp;</p>
 
+## Bekannte Probleme
+{: #rn-12ki}
+
+- **Microsoft Azure**
+
+    - Von den beiden Arten von Azure Machine Learning-Web-Services wird nur der Typ `Neu` von {{site.data.keyword.aios_short}} unterstützt. Der Typ `Klassisch` wird nicht unterstützt.
+
+    - __*Standardeingabename muss verwendet werden*__: Im Azure-Web-Service lautet der Standardeingabename `"input1"`. Dieses Feld ist gegenwärtig für {{site.data.keyword.aios_short}} bevollmächtigt und wenn es fehlt, funktioniert {{site.data.keyword.aios_short}} nicht.
+
+      Wenn Ihr Azure-Web-Service nicht den Standardnamen verwendet, ändern Sie den Namen für das Eingabefeld in `"input1"`, dann funktioniert der Code.
+
+- **AWS SageMaker**
+
+    - __*BlazingText-Algorithmus wird nicht unterstützt*__: Das Format der Eingabenutzdaten für den AWS SageMaker BlazingText-Algorithmus wird in der aktuellen Version von {{site.data.keyword.aios_short}} nicht unterstützt.
+
+- **Angepasste ML-Serviceinstanz**
+
+    - Beim [Python-Modul](/docs/services/ai-openscale?topic=ai-openscale-as-module) funktioniert derzeit die Erklärbarkeit für die angepasste Serviceinstanz nicht. Das liegt daran, dass die angepasste Serviceinstanz eine numerische Vorhersage in den Antwortdaten erfordert, die nicht im Modulscript enthalten ist.
+
+<p>&nbsp;</p>
 
 ## Unterstützte Machine Learning-Engines und Frameworks
 {: #in-fram}
@@ -127,4 +148,7 @@ Der [Python-Client für {{site.data.keyword.aios_short}} ![Symbol für externen 
 - Machen Sie Ihre [ersten Schritte](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted) mit dem Service.
 - Sichten Sie das [Referenzmaterial für die API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/ai-openscale){: new_window}.
 
-Haben Sie immer noch offene Fragen? Dann können Sie sich [an IBM wenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.
+Haben Sie immer noch offene Fragen? 
+
+- [Neuerungen](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)
+- Dann können Sie sich [an IBM wenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.

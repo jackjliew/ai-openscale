@@ -22,16 +22,13 @@ subcollection: ai-openscale
 # 新增功能
 {: #rn-relnotes}
 
-本文件概述 {{site.data.keyword.aios_full_notm}} 的新特性和已知問題。
+本文件概述 {{site.data.keyword.aios_full_notm}} 的新特性。
 {: shortdesc}
 
-## 2019年 4月 25 日
+## 2019 年 4 月 25 日
 {: #rn-25April2019}
 
 該服務的新特性和變更如下。
-
-### 新特性和變更
-{: #rn-25April2019nf}
 
 除了可用性改良和安全更新項目之外，我們的開發人員還忙碌於新增特性。過去這幾週所新增或加強的 {{site.data.keyword.aios_short}} 特性包括：
 
@@ -44,9 +41,6 @@ subcollection: ai-openscale
 
 該服務的新特性和變更如下。
 
-### 新特性和變更
-{: #rn-5March2019nf}
-
 從舊版以來已新增或加強的 {{site.data.keyword.aios_short}} 特性包括：
 
 - __*新的 Credit Risk 模型*__：所有的評分引擎都支援新的 Credit Risk 模型範例/指導教學。如需相關資訊，請參閱[開始使用](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gettingstarted)和[其他資源](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov#arsc-ov)主題。
@@ -58,9 +52,6 @@ subcollection: ai-openscale
 
 該服務的新特性和變更如下。
 
-### 新特性和變更
-{: #rn-22February2019nf}
-
 從舊版以來已新增或加強的 {{site.data.keyword.aios_short}} 特性包括：
 
 - __*使用者介面更新*__：您可以匯入 JSON 檔案，以便在建立訂閱期間，以程式設計方式來配置所有監視器和特性。您也可以匯出配置檔。如需相關資訊，請參閱[使用 JSON 檔案來配置部署訂閱](/docs/services/ai-openscale?topic=ai-openscale-cf-ov)主題。
@@ -69,9 +60,6 @@ subcollection: ai-openscale
 {: #rn-7February2019}
 
 該服務的新特性和變更如下。
-
-### 新特性和變更
-{: #rn-7February2019nf}
 
 從舊版以來已新增或加強的 {{site.data.keyword.aios_short}} 特性包括：
 
@@ -83,20 +71,10 @@ subcollection: ai-openscale
 
 - __*IBM Cloud 資料庫支援*__：除了 Compose for PostgreSQL 和 Db2，{{site.data.keyword.aios_short}} 現在還支援 Databases for PostgreSQL
 
-### 已知問題
-{: #rn-7February2019ki}
-
-- **自訂 ML 服務實例**
-
-    - [Python 模組](/docs/services/ai-openscale?topic=ai-openscale-as-module)目前無法將「可解釋性」運用於「自訂」服務實例上。這是因為「自訂」服務實例要求回應資料中需有一項數值預測，但這並未隨附於模組 Script 中。
-
 ## 2018 年 12 月 14 日
 {: #rn-14December2018}
 
 該服務的新特性、變更和已知問題如下。
-
-### 新特性和變更
-{: #rn-12nf}
 
 {{site.data.keyword.aios_short}} 從測試版以來已新增或加強的特性包括：
 
@@ -118,25 +96,17 @@ subcollection: ai-openscale
 
 - __*Alternate tutorial set-up option*__：若要自動佈建及配置必要的 IBM Cloud 服務，以及查看 IBM {{site.data.keyword.aios_full}} 應用程式（包括樣本資料），您可以安裝及執行 Python 模組。請參閱[安裝 Python 模組以設置 {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)
 
-### 已知問題
-{: #rn-12ki}
-
-- **Microsoft Azure**
-
-    - Azure Machine Learning Web 服務有兩種類型，但 {{site.data.keyword.aios_short}} 只支援`新`類型。不支援`標準`類型。
-
-    - __*必須使用預設輸入名稱*__：在 Azure Web 服務中，預設輸入名稱是 `"input1"`。目前 {{site.data.keyword.aios_short}} 規定要使用此欄位，如果遺漏，{{site.data.keyword.aios_short}} 就無法運作。
-
-      如果您的 Azure Web 服務不是使用預設名稱，請將輸入欄位名稱變更為 `"input1"`，這樣程式碼就會運作。
-
-- **AWS SageMaker**
-
-    - __*不支援 BlazingText 演算法*__：在 {{site.data.keyword.aios_short}} 現行版本中，不支援 AWS SageMaker BlazingText 演算法輸入有效負載格式。
-
 ## 2018 年 9 月 17 日
 {: #rn-17September2018}
 
-### 新特性和變更
-{: #rn-17nf}
-
 - **測試搶鮮版** - 歡迎使用 {{site.data.keyword.aios_full_notm}} 測試搶鮮版。
+
+<p>&nbsp;</p>
+
+## 後續步驟
+{: #relnotes-in-next}
+
+還有其他問題嗎？
+
+- [限制](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
+- [已知問題](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)

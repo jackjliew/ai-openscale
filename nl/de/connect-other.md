@@ -117,11 +117,11 @@ Sie können sich auch auf die folgenden Links beziehen:
 
   In diesem Beispiel könnte `"age"` ein Feld sein, das von jemandem auf Fairness hin ausgewertet wird.
 
-  Wenn es sich bei der Eingabe um einen Tensor/Matrix handelt, der aus dem Eingabemerkmalbereich transformiert wird (was bei Deep Learning - also 'tiefgehendem Lernen' - aus Text oder Bildern oft der Fall ist), kann dieses Modell von der {{site.data.keyword.aios_short}}-Plattform im aktuellen Release nicht verarbeitet werden. Im weiteren Sinne können Deep-Learning-Modelle mit Text- oder Bildeingaben nicht zur Erkennung und Entschärfung von Verzerrungen verwendet werden.
+  Wenn es sich bei der Eingabe um einen Tensor/Matrix handelt, der aus dem Eingabemerkmalbereich transformiert wird (was bei Deep Learning - also 'tiefgehendem Lernen' - aus Text oder Images oft der Fall ist), kann dieses Modell von der {{site.data.keyword.aios_short}}-Plattform im aktuellen Release nicht verarbeitet werden. Im weiteren Sinne können Deep-Learning-Modelle mit Text- oder Imageeingaben nicht zur Erkennung und Entschärfung von Verzerrungen verwendet werden.
 
   Zusätzlich sollten zur Unterstützung der Erklärbarkeit Trainingsdaten geladen werden.
 
-  Zur Erklärbarkeit von Text sollte der gesamte Text eines der Merkmale sein. Die Erklärbarkeit von Bildern für ein Modell vom Typ 'Angepasst' wird im aktuellen Release nicht unterstützt.
+  Zur Erklärbarkeit von Text sollte der gesamte Text eines der Merkmale sein. Die Erklärbarkeit von Images für ein Modell vom Typ 'Angepasst' wird im aktuellen Release nicht unterstützt.
   {: note}
 
 - **Ausgabekriterien für das Modell zur Unterstützung von Überwachungen**

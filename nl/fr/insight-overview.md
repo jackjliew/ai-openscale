@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Navigation dans le tableau de bord
 {: #io-ov}
 
-Vous pouvez suivre tous les déploiements que vous surveillez au moyen du tableau de bord {{site.data.keyword.aios_short}}. Le tableau de bord est votre vue principale de {{site.data.keyword.aios_short}}. Il est constitué de cinq onglets :
+Vous pouvez suivre tous les déploiements que vous surveillez au moyen du tableau de bord {{site.data.keyword.aios_short}}. Le tableau de bord est votre vue principale de {{site.data.keyword.aios_short}}. Il est constitué des onglets suivants :
 
   ![Onglets Analyse](images/insight-tabs.png)
 
@@ -71,17 +71,6 @@ De là, vous pouvez modifier directement les paramètres de configuration de vot
 {: #io-tran}
 
 Utilisez l'onglet **Expliquer une transaction** ( ![Onglet Expliquer une transaction](images/insight-transact-tab.png) ) pour rechercher un ID de transaction spécifique pour expliquer une transaction de déploiement particulière. Pour plus d'information, voir [Surveillance de l'explicabilité](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
-
-## Outils d'IA
-{: #io-too}
-
-Utilisez l'onglet **Outils IA** ( ![Onglet Outils d'IA](images/aitools.png) ) pour ouvrir d'autres options et outils d'IA IBM. 
-
-- *[Forfait Watson Studio Lite
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window} :
-Watson Studio vous fournit l'environnement et les outils pour analyser et visualiser les données,
-les nettoyer et les mettre en forme,
-ingérer des données en flux, ou créer, former et déployer des modèles d'apprentissage automatique. Pour l'obtenir, cliquez sur le lien "Inscrivez-vous au forfait gratuit Lite de Watson Studio".
 
 ## Onglet Aide
 {: #io-help}

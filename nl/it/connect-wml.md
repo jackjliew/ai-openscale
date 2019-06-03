@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Watson Studio, Watson Machine Learning, wml, machine learning, services
 
@@ -33,7 +33,7 @@ Il primo passo nello strumento {{site.data.keyword.aios_short}} è quello di spe
 ## Connessione dell'istanza del servizio Watson Machine Learning
 {: #wml-config}
 
-{{site.data.keyword.aios_short}} si collega ai modelli e alle distribuzioni AI in un'istanza WML. 
+{{site.data.keyword.aios_short}} si collega ai modelli e alle distribuzioni AI in un'istanza WML.
 
 1.  Dalla home page dello strumento {{site.data.keyword.aios_short}}, fare clic su **Inizia**.
 

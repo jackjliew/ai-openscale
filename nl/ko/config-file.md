@@ -174,4 +174,4 @@ JSON 파일에 대해 작업하는 방법에 대한 좋은 예는 [Watson OpenSc
 
 [{{site.data.keyword.aios_short}} Python 클라이언트 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}에서 전체 정보를 참조하십시오.
 
-[구독 가져오기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 및 [구독 내보내기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API 메소드를 사용하여 {{site.data.keyword.aios_short}}에 대한 구성을 가져오고 내보낼 수도 있습니다. 
+[구독 가져오기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 및 [구독 내보내기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API 메소드를 사용하여 {{site.data.keyword.aios_short}}에 대한 구성을 가져오고 내보낼 수도 있습니다.

@@ -31,7 +31,7 @@ subcollection: ai-openscale
 Als Detail der Qualitätsmetriken können Sie die Datensätze anzeigen, die das Modell nicht korrekt analysiert hat. Bei solchen Anomalien kann es sich um falsch-positive oder falsch-negative Ergebnisse für binäre Klassifikationsmodelle handeln oder um fehlerhafte Kassenzuweisungen für Modelle mit mehreren Klassen. Darüber hinaus können Sie eine Liste mit Rückmeldedatensätzen anzeigen, die vom Modell nicht korrekt analysiert wurden.
 {: shortdesc}
 
-1. Klicken Sie in einem der Diagramme des Typs **Qualität**, wie z. B. **Fairness**, auf eine Stunde bzw. einen Tag. 
+1. Klicken Sie in einem der Diagramme des Typs **Qualität**, wie z. B. **Fairness**, auf eine Stunde bzw. einen Tag.
     
     ![Liste der verzerrten Transaktionen](images/Confusion_Matrix_040819.004.png)
 
@@ -39,11 +39,11 @@ Als Detail der Qualitätsmetriken können Sie die Datensätze anzeigen, die das 
 
     ![Liste der verzerrten Transaktionen](images/Confusion_Matrix_040819.005.png)
 
-1. Überprüfen Sie die Rückmeldedatensätze und fordern Sie eine Erklärung für den Rückmeldedatensatz an. 
+1. Überprüfen Sie die Rückmeldedatensätze und fordern Sie eine Erklärung für den Rückmeldedatensatz an.
 
     ![Liste der verzerrten Transaktionen](images/Confusion_Matrix_040819.006.png)
 
-1. Transaktionen sind in die Darstellung integriert. 
+1. Transaktionen sind in die Darstellung integriert.
 
     ![Liste der verzerrten Transaktionen](images/Confusion_Matrix_040819.007.png)
 

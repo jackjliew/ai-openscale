@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -49,7 +49,7 @@ Successivamente, spostare il puntatore nel grafico per vedere le statistiche per
 
 Per visualizzare i dettagli dietro una determinata statistica di correttezza, fare clic sul link **Visualizza dettagli** per l'ora selezionata.
 
-Si apre una visualizzazione dei punti di dati per una funzione monitorata all'ora selezionata. In seguito all'esempio precedente viene visualizzata la funzione Age, che è stata contrassegnata per la distorsione. 
+Si apre una visualizzazione dei punti di dati per una funzione monitorata all'ora selezionata. In seguito all'esempio precedente viene visualizzata la funzione Age, che è stata contrassegnata per la distorsione.
 
 Notare i tre filtri in alto nella pagina (Funzione, Data e Ora) che permettono di selezionare una funzione o un tempo diversi per esaminare i dettagli.
 
@@ -60,7 +60,7 @@ Notare i tre filtri in alto nella pagina (Funzione, Data e Ora) che permettono d
 
 Il grafico mostra più cose:
 
-- Si può osservare la popolazione che sperimenta la distorsione (i clienti tra i 18 e i 23 anni). Il grafico mostra anche la percentuale di risultati previsti (52%) per questa popolazione. 
+- Si può osservare la popolazione che sperimenta la distorsione (i clienti tra i 18 e i 23 anni). Il grafico mostra anche la percentuale di risultati previsti (52%) per questa popolazione.
 
 - Il grafico mostra anche la percentuale di risultati previsti (70%) per la popolazione di riferimento. Questa è la media dei risultati previsti in tutte le popolazioni di riferimento.
 
@@ -75,7 +75,7 @@ Il grafico mostra più cose:
 ## Dati di runtime e training
 {: #it-rtsw}
 
-Lo switch dati di runtime/dati di training consente di alternare le differenze tra il modello sottoposto a training e i dati raccolti in fase di runtime che fa scattare un avvertenza di distorsione. 
+Lo switch dati di runtime/dati di training consente di alternare le differenze tra il modello sottoposto a training e i dati raccolti in fase di runtime che fa scattare un avvertenza di distorsione. Per ulteriori informazioni sui dati di training, consultare [Perché {{site.data.keyword.aios_short}} ha bisogno di accedere ai miei dati di training?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 ![Alternanza runtime training](images/runtime_train_data.png)
 
@@ -110,15 +110,15 @@ Selezionando la scheda **Modello con distorsione annullata** vengono mostrati i 
 ### Opzioni di annullamento distorsione
 {: #it-dbo}
 
-- *Annullamento distorsione passivo* - Quando {{site.data.keyword.aios_short}} esegue il controllo della distorsione effettua anche un annullamento della distorsione dei dati analizzando il comportamento del modello e identificando i dati in cui il modello contribuisce alla distorsione. 
+- *Annullamento distorsione passivo* - Quando {{site.data.keyword.aios_short}} esegue il controllo della distorsione effettua anche un annullamento della distorsione dei dati analizzando il comportamento del modello e identificando i dati in cui il modello contribuisce alla distorsione.
 
-  {{site.data.keyword.aios_short}} poi creare un modello di machine learning per prevedere se è probabile che il modello contribuirà alla distorsione su un nuovo punto di dati fornito. {{site.data.keyword.aios_short}} poi analizza i dati ricevuti dal modello, su base oraria, e trova i punti di dati in cui {{site.data.keyword.aios_short}} crede che il modello stia contribuendo alla distorsione. Per questi punti di dati, l'attributo di correttezza è perturbato da minoranza a maggioranza, e i dati perturbati vengono inviati al modello originale per la previsione. Questa previsione del modello originale viene utilizzata come output con distorsione annullata. 
+  {{site.data.keyword.aios_short}} poi creare un modello di machine learning per prevedere se è probabile che il modello contribuirà alla distorsione su un nuovo punto di dati fornito. {{site.data.keyword.aios_short}} poi analizza i dati ricevuti dal modello, su base oraria, e trova i punti di dati in cui {{site.data.keyword.aios_short}} crede che il modello stia contribuendo alla distorsione. Per questi punti di dati, l'attributo di correttezza è perturbato da minoranza a maggioranza, e i dati perturbati vengono inviati al modello originale per la previsione. Questa previsione del modello originale viene utilizzata come output con distorsione annullata.
 
   {{site.data.keyword.aios_short}} esegue questo annullamento della distorsione ogni ora, su tutti i dati che sono stati ricevuti dal modello nell'ultima ora. Calcola anche la correttezza per l'output con distorsione annullata e lo visualizza nella scheda **Modello con distorsione annullata**.
 
 - *Annullamento distorsione attivo* - In modalità di annullamento distorsione attiva è possibile utilizzare un endpoint API REST di annullamento distorsione dall'applicazione. Questo endpoint API REST richiamerà internamente il modello e ne verificherà il comportamento.
 
-  Se {{site.data.keyword.aios_short}} ritiene che il modello sta contribuendo alla distorsione, eseguirà la perturbazione dei dati come indicato in precedenza e li invierà di nuovo al modello originale. L'output del modello originale sui dati perturbati sarà restituito come previsione senza distorsione. Se {{site.data.keyword.aios_short}} determina che il modello originale non sta agendo in modo distorto, {{site.data.keyword.aios_short}} restituirà la previsione del modello originale come previsione senza distorsione. Pertanto, utilizzando questo endpoint API REST, è possibile assicurarsi che l'applicazione non prenda decisione in base all'output distorto dei modelli. 
+  Se {{site.data.keyword.aios_short}} ritiene che il modello sta contribuendo alla distorsione, eseguirà la perturbazione dei dati come indicato in precedenza e li invierà di nuovo al modello originale. L'output del modello originale sui dati perturbati sarà restituito come previsione senza distorsione. Se {{site.data.keyword.aios_short}} determina che il modello originale non sta agendo in modo distorto, {{site.data.keyword.aios_short}} restituirà la previsione del modello originale come previsione senza distorsione. Pertanto, utilizzando questo endpoint API REST, è possibile assicurarsi che l'applicazione non prenda decisione in base all'output distorto dei modelli.
 
 Selezionare il link **Endpoint di calcolo del punteggio di distorsioni annullate** per trovare l'endpoint API REST di annullamento distorsione
 

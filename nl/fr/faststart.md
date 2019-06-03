@@ -100,7 +100,7 @@ Pour comprendre les facteurs contributeurs s'il y a du biais pour une certaine p
 
    ![Lancement de la démonstration](images/fastpath_demo_11.35.06.png)
 
-Les ID des transactions de la dernière heure qui présentent un biais s'affichent. Pour le modèle utilisé dans ce module, il y a un biais pour les demandes disponibles. 
+Les ID des transactions de la dernière heure qui présentent un biais s'affichent. Pour le modèle utilisé dans ce module, il y a un biais pour les demandes disponibles.
 
    ![Lancement de la démonstration](images/fastpath_demo_11.35.12.png)
 

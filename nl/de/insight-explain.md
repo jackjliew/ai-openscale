@@ -58,7 +58,7 @@ Das Merkmal *ALTER POLICE* mit dem Wert `< 1 year` übte den größten Einfluss 
 
 Die Diagramme sind zwar nützlich zur Darstellung der wichtigsten Faktoren bei der Bestimmung des Ergebnisses einer Transaktion, doch Klassifikationsmodelle können auch erweiterte Erklärungen enthalten, die in den Abschnitten `Mindeständerungen für Ergebnis 'Genehmigt'` und `Mindeständerungen für dieses Ergebnis` detailliert beschrieben sind.
 
-Erweiterte Erklärungen stehen nicht für Regressions- oder Bildmodelle und Modelle für unstrukturierten Text zur Verfügung.
+Erweiterte Erklärungen stehen nicht für Regressions- oder Imagemodelle und Modelle für unstrukturierten Text zur Verfügung.
 {: note}
 
 `Mindeständerungen für Ergebnis 'Genehmigt'` besagt, dass sich die Vorhersage des Modells ändern würde, wenn die Werte der Merkmale in die in diesem Abschnitt aufgeführten Werte geändert würden.
@@ -69,19 +69,19 @@ Diese beiden Werte geben Auskunft über das Verhalten des Modells im Umkreis des
 
 ![Erklärbarkeit bei binärer Klassifikation](images/insight-explain-binary2.png)
 
-## Beispiel eines Bildmodells
+## Beispiel eines Imagemodells
 {: #ie-image}
 
-Als Beispiel der Erklärbarkeit bei einem Bildklassifikationsmodell können Sie sehen, welche Teile eines Bildes positiv zum vorhergesagten Ergebnis beigetragen haben und welche negativ. Im unten gezeigten Anschauungsbeispiel zeigt das rechte Bild die Teile, die sich positiv auf die Vorhersage ausgewirkt haben, und das linke Bild die Teile von Bildern, die sich negativ auf das Ergebnis ausgewirkt haben.
+Als Beispiel der Erklärbarkeit bei einem Imageklassifikationsmodell können Sie sehen, welche Teile eines Images positiv zum vorhergesagten Ergebnis beigetragen haben und welche negativ. Im unten gezeigten Anschauungsbeispiel zeigt das rechte Image die Teile, die sich positiv auf die Vorhersage ausgewirkt haben, und das linke Image die Teile von Images, die sich negativ auf das Ergebnis ausgewirkt haben.
 
-Für Bilder, die größer als 1 MB sind, können derzeit keine Erklärungen generiert werden.
+- Für {{site.data.keyword.pm_full}} können die Nutzdaten mit den durch Perturbation veränderten Images, die über das Machine Learning-Gateway gesendet werden, ein Volumen von 1 MB nicht überschreiten. Um Probleme aufgrund von Zeitlimitüberschreitungen zu vermeiden, dürfen Images nicht mehr als 125 x 125 Pixel aufweisen und sie müssen nacheinander gesendet werden, damit die Erklärung für das zweite Image angefordert wird, nachdem die erste abgeschlossen ist.
 {: note}
 
-![Erklärbarkeit bei Bildklassifikation](images/insight-explain-image.png)
+![Erklärbarkeit bei Imageklassifikation](images/insight-explain-image.png)
 
 ## Beispiel eines Modells für unstrukturierten Text
 {: #ie-unstruct}
 
 Dieses Beispiel der Erklärbarkeit zeigt ein Klassifikationsmodell, das unstrukturierten Text auswertet. Die Erklärung zeigt die Schlüsselwörter an, die sowohl einen positiven als auch einen negativen Einfluss auf die Modellvorhersage hatten. Außerdem wird die Position der ermittelten Schlüsselwörter auch im Originaltext angezeigt, der dem Modell als Eingabe zugeführt wurde.
 
-![Erklärbarkeit bei Bildklassifikation](images/insight-explain-text.png)
+![Erklärbarkeit bei Imageklassifikation](images/insight-explain-text.png)

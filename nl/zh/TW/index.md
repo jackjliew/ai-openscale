@@ -51,25 +51,47 @@ subcollection: ai-openscale
 ## 限制
 {: #in-lim}
 
-- 現行版本只支援一個資料庫、一個 Watson Machine Learning 實例，以及一個 {{site.data.keyword.aios_short}} 實例
+- 現行版本只支援一個資料庫、一個 {{site.data.keyword.pm_full}} 實例，以及一個 {{site.data.keyword.aios_short}} 實例
 
-- 資料庫和 Watson Machine Learning 實例必須部署在相同的 {{site.data.keyword.cloud_notm}} 帳戶中。
+- 資料庫和 {{site.data.keyword.pm_full}} 實例必須部署在相同的 {{site.data.keyword.cloud_notm}} 帳戶中。
 
--  Lite（免費）方案具有下列的每月限制：
+- Lite（免費）方案具有下列的每月限制：
 
     - 兩個受監視的所部署模型
     - 可解釋 20 項交易
     - 50,000 筆有效負載記錄（累加）
     - 50,000 筆回饋記錄（累加）
 
-- {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫來儲存模型部署輸出和重新訓練資料。目前不支援「精簡 Db2」方案。
+- {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援「精簡 Db2」方案。
 
 - 根據授權限制，每一個 {{site.data.keyword.aios_short}} 實例只能有 20 個所部署模型。
 
-- 目前，如果影像大小超過 1 MB，就無法產生其解釋。
+- 對於 {{site.data.keyword.pm_full}}，經由機器學習閘道所傳送之擾動影像的有效負載不能超過 1 MB。若要避免發生逾時問題，影像不得超過 125 x 125 像素，且必須循序傳送，如此才會在第一個影像完成時，要求取得第二個影像的解釋。
+
+
 
 <p>&nbsp;</p>
 
+## 已知問題
+{: #rn-12ki}
+
+- **Microsoft Azure**
+
+    - Azure Machine Learning Web 服務有兩種類型，但 {{site.data.keyword.aios_short}} 只支援`新`類型。不支援`標準`類型。
+
+    - __*必須使用預設輸入名稱*__：在 Azure Web 服務中，預設輸入名稱是 `"input1"`。目前 {{site.data.keyword.aios_short}} 規定要使用此欄位，如果遺漏，{{site.data.keyword.aios_short}} 就無法運作。
+
+      如果您的 Azure Web 服務不是使用預設名稱，請將輸入欄位名稱變更為 `"input1"`，這樣程式碼就會運作。
+
+- **AWS SageMaker**
+
+    - __*不支援 BlazingText 演算法*__：在 {{site.data.keyword.aios_short}} 現行版本中，不支援 AWS SageMaker BlazingText 演算法輸入有效負載格式。
+
+- **自訂 ML 服務實例**
+
+    - [Python 模組](/docs/services/ai-openscale?topic=ai-openscale-as-module)目前無法將「可解釋性」運用於「自訂」服務實例上。這是因為「自訂」服務實例要求回應資料中需有一項數值預測，但這並未隨附於模組 Script 中。
+
+<p>&nbsp;</p>
 
 ## 支援機器學習引擎和架構
 {: #in-fram}
@@ -127,4 +149,7 @@ subcollection: ai-openscale
 - [開始使用](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted)此服務。
 - 檢視 [API 參照資料 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/apidocs/ai-openscale){: new_window}。
 
-還有其他問題嗎？[請聯絡 IBM ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}。
+還有其他問題嗎？ 
+
+- [新增功能](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)
+- [請聯絡 IBM ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}。

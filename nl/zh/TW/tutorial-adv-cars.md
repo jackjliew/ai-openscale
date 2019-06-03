@@ -57,7 +57,7 @@ lastupdated: "2019-02-05"
 
   只要使用信用卡轉換成付費帳戶，即可取得 $200 {{site.data.keyword.cloud_notm}} 信用額度。如果您已有付費帳戶，會有一個月針對您所支付的第一個 GB 儲存空間費用，一次性退款 $16 給您。{: tip}
 
-PostgreSQL 資料庫和 Watson Machine Learning 實例必須部署在相同的 {{site.data.keyword.cloud_notm}} 帳戶中。
+PostgreSQL 資料庫和 {{site.data.keyword.pm_full}} 實例必須部署在相同的 {{site.data.keyword.cloud_notm}} 帳戶中。
 {: important}
 
 如果您已佈建必要的服務（例如，如果您已完成其他指導教學），請繼續執行下述的[設置 Watson Studio 專案](#tadv-setup-ws)。

@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # 導覽儀表板
 {: #io-ov}
 
-您可以透過 {{site.data.keyword.aios_short}} 儀表板，來追蹤您正在監視的所有部署。儀表板是您檢視 {{site.data.keyword.aios_short}} 的主視圖。儀表板由五個標籤組成：
+您可以透過 {{site.data.keyword.aios_short}} 儀表板，來追蹤您正在監視的所有部署。儀表板是您檢視 {{site.data.keyword.aios_short}} 的主視圖。儀表板由下列標籤組成：
 
   ![「洞察」標籤](images/insight-tabs.png)
 
@@ -61,13 +61,6 @@ subcollection: ai-openscale
 {: #io-tran}
 
 使用**解釋交易**標籤（![「解釋交易」標籤](images/insight-transact-tab.png)）來搜尋特定交易 ID，以解釋特定部署交易。如需相關資訊，請參閱[監視可解釋性](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)。
-
-## AI 工具
-{: #io-too}
-
-使用 **AI 工具**標籤（![「AI 工具」標籤](images/aitools.png)）來開啟其他的 IBM AI 工具和選項。
-
-- *[Watson Studio Lite 方案 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*：Watson Studio 為您提供環境和工具，來分析資料並加以視覺化、清理及體現資料、汲取串流資料，或是建立、訓練及部署機器學習模型。請按一下「註冊取得免費 Watson Studio Lite 方案」鏈結，以取得 Watson Studio。
 
 ## 「說明」標籤
 {: #io-help}

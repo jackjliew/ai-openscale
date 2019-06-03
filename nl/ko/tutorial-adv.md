@@ -37,7 +37,7 @@ subcollection: ai-openscale
 
 이 튜토리얼에서 제공된 신용 위험 모델은 각 대출 신청자에 대한 20가지 속성을 포함하는 훈련 데이터 세트를 사용합니다. 이러한 속성 중 두 가지인 연령 및 성별에 대해 편향성 테스트를 수행할 수 있습니다. 이 튜토리얼에서는 성별과 연령에 대한 편견에 중점을 둡니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
 
-{{site.data.keyword.aios_short}}이 배치된 모델의, 다른 그룹(모니터되는 그룹)보다 한 그룹(참조 그룹)의 선호 결과("위험 없음")를 우선하는 경향을 모니터합니다. 이 튜토리얼에서 성별에 대해 모니터되는 그룹은 `female`이며 나이에 대해 모니터되는 그룹은 `18 to 25`입니다.
+{{site.data.keyword.aios_short}}이 배치된 모델의, 다른 그룹(모니터되는 그룹)보다 한 그룹(참조 그룹)의 선호 결과("위험 없음")를 우선하는 경향을 모니터합니다. 이 튜토리얼에서 성별에 대해 모니터되는 그룹은 `female`이며 나이에 대해 모니터되는 그룹은 `18 - 25`입니다.
 
 ## 선행 조건
 {: #crt-prereqs}
@@ -64,12 +64,12 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 ## {{site.data.keyword.cloud_notm}} 서비스 프로비저닝
 {: #crt-services}
 
-{{site.data.keyword.ibmid}}를 사용하여 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}에 로그인하십시오. 서비스를 프로비저닝할 때 특히 Db2 Warehouse를 사용하는 경우 선택한 조직 및 영역이 모든 서비스에 대해 동일한지 확인하십시오. 
+{{site.data.keyword.ibmid}}를 사용하여 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}에 로그인하십시오. 서비스를 프로비저닝할 때 특히 Db2 Warehouse를 사용하는 경우 선택한 조직 및 영역이 모든 서비스에 대해 동일한지 확인하십시오.
 
 ### {{site.data.keyword.DSX}} 계정 작성
 {: #crt-wstudio}
 
-- 계정과 연관된 인스턴스가 아직 없다면 [{{site.data.keyword.DSX}} 인스턴스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/watson-studio){: new_window}를 작성하십시오. 
+- 계정과 연관된 인스턴스가 아직 없다면 [{{site.data.keyword.DSX}} 인스턴스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/watson-studio){: new_window}를 작성하십시오.
 
   ![Watson Studio](images/watson_studio.png)
 
@@ -87,7 +87,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 ### {{site.data.keyword.pm_full}} 서비스 프로비저닝
 {: #crt-wml}
 
-- 아직 계정과 연관된 인스턴스가 없다면 [{{site.data.keyword.pm_short}} 인스턴스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/machine-learning){: new_window}를 프로비저닝하십시오. 
+- 아직 계정과 연관된 인스턴스가 없다면 [{{site.data.keyword.pm_short}} 인스턴스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/machine-learning){: new_window}를 프로비저닝하십시오.
 
   ![기계 학습](images/machine_learning.png)
 
@@ -109,7 +109,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 ## {{site.data.keyword.DSX}} 프로젝트 설정
 {: #crt-set-wstudio}
 
-- [{{site.data.keyword.DSX}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://dataplatform.ibm.com/){: new_window}에 로그인하십시오. {{site.data.keyword.avatar}}를 클릭하고 사용하는 계정이 {{site.data.keyword.cloud_notm}} 서비스를 작성하는 데 사용한 동일한 계정인지 확인하십시오. 
+- [{{site.data.keyword.DSX}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://dataplatform.ibm.com/){: new_window}에 로그인하십시오. {{site.data.keyword.avatar}}를 클릭하고 사용하는 계정이 {{site.data.keyword.cloud_notm}} 서비스를 작성하는 데 사용한 동일한 계정인지 확인하십시오.
 
   ![동일한 계정](images/same_account.png)
 
@@ -133,7 +133,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
     - [Watson Machine Learning에 대한 작업 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
 
-- **자산** 탭의 {{site.data.keyword.DSX}} 프로젝트에서 **프로젝트에 추가** 단추를 클릭하고 드롭 다운 메뉴에서 **노트북**을 선택하십시오. 
+- **자산** 탭의 {{site.data.keyword.DSX}} 프로젝트에서 **프로젝트에 추가** 단추를 클릭하고 드롭 다운 메뉴에서 **노트북**을 선택하십시오.
 
   ![연결 추가](images/add_notebook.png)
 

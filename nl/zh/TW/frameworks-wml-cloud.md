@@ -38,6 +38,8 @@ subcollection: ai-openscale
 |Python 功能|迴歸|結構化|
 |XGBoost|分類|結構化|
 |XGBoost|迴歸|結構化|
+|scikit-learn|分類|結構化|
+|scikit-learn|迴歸|結構化|
 | Keras 搭配 TensorFlow<sup>1</sup> |分類| 非結構化（影像、文字）|
 | Keras 搭配 TensorFlow<sup>1</sup> |迴歸| 非結構化（影像、文字）|
 {: caption="架構支援明細" caption-side="top"}

@@ -61,14 +61,14 @@ subcollection: ai-openscale
 
 1.  選取您現有的資料庫類型（Compose for Postgres、Database for Postgres 或 Db2）、從**資料庫**下拉功能表中選取一個資料庫，然後選取一項**綱目**：
 
-    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫來儲存模型部署輸出和重新訓練資料。目前不支援「精簡 Db2」方案。如需訓練資料的相關資訊，請參閱 [ 為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援「精簡 Db2」方案。如需訓練資料的相關資訊，請參閱 [ 為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![選取資料庫](images/gs-config-database3.png)
 
 1.  您也可以按一下**選取不同位置**，以指定一個位於您 {{site.data.keyword.Bluemix_notm}} 帳戶之外的資料庫位置。
 
-    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫來儲存模型部署輸出和重新訓練資料。目前不支援「精簡 Db2」方案。
+    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援「精簡 Db2」方案。
     {: note}
 
     - 選取**資料庫類型**（`Compose for PostgreSQL`、`Database for PostgreSQL` 或 `Db2`），然後提供連線資訊：

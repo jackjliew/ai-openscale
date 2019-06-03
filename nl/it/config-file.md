@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: JSON, configuration, configuring, deployment
+keywords: JSON, configuration, configuring, deployment, subscription
 
 subcollection: ai-openscale
 
@@ -23,13 +23,13 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Configurazione della sottoscrizione di distribuzione utilizzando i file JSON
+# Configurare distribuzioni di asset utilizzando i file di configurazione JSON
 {: #cf-ov}
 
-È possibile importare un file JSON per configurare programmaticamente tutti i monitor e le funzioni durante la creazione della sottoscrizione. È anche possibile esportare il file di configurazione.
+È possibile importare un file JSON per creare e configurare tutte le distribuzioni del proprio asset per scopi di monitoraggio. È anche possibile esportare il file di configurazione per configurare altri asset e le relative distribuzioni.
 {: shortdesc}
 
-Per un buon esempio su come utilizzare un file JSON per sottoscrivere le distribuzioni, consultare il notebook [Watson OpenScale One API Shot for subscription Python](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). Il notebook descrive come configurare la sottoscrizione di un asset Amazon SageMaker utilizzando un file JSON in una singola chiamata API. Il resto di questo argomento fa riferimento a questo notebook.
+Per un buon esempio su come utilizzare un file JSON, consultare il notebook [Watson OpenScale One API Shot for subscription Python](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). Il notebook descrive come creare e configurare le distribuzioni di un asset Amazon SageMaker utilizzando un file JSON in una singola chiamata API. Il resto di questo argomento fa riferimento a questo notebook
 
 ## Caricamento del contenuto del file JSON come un dizionario Python
 {: #cf-load-as-dict}
@@ -146,18 +146,19 @@ Il file contiene i dati di configurazione, di cui viene visualizzato un esempio 
   'timestamp': '2019-02-11T11:41:01.613Z'}}
   ```
 
-## Aggiunta della sottoscrizione dal file di configurazione
+## Importare dal file di configurazione
 {: #cf-subscribe}
 
-- Ora, eseguire la chiamata per aggiungere e configurare la sottoscrizione per la distribuzione del modello di previsione del tumore al seno di esempio.
+- Ora, eseguire la chiamata per aggiungere e configurare la distribuzione dell'asset per la distribuzione del modello di previsione del tumore al seno di esempio.
 
     ```python
     subscription = client.data_mart.subscriptions.import_configuration(binding_uid=binding_uid, configuration_data=subscription_configuration)
     ```
 
-  Il parametro `binding_uid` è facoltativo se è collegato un solo motore ML.   {: note}
+  Il parametro `binding_uid` è facoltativo se è collegato un solo motore ML.
+  {: note}
 
-## Esportazione del file JSON
+## Esportare nel file di configurazione
 {: #cf-export}
 
 - È anche possibile esportare il file di configurazione come JSON:
@@ -169,8 +170,8 @@ Il file contiene i dati di configurazione, di cui viene visualizzato un esempio 
 ## Risultati
 {: #cf-results}
 
-La sottoscrizione viene creata e il modello distribuito è configurato per l'utilizzo da parte di {{site.data.keyword.aios_short}}.
+La distribuzione dell'asset viene creata e configurata per l'utilizzo da parte di {{site.data.keyword.aios_short}}.
 
 Consultare informazioni più complete nella documentazione del client  [{{site.data.keyword.aios_short}} Python ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}.
 
-È anche possibile importare ed esportare le configurazioni in {{site.data.keyword.aios_short}} utilizzando i metodi [Importa sottoscrizione![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} e [Esporta sottoscrizione![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window}.
+È anche possibile importare ed esportare le configurazioni in {{site.data.keyword.aios_short}} utilizzando i metodi API  [Importa sottoscrizione![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} e [Esporta sottoscrizione![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window}.

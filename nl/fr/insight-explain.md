@@ -89,7 +89,9 @@ Vous pouvez voir pour un exemple d'explicabilité d'un modèle de classification
 les parties d'une image qui ont contribé positivement au résultat prévu et celles qui ont contribué négativement. Dans l'exemple ci-dessous, l'image de droite montre les parties qui ont influencé positivement la prévision
 et celle de gauche, les parties des images qui ont eu une influence négative sur le résultat.
 
-Actuellement la génération d'explication n'est pas possible pour les images de plus de 1 Mo.
+- Pour {{site.data.keyword.pm_full}}, le contenu d'images perturbées envoyé via la passerelle d'apprentissage automatique ne peut pas dépasser 1 Mo.
+Afin d'éviter des problèmes de dépassement de délai, les images ne doivent pas dépasser 125 x 125 pixels
+et doivent être envoyées séquentiellement pour que l'explication de la seconde image soit demandée lorsque la première est terminée.
 {: note}
 
 ![Explicabilité - classification d'image](images/insight-explain-image.png)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -42,7 +42,8 @@ Per automatizzare il provisioning e la configurazione dei servizi {{site.data.ke
 
 2. [Installare qualsiasi release di Python 3 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.python.org/downloads/){: new_window}.
 
-  Python 3 include il sistema di gestione del pacchetto pip richiesto.   {: note}
+  Python 3 include il sistema di gestione del pacchetto pip richiesto.
+  {: note}
 
 3. Installare il pacchetto `ibm-ai-openscale-cli` mediante l'esecuzione del seguente comando:
 
@@ -51,7 +52,8 @@ Per automatizzare il provisioning e la configurazione dei servizi {{site.data.ke
     ```
     {: codeblock}
 
-    Se sul sistema è installata più di una versione di pip, potrebbe essere necessario eseguire `pip3` invece di `pip`, ad esempio `pip3 install -U ibm-ai-openscale-cli`.     {: tip}
+    Se sul sistema è installata più di una versione di pip, potrebbe essere necessario eseguire `pip3` invece di `pip`, ad esempio `pip3 install -U ibm-ai-openscale-cli`.
+    {: tip}
 
 4. Se si dispone già di un'istanza del servizio {{site.data.keyword.pm_short}}, controllare il dashboard [{{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}){: new_window} per verificare che il servizio sia gestito da {{site.data.keyword.iamshort}} (IAM), non da Cloud Foundry.
 
@@ -60,7 +62,7 @@ Per automatizzare il provisioning e la configurazione dei servizi {{site.data.ke
 ## Esecuzione del modulo
 {: #as-run}
 
-Eseguire il comando riportato di seguito: 
+Eseguire il comando riportato di seguito:
 
 ```
 ibm-ai-openscale-cli --apikey <la chiave API>
@@ -111,7 +113,7 @@ Dal dashboard [{{site.data.keyword.aios_short}} ![Icona link esterno](../../icon
 
 Per comprendere i fattori che contribuiscono quando una distorsione è presente per un dato periodo di tempo, dal pannello di visualizzazione nella sezione precedente, selezionare il pulsante **Visualizza transazioni**.
 
-Vengono elencati gli ID transazione per l'ultima ora per le transazioni che hanno distorsione. Per il modello utilizzato in questo modulo, non esistono distorsioni per le richieste disponibili. Pertanto, non viene visualizzata alcuna transazione per il periodo di tempo nell'immagine che segue. 
+Vengono elencati gli ID transazione per l'ultima ora per le transazioni che hanno distorsione. Per il modello utilizzato in questo modulo, non esistono distorsioni per le richieste disponibili. Pertanto, non viene visualizzata alcuna transazione per il periodo di tempo nell'immagine che segue.
 
   ![Elenco transazioni senza transazioni](images/setup06-0206.png)
 

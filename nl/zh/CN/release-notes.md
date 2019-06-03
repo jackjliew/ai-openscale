@@ -22,16 +22,13 @@ subcollection: ai-openscale
 # 新增内容
 {: #rn-relnotes}
 
-本文档概述 {{site.data.keyword.aios_full_notm}} 的新功能和已知问题。
+本文档概述 {{site.data.keyword.aios_full_notm}} 的新功能。
 {: shortdesc}
 
 ## 2019 年 4 月 25 日
 {: #rn-25April2019}
 
 提供了以下新功能和对服务的更改。
-
-### 新功能和更改
-{: #rn-25April2019nf}
 
 除了易用性改进和安全性更新外，我们的开发者还一直在忙着增加新功能。在前几周内已经增加或增强的 {{site.data.keyword.aios_short}} 功能包括：
 
@@ -44,9 +41,6 @@ subcollection: ai-openscale
 
 提供了以下新功能和对服务的更改。
 
-### 新功能和更改
-{: #rn-5March2019nf}
-
 自前发行版以来添加或增强的 {{site.data.keyword.aios_short}} 功能包括：
 
 - __*新信用风险模型*__：所有评分引擎都支持新的信用风险模型示例/教程。有关更多信息，请参阅[入门](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gettingstarted)和[其他资源](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov#arsc-ov)主题。
@@ -58,9 +52,6 @@ subcollection: ai-openscale
 
 提供了以下新功能和对服务的更改。
 
-### 新功能和更改
-{: #rn-22February2019nf}
-
 自前发行版以来添加或增强的 {{site.data.keyword.aios_short}} 功能包括：
 
 - __*UI 更新*__：您可以导入 JSON 文件以在创建预订期间以编程方式配置所有监视器和功能。您还可以导出配置文件。请参阅[使用 JSON 文件配置部署预订](/docs/services/ai-openscale?topic=ai-openscale-cf-ov)主题以获取更多信息。
@@ -69,9 +60,6 @@ subcollection: ai-openscale
 {: #rn-7February2019}
 
 提供了以下新功能和对服务的更改。
-
-### 新功能和更改
-{: #rn-7February2019nf}
 
 自前发行版以来添加或增强的 {{site.data.keyword.aios_short}} 功能包括：
 
@@ -83,20 +71,10 @@ subcollection: ai-openscale
 
 - __*IBM Cloud 数据库支持*__：{{site.data.keyword.aios_short}} 现在支持 Databases for PostgreSQL（除 Compose for PostgreSQL 和 Db2 以外）
 
-### 已知问题
-{: #rn-7February2019ki}
-
-- **定制 ML 服务实例**
-
-    - [Python 模块](/docs/services/ai-openscale?topic=ai-openscale-as-module)当前不具有适用于定制服务实例的可解释性。这是因为定制服务实例需要在响应数据中进行数字预测，而模块脚本未随附该数据。
-
 ## 2018 年 12 月 14 日
 {: #rn-14December2018}
 
 提供了服务的下列新功能、更改和已知问题。
-
-### 新功能和更改
-{: #rn-12nf}
 
 自 Beta 发行版以来添加或增强的 {{site.data.keyword.aios_short}} 功能包括：
 
@@ -118,25 +96,18 @@ subcollection: ai-openscale
 
 - __*备用教程设置选项*__：要自动供应和配置必需的 IBM Cloud 服务，以及要查看 IBM {{site.data.keyword.aios_full}} 应用程序（包括样本数据），可以安装并运行 Python 模块。请参阅[安装 Python 模块以设置 {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)
 
-### 已知问题
-{: #rn-12ki}
-
-- **Microsoft Azure**
-
-    - 在两种类型的 Azure Machine Learning Web Service 中，{{site.data.keyword.aios_short}} 仅支持 `New` 类型。不支持 `Classic` 类型。
-
-    - __*必须使用缺省输入名称*__：在 Azure Web Service 中，缺省输入名称为 `"input1"`。当前，{{site.data.keyword.aios_short}} 必需此字段，如果缺失，那么 {{site.data.keyword.aios_short}} 将无法正常运作。
-
-      如果 Azure Web Service 不使用缺省名称，请将输入字段名称更改为 `"input1"`，然后代码将正常运作。
-
-- **AWS SageMaker**
-
-    - __*不支持 BlazingText 算法*__：AWS SageMaker BlazingText 算法输入载荷格式在 {{site.data.keyword.aios_short}} 的当前发行版中不受支持。
-
 ## 2018 年 9 月 17 日
 {: #rn-17September2018}
 
-### 新功能和更改
-{: #rn-17nf}
-
 - **Beta 预览发行版** - 欢迎使用 {{site.data.keyword.aios_full_notm}} 的 Beta 预览发行版。
+
+<p>&nbsp;</p>
+
+## 后续步骤
+{: #relnotes-in-next}
+
+仍然有疑问？
+
+- [限制
+](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
+- [已知问题](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)

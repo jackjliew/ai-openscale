@@ -58,7 +58,7 @@ lastupdated: "2019-02-05"
   通过转换为使用信用卡的付费帐户，可以获取 200 美元 {{site.data.keyword.cloud_notm}} 信贷。如果您已具有付费帐户，那么将针对一个月的首个 1 GB 的存储成本收到一笔 16 美元的一次性退款。
   {: tip}
 
-PostgreSQL 数据库和 Watson Machine Learning 实例必须部署在同一 {{site.data.keyword.cloud_notm}} 帐户中。
+PostgreSQL  数据库和 {{site.data.keyword.pm_full}} 实例必须部署在同一 {{site.data.keyword.cloud_notm}} 帐户中。
 {: important}
 
 如果您已供应必要的服务，例如，如果已完成其他教程，请在下面继续[设置 Watson Studio 项目](#tadv-setup-ws)。

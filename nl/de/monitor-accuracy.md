@@ -43,17 +43,12 @@ Sie müssen wie unten gezeigt manuell bezeichnete Rückmeldedaten Über die Benu
 
 Überprüfen Sie die [unterstützten Frameworks](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) auf Einschränkungen hinsichtlich der Genauigkeitsüberwachung.
 
-<!---
-You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
+### Verzerrungsbereinigte Genauigkeit
+{: #acc-debias-view}
 
-You can create a performance monitoring system for your predictive models by creating an evaluation instance, and then defining the metrics and triggers for the automatic retraining and deploying of the new model. Spark, Keras and TensorFlow models are supported at this stage, with the following requirements:
+Wenn die entsprechenden Daten zur Unterstützung vorhanden sind, werden in die Modellgenauigkeit sowohl das ursprüngliche Modell als auch das verzerrungsbereinigte Modell einbezogen. {{site.data.keyword.aios_full_notm}} berechnet die Genauigkeit für die verzerrungsbereinigte Ausgabe und speichert sie als zusätzliche Spalte in der Nutzdatenprotokolltabelle. 
 
-- A training definition must be stored in the repository
-- `training_data_reference` - must be defined as a part of the stored model's metadata
-- `training_definition_url` - must be defined as a part of the stored model's metadata
-
-Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-ml-api.mybluemix.net/){: new_window} end-points directly to provide feedback data and kick off evaluation activities. For more information, see the [WML documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/ml-continuous-learning.html?audience=wdp&context=wdp){: new_window}.
---->
+![Modellvisualisierung mit der berechneten Genauigkeit für das ursprüngliche und das verzerrungsbereinigte Modell](images/debiased-accuracy.png)
 
 ## Genauigkeitsüberwachung konfigurieren
 {: #acc-config}

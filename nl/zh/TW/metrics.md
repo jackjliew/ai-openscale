@@ -55,7 +55,7 @@ subcollection: ai-openscale
 
    如需相關資訊，請參閱 [Python SDK 文件](http://ai-openscale-python-client.mybluemix.net/)。
 
-自訂度量的視覺化也可以在 Watson OpenScale 儀表板上找到。
+您自訂度量的視覺化會出現在 {{site.data.keyword.aios_short}} 儀表板上。
 
 <!---
 ![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)

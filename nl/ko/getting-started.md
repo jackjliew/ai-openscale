@@ -35,7 +35,7 @@ subcollection: ai-openscale
 # 시작하기 - 튜토리얼(기본)
 {: #gettingstarted}
 
-{{site.data.keyword.aios_full}}를 사용하면 엔터프라이즈가 비즈니스 애플리케이션 내에서 AI 라이프사이클을 자동화하고 조작 가능하도록 할 수 있으며 AI 모델에서 편향성을 제거하여 비즈니스 사용자들이 쉽게 설명하고 이해할 수 있도록 하며 비즈니스 트랜잭션에서 감사받을 수 있습니다. {{site.data.keyword.aios_short}}은 사용자가 선택한 도구 및 모델 서버 프레임워크에서 빌드되고 실행되는 AI 모델을 지원합니다.
+{{site.data.keyword.aios_full}}을 사용하면 엔터프라이즈가 비즈니스 애플리케이션 내에서 AI 라이프사이클을 자동화하고 조작 가능하도록 할 수 있으며 AI 모델에서 편향성을 제거하여 비즈니스 사용자들이 쉽게 설명하고 이해할 수 있도록 하며 비즈니스 트랜잭션에서 감사받을 수 있습니다. {{site.data.keyword.aios_short}}은 사용자가 선택한 도구 및 모델 서버 프레임워크에서 빌드되고 실행되는 AI 모델을 지원합니다.
 {: shortdesc}
 
 ## 개요
@@ -60,7 +60,7 @@ subcollection: ai-openscale
 
 이 튜토리얼에서 제공된 신용 위험 모델은 각 대출 신청자에 대한 20가지 속성을 포함하는 훈련 데이터 세트를 사용합니다. 이러한 속성 중 두 가지인 연령 및 성별에 대해 편향성 테스트를 수행할 수 있습니다. 이 튜토리얼에서는 성별과 연령에 대한 편견에 중점을 둡니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
 
-{{site.data.keyword.aios_short}}이 배치된 모델의, 다른 그룹(모니터되는 그룹)보다 한 그룹(참조 그룹)의 선호 결과("위험 없음")를 우선하는 경향을 모니터합니다. 이 튜토리얼에서 성별에 대해 모니터되는 그룹은 `female`이며 나이에 대해 모니터되는 그룹은 `19 to 25`입니다.
+{{site.data.keyword.aios_short}}이 배치된 모델의, 다른 그룹(모니터되는 그룹)보다 한 그룹(참조 그룹)의 선호 결과("위험 없음")를 우선하는 경향을 모니터합니다. 이 튜토리얼에서 성별에 대해 모니터되는 그룹은 `female`이며 나이에 대해 모니터되는 그룹은 `19 - 25`입니다.
 
 <!---
 ### How {{site.data.keyword.aios_short}} can help
@@ -409,7 +409,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 
 1.  사용자의 선택을 검토하고 **저장**을 클릭한 다음 **확인**을 클릭하십시오.
 
-1.  마지막으로 피드백 데이터를 추가할 수 있는 옵션이 제공됩니다. 이에 대해서는 다음 절에서 설명합니다. 이제 **피드백 데이터 추가** 단추를 클리하지 않고 **확인**을 클릭하여 창을 닫으십시오. 
+1.  마지막으로 피드백 데이터를 추가할 수 있는 옵션이 제공됩니다. 이에 대해서는 다음 절에서 설명합니다. 이제 **피드백 데이터 추가** 단추를 클리하지 않고 **확인**을 클릭하여 창을 닫으십시오.
 
     자세한 정보는 [정확성 모니터 구성](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-config)을 참조하십시오.
 

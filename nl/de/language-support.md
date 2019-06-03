@@ -24,7 +24,7 @@ subcollection: ai-openscale
 # Unterstützte Sprachen für {{site.data.keyword.aios_short}}
 {: #sl-langs}
 
-Standardmäßig ist die Unterstützung für Sprachen aktiviert und die jeweilige übersetzte Benutzerschnittstelle für eine der unterstützten Sprachen kann durch Aktualisieren Ihrer Sprachvorgabe in Ihren Web-Browser festgelegt werden. Die {{site.data.keyword.aios_full}}-Benutzerschnittstelle ist derzeit für die folgenden Sprachen übersetzt:
+Die Unterstützung für verschiedene Sprachen ist standardmäßig aktiviert. Sie können die jeweilige übersetzte Benutzerschnittstelle für eine der unterstützten Sprachen durch Aktualisieren der Sprachvorgabe im Web-Browser festlegen. Die {{site.data.keyword.aios_full}}-Benutzerschnittstelle ist derzeit für die folgenden Sprachen übersetzt: 
 {: shortdesc}
 
 - Portugiesisch (Brasilien) (pt-br)

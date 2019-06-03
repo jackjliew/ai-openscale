@@ -58,7 +58,7 @@ Außerdem richten Sie die folgenden **gebührenpflichtigen** {{site.data.keyword
   Es kann ein {{site.data.keyword.cloud_notm}}-Guthaben in Höhe von 200 US-Dollar durch Umwandlung in ein gebührenpflichtiges Konto mit einer Kreditkarte erworben werden. Falls Sie bereits über ein gebührenpflichtiges Konto verfügen, erhalten Sie eine einmalige Rückerstattung der Kosten für Ihr erstes GB an Speicherplatz für einen Monat in Höhe von 16 US-Dollar.
   {: tip}
 
-Die PostgreSQL-Datenbank und die Watson Machine Learning-Instanz müssen in demselben {{site.data.keyword.cloud_notm}}-Konto bereitgestellt werden.
+Die PostgreSQL-Datenbank und die {{site.data.keyword.pm_full}}-Instanz müssen in demselben {{site.data.keyword.cloud_notm}}-Konto bereitgestellt werden.
 {: important}
 
 Falls Sie die erforderlichen Services bereits eingerichtet haben, zum Beispiel weil Sie das andere Lernprogramm bereits abgearbeitet haben, fahren Sie mit [Watson Studio-Projekt einrichten](#tadv-setup-ws) unten fort.

@@ -43,7 +43,7 @@ subcollection: ai-openscale
 **참고**: 무료 데이터베이스에는 몇 가지 중요한 제한사항이 있습니다.
 
 - 무료 데이터베이스가 호스팅되며 사용자에 직접 액세스할 수 없습니다.
-- {{site.data.keyword.aios_full}}는 데이터베이스에 대한 전체 액세스 권한을 갖고 있으므로 데이터에 대한 전체 액세스 권한을 가집니다.
+- {{site.data.keyword.aios_full}}은 데이터베이스에 대한 전체 액세스 권한을 갖고 있으므로 데이터에 대한 전체 액세스 권한을 가집니다.
 - 무료 데이터베이스는 GDPR을 준수하지 않습니다. 모델이 PII(Personally-Identifiable Information)를 처리하는 경우 무료 데이터베이스를 사용할 수 없습니다. 새 데이터베이스를 구매하거나 GDPR 규칙을 준수하는 기존 데이터베이스를 사용해야 합니다. 자세한 내용은 [정보 보안](/docs/services/ai-openscale?topic=ai-openscale-is-ov)을 참조하십시오.
 
 무료 데이터베이스를 사용하여 진행하려면 **{{site.data.keyword.aios_short}}에서 호스팅하는 무료 데이터베이스 사용** 타일을 클릭한 후 요약 데이터를 검토하고 **저장**을 클릭하십시오.
@@ -61,14 +61,14 @@ subcollection: ai-openscale
 
 1.  기존 데이터베이스 유형(Compose for Postgres, Database for Postgres 또는 Db2)을 선택한 다음 **데이터베이스** 드롭 다운 메뉴에서 데이터베이스를 선택하고 **스키마**를 선택하십시오.
 
-    {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 배치 출력 및 재훈련 데이터를 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
+    {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 관련 데이터(피드백 데이터, 스코어링 페이로드) 및 계산된 메트릭을 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
     {: note}
 
     ![데이터베이스 선택](images/gs-config-database3.png)
 
 1.  또한 **다른 위치 선택**을 클릭하여 {{site.data.keyword.Bluemix_notm}} 계정 외부의 데이터베이스 위치를 지정할 수 있습니다.
 
-    {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 배치 출력 및 재훈련 데이터를 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다.
+    {{site.data.keyword.aios_short}}은 PostgreSQL 또는 Db2 데이터베이스를 사용하여 모델 관련 데이터(피드백 데이터, 스코어링 페이로드) 및 계산된 메트릭을 저장합니다. Lite Db2 플랜은 현재 지원되지 않습니다.
     {: note}
 
     - **데이터베이스 유형**(`Compose for PostgreSQL`, `Database for PostgreSQL` 또는 `Db2`)를 선택한 다음 연결 정보를 제공하십시오.

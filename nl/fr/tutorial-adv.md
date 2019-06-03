@@ -118,8 +118,7 @@ Connectez-vous à votre [compte {{site.data.keyword.cloud_notm}}
 
 Si vous avez un compte {{site.data.keyword.cloud_notm}} payant,
 vous pouvez mettre à disposition un service `Databases for PostgreSQL` ou `Db2 Warehouse`
-pour profiter pleinement de l'intégration avec {{site.data.keyword.DSX}} et des services d'apprentissage continu.
-Si vous choisissez de ne pas mettre à disposition un service payant,
+pour profiter pleinement de l'intégration avec {{site.data.keyword.DSX}} et des services d'apprentissage continu. Si vous choisissez de ne pas mettre à disposition un service payant,
 vous pouvez utiliser le stockage PostgreSQL interne gratuit
 avec {{site.data.keyword.aios_short}}, mais vous ne pourrez pas configurer l'apprentissage continu pour votre modèle.
 

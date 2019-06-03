@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # 새로운 기능
 {: #rn-relnotes}
 
-이 문서는 {{site.data.keyword.aios_full_notm}}의 새 기능 및 알려진 문제점에 대해 간략하게 설명합니다.
+이 문서는 {{site.data.keyword.aios_full_notm}}의 새 기능에 대해 간략하게 설명합니다.
 {: shortdesc}
 
 ## 2019년 4월 25일
@@ -30,22 +30,16 @@ subcollection: ai-openscale
 
 다음과 같은 새로운 기능과 서비스의 변경사항이 사용 가능합니다.
 
-### 새로운 기능 및 변경사항
-{: #rn-25April2019nf}
-
 가용성 개선 및 보안 업데이트 외에 IBM 개발자는 새로운 기능으로 항상 바쁘게 작업하고 있습니다. 이전 몇 주에 걸쳐 추가되거나 개선된 {{site.data.keyword.aios_short}} 기능은 다음과 같습니다.
 
 - __*자동화된 설정 둘러보기*__: {{site.data.keyword.aios_short}} 환경을 설정하는 새로운 둘러보기 기반 방법. [자동화된 설정](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)을 사용하여 서비스를 프로비저닝하고 모델을 다운로드하여 구성하십시오. {{site.data.keyword.aios_short}}의 새 인스턴스가 있는 경우에 이 옵션을 사용할 수 있습니다.
-- __*베타로 전환*__: ![베타 태그](images/beta.png) 새 토글 **새 베타 버전 탐색**을 통해 베타 환경에서 작업할 수 있으며 여기에서 모든 최신 기능 및 새 기능을 확인할 수 있습니다. 표시되는 것이 맘에 들지 않습니까? **원래 버전으로 돌아가기**를 클릭하여 다시 전환할 수 있습니다. 구성과 모니터는 영향을 받지 않습니다. 다음 기능은 현재 베타 프로그램의 일부입니다. 
-    - __*오차 행렬*__: [오차 행렬은](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) 거짓 양성 및 거짓 음성을 표시합니다. 피드백 레코드의 서브세트를 보려면 셀을 클릭하십시오. 
+- __*베타로 전환*__: ![베타 태그](images/beta.png) 새 토글 **새 베타 버전 탐색**을 통해 베타 환경에서 작업할 수 있으며 여기에서 모든 최신 기능 및 새 기능을 확인할 수 있습니다. 표시되는 것이 맘에 들지 않습니까? **원래 버전으로 돌아가기**를 클릭하여 다시 전환할 수 있습니다. 구성과 모니터는 영향을 받지 않습니다. 다음 기능은 현재 베타 프로그램의 일부입니다.
+    - __*오차 행렬*__: [오차 행렬은](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) 거짓 양성 및 거짓 음성을 표시합니다. 피드백 레코드의 서브세트를 보려면 셀을 클릭하십시오.
 
 ## 2019년 3월 5일
 {: #rn-5March2019}
 
 다음과 같은 새로운 기능과 서비스의 변경사항이 사용 가능합니다.
-
-### 새로운 기능 및 변경사항
-{: #rn-5March2019nf}
 
 이전 릴리스 이후에 추가되거나 강화된 {{site.data.keyword.aios_short}} 기능은 다음과 같습니다.
 
@@ -58,9 +52,6 @@ subcollection: ai-openscale
 
 다음과 같은 새로운 기능과 서비스의 변경사항이 사용 가능합니다.
 
-### 새로운 기능 및 변경사항
-{: #rn-22February2019nf}
-
 이전 릴리스 이후에 추가되거나 강화된 {{site.data.keyword.aios_short}} 기능은 다음과 같습니다.
 
 - __*UI 업데이트*__: JSON 파일을 가져와서 구독을 작성하는 동안 프로그래밍 방식으로 모든 모니터와 기능을 구성할 수 있습니다. 또한 구성 파일을 내보낼 수 있습니다. 자세한 정보는 [JSON 파일을 사용하여 배치 구독 구성](/docs/services/ai-openscale?topic=ai-openscale-cf-ov) 주제를 참조하십시오.
@@ -69,9 +60,6 @@ subcollection: ai-openscale
 {: #rn-7February2019}
 
 다음과 같은 새로운 기능과 서비스의 변경사항이 사용 가능합니다.
-
-### 새로운 기능 및 변경사항
-{: #rn-7February2019nf}
 
 이전 릴리스 이후에 추가되거나 강화된 {{site.data.keyword.aios_short}} 기능은 다음과 같습니다.
 
@@ -83,20 +71,10 @@ subcollection: ai-openscale
 
 - __*IBM Cloud 데이터베이스 지원*__: {{site.data.keyword.aios_short}}에서 이제 Compose for PostgreSQL 및 Db2 뿐만 아니라 Databases for PostgreSQL도 지원합니다.
 
-### 알려진 문제
-{: #rn-7February2019ki}
-
-- **사용자 정의 ML 서비스 인스턴스**
-
-    - [Python 모듈](/docs/services/ai-openscale?topic=ai-openscale-as-module)에서 현재 사용자 정의 서비스 인스턴스에 대해 설명 가능성이 작동하지 않습니다. 이는 사용자 정의 서비스 인스턴스가 모듈 스크립트에 포함되지 않은 응답 데이터 내의 숫자 예측을 요구하기 때문입니다.
-
 ## 2018년 12월 14일
 {: #rn-14December2018}
 
 서비스에 대해 다음과 같은 새로운 기능과 변경사항이 사용 가능하며 알려진 문제점이 있습니다.
-
-### 새로운 기능 및 변경사항
-{: #rn-12nf}
 
 베타 릴리스 이후에 추가되거나 강화된 {{site.data.keyword.aios_short}} 기능은 다음과 같습니다.
 
@@ -118,25 +96,17 @@ subcollection: ai-openscale
 
 - __*대체 튜토리얼 설정 옵션*__: 필수 IBM Cloud 서비스의 프로비저닝 및 구성을 자동화하고 샘플 데이터를 포함하여 IBM {{site.data.keyword.aios_full}} 애플리케이션을 보려면 Python 모듈을 설치하고 실행하십시오. [Python 모듈을 설치하여 {{site.data.keyword.aios_short}} 설정](/docs/services/ai-openscale?topic=ai-openscale-as-module)을 참조하십시오.
 
-### 알려진 문제
-{: #rn-12ki}
-
-- **Microsoft Azure**
-
-    - 두 가지 유형의 Azure 기계 학습 웹 서비스 중에서 `신규` 유형만 {{site.data.keyword.aios_short}}에 의해 지원됩니다. `일반` 유형은 지원되지 않습니다.
-
-    - __*기본 입력 이름이 사용되어야 함*__: Azure 웹 서비스에서 기본 입력 이름은 `"input1"`입니다. 현재 이 필드는 {{site.data.keyword.aios_short}}에 필수이며 누락되는 경우 {{site.data.keyword.aios_short}}이 작동하지 않습니다.
-
-      Azure 웹 서비스가 기본 이름을 사용하지 않는 경우, 입력 필드 이름을 `"input1"`로 변경하면 코드가 작동합니다.
-
-- **AWS SageMaker**
-
-    - __*BlazingText 알고리즘이 지원되지 않음*__: AWS SageMaker BlazingText 알고리즘 입력 페이로드 형식이 현재 {{site.data.keyword.aios_short}} 릴리스에서 지원되지 않습니다.
-
 ## 2018년 9월 17일
 {: #rn-17September2018}
 
-### 새로운 기능 및 변경사항
-{: #rn-17nf}
-
 - **베타 미리보기 릴리스** - {{site.data.keyword.aios_full_notm}}의 베타 미리보기 릴리스 사용을 환영합니다.
+
+<p>&nbsp;</p>
+
+## 다음 단계
+{: #relnotes-in-next}
+
+다른 질문이 있으십니까?
+
+- [제한사항](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
+- [알려진 문제](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)

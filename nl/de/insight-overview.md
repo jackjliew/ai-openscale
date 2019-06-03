@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Im Dashboard navigieren
 {: #io-ov}
 
-Sie können alle Bereitstellungen, die Sie überwachen, über das {{site.data.keyword.aios_short}}-Dashboard verfolgen. Das Dashboard liefert die Hauptansicht von {{site.data.keyword.aios_short}}. Das Dashboard besteht aus fünf Registerkarten:
+Sie können alle Bereitstellungen, die Sie überwachen, über das {{site.data.keyword.aios_short}}-Dashboard verfolgen. Das Dashboard liefert die Hauptansicht von {{site.data.keyword.aios_short}}. Das Dashboard besteht aus den folgenden Registerkarten:
 
   ![Registerkarte 'Einsichten'](images/insight-tabs.png)
 
@@ -61,13 +61,6 @@ Von hier aus können Sie die Konfigurationseinstellungen für Ihre Bereitstellun
 {: #io-tran}
 
 Mit der Registerkarte **Transaktion erklären** (![Registerkarte 'Transaktion erklären'](images/insight-transact-tab.png)) können Sie nach einer bestimmten Transaktions-ID suchen, um eine Erklärung einer bestimmten Bereitstellungstransaktion zu erhalten. Weitere Informationen hierzu enthält der Abschnitt [Erklärbarkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
-
-## AI-Tools
-{: #io-too}
-
-Verwenden Sie die Registerkarte **AI-Tools** (![Registerkarte 'AI-Tools'](images/aitools.png)), um einen Dialog zu öffnen, der einen Link zu weiteren Optionen für IBM AI-Tools enthält.
-
-- *[Watson Studio-Lite-Plan ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*: Watson Studio bietet Ihnen die Umgebung und die Tools, um Daten zu analysieren und zu visualisieren, Daten zu bereinigen und zu formen (Shapedaten), Streamingdaten einzupflegen oder Machine Learning-Modelle zu erstellen, zu trainieren und bereitzustellen. Klicken Sie auf den Link 'Registrierung für kostenlosen Watson Studio-Lite-Plan durchführen', um Watson Studio abzurufen.
 
 ## Registerkarte 'Hilfe'
 {: #io-help}

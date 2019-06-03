@@ -38,6 +38,8 @@ subcollection: ai-openscale
 | Python 함수 | 회귀 | 정형 |
 | XGBoost | 분류 | 정형 |
 | XGBoost | 회귀 | 정형 |
+| scikit-learn | 분류 | 정형 |
+| scikit-learn | 회귀 | 정형 |
 | Keras with TensorFlow<sup>1</sup> | 분류 | 비정형(이미지, 텍스트) |
 | Keras with TensorFlow<sup>1</sup> | 회귀 | 비정형(이미지, 텍스트) |
 {: caption="프레임워크 지원 세부사항" caption-side="top"}

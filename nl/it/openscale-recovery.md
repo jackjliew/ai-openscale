@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: ai, artificial intelligence, high availability, disaster recovery, recovery, load-balancing, postgres
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {{site.data.keyword.aios_full}} è altamente disponibile all'interno di più ubicazioni {{site.data.keyword.cloud_notm}}, come Dallas e Washington, DC. Tuttavia, il ripristino da potenziali emergenze che influenza un'intera ubicazione richiede pianificazione e preparazione.
 {: shortdesc}
 
-Si è responsabili della comprensione della configurazione, della personalizzazione e dell'utilizzo del servizio. Si è anche responsabili di essere in grado di ricreare un'istanza del servizio in una nuova ubicazione e di ripristinare i dati in qualsiasi ubicazione. Vedi [Come garantisco nessun tempo di inattività? ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/overview?topic=overview-zero-downtime#zero-downtime){: new_window} per ulteriori informazioni. 
+Si è responsabili della comprensione della configurazione, della personalizzazione e dell'utilizzo del servizio. Si è anche responsabili di essere in grado di ricreare un'istanza del servizio in una nuova ubicazione e di ripristinare i dati in qualsiasi ubicazione. Vedi [Come garantisco nessun tempo di inattività? ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/overview?topic=overview-zero-downtime#zero-downtime){: new_window} per ulteriori informazioni.
 
 ##Alta disponibilità 
 {: #openscale-high-availability}

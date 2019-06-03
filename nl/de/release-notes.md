@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Neuerungen
 {: #rn-relnotes}
 
-In diesem Dokument werden neue Funktionen und bekannte Probleme für {{site.data.keyword.aios_full_notm}} beschrieben.
+In diesem Dokument werden neue Funktionen für {{site.data.keyword.aios_full_notm}} beschrieben.
 {: shortdesc}
 
 ## 25. April 2019
@@ -30,22 +30,16 @@ In diesem Dokument werden neue Funktionen und bekannte Probleme für {{site.data
 
 Die folgenden neuen Funktionen und Änderungen beim Service sind verfügbar.
 
-### Neue Funktionen und Änderungen
-{: #rn-25April2019nf}
+Zusätzlich zur Verbesserung der Benutzerfreundlichkeit und den Sicherheitsupdates wurden neue Funktionen entwickelt. Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden in den vergangenen Wochen hinzugefügt oder erweitert:
 
-Zusätzlich zur Verbesserung der Benutzerfreundlichkeit und den Sicherheitsupdates wurden neue Funktionen entwickelt. Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden in den vergangenen Wochen hinzugefügt oder erweitert: 
-
-- __*Tour für automatisierte Konfiguration*__: Eine neue Möglichkeit, die {{site.data.keyword.aios_short}}-Umgebung anhand einer Tour einzurichten. Mit der [automatisierten Konfiguration](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) können Sie Services bereitstellen und ein Modell herunterladen und konfigurieren. Wenn Sie über eine neue Instanz von {{site.data.keyword.aios_short}} verfügen, wird diese Option angezeigt. 
-- __*Zu Beta wechseln*__: ![Beta-Tag](images/beta.png) Die neue Wechseloption **Neue Betaversion erkunden** ermöglicht es Ihnen, in der Betaumgebung zu arbeiten, in der Sie die neuesten Features und neue Funktionen erkunden können. Sie sind nicht überzeugt? Wechseln Sie einfach zurück, indem Sie auf **Zurück zur Originalversion** klicken. Die Konfiguration und die Überwachungen sind davon nicht betroffen. Die folgenden Funktionen sind Teil des aktuellen Betaprogramms: 
+- __*Tour für automatisierte Konfiguration*__: Eine neue Möglichkeit, die {{site.data.keyword.aios_short}}-Umgebung anhand einer Tour einzurichten. Mit der [automatisierten Konfiguration](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) können Sie Services bereitstellen und ein Modell herunterladen und konfigurieren. Wenn Sie über eine neue Instanz von {{site.data.keyword.aios_short}} verfügen, wird diese Option angezeigt.
+- __*Zu Beta wechseln*__: ![Beta-Tag](images/beta.png) Die neue Wechseloption **Neue Betaversion erkunden** ermöglicht es Ihnen, in der Betaumgebung zu arbeiten, in der Sie die neuesten Features und neue Funktionen erkunden können. Sie sind nicht überzeugt? Wechseln Sie einfach zurück, indem Sie auf **Zurück zur Originalversion** klicken. Die Konfiguration und die Überwachungen sind davon nicht betroffen. Die folgenden Funktionen sind Teil des aktuellen Betaprogramms:
     - __*Wahrheitsmatrix*__: Eine [Wahrheitsmatrix](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) zeigt die falsch-positiven und die falsch-negativen Ergebnisse an. Klicken Sie auf eine Zelle, um die Untergruppe der Rückmeldedatensätze anzuzeigen.
 
 ## 5. März 2019
 {: #rn-5March2019}
 
 Die folgenden neuen Funktionen und Änderungen beim Service sind verfügbar.
-
-### Neue Funktionen und Änderungen
-{: #rn-5March2019nf}
 
 Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Vorgängerrelease hinzugefügt oder funktional erweitert:
 
@@ -58,9 +52,6 @@ Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Vorgä
 
 Die folgenden neuen Funktionen und Änderungen beim Service sind verfügbar.
 
-### Neue Funktionen und Änderungen
-{: #rn-22February2019nf}
-
 Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Vorgängerrelease hinzugefügt oder funktional erweitert:
 
 - __*Aktualisierungen der Benutzerschnittstelle (UI)*__: Sie können eine JSON-Datei importieren, um alle Überwachungen und Funktionen während der Erstellung des Abonnements programmgestützt zu konfigurieren. Sie können die Konfigurationsdatei auch exportieren. Weitere Informationen enthält der Abschnitt [Bereitstellungsabonnement mithilfe von JSON-Dateien konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-cf-ov).
@@ -69,9 +60,6 @@ Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Vorgä
 {: #rn-7February2019}
 
 Die folgenden neuen Funktionen und Änderungen beim Service sind verfügbar.
-
-### Neue Funktionen und Änderungen
-{: #rn-7February2019nf}
 
 Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Vorgängerrelease hinzugefügt oder funktional erweitert:
 
@@ -83,20 +71,10 @@ Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Vorgä
 
 - __*Unterstützung der IBM Cloud-Datenbank*__: {{site.data.keyword.aios_short}} unterstützt jetzt zusätzlich zu Compose for PostgreSQL und Db2 auch Databases for PostgreSQL.
 
-### Bekannte Probleme
-{: #rn-7February2019ki}
-
-- **Angepasste ML-Serviceinstanz**
-
-    - Beim [Python-Modul](/docs/services/ai-openscale?topic=ai-openscale-as-module) funktioniert derzeit die Erklärbarkeit für die angepasste Serviceinstanz nicht. Das liegt daran, dass die angepasste Serviceinstanz eine numerische Vorhersage in den Antwortdaten erfordert, die nicht im Modulscript enthalten ist.
-
 ## 14. Dezember 2018
 {: #rn-14December2018}
 
 Die folgenden neuen Funktionen, Änderungen und bekannten Probleme bei dem Service sind verfügbar.
-
-### Neue Funktionen und Änderungen
-{: #rn-12nf}
 
 Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Beta-Release hinzugefügt oder funktional erweitert:
 
@@ -118,25 +96,17 @@ Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Beta-R
 
 - __*Alternative Option zur Konfiguration des Lernprogramms*__: Um die Einrichtung und Konfiguration der erforderlichen IBM Cloud-Services zu automatisieren und eine IBM {{site.data.keyword.aios_full}}-Anwendung einschließlich Stichprobendaten anzuzeigen, können Sie ein Python-Modul installieren und ausführen. Näheres hierzu enthält [Python-Modul zum Konfigurieren von {{site.data.keyword.aios_short}} installieren](/docs/services/ai-openscale?topic=ai-openscale-as-module).
 
-### Bekannte Probleme
-{: #rn-12ki}
-
-- **Microsoft Azure**
-
-    - Von den beiden Arten von Azure Machine Learning-Web-Services wird nur der Typ `Neu` von {{site.data.keyword.aios_short}} unterstützt. Der Typ `Klassisch` wird nicht unterstützt.
-
-    - __*Standardeingabename muss verwendet werden*__: Im Azure-Web-Service lautet der Standardeingabename `"input1"`. Dieses Feld ist gegenwärtig für {{site.data.keyword.aios_short}} bevollmächtigt und wenn es fehlt, funktioniert {{site.data.keyword.aios_short}} nicht.
-
-      Wenn Ihr Azure-Web-Service nicht den Standardnamen verwendet, ändern Sie den Namen für das Eingabefeld in `"input1"`, dann funktioniert der Code.
-
-- **AWS SageMaker**
-
-    - __*BlazingText-Algorithmus wird nicht unterstützt*__: Das Format der Eingabenutzdaten für den AWS SageMaker BlazingText-Algorithmus wird in der aktuellen Version von {{site.data.keyword.aios_short}} nicht unterstützt.
-
 ## 17. September 2018
 {: #rn-17September2018}
 
-### Neue Funktionen und Änderungen
-{: #rn-17nf}
-
 - **Beta-Vorschauversion**: Willkommen bei der Beta-Vorschauversion von {{site.data.keyword.aios_full_notm}}.
+
+<p>&nbsp;</p>
+
+## Weitere Schritte
+{: #relnotes-in-next}
+
+Haben Sie immer noch offene Fragen?
+
+- [Einschränkungen](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
+- [Bekannte Probleme](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)

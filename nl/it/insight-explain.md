@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: explainability, monitoring, explain, explaining, transactions, transaction ID
 
@@ -19,7 +19,7 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Monitoraggio esplicabilità
+# Spiegazione transazioni
 {: #ie-ov}
 
 Per ogni distribuzione, è possibile vedere i dati di esplicabilità per transazioni specifiche.
@@ -61,7 +61,7 @@ Mentre i grafici sono utili nel mostrare i fattori più significativi che hanno 
 Spiegazioni avanzate non sono disponibili per modelli di regressione, immagini e testo non strutturato.
 {: note}
 
-Il campo `Minimum changes for Approved outcome` indica che, se i valori delle funzioni sono cambiati nei valori elencati in questa sezione, la previsione del modello cambierà. 
+Il campo `Minimum changes for Approved outcome` indica che, se i valori delle funzioni sono cambiati nei valori elencati in questa sezione, la previsione del modello cambierà.
 
 Allo stesso modo, il campo `Minimum changes for this outcome` indica che, anche se i valori delle funzioni fossero stati modificati in quelli elencati in questa sezione, la previsione del modello non sarebbe cambiata.
 
@@ -74,7 +74,7 @@ Pertanto, questi due valori indicano il comportamento del modello nelle vicinanz
 
 Per un esempio di esplicabilità di un modello di classificazione immagine, si possono vedere quali parti di un'immagine hanno contribuito positivamente al risultato previsto e quali hanno contribuito negativamente. Nell'esempio sotto riportato, l'immagine sulla destra mostra le parti che hanno impattato positivamente la previsione e l'immagine a sinistra mostra le parti di immagini che hanno avuto un impatto negativo sul risultato.
 
-Attualmente le spiegazioni non possono essere generate per le immagini di dimensione maggiore di 1 MB.
+- Per {{site.data.keyword.pm_full}}, il payload delle immagini perturbate inviate tramite il gateway di machine learning non può superare 1 MB. Per evitare problemi di timeout, le immagini non devono superare 125 x 125 pixel e devono essere inviate in sequenza in modo che la spiegazione per la seconda immagine sia richiesta quando la prima è completata.
 {: note}
 
 ![Esplicabilità - classificazione immagine](images/insight-explain-image.png)

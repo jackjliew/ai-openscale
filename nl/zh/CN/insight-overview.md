@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # 浏览仪表板
 {: #io-ov}
 
-您可以通过 {{site.data.keyword.aios_short}} 仪表板来跟踪正在监视的所有部署。该仪表板是 {{site.data.keyword.aios_short}} 的主要视图。该仪表板由五个选项卡组成：
+您可以通过 {{site.data.keyword.aios_short}} 仪表板来跟踪正在监视的所有部署。该仪表板是 {{site.data.keyword.aios_short}} 的主要视图。该仪表板由以下选项卡组成：
 
   ![“洞察”选项卡](images/insight-tabs.png)
 
@@ -61,13 +61,6 @@ subcollection: ai-openscale
 {: #io-tran}
 
 使用**解释事务**选项卡 ( ![“解释事务”选项卡](images/insight-transact-tab.png) ) 可以搜索特定事务 ID 以解释特定部署事务。有关更多信息，请参阅[监视可解释性](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)。
-
-## AI 工具
-{: #io-too}
-
-使用 **AI 工具** 选项卡 (![“AI 工具”选项卡](images/aitools.png) ) 可以打开其他的 IBM AI 工具和选项。
-
-- *[Watson Studio Lite 套餐 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*：Watson Studio 为您提供环境和工具以分析和可视化数据，对数据进行清理和塑形，摄入流式数据，或者创建、训练和部署机器学习模型。单击“注册免费 Watson Studio Lite 套餐”链接以获取 Watson Studio。
 
 ## “帮助”选项卡
 {: #io-help}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: machine learning, services, ml, custom 
 
@@ -119,10 +119,10 @@ Questa immagine mostra il supporto dell'ambiente personalizzato:
 
   Se l'input è un tensore o una matrice, trasformati dallo spazio della funzione di input (come spesso accade nel deep learning da testo o immagini), il modello non può essere gestito dalla piattaforma {{site.data.keyword.aios_short}} nella release corrente. Per estensione, i modelli di deep learning con input di testo o immagine non possono essere gestiti per la rilevazione e la mitigazione della distorsione.
 
-  Inoltre, i dati di training devono essere caricati per supportare l'esplicabilità. 
+  Inoltre, i dati di training devono essere caricati per supportare l'esplicabilità.
 
-Per l'esplicabilità sul testo, una delle funzioni deve essere il testo completo. L'esplicabilità sulle immagini per un modello personalizzato non è supportata nella release corrente.
-{: note}
+  Per l'esplicabilità sul testo, una delle funzioni deve essere il testo completo. L'esplicabilità sulle immagini per un modello personalizzato non è supportata nella release corrente.
+  {: note}
 
 - **Criteri di output perché il modello supporti i monitor**
 
@@ -166,7 +166,7 @@ Per l'esplicabilità sul testo, una delle funzioni deve essere il testo completo
   }
   ```
 
-  In questo esempio, `"personal”` e `“camping”` sono le possibili classi e i punteggi in ogni output di calcolo del punteggio sono assegnati a entrambe le classi. Se mancano le probabilità previsionali, il rilevamento della distorsione funzionerà, ma non funzionerà l'annullamento automatico della distorsione. 
+  In questo esempio, `"personal”` e `“camping”` sono le possibili classi e i punteggi in ogni output di calcolo del punteggio sono assegnati a entrambe le classi. Se mancano le probabilità previsionali, il rilevamento della distorsione funzionerà, ma non funzionerà l'annullamento automatico della distorsione.
 
   L'output del calcolo del punteggio sopra riportato deve essere accessibile da un endpoint di calcolo del punteggio attivo che {{site.data.keyword.aios_short}} può richiamare su REST. Per AzureML, SageMaker e WML, {{site.data.keyword.aios_short}} connette direttamente agli endpoint di calcolo del punteggio nativi, pertanto non occorre implementare la specifica di punteggio
 

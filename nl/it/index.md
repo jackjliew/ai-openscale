@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -24,7 +24,7 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Informazioni
+# Informazioni su
 {: #in-ov}
 
 {{site.data.keyword.aios_full}} è un ambiente di livello aziendale per applicazioni che utilizzano l'AI, che fornisce alle aziende visibilità su come si crea e si utilizza l'AI e il ROI che ne deriva, relativamente alla propria attività di business.
@@ -39,7 +39,7 @@ Ecco come implementare {{site.data.keyword.aios_short}}:
 
 - **Configurare {{site.data.keyword.aios_short}}**: con l'ambiente grafico di facile utilizzo, [configurare un database di registrazione del payload](/docs/services/ai-openscale?topic=ai-openscale-connect-db) e [l'istanza di Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-wml-connect) in cui sono memorizzati i modelli e le distribuzioni AI.
 
-- **Gestire i monitor**: per ogni distribuzione, configurare il modo in cui {{site.data.keyword.aios_short}} monitorerà la distribuzione.  È possibile eseguire il monitoraggio di:
+- **Gestire i monitor**: per ogni distribuzione, configurare il modo in cui {{site.data.keyword.aios_short}} monitorerà la distribuzione. È possibile eseguire il monitoraggio di:
 
     - [Correttezza](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - [Accuratezza](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
@@ -51,9 +51,10 @@ Ecco come implementare {{site.data.keyword.aios_short}}:
 ## Limitazioni
 {: #in-lim}
 
-- La release corrente supporta solo un database, un'istanza di Watson Machine Learning e un'istanza di {{site.data.keyword.aios_short}}
+- La release corrente supporta solo un database, un'istanza di {{site.data.keyword.pm_full}} e un'istanza di {{site.data.keyword.aios_short}}
 
-- Il database e l'istanza Watson Machine Learning devono essere distribuiti nello stesso account {{site.data.keyword.cloud_notm}}.
+- Il database e l'istanza {{site.data.keyword.pm_full}} devono essere distribuiti nello stesso account {{site.data.keyword.cloud_notm}}.
+
 
 - Il piano Lite (gratuito) ha i seguenti limiti mensili:
 
@@ -62,35 +63,41 @@ Ecco come implementare {{site.data.keyword.aios_short}}:
     - 50.000 record di payload (cumulativi)
     - 50.000 record di feedback (cumulativi)
 
-- {{site.data.keyword.aios_short}} utilizza un database PostgreSQL o Db2 per memorizzare l'output della distribuzione del modello e i dati del nuovo training. I piani DB2 Lite non sono attualmente supportati. 
+- {{site.data.keyword.aios_short}} utilizza un database PostgreSQL o Db2 per memorizzare i dati relativi al modello (dati di feedback, payload di calcolo del punteggio) e le metriche calcolate. I piani DB2 Lite non sono attualmente supportati.
 
 - Esiste un limite di licenza di 20 modelli distribuiti per istanza di {{site.data.keyword.aios_short}}.
 
-- Attualmente le spiegazioni non possono essere generate per le immagini di dimensione maggiore di 1 MB.
+- Per {{site.data.keyword.pm_full}}, il payload delle immagini perturbate inviate tramite il gateway di machine learning non può superare 1 MB. Per evitare problemi di timeout, le immagini non devono superare 125 x 125 pixel e devono essere inviate in sequenza in modo che la spiegazione per la seconda immagine sia richiesta quando la prima è completata.
+
+
 
 <p>&nbsp;</p>
 
-## Tipi di modello supportati
-{: #in-mod}
+## Problemi noti
+{: #rn-12ki}
 
-Tabella 1. Dettagli supporto modello
+- **Microsoft Azure**
 
-| Algoritmi | **Correttezza** | **Annullamento automatico distorsione** | **Spiega** | **Accuratezza** |
-|:---|:---:|:---:|:---:|:---:|
-| **Classificazione strutturata** | Sì | Sì<sup>1</sup> | Sì | Sì |
-| **Regressione strutturata**     | Sì | No | Sì | Sì |
-| **Classificazione testo**       | No | No | Sì | No |
-| **Classificazione immagine**    | No | No | Sì | No ||
-{: caption="Dettagli supporto modello" caption-side="top"}
+    - Dei due tipi di servizi Web di Azure Machine Learning, solo il tipo `Nuovo` è supportato da {{site.data.keyword.aios_short}}. Il tipo `Classico` non è supportato.
 
-<sup>1</sup> Se il modello/framework emette probabilità previsionali
+    - __*Deve essere utilizzato il nome di input predefinito*__: nel servizio Web Azure, il nome di input predefinito è `"input1"`. Attualmente questo campo è obbligatorio per {{site.data.keyword.aios_short}} e, se manca, {{site.data.keyword.aios_short}} non funzionerà.
+
+      Se il servizio Web Azure non utilizza il nome predefinito, modificare il nome del campo di immissione in `"input1"`, così il codice funzionerà.
+
+- **AWS SageMaker**
+
+    - __*Algoritmo BlazingText non supportato*__: il formato di payload di input dell'algoritmo AWS SageMaker BlazingText non è supportato nella release corrente di {{site.data.keyword.aios_short}}.
+
+- **Istanza del servizio ML personalizzata**
+
+    - Il [modulo Python](/docs/services/ai-openscale?topic=ai-openscale-as-module) attualmente non dispone di una Esplicabilità funzionante per l'istanza del servizio personalizzata. Questo perché l'istanza del servizio personalizzata richiede una previsione numerica nei dati di risposta, che non è inclusa con lo script del modulo.
 
 <p>&nbsp;</p>
 
 ## Motori e framework di machine learning supportati
 {: #in-fram}
 
-Il servizio {{site.data.keyword.aios_short}} supporta i seguenti motori di machine learning. Ogni runtime supporta modelli creati nei seguenti framework come descritto nell'elenco [Tipi di modello supportati](#in-mod).
+Il servizio {{site.data.keyword.aios_short}} supporta i seguenti motori di machine learning. Ogni runtime supporta modelli creati nei seguenti framework:
 
 - [{{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml#frmwrks-wml) 
 - [Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure#frmwrks-azure)
@@ -143,4 +150,7 @@ Il client [{{site.data.keyword.aios_short}} Python ![Icona link esterno](../../i
 - [Introduzione](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted) al servizio.
 - Consultare il [materiale di riferimento per le API![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/ai-openscale){: new_window}.
 
-Altre domande? [Contattare IBM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.
+Altre domande? 
+
+- [Novità](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)
+- [Contattare IBM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.

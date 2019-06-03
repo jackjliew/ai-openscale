@@ -31,7 +31,7 @@ Spécifier une base de données pour votre instance de {{site.data.keyword.aios_
 {{site.data.keyword.aios_short}} utilise une base de données pour stocker les données de contenu, de commentaires et de mesure. En plus de sélectionner une base de données, vous pouvez également sélectionner un schéma pour celle-ci
 (un schéma est une collection de tables avec un nom dans la base de données).
 
-1.  Choisissez une base de données. Vous avez deux options : la base de données gratuite ou une base de données existante ou nouvelle. 
+1.  Choisissez une base de données. Vous avez deux options : la base de données gratuite ou une base de données existante ou nouvelle.
 
     ![Sélection de la base de données](images/gs-config-database.png)
 
@@ -68,7 +68,9 @@ Vous pouvez effectuer une mise à niveau vers une autre base de données à part
 1.  Sélectionnez le type de votre base de données existante (Compose for Postgres, Database for Postgres, ou Db2)
 et une base de données dans le menu déroulant **Base de données**, puis un **schéma** :
 
-    {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker les données de sortie de déploiement et de reformation des modèles. Les forfaits Db2 Lite ne sont pas pris en charge actuellement. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker
+les données se rapportant aux modèles (données de commentaires, contenu d'évaluation) et les métriques calculées.
+Les forfaits Db2 Lite ne sont pas pris en charge actuellement. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![Sélection de la base de données](images/gs-config-database3.png)
@@ -76,7 +78,9 @@ et une base de données dans le menu déroulant **Base de données**, puis un **
 1.  Vous pouvez également cliquer sur **Sélectionner un autre emplacement**
 et spécifier un emplacement de base de données en dehors de votre compte {{site.data.keyword.Bluemix_notm}}.
 
-    {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker les données de sortie de déploiement et de reformation des modèles. Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
+    {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker
+les données se rapportant aux modèles (données de commentaires, contenu d'évaluation) et les métriques calculées.
+Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
     {: note}
 
     - Sélectionnez le **Type de base de données**

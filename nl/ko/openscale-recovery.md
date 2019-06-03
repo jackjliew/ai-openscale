@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # 고가용성 및 재해 복구
 {: #openscale-availability-recovery}
 
-{{site.data.keyword.aios_full}}는 댈러스 및 워싱턴 DC 등의 다중 {{site.data.keyword.cloud_notm}} 위치에서 가용성이 매우 높습니다. 그러나 전체 위치에 영향을 주는 잠재적인 재해에서 복구하려면 계획 및 준비가 필요합니다.
+{{site.data.keyword.aios_full}}은 댈러스 및 워싱턴 DC 등의 다중 {{site.data.keyword.cloud_notm}} 위치에서 가용성이 매우 높습니다. 그러나 전체 위치에 영향을 주는 잠재적인 재해에서 복구하려면 계획 및 준비가 필요합니다.
 {: shortdesc}
 
 서비스의 구성, 사용자 정의 및 사용법을 이해하는 것은 사용자의 책임입니다. 또한 새 위치에서 서비스의 인스턴스를 새로 작성할 수 있도록 준비하고 데이터를 임의의 위치에서 복원하는 것도 사용자의 책임입니다. 자세한 정보는 [작동 중단이 발생하지 않도록 하는 방법![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/overview?topic=overview-zero-downtime#zero-downtime){: new_window}을 참조하십시오.

@@ -38,8 +38,10 @@ Tabelle 1. Details der Frameworkunterstützung
 | Python-Funktion | Regression | Strukturiert |
 | XGBoost | Klassifikation | Strukturiert |
 | XGBoost | Regression | Strukturiert |
-| Keras mit TensorFlow<sup>1</sup> | Klassifikation | Unstrukturiert (Bild, Text) |
-| Keras mit TensorFlow<sup>1</sup> | Regression | Unstrukturiert (Bild, Text) |
+| scikit-learn | Klassifikation | Strukturiert |
+| scikit-learn | Regression | Strukturiert |
+| Keras mit TensorFlow<sup>1</sup> | Klassifikation | Unstrukturiert (Image, Text) |
+| Keras mit TensorFlow<sup>1</sup> | Regression | Unstrukturiert (Image, Text) |
 {: caption="Details der Frameworkunterstützung" caption-side="top"}
 
 <sup>1</sup>In der Unterstützung für Keras ist keine Unterstützung für Fairness enthalten.

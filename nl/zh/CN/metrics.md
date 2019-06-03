@@ -55,7 +55,7 @@ subcollection: ai-openscale
 
    有关更多信息，请参阅 [Python SDK 文档](http://ai-openscale-python-client.mybluemix.net/)。
 
-也可以在 Watson OpenScale 仪表板中找到定制度量的可视化。
+定制度量的可视化显示在 {{site.data.keyword.aios_short}} 仪表板上。
 
 <!---
 ![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)

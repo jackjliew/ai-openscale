@@ -61,14 +61,14 @@ subcollection: ai-openscale
 
 1.  选择现有数据库类型（Compose for Postgres、Database for Postgres 或 Db2），再从**数据库**下拉菜单中选择数据库，然后选择**模式**：
 
-    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 数据库来存储模型部署输出和重新训练数据。当前不支持 Lite Db2 套餐。有关训练数据的更多信息，请参阅 [ 为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 数据库来存储模型相关数据（反馈数据或评分有效内容）和计算的度量。当前不支持 Lite Db2 套餐。有关训练数据的更多信息，请参阅 [ 为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![选择数据库](images/gs-config-database3.png)
 
 1.  您还可以单击**选择其他位置**以在 {{site.data.keyword.Bluemix_notm}} 帐户之外指定数据库位置。
 
-    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 数据库来存储模型部署输出和重新训练数据。当前不支持 Lite Db2 套餐。
+    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 数据库来存储模型相关数据（反馈数据或评分有效内容）和计算的度量。当前不支持 Lite Db2 套餐。
     {: note}
 
     - 选择**数据库类型**（`Compose for PostgreSQL`、`Database for PostgreSQL` 或 `Db2`），然后提供连接信息：

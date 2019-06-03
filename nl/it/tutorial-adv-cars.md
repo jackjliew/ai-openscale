@@ -58,7 +58,7 @@ Inoltre, verrà eseguito il provisioning del seguente servizio {{site.data.keywo
   È possibile ottenere un credito per {{site.data.keyword.cloud_notm}} pari a 200 dollari passando a un account a pagamento con carta di credito. Se si dispone già di un account a pagamento, si riceverà un rimborso una tantum pari a 16 dollari del costo del primo GB di storage, per un mese.
   {: tip}
 
-Il database PostgreSQL e l'istanza Watson Machine Learning devono essere distribuiti nello stesso account {{site.data.keyword.cloud_notm}}.
+Il database PostgreSQL e l'istanza {{site.data.keyword.pm_full}} devono essere distribuiti nello stesso account {{site.data.keyword.cloud_notm}}.
 {: important}
 
 Se è già stato eseguito il provisioning dei servizi necessari, ad esempio se è già stato completato il supporto didattico precedente, procedere a [Configurare un progetto Watson Studio](#tadv-setup-ws) di seguito.

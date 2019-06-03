@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -34,7 +34,7 @@ Consultare informazioni più complete nella documentazione del client  [{{site.d
 ## Prima di iniziare
 {: #cml-prereq}
 
-Sarà necessario che i dati di training del proprio modello siano disponibili in Db2 o Cloud Object Storage per monitorare la distorsione per il modello. L'esplicabilità e l'accuratezza non sono supportate per le funzioni Python.
+Sarà necessario che i dati di training del proprio modello siano disponibili in Db2 o Cloud Object Storage per monitorare la distorsione per il modello. L'esplicabilità e l'accuratezza non sono supportate per le funzioni Python. Per ulteriori informazioni sui dati di training, consultare [Perché {{site.data.keyword.aios_short}} ha bisogno di accedere ai miei dati di training?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - Importare e inizializzare {{site.data.keyword.aios_short}}
 

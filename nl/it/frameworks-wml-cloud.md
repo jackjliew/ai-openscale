@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -26,7 +26,7 @@ subcollection: ai-openscale
 # Framework WML
 {: #frmwrks-wml}
 
-{{site.data.keyword.aios_full}} supporta completamente i seguenti framework {{site.data.keyword.pm_full}}:
+{{site.data.keyword.aios_full}} supporta completamente i seguenti framework {{site.data.keyword.pm_full}}: 
 {: shortdesc}
 
 Tabella 1. Dettagli supporto framework
@@ -38,7 +38,14 @@ Tabella 1. Dettagli supporto framework
 | Python function | Regressione | Strutturato |
 | XGBoost | Classificazione | Strutturato |
 | XGBoost | Regressione | Strutturato |
+| scikit-learn | Classificazione | Strutturato |
+| scikit-learn | Regressione | Strutturato |
+| Keras con TensorFlow<sup>1</sup> | Classificazione | Non strutturato (immagine, testo) |
+| Keras con TensorFlow<sup>1</sup> | Regressione | Non strutturato (immagine, testo) |
 {: caption="Dettagli supporto framework" caption-side="top"}
+
+<sup>1</sup>Il supporto di Keras non include il supporto per la correttezza.
+{: note}
 
 
 

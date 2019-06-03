@@ -58,7 +58,7 @@ lastupdated: "2019-02-05"
   신용카드를 사용하여 유료 계정으로 전환하는 것으로 $200 {{site.data.keyword.cloud_notm}} 신용을 얻을 수 있습니다. 이미 유료 계정인 경우, 한 달 동안 첫 GB의 스토리지에 대해 일회의 $16 요금 환불을 받을 수 있습니다.
   {: tip}
 
-PostgreSQL 데이터베이스 및 Watson Machine Learning 인스턴스가 동일한 {{site.data.keyword.cloud_notm}} 계정에 배치되어야 합니다.
+PostgreSQL 데이터베이스 및 {{site.data.keyword.pm_full}} 인스턴스는 동일한 {{site.data.keyword.cloud_notm}} 계정에 배치해야 합니다.
 {: important}
 
 필수 서비스를 이미 프로비저닝한 경우, 예를 들어, 기타 튜토리얼을 완료한 경우, 아래의 [Watson Studio 프로젝트](#tadv-setup-ws)로 진행하십시오.

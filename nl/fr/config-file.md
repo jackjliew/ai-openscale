@@ -29,8 +29,7 @@ subcollection: ai-openscale
 Vous pouvez importer un fichier JSON pour créer et configurer tous les déploiements de votre actif à des fins de surveillance. Vous pouvez également exporter le fichier de configuration pour configurer d'autres actifs ainsi que leurs déploiements.
 {: shortdesc}
 
-Pour un bon exemple d'utilisation d'un fichier JSON, voir le [bloc-notes Python Watson OpenScale One API Shot for subscription](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb).
-Ce bloc-notes explique comment créer et configurer un déploiement d'actif Amazon SageMaker avec un fichier JSON en un seul appel d'API. Le reste de cette rubrique y fait référence.
+Pour un bon exemple d'utilisation d'un fichier JSON, voir le [bloc-notes Python Watson OpenScale One API Shot for subscription](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). Ce bloc-notes explique comment créer et configurer un déploiement d'actif Amazon SageMaker avec un fichier JSON en un seul appel d'API. Le reste de cette rubrique y fait référence.
 
 ## Charger le contenu du fichier JSON comme dictionnaire Python
 {: #cf-load-as-dict}

@@ -38,6 +38,8 @@ Tableau 1. Détails des infrastructures prises en charge
 | Fonction Python | Régression | Structuré |
 | XGBoost | Classification | Structuré |
 | XGBoost | Régression | Structuré |
+| scikit-learn | Classification | Structuré |
+| scikit-learn | Régression | Structuré |
 | Keras with TensorFlow<sup>1</sup> | Classification | Non structuré (image, texte) |
 | Keras with TensorFlow<sup>1</sup> | Régression | Non structuré (image, texte) |
 {: caption="Détails des infrastructures prises en charge" caption-side="top"}

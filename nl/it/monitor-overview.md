@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: deployment, monitors, data
 
@@ -42,7 +42,7 @@ Configurare e abilitare i monitor per ogni distribuzioni di cui si sta tenendo t
 ## Gestione dei dati
 {: #mo-work-data}
 
-1.  Ora devono essere fornite le informazioni sul modello e i dati di training; fare clic su **Avanti**.
+1.  Ora devono essere fornite le informazioni sul modello e i dati di training; fare clic su **Avanti**. Per ulteriori informazioni sui dati di training, consultare [Perché {{site.data.keyword.aios_short}} ha bisogno di accedere ai miei dati di training?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
     ![Preparazione alla spiegazione](images/config-what-monitor.png)
 
@@ -50,10 +50,10 @@ Configurare e abilitare i monitor per ogni distribuzioni di cui si sta tenendo t
 
     ![Selezionare tipo di input](images/config-input-monitor.png)
 
-### Dati numerici/di categoria
+### Dati numerici/categoriali
 {: #mo-nuca}
 
-Per i dati numerici o di categoria, è necessario fornire informazioni sui dati di training per il modello, per poter configurare i monitor.
+Per i dati numerici o categoriali, è necessario fornire informazioni sui dati di training per il modello, per poter configurare i monitor.
 
   ![Selezionare tipo di configurazione](images/config-manual-monitor.png)
 
@@ -92,7 +92,7 @@ Per i dati numerici o di categoria, è necessario fornire informazioni sui dati 
 
     - Assicurarsi che la connessione sia valida facendo clic sul pulsante **Verifica** per connettersi ai dati di training. Fare clic su **Avanti**.
 
-    - Specificare l'esatta ubicazione nel database Db2 o Cloud Object Storage in cui si trovano i dati di training. 
+    - Specificare l'esatta ubicazione nel database Db2 o Cloud Object Storage in cui si trovano i dati di training.
 
         - Per un database Db2, selezionare sia uno schema che una tabella di training che includa le colonne previste dal modello:
 
@@ -108,11 +108,11 @@ Per i dati numerici o di categoria, è necessario fornire informazioni sui dati 
 
   L'esecuzione del notebook Python consente di catturare i valori distinti nelle colonne dello schema, così come i nomi delle colonne. Inoltre, è possibile utilizzare il notebook per pre-configurare il monitor di correttezza.
 
-    - Scaricare il [notebook personalizzato![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: new_window}, e sostituire le credenziali con le proprie. 
+    - Scaricare il [notebook personalizzato![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: new_window}, e sostituire le credenziali con le proprie.
 
     - Esaminare attentamente il notebook, specificando i dati per il proprio modello, dove opportuno. Salvare il notebook.
 
-    - Eseguire il notebook per generare un file di configurazione in formato JSON. 
+    - Eseguire il notebook per generare un file di configurazione in formato JSON.
 
     - Caricare il file di configurazione JSON.
 

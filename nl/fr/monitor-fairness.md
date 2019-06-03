@@ -72,6 +72,75 @@ Les valeurs d'équité peuvent être supérieures à 100 %
 si le groupe surveillé obtient davantage de résultats favorables que le groupe de référence. Par ailleurs, si aucune nouvelle requête d'évaluation n'est envoyée, la valeur d'équité demeure constante.
 {: note}
 
+### Affichage du biais ![étiquette bêta](images/beta.png)
+{: #mf-monitor-bias-viz}
+
+L'affichage du biais comprend les vues suivantes : 
+
+- **Contenu + Données perturbées** :
+Comprend la demande d'évaluation reçue pour l'heure sélectionnée
+plus des enregistrements d'heures précédentes si le nombre minimum d'enregistrements requis pour l'évaluation n'était pas atteint.
+Comprend les enregistrements perturbés/synthétisés supplémentaires utilisés pour tester la réponse du modèle lorsque la valeur de la fonction surveillée change.
+
+   Remarquez les détails suivants du contenu et des données perturbées :
+
+   - Nombre d'enregistrements lus dans cette heure de la table de contenu
+   - Enregistrements supplémentaires lus d'heures précédentes
+(par exemple, si la valeur `min_records` est définie à 1000 dans la configuration de l'équité
+et que seulement 10 enregistrements sont ajoutés entre 14h et 15h,
+le système lira 990 autres enregistrements des heures précédentes afin d'atteindre le minimum requis.)
+   - Enregistrements perturbés selon l'attribut d'équité
+   - Horodate du plus ancien enregistrement de la fenêtre de données pour lequel le biais doit être calculé
+   - Horodate du dernier enregistrement de la fenêtre de données pour lequel le biais doit être calculé
+
+  ![exemple de contenu plus données perturbées](images/payload&perturbed.png)
+
+
+
+- **Contenu** :
+Demandes d'évaluation réelles reçues par le modèle durant l'heure sélectionnée.
+
+   Remarquez les détails suivants du contenu :
+   
+   - Nombre d'enregistrements lus/sur lesquels le débiaisement est effectué à partir de la table de contenu
+   - Horodate du plus ancien enregistrement de la fenêtre de données pour lequel le biais doit être calculé
+   - Horodate du dernier enregistrement de la fenêtre de données pour lequel le biais doit être calculé
+
+
+  ![exemple de données de contenu](images/payload.png)
+
+- **Formation** :
+Enregistrements de données de formation utilisés pour former le modèle.
+
+   Remarquez les détails suivants de la formation :
+   
+   - Nombre d'enregistrements de données de formation.
+Les données de formation sont lues une fois et la distribution est stockée sous subscription/fairness_configuration.
+Lors du calcul de la distribution, nous devons également trouver le nombre d'enregistrements de données de formation et le stocker dans la même distribution.
+D'autre part, si les données de formation sont changées,
+c'est-à-dire en cas de nouveau POST /data_distribution,
+nous devons mettre à jour cette valeur sous fairness_configuration/training_data_distribution.
+Lors de l'envoi de la métrique, nous devons également envoyer cette valeur aussi.
+   - Heure du dernier traitement des données de formation (premier moment et mises à jour suivantes)
+
+  ![exemple de données de formation](images/training.png)
+   
+
+   
+- **Données débiaisées** :
+Sortie de l'algorithme de débiaisement après traitement des données d'exécution et perturbées.
+
+   Remarquez les détails suivants des données débiaisées :
+   
+   - Nombre d'enregistrements lus/sur lesquels le débiaisement est effectué à partir de la table de contenu
+   - Enregistrements supplémentaires lus pour effectuer le biais, et donc débiaisés aussi.
+Même nombre que pour la sélection `Contenu + Données perturbées`
+   - Enregistrements perturbés selon l'attribut d'équité
+   - Horodate du plus ancien enregistrement de la fenêtre de données pour lequel le biais doit être calculé
+   - Horodate du dernier enregistrement de la fenêtre de données pour lequel le biais doit être calculé
+
+  ![exemple de données débiaisées](images/debiased.png)
+  
 ### Exemple
 {: #mf-ex1}
 

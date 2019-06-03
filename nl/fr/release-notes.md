@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Nouveautés
 {: #rn-relnotes}
 
-Ce document détaille les nouvelles fonctionnalités et les problèmes connus d'{{site.data.keyword.aios_full_notm}}.
+Ce document détaille les nouvelles fonctionnalités d'{{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
 
 ## 25 avril 2019
@@ -30,10 +30,7 @@ Ce document détaille les nouvelles fonctionnalités et les problèmes connus d'
 
 Voici les nouvelles fonctionnalités et les changements apportés au service.
 
-### Nouvelles fonctionnalités et changements
-{: #rn-25April2019nf}
-
-Outre les améliorations en termes d'utilisation et les mises à jour de sécurité, nos développeurs ont été suffisamment occupés par les nouvelles fonctionnalités. Voici les fonctionnalités ajoutées à {{site.data.keyword.aios_short}} ou améliorées ces dernières semaines : 
+Outre les améliorations en termes d'utilisation et les mises à jour de sécurité, nos développeurs ont été suffisamment occupés par les nouvelles fonctionnalités. Voici les fonctionnalités ajoutées à {{site.data.keyword.aios_short}} ou améliorées ces dernières semaines :
 
 - __*Visite guidée de la configuration automatique*__ : un nouveau mode de configuration de votre environnement {{site.data.keyword.aios_short}}. Utilisez la [configuration automatique](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) pour mettre à disposition des services et télécharger et configurer un modèle. Vous remarquerez cette option une fois que vous avez une instance de {{site.data.keyword.aios_short}}.
 - __*Basculement vers la version bêta*__ : ![balise bêta](images/beta.png) un nouvel commutateur, **Explorer la nouvelle version bêta**, vous permet de travailler dans notre environnement bêta, où vous pouvez consulter toutes les fonctions les plus récentes et les nouvelles fonctionnalités. Vous n'êtes pas satisfait de ce que vous voyez ? Il suffit de revenir en arrière en cliquant sur **Revenir à la version d'origine**. Il n'y aura aucune incidence sur votre configuration et vos moniteurs. Les fonctionnalités suivantes font partie du programme bêta en cours :
@@ -43,9 +40,6 @@ Outre les améliorations en termes d'utilisation et les mises à jour de sécuri
 {: #rn-5March2019}
 
 Voici les nouvelles fonctionnalités et les changements apportés au service.
-
-### Nouvelles fonctionnalités et changements
-{: #rn-5March2019nf}
 
 Voici les fonctionnalités ajoutées à {{site.data.keyword.aios_short}} ou améliorées depuis l'édition précédente :
 
@@ -63,9 +57,6 @@ vous pouvez commuter entre votre modèle de production et un modèle débiaisé 
 
 Voici les nouvelles fonctionnalités et les changements apportés au service.
 
-### Nouvelles fonctionnalités et changements
-{: #rn-22February2019nf}
-
 Voici les fonctionnalités ajoutées à {{site.data.keyword.aios_short}} ou améliorées depuis l'édition précédente :
 
 - __*Modifications de l'interface utilisateur*__ :
@@ -76,9 +67,6 @@ Vous pouvez importer un fichier JSON pour configurer par programme tous les moni
 {: #rn-7February2019}
 
 Voici les nouvelles fonctionnalités et les changements apportés au service.
-
-### Nouvelles fonctionnalités et changements
-{: #rn-7February2019nf}
 
 Voici les fonctionnalités ajoutées à {{site.data.keyword.aios_short}} ou améliorées depuis l'édition précédente :
 
@@ -96,22 +84,10 @@ Tous les nombres ont maintenant la même précision/échelle pour les valeurs po
 - __*Support des bases de données IBM Cloud*__ :
 {{site.data.keyword.aios_short}} accepte maintenant Databases for PostgreSQL, en plus de Compose for PostgreSQL et Db2)
 
-### Problèmes connus
-{: #rn-7February2019ki}
-
-- **Instance de service ML personnalisé**
-
-    - Avec le [module Python](/docs/services/ai-openscale?topic=ai-openscale-as-module),
-l'explicabilité ne fonctionne pas pour l'instance de service personnalisée. Ceci est dû au fait que l'instance de service personnalisée requiert une prévision numérique dans les données de réponse,
-qui n'est pas incluse avec le script du module.
-
 ## 14 décembre 2018
 {: #rn-14December2018}
 
 Voici les nouvelles fonctionnalités, les changements et les problèmes connus du service.
-
-### Nouvelles fonctionnalités et changements
-{: #rn-12nf}
 
 Voici les fonctionnalités ajoutées à {{site.data.keyword.aios_short}} ou améliorées depuis l'édition bêta :
 
@@ -153,27 +129,17 @@ Pour automatiser la mise à disposition et la configuration des services IBM Clo
 et pour voir une application IBM {{site.data.keyword.aios_full}}, avec des exemples de données,
 vous pouvez installer et exécuter un module Python. Voir [Installation d'un module Python pour configurer {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)
 
-### Problèmes connus
-{: #rn-12ki}
-
-- **Microsoft Azure**
-
-    - Des deux types de services web Azure Machine Learning, seul le `nouveau` est accepté par {{site.data.keyword.aios_short}}. Le type `classique` ne l'est pas.
-
-    - __*Il faut utiliser le nom d'entrée par défaut*__ :
-Dans le service web Azure, le nom d'entrée par défaut est `"input1"`. Cette zone est actuellement obligatoire pour {{site.data.keyword.aios_short}}, qui ne peut pas fonctionner si elle manque.
-
-      Si votre service web Azure n'utilise pas le nom par défaut, remplacez le nom d'entrée par `"input1"` et le code fonctionnera.
-
-- **AWS SageMaker**
-
-    - __*L'algorithme BlazingText n'est pas pris en charge*__ :
-Le format de contenu d'entrée de l'algorithme AWS SageMaker BlazingText n'est pas pris en charge dans l'édition actuelle de {{site.data.keyword.aios_short}}.
-
 ## 17 septembre 2018
 {: #rn-17September2018}
 
-### Nouvelles fonctionnalités et changements
-{: #rn-17nf}
-
 - **Edition d'évaluation bêta** - Bienvenue dans l'édition d'évaluation bêta d'{{site.data.keyword.aios_full_notm}}.
+
+<p>&nbsp;</p>
+
+## Etapes suivantes
+{: #relnotes-in-next}
+
+Vous avez encore des questions ?
+
+- [Limitations](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
+- [Problèmes connus](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)

@@ -43,17 +43,12 @@ subcollection: ai-openscale
 
 檢閱[支援的架構](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)，以了解精確度監視限制。
 
-<!---
-You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
+### 除去偏誤後的精確度
+{: #acc-debias-view}
 
-You can create a performance monitoring system for your predictive models by creating an evaluation instance, and then defining the metrics and triggers for the automatic retraining and deploying of the new model. Spark, Keras and TensorFlow models are supported at this stage, with the following requirements:
+當有資料支援它時，模型的精確度會同時包含原始模型和已除去偏誤模型。{{site.data.keyword.aios_full_notm}} 會計算已除去偏誤之輸出的精確度，並在有效負載記載表格中儲存成一個額外的直欄。
 
-- A training definition must be stored in the repository
-- `training_data_reference` - must be defined as a part of the stored model's metadata
-- `training_definition_url` - must be defined as a part of the stored model's metadata
-
-Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-ml-api.mybluemix.net/){: new_window} end-points directly to provide feedback data and kick off evaluation activities. For more information, see the [WML documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/ml-continuous-learning.html?audience=wdp&context=wdp){: new_window}.
---->
+![出現模型視覺化，其中同時計算了原始模型和已除去偏誤模型的精確度](images/debiased-accuracy.png)
 
 ## 配置「精確度」監視器
 {: #acc-config}

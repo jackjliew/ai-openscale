@@ -43,17 +43,12 @@ subcollection: ai-openscale
 
 정확성 모니터링 제한사항은 [지원되는 프레임워크](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)를 검토하십시오.
 
-<!---
-You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
+### 편향성 제거된 정확성
+{: #acc-debias-view}
 
-You can create a performance monitoring system for your predictive models by creating an evaluation instance, and then defining the metrics and triggers for the automatic retraining and deploying of the new model. Spark, Keras and TensorFlow models are supported at this stage, with the following requirements:
+지원하는 데이터가 있는 경우 모델의 정확성에는 원래 모델과 편향성 제거된 모델이 모두 포함됩니다. {{site.data.keyword.aios_full_notm}}에서는 편향성 제거된 출력의 정확성을 계산하여 페이로드 로깅 테이블에 추가 열로 저장합니다. 
 
-- A training definition must be stored in the repository
-- `training_data_reference` - must be defined as a part of the stored model's metadata
-- `training_definition_url` - must be defined as a part of the stored model's metadata
-
-Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-ml-api.mybluemix.net/){: new_window} end-points directly to provide feedback data and kick off evaluation activities. For more information, see the [WML documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/ml-continuous-learning.html?audience=wdp&context=wdp){: new_window}.
---->
+![모델 시각화가 원래 모델 및 편향성 제거된 모델 둘 다에 대해 계산된 정확성과 함께 표시됨](images/debiased-accuracy.png)
 
 ## 정확성 모니터 구성
 {: #acc-config}
@@ -85,7 +80,7 @@ Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "
 
   ![피드백 데이터 전송](images/accuracy-send-feedback0.png)
 
-*피드백 데이터 추가* 단추를 선택하여 CSV 형식의 데이터 파일을 업로드하십시오. 이 때, 데이터에 적합한 구분 기호를 설정하십시오. 
+*피드백 데이터 추가* 단추를 선택하여 CSV 형식의 데이터 파일을 업로드하십시오. 이 때, 데이터에 적합한 구분 기호를 설정하십시오.
 
 피드백 CSV 파일에는 모든 특성 값 및 수동으로 지정된 대상/레이블 값이 있을 것으로 예상됩니다. 예를 들어, 약제 모델 훈련 데이터는 `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`, `"NA"`, `"K"` 등의 특성 값과 `"DRUG"` 대상/레이블 값을 포함합니다. 피드백 CSV 파일은 해당 필드에 대한 값을 포함해야 합니다. 예를 들어, 예제가 `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`와 같이 표시될 것입니다. 피드백 CSV 파일에 대해 헤더가 제공되면 헤더를 사용하여 필드 이름이 맵핑됩니다. 그렇지 않으면 필드 순서가 교육 스키마에서와 완전히 **동일해야** 합니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
 {: important}

@@ -63,7 +63,7 @@ Vous mettrez également à disposition le service {{site.data.keyword.cloud_notm
   Un crédit {{site.data.keyword.cloud_notm}} de 200 $ peut être obtenu en passant à un compte payant avec une carte de crédit. Si vous avez déjà un compte payant, vous recevrez un remboursement unique de 16 $ du coût de votre premier Go de stockage, pour un mois.
   {: tip}
 
-La base de données PostgreSQL et l'instance de Watson Machine Learning doivent être déployées dans le même compte {{site.data.keyword.cloud_notm}}.
+La base de données PostgreSQL et l'instance d'{{site.data.keyword.pm_full}} doivent être déployées dans le même compte {{site.data.keyword.cloud_notm}}.
 {: important}
 
 Si vous avez déjà mis à disposition les services nécessaires, par exemple si vous avez effectué l'autre tutoriel,

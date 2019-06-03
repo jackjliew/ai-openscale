@@ -60,17 +60,14 @@ ou une [API REST
 Reportez-vous aux [Infrastructures prises en charge](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)
 pour connaître les limitations de la surveillance de l'exactitude.
 
-<!---
-You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
+### Exactitude débiaisée
+{: #acc-debias-view}
 
-You can create a performance monitoring system for your predictive models by creating an evaluation instance, and then defining the metrics and triggers for the automatic retraining and deploying of the new model. Spark, Keras and TensorFlow models are supported at this stage, with the following requirements:
+Lorsqu'il y a des données pour, l'exactitude du modèle comprend à la fois le modèle d'origine et le modèle débiaisé.
+{{site.data.keyword.aios_full_notm}} calcule l'exactitude pour la sortie débiaisée et l'enregistre dans la table de journalisation de contenu
+sous la forme d'une colonne additionnelle.
 
-- A training definition must be stored in the repository
-- `training_data_reference` - must be defined as a part of the stored model's metadata
-- `training_definition_url` - must be defined as a part of the stored model's metadata
-
-Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-ml-api.mybluemix.net/){: new_window} end-points directly to provide feedback data and kick off evaluation activities. For more information, see the [WML documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/ml-continuous-learning.html?audience=wdp&context=wdp){: new_window}.
---->
+![affichage d'un modèle avec l'exactitude calculée à la fois pour le modèle d'origine et le modèle débiaisé.](images/debiased-accuracy.png)
 
 ## Configuration du moniteur d'exactitude
 {: #acc-config}
@@ -112,7 +109,7 @@ Le fichier CSV de commentaires doit avoir toutes les valeurs de fonction, ainsi 
 `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`,`"NA"`,`"K"`
 et la valeur cible/libellé `"DRUG"`. Le fichier CSV de commentaires doit comprendre des valeurs pour ces zones ;
 par exemple : `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. Si un en-tête est fourni pour le fichier CSV de commentaires, les noms de zone sont mappés à partir de lui. Sinon, l'ordre des zones **DOIT** doit être exactement le même que dans le schéma de formation. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
-    {: important}
+{: important}
 
 Notez que les types de prévision renvoyés par votre modèle et la colonne libellé/cible de vos données de commentaires doivent correspondre.
 {: note}

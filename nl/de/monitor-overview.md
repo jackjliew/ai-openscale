@@ -132,12 +132,12 @@ Bei numerischen oder kategorialen Daten müssen Sie Informationen zu den Trainin
 
     ![Datentabelle auswählen](images/explain-text-column.png)
 
-### Bilder und unstrukturierter Text
+### Images und unstrukturierter Text
 {: #mo-imun}
 
-- **Bilder**
+- **Images**
 
-  Bei Modellen, die Bilder als Eingabe akzeptieren, muss das Bild im Format (Höhe) x (Breite) x (# Kanäle) dargestellt werden, wobei jeder Punkt entweder monochrome oder RGB-Werte für jedes Pixel darstellt.
+  Bei Modellen, die Images als Eingabe akzeptieren, muss das Image im Format (Höhe) x (Breite) x (# Kanäle) dargestellt werden, wobei jeder Punkt entweder monochrome oder RGB-Werte für jedes Pixel darstellt.
 
 - **Unstrukturierter Text**
 

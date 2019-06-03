@@ -33,7 +33,7 @@ Wenn Sie schnell sehen möchten, wie von {{site.data.keyword.aios_short}} ein Mo
 ## Vorbereitende Schritte
 {: #wos-prereqs}
 
-Bevor Sie mit der Tour beginnen, müssen die folgenden Ressourcen bereits konfiguriert sein: 
+Bevor Sie mit der Tour beginnen, müssen die folgenden Ressourcen bereits konfiguriert sein:
 
 - {{site.data.keyword.ibmid}}
 - {{site.data.keyword.aios_full}}
@@ -50,7 +50,7 @@ Bevor Sie mit der Tour beginnen, müssen die folgenden Ressourcen bereits konfig
 
    ![Demovorschau](images/fastpath_demo_11.31.58.png)
 
-Klicken Sie nach dem Abschluss der Bereitstellung auf die Schaltfläche **Los geht's**, um eine Tour durch das {{site.data.keyword.aios_short}}-Dashboard zu starten. Fahren Sie mit [Ergebnisse in {{site.data.keyword.aios_short}} anzeigen](#wos-open) fort. 
+Klicken Sie nach dem Abschluss der Bereitstellung auf die Schaltfläche **Los geht's**, um eine Tour durch das {{site.data.keyword.aios_short}}-Dashboard zu starten. Fahren Sie mit [Ergebnisse in {{site.data.keyword.aios_short}} anzeigen](#wos-open) fort.
 
    ![Demo zum Einstieg](images/fastpath_demo_11.33.45.png)
 
@@ -95,11 +95,11 @@ Die Seite 'Insights' zeigt auf einen Blick alle eventuellen Probleme mit Fairnes
 ### Erklärbarkeit anzeigen
 {: #wos-explain}
 
-Um die Faktoren zu verstehen, die beteiligt sind, wenn eine Verzerrung für einen bestimmten Zeitraum vorliegt, klicken Sie in der im vorherigen Abschnitt dargestellten Visualisierungsanzeige auf das Optionsfeld **Verzerrte Transaktionen**. 
+Um die Faktoren zu verstehen, die beteiligt sind, wenn eine Verzerrung für einen bestimmten Zeitraum vorliegt, klicken Sie in der im vorherigen Abschnitt dargestellten Visualisierungsanzeige auf das Optionsfeld **Verzerrte Transaktionen**.
 
    ![Demo zum Einstieg](images/fastpath_demo_11.35.06.png)
 
-Für diejenigen Transaktionen, die eine Verzerrung aufweisen, werden die Transaktions-IDs der letzten Stunde aufgelistet. Für das in diesem Modul verwendete Modell gibt es für die verfügbaren Anforderungen eine Verzerrung. 
+Für diejenigen Transaktionen, die eine Verzerrung aufweisen, werden die Transaktions-IDs der letzten Stunde aufgelistet. Für das in diesem Modul verwendete Modell gibt es für die verfügbaren Anforderungen eine Verzerrung.
 
    ![Demo zum Einstieg](images/fastpath_demo_11.35.12.png)
 
@@ -110,7 +110,7 @@ Informationen zum Suchen und Erklären von Transaktionen finden Sie im Abschnitt
 ## Tour beenden
 {: #wos-done-demo}
 
-1. Klicken Sie auf die Schaltfläche **Fertig**. 
+1. Klicken Sie auf die Schaltfläche **Fertig**.
 
    ![Demo zum Einstieg](images/fastpath_demo_11.37.22.png)
 
