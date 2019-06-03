@@ -116,10 +116,9 @@ You can upgrade to another database from the free database, however it is not po
 ## Sending a scoring request
 {: #cdb-score}
 
-To configure monitors, {{site.data.keyword.aios_short}} requires you to send a scoring request, in order to begin to log the data that will be monitored.
+To configure monitors, {{site.data.keyword.aios_short}} requires you to send a scoring payload, in order to begin to log the data that will be monitored.
 
-Models deployed in Watson Machine Learning are automatically scored by {{site.data.keyword.aios_short}}.
-{: note:}
+For models deployed in {{site.data.keyword.pm_full}} just score your deployment, {{site.data.keyword.pm_short}} automatically sends the scoring payload to {{site.data.keyword.aios_short}}. For other machine learning engines, such as Microsoft Azure, Amazon SageMaker, or a custom machine learning engine the scoring payload must be sent using the Payload Logging API.
 
 Select a deployment, in this case "Fraud Detector", and then use the provided `cURL` or `Python` code snippets to log model deployment request and response data. See [Payload logging for non-Watson Machine Learning service instances](/docs/services/ai-openscale?topic=ai-openscale-cml-connect) for more detail.
 
