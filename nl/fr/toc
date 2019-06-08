@@ -6,6 +6,7 @@ Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
+    [Découvrir Watson OpenScale](https://www.ibm.com/cloud/watson-openscale/)
     faststart.md
     alt-setup.md
     tutorial-adv.md
@@ -31,6 +32,7 @@ Watson OpenScale
         connect-db.md
         connect-ml.md
         config-file.md
+        feedback.md
 
     {: .topicgroup}
     Configuration des moniteurs

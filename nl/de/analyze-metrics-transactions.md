@@ -114,7 +114,7 @@ Alle Metrikwerte für einen bestimmten Zeitraum können im {{site.data.keyword.a
 ![Diagramm mit Qualitätsmetriken, das die Abweichung bei der Fläche unterhalb der ROC-Kurve anzeigt](images/quality_metrics_001.png)
 
 
-Klicken Sie auf das Diagramm, um zugehörige Details, wie z. B. die Wahrheitsmatrix für die binäre Klassifikation und die Klassifikation mit mehreren Klassen, die für einige Metriken zur Verfügung stehen. 
+Klicken Sie auf das Diagramm, um zugehörige Details, wie z. B. die Wahrheitsmatrix für die binäre Klassifikation und die Klassifikation mit mehreren Klassen, die für einige Metriken zur Verfügung stehen.
 
 ![Detailtabelle für Qualitätsmetriken](images/quality_metrics_002.png)
 

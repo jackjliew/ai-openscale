@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: payload, non-Watson, machine learning, services
+keywords: payload, non-Watson, machine learning, services, subscription
 
 subcollection: ai-openscale
 
@@ -34,7 +34,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
 ## 始めに
 {: #cml-prereq}
 
-モデルのバイアスをモニターするためには、Db2 または Cloud Object Storage でモデルのトレーニング・データが利用できる状態でなければなりません。Python 関数では説明性と正解率はサポートされていません。
+モデルのバイアスをモニターするためには、Db2 または Cloud Object Storage でモデルの訓練データが利用できる状態でなければなりません。 Python 関数では説明性と正解率はサポートされていません。 訓練データの詳細については、[{{site.data.keyword.aios_short}} が訓練データにアクセスする必要があるのはなぜですか?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) を参照してください。
 
 - {{site.data.keyword.aios_short}} をインポートして開始します
 
@@ -121,10 +121,10 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
-### 予測とペイロード・ロギング
+### 評価とペイロード・ロギング
 {: #cml-cusscore}
 
-- モデルを評価します。完全なサンプルについては、[IBM {{site.data.keyword.aios_full}} & カスタム ML エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window} を参照してください。
+- モデルを評価します。 完全なサンプルについては、[IBM {{site.data.keyword.aios_full}} & カスタム ML エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window} を参照してください。
 
 <!---
     ```python
@@ -167,7 +167,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     **注**: Python 以外の言語の場合、REST API を使用してペイロード・ロギングを直接実行することもできます。
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -269,10 +269,10 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
-### 予測とペイロード・ロギング
+### 評価とペイロード・ロギング
 {: #cml-azscore}
 
-- モデルを評価します。完全なサンプルについては、[Azure Machine Learning Studio エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window} を参照してください。
+- モデルを評価します。 完全なサンプルについては、[Azure Machine Learning Studio エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window} を参照してください。
 
 <!---
     ```python
@@ -319,7 +319,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     **注**: Python 以外の言語の場合、REST API を使用してペイロード・ロギングを直接実行することもできます。
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -420,10 +420,10 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
-### 予測とペイロード・ロギング
+### 評価とペイロード・ロギング
 {: #cml-smscore}
 
-- モデルを評価します。完全なサンプルについては、[SageMaker 機械学習エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window} を参照してください。
+- モデルを評価します。 完全なサンプルについては、[SageMaker 機械学習エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window} を参照してください。
 
 <!---
     ```python
@@ -470,7 +470,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     **注**: Python 以外の言語の場合、REST API を使用してペイロード・ロギングを直接実行することもできます。
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"

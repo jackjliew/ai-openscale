@@ -69,8 +69,7 @@ Vous pouvez effectuer une mise à niveau vers une autre base de données à part
 et une base de données dans le menu déroulant **Base de données**, puis un **schéma** :
 
     {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker
-les données se rapportant aux modèles (données de commentaires, contenu d'évaluation) et les métriques calculées.
-Les forfaits Db2 Lite ne sont pas pris en charge actuellement. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+les données se rapportant aux modèles (données de commentaires, contenu d'évaluation) et les métriques calculées. Les forfaits Db2 Lite ne sont pas pris en charge actuellement. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![Sélection de la base de données](images/gs-config-database3.png)
@@ -79,8 +78,7 @@ Les forfaits Db2 Lite ne sont pas pris en charge actuellement. Pour plus d'infor
 et spécifier un emplacement de base de données en dehors de votre compte {{site.data.keyword.Bluemix_notm}}.
 
     {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker
-les données se rapportant aux modèles (données de commentaires, contenu d'évaluation) et les métriques calculées.
-Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
+les données se rapportant aux modèles (données de commentaires, contenu d'évaluation) et les métriques calculées. Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
     {: note}
 
     - Sélectionnez le **Type de base de données**
@@ -130,11 +128,13 @@ puis fournissez les informations de connexion :
 ## Envoi d'une demande d'évaluation
 {: #cdb-score}
 
-Pour configurer les moniteurs, {{site.data.keyword.aios_short}} requiert que vous envoyiez une demande d'évaluation,
+Pour configurer les moniteurs, {{site.data.keyword.aios_short}} requiert que vous envoyiez un contenu d'évaluation,
 afin de commencer à journaliser les données qui seront surveillées.
 
-Les modèles déployés dans Watson Machine Learning sont évalués automatiquement par {{site.data.keyword.aios_short}}.
-{: note:}
+Pour les modèles déployés dans {{site.data.keyword.pm_full}}, évaluez simplement votre déploiement,
+{{site.data.keyword.pm_short}} envoie automatiquement le contenu d'évaluation à {{site.data.keyword.aios_short}}.
+Pour les autres moteurs d'apprentissage automatique, comme Microsoft Azure, Amazon SageMaker ou un moteur d'apprentissage automatique personnalisé,
+le contenu d'évaluation doit être envoyé avec l'API de journalisation de contenu.
 
 Sélectionnez un déploiement, ici "Fraud Detector", puis utilisez les fragments de code `cURL` ou `Python` fournis
 pour journaliser les données de demande et de réponse de déploiement de modèle. Pour plus de détails, voir [Journalisation du contenu pour les instances de service non-Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).

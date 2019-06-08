@@ -116,10 +116,9 @@ Per procedere con l'utilizzo del database gratuito, fare clic sul riquadro **Uti
 ## Invio di una richiesta di calcolo del punteggio
 {: #cdb-score}
 
-Per configurare i monitor, {{site.data.keyword.aios_short}} richiede l'invio di una richiesta di calcolo del punteggio, per poter iniziare a registrare i dati che verranno monitorati.
+Per configurare i monitor, {{site.data.keyword.aios_short}} richiede l'invio di un payload di calcolo del punteggio, per poter iniziare a registrare i dati che verranno monitorati.
 
-Il punteggio dei modelli distribuiti in Watson Machine Learning viene automaticamente calcolato da {{site.data.keyword.aios_short}}.
-{: note:}
+Per i modelli distribuiti in {{site.data.keyword.pm_full}} calcolare semplicemente il punteggio della propria distribuzione, {{site.data.keyword.pm_short}} invia automaticamente il payload di calcolo del punteggio per {{site.data.keyword.aios_short}}. Per altri motori di machine learning, come Microsoft Azure, Amazon SageMaker, o un motore di machine learning personalizzato, il payload di calcolo del punteggio deve essere inviato utilizzando l'API Registrazione payload. 
 
 Selezionare una distribuzione, in questo caso "Frode Detector", quindi utilizzare i frammenti di codice `cURL` o `Python` forniti per registrare i dati di richiesta e risposta di distribuzione del modello. Per maggiori dettagli, consultare [Registrazione payload per istanze di servizio non Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
 

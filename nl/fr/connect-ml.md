@@ -178,7 +178,7 @@ IBM {{site.data.keyword.aios_full}} & Custom ML Engine
     **Remarque** : Pour les langages autres que Python, vous pouvez également effectuer la journalisation du contenu directement, avec une API REST.
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -333,7 +333,7 @@ bloc-notes Working with Azure Machine Learning Studio Engine
     **Remarque** : Pour les langages autres que Python, vous pouvez également effectuer la journalisation du contenu directement, avec une API REST.
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -487,7 +487,7 @@ bloc-notes Working with SageMaker Machine Learning Engine
     **Remarque** : Pour les langages autres que Python, vous pouvez également effectuer la journalisation du contenu directement, avec une API REST.
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"

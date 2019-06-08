@@ -55,7 +55,7 @@ I valori di correttezza possono essere più del 100%. Ciò significa che il grup
 ### Visualizzazione distorsione ![tag beta](images/beta.png)
 {: #mf-monitor-bias-viz}
 
-La visualizzazione della distorsione include le seguenti viste: 
+Quando viene rilevata una potenziale distorsione, {{site.data.keyword.aios_short}} esegue diverse funzioni per confermare se la distorsione è reale. {{site.data.keyword.aios_short}} perturba i dati invertendo il valore monitorato con quello di riferimento ed eseguendo questo nuovo record nel modello. Successivamente, visualizza l'output risultante come output senza distorsione. {{site.data.keyword.aios_short}} inoltre addestra un modello shadow senza distorsione che viene poi utilizzato per rilevare quando un modello sta per effettuare una previsione distorta. I risultati di tali determinazioni sono disponibili nella visualizzazione della distorsione, che include le seguenti viste: 
 
 - **Payload + Perturbati**: include la richiesta di calcolo del punteggio ricevuta per l'ora selezionata più record aggiuntivi da ore precedenti se non è stato soddisfatto il numero minimo di record richiesti per la valutazione. Include altri record perturbati/sintetizzati utilizzati per testare la risposta del modello quando il valore della funzione monitorata cambia.
 
@@ -71,7 +71,7 @@ La visualizzazione della distorsione include le seguenti viste:
 
 
 
-- **Payload**: le richieste di calcolo del punteggio effettive ricevute dal modello per l'ora selezionata. 
+- **Payload**: le richieste di calcolo del punteggio effettive ricevute dal modello per l'ora selezionata.
 
    Prendere nota dei seguenti dettagli sul payload:
    
@@ -82,18 +82,18 @@ La visualizzazione della distorsione include le seguenti viste:
 
   ![esempio di dati  payload](images/payload.png)
 
-- **Training**: i record dei dati di training utilizzati per addestrare il modello. 
+- **Training**: i record dei dati di training utilizzati per addestrare il modello.
 
    Prendere nota dei seguenti dettagli sul training:
    
-   - Numero di record di dati di training. I dati di training vengono letti una sola volta e la distribuzione viene memorizzata in sottoscrizione/configurazione_correttezza. Durante l'elaborazione della distribuzione è anche possibile trovare il numero di record di dati di training e conservarlo nella stessa distribuzione. Inoltre, quando i dati di training vengono modificati, cioè se POST /distribuzione_dati viene rieseguito, è necessario aggiornare questo valore in configurazione_correttezza/distribuzione_dat_training. Quando si invia la metrica, è opportuno inviare anche questo valore.
+   - Numero di record di dati di training. I dati di training sono letti una sola volta e la distribuzione è memorizzata nella variabile `sottoscrizione/configurazione_correttezza`. Durante l'elaborazione della distribuzione è anche possibile trovare il numero di record di dati di training e conservarlo nella stessa distribuzione. Inoltre, quando i dati di training vengono modificati, cioè se il comando `POST /distribuzione_dati` viene rieseguito, questo valore viene aggiornato nella variabile `configurazione_correttezza/distribuzione_dati_training`. Quando si invia la metrica, è opportuno inviare anche questo valore.
    - L'ora in cui i dati di training sono stati elaborati l'ultima volta (prima volta e successivi aggiornamenti)
 
   ![esempio di dati di training](images/training.png)
    
 
    
-- **Distorsione annullata**: l'output dell'algoritmo di annullamento distorsione dopo l'elaborazione dei dati di runtime e perturbati. 
+- **Distorsione annullata**: l'output dell'algoritmo di annullamento distorsione dopo l'elaborazione dei dati di runtime e perturbati.
 
    Prendere nota dei seguenti dettagli sulla distorsione annullata:
    

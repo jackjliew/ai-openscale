@@ -167,7 +167,7 @@ Sarà necessario che i dati di training del proprio modello siano disponibili in
     **Nota**: per i linguaggi diversi da Python, è possibile anche eseguire direttamente la registrazione del payload, utilizzando un'API REST.
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -319,7 +319,7 @@ Sarà necessario che i dati di training del proprio modello siano disponibili in
     **Nota**: per i linguaggi diversi da Python, è possibile anche eseguire direttamente la registrazione del payload, utilizzando un'API REST.
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -470,7 +470,7 @@ Sarà necessario che i dati di training del proprio modello siano disponibili in
     **Nota**: per i linguaggi diversi da Python, è possibile anche eseguire direttamente la registrazione del payload, utilizzando un'API REST.
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"

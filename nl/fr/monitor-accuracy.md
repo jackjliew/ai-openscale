@@ -63,8 +63,7 @@ pour connaître les limitations de la surveillance de l'exactitude.
 ### Exactitude débiaisée
 {: #acc-debias-view}
 
-Lorsqu'il y a des données pour, l'exactitude du modèle comprend à la fois le modèle d'origine et le modèle débiaisé.
-{{site.data.keyword.aios_full_notm}} calcule l'exactitude pour la sortie débiaisée et l'enregistre dans la table de journalisation de contenu
+Lorsqu'il y a des données pour, l'exactitude du modèle comprend à la fois le modèle d'origine et le modèle débiaisé. {{site.data.keyword.aios_full_notm}} calcule l'exactitude pour la sortie débiaisée et l'enregistre dans la table de journalisation de contenu
 sous la forme d'une colonne additionnelle.
 
 ![affichage d'un modèle avec l'exactitude calculée à la fois pour le modèle d'origine et le modèle débiaisé.](images/debiased-accuracy.png)

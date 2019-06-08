@@ -55,7 +55,7 @@ Sie können eine programmgesteuerte Schnittstelle verwenden, um auf angepasste M
 
    Weitere Informationen finden Sie in der [Dokumentation zum Python-SDK](http://ai-openscale-python-client.mybluemix.net/).
 
-Visualisierungen der angepassten Metriken werden auch im {{site.data.keyword.aios_short}}-Dashboard angezeigt. 
+Visualisierungen der angepassten Metriken werden auch im {{site.data.keyword.aios_short}}-Dashboard angezeigt.
 
 <!---
 ![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)

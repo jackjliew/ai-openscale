@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -33,12 +33,12 @@ subcollection: ai-openscale
 {: #as-about}
 
 - このモジュールを使用すると、テクニカル・ユーザーは[入門](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted)チュートリアルで説明されている方法で自分でサービスのプロビジョンと構成を行わなくても、{{site.data.keyword.aios_short}} インスタンスが稼働していることを確認できます。
-- Python モジュールは、自分が所有するサービスの確認と、{{site.data.keyword.aios_short}} など必要なサービスの作成を行うプロセスを支援します。モジュールが正常に実行されると、{{site.data.keyword.cloud_notm}} ダッシュボードから {{site.data.keyword.aios_short}} を起動してモデルのモニター方法を確認できます。
+- Python モジュールは、自分が所有するサービスの確認と、{{site.data.keyword.aios_short}} など必要なサービスの作成を行うプロセスを支援します。 モジュールが正常に実行されると、{{site.data.keyword.cloud_notm}} ダッシュボードから {{site.data.keyword.aios_short}} を起動してモデルのモニター方法を確認できます。
 
 ## 始めに
 {: #as-prereqs}
 
-1. [{{site.data.keyword.cloud_notm}} API キーを作成して、ダウンロードします](/docs/iam?topic=iam-userapikey#create_user_key)。後ほどのステップでこの API キーを入力する必要があります。
+1. [{{site.data.keyword.cloud_notm}} API キーを作成して、ダウンロードします](/docs/iam?topic=iam-userapikey#create_user_key)。 後ほどのステップでこの API キーを入力する必要があります。
 
 2. [Python 3 の任意のリリース ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.python.org/downloads/){: new_window} をインストールします。
 
@@ -57,7 +57,7 @@ subcollection: ai-openscale
 
 4. 既存の {{site.data.keyword.pm_short}} サービス・インスタンスがある場合、[{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){: new_window} を確認して、サービスが Cloud Foundry ではなく {{site.data.keyword.iamshort}} (IAM) によって管理されていることを確かめます。
 
-  **重要**: このモジュールは、{{site.data.keyword.pm_short}} のインスタンスの有無を検査します。インスタンスがある場合、モジュールはそのインスタンスを使用します。ただし、インスタンスが Cloud Foundry によって管理されている場合、最初に[ IAM リソース・グループにマイグレーションしてからモジュールを実行する必要があります](/docs/resources?topic=resources-migrate#migrate)。
+  **重要**: このモジュールは、{{site.data.keyword.pm_short}} のインスタンスの有無を検査します。 インスタンスがある場合、モジュールはそのインスタンスを使用します。 ただし、インスタンスが Cloud Foundry によって管理されている場合、最初に[ IAM リソース・グループにマイグレーションしてからモジュールを実行する必要があります](/docs/resources?topic=resources-migrate#migrate)。
 
 ## モジュールの実行
 {: #as-run}
@@ -72,28 +72,28 @@ ibm-ai-openscale-cli --apikey <Your API key>
 ## {{site.data.keyword.aios_short}} における結果の表示
 {: #as-open}
 
-モデルの公平性と正解率に関する洞察、モニター対象データの詳細、および個々のトランザクションの説明性を表示するには、[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を開きます。
+モデルの公平性と正解率に関するインサイト、モニター対象データの詳細、および個々のトランザクションの説明性を表示するには、[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を開きます。
 
 - サンプル・データのシナリオを把握するには、[{{site.data.keyword.aios_short}} のユースケースと利用価値に関する説明](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gs-use)を参照してください。
 
-### 洞察の表示
+### インサイトの表示
 {: #as-insights}
 
-[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} で**「洞察」**タブをクリックします。このタブには、デプロイ済みモデルのメトリック概要が示されます。![洞察](images/insight-dash-tab.png)
+[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} で**「インサイト」**タブをクリックします。このタブには、デプロイ済みモデルの指標の概要が示されます。![インサイト](images/insight-dash-tab.png)
 
-- 「洞察」ページには、公平性と正解率に関する問題が一目で分かるように表示されます。問題の判定には、構成されたしきい値が使用されます。
+- 「インサイト」ページには、公平性と正解率に関する問題が一目で分かるように表示されます。問題の判定には、構成されたしきい値が使用されます。
 
-- 各デプロイメントはタイルとして表示されます。以下の画面キャプチャーに示すように、このモジュールでは `GermanCreditRiskModel` というデプロイメントが構成されています。
+- 各デプロイメントはタイルとして表示されます。 以下の画面キャプチャーに示すように、このモジュールでは `GermanCreditRiskModel` というデプロイメントが構成されています。
 
   ![「洞察」の概要](images/setup01-0206.png)
 
 ### モニタリング・データの表示
 {: #as-monitoring}
 
-1. 「洞察」ページで `GermanCreditRiskModel` タイルをクリックして、モニター対象データに関する詳細を表示します。
+1. 「インサイト」ページで `GermanCreditRiskModel` タイルをクリックして、モニター対象データに関する詳細を表示します。
 2. グラフの上でマーカーをスライドさせ、データを表示する日時期間を表示して**「詳細を表示します」**リンクをクリックします。
 
-   - 例えば、以下の画面には、特定の日時のデータが表示されています。モジュールの実行タイミングによって日時は異なります。
+   - 例えば、以下の画面には、特定の日時のデータが表示されています。 モジュールの実行タイミングによって日時は異なります。
 
    - 時系列グラフの解釈について詳しくは、[公平性、毎分平均リクエスト数、正解率のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
 
@@ -112,7 +112,7 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
 特定の期間にバイアスが存在する要因について理解するには、前のセクションの可視化画面に示されているように、**「トランザクションの表示」**ボタンを選択します。
 
-過去の時刻においてバイアスが存在するトランザクションのトランザクション ID がリストされます。このモジュールで使用されるモデルの場合、選択可能なリクエストにおいてはバイアスが存在しません。そのため、以下の画面キャプチャーでは、対象期間において表示されているトランザクションはありません。
+過去の時刻においてバイアスが存在するトランザクションのトランザクション ID がリストされます。 このモジュールで使用されるモデルの場合、選択可能なリクエストにおいてはバイアスが存在しません。 そのため、以下の画面キャプチャーでは、対象期間において表示されているトランザクションはありません。
 
   ![トランザクションのないトランザクション・リスト](images/setup06-0206.png)
 

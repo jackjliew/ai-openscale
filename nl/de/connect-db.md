@@ -116,10 +116,9 @@ Sie können für die kostenlose Datenbank ein Upgrade auf eine andere Datenbank 
 ## Scoring-Anforderung senden
 {: #cdb-score}
 
-Zum Konfigurieren von Überwachungsprogrammen erfordert {{site.data.keyword.aios_short}}, dass Sie eine Scoring-Anforderung senden, um mit der Protokollierung der Daten zu beginnen, die künftig überwacht werden.
+Zum Konfigurieren von Überwachungen ist für {{site.data.keyword.aios_short}} das Senden von Scoring-Nutzdaten erforderlich, damit mit dem Protokollieren der zu überwachenden Daten begonnen werden kann.
 
-Für Modelle, die in Watson Machine Learning bereitgestellt sind, führt {{site.data.keyword.aios_short}} automatisch ein Scoring durch.
-{: note:}
+Bei Modellen, die in {{site.data.keyword.pm_full}} bereitgestellt werden, ist nur ein Scoring der Bereitstellung erforderlich und {{site.data.keyword.pm_short}} sendet die Scoringnutzdaten automatisch an {{site.data.keyword.aios_short}}. Bei anderen Machine Learning-Engines, wie z. B. Microsoft Azure, Amazon SageMaker oder einer kundenspezifischen Machine Learning-Engine, müssen die Scoringnutzdaten über die API für die Nutzdatenprotokollierung gesendet werden. 
 
 Wählen Sie eine Bereitstellung aus, in diesem Fall 'Fraud Detector' (Betrugserkennung), und verwenden Sie dann die bereitgestellten `cURL`- oder `Python`-Code-Snippets zum Protokollieren von Daten zu den Modellbereitstellungsanforderungen und Antwortdaten. Weitere Informationen enthält der Abschnitt [Nutzdatenprotokollierung für andere Serviceinstanzen als die Watson Machine Learning-Serviceinstanz](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
 

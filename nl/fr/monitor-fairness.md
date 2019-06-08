@@ -75,12 +75,16 @@ si le groupe surveillé obtient davantage de résultats favorables que le groupe
 ### Affichage du biais ![étiquette bêta](images/beta.png)
 {: #mf-monitor-bias-viz}
 
-L'affichage du biais comprend les vues suivantes : 
+Lorsqu'un biais potentiel est détecté,
+{{site.data.keyword.aios_short}} effectue plusieurs opérations pour vérifier sa réalité.
+Il perturbe les données en basculant la valeur surveillée sur la valeur de référence puis en exécutant ce nouvel enregistrement avec le modèle.
+Il fait ensuite ressortir la sortie résultante comme la sortie débiaisée.
+{{site.data.keyword.aios_short}} forme également un modèle débiaisé reflet qu'il utilise ensuite pour détecter quand un modèle va faire une prévision biaisée.
+Les résultats de ces déterminations sont disponibles dans l'affichage du biais, qui comprend les vues suivantes : 
 
 - **Contenu + Données perturbées** :
 Comprend la demande d'évaluation reçue pour l'heure sélectionnée
-plus des enregistrements d'heures précédentes si le nombre minimum d'enregistrements requis pour l'évaluation n'était pas atteint.
-Comprend les enregistrements perturbés/synthétisés supplémentaires utilisés pour tester la réponse du modèle lorsque la valeur de la fonction surveillée change.
+plus des enregistrements d'heures précédentes si le nombre minimum d'enregistrements requis pour l'évaluation n'était pas atteint. Comprend les enregistrements perturbés/synthétisés supplémentaires utilisés pour tester la réponse du modèle lorsque la valeur de la fonction surveillée change.
 
    Remarquez les détails suivants du contenu et des données perturbées :
 
@@ -114,12 +118,12 @@ Enregistrements de données de formation utilisés pour former le modèle.
 
    Remarquez les détails suivants de la formation :
    
-   - Nombre d'enregistrements de données de formation.
-Les données de formation sont lues une fois et la distribution est stockée sous subscription/fairness_configuration.
+   - Nombre d'enregistrements de données de formation. Les données de formation sont lues une fois et la distribution est stockée
+dans la variable `subscription/fairness_configuration`.
 Lors du calcul de la distribution, nous devons également trouver le nombre d'enregistrements de données de formation et le stocker dans la même distribution.
 D'autre part, si les données de formation sont changées,
-c'est-à-dire en cas de nouveau POST /data_distribution,
-nous devons mettre à jour cette valeur sous fairness_configuration/training_data_distribution.
+c'est-à-dire en cas de nouvelle exécution de la commande `POST /data_distribution`,
+cette valeur est mise à jour dans la variable `fairness_configuration/training_data_distribution`.
 Lors de l'envoi de la métrique, nous devons également envoyer cette valeur aussi.
    - Heure du dernier traitement des données de formation (premier moment et mises à jour suivantes)
 
@@ -133,8 +137,7 @@ Sortie de l'algorithme de débiaisement après traitement des données d'exécut
    Remarquez les détails suivants des données débiaisées :
    
    - Nombre d'enregistrements lus/sur lesquels le débiaisement est effectué à partir de la table de contenu
-   - Enregistrements supplémentaires lus pour effectuer le biais, et donc débiaisés aussi.
-Même nombre que pour la sélection `Contenu + Données perturbées`
+   - Enregistrements supplémentaires lus pour effectuer le biais, et donc débiaisés aussi. Même nombre que pour la sélection `Contenu + Données perturbées`
    - Enregistrements perturbés selon l'attribut d'équité
    - Horodate du plus ancien enregistrement de la fenêtre de données pour lequel le biais doit être calculé
    - Horodate du dernier enregistrement de la fenêtre de données pour lequel le biais doit être calculé

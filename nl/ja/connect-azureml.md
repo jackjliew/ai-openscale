@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Microsoft Azure, ml, machine learning, services
 
@@ -19,16 +19,16 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Microsoft Azure ML サービス・インスタンスの指定
+# Microsoft Azure ML Studio インスタンスの指定
 {: #connect-azure}
 
-{{site.data.keyword.aios_short}} ツールで最初に実行するステップは、Microsoft Azure ML サービス・インスタンスの指定です。Azure ML サービス・インスタンスは、AI モデルとデプロイメントの格納場所となります。
+{{site.data.keyword.aios_short}} ツールで最初に実行するステップは、Microsoft Azure ML Studio インスタンスの指定です。 Azure ML Studio インスタンスは、AI モデルとデプロイメントの格納場所となります。
 {: shortdesc}
 
-## Azure ML Studio サービス・インスタンスの接続
+## Azure ML Studio Studio インスタンスの接続
 {: #ca-connect}
 
-{{site.data.keyword.aios_short}} を、Azure ML Studio サービス・インスタンスの AI モデルとデプロイメントに接続します。
+{{site.data.keyword.aios_short}} を、Azure ML Studio インスタンスの AI モデルとデプロイメントに接続します。
 
 1.  {{site.data.keyword.aios_short}} ツールのホーム・ページで、**「開始」**をクリックします。
 
@@ -36,14 +36,14 @@ subcollection: ai-openscale
 
 1.  **「Microsoft Azure ML Studio」**タイルを選択し、**「次へ」**をクリックします。
 
-    ![Azure ML サービスの選択](images/connect-azure.png)
+    ![Azure ML Studio の選択](images/connect-azure.png)
 
 1.  資格情報を入力します。
 
     Microsoft Azure 資格情報の取得方法の手順に関しては、[方法:リソースにアクセスできる Azure AD アプリケーションとサービス プリンシパルをポータルで作成する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: new_window} を参照してください。
     {: note}
 
-    ![Azure ML サービス資格情報の入力](images/connect-azure-cred.png)
+    ![Azure ML Studio 資格情報の入力](images/connect-azure-cred.png)
 
 1.  **「次へ」**をクリックします。
 

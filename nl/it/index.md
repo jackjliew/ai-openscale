@@ -43,6 +43,7 @@ Ecco come implementare {{site.data.keyword.aios_short}}:
 
     - [Correttezza](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - [Accuratezza](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
+    - [Prestazioni](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics#anlz_metrics_performance)
 
 - **Visualizzare e modificare i dati monitorati**: il dashboard {{site.data.keyword.aios_short}}[](/docs/services/ai-openscale?topic=ai-openscale-io-ov) consente di visualizzare facilmente le informazioni chiave e di identificare i problemi per le distribuzioni. La visualizzazione dei singoli punti di dati per ogni funzione monitorata fornisce ulteriori dettagli.
 
@@ -54,7 +55,6 @@ Ecco come implementare {{site.data.keyword.aios_short}}:
 - La release corrente supporta solo un database, un'istanza di {{site.data.keyword.pm_full}} e un'istanza di {{site.data.keyword.aios_short}}
 
 - Il database e l'istanza {{site.data.keyword.pm_full}} devono essere distribuiti nello stesso account {{site.data.keyword.cloud_notm}}.
-
 
 - Il piano Lite (gratuito) ha i seguenti limiti mensili:
 
@@ -68,7 +68,6 @@ Ecco come implementare {{site.data.keyword.aios_short}}:
 - Esiste un limite di licenza di 20 modelli distribuiti per istanza di {{site.data.keyword.aios_short}}.
 
 - Per {{site.data.keyword.pm_full}}, il payload delle immagini perturbate inviate tramite il gateway di machine learning non può superare 1 MB. Per evitare problemi di timeout, le immagini non devono superare 125 x 125 pixel e devono essere inviate in sequenza in modo che la spiegazione per la seconda immagine sia richiesta quando la prima è completata.
-
 
 
 <p>&nbsp;</p>

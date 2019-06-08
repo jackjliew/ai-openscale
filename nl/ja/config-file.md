@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
-keywords: JSON, configuration, configuring, deployment
+keywords: JSON, configuration, configuring, deployment, subscription
 
 subcollection: ai-openscale
 
@@ -23,13 +23,13 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# JSON ファイルを使用したデプロイメント・サブスクリプションの構成
+# JSON 構成ファイルを使用したアセットのデプロイメントの構成
 {: #cf-ov}
 
-JSON ファイルをインポートして、サブスクリプションの作成時にすべてのモニターと項目をプログラムで構成できます。構成ファイルをエクスポートすることもできます。
+JSON ファイルをインポートして、アセットのすべてのデプロイメントを作成してモニター用に構成できます。 他のアセットとそれらのデプロイメントを構成するために、構成ファイルをエクスポートすることもできます。
 {: shortdesc}
 
-JSON ファイルを使用してデプロイメントをサブスクライブする方法の優れた例については、[Watson OpenScale One API Shot for subscription Python notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb) を参照してください。このノートブックでは、1 回の API 呼び出しで、JSON ファイルを使用して Amazon SageMaker アセット・サブスクリプションを構成する方法を説明します。このトピックの以降の部分では、このノートブックを参照します。
+JSON ファイルを処理する方法の優れた例については、[Watson OpenScale One API Shot for subscription Python notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb) を参照してください。 このノートブックでは、JSON ファイルを使用して 1 回の API 呼び出しで Amazon SageMaker アセットのデプロイメントを作成して構成する方法を説明しています。 このトピックの以降の部分では、このノートブックを参照します。
 
 ## Python 辞書としての JSON ファイル内容のロード
 {: #cf-load-as-dict}
@@ -45,7 +45,7 @@ JSON ファイルを使用してデプロイメントをサブスクライブす
       subscription_configuration = json.load(fp)
     ```
 
-このファイルには、以下の例に示すような構成データが含まれます。構成コンテンツの完全な例を確認する場合は、ノートブックを参照してください。
+このファイルには、以下の例に示すような構成データが含まれます。 構成コンテンツの完全な例を確認する場合は、ノートブックを参照してください。
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
@@ -146,10 +146,10 @@ JSON ファイルを使用してデプロイメントをサブスクライブす
   'timestamp': '2019-02-11T11:41:01.613Z'}}
   ```
 
-## 構成ファイルからのサブスクリプションの追加
+## 構成ファイルからのインポート
 {: #cf-subscribe}
 
-- 次に、サンプルの乳がん予測モデル・デプロイメント用のサブスクリプションを追加および構成するための呼び出しを実行します。
+- 次に、サンプルの乳がん予測モデル・デプロイメント用のアセットのデプロイメントを追加して構成するための呼び出しを実行します。
 
     ```python
     subscription = client.data_mart.subscriptions.import_configuration(binding_uid=binding_uid, configuration_data=subscription_configuration)
@@ -158,7 +158,7 @@ JSON ファイルを使用してデプロイメントをサブスクライブす
   `binding_uid` パラメーターは、バインドされる ML エンジンが 1 つのみの場合にはオプションです。
   {: note}
 
-## JSON ファイルのエクスポート
+## 構成ファイルへのエクスポート
 {: #cf-export}
 
 - 構成ファイルを JSON としてエクスポートすることもできます。
@@ -170,8 +170,8 @@ JSON ファイルを使用してデプロイメントをサブスクライブす
 ## 結果
 {: #cf-results}
 
-サブスクリプションが作成され、{{site.data.keyword.aios_short}} で使用するデプロイ済みモデルが構成されます。
+アセットのデプロイメントが作成されて、{{site.data.keyword.aios_short}} で使用するための構成が行われます。
 
 さらに詳しい情報については、[{{site.data.keyword.aios_short}} Python クライアント資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window} を参照してください。
 
-{{site.data.keyword.aios_short}} との間の構成のインポートとエクスポートは、[サブスクリプションのインポート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} メソッドと [サブスクリプションのエクスポート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} メソッドを使用して行うこともできます。
+{{site.data.keyword.aios_short}} との間の構成のインポートとエクスポートは、[サブスクリプションのインポート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} および[サブスクリプションのエクスポート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} の API メソッドを使用して行うこともできます。

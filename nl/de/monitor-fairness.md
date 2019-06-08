@@ -55,14 +55,14 @@ Fairnesswerte können über 100 % liegen. Dies bedeutet, dass die überwachte Gr
 ### Visualisierung für Verzerrungen ![Beta-Tag](images/beta.png)
 {: #mf-monitor-bias-viz}
 
-Die Visualisierung für Verzerrungen umfasst die folgenden Ansichten: 
+Wenn eine potenzielle Verzerrung festgestellt wird, führt {{site.data.keyword.aios_short}} eine Reihe von Funktionen aus, um zu ermitteln, ob die Verzerrung real ist. {{site.data.keyword.aios_short}} ändert die Daten durch Perturbation, indem der überwachte Wert mit dem Referenzwert gespiegelt und dieser neue Datensatz dann anhand des Modells verarbeitet wird. Anschließend wird die daraus resultierende Ausgabe als verzerrungsbereinigte Ausgabe zurückgegeben. Darüber hinaus trainiert {{site.data.keyword.aios_short}} ein gespiegeltes verzerrungsbereinigtes Modell, das dann verwendet wird, um eine verzerrte Prognose eines Modell zu erkennen. Die Ergebnisse dieser Feststellungen sind in der Visualisierung für Verzerrungen verfügbar, die die folgenden Ansichten umfasst:  
 
-- **Nutzdaten + durch Perturbation veränderten Daten**: Enthält die für die ausgewählte Stunde erhaltene Scoring-Anforderung sowie zusätzliche Datensätze für vorherige Stunden, falls die für die Bewertung erforderliche Mindestanzahl von Datensätzen nicht erreicht wurde. Darüber hinaus sind zusätzliche durch Perturbation veränderte/synthetisierte Datensätze enthalten, die dazu verwendet werden, die Antwort des Modells zu testen, wenn sich der Wert des überwachten Merkmals ändert. 
+- **Nutzdaten + durch Perturbation veränderten Daten**: Enthält die für die ausgewählte Stunde erhaltene Scoring-Anforderung sowie zusätzliche Datensätze für vorherige Stunden, falls die für die Bewertung erforderliche Mindestanzahl von Datensätzen nicht erreicht wurde. Darüber hinaus sind zusätzliche durch Perturbation veränderte/synthetisierte Datensätze enthalten, die dazu verwendet werden, die Antwort des Modells zu testen, wenn sich der Wert des überwachten Merkmals ändert.
 
    Beachten Sie die folgenden Details zu Nutzdaten und durch Perturbation veränderte Daten:
 
    - Anzahl der Datensätze, die für diese Stunde aus der Nutzdatentabelle gelesen werden
-   - Zusätzliche Datensätze, die für vorherige Stunden gelesen werden (Beispiel: Wenn für `min_records` in der Fairnesskonfiguration der Wert 1000 festgelegt wird und zwischen 14:00 Uhr und 15:00 Uhr nur 10 Datensätze hinzugefügt werden, liest das System weitere 990 Datensätze aus vorherigen Stunden, damit die Mindestanforderung erfüllt wird.) 
+   - Zusätzliche Datensätze, die für vorherige Stunden gelesen werden (Beispiel: Wenn für `min_records` in der Fairnesskonfiguration der Wert 1000 festgelegt wird und zwischen 14:00 Uhr und 15:00 Uhr nur 10 Datensätze hinzugefügt werden, liest das System weitere 990 Datensätze aus vorherigen Stunden, damit die Mindestanforderung erfüllt wird.)
    - Durch Perturbation veränderte Datensätze pro Fairnessattribut
    - Zeitmarke des ältesten Datensatzes in dem Zeitrahmen, für den die Verzerrung berechnet werden soll
    - Zeitmarke des neuesten Datensatzes in dem Zeitrahmen, für den die Verzerrung berechnet werden soll
@@ -71,7 +71,7 @@ Die Visualisierung für Verzerrungen umfasst die folgenden Ansichten:
 
 
 
-- **Nutzdaten**: Die tatsächlichen Scoring-Anforderungen, die das Modell für die ausgewählte Stunde erhält. 
+- **Nutzdaten**: Die tatsächlichen Scoring-Anforderungen, die das Modell für die ausgewählte Stunde erhält.
 
    Beachten Sie die folgenden Details zu Nutzdaten:
    
@@ -82,23 +82,23 @@ Die Visualisierung für Verzerrungen umfasst die folgenden Ansichten:
 
   ![Beispiel für Nutzdaten](images/payload.png)
 
-- **Trainingsdaten**: Die Trainingsdatensätze, die für das Training des Modells verwendet werden. 
+- **Trainingsdaten**: Die Trainingsdatensätze, die für das Training des Modells verwendet werden.
 
    Beachten Sie die folgenden Details zu Trainingsdaten:
    
-   - Anzahl der Trainingsdatensätze. Trainingsdaten werden einmal gelesen und die Verteilung wird unter 'subscription/fairness_configuration' gespeichert. Bei der Berechnung der Verteilung sollte auch die Anzahl der Trainingsdatensätze ermittelt und in derselben Verteilung gespeichert werden. Wenn Trainingsdaten geändert werden, d. h., wenn 'POST /data_distribution' erneut ausgeführt wird, muss darüber hinaus dieser Wert unter 'fairness_configuration/training_data_distribution' aktualisiert werden. Beim Senden dieser Metrik muss auch diese Wert gesendet werden. 
+   - Anzahl der Trainingsdatensätze. Trainingsdaten werden einmal gelesen und die Verteilung wird in der Variablen `subscription/fairness_configuration` gespeichert. Bei der Berechnung der Verteilung sollte auch die Anzahl der Trainingsdatensätze ermittelt und in derselben Verteilung gespeichert werden. Wenn Trainingsdaten geändert werden, d. h., wenn der Befehl `POST /data_distribution` erneut ausgeführt wird, wird darüber hinaus dieser Wert in der Variablen `fairness_configuration/training_data_distribution` aktualisiert. Beim Senden dieser Metrik muss auch diese Wert gesendet werden.
    - Zeitpunkt der letzten Verarbeitung der Trainingsdaten (erste und nachfolgende Aktualisierungen)
 
   ![Beispiel für Trainingsdaten](images/training.png)
    
 
    
-- **Verzerrungsbereinigte Daten**: Die Ausgabe des Verzerrungsbereinigungsalgorithmus nach der Verarbeitung der Laufzeitdaten und der durch Perturbation veränderten Daten. 
+- **Verzerrungsbereinigte Daten**: Die Ausgabe des Verzerrungsbereinigungsalgorithmus nach der Verarbeitung der Laufzeitdaten und der durch Perturbation veränderten Daten.
 
    Beachten Sie die folgenden Details zu verzerrungsbereinigten Daten:
    
    - Anzahl der Datensätze, die aus der Nutzdatentabelle gelesen werden bzw. für die eine Verzerrungsbereinigungsoperation durchgeführt wird
-   - Zusätzliche Datensätze, die für die Verzerrungsbereinigungsoperation gelesen und damit ebenfalls verzerrungsbereinigt werden. Diese Zahl entspricht der Zahl bei der Auswahl von `Nutzdaten + durch Perturbation veränderten Daten`. 
+   - Zusätzliche Datensätze, die für die Verzerrungsbereinigungsoperation gelesen und damit ebenfalls verzerrungsbereinigt werden. Diese Zahl entspricht der Zahl bei der Auswahl von `Nutzdaten + durch Perturbation veränderten Daten`.
    - Durch Perturbation veränderte Datensätze pro Fairnessattribut
    - Zeitmarke des ältesten Datensatzes in dem Zeitrahmen, für den die Verzerrung berechnet werden soll
    - Zeitmarke des neuesten Datensatzes in dem Zeitrahmen, für den die Verzerrung berechnet werden soll

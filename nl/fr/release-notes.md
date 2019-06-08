@@ -25,6 +25,61 @@ subcollection: ai-openscale
 Ce document détaille les nouvelles fonctionnalités d'{{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
 
+## 29 mai 2019
+{: #rn-29May2019}
+
+Voici les nouvelles fonctionnalités et les changements apportés au service.
+
+- __*Améliorations de l'affichage du biais*__: ![étiquette bêta](images/beta.png)
+L'affichage du biais comprend les vues suivantes : 
+
+    - Contenu + Données perturbées :
+Comprend la demande d'évaluation reçue pour l'heure sélectionnée
+plus des enregistrements d'heures précédentes si le nombre minimum d'enregistrements requis pour l'évaluation n'était pas atteint. Comprend les enregistrements perturbés/synthétisés supplémentaires utilisés pour tester la réponse du modèle lorsque la valeur de la fonction surveillée change.
+    - Contenu :
+Demandes d'évaluation réelles reçues par le modèle durant l'heure sélectionnée.
+    - Formation :
+Enregistrements de données de formation utilisés pour former le modèle.
+    - Données débiaisées :
+Sortie de l'algorithme de débiaisement après traitement des données d'exécution et perturbées.
+
+   Pour plus d'information, voir
+[Affichage du biais](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-monitor-bias-viz).
+
+- __*Calcul de l'exactitude pour la sortie débiaisée*__ :
+Le calcul de l'exactitude inclut la sortie débiaisée. Vous pouvez comparer l'exactitude du modèle débiaisé à celle d'un modèle de production
+
+   Pour plus d'information, voir [Exactitude](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-debias-view).
+
+- __*Possibilité de moteurs d'apprentissage automatique multiples*__ :
+{{site.data.keyword.aios_short}} peut prendre en charge plusieurs moteurs d'apprentissage automatique
+dans une même instance à condition que la mise à disposition soit effectuée via l'interface de ligne de commande (CLI).
+
+   Pour plus d'information, voir
+[Outil de ligne de commande ModelOps](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mop).
+
+- __*Internationalisation*__ :
+{{site.data.keyword.aios_short}} offre des versions localisées et permet de traiter les données dans les langues prises en charge.
+L'interface utilisateur, la documentation et les messages d'erreur sont actuellement traduits dans les langues suivantes : 
+    - Allemand
+    - Français
+    - Italien
+    - Espagnol
+    - Portugais brésilien
+    - Japonais
+    - Chinois simplifié
+    - Chinois traditionnel
+    - Coréen
+
+   Pour plus d'information (avec les limitations), voir
+[Langues prises en charge pour {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-sl-langs).
+
+- __Amélioration pour les infrastructures *{{site.data.keyword.pm_full}}*__ :
+{{site.data.keyword.aios_short}} prend maintenant en charge les infrastructures scikit-learn et XGBoost avec le moteur {{site.data.keyword.pm_full}}.
+
+   Pour plus d'information, voir
+[Infrastructures WML](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml).
+
 ## 25 avril 2019
 {: #rn-25April2019}
 
@@ -35,6 +90,16 @@ Outre les améliorations en termes d'utilisation et les mises à jour de sécuri
 - __*Visite guidée de la configuration automatique*__ : un nouveau mode de configuration de votre environnement {{site.data.keyword.aios_short}}. Utilisez la [configuration automatique](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) pour mettre à disposition des services et télécharger et configurer un modèle. Vous remarquerez cette option une fois que vous avez une instance de {{site.data.keyword.aios_short}}.
 - __*Basculement vers la version bêta*__ : ![balise bêta](images/beta.png) un nouvel commutateur, **Explorer la nouvelle version bêta**, vous permet de travailler dans notre environnement bêta, où vous pouvez consulter toutes les fonctions les plus récentes et les nouvelles fonctionnalités. Vous n'êtes pas satisfait de ce que vous voyez ? Il suffit de revenir en arrière en cliquant sur **Revenir à la version d'origine**. Il n'y aura aucune incidence sur votre configuration et vos moniteurs. Les fonctionnalités suivantes font partie du programme bêta en cours :
     - __*Matrice de confusion*__ : une [matrice de confusion affiche](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) les faux positifs et les faux négatifs. Cliquez sur une cellule pour afficher le sous-ensemble d'enregistrements de commentaires.
+
+## 10 avril 2019
+{: #rn-10April2019}
+
+- __*L'outil Express Path prend maintenant en charge les modèles client*__ :
+Automatisation du processus d'intégration à {{site.data.keyword.aios_short}}.
+
+   Pour plus d'information, voir
+[ibm-ai-openscale-cli](https://pypi.org/project/ibm-ai-openscale-cli/).
+
 
 ## 5 mars 2019
 {: #rn-5March2019}

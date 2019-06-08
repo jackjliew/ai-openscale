@@ -24,10 +24,8 @@ subcollection: ai-openscale
 # Langues prises en charge par {{site.data.keyword.aios_short}}
 {: #sl-langs}
 
-La prise en charge des langues est activée par défaut.
-Vous pouvez configurer l'interface utilisateur traduite correspondant à une des langues prises en charge
-en mettant à jour votre préférence linguistique dans votre navigateur Web.
-L'interface utilisateur d'{{site.data.keyword.aios_full}} est actuellement traduite dans les langues suivantes : 
+La prise en charge des langues est activée par défaut. Vous pouvez configurer l'interface utilisateur traduite correspondant à une des langues prises en charge
+en mettant à jour votre préférence linguistique dans votre navigateur Web. L'interface utilisateur d'{{site.data.keyword.aios_full}} est actuellement traduite dans les langues suivantes : 
 {: shortdesc}
 
 - Portugais (Brésil) (pt-br)

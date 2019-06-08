@@ -43,6 +43,7 @@ So implementieren Sie {{site.data.keyword.aios_short}}:
 
     - [Fairness](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - [Genauigkeit](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
+    - [Leistung](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics#anlz_metrics_performance)
 
 - **Überwachte Daten anzeigen und bearbeiten**: Mit dem {{site.data.keyword.aios_short}} [-Dashboard](/docs/services/ai-openscale?topic=ai-openscale-io-ov) können Sie ohne großen Aufwand wichtige Einsichten visualisieren und Probleme bei Ihren Bereitstellungen aufdecken. Durch die Darstellung einzelner Datenpunkte für jedes überwachte Merkmal werden zusätzliche Details geliefert.
 
@@ -66,7 +67,7 @@ So implementieren Sie {{site.data.keyword.aios_short}}:
 
 - Für Lizenzen gilt ein Grenzwert von 20 bereitgestellten Modellen pro Instanz von {{site.data.keyword.aios_short}}.
 
-- Für {{site.data.keyword.pm_full}} können die Nutzdaten mit den durch Perturbation veränderten Images, die über das Machine Learning-Gateway gesendet werden, ein Volumen von 1 MB nicht überschreiten. Um Probleme aufgrund von Zeitlimitüberschreitungen zu vermeiden, dürfen Images nicht mehr als 125 x 125 Pixel aufweisen und sie müssen nacheinander gesendet werden, damit die Erklärung für das zweite Image angefordert wird, nachdem die erste abgeschlossen ist. 
+- Für {{site.data.keyword.pm_full}} können die Nutzdaten mit den durch Perturbation veränderten Images, die über das Machine Learning-Gateway gesendet werden, ein Volumen von 1 MB nicht überschreiten. Um Probleme aufgrund von Zeitlimitüberschreitungen zu vermeiden, dürfen Images nicht mehr als 125 x 125 Pixel aufweisen und sie müssen nacheinander gesendet werden, damit die Erklärung für das zweite Image angefordert wird, nachdem die erste abgeschlossen ist.
 
 
 <p>&nbsp;</p>

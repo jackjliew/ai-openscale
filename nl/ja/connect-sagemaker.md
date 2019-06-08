@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: Amazon SageMaker, machine learning, services, AWS
 
@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Amazon SageMaker ML サービス・インスタンスの指定
 {: #csm-connect}
 
-{{site.data.keyword.aios_short}} ツールで最初に実行するステップは、Amazon SageMaker サービス・インスタンスの指定です。Amazon SageMaker サービス・インスタンスは、AI モデルとデプロイメントの格納場所となります。
+{{site.data.keyword.aios_short}} ツールで最初に実行するステップは、Amazon SageMaker サービス・インスタンスの指定です。 Amazon SageMaker サービス・インスタンスは、AI モデルとデプロイメントの格納場所となります。
 {: shortdesc}
 
 ## Amazon SageMaker サービス・インスタンスの接続

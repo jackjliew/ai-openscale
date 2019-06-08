@@ -25,6 +25,45 @@ subcollection: ai-openscale
 In diesem Dokument werden neue Funktionen für {{site.data.keyword.aios_full_notm}} beschrieben.
 {: shortdesc}
 
+## 29. Mai 2019
+{: #rn-29May2019}
+
+Die folgenden neuen Funktionen und Änderungen beim Service sind verfügbar.
+
+- __*Erweiterungen für die Visualisierung für Verzerrungen*__: ![Beta-Tag](images/beta.png) Die Visualisierung für Verzerrungen umfasst die folgenden Ansichten:  
+
+    - Nutzdaten + durch Perturbation veränderten Daten: Enthält die für die ausgewählte Stunde erhaltene Scoring-Anforderung sowie zusätzliche Datensätze für vorherige Stunden, falls die für die Bewertung erforderliche Mindestanzahl von Datensätzen nicht erreicht wurde. Darüber hinaus sind zusätzliche durch Perturbation veränderte/synthetisierte Datensätze enthalten, die dazu verwendet werden, die Antwort des Modells zu testen, wenn sich der Wert des überwachten Merkmals ändert.
+    - Nutzdaten: Die tatsächlichen Scoring-Anforderungen, die das Modell für die ausgewählte Stunde erhält. 
+    - Trainingsdaten: Die Trainingsdatensätze, die für das Training des Modells verwendet werden. 
+    - Verzerrungsbereinigte Daten: Die Ausgabe des Verzerrungsbereinigungsalgorithmus nach der Verarbeitung der Laufzeitdaten und der durch Perturbation veränderten Daten. 
+
+   Weitere Informationen hierzu enthält der Abschnitt [Visualisierung für Verzerrungen](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-monitor-bias-viz). 
+
+- __*Genauigkeitsberechnung für verzerrungsbereinigte Ausgabe*__: Die Genauigkeitsberechnung bezieht auch die verzerrungsbereinigte Ausgabe ein. Sie können die Genauigkeit des verzerrungsbereinigten Modells mit der Genauigkeit eines Produktionsmodells vergleichen. 
+
+   Weitere Informationen hierzu enthält der Abschnitt [Genauigkeit](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-debias-view).
+
+-  __*Unterstützung für mehrere Machine Learning-Engines*__: {{site.data.keyword.aios_short}} unterstützt mehrere Machine Learning-Engines innerhalb einer einzelnen Instanz, vorausgesetzt, dass die Bereitstellung über die Befehlszeilenschnittstelle (CLI) erfolgt. 
+
+   Weitere Informationen hierzu enthält der Abschnitt [Befehlszeilenschnittstellentool 'ModelOps'](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mop).
+
+- __*Internationalisierungsunterstützung*__: {{site.data.keyword.aios_short}} unterstützt lokalisierte Versionen und umfasst die Verarbeitung von Daten in unterstützten Sprachen. Die Benutzerschnittstelle, die Dokumentation und die Fehlernachrichten von {{site.data.keyword.aios_short}} werden derzeit in die folgenden Sprachen übersetzt:  
+    - Deutsch
+    - Französisch
+    - Italienisch
+    - Spanisch
+    - Portugiesisch (Brasilien)
+    - Japanisch
+    - Vereinfachtes Chinesisch
+    - Traditionelles Chinesisch
+    - Koreanisch
+
+   Weitere Informationen (auch zu Einschränkungen) finden Sie in [Unterstützte Sprachen für {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-sl-langs). 
+
+- __Erweiterungen des *{{site.data.keyword.pm_full}}-Frameworks*__: {{site.data.keyword.aios_short}} unterstützt nun die Frameworks 'Scikit-learn' und 'XGBoost' für die {{site.data.keyword.pm_full}}-Engine. 
+
+   Weitere Informationen finden Sie in [WML-Frameworks](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml). 
+
 ## 25. April 2019
 {: #rn-25April2019}
 
@@ -35,6 +74,14 @@ Zusätzlich zur Verbesserung der Benutzerfreundlichkeit und den Sicherheitsupdat
 - __*Tour für automatisierte Konfiguration*__: Eine neue Möglichkeit, die {{site.data.keyword.aios_short}}-Umgebung anhand einer Tour einzurichten. Mit der [automatisierten Konfiguration](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) können Sie Services bereitstellen und ein Modell herunterladen und konfigurieren. Wenn Sie über eine neue Instanz von {{site.data.keyword.aios_short}} verfügen, wird diese Option angezeigt.
 - __*Zu Beta wechseln*__: ![Beta-Tag](images/beta.png) Die neue Wechseloption **Neue Betaversion erkunden** ermöglicht es Ihnen, in der Betaumgebung zu arbeiten, in der Sie die neuesten Features und neue Funktionen erkunden können. Sie sind nicht überzeugt? Wechseln Sie einfach zurück, indem Sie auf **Zurück zur Originalversion** klicken. Die Konfiguration und die Überwachungen sind davon nicht betroffen. Die folgenden Funktionen sind Teil des aktuellen Betaprogramms:
     - __*Wahrheitsmatrix*__: Eine [Wahrheitsmatrix](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) zeigt die falsch-positiven und die falsch-negativen Ergebnisse an. Klicken Sie auf eine Zelle, um die Untergruppe der Rückmeldedatensätze anzuzeigen.
+
+## 10. April 2019
+{: #rn-10April2019}
+
+- __*Express Path-Tool unterstützt nun Kundenmodelle*__: Mit diesem Tool wird der Onboarding-Prozess für {{site.data.keyword.aios_short}} automatisiert. 
+
+   Weitere Informationen finden Sie in [ibm-ai-openscale-cli](https://pypi.org/project/ibm-ai-openscale-cli/). 
+
 
 ## 5. März 2019
 {: #rn-5March2019}

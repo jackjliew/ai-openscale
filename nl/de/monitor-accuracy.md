@@ -46,7 +46,7 @@ Sie müssen wie unten gezeigt manuell bezeichnete Rückmeldedaten Über die Benu
 ### Verzerrungsbereinigte Genauigkeit
 {: #acc-debias-view}
 
-Wenn die entsprechenden Daten zur Unterstützung vorhanden sind, werden in die Modellgenauigkeit sowohl das ursprüngliche Modell als auch das verzerrungsbereinigte Modell einbezogen. {{site.data.keyword.aios_full_notm}} berechnet die Genauigkeit für die verzerrungsbereinigte Ausgabe und speichert sie als zusätzliche Spalte in der Nutzdatenprotokolltabelle. 
+Wenn die entsprechenden Daten zur Unterstützung vorhanden sind, werden in die Modellgenauigkeit sowohl das ursprüngliche Modell als auch das verzerrungsbereinigte Modell einbezogen. {{site.data.keyword.aios_full_notm}} berechnet die Genauigkeit für die verzerrungsbereinigte Ausgabe und speichert sie als zusätzliche Spalte in der Nutzdatenprotokolltabelle.
 
 ![Modellvisualisierung mit der berechneten Genauigkeit für das ursprüngliche und das verzerrungsbereinigte Modell](images/debiased-accuracy.png)
 

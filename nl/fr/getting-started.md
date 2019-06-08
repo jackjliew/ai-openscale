@@ -1,6 +1,6 @@
 ---
 
-title: Fiabilité et transparence pour vos modèles d'apprentissage automatique avec {{site.data.keyword.aios_short}}
+title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
 intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.

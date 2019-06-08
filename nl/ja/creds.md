@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-29"
 
 keywords: credentials, REST API
 
@@ -24,9 +24,9 @@ subcollection: ai-openscale
 # 資格情報の作成
 {: #cred-create}
 
-{{site.data.keyword.aios_short}} REST API にアクセスするには、プラットフォーム API キーとデータマート (サービス・インスタンス) ID が必要です。プラットフォーム API キーによって、各ユーザーは {{site.data.keyword.cloud_notm}} 内のリソースにアクセスできるようになります。
+{{site.data.keyword.aios_short}} REST API にアクセスするには、プラットフォーム API キーとデータマート (サービス・インスタンス) ID が必要です。 プラットフォーム API キーによって、各ユーザーは {{site.data.keyword.cloud_notm}} 内のリソースにアクセスできるようになります。
 
-エンタープライズ・アカウントの場合、管理者がデータマートを作成し、他のユーザーをそのアカウントに招待し、それらのユーザーに特定の {{site.data.keyword.aios_short}} データマートへのアクセス権を付与できます。その後、ユーザーは自身のプラットフォーム API キーを作成し、同じ {{site.data.keyword.aios_short}} データマートにアクセスできます。そのため、競合やセキュリティー・リスクは生じません。
+エンタープライズ・アカウントの場合、管理者がデータマートを作成し、他のユーザーをそのアカウントに招待し、それらのユーザーに特定の {{site.data.keyword.aios_short}} データマートへのアクセス権を付与できます。 その後、ユーザーは自身のプラットフォーム API キーを作成し、同じ {{site.data.keyword.aios_short}} データマートにアクセスできます。そのため、競合やセキュリティー・リスクは生じません。
 
 プラットフォーム API キーを作成するには、以下の手順を実行します。
 

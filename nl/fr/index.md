@@ -49,6 +49,7 @@ Configurez comment {{site.data.keyword.aios_short}} surveillera chaque déploiem
 
     - l'[équité](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - l'[exactitude](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
+    - les [performances](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics#anlz_metrics_performance)
 
 - **Afficher et modifier les données suveillées** :
 Avec le [tableau de bord](/docs/services/ai-openscale?topic=ai-openscale-io-ov) de {{site.data.keyword.aios_short}},
@@ -64,7 +65,6 @@ et une seule instance de {{site.data.keyword.aios_short}}
 
 - La base de données et l'instance d'{{site.data.keyword.pm_full}} doivent être déployées dans le même compte {{site.data.keyword.cloud_notm}}.
 
-
 - Le forfait Lite (gratuit) comporte les limites mensuelles suivantes :
 
     - Deux modèles déployés surveillés
@@ -73,15 +73,12 @@ et une seule instance de {{site.data.keyword.aios_short}}
     - 50 000 enregistrements de commentaires (cumulés)
 
 - {{site.data.keyword.aios_short}} utilise une base de données PostgreSQL ou Db2 pour stocker
-les données se rapportant aux modèles (données de commentaires, contenu d'évaluation) et les métriques calculées.
-Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
+les données se rapportant aux modèles (données de commentaires, contenu d'évaluation) et les métriques calculées. Les forfaits Db2 Lite ne sont pas pris en charge actuellement.
 
 - Il y a une limite de licence de 20 modèles déployés par instance de {{site.data.keyword.aios_short}}.
 
-- Pour {{site.data.keyword.pm_full}}, le contenu d'images perturbées envoyé via la passerelle d'apprentissage automatique ne peut pas dépasser 1 Mo.
-Afin d'éviter des problèmes de dépassement de délai, les images ne doivent pas dépasser 125 x 125 pixels
+- Pour {{site.data.keyword.pm_full}}, le contenu d'images perturbées envoyé via la passerelle d'apprentissage automatique ne peut pas dépasser 1 Mo. Afin d'éviter des problèmes de dépassement de délai, les images ne doivent pas dépasser 125 x 125 pixels
 et doivent être envoyées séquentiellement pour que l'explication de la seconde image soit demandée lorsque la première est terminée.
-
 
 
 <p>&nbsp;</p>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-29"
 
 keywords: getting help, help, release notes, what's new, developer resources 
 
@@ -19,23 +19,23 @@ subcollection: ai-openscale
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Getting help and support for {{site.data.keyword.aios_full_notm}}
+# {{site.data.keyword.aios_full_notm}} のヘルプとサポートの入手
 {: #wos-get-help}
 
-If you have problems or questions when using {{site.data.keyword.aios_full}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+{{site.data.keyword.aios_full}} を使用しているときに問題や疑問が生じた場合は、情報を検索したり、フォーラムで質問したりして、役立つ情報を得ることができます。 サポート・チケットを開くこともできます。
 {: shortdesc}
 
-When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.aios_short}} development teams.
+フォーラムを使用して質問するときは、{{site.data.keyword.aios_short}} 開発チームの目に留まるように、質問にタグを付けてください。
 
-If you have technical questions about {{site.data.keyword.aios_short}}, post your question on [StackOverflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/questions/tagged/watson-openscale) and tag your question with `watson-openscale`.
+{{site.data.keyword.aios_short}} について技術的な質問がある場合は、[StackOverflow ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://stackoverflow.com/questions/tagged/watson-openscale)に質問を投稿してください。質問には `watson-openscale` のタグを付けてください。
 
-For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/?s=openscale) forum. Include the `openscale` tag. See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html) for more details about using the forums.
+サービスや使用開始の手順についての質問には、[IBM developerWorks dW Answers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/?s=openscale) フォーラムを使用してください。 `openscale` タグを含めてください。 フォーラムの使用について詳しくは、[ヘルプの利用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html) を参照してください。
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/unifiedsupport/supportcenter) and click **Create a case**.
+IBM サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/unifiedsupport/supportcenter) を参照して、**「アカウントの作成」**をクリックしてください。
 
-## Still looking for more?
+## さらに詳しい情報
 {: #looking}
 
-Check out [What's new](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes) to see new features and functions organized by date.
+新しい項目と機能については、[新機能](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)を参照してください。ここでは新しい項目と機能が日付別にまとめられています。
 
-If you have questions, see the [FAQs](/docs/services/ai-openscale?topic=ai-openscale-wos-faqs) for answers.
+ご質問がある場合は、[FAQ](/docs/services/ai-openscale?topic=ai-openscale-wos-faqs) に回答がないかを確認してください。
