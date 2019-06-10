@@ -24,9 +24,8 @@ subcollection: ai-openscale
 # Idiomas suportados para o {{site.data.keyword.aios_short}}
 {: #sl-langs}
 
-O suporte para idiomas é ativado por padrão e a interface com o usuário traduzida específica
-para um dos idiomas suportados pode ser definida com a atualização de sua preferência de idioma no
-navegador da web. A interface com o usuário do {{site.data.keyword.aios_full}} está atualmente traduzida para os idiomas a seguir 
+O suporte para idiomas é ativado por padrão. É possível configurar a interface com o usuário traduzida específica para um dos idiomas suportados, atualizando sua preferência de idioma no navegador
+da web. A interface com o usuário do {{site.data.keyword.aios_full}} está atualmente traduzida para os idiomas a seguir 
 {: shortdesc}
 
 - Português do Brasil (pt-br)

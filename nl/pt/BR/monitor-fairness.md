@@ -52,6 +52,66 @@ Um modelo será considerado como propenso se, nesse conjunto de dados combinado,
 Os valores de justiça podem ser mais de 100%. Isso significa que o grupo Monitorado recebeu resultados mais favoráveis do que o grupo de Referência. Além disso, se nenhuma nova solicitação de escoragem for enviada, o Valor de justiça permanecerá constante.
 {: note}
 
+### Visualização de propensão ![tag beta](images/beta.png)
+{: #mf-monitor-bias-viz}
+
+Quando uma propensão potencial é detectada, o {{site.data.keyword.aios_short}} executa várias funções para confirmar se a propensão é real. O {{site.data.keyword.aios_short}} perturba os dados ao inverter o valor monitorado para o valor de referência e, em seguida, executar esse novo registro por meio do modelo. Então, ele apresenta a saída resultante como uma saída despropensa. O {{site.data.keyword.aios_short}} também treina um modelo despropenso de sombra que ele usa para detectar quando um modelo vai fazer uma previsão propensa. Os resultados dessas determinações estão disponíveis na visualização de propensão, que inclui as visualizações a seguir: 
+
+- **Carga útil + Perturbado**: inclui a solicitação de pontuação recebida para a hora selecionada mais os registros adicionais das horas anteriores se o número mínimo de registros necessários para avaliação não é atendido. Inclui registros adicionais perturbados/sintetizados
+usados para testar a resposta do modelo quando o valor do recurso monitorado muda.
+
+   Anote as cargas úteis e os detalhes perturbados a seguir:
+
+   - Número de registros que são lidos nesta hora na tabela de carga útil
+   - Registros adicionais que são lidos nas horas anteriores (por exemplo, se o valor `min_records` na configuração de justiça for configurado para 1.000 e entre as 14h e 15h, somente 10 registros forem incluídos para atender ao requisito mínimo, o sistema lerá um adicional de 990 registros das horas anteriores).
+   - Registros perturbados por atributo de justiça
+   - Registro de data e hora do registro mais antigo no quadro de dados para o qual a propensão
+deve ser calculada
+   - Registro de data e hora do registro mais novo/mais recente no quadro de dados para o qual a propensão deve ser calculada
+
+  ![exemplo de carga útil mais perturbado](images/payload&perturbed.png)
+
+
+
+- **Carga útil**: as solicitações de pontuação reais recebidas pelo modelo para a hora selecionada.
+
+   Anote os detalhes da carga útil a seguir:
+   
+   - Número de registros que são lidos/no quais a operação de redução de propensão é executada
+na tabela de carga útil
+   - Registro de data e hora do registro mais antigo no quadro de dados para o qual a propensão
+deve ser calculada
+   - Registro de data e hora do registro mais novo/mais recente no quadro de dados para o qual a propensão deve ser calculada
+
+
+  ![exemplo de dados de carga útil](images/payload.png)
+
+- **Treinamento**: os registros de dados de treinamento usados para treinar o modelo.
+
+   Anote os detalhes do treinamento a seguir:
+   
+   - Número de registros de dados de treinamento. Os dados de treinamento são lidos uma vez e a distribuição é armazenada na variável `subscription/fairness_configuration`. Ao calcular a distribuição,
+também deveríamos encontrar o número de registros de dados de treinamento e armazená-lo na mesma
+distribuição. Também quando os dados de treinamento mudam, o que significa que se o comando `POST /data_distribution` for executado novamente, esse valor será atualizado na variável `fairness_configuration/training_data_distribution`. Ao enviar a métrica, devemos também enviar esse valor.
+   - O horário em que os dados de treinamento são processados pela última vez (primeira vez e atualizações subsequentes)
+
+  ![exemplo de dados de treinamento](images/training.png)
+   
+
+   
+- **Sem propensão**: a saída do algoritmo sem propensão após o processamento do tempo de execução e de dados perturbados.
+
+   Anote os detalhes com propensão reduzida a seguir:
+   
+   - Número de registros que são lidos/nos quais a operação com propensão reduzida é executada na tabela de carga útil
+   - Registros adicionais que são lidos para executar propensão e, portanto, com propensão reduzida também. Mesmo número que na seleção `Carga útil + Perturbado`
+   - Registros perturbados por atributo de justiça
+   - Registro de data e hora do registro mais antigo no quadro de dados para o qual a propensão
+deve ser calculada
+   - Registro de data e hora do registro mais novo/mais recente no quadro de dados para o qual a propensão deve ser calculada
+
+  ![exemplo de dados com propensão reduzida](images/debiased.png)
+  
 ### Por exemplo
 {: #mf-ex1}
 

@@ -22,16 +22,53 @@ subcollection: ai-openscale
 # O quê há de novo
 {: #rn-relnotes}
 
-Este documento descreve novos recursos e problemas conhecidos para o {{site.data.keyword.aios_full_notm}}.
+Este documento descreve novos recursos para o {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
+
+## 29 de maio de 2019
+{: #rn-29May2019}
+
+Os novos recursos e mudanças a seguir para o serviço estão disponíveis.
+
+- __*Aprimoramentos de visualização de propensão*__: ![tag beta](images/beta.png) A visualização de propensão inclui as seguintes visualizações: 
+
+    - Carga útil + Perturbado: inclui a solicitação de pontuação recebida para a hora selecionada mais os registros adicionais das horas anteriores se o número mínimo de registros necessários para avaliação não é atendido. Inclui registros adicionais perturbados/sintetizados
+usados para testar a resposta do modelo quando o valor do recurso monitorado muda.
+    - Carga útil: as solicitações de pontuação reais recebidas pelo modelo para a hora selecionada.
+    - Treinamento: os registros de dados de treinamento usados para treinar o modelo.
+    - Sem propensão: a saída do algoritmo sem propensão após o processamento do tempo de execução e de dados perturbados.
+
+   Para obter mais informações, consulte [Visualização de propensão](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-monitor-bias-viz).
+
+- __*Cálculo de precisão para saída sem propensão*__: o Cálculo de precisão inclui saída sem propensão. É possível comparar a precisão do modelo sem propensão com a precisão de um modelo de produção
+
+   Para obter mais informações, consulte [Precisão](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-debias-view).
+
+- __*Suporte para vários mecanismos de aprendizado de máquina*__: o {{site.data.keyword.aios_short}} suporta vários mecanismos de aprendizado de máquina em uma única instância, desde que o fornecimento seja executado por meio da interface da linha de comandos (CLI).
+
+   Para obter mais informações, consulte [Ferramenta CLI do ModelOps](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mop).
+
+- __*Suporte de internacionalização*__: o {{site.data.keyword.aios_short}} suporta versões localizadas e inclui dados de processamento em idiomas suportados. A interface com o usuário do {{site.data.keyword.aios_short}}, a documentação e as mensagens de erro estão atualmente traduzidas para os idiomas a seguir: 
+    - German
+    - French
+    - MQCO_NONE
+    - espanhol
+    - Português do Brasil
+    - japonês
+    - Chines Simplificado
+    - chinês tradicional
+    - PC5250 Chinês Tradicional
+
+   Para obter informações adicionais (incluindo limitações), consulte [Idiomas suportados para o {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-sl-langs).
+
+- __*Aprimoramentos de estrutura do {{site.data.keyword.pm_full}}*__: o {{site.data.keyword.aios_short}} agora suporta os quadros scikit-learn e XGBoost no mecanismo do {{site.data.keyword.pm_full}}.
+
+   Para obter mais informações, consulte [Estruturas WML](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml).
 
 ## 25 de abril de 2019
 {: #rn-25April2019}
 
 Os novos recursos e mudanças a seguir para o serviço estão disponíveis.
-
-### Novos Recursos e Mudanças
-{: #rn-25April2019nf}
 
 Além de melhorias de usabilidade e atualizações de segurança, nossos desenvolvedores têm estado ocupados com novos recursos. Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimorados durante as semanas anteriores incluem:
 
@@ -41,15 +78,21 @@ uma nova instância do {{site.data.keyword.aios_short}}.
 - __*Alternar para beta*__: ![tag beta](images/beta.png) uma nova alternância, **Explorar a nova versão beta**, permite que você
 trabalhe em nosso ambiente beta, no qual é possível verificar todos os recursos mais recentes e as novas funcionalidades. Não gosta do que vê? Somente alterne de volta clicando em **Voltar para a versão original**. A configuração e os monitores não são afetados. Os recursos a seguir fazem parte do
 programa beta atual:
-    - __*Matriz de confusão*__: uma [matriz de confusão exibe](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) os falsos positivos e os falsos negativos. Clique em uma célula para visualizar o subconjunto de registros de feedback.
+    - __*Matriz de confusão*__: uma [matriz de confusão exibe](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) os falsos positivos e os falsos negativos. Clique em uma célula
+para visualizar o subconjunto de registros de feedback.
+
+## 10 de abril de 2019
+{: #rn-10April2019}
+
+- __*A ferramenta Express Path agora suporta modelos de clientes*__: automatiza o processo de integração ao {{site.data.keyword.aios_short}}.
+
+   Para obter mais informações, consulte [ibm-ai-openscale-cli](https://pypi.org/project/ibm-ai-openscale-cli/).
+
 
 ## 5 de Março de 2019
 {: #rn-5March2019}
 
 Os novos recursos e mudanças a seguir para o serviço estão disponíveis.
-
-### Novos Recursos e Mudanças
-{: #rn-5March2019nf}
 
 Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimorados desde a liberação anterior incluem:
 
@@ -62,9 +105,6 @@ Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimora
 
 Os novos recursos e mudanças a seguir para o serviço estão disponíveis.
 
-### Novos Recursos e Mudanças
-{: #rn-22February2019nf}
-
 Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimorados desde a liberação anterior incluem:
 
 - __*Atualizações de IU*__: é possível importar um arquivo JSON para configurar programaticamente todos os monitores e recursos durante a criação da assinatura. Também é possível exportar o arquivo de configuração. Consulte o tópico [Configurar assinatura de implementação usando arquivos JSON](/docs/services/ai-openscale?topic=ai-openscale-cf-ov) para obter mais informações.
@@ -73,9 +113,6 @@ Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimora
 {: #rn-7February2019}
 
 Os novos recursos e mudanças a seguir para o serviço estão disponíveis.
-
-### Novos Recursos e Mudanças
-{: #rn-7February2019nf}
 
 Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimorados desde a liberação anterior incluem:
 
@@ -87,20 +124,10 @@ Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimora
 
 - __*Suporte ao IBM Cloud Database*__: o {{site.data.keyword.aios_short}} suporta agora o Databases for PostgreSQL, além do Compose for PostgreSQL e Db2)
 
-### Problemas Conhecidos
-{: #rn-7February2019ki}
-
-- **Instância de serviço ML customizada**
-
-    - O [módulo Python](/docs/services/ai-openscale?topic=ai-openscale-as-module) não tem atualmente a Explicabilidade funcionando para a instância de serviço Customizado. Isso é porque a instância de serviço Customizado requer uma predição numérica nos dados de resposta, que não está incluída com o script de módulo.
-
 ## 14 de dezembro de 2018
 {: #rn-14December2018}
 
 Os novos recursos, mudanças e problemas conhecidos a seguir com o serviço estão disponíveis.
-
-### Novos Recursos e Mudanças
-{: #rn-12nf}
 
 Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimorados desde a liberação beta incluem:
 
@@ -122,25 +149,17 @@ Os recursos do {{site.data.keyword.aios_short}} que foram incluídos ou aprimora
 
 - __*Opção de configuração de tutorial alternativo*__: para automatizar o fornecimento e a configuração dos serviços necessários do IBM Cloud e para ver um aplicativo IBM {{site.data.keyword.aios_full}}, incluindo dados de amostra, é possível instalar e executar um módulo Python. Consulte [Instalando um módulo Python para configurar o {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)
 
-### Problemas Conhecidos
-{: #rn-12ki}
-
-- **Microsoft Azure**
-
-    - Dos dois tipos de serviços da web do Azure Machine Learning, somente o tipo `Novo` é suportado pelo {{site.data.keyword.aios_short}}. O tipo `Classic` não é suportado.
-
-    - __*O nome de entrada padrão deve ser usado*__: no serviço da web Azure, o nome de entrada padrão é `"input1"`. Atualmente, esse campo é obrigatório para o {{site.data.keyword.aios_short}} e, se ele estiver ausente, o {{site.data.keyword.aios_short}} não funcionará.
-
-      Se o seu serviço da web Azure não usar o nome padrão, mude o nome do campo de entrada para `"input1"`, em seguida, o código funcionará.
-
-- **AWS SageMaker**
-
-    - __*O algoritmo BlazingText não é suportado*__: o formato da carga útil de entrada do algoritmo BlazingText do AWS SageMaker não é suportado na liberação atual do {{site.data.keyword.aios_short}}.
-
 ## 17 de Setembro de 2018
 {: #rn-17September2018}
 
-### Novos Recursos e Mudanças
-{: #rn-17nf}
-
 - **Liberação da visualização beta** - bem-vindo à liberação da visualização beta do {{site.data.keyword.aios_full_notm}}.
+
+<p>&nbsp;</p>
+
+## Próximos passos
+{: #relnotes-in-next}
+
+Você ainda tem dúvidas?
+
+- [Limitações](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
+- [Problemas Conhecidos](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)

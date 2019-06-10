@@ -62,8 +62,7 @@ Para acessar e visualizar métricas customizadas, é possível usar a interface 
 
    Para obter mais informações, veja [a documentação do SDK Python](http://ai-openscale-python-client.mybluemix.net/).
 
-A visualização de suas métricas personalizadas também pode ser encontrada no
-Watson OpenScale Dashboard.
+A visualização de suas métricas customizadas é exibida no {{site.data.keyword.aios_short}} Dashboard.
 
 <!---
 ![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)

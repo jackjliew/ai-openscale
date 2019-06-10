@@ -58,7 +58,7 @@ Você também provisionará o Serviço do {{site.data.keyword.cloud_notm}} **pag
   Um crédito de $200 do {{site.data.keyword.cloud_notm}} pode ser obtido convertendo para uma conta paga com um cartão de crédito. Se você já tiver uma conta paga, receberá um reembolso único de US$16 do custo para o seu primeiro GB de armazenamento, por um mês.
   {: tip}
 
-O banco de dados PostgreSQL e a instância do Watson Machine Learning devem ser implementados na mesma conta do {{site.data.keyword.cloud_notm}}.
+O banco de dados PostgreSQL e a instância do {{site.data.keyword.pm_full}} devem ser implementados na mesma conta do {{site.data.keyword.cloud_notm}}.
 {: important}
 
 Se você já provisionou os serviços necessários, por exemplo, se tiver concluído o outro tutorial, continue com [Configurar um projeto do Watson Studio](#tadv-setup-ws) abaixo.

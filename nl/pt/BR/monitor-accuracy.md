@@ -43,17 +43,12 @@ A Precisão pode significar coisas diferentes dependendo do tipo do algoritmo:
 
 Revise [Estruturas suportadas](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) para obter as limitações de monitoramento de precisão.
 
-<!---
-You need to add manually-labelled data into your feedback table for the accuracy computation to trigger. The feedback table is in the posgres schema with the name <model_id>_feedback.
+### Precisão com redução de propensão
+{: #acc-debias-view}
 
-You can create a performance monitoring system for your predictive models by creating an evaluation instance, and then defining the metrics and triggers for the automatic retraining and deploying of the new model. Spark, Keras and TensorFlow models are supported at this stage, with the following requirements:
+Quando há dados para o suporte, a precisão do modelo inclui tanto o modelo original quanto o com propensão reduzida. O {{site.data.keyword.aios_full_notm}} calcula a precisão para a saída com propensão reduzida e a armazena na tabela de criação de log de carga útil como uma coluna adicional.
 
-- A training definition must be stored in the repository
-- `training_data_reference` - must be defined as a part of the stored model's metadata
-- `training_definition_url` - must be defined as a part of the stored model's metadata
-
-Use the available [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-ml-api.mybluemix.net/){: new_window} end-points directly to provide feedback data and kick off evaluation activities. For more information, see the [WML documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/ml-continuous-learning.html?audience=wdp&context=wdp){: new_window}.
---->
+![uma visualização do modelo aparece com precisão calculada para os modelos original e com propensão reduzida](images/debiased-accuracy.png)
 
 ## Configurando o Monitor de Precisão
 {: #acc-config}

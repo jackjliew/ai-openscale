@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Navegando no painel
 {: #io-ov}
 
-É possível rastrear todas as implementações que você está monitorando por meio do painel do {{site.data.keyword.aios_short}}. O painel é a sua visualização principal no {{site.data.keyword.aios_short}}. O painel consiste em cinco guias:
+É possível rastrear todas as implementações que você está monitorando por meio do painel do {{site.data.keyword.aios_short}}. O painel é a sua visualização principal no {{site.data.keyword.aios_short}}. O painel consiste nas guias a seguir:
 
   ![Insight tabs](images/insight-tabs.png)
 
@@ -62,13 +62,6 @@ Daqui, é possível editar diretamente as definições de configuração para se
 
 Use a guia **Explicar uma transação** (![Guia Explicar uma transação](images/insight-transact-tab.png)) para procurar um ID de transação específico para explicar uma transação de implementação
 específica. Para obter mais informações, consulte [Monitorando a explicabilidade](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
-
-## Ferramentas de IA
-{: #io-too}
-
-Use a guia **Ferramentas de IA** (![Guia Ferramentas de IA](images/aitools.png)) para abrir ferramentas e opções adicionais de IA da IBM.
-
-- *[Plano Lite do Watson Studio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://dataplatform.cloud.ibm.com/registration/stepone?apps=all&context=wdp){: new_window}*: o Watson Studio fornece o ambiente e as ferramentas para analisar e visualizar dados, limpar e modelar dados, ingerir dados de fluxo contínuo ou criar, treinar e implementar modelos de aprendizado de máquina. Clique no link "Inscreva-se para obter o plano Lite grátis do Watson Studio" para obter o Watson Studio.
 
 ## Guia Ajuda
 {: #io-help}

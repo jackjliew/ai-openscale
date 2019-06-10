@@ -74,7 +74,10 @@ Assim, esses dois valores nos informa o comportamento do modelo na proximidade d
 
 Para obter um exemplo de modelo de classificação de imagem de explicabilidade, é possível ver quais partes de uma imagem contribuíram de forma positiva para o resultado previsto e quais contribuíram de forma negativa. No exemplo abaixo, a imagem à direita mostra as partes que afetaram de forma positiva a predição e a imagem à esquerda mostra as partes de imagens que tiveram um impacto negativo no resultado.
 
-Atualmente, as explicações não podem ser geradas para imagens que são maiores que 1 MB de tamanho.
+- Para o {{site.data.keyword.pm_full}}, a carga útil de imagens perturbadas que estão
+sendo enviadas por meio do gateway de aprendizado de máquina não pode exceder 1 MB. Para evitar problemas
+de tempo limite, as imagens não devem exceder 125 x 125 pixels e devem ser enviadas sequencialmente, de
+modo que a explicação para a segunda imagem seja solicitada quando a primeira for concluída.
 {: note}
 
 ![Explainability image classification](images/insight-explain-image.png)

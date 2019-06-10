@@ -38,6 +38,8 @@ Tabela 1. Detalhes do suporte da estrutura
 | função Python | Procedimento de | Estruturados |
 | XGBoost | Classificação | Estruturados |
 | XGBoost | Procedimento de | Estruturados |
+| scikit-learn | Classificação | Estruturados |
+| scikit-learn | Procedimento de | Estruturados |
 | Keras com TensorFlow<sup>1</sup> | Classificação | Não estruturados (imagem, texto) |
 | Keras com TensorFlow<sup>1</sup> | Procedimento de | Não estruturados (imagem, texto) |
 {: caption="Detalhes do suporte da estrutura" caption-side="top"}

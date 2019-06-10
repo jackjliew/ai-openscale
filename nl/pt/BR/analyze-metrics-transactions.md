@@ -72,7 +72,7 @@ As métricas de justiça a seguir são suportadas pelo {{site.data.keyword.aios_
 {: #anlz_metrics_supfairmets_group}
 
 - **Descrição**: a propensão dos modelos de fornecer resultados favoráveis para um grupo em oposição a outro.
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**: terminal de pontuação com propensão reduzida que você pode usar em seu aplicativo de negócios para receber respostas com propensão reduzida do seu modelo implementado.
 - **Tipo de problema**: todos
 - **Tipo de dados**: estruturados
@@ -125,8 +125,8 @@ solicitações de pontuação adicionais na implementação monitorada.
 ![gráfico de métricas de qualidade mostrando o desvio da área sob ROC](images/quality_metrics_001.png)
 
 
-Para algumas métricas, também é possível revisar detalhes relacionados, tal como a matriz de confusão
-para classificação binária e de várias classes.
+Para revisar detalhes relacionados, tais como matriz de confusão para classificação binária
+e de várias classes, que estão disponíveis para algumas métricas, clique no gráfico.
 
 ![tabela de detalhes das métricas de qualidade](images/quality_metrics_002.png)
 
@@ -139,7 +139,7 @@ As métricas de qualidade a seguir são suportadas pelo {{site.data.keyword.aios
 {: #anlz_metrics_supqualdets_roc}
 
 - **Descrição**: área sob rechamada e curva de taxa de falso positivo
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -155,7 +155,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_pr}
 
 - **Descrição**: área sob a curva de precisão e rechamada
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -171,7 +171,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_var}
 
 - **Descrição**: a variação explicada da proporção é a razão de variação explicada e a variação de destino. A variação explicada é a diferença entre a variação de destino e a variação do erro de predição.
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -187,7 +187,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_abserror}
 
 - **Descrição**: média de diferença absoluta entre a previsão do modelo e o valor de destino
-- **Limites padrão**: limite superior = 0,8
+- **Limites padrão**: limite superior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está se deteriorando. Os dados de feedback estão se tornando significativamente diferentes dos dados de treinamento.
    - **Tendência de queda**: uma tendência de queda indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
@@ -202,7 +202,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_squerror}
 
 - **Descrição**: média de diferença quadrática entre a predição do modelo e o valor de destino
-- **Limites padrão**: limite superior = 0,8
+- **Limites padrão**: limite superior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está se deteriorando. Os dados de feedback estão se tornando significativamente diferentes dos dados de treinamento.
    - **Tendência de queda**: uma tendência de queda indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
@@ -217,7 +217,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_r_squared}
 
 - **Descrição**: razão de diferença entre a variação de destino e a variação para o erro de predição para a variação de destino
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -233,7 +233,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_squ_errors_mean}
 
 - **Descrição**: raiz quadrada da média de diferença quadrática entre a previsão do modelo e o valor de destino
-- **Limites padrão**: limite superior = 0,8
+- **Limites padrão**: limite superior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está se deteriorando. Os dados de feedback estão se tornando significativamente diferentes dos dados de treinamento.
    - **Tendência de queda**: uma tendência de queda indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
@@ -248,7 +248,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_acc}
 
 - **Descrição**: a proporção de previsões corretas
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -264,7 +264,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_wtpr}
 
 - **Descrição**: média ponderada da classe TPR com pesos iguais à probabilidade de classe
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -280,7 +280,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_tpr}
 
 - **Descrição**: proporção de previsões corretas em predições de classe positiva
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -296,7 +296,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_wfpr_weighted}
 
 - **Descrição**: média ponderada da classe FPR com pesos iguais à probabilidade de classe
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -312,7 +312,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_fpr_false}
 
 - **Descrição**: proporção de predições incorretas na classe positiva
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -328,7 +328,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_weighted_recall}
 
 - **Descrição**: média ponderada de rechamada com pesos iguais à probabilidade de classe
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -344,7 +344,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_recall}
 
 - **Descrição**: proporção de predições corretas na classe positiva
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -360,7 +360,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_wgth_prec}
 
 - **Descrição**: média ponderada de precisão com pesos iguais à probabilidade de classe
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -376,7 +376,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_precision}
 
 - **Descrição**: proporção de previsões corretas em predições de classe positiva
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -392,7 +392,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_wght_f1-measure}
 
 - **Descrição**: média ponderada de F1-measure com pesos iguais à probabilidade de classe
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -408,7 +408,7 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_f1-measr}
 
 - **Descrição**: média harmônica de precisão e rechamada
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
    - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
    - **Tendência de queda**: uma tendência de queda indica que a métrica
@@ -424,10 +424,11 @@ amostra para o monitor de Qualidade.
 {: #anlz_metrics_supqualdets_log_loss}
 
 - **Descrição**: média dos logaritmos das probabilidades de classe de destino (confiança). Ela também é conhecida como Log da verossimilhança esperada.
-- **Limites padrão**: limite inferior = 0,8
+- **Limites padrão**: limite inferior = 80%
 - **Recomendação padrão**:
-   - **Tendência ascendente**: uma tendência ascendente indica que a Métrica m está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
-   - **Tendência de queda**: uma tendência de queda indica que a Métrica m está se deteriorando. Os dados de feedback estão se tornando significativamente diferentes dos dados de treinamento.
+   - **Tendência ascendente**: uma tendência ascendente indica que a métrica está melhorando. Isso significa que o novo treinamento dos modelos é efetivo.
+   - **Tendência de queda**: uma tendência de queda indica que a métrica
+está se deteriorando. Os dados de feedback estão se tornando significativamente diferentes dos dados de treinamento.
    - **Variação errática ou irregular**: uma variação errática ou irregular
 indica que os dados de feedback não são consistentes entre as avaliações. Aumente o tamanho mínimo da
 amostra para o monitor de Qualidade.
