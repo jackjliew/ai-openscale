@@ -167,7 +167,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     **附註**：對於 Python 以外的語言，您也可以使用 REST API 來直接執行有效負載記載。
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -319,7 +319,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     **附註**：對於 Python 以外的語言，您也可以使用 REST API 來直接執行有效負載記載。
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -470,7 +470,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     **附註**：對於 Python 以外的語言，您也可以使用 REST API 來直接執行有效負載記載。
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"

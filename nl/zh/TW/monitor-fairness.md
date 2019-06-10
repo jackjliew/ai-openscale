@@ -55,7 +55,7 @@ subcollection: ai-openscale
 ### 偏誤視覺化 ![測試版標記](images/beta.png)
 {: #mf-monitor-bias-viz}
 
-偏誤視覺化包含下列視圖： 
+當偵測到潛在的偏誤時，{{site.data.keyword.aios_short}} 會執行一些功能，來確認該偏誤是否是真的。{{site.data.keyword.aios_short}} 會擾動資料，其作法是將受監視值翻轉成參照值，然後透過模型執行這筆記錄。接著，它會將產生的輸出顯現成已除去偏誤的輸出。{{site.data.keyword.aios_short}} 也會訓練一個已除去偏誤的投影模型，然後用它來偵測模型何時做出有偏誤的預測。這些判定的結果會提供於偏誤視覺化中，其中包含下列視圖： 
 
 - **有效負載 + 擾動**：如果未符合評估所需的最低記錄數目，則包含所選那個小時內所收到的評分要求，外加過去幾個小時內的其他記錄。如果受監視特性的值有變更，會包含用來測試模型回應的其他擾動/合成記錄。
 
@@ -86,7 +86,7 @@ subcollection: ai-openscale
 
    請留意下列的訓練明細：
    
-   - 訓練資料記錄數目。會讀取一次訓練資料，並將分佈儲存在 subscription/fairness_configuration 之下。在計算分佈期間，我們也應會找到訓練資料記錄數目，並將它儲存在相同的分佈中。此外，當訓練資料變更時（表示是否再次執行 POST /data_distribution），我們需要更新 fairness_configuration/training_data_distribution 之下的這個值。在傳送度量期間，我們應該也會傳送此值。
+   - 訓練資料記錄數目。訓練資料會讀取一次，並將分佈儲存在 `subscription/fairness_configuration` 變數中。在計算分佈期間，我們也應會找到訓練資料記錄數目，並將它儲存在相同的分佈中。此外，當訓練資料變更時（表示是否再次執行 `POST /data_distribution` 指令），會在 `fairness_configuration/training_data_distribution` 變數中更新此值。在傳送度量期間，我們應該也會傳送此值。
    - 前次處理（第一次和後續的更新）訓練資料的時間
 
   ![訓練資料範例](images/training.png)

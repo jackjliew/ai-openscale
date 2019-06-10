@@ -43,6 +43,7 @@ subcollection: ai-openscale
 
     - [公平性](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - [准确性](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
+    - [性能](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics#anlz_metrics_performance)
 
 - **查看和编辑受监视数据**：通过 {{site.data.keyword.aios_short}} [仪表板](/docs/services/ai-openscale?topic=ai-openscale-io-ov)，可以轻松查看关键洞察并确定部署的问题。每个受监视特征的个别数据点的可视化提供了其他详细信息。
 
@@ -67,8 +68,7 @@ subcollection: ai-openscale
 
 - 许可证限制每个 {{site.data.keyword.aios_short}} 实例的已部署的模型数不能超过 20。
 
-- 对于 {{site.data.keyword.pm_full}}，通过 Machine Learning Gateway 发送的扰动图像的有效内容不能超过 1MB。要避免超时问题，图像不得超过 125 x 125 像素，并且必须顺序发送，以便在完成第一个图像后请求对第二个图像的解释。
-
+- 对于 {{site.data.keyword.pm_full}}，通过 Machine Learning Gateway 发送的扰动图像的有效内容不能超过 1 MB。要避免超时问题，图像不得超过 125 x 125 像素，并且必须顺序发送，以便在完成第一个图像后请求对第二个图像的解释。
 
 
 <p>&nbsp;</p>

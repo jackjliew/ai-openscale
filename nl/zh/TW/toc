@@ -6,6 +6,7 @@ Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
+    [瞭解 Watson OpenScale](https://www.ibm.com/cloud/watson-openscale/)
     faststart.md
     alt-setup.md
     tutorial-adv.md
@@ -30,6 +31,7 @@ Watson OpenScale
         connect-db.md
         connect-ml.md
         config-file.md
+        feedback.md
 
     {: .topicgroup}
     配置監視器

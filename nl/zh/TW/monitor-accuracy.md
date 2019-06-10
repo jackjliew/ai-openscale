@@ -43,7 +43,7 @@ subcollection: ai-openscale
 
 檢閱[支援的架構](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)，以了解精確度監視限制。
 
-### 除去偏誤後的精確度
+### 已除去偏誤的精確度
 {: #acc-debias-view}
 
 當有資料支援它時，模型的精確度會同時包含原始模型和已除去偏誤模型。{{site.data.keyword.aios_full_notm}} 會計算已除去偏誤之輸出的精確度，並在有效負載記載表格中儲存成一個額外的直欄。

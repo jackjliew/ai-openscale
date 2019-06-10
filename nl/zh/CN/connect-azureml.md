@@ -43,7 +43,7 @@ subcollection: ai-openscale
     请参阅 [How to: Use the portal to create an Azure AD application and service principal that can access resources ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: new_window} 以了解有关如何获取 Microsoft Azure 凭证的指示信息。
     {: note}
 
-    ![输入 Azure ML Studio 凭据](images/connect-azure-cred.png)
+    ![输入 Azure ML Studio 凭证](images/connect-azure-cred.png)
 
 1.  单击**下一步**。
 

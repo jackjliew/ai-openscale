@@ -25,6 +25,45 @@ subcollection: ai-openscale
 本文件概述 {{site.data.keyword.aios_full_notm}} 的新特性。
 {: shortdesc}
 
+## 2019 年 5 月 29 日
+{: #rn-29May2019}
+
+該服務的新特性和變更如下。
+
+- __*偏誤視覺化加強功能*__：![測試版標記](images/beta.png) 偏誤視覺化包含下列視圖： 
+
+    - 有效負載 + 擾動：如果未符合評估所需的最低記錄數目，則包含所選那個小時內所收到的評分要求，外加過去幾個小時內的其他記錄。如果受監視特性的值有變更，會包含用來測試模型回應的其他擾動/合成記錄。
+    - 有效負載：模型在所選那個小時內所收到的實際評分要求。
+    - 訓練：用來訓練模型的訓練資料記錄。
+    - 除去偏誤：處理執行時期和擾動資料之後的除去偏誤演算法的輸出。
+
+   如需相關資訊，請參閱[偏誤視覺化](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-monitor-bias-viz)。
+
+- __*計算已除去偏誤輸出的精確度*__： 精確度計算會包含已除去偏誤的輸出。您可以將已除去偏誤模型的精確度，與正式作業模型的精確度相互比較。
+
+   如需相關資訊，請參閱[精確度](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-debias-view)。
+
+- __*支援多個機器學習引擎*__：{{site.data.keyword.aios_short}} 可在單一實例內支援多個機器學習引擎，但前提是您要透過指令行介面 (CLI) 來執行佈建。
+
+   如需相關資訊，請參閱 [ModelOps CLI 工具](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mop)。
+
+- __*國際化支援*__：{{site.data.keyword.aios_short}} 支援本地化版本，並且包含採用支援語言的處理程序資料。{{site.data.keyword.aios_short}} 使用者介面、說明文件和錯誤訊息目前會轉換成下列語言： 
+    - 德文
+    - 法文
+    - 義大利文
+    - 西班牙文
+    - 巴西葡萄牙文
+    - 日文
+    - 簡體中文
+    - 繁體中文
+    - 韓文
+
+   如需相關資訊（包括限制），請參閱 [{{site.data.keyword.aios_short}} 支援語言](/docs/services/ai-openscale?topic=ai-openscale-sl-langs)。
+
+- __*{{site.data.keyword.pm_full}} 架構加強功能*__：{{site.data.keyword.aios_short}} 現在在 {{site.data.keyword.pm_full}} 引擎上支援 scikit-learn 和 XGBoost 架構。
+
+   如需相關資訊，請參閱 [WML 架構](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml)。
+
 ## 2019 年 4 月 25 日
 {: #rn-25April2019}
 
@@ -35,6 +74,14 @@ subcollection: ai-openscale
 - __*自動化設定導覽*__：設定 {{site.data.keyword.aios_short}} 環境的新導覽方式。使用[自動化設定](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)來佈建服務及下載和配置模型。當您有 {{site.data.keyword.aios_short}} 的新實例時，就會看到此選項。
 - __*切換至測試版*__：![測試版標記](images/beta.png)新的切換按鈕**探索新的測試版**可讓您在測試版環境中工作，您可以在其中檢查所有最新特性和新功能。不喜歡您看到的內容？只要按一下**回到原始版本**就可以切回。您的配置和監視器不受影響。下列功能是現行測試版程式的一部分：
     - __*混淆矩陣*__：[混淆矩陣顯示](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx)誤肯定和誤否定。按一下資料格以檢視意見記錄的子集。
+
+## 2019 年 4 月 10 日
+{: #rn-10April2019}
+
+- __*Express Path 工具現在支援客戶模型*__：自動執行 {{site.data.keyword.aios_short}} 上線程序。
+
+   如需相關資訊，請參閱 [ibm-ai-openscale-cli](https://pypi.org/project/ibm-ai-openscale-cli/)。
+
 
 ## 2019 年 3 月 5 日
 {: #rn-5March2019}

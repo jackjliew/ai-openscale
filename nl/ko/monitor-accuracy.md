@@ -46,7 +46,7 @@ subcollection: ai-openscale
 ### 편향성 제거된 정확성
 {: #acc-debias-view}
 
-지원하는 데이터가 있는 경우 모델의 정확성에는 원래 모델과 편향성 제거된 모델이 모두 포함됩니다. {{site.data.keyword.aios_full_notm}}에서는 편향성 제거된 출력의 정확성을 계산하여 페이로드 로깅 테이블에 추가 열로 저장합니다. 
+지원하는 데이터가 있는 경우 모델의 정확성에는 원래 모델과 편향성 제거된 모델이 모두 포함됩니다. {{site.data.keyword.aios_full_notm}}에서는 편향성 제거된 출력의 정확성을 계산하여 페이로드 로깅 테이블에 추가 열로 저장합니다.
 
 ![모델 시각화가 원래 모델 및 편향성 제거된 모델 둘 다에 대해 계산된 정확성과 함께 표시됨](images/debiased-accuracy.png)
 

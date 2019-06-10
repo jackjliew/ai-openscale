@@ -115,10 +115,9 @@ subcollection: ai-openscale
 ## 傳送評分要求
 {: #cdb-score}
 
-如果要配置監視器，{{site.data.keyword.aios_short}} 會要求您傳送評分要求，以便開始記載將要監視的資料。
+如果要配置監視器，{{site.data.keyword.aios_short}} 會要求您傳送評分有效負載，以便開始記載將要監視的資料。
 
-部署在 Watson Machine Learning 中的模型會自動由 {{site.data.keyword.aios_short}} 評分。
-{: note:}
+如果部署在 {{site.data.keyword.pm_full}} 中的模型才剛針對您的部署評分，{{site.data.keyword.pm_short}} 會自動傳送評分有效負載至 {{site.data.keyword.aios_short}}。對於其他的機器學習引擎（例如 Microsoft Azure、Amazon SageMaker 或自訂機器學習引擎），則必須使用「有效負載記載 API」來傳送評分有效負載。
 
 選取一項部署，在本例中是 "Fraud Detector"，然後使用所提供的 `cURL` 或 `Python` 程式碼 Snippet，來記載模型部署要求和回應資料。如需詳細資料，請參閱[非 Watson Machine Learning 服務實例的有效負載記載](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
 

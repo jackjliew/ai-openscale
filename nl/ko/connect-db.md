@@ -116,10 +116,9 @@ subcollection: ai-openscale
 ## 스코어링 요청 전송
 {: #cdb-score}
 
-{{site.data.keyword.aios_short}}은 모니터를 구성하기 위해 사용자에게 모니터될 데이터 로그를 시작하는 데 필요한 스코어링 요청을 전송하도록 요청합니다.
+모니터를 구성하기 위해 {{site.data.keyword.aios_short}}은 모니터할 데이터의 로깅을 시작할 수 있도록 스코어링 페이로드의 전송을 요구합니다. 
 
-Watson Machine Learning에 배치되는 모델은 {{site.data.keyword.aios_short}}에 의해 자동으로 스코어링됩니다.
-{: note:}
+{{site.data.keyword.pm_full}}에 배치된 모델이 단지 배치를 스코어링하므로 {{site.data.keyword.pm_short}}에서는 자동으로 스코어링 페이로드를 {{site.data.keyword.aios_short}}에 전송합니다. Microsoft Azure, Amazon SageMaker 등의 기타 기계 학습 엔진 또는 사용자 정의 기계 학습 엔진의 경우에는 페이로드 로깅 API를 사용하여 스코어링 페이로드를 전송해야 합니다. 
 
 배치(이 경우, "Fraud Detector")를 선택한 다음 제공된 `cURL` 또는 `Python` 코드 스니펫을 사용하여 모델 배치 요청 및 응답 데이터를 로그하십시오. 자세한 내용은 [비Watson Machine Learning 서비스 인스턴스에 대한 페이로드 로깅](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)을 참조하십시오.
 

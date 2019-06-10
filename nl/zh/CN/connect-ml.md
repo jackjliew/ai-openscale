@@ -167,7 +167,7 @@ subcollection: ai-openscale
     **注意**：对于除 Python 以外的其他语言，您还可以使用 REST API 直接执行载荷日志记录。
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -319,7 +319,7 @@ subcollection: ai-openscale
     **注意**：对于除 Python 以外的其他语言，您还可以使用 REST API 直接执行载荷日志记录。
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -470,7 +470,7 @@ subcollection: ai-openscale
     **注意**：对于除 Python 以外的其他语言，您还可以使用 REST API 直接执行载荷日志记录。
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"

@@ -55,9 +55,9 @@ subcollection: ai-openscale
 ### 偏差可视化 ![beta 标签](images/beta.png)
 {: #mf-monitor-bias-viz}
 
-偏差可视化包括以下视图： 
+当检测到潜在偏差时，{{site.data.keyword.aios_short}} 将执行多个函数以确认偏差是否真实。{{site.data.keyword.aios_short}} 通过根据参考值翻动受监视值，然后通过模型运行此新记录来扰动数据。随后，它会将生成的输出显示为已除偏输出。{{site.data.keyword.aios_short}} 还会训练影子已除偏模型，然后，它将使用该模型来检测模型何时将作出有偏差预测。这些决定的结果可在偏差可视化中获取，其中包含以下视图： 
 
-- **有效内容 + 扰动量**：包含所选小时内接收到的评分请求以及前几个小时的其他记录（如果未满足评估所需的最小记录数）。包含其他扰动/合成的记录，用于在受监视功能部件的值发生更改时测试模型的响应。
+- **有效内容 + 扰动量**：包括在所选小时内接收到的评分请求以及前几个小时的其他记录（如果未满足评估所需的最小记录数）。包含其他扰动/合成的记录，用于在受监视功能部件的值发生更改时测试模型的响应。
 
    记录以下有效内容和扰动量详细信息：
 
@@ -86,7 +86,7 @@ subcollection: ai-openscale
 
    记录以下训练详细信息：
    
-   - 训练数据记录数。读取一次训练数据，并在 subscription/fairness_configuration 下存储分布。计算分布时，还应查找训练数据记录数并将其存储在同一分布中。此外，当训练数据更改时，意味着如果再次进行 POST /data_distribution，那么需要在 fairness_configuration/training_data_distribution 下更新该值。发送度量时，也应发送该值。
+   - 训练数据记录数。系统会读取一次训练数据，并将分布存储在 `subscription/fairness_configuration` 变量中。计算分布时，还应查找训练数据记录数并将其存储在同一分布中。此外，当训练数据更改时，意味着如果再次运行 `POST /data_distribution` 命令，那么将在 `fairness_configuration/training_data_distribution` 变量中更新该值。发送度量时，也应发送该值。
    - 上次处理训练数据的时间（首次和后续更新）
 
   ![训练数据的示例](images/training.png)

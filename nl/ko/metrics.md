@@ -36,7 +36,7 @@ subcollection: ai-openscale
 2. 사용자 정의 모니터를 사용으로 설정하십시오.
 3. 메트릭 값을 저장하십시오.
 
-다음 고급 튜토리얼에서는 수행 방법을 보여줍니다.
+다음의 고급 튜토리얼에서는 이를 수행하는 방법을 보여줍니다.
 
 - [Watson Machine Learning에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [사용자 정의 기계 학습 엔진에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
@@ -48,7 +48,7 @@ subcollection: ai-openscale
 ## 사용자 정의 메트릭 액세스 및 시각화
 {: #cst_mtrcs_viz}
 
-사용자 정의 메트릭에 액세스하고 시각화하기 위해 프로그램 인터페이스를 사용할 수 있습니다. 다음 고급 튜토리얼에서는 수행 방법을 보여줍니다.
+사용자 정의 메트릭에 액세스하고 시각화하기 위해 프로그램 인터페이스를 사용할 수 있습니다. 다음의 고급 튜토리얼에서는 이를 수행하는 방법을 보여줍니다.
 
 - [Watson Machine Learning에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [사용자 정의 기계 학습 엔진에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)

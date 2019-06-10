@@ -36,7 +36,7 @@ subcollection: ai-openscale
 2. 启用定制监视器。
 3. 存储度量值。
 
-以下高级教程表明了如何执行此操作：
+以下高级教程说明如何执行此操作：
 
 - [使用 Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [使用定制 Machine Learning 引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
@@ -48,7 +48,7 @@ subcollection: ai-openscale
 ## 访问和可视化定制度量
 {: #cst_mtrcs_viz}
 
-要访问和可视化定制度量，您可以使用程序化接口。 以下高级教程表明了如何执行此操作：
+要访问和可视化定制度量，您可以使用程序化接口。 以下高级教程说明如何执行此操作：
 
 - [使用 Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [使用定制 Machine Learning 引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)

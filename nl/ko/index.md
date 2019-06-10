@@ -43,6 +43,7 @@ subcollection: ai-openscale
 
     - [공정성](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - [정확성](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
+    - [성능](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics#anlz_metrics_performance)
 
 - **모니터되는 데이터 보기 및 편집**: {{site.data.keyword.aios_short}} [대시보드](/docs/services/ai-openscale?topic=ai-openscale-io-ov)를 사용하면 쉽게 핵심 인사이트를 보고 배치의 문제를 식별할 수 있습니다. 모니터되는 각 특성에 대한 개별 데이터 점의 시각화는 추가 세부사항을 제공합니다.
 
@@ -66,7 +67,7 @@ subcollection: ai-openscale
 
 - {{site.data.keyword.aios_short}}의 인스턴스당 20개의 배치된 모델이라는 라이센스 한계가 있습니다.
 
-- {{site.data.keyword.pm_full}}의 경우 기계 학습 게이트웨이를 통해 전송된 섭동된 이미지의 페이로드는 1MB를 초과할 수 없습니다. 제한시간 문제를 방지하려면, 이미지가 125 x 125픽셀을 초과하지 않아야 하며 첫 번째 이미지가 완료되면 두 번째 이미지에 대한 설명이 요청되도록 순차적으로 전송해야 합니다. 
+- {{site.data.keyword.pm_full}}의 경우 기계 학습 게이트웨이를 통해 전송된 섭동된 이미지의 페이로드는 1MB를 초과할 수 없습니다. 제한시간 문제를 방지하려면, 이미지가 125 x 125픽셀을 초과하지 않아야 하며 첫 번째 이미지가 완료되면 두 번째 이미지에 대한 설명이 요청되도록 순차적으로 전송해야 합니다.
 
 
 <p>&nbsp;</p>

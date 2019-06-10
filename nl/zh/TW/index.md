@@ -43,6 +43,7 @@ subcollection: ai-openscale
 
     - [公平性](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - [精確度](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
+    - [效能](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics#anlz_metrics_performance)
 
 - **檢視及編輯受監視資料**：{{site.data.keyword.aios_short}} [儀表板](/docs/services/ai-openscale?topic=ai-openscale-io-ov)可讓您輕鬆檢視關鍵的洞察，以及識別您部署的問題。視覺化每一項受監視特性的個別資料點，會提供額外的詳細資料。
 
@@ -66,8 +67,7 @@ subcollection: ai-openscale
 
 - 根據授權限制，每一個 {{site.data.keyword.aios_short}} 實例只能有 20 個所部署模型。
 
-- 對於 {{site.data.keyword.pm_full}}，經由機器學習閘道所傳送之擾動影像的有效負載不能超過 1 MB。若要避免發生逾時問題，影像不得超過 125 x 125 像素，且必須循序傳送，如此才會在第一個影像完成時，要求取得第二個影像的解釋。
-
+- 對於 {{site.data.keyword.pm_full}}，經由機器學習閘道所傳送之擾動影像的有效負載不得超過 1 MB。若要避免發生逾時問題，影像不得超過 125 x 125 像素，且必須循序傳送，如此才會在第一個影像完成時，要求取得第二個影像的解釋。
 
 
 <p>&nbsp;</p>

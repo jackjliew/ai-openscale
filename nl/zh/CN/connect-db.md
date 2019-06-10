@@ -116,10 +116,9 @@ subcollection: ai-openscale
 ## 发送评分请求
 {: #cdb-score}
 
-要配置监视器，{{site.data.keyword.aios_short}} 要求您发送评分请求，以便开始记录将受监视的数据。
+要配置监视器，{{site.data.keyword.aios_short}} 要求您发送评分有效内容，以便开始记录将受监视的数据。
 
-Watson Machine Learning 中部署的模型由 {{site.data.keyword.aios_short}} 自动评分。
-{: note:}
+对于 {{site.data.keyword.pm_full}} 中部署的模型，只要对部署进行评分，{{site.data.keyword.pm_short}} 就会自动将评分有效内容发送到 {{site.data.keyword.aios_short}}。对于其他机器学习引擎（例如 Microsoft Azure、Amazon SageMaker 或定制机器学习引擎），必须使用有效内容日志记录 API 来发送评分有效内容。
 
 选择部署（在本例中为“欺诈检测器”），然后使用提供的 `cURL` 或 `Python` 代码片段来记录模型部署请求和响应数据。请参阅[非 Watson Machine Learning 服务实例的载荷日志记录](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)以获取更多详细信息。
 
