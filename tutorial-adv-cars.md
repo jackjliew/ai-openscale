@@ -3,10 +3,10 @@
 title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
-intro: In this extended tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
+intro: In this extended tutorial, you will provision {{site.data.keyword.Bluemix}} machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
 takeaways:
 - See how {{site.data.keyword.aios_short}} provides trust and transparency for AI models
-- Understand how IBM Cloud services and Watson Studio technologies can provide a seamless, AI-driven customer experience
+- Understand how {{site.data.keyword.Bluemix}} services and Watson Studio technologies can provide a seamless, AI-driven customer experience
 
 copyright:
   years: 2018, 2019
@@ -21,11 +21,13 @@ lastupdated: "2019-02-05"
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Tutorial (Advanced)
 {: #tadv-tutorial-advanced}
@@ -61,7 +63,7 @@ You will also provision the following **paid** {{site.data.keyword.cloud_notm}} 
 The PostgreSQL database and {{site.data.keyword.pm_full}} instance must be deployed in the same {{site.data.keyword.cloud_notm}} account.
 {: important}
 
-If you have already provisioned the necessary services for example if you have completed the other tutorial, proceed to [Set up a Watson Studio project](#tadv-setup-ws) below.
+If you have already provisioned the necessary services for example if you have completed the other tutorial, proceed to [Set up a Watson Studio project](#tadv-setup-ws).
 
 ## Introduction
 {: #tadv-intro}
@@ -90,13 +92,13 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 ### Provision a Machine Learning service
 {: #tadv-pml}
 
-- [Provision a Watson Machine Learning instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window} if you do not already have one associated with your account:
+- [Provision an {{site.data.keyword.pm_full}} instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window} if you do not already have one associated with your account:
 
   ![Machine Learning](images/machine_learning.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-- Make note of the Machine Learning service credentials. In your machine learning instance, click on the **Service credentials** link on the left-hand side of the page. Name the credential and click **Add**. Then, from the list of credentials, click **View credential** and copy the credentials for later use.
+- Make note of the Machine Learning service credentials. In your machine learning instance, click **Service credentials**. Name the credential and click **Add**. Then, from the list of credentials, click **View credential** and copy the credentials for later use.
 
 ### Provision a Spark service
 {: #tadv-ps}
@@ -107,7 +109,7 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 
 - Assign your service a name, choose the Lite (free) plan, and click the **Create** button.
 
-- Make note of the service credentials for your Spark instance. Open your Spark instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
+- Make note of the service credentials for your Spark instance. Open your Spark instance and click **Service credentials**. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
 ### Provision an Object Storage service
 {: #tadv-pos}
@@ -130,7 +132,7 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
   A $200 {{site.data.keyword.cloud_notm}} credit can be obtained by converting to a paid account with a credit card. If you already have a paid account, you will receive a one-time $16 refund of the cost for your first GB of storage, for one month.
   {: tip}
 
-- Make note of the service credentials for your PostgreSQL instance. Open your existing (or newly-created) PostgreSQL instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
+- Make note of the service credentials for your PostgreSQL instance. Open your existing (or newly-created) PostgreSQL instance and click **Service credentials**. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
 <!---
 
@@ -143,14 +145,14 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 
 - Give your service a name, choose the Entry plan, and click the **Create** button.
 
-- Make note of the service credentials for your Db2 Warehouse instance. Open your existing (or newly-created) Db2 Warehouse instance and click on **Service credentials** in the left-hand menu. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
+- Make note of the service credentials for your Db2 Warehouse instance. Open your existing (or newly-created) Db2 Warehouse instance and click **Service credentials**. Click the **New credential** button, name your credentials, and click **Add**. Then, click the **View credentials** link next to the set you just created, and copy these credentials for later use.
 
 ### Upload training and feedback data to Db2 Warehouse
 {: #tadv-uptf}
 
 - Download the [car_rental_training_data.csv](https://github.com/watson-developer-cloud/doc-tutorial-downloads/blob/master/ai-openscale/car_rental_training_data.csv){: new_window} file.
 
-- Open your existing (or newly-created) Db2 Warehouse from the [IBM Cloud console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click **Manage** from the left side panel, and then click the green **Open** button.
+- Open your existing (or newly-created) Db2 Warehouse from the [{{site.data.keyword.Bluemix}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click **Manage** > **Open**.
 
 - If necessary, use your Db2 credentials `username` and `password` to log in to Db2 Warehouse.
 
@@ -158,7 +160,7 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 
   ![Load Menu](images/db2_load.png)
 
-- Browse to the training data file, or drag and drop it into the appropriate area on the form. Click **Next**. Select a Schema from the list of load targets; this is usually in a format like `DASH12345`. Then click **New Table** on the right:
+- Browse to the training data file, or drag and drop it into the appropriate area on the form. Click **Next**. Select a Schema from the list of load targets; this is usually in a format like `DASH12345`. Then click **New Table**:
 
   ![New Table](images/new_table.png)
 
@@ -185,7 +187,7 @@ Login to your [{{site.data.keyword.cloud_notm}} account ![External link icon](..
 ## Set up a Watson Studio project
 {: #tadv-setup-ws}
 
-- Login to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the account avatar icon in the upper right and verify that the account you are using is the same account you used to create your {{site.data.keyword.cloud_notm}} services:
+- Login to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the account avatar icon and verify that the account you are using is the same account you used to create your {{site.data.keyword.cloud_notm}} services:
 
   ![Same Account](images/same_account.png)
 
@@ -247,7 +249,7 @@ The `CARS4U Action Recommendation - model` notebook contains detailed instructio
 
 - In section 2.2, "Upload data to PostgreSQL database", replace the Postgres service credentials with the ones you created in the previous section.
 
-- In section 4, "Store the model in the repository", under **TIP**, replace the Watson Machine Learning credentials with the ones you created in the previous section.
+- In section 4, "Store the model in the repository", under **TIP**, replace the {{site.data.keyword.pm_full}} credentials with the ones you created in the previous section.
 
 - Once you have entered your credentials, your notebook is ready to run. Click the **Kernel** menu item, and select **Restart and Run All** from the menu:
 
@@ -278,7 +280,7 @@ Since the machine learning model has been deployed, you can configure {{site.dat
 
   ![Set WML instance](images/gs-wml-default.png)
 
-- Select your Watson Machine Learning instance from the drop-down, and click **Next**.
+- Select your {{site.data.keyword.pm_full}} instance from the drop-down, and click **Next**.
 
   ![Set WML instance](images/gs-set-wml.png)
 
@@ -345,7 +347,7 @@ The `{{site.data.keyword.aios_short}} and Watson ML engine` notebook contains de
 
     - Under **ACTION: Get instance_id (GUID) and apikey**, follow the instructions to get your credentials. Replace the `aios_credentials` with your own.
 
-    - Next, in **ACTION: Add your Watson Machine Learning credentials here**, replace the Watson Machine Learning credentials with the ones you created previously.
+    - Next, in **ACTION: Add your Watson Machine Learning credentials here**, replace the {{site.data.keyword.pm_full}} credentials with the ones you created previously.
 
     - Finally, under **ACTION: Add your PostgreSQL credentials here**, replace the Postgres credentials with the ones you created previously.
 
@@ -365,7 +367,7 @@ Using the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../.
 
   ![Insights](images/insight-dash-tab.png)
 
-The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the threshold set when running the notebook (70%). The data and settings used in this tutorial will have created Accuracy and Fairness metrics similar to the ones shown here.
+The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for fairness or accuracy metrics that exceed the threshold set when running the notebook (70%). The data and settings used in this tutorial will have created Accuracy and Fairness metrics similar to the ones shown here.
 
   ![Insight overview](images/insight-overview-adv-tutorial.png)
 

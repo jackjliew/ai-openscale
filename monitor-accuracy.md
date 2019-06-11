@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: accuracy, 
 
@@ -17,7 +17,13 @@ subcollection: ai-openscale
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Accuracy
 {: #acc-monitor}
@@ -39,7 +45,7 @@ Accuracy can mean different things depending on the type of the algorithm:
 ### How it works
 {: #acc-works}
 
-You need to add manually-labelled feedback data through the {{site.data.keyword.aios_short}} UI as shown below, using a [Python client ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: new_window} or [Rest API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window}.
+You need to add manually-labelled feedback data through the {{site.data.keyword.aios_short}} UI as shown in the following examples, using a [Python client ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: new_window} or [Rest API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window}.
 
 Review [Supported frameworks](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) for accuracy monitoring limitations.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -17,7 +17,13 @@ subcollection: ai-openscale
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Analyzing metrics and transactions ![beta tag](images/beta.png)
 {: #anlz_metrics}

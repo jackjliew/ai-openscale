@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: security, information security, GDPR, 
 
@@ -13,13 +13,17 @@ subcollection: ai-openscale
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Information security
 {: #is-ov}
@@ -34,7 +38,7 @@ The products, services, and other capabilities described herein are not suitable
 
 If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.keyword.watson}} resources that are created
 
--   In the European Union (EU), see [Requesting support for IBM Cloud Watson resources created in the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
+-   In the European Union (EU), see [Requesting support for {{site.data.keyword.Bluemix}} Watson resources created in the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
 -   Outside of the EU, see [Requesting support for resources outside the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
 
 ## European Union General Data Protection Regulation (GDPR)

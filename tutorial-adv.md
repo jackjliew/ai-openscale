@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -17,11 +17,13 @@ subcollection: ai-openscale
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Python SDK Tutorial (Advanced)
 {: #crt-ov}
@@ -44,9 +46,9 @@ The credit risk model provided in this tutorial uses a training dataset that con
 
 This tutorial uses a Jupyter notebook that should be run in a Watson Studio project, using a "Python 3.5 with Spark" runtime environment. It requires service credentials for the following {{site.data.keyword.cloud_notm}} services:
 
-- Cloud Object Storage (to store your Watson Studio project)
+- Cloud Object Storage (to store your {{site.data.keyword.DSX}} project)
 - {{site.data.keyword.aios_short}}
-- Watson Machine Learning
+- {{site.data.keyword.pm_full}}
 - (Optional) Databases for PostgreSQL or Db2 Warehouse
 
 The Jupyter notebook will train, create and deploy a German Credit Risk model, configure {{site.data.keyword.aios_short}} to monitor that deployment, and provide seven days' worth of historical records and measurements for viewing in the {{site.data.keyword.aios_short}} Insights dashboard. You can also optionally configure the model for continuous learning with Watson Studio and Spark.
@@ -54,12 +56,13 @@ The Jupyter notebook will train, create and deploy a German Credit Risk model, c
 ## Introduction
 {: #crt-intro}
 
-In this tutorial, you will:
+In this tutorial, you will perform the following tasks:
 
-- Provision {{site.data.keyword.cloud_notm}} machine learning and storage services
-- Set up a Watson Studio project, and run a Python notebook to create, train and deploy a machine learning model
-- Run a Python notebook to create a data mart, configure performance, accuracy, and fairness monitors, and create data to monitor
-- View results in the {{site.data.keyword.aios_short}} Insights tab
+- [Provision {{site.data.keyword.cloud_notm}} machine learning and storage services](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-services).
+- [Set up a Watson Studio project, and run a Python notebook to create, train and deploy a machine learning model](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-set-wstudio).
+- [Provision {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-wos-adv).
+- [Run a Python notebook to create a data mart, configure performance, accuracy, and fairness monitors, and create data to monitor](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-edit-notebook).
+- [View results in the {{site.data.keyword.aios_short}} Insights tab](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-view-results).
 
 ## Provision {{site.data.keyword.cloud_notm}} Services
 {: #crt-services}
@@ -92,6 +95,19 @@ Log in to your [{{site.data.keyword.cloud_notm}} account ![External link icon](.
   ![Machine Learning](images/machine_learning.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
+
+### Provision an {{site.data.keyword.aios_full}} service
+{: #crt-wos-adv}
+
+If you haven't already, ensure that you provision {{site.data.keyword.aios_full}}. 
+
+- [Provision a {{site.data.keyword.aios_short}} instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-openscale){: new_window} if you do not already have one associated with your account:
+
+  ![{{site.data.keyword.aios_short}} tile](images/wos-cloud-tile.png)
+
+1. Click **Catalog** > **AI** > **{{site.data.keyword.aios_short}}**.
+2. Give your service a name, choose a plan, and click the **Create** button.
+3. To start {{site.data.keyword.aios_short}}, click the **Get Started** button.
 
 ### (Optional) Provision a Databases for PostgreSQL or DB2 Warehouse service
 {: #crt-db2}
@@ -161,7 +177,7 @@ The `Working with Watson Machine Learning` notebook contains detailed instructio
 
     - Follow the instructions to create, copy, and paste an {{site.data.keyword.cloud_notm}} API key.
 
-    - Replace the Watson Machine Learning (WML) service credentials with the ones you created previously.
+    - Replace the {{site.data.keyword.pm_full}} service credentials with the ones you created previously.
 
     - Replace the DB credentials with the ones you created for Databases for PostgreSQL.
 
@@ -188,7 +204,7 @@ Using the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../.
 
   ![Insights](images/insight-dash-tab.png)
 
-The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that have fallen below the threshold set when running the notebook. The data and settings used in this tutorial will have created Accuracy and Fairness metrics similar to the ones shown here.
+The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that exceed the threshold set when running the notebook. The data and settings used in this tutorial will have created Accuracy and Fairness metrics similar to the ones shown here.
 
   ![Insight overview](images/insight-overview-adv-tutorial-2.png)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: deployment, monitors, data
 
@@ -17,7 +17,13 @@ subcollection: ai-openscale
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Preparing monitors for a deployment
 {: #mo-config}
@@ -102,7 +108,7 @@ For numeric or categorical data, you need to provide information about the train
 
           ![Specify Cloud Object Storage location of data set](images/fair-config-dset-cos.png)
 
-          Click **Next** to proceed to Step 5 below.
+          Click **Next** to proceed to Step 5.
 
 - **Upload a configuration file** - Choose this option if you prefer to keep your training data private. You can use a custom Python notebook to provide {{site.data.keyword.aios_short}} with information to analyze your training data without providing access to the training data itself.
 
@@ -120,7 +126,7 @@ For numeric or categorical data, you need to provide information about the train
 
     - Click **Next**.
 
-- {{site.data.keyword.aios_short}} will locate your training data from the metadata stored with the model in WML. Choose the label column in the training data that contains your prediction values and click **Next**.
+- {{site.data.keyword.aios_short}} will locate your training data from the metadata stored with the model in {{site.data.keyword.pm_full}}. Choose the label column in the training data that contains your prediction values and click **Next**.
 
   ![Select column label](images/fair-config-column.png)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -17,13 +17,15 @@ subcollection: ai-openscale
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# WML frameworks
+# {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.pm_short}} frameworks
 {: #frmwrks-wml}
 
 {{site.data.keyword.aios_full}} fully supports the following {{site.data.keyword.pm_full}} frameworks: 

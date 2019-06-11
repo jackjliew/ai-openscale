@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: explainability, monitoring, explain, explaining, transactions, transaction ID
 
@@ -30,7 +30,7 @@ For each deployment, you can see explainability data for specific transactions.
 
 In the selected deployment tile, select the **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) in the navigator and enter a transaction ID.
 
-Whenever data is sent to the model for scoring, it sets a transaction ID in the HTTP header by setting the `X-Global-Transaction-Id` field. This transaction ID gets stored in the payload table. To find an explanation of the model behavior for a particular scoring, specify the transaction ID associated with that scoring request. Please note that this behavior applies only to Watson Machine Learning (WML) transactions, and is not applicable for non-WML transactions.
+Whenever data is sent to the model for scoring, it sets a transaction ID in the HTTP header by setting the `X-Global-Transaction-Id` field. This transaction ID gets stored in the payload table. To find an explanation of the model behavior for a particular scoring, specify the transaction ID associated with that scoring request. Please note that this behavior applies only to {{site.data.keyword.pm_full}} transactions, and is not applicable for non-WML transactions.
 {: note}
 
 ### Finding a transaction ID in {{site.data.keyword.aios_short}}
@@ -72,7 +72,7 @@ Thus, these two values tell us the behavior of the model in the vicinity of the 
 ## Image model example
 {: #ie-image}
 
-For an image classification model example of explainability, you can see which parts of an image contributed positively to the predicted outcome and which contributed negatively. In the below example, the image on the right show the parts which impacted positively to the prediction and the image on the left shows the parts of images that had a negative impact on the outcome.
+For an image classification model example of explainability, you can see which parts of an image contributed positively to the predicted outcome and which contributed negatively. In the following example, the image in the positive pane shows the parts which impacted positively to the prediction and the image in the negative pane shows the parts of images that had a negative impact on the outcome.
 
 - For {{site.data.keyword.pm_full}}, the payload of perturbed images being sent via the machine learning gateway cannot exceed 1 MB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -17,11 +17,13 @@ subcollection: ai-openscale
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Installing a Python module to set up {{site.data.keyword.aios_short}}
 {: #as-module}
@@ -32,7 +34,7 @@ To automate the provisioning and configuration of the required {{site.data.keywo
 ## About this module
 {: #as-about}
 
-- The module provides an alternate way for technical users to see an instance of {{site.data.keyword.aios_short}} up and running without needing to provision and configure the services yourself, as described in the [Getting started](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted) tutorial.
+- The module provides an alternate way for technical users to see an instance of {{site.data.keyword.aios_short}} running without needing to provision and configure the services yourself, as described in the [Getting started](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted) tutorial.
 - The Python module runs through the process of checking the services that you have and creating the ones that are necessary, including {{site.data.keyword.aios_short}}. After the module runs successfully, from the {{site.data.keyword.cloud_notm}} dashboard you can launch {{site.data.keyword.aios_short}} to see how it monitors a model.
 
 ## Before you begin

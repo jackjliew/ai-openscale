@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: fairness, fairness monitor
 
@@ -17,7 +17,13 @@ subcollection: ai-openscale
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Fairness
 {: #mf-monitor}
@@ -28,9 +34,9 @@ Fairness monitors your deployment for biases, to help ensure fair outcomes acros
 ## Understanding Fairness
 {: #mf-understand}
 
-{{site.data.keyword.aios_short}} checks your deployed model for bias at runtime. To detect bias for a deployed model, you must define fairness attributes, such as Age or Gender, as detailed in [Configuring the Fairness monitor](#mf-config) below.
+{{site.data.keyword.aios_short}} checks your deployed model for bias at runtime. To detect bias for a deployed model, you must define fairness attributes, such as Age or Gender, as detailed in the following [Configuring the Fairness monitor](#mf-config) section.
 
-It is mandatory to specify the output schema for a model or function in Watson {{site.data.keyword.pm_short}}, for bias checking to be enabled in {{site.data.keyword.aios_short}}. The output schema can be specified using the `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` property in the metadata part of the `store_model` API. For more information, see the [WML client documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://wml-api-pyclient-dev.mybluemix.net/#repository){: new_window}.
+It is mandatory to specify the output schema for a model or function in Watson {{site.data.keyword.pm_short}}, for bias checking to be enabled in {{site.data.keyword.aios_short}}. The output schema can be specified using the `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` property in the metadata part of the `store_model` API. For more information, see the [{{site.data.keyword.pm_full}} client documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://wml-api-pyclient-dev.mybluemix.net/#repository){: new_window}.
 
 ### How it works
 {: #mf-works}
@@ -55,7 +61,7 @@ Fairness values can be more than 100%. This means that the Monitored group recei
 ### Bias visualization ![beta tag](images/beta.png)
 {: #mf-monitor-bias-viz}
 
-The bias visualization includes the following views: 
+When potential bias is detected, {{site.data.keyword.aios_short}} performs several functions to confirm whether the bias is real. {{site.data.keyword.aios_short}} perturbs the data by flipping the monitored value to the reference value and then running this new record through the model. It then surfaces the resulting output as the de-biased output. {{site.data.keyword.aios_short}} also trains a shadow de-biased model that it then uses to detect when a model is going to make a biased prediction. The results of these determinations are available in the bias visualization, which includes the following views: 
 
 - **Payload + Perturbed**: Includes the scoring request received for the selected hour plus additional records from previous hours if the minimum number of records required for evaluation was not met. Includes additional perturbed/synthesized records used to test the model's response when the value of the monitored feature changes.
 
@@ -147,7 +153,7 @@ Consider a data point where, for `Gender=Male` (Reference value), the model pred
 
     Consider a model that predicts who should get a loan (`favorable outcome=loan granted`) and who shouldn’t (`unfavorable outcome=loan denied`). Further, the Monitored value for age is `[18,25]`, and the Reference value is `[26,100]`. When the bias detection algorithm runs, if it finds that the percentage of Favorable outcomes for people in the age group `[18,25]` in the last `N` records plus perturbed data is `50%`, while the percentage of Favorable outcomes for people in the age group `[26,100]` is `70%`, then Fairness is computed as 50*100/70 = 71.42.
 
-    If the Fairness threshold is set to 80%, then the algorithm will flag the model as being biased, because the computed Fairness is lower than the threshold. However, if the threshold is set to 70% then it will not report the model as being biased.
+    If the Fairness threshold is set to 80%, then the algorithm will flag the model as being biased, because the computed Fairness exceeds the threshold. However, if the threshold is set to 70% then it will not report the model as being biased.
 
     ![Configure age settings](images/fair-config-age-limit.png)
 
@@ -163,7 +169,7 @@ Consider a data point where, for `Gender=Male` (Reference value), the model pred
 
      Click **Next** when you are done with each feature.
 
-1.  Now, specify values that represent a favorable outcome for the model. Values are derived from the `label` column in the [training data](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata), if the model output schema contains a mapping column. In WML, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
+1.  Now, specify values that represent a favorable outcome for the model. Values are derived from the `label` column in the [training data](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata), if the model output schema contains a mapping column. In {{site.data.keyword.pm_full}}, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
 
     For example, if the `prediction` value is `1.0`, the mapping column could have a value of `Loan denied`; this implies that the prediction of the model is `Loan denied`. So, if the model output schema contains a mapping column, then specify Favorable and Unfavorable values using those present in the mapping column.
 
@@ -194,15 +200,15 @@ You will then be presented with a screen that provides a de-biased scoring endpo
 
 The de-biased scoring endpoint can be used exactly as the normal scoring endpoint of your deployed model. In addition to returning the response of your deployed model, it also returns two extra columns called `debiased_prediction` and `debiased_probability`.
 
-- The `debiased_prediction` column contains the debiased prediction value. In the case of Watson Machine Learning (WML), this is an encoded representation of the prediction. For example, if the model prediction is either "Loan Granted" or "Loan Denied", WML can encode these two values to "0.0" and "1.0", respectively. The `debiased_prediction` column contains such an encoded representation of the debiased prediction.
+- The `debiased_prediction` column contains the debiased prediction value. In the case of {{site.data.keyword.pm_full}}, this is an encoded representation of the prediction. For example, if the model prediction is either "Loan Granted" or "Loan Denied", {{site.data.keyword.pm_full}} can encode these two values to "0.0" and "1.0", respectively. The `debiased_prediction` column contains such an encoded representation of the debiased prediction.
 
 - The `debiased_probability` column, on the other hand, represents the probability of the debiased prediction. This is an array of double value, where each value represents the probability of the de-biased prediction belonging to one of the prediction classes.
 
 One another column, `debiased_decoded_target`, is also returned, in case you have a column in your output schema that contains a column with `modeling-role` as `decoded-target`.
 
-- The `debiased_decoded_target` column contains the string representation of the debiased prediction. In the above example, where the prediction value was either "0.0" or "1.0", the `debiased_decoded_target` will contain either "Loan Granted" or "Loan Denied".
+- The `debiased_decoded_target` column contains the string representation of the debiased prediction. In the previous example, where the prediction value was either "0.0" or "1.0", the `debiased_decoded_target` will contain either "Loan Granted" or "Loan Denied".
 
-Ideally, you would directly call this endpoint from your production application, instead of directly calling the scoring endpoint of your model deployed in your model serve engine (Watson Machine Learning, Amazon Sagemaker, Microsoft Azure ML Studio, etc.) This way, {{site.data.keyword.aios_short}} will also store the `debiased` values in the payload logging table of your model deployment. Then, all scoring done via this endpoint would be automatically de-biased.
+Ideally, you would directly call this endpoint from your production application, instead of directly calling the scoring endpoint of your model deployed in your model serve engine ({{site.data.keyword.pm_full}}, Amazon Sagemaker, Microsoft Azure ML Studio, etc.) This way, {{site.data.keyword.aios_short}} will also store the `debiased` values in the payload logging table of your model deployment. Then, all scoring done via this endpoint would be automatically de-biased.
 
 Because this endpoint deals with runtime bias, it will continue to run background checks for the latest scoring data from the payload logging table, and keep updating the bias mitigation model which is used to de-bias the scoring requests sent. In this way, {{site.data.keyword.aios_short}} is always up-to-date with the latest incoming data, and with its behavior to detect and mitigate bias.
 

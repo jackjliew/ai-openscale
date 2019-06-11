@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-11"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -17,11 +17,13 @@ subcollection: ai-openscale
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Configure asset deployments using JSON configuration files
 {: #cf-ov}
@@ -45,7 +47,7 @@ For this example, the file `sagemaker_native_multiclass_breast-cancer_all_monito
       subscription_configuration = json.load(fp)
     ```
 
-The file contains configuration data, an example of which is shown below. See the notebook for a complete example of the configuration content.
+The file contains configuration data. Refer to the following example. See the notebook for a complete example of the configuration content.
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
