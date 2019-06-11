@@ -30,7 +30,7 @@ Especifique una base de datos para que la utilice su instancia de {{site.data.ke
 
 {{site.data.keyword.aios_short}} utiliza una base de datos para almacenar datos de carga útil, opinión y medidas. Antes de seleccionar una base de datos, también puede seleccionar un esquema para la base de datos (un esquema es una colección con nombre de tablas de la base de datos).
 
-1.  Elija una base de datos. Tiene dos opciones: la base de datos gratuita o una base de datos nueva o existente. 
+1.  Elija una base de datos. Tiene dos opciones: la base de datos gratuita o una base de datos nueva o existente.
 
     ![Seleccionar base de datos](images/gs-config-database.png)
 
@@ -64,14 +64,14 @@ Puede actualizar a otra base de datos desde la base de datos gratuita, pero no e
 
 1.  Seleccione el tipo de base de datos existente (Compose for Postgres, Database for Postgres o Db2), una base de datos en el menú desplegable **Base de datos** y a continuación un **Esquema**:
 
-    {{site.data.keyword.aios_short}} utiliza la base de datos PostgreSQL o Db2 para almacenar datos de salida o de reentrenamiento del despliegue de modelo. Actualmente no se da soporte a los planes Lite Db2. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    {{site.data.keyword.aios_short}} utiliza la base de datos PostgreSQL o Db2 para almacenar datos relacionados con modelos (datos de opinión, carga útil de puntuación) y métricas calculadas. Actualmente no se da soporte a los planes Lite Db2. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![Seleccionar base de datos](images/gs-config-database3.png)
 
 1.  También puede pulsar **Seleccionar otra ubicación** para especificar una ubicación de base de datos fuera de su cuenta de {{site.data.keyword.Bluemix_notm}}.
 
-    {{site.data.keyword.aios_short}} utiliza la base de datos PostgreSQL o Db2 para almacenar datos de salida o de reentrenamiento del despliegue de modelo. Actualmente no se da soporte a los planes Lite Db2.
+    {{site.data.keyword.aios_short}} utiliza la base de datos PostgreSQL o Db2 para almacenar datos relacionados con modelos (datos de opinión, carga útil de puntuación) y métricas calculadas. Actualmente no se da soporte a los planes Lite Db2.
     {: note}
 
     - Seleccione el **Tipo de base de datos** (`Compose for PostgreSQL`, `Database for PostgreSQL` o `Db2`) y a continuación proporcione la información de conexión:
@@ -119,10 +119,9 @@ Puede actualizar a otra base de datos desde la base de datos gratuita, pero no e
 ## Envío de una solicitud de puntuación
 {: #cdb-score}
 
-Para configurar supervisores, {{site.data.keyword.aios_short}} requiere que se envíe una solicitud de puntuación, a fin de empezar a registrar los datos que se supervisarán.
+Para configurar supervisores, {{site.data.keyword.aios_short}} le solicita que envíe una carga útil de puntuación, para empezar a registrar los datos que se supervisarán.
 
-{{site.data.keyword.aios_short}} puntúa automáticamente los modelos desplegados en Watson Machine Learning.
-{: note:}
+Para los modelos desplegados en {{site.data.keyword.pm_full}} simplemente puntúe su despliegue, {{site.data.keyword.pm_short}} envía automáticamente la carga útil de puntuación a {{site.data.keyword.aios_short}}. Para otros motores de aprendizaje automático, como Microsoft Azure, Amazon SageMaker o un motor de aprendizaje automático personalizado, se debe enviar la carga útil de puntuación utilizando la API de registro de carga útil.
 
 Seleccione un despliegue, en este caso "Detector de fraude" y a continuación utilice los fragmentos de código `cURL` o `Python` proporcionados para registrar los datos de solicitud y respuesta de despliegue del modelo. Consulte [Registro de carga útil para instancias de servicio que no sea Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect) para obtener más información.
 

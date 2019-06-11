@@ -6,6 +6,7 @@ Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
+    [Obtenga más información sobre Watson OpenScale](https://www.ibm.com/cloud/watson-openscale/)
     faststart.md
     alt-setup.md
     tutorial-adv.md
@@ -31,6 +32,7 @@ Watson OpenScale
         connect-db.md
         connect-ml.md
         config-file.md
+        feedback.md
 
     {: .topicgroup}
     Configuración de supervisores
@@ -69,4 +71,5 @@ Watson OpenScale
     Comunidad de desarrolladores
         [IBM Developer](https://developer.ibm.com/?s=openscale)
         [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale)
+        [Foro de ideas](https://ibmanalytics.ideas.aha.io/?project=WSPHERE)
     {: .navgroup-end}

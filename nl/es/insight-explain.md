@@ -74,7 +74,7 @@ Por lo tanto, estos dos valores nos indican el comportamiento del modelo en la p
 
 Para un ejemplo de explicabilidad de modelo de clasificación de imagen, puede ver qué partes de una imagen han contribuido positivamente al resultado previsto y cuáles han contribuido negativamente. En el ejemplo siguiente, la imagen de la derecha muestra las partes que han afectado positivamente a la predicción y la imagen de la izquierda muestra las partes de la imagen que han tenido un impacto negativo en el resultado.
 
-Actualmente se pueden generar explicaciones para imágenes con un tamaño mayor de 1 MB.
+- Para {{site.data.keyword.pm_full}}, la carga útil de las imágenes alteradas que se envía mediante la pasarela de aprendizaje automático no puede sobrepasar 1 MB. Para evitar problemas de tiempo de espera excedido, las imágenes no deben sobrepasar 125 x 125 píxeles y se deben enviar secuencialmente de forma que se solicite la explicación de la segunda imagen cuando se haya completado la primera.
 {: note}
 
 ![Explicabilidad - Clasificación de imagen](images/insight-explain-image.png)

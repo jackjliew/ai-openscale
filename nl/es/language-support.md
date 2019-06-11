@@ -24,7 +24,7 @@ subcollection: ai-openscale
 # Idiomas soportados en {{site.data.keyword.aios_short}}
 {: #sl-langs}
 
-El soporte de idiomas está habilitado de forma predeterminada y la interfaz de usuario traducida específica para uno de los idiomas soportados se puede establecer actualizando la preferencia de idioma en el navegador web. La interfaz de usuario de {{site.data.keyword.aios_full}} actualmente está traducida a los idiomas siguientes
+De forma predeterminada el soporte de idiomas está habilitado. La interfaz de usuario traducida específica para uno de los idiomas soportados se puede establecer actualizando la preferencia de idioma en el navegador web. La interfaz de usuario de {{site.data.keyword.aios_full}} actualmente está traducida a los idiomas siguientes 
 {: shortdesc}
 
 - Portugués de Brasil (pt-br)

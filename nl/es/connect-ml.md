@@ -167,7 +167,7 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
     **Nota**: Para los lenguajes que no sean Python, también puede realizar directamente el registro de carga útil, mediante una API REST.
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -319,7 +319,7 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
     **Nota**: Para los lenguajes que no sean Python, también puede realizar directamente el registro de carga útil, mediante una API REST.
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"
@@ -470,7 +470,7 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
     **Nota**: Para los lenguajes que no sean Python, también puede realizar directamente el registro de carga útil, mediante una API REST.
 
     ```json
-    token_endpoint = "https://iam.bluemix.net/identity/token"
+    token_endpoint = "https://iam.cloud.ibm.com/identity/token"
     headers = {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/json"

@@ -38,6 +38,8 @@ Tabla 1. Detalles del soporte de las infraestructuras
 | Función de Python | Regresión | Estructurados |
 | XGBoost | Clasificación | Estructurados |
 | XGBoost | Regresión | Estructurados |
+| scikit-learn | Clasificación | Estructurados |
+| scikit-learn | Regresión | Estructurados |
 | Keras con TensorFlow<sup>1</sup> | Clasificación | Desestructurado (imagen, texto) |
 | Keras con TensorFlow<sup>1</sup> | Regresión | Desestructurado (imagen, texto) |
 {: caption="Detalles del soporte de las infraestructuras" caption-side="top"}

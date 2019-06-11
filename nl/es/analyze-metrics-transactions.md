@@ -66,7 +66,7 @@ Puede ver el punto final de puntuación sesgada recomendado:
 {: #anlz_metrics_supfairmets_group}
 
 - **Descripción**: la propensidad de los modelos a entregar resultados favorables a un grupo más que a otro.
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**: punto final de puntuación sesgada que puede utilizar en su aplicación empresarial para recibir respuestas sesgadas del modelo desplegado.
 - **Tipo de problema**: todos
 - **Tipo de datos**: estructurados
@@ -114,7 +114,7 @@ Puede revisar los valores de todas las métricas a lo largo del tiempo en el pan
 ![Gráfico de métricas de calidad que muestra desviación del área bajo ROC](images/quality_metrics_001.png)
 
 
-Para algunas métricas también puede revisar los detalles relacionados, como por ejemplo Confusion Matrix para la clasificación binaria y multiclase.
+Para consultar la información relacionada, como por ejemplo Confusion Matrix para la clasificación binaria y multiclase, que está disponible para algunas métricas, pulse en la gráfica.
 
 ![Tabla de detalles de las métricas de calidad](images/quality_metrics_002.png)
 
@@ -127,7 +127,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_roc}
 
 - **Descripción**: área bajo exhaustividad y curva de índice de falsos positivos.
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -140,7 +140,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_pr}
 
 - **Descripción**: área bajo precisión y curva de exhaustividad
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -153,7 +153,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_var}
 
 - **Descripción**: la proporción de varianza explicada es la proporción de varianza explicada y la varianza de destino. La varianza explicada es la diferencia entre la varianza de destino y la varianza de error de predicción.
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -166,7 +166,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_abserror}
 
 - **Descripción**: promedio de la diferencia absoluta entre la predicción del modelo y el valor de destino
-- **Umbrales predeterminados**: límite superior = 0.8
+- **Umbrales predeterminados**: límite superior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
@@ -179,7 +179,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_squerror}
 
 - **Descripción**: promedio de la diferencia cuadrática entre la predicción del modelo y el valor de destino
-- **Umbrales predeterminados**: límite superior = 0.8
+- **Umbrales predeterminados**: límite superior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
@@ -192,7 +192,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_r_squared}
 
 - **Descripción**: proporción de diferencia entre la varianza de destino y la varianza para error de predicción con la varianza de destino
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -205,7 +205,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_squ_errors_mean}
 
 - **Descripción**: raíz cuadrada de media de cuadrado de la diferencia entre la predicción del modelo y el valor de destino
-- **Umbrales predeterminados**: límite superior = 0.8
+- **Umbrales predeterminados**: límite superior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
@@ -218,7 +218,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_acc}
 
 - **Descripción**: la proporción de predicciones correctas
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -231,7 +231,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_wtpr}
 
 - **Descripción**: media ponderada de clase TPR con ponderaciones iguales a la probabilidad de clase
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -244,7 +244,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_tpr}
 
 - **Descripción**: proporción de predicciones correctas en predicciones de clase positiva
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -257,7 +257,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_wfpr_weighted}
 
 - **Descripción**: media ponderada de clase FPR con ponderaciones iguales a la probabilidad de clase
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -270,7 +270,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_fpr_false}
 
 - **Descripción**: proporción de predicciones incorrectas en clase positiva
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -283,7 +283,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_weighted_recall}
 
 - **Descripción**: media ponderada de exhaustividad con ponderaciones iguales a la probabilidad de clase
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -296,7 +296,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_recall}
 
 - **Descripción**: proporción de predicciones correctas en clase positiva
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -309,7 +309,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_wgth_prec}
 
 - **Descripción**: media ponderada de precisión con ponderaciones iguales a la probabilidad de clase
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -322,7 +322,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_precision}
 
 - **Descripción**: proporción de predicciones correctas en predicciones de clase positiva
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -335,7 +335,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_wght_f1-measure}
 
 - **Descripción**: medida ponderada de la medida F1 con ponderaciones iguales a la probabilidad de clase
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -348,7 +348,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_f1-measr}
 
 - **Descripción**: media armónica de precisión y exhaustividad
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.
@@ -361,7 +361,7 @@ Para algunas métricas también puede revisar los detalles relacionados, como po
 {: #anlz_metrics_supqualdets_log_loss}
 
 - **Descripción**: media de probabilidades de clase de destino de logaritmos (confianza). También se conoce como logaritmo de verosimilitud previsto.
-- **Umbrales predeterminados**: límite inferior = 0.8
+- **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**:
    - **Tendencia al alza**: una tendencia al alza indica que la métrica está mejorando. Esto significa que el reentrenamiento del modelo es efectivo.
    - **Tendencia a la baja**: una tendencia a la baja indica que la métrica se está deteriorando. Los datos de opinión son ligeramente diferentes a los datos de entrenamiento.

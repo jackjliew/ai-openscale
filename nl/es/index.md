@@ -43,6 +43,7 @@ Así es cómo implementará {{site.data.keyword.aios_short}}:
 
     - [Equidad](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)
     - [Exactitud](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
+    - [Rendimiento](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics#anlz_metrics_performance)
 
 - **Visualice y edite los datos supervisados**: el {{site.data.keyword.aios_short}} [panel de control](/docs/services/ai-openscale?topic=ai-openscale-io-ov) le permite ver fácilmente los detalles clave e identificar problemas de sus despliegues. La visualización de puntos de datos individuales para cada característica supervisada proporciona detalles adicionales.
 
@@ -51,9 +52,9 @@ Así es cómo implementará {{site.data.keyword.aios_short}}:
 ## Limitaciones
 {: #in-lim}
 
-- El release actual sólo da soporte a una base de datos, una instancia de Watson Machine Learning y una instancia de {{site.data.keyword.aios_short}}
+- El release actual sólo da soporte a una base de datos, una instancia de {{site.data.keyword.pm_full}} y una instancia de {{site.data.keyword.aios_short}}
 
-- La base de datos y la instancia de Watson Machine Learning se deben desplegar en la misma cuenta de {{site.data.keyword.cloud_notm}}.
+- La base de datos y la instancia de {{site.data.keyword.pm_full}} se deben desplegar en la misma cuenta de {{site.data.keyword.cloud_notm}}.
 
 - El plan Lite (gratuito) tiene los siguientes límites mensuales:
 
@@ -62,14 +63,35 @@ Así es cómo implementará {{site.data.keyword.aios_short}}:
     - 50.000 registros de carga útil (acumulativos)
     - 50.000 registros de opiniones (acumulativos)
 
-- {{site.data.keyword.aios_short}} utiliza la base de datos PostgreSQL o Db2 para almacenar datos de salida o de reentrenamiento del despliegue de modelo. Actualmente no se da soporte a los planes Lite Db2.
+- {{site.data.keyword.aios_short}} utiliza la base de datos PostgreSQL o Db2 para almacenar datos relacionados con modelos (datos de opinión, carga útil de puntuación) y métricas calculadas. Actualmente no se da soporte a los planes Lite Db2.
 
 - Hay un límite de licencias de 20 modelos desplegados por instancia de {{site.data.keyword.aios_short}}.
 
-- Actualmente se pueden generar explicaciones para imágenes con un tamaño mayor de 1 MB.
+- Para {{site.data.keyword.pm_full}}, la carga útil de las imágenes alteradas que se envía mediante la pasarela de aprendizaje automático no puede sobrepasar 1 MB. Para evitar problemas de tiempo de espera excedido, las imágenes no deben sobrepasar 125 x 125 píxeles y se deben enviar secuencialmente de forma que se solicite la explicación de la segunda imagen cuando se haya completado la primera.
+
 
 <p>&nbsp;</p>
 
+## Problemas conocidos
+{: #rn-12ki}
+
+- **Microsoft Azure**
+
+    - De los dos tipos de servicios web de Azure Machine Learning, {{site.data.keyword.aios_short}} sólo admite el tipo `Nuevo`. El tipo `Clásico` no se admite.
+
+    - __*Se debe utilizar el nombre de entrada predeterminado*__: en el servicio web de Azure, el nombre de entrada predeterminado es `"input1"`. Actualmente, este campo se establece para {{site.data.keyword.aios_short}} y, si falta, {{site.data.keyword.aios_short}} no funcionará.
+
+      Si el servicio web de Azure no utiliza el nombre predeterminado, cambie el nombre de campo de entrada a `"input1"` y el código funcionará.
+
+- **AWS SageMaker**
+
+    - __*No se da soporte al algoritmo BlazingText*__: en el release actual de {{site.data.keyword.aios_short}}, no se da soporte al formato de carga útil de entrada de algoritmo BlazingText de AWS SageMaker.
+
+- **Instancia de servicio de Machine Learning personalizado**
+
+    - El [módulo Python](/docs/services/ai-openscale?topic=ai-openscale-as-module) actualmente no tiene Explicabilidad operativa para la instancia de servicio personalizado. Esto se debe a que la instancia de servicio personalizado requiere una predicción numérica en los datos de respuesta, que no se incluye con el script de módulo.
+
+<p>&nbsp;</p>
 
 ## Motores y infraestructuras de aprendizaje automático soportados
 {: #in-fram}
@@ -128,4 +150,7 @@ El cliente Python de [{{site.data.keyword.aios_short}} ![Incono de enlace extern
 - [Cómo empezar](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted) con el servicio.
 - Vea el [Material de referencia de la API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/ai-openscale){: new_window}.
 
-¿Todavía tiene dudas? [Póngase en contacto con IBM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.
+¿Todavía tiene dudas? 
+
+- [Novedades](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)
+- [Póngase en contacto con IBM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.

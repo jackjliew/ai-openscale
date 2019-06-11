@@ -1,6 +1,6 @@
 ---
 
-title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
+title: Confianza y transparencia para los modelos de aprendizaje automático con {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
 intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
@@ -252,6 +252,7 @@ Ahora que el modelo de aprendizaje automático se ha desplegado, puede configura
     ![Seleccionar modelos desplegados](images/gs-set-deploy0.png)
 
 1.  A continuación, debe elegir una base de datos. Tiene dos opciones: la base de datos gratuita o una base de datos nueva o existente. Para esta guía de aprendizaje, seleccione el mosaico **Utilizar la base de datos gratuita alojada por {{site.data.keyword.aios_short}}**.
+
     La base de datos gratuita tiene algunas limitaciones importantes. Es una base de datos alojada que no le proporciona acceso individual a ella. Proporciona a {{site.data.keyword.aios_short}} acceso a su base de datos y sus datos. No es compatible con el GDPR. Consulte toda la información detallada sobre cada una de estas opciones en el tema [Especificación de una base de datos](/docs/services/ai-openscale?topic=ai-openscale-connect-db). La base de datos existente puede ser una base de datos PostgreSQL o una base de datos Db2. 
     {: tip}
 

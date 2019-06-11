@@ -53,6 +53,59 @@ Se considera que un modelo está sesgado si, en este conjunto de datos combinado
 Los valores de equidad pueden ser superiores al 100%. Esto significa que el grupo supervisado ha recibido más resultados favorables que el grupo de referencia. Además, si no se envía ninguna solicitud de puntuación nueva, el valor de equidad se mantendrá constante.
 {: note}
 
+### Visualización del sesgo ![etiqueta beta](images/beta.png)
+{: #mf-monitor-bias-viz}
+
+Cuando se detecta un sesgo potencial, {{site.data.keyword.aios_short}} realiza varias funciones para confirmar si el sesgo es real. {{site.data.keyword.aios_short}} altera los datos invirtiendo el valor supervisado y el valor de referencia y luego ejecutando este nuevo registro con el modelo. A continuación, muestra la salida resultante como salida sin sesgo. {{site.data.keyword.aios_short}} también entrena un modelo sin sesgo duplicado que a continuación utiliza para detectar cuándo un modelo realizará una predicción sesgada. Los resultados de estas determinaciones están disponibles en la visualización del sesgo, que incluye las vistas siguientes: 
+
+- **Carga útil + Alterados**: incluye la solicitud de puntuación recibida para la hora seleccionada más registros adicionales de las horas anteriores si no se cumple el número mínimo de registros necesarios para la evaluación. Incluye registros alterados/sintetizados adicionales utilizados para probar la respuesta del modelo cuando el valor de la característica supervisada cambia.
+
+   Tome nota de los siguientes detalles de carga útil y alterados:
+
+   - Número de registros que se leen durante esta hora de la tabla de carga útil
+   - Registros adicionales que se leen de las horas anteriores (por ejemplo, si el valor `min_records` en la configuración de equidad se establece en 1000, y entre las 2 pm y las 3 pm solo se añaden 10 registros, para cumplir el requisito mínimo el sistema leería 990 registros adicionales de las horas anteriores).
+   - Registros alterados por atributo de equidad
+   - Indicación de fecha y hora del registro de mayor antigüedad del periodo de tiempo para el que se debe calcular el sesgo
+   - Indicación de fecha y hora del registro más nuevo o último del periodo de tiempo para el que se debe calcular el sesgo
+
+  ![Ejemplo de carga útil más alterados](images/payload&perturbed.png)
+
+
+
+- **Carga útil**: las solicitudes de puntuación reales recibidas por el modelo durante la hora seleccionada.
+
+   Tome nota de los siguientes detalles de carga útil:
+   
+   - Número de registros que se leen o en los que se realiza la operación sin sesgo desde la tabla de carga útil
+   - Indicación de fecha y hora del registro de mayor antigüedad del periodo de tiempo para el que se debe calcular el sesgo
+   - Indicación de fecha y hora del registro más nuevo o último del periodo de tiempo para el que se debe calcular el sesgo
+
+
+  ![Ejemplo de datos de carga útil](images/payload.png)
+
+- **Entrenamiento**: los registros de datos de entrenamiento utilizados para entrenar el modelo.
+
+   Tome nota de los siguientes detalles de entrenamiento:
+   
+   - Número de registros de datos de entrenamiento. Los datos de entrenamiento se leen una vez, y la distribución se almacena en la variable `subscription/fairness_configuration`. Al calcular la distribución, deberíamos encontrar también el número de registros de datos de entrenamiento y almacenarlo en la misma distribución. Además, cuando se cambian los datos de formación, lo que indica que se ejecuta de nuevo el mandato `POST /data_distribution`, este valor se actualiza en la variable `fairness_configuration/training_data_distribution`. Al enviar la métrica, también deberíamos enviar este valor.
+   - La hora a la que se procesan por última vez los datos de entrenamiento (primera vez y actualizaciones subsiguientes)
+
+  ![Ejemplo de datos de entrenamiento](images/training.png)
+   
+
+   
+- **Sin sesgo**: la salida del algoritmo sin sesgo tras procesar el tiempo de ejecución y los datos alterados.
+
+   Tome nota de los siguientes detalles sin sesgo:
+   
+   - Número de registros que se leen/en los que se realiza la operación sin sesgo desde la tabla de carga útil
+   - Registros adicionales que se leen para realizar sesgo, y por lo tanto también sin sesgo. El mismo número que en la selección `Carga útil + Alterados`
+   - Registros alterados por atributo de equidad
+   - Indicación de fecha y hora del registro de mayor antigüedad del periodo de tiempo para el que se debe calcular el sesgo
+   - Indicación de fecha y hora del registro más nuevo o último del periodo de tiempo para el que se debe calcular el sesgo
+
+  ![Ejemplo de datos sin sesgo](images/debiased.png)
+  
 ### Ejemplo
 {: #mf-ex1}
 

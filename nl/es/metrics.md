@@ -55,7 +55,7 @@ Para acceder a las métricas personalizadas y visualizarlas, puede utilizar la i
 
    Para obtener más información, consulte la [documentación del SDK de Python](http://ai-openscale-python-client.mybluemix.net/).
 
-La visualización de las métricas personalizadas se puede encontrar también en el panel de control de Watson OpenScale.
+La visualización de las métricas personalizadas aparece en el panel de control de {{site.data.keyword.aios_short}}.
 
 <!---
 ![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
