@@ -4,14 +4,14 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-11"
 
-keywords: fairness, fairness monitor
+keywords: fairness, fairness monitor, payload, perturbation, training data, debiased
 
 subcollection: ai-openscale
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,10 +25,10 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Fairness
+# Fairness in {{site.data.keyword.aios_short}}
 {: #mf-monitor}
 
-Fairness monitors your deployment for biases, to help ensure fair outcomes across different populations.
+In {{site.data.keyword.aios_full}}, the fairness monitor scans your deployment for biases, to ensure fair outcomes across different populations.
 {: shortdesc}
 
 ## Understanding Fairness
@@ -36,7 +36,7 @@ Fairness monitors your deployment for biases, to help ensure fair outcomes acros
 
 {{site.data.keyword.aios_short}} checks your deployed model for bias at runtime. To detect bias for a deployed model, you must define fairness attributes, such as Age or Gender, as detailed in the following [Configuring the Fairness monitor](#mf-config) section.
 
-It is mandatory to specify the output schema for a model or function in Watson {{site.data.keyword.pm_short}}, for bias checking to be enabled in {{site.data.keyword.aios_short}}. The output schema can be specified using the `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` property in the metadata part of the `store_model` API. For more information, see the [{{site.data.keyword.pm_full}} client documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://wml-api-pyclient-dev.mybluemix.net/#repository){: new_window}.
+It is mandatory to specify the output schema for a model or function in Watson {{site.data.keyword.pm_short}}, for bias checking to be enabled in {{site.data.keyword.aios_short}}. The output schema can be specified using the `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` property in the metadata part of the `store_model` API. For more information, see the [{{site.data.keyword.pm_full}} client documentation](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}.
 
 ### How it works
 {: #mf-works}
@@ -58,10 +58,35 @@ A model is deemed to be biased if, across this combined dataset, the percentage 
 Fairness values can be more than 100%. This means that the Monitored group received more favorable outcomes than the Reference group. In addition, if no new scoring requests are sent, then the Fairness value will remain constant.
 {: note}
 
+### Do the math
+{: #mf-bias-math}
+
+The fairness metric used in {{site.data.keyword.aios_short}} is disparate impact, which is a measure of how the rate at which an unprivileged group receives a certain outcome or result compares with the rate at which a privileged group receives that same outcome or result.
+
+The following mathematical formula is used for calculating disparate impact:
+
+```
+                     (num_positives(privileged=False) / num_instances(privileged=False))
+Disparate impact =   ______________________________________________________________________
+
+                     (num_positives(privileged=True) / num_instances(privileged=True))
+```
+
+where `num_positives` is the number of individuals in the group (either privileged=False, i.e. unprivileged, or privileged=True, i.e. privileged) who received a positive outcome, and num_instances is the total number of individuals in the group.
+
+The resulting number will be a percentage—i.e. the percentage that the rate at which unprivileged group receives the positive outcome is of the rate at which the privileged group receives the positive outcome. For instance, if a credit risk model assigns the “no risk” prediction to 80% of unprivileged applicants and to 100% of privileged applicants, that model would have a disparate impact (presented as the fairness score in {{site.data.keyword.aios_short}}) of 80%.
+
+In {{site.data.keyword.aios_short}}, the positive outcomes are designated as the favorable outcomes, and the negative outcomes are designated as the unfavorable outcomes. The privileged group is designated as the reference group, and the unprivileged group is designated as the monitored group.
+
+
 ### Bias visualization ![beta tag](images/beta.png)
 {: #mf-monitor-bias-viz}
 
-When potential bias is detected, {{site.data.keyword.aios_short}} performs several functions to confirm whether the bias is real. {{site.data.keyword.aios_short}} perturbs the data by flipping the monitored value to the reference value and then running this new record through the model. It then surfaces the resulting output as the de-biased output. {{site.data.keyword.aios_short}} also trains a shadow de-biased model that it then uses to detect when a model is going to make a biased prediction. The results of these determinations are available in the bias visualization, which includes the following views: 
+When potential bias is detected, {{site.data.keyword.aios_short}} performs several functions to confirm whether the bias is real. {{site.data.keyword.aios_short}} perturbs the data by flipping the monitored value to the reference value and then running this new record through the model. It then surfaces the resulting output as the de-biased output. {{site.data.keyword.aios_short}} also trains a shadow de-biased model that it then uses to detect when a model is going to make a biased prediction. 
+
+Two different datasets are used for computing fairness and accuracy. Fairness is computed by using the payload + perturbed data. Accuracy is computed by using the feedback data. To compute accuracy, {{site.data.keyword.aios_short}} needs manually labelled data, which is only present in feedback table.
+
+The results of these determinations are available in the bias visualization, which includes the following views: 
 
 - **Payload + Perturbed**: Includes the scoring request received for the selected hour plus additional records from previous hours if the minimum number of records required for evaluation was not met. Includes additional perturbed/synthesized records used to test the model's response when the value of the monitored feature changes.
 
@@ -108,6 +133,9 @@ When potential bias is detected, {{site.data.keyword.aios_short}} performs sever
    - Perturbed records per fairness attribute
    - Oldest record timestamp in the data frame for which bias has to be computed
    - Newest/latest record timestamp in the data frame for which bias has to be computed
+   - Before and after fairness values display in the header portion of the Debiased view. 
+      - The **after** accuracy is computed by taking the data in the feedback table and sending it to the active debiasing API. This API returns the de-biased prediction. The feedback table also contains the manual label. The manual label is compared with the debiased prediction to compute the accuracy. 
+      - The **before** accuracy is computed by using the same feedback data. For before accuracy computation, the feedback data is sent to the model to get its prediction and the predicted value is compared with the manual label to get the accuracy.
 
   ![example of debiased data](images/debiased.png)
   
@@ -214,7 +242,7 @@ Because this endpoint deals with runtime bias, it will continue to run backgroun
 
 Finally, {{site.data.keyword.aios_short}} uses a threshold to decide that data is now acceptable and is deemed to be unbiased. That threshold is taken as the least value from the thresholds set in the Fairness monitor for all the fairness attributes configured.
 
-### Next steps
+## Next steps
 {: #mf-next}
 
 From the *Configure monitors* page, you can select another monitoring category.
