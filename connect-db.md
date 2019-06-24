@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: databases, connections, scoring, requests
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -119,23 +119,9 @@ You can upgrade to another database from the free database, however it is not po
 
 1.  Click **Next** to review the summary data, then click **Save**.
 
-## Sending a scoring request
-{: #cdb-score}
 
-To configure monitors, {{site.data.keyword.aios_short}} requires you to send a scoring payload, in order to begin to log the data that will be monitored.
-
-For models deployed in {{site.data.keyword.pm_full}} just score your deployment, {{site.data.keyword.pm_short}} automatically sends the scoring payload to {{site.data.keyword.aios_short}}. For other machine learning engines, such as Microsoft Azure, Amazon SageMaker, or a custom machine learning engine the scoring payload must be sent using the Payload Logging API.
-
-Select a deployment, in this case "Fraud Detector", and then use the provided `cURL` or `Python` code snippets to log model deployment request and response data. See [Payload logging for non-{{site.data.keyword.pm_full}} service instances](/docs/services/ai-openscale?topic=ai-openscale-cml-connect) for more detail.
-
-The fields and values in the code snippets need to be substituted with your real values, as the ones provided are only examples.
-{: important}
-
-![Select database](images/config-send-scoring.png)
-
-Once you have run your payload logging, you will see a checkmark in the "Ready to Monitor" column for the selected deployment. Click **Configure Monitors** to continue.
 
 ## Next steps
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [configure monitors for your deployments](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+{{site.data.keyword.aios_short}} is now ready for you to [send a scoring payload](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score) and [configure monitors for your deployments](/docs/services/ai-openscale?topic=ai-openscale-mo-config).

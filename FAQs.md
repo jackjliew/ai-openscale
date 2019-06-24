@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: FAQs, frequently asked questions, questions
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -34,8 +34,56 @@ Here you'll find some of the most frequently-asked questions from users of {{sit
 ## Questions
 {: #wos-faqs-questions}
 
+- [What is {{site.data.keyword.aios_short}}?](#faq-whatsa)
+- [How is {{site.data.keyword.aios_short}} priced?](#faq-pricing)
+- [Is there a free trial for {{site.data.keyword.aios_short}}?](#faq-freetrial)
+- [All of my AI models are in Azure. Can I use Microsoft Azure ML engine with {{site.data.keyword.aios_short}}?](#faq-azure)
+- [All of my AI models are in Amazon. Can I use Amazon SageMaker ML engine with {{site.data.keyword.aios_short}}?](#faq-sagemaker)
+- [Is {{site.data.keyword.aios_short}} available on IBM Cloud Pak for Data?](#faq-icp)
+- [I want to run {{site.data.keyword.aios_short}} on my own servers. How much computer processing power should I allocate?](#faq-sizing)
 - [How do I convert a prediction column from an integer data type to a categorical data type?](#wos-faqs-convert-data-types)
 - [Why does {{site.data.keyword.aios_short}} need access to my training data?](#trainingdata)
+
+### What is {{site.data.keyword.aios_short}}
+{: #faq-whatsa}
+
+Watson OpenScale tracks and measures outcomes from AI across its lifecycle, and adapts and governs AI to changing business situations - for models built and running anywhere.
+
+[View the video]().
+
+
+### How is {{site.data.keyword.aios_short}} priced?
+{: #faq-pricing}
+
+
+
+
+### Is there a free trial for {{site.data.keyword.aios_short}}?
+{: #faq-freetrial}
+
+
+
+### All of my AI models are in Azure. Can I use Microsoft Azure ML engine with {{site.data.keyword.aios_short}}?
+{: #faq-azure}
+
+
+
+### All of my AI models are in Amazon. Can I use Amazon SageMaker ML engine with {{site.data.keyword.aios_short}}?
+{: #faq-sagemaker}
+
+
+
+### Is {{site.data.keyword.aios_short}} available on IBM Cloud Pak for Data?
+{: #faq-icp}
+
+
+
+### I want to run {{site.data.keyword.aios_short}} on my own servers. How much computer processing power should I allocate?
+{: #faq-sizing}
+
+
+
+
 
 ### How do I convert a prediction column from an integer data type to a categorical data type?
 {: #wos-faqs-convert-data-types}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -67,12 +67,12 @@ In this tutorial, you will perform the following tasks:
 ## Provision {{site.data.keyword.cloud_notm}} Services
 {: #crt-services}
 
-Log in to your [{{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} with your {{site.data.keyword.ibmid}}. When provisioning services, particularly if you use Db2 Warehouse, verify that your selected organization and space are the same for all services.
+Log in to your [{{site.data.keyword.cloud_notm}} account](https://{DomainName}){: external} with your {{site.data.keyword.ibmid}}. When provisioning services, particularly if you use Db2 Warehouse, verify that your selected organization and space are the same for all services.
 
 ### Create a {{site.data.keyword.DSX}} account
 {: #crt-wstudio}
 
-- [Create a {{site.data.keyword.DSX}} instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-studio){: new_window} if you do not already have one associated with your account:
+- [Create a {{site.data.keyword.DSX}} instance](https://{DomainName}/catalog/services/watson-studio){: external} if you do not already have one associated with your account:
 
   ![Watson Studio](images/watson_studio.png)
 
@@ -81,7 +81,7 @@ Log in to your [{{site.data.keyword.cloud_notm}} account ![External link icon](.
 ### Provision an {{site.data.keyword.cos_full_notm}} service
 {: #crt-cos}
 
-- [Provision an {{site.data.keyword.cos_short}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} if you do not already one associated with your account:
+- [Provision an {{site.data.keyword.cos_short}} service](https://{DomainName}/catalog/services/cloud-object-storage){: external} if you do not already one associated with your account:
 
   ![Object Storage](images/object_storage.png)
 
@@ -90,7 +90,7 @@ Log in to your [{{site.data.keyword.cloud_notm}} account ![External link icon](.
 ### Provision an {{site.data.keyword.pm_full}} service
 {: #crt-wml}
 
-- [Provision a {{site.data.keyword.pm_short}} instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window} if you do not already have one associated with your account:
+- [Provision a {{site.data.keyword.pm_short}} instance](https://{DomainName}/catalog/services/machine-learning){: external} if you do not already have one associated with your account:
 
   ![Machine Learning](images/machine_learning.png)
 
@@ -101,7 +101,7 @@ Log in to your [{{site.data.keyword.cloud_notm}} account ![External link icon](.
 
 If you haven't already, ensure that you provision {{site.data.keyword.aios_full}}. 
 
-- [Provision a {{site.data.keyword.aios_short}} instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-openscale){: new_window} if you do not already have one associated with your account:
+- [Provision a {{site.data.keyword.aios_short}} instance](https://{DomainName}/catalog/services/watson-openscale){: external} if you do not already have one associated with your account:
 
   ![{{site.data.keyword.aios_short}} tile](images/wos-cloud-tile.png)
 
@@ -114,7 +114,7 @@ If you haven't already, ensure that you provision {{site.data.keyword.aios_full}
 
 If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a `Databases for PostgreSQL` or `Db2 Warehouse` service to take full advantage of integration with {{site.data.keyword.DSX}} and continuous learning services. If you choose not to provision a paid service, you can use the free internal PostgreSQL storage with {{site.data.keyword.aios_short}}, but you will not be able to configure continuous learning for your model.
 
-- [Provision a Databases for PostgreSQL service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/databases-for-postgresql) or [a Db2 Warehouse service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/db2-warehouse) if you do not already have one associated with your account:
+- [Provision a Databases for PostgreSQL service](https://{DomainName}/catalog/services/databases-for-postgresql) or [a Db2 Warehouse service](https://{DomainName}/catalog/services/db2-warehouse) if you do not already have one associated with your account:
 
   ![DB for Postgres](images/dbpostgres.png)
 
@@ -125,7 +125,7 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 ## Set up a {{site.data.keyword.DSX}} project
 {: #crt-set-wstudio}
 
-- Log in to your [{{site.data.keyword.DSX}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window}. Click the {{site.data.keyword.avatar}} and verify that the account you are using is the same account you used to create your {{site.data.keyword.cloud_notm}} services:
+- Log in to your [{{site.data.keyword.DSX}} account](https://dataplatform.ibm.com/){: external}. Click the {{site.data.keyword.avatar}} and verify that the account you are using is the same account you used to create your {{site.data.keyword.cloud_notm}} services:
 
   ![Same Account](images/same_account.png)
 
@@ -147,7 +147,7 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 
 - Download the following file:
 
-    - [Working with Watson Machine Learning ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [Working with Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - From the **Assets** tab in your {{site.data.keyword.DSX}} project, click the **Add to project** button and select **Notebook** from the dropdown:
 
@@ -200,7 +200,7 @@ The net result is that you will have created, trained, and deployed the **Spark 
 ### View insights for your deployment
 {: #crt-view-insights}
 
-Using the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click on the **Insights** tab:
+Using the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}, click on the **Insights** tab:
 
   ![Insights](images/insight-dash-tab.png)
 

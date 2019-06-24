@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -174,6 +174,9 @@ The file contains configuration data. Refer to the following example. See the no
 
 The asset deployment is created and configured for use by {{site.data.keyword.aios_short}}.
 
-See more complete information in the [{{site.data.keyword.aios_short}} Python client documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}.
+## Next steps
+{: #cf-results-nxt-steps}
 
-You can also import and export configurations to {{site.data.keyword.aios_short}} using the [import subscription ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} and [export subscription ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API methods.
+See more complete information in the [{{site.data.keyword.aios_short}} Python client documentation](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: external}.
+
+You can also import and export configurations to {{site.data.keyword.aios_short}} using the [import subscription](https://{DomainName}/apidocs/ai-openscale#import-subscription){: external} and [export subscription](https://{DomainName}/apidocs/ai-openscale#export-subscription){: external} API methods.

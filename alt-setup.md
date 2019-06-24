@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -42,7 +42,7 @@ To automate the provisioning and configuration of the required {{site.data.keywo
 
 1. [Create an {{site.data.keyword.cloud_notm}} API key and download it](/docs/iam?topic=iam-userapikey#create_user_key). You will need to enter the API key in a later step.
 
-2. [Install any release of Python 3 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.python.org/downloads/){: new_window}.
+2. [Install any release of Python 3](https://www.python.org/downloads/){: external}.
 
   Python 3 includes the required pip package management system.
   {: note}
@@ -57,7 +57,7 @@ To automate the provisioning and configuration of the required {{site.data.keywo
     If more than one version of pip is installed on your system, you might need to run `pip3` instead of `pip`, as in, `pip3 install -U ibm-ai-openscale-cli`.
     {: tip}
 
-4. If you have an existing {{site.data.keyword.pm_short}} service instance, check the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} to ensure that the service is managed by {{site.data.keyword.iamshort}} (IAM), not Cloud Foundry.
+4. If you have an existing {{site.data.keyword.pm_short}} service instance, check the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external} to ensure that the service is managed by {{site.data.keyword.iamshort}} (IAM), not Cloud Foundry.
 
   **Important**: The module checks for an instance of {{site.data.keyword.pm_short}}. If you have an instance, the module uses it. But if your instance is managed by Cloud Foundry, you must first [migrate it to an IAM resource group before running the module](/docs/resources?topic=resources-migrate#migrate).
 
@@ -74,14 +74,14 @@ ibm-ai-openscale-cli --apikey <Your API key>
 ## Viewing results in {{site.data.keyword.aios_short}}
 {: #as-open}
 
-To view insights into the fairness and accuracy of the model, details of data that is monitored, and explainability for an individual transaction, open the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}.
+To view insights into the fairness and accuracy of the model, details of data that is monitored, and explainability for an individual transaction, open the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}.
 
 - To understand the scenario for the sample data, read [Use case and the value of {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gs-use).
 
 ### View insights
 {: #as-insights}
 
-From the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Insights** tab, which shows an overview of metrics for deployed models: ![Insights](images/insight-dash-tab.png)
+From the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}, click the **Insights** tab, which shows an overview of metrics for deployed models: ![Insights](images/insight-dash-tab.png)
 
 - At a glance, the Insights page shows any issues with fairness and accuracy, as determined by the thresholds that are configured.
 

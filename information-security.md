@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: security, information security, GDPR, 
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -46,7 +46,7 @@ If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.
 
 IBM is committed to providing our clients and partners with innovative data privacy, security and governance solutions to assist them on their journey to GDPR compliance.
 
-Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/gdpr){: new_window}.
+Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/gdpr){: external}.
 
 ## Labeling and deleting data in {{site.data.keyword.aios_short}}
 {: #is-stda}

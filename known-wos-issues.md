@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -11,13 +11,14 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:download: .download}
+{:external: target="_blank" .external}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
@@ -53,9 +54,12 @@ The following lists contains the known issues and limitation for {{site.data.key
 
 - There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
 
-- For {{site.data.keyword.pm_full}}, the payload of perturbed images being sent via the machine learning gateway cannot exceed 1 MB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
+- For {{site.data.keyword.pm_full}}, scoring input for image classification models that are sent for payload logging cannot exceed 1 MB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
 
 - The free Lite plan database is not GDPR compliant. If your model processes personally identifiable information (PII), you must purchase a new database or use an existing database that does conform to GDPR rules. 
+
+- Explainability for unstructured text models is not supported for continuous script languages, such as Japanese, Chinese, and Korean, which don't use whitespace or punctuation characters to separate words.
+
 
 
 <p>&nbsp;</p>
@@ -66,6 +70,14 @@ The following lists contains the known issues and limitation for {{site.data.key
 The following issues are common to both {{site.data.keyword.aios_full}} on {{site.data.keyword.Bluemix}} and {{site.data.keyword.wos4d_full}}.
 
 <p>&nbsp;</p>
+
+### Payload formats
+{: #wos-common-issues-payloadformat}
+
+For proper processing of payload analytics, {{site.data.keyword.aios_short}} does not support column names with double quotation marks (") in the payload. This affects both scoring payload and feedback data in CSV and JSON formats.
+
+<p>&nbsp;</p>
+
 
 
 ### Microsoft Azure ML Studio
@@ -233,12 +245,6 @@ The following issues are specific to {{site.data.keyword.wos4d_full}}.
    - Explainability is not supported for SPSS multiclass models that return only the winning class probability.
 
 
-<p>&nbsp;</p>
-
-
-- **Deployment ID cannot contain underscore (_) character in IBM SPSS Collaboration and Deployment Services (C&DS)**
-
-    - Remove the underscore (_) character from the `deployment_id` for a subscription.
 
 <p>&nbsp;</p>
 
@@ -319,16 +325,16 @@ The {{site.data.keyword.aios_short}} service tooling requires the same level of 
 ## Python client
 {: #abt-python}
 
-The [{{site.data.keyword.aios_short}} Python client ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/){: new_window} is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure the datamart database, bind your machine learning engine, and select and monitor deployments. For examples using the Python client in this way, see the [{{site.data.keyword.aios_short}} sample notebooks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks).
+The [{{site.data.keyword.aios_short}} Python client](http://ai-openscale-python-client.mybluemix.net/){: external} is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure the datamart database, bind your machine learning engine, and select and monitor deployments. For examples using the Python client in this way, see the [{{site.data.keyword.aios_short}} sample notebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks).
 
 <p>&nbsp;</p>
 ## Next steps
 {: #abt-next}
 
 - [Get started](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-gs-get-started) with the service.
-- View the [API Reference material ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale){: new_window}.
+- View the [API Reference material](https://{DomainName}/apidocs/ai-openscale){: external}.
 
 Still have questions? 
 
 - [What's new](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-rn-relnotes)
-- [Contact IBM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: new_window}.
+- [Contact IBM](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: external}.

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ai-openscale" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
+{: .toc subcollection="ai-openscale" category="ai" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
 Watson OpenScale
 
     {: .navgroup id="learn"}
@@ -18,6 +18,7 @@ Watson OpenScale
         frameworks-ovr.md
         frameworks-wml-cloud.md
         frameworks-azure-ml-studio.md
+        frameworks-azure-ml-service.md
         frameworks-aws-sagemaker.md
         frameworks-custom.md
         framework-workaround.md
@@ -28,21 +29,28 @@ Watson OpenScale
     {: .topicgroup}
     Configuring Watson OpenScale
         creds.md
+        iam.md
         connect-wml.md
-        connect-other.md
         connect-azureml.md
         connect-sagemaker.md
-        connect-ml.md
+        custom-ml-ovr.md
+        connect-other.md
+        custom-ml-examples.md
         connect-deploy.md
         connect-db.md
+        scoring.md
+        payload-logging.md
+        connect-ml.md
+        payload-auto.md
         config-file.md
         feedback.md
+        schema-definition.md
 
     {: .topicgroup}
     Configuring monitors
         monitor-overview.md
-        monitor-fairness.md
         monitor-accuracy.md
+        monitor-fairness.md
         metrics.md
         fairness_metrics
 
@@ -52,6 +60,35 @@ Watson OpenScale
         insight-timechart.md
         analyze-metrics-transactions.md
         insight-explain.md
+
+    {: .topicgroup}
+    Fairness
+        fairness-ovr.md
+        fairness-group.md
+
+    {: .topicgroup}
+    Quality
+        quality-overview.md
+        quality-confusion-matrix.md
+        quality-area-under-roc.md
+        quality-area-under-pr.md
+        quality-accuracy.md
+        quality-tpr.md
+        quality-fpr.md
+        quality-recall.md
+        quality-precision.md
+        quality-f1-measure.md
+        quality-logarithmic-loss.md
+
+    {: .topicgroup}
+    Performance
+        performance-throughput.md
+
+    {: .topicgroup}
+    Analytics
+        analytics-ovr.md
+        analytics-confidence.md
+        analytics-chart-builder.md
 
     openscale-recovery.md
     {: .navgroup-end}

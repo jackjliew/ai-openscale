@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: fairness, fairness monitor, payload, perturbation, training data, debiased
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Fairness in {{site.data.keyword.aios_short}}
+# Configuring the fairness monitor
 {: #mf-monitor}
 
 In {{site.data.keyword.aios_full}}, the fairness monitor scans your deployment for biases, to ensure fair outcomes across different populations.
@@ -43,11 +43,11 @@ It is mandatory to specify the output schema for a model or function in Watson {
 
 Before configuring the Fairness monitor, there a few key concepts that are critical to understand:
 
-- *Fairness attributes*: These are the model attributes for which the model is likely to exhibit bias. As an example, for the fairness attribute **`Gender`**, the model could be biased against specific gender values (`Female`, `Transgender`, etc.) Another example of a fairness attribute is **`Age`**, where the model could exhibit bias against people in an age group, like `18 to 25`.
+- Fairness attributes are the model attributes for which the model is likely to exhibit bias. As an example, for the fairness attribute **`Gender`**, the model could be biased against specific gender values (`Female`, `Transgender`, etc.) Another example of a fairness attribute is **`Age`**, where the model could exhibit bias against people in an age group, like `18 to 25`.
 
-- *Reference / Monitored value*: The values of fairness attributes are split into two distinct categories: Reference and Monitored. The Monitored values are those which are likely to be discriminated against. In the case of a fairness attribute like **`Gender`**, the Monitored values could be `Female` and `Transgender`. For a numeric fairness attribute, such as **`Age`**, the Monitored values could be `[18-25]`. All other values for a given fairness attribute are then considered as Reference values, for example `Gender=Male` or `Age=[26,100]`.
+- Reference and monitored values: The values of fairness attributes are split into two distinct categories: Reference and Monitored. The Monitored values are those which are likely to be discriminated against. In the case of a fairness attribute like **`Gender`**, the Monitored values could be `Female` and `Transgender`. For a numeric fairness attribute, such as **`Age`**, the Monitored values could be `[18-25]`. All other values for a given fairness attribute are then considered as Reference values, for example `Gender=Male` or `Age=[26,100]`.
 
-- *Favorable / Unfavorable outcome*: The output of the model is categorized as either Favorable or Unfavorable. As an example, if the model is predicting whether a person should get a loan or not, then the Favorable outcome could be `Loan Granted` or `Loan Partially Granted`, whereas the Unfavorable outcome might be `Loan Denied`. Thus, the Favorable outcome is one that is deemed as a positive outcome, while the Unfavorable outcome is deemed as being negative.
+- Favorable and unfavorable outcomes: The output of the model is categorized as either Favorable or Unfavorable. As an example, if the model is predicting whether a person should get a loan or not, then the Favorable outcome could be `Loan Granted` or `Loan Partially Granted`, whereas the Unfavorable outcome might be `Loan Denied`. Thus, the Favorable outcome is one that is deemed as a positive outcome, while the Unfavorable outcome is deemed as being negative.
 
 The {{site.data.keyword.aios_short}} algorithm computes bias on an hourly basis, using the last `N` records present in the payload logging table; the value of `N` is specified when configuring Fairness. The algorithm perturbs these last `N` records to generate additional data.
 
@@ -134,7 +134,7 @@ The results of these determinations are available in the bias visualization, whi
    - Oldest record timestamp in the data frame for which bias has to be computed
    - Newest/latest record timestamp in the data frame for which bias has to be computed
    - Before and after fairness values display in the header portion of the Debiased view. 
-      - The **after** accuracy is computed by taking the data in the feedback table and sending it to the active debiasing API. This API returns the de-biased prediction. The feedback table also contains the manual label. The manual label is compared with the debiased prediction to compute the accuracy. 
+      - The **after** accuracy is computed by taking the feedback data and sending it to the active debiasing API. This API returns the de-biased prediction. The feedback data also contains the manual label. The manual label is compared with the debiased prediction to compute the accuracy. This API returns the de-biased prediction. The feedback table also contains the manual label. The manual label is compared with the debiased prediction to compute the accuracy. 
       - The **before** accuracy is computed by using the same feedback data. For before accuracy computation, the feedback data is sent to the model to get its prediction and the predicted value is compared with the manual label to get the accuracy.
 
   ![example of debiased data](images/debiased.png)
@@ -152,30 +152,19 @@ Consider a data point where, for `Gender=Male` (Reference value), the model pred
 ## Configuring the Fairness monitor
 {: #mf-config}
 
-1.  From the *What is Fairness?* page, click **Next** to start the configuration process.
+From the **Fairness** tab, on the **What is Fairness?** page, click **Begin** to start the configuration process.
 
-    ![What is fairness? page](images/fair-what-is.png)
+![What is fairness? page](images/fair-what-is.png)
 
-1.  On the *Select the features to monitor* page, find and select fairness attributes that you want to use and click **Next**.
+Throughout this process, {{site.data.keyword.aios_full}} analyzes your model and makes recommendations based on the most logical outcome. On the successive pages of the **Fairness** tab, you must perform the following tasks:
 
-    Only features which are of categorical, numeric (integer), float, or double fairness data type are supported. Features with other data types are not supported.
-    {: note}
+1. Select the features to monitor. Only features which are of categorical, numeric (integer), float, or double fairness data type are supported. Features with other data types are not supported.
 
-    In this example, the `Age`, `Gender`, and `Ethnicity` features have been selected.
+1. Specify reference and monitored groups.
 
-    ![Select features to monitor page with selections](images/fair-select-feature.png)
+   Each feature has specific requirements to configure. For example, if you choose `age` as one of your monitored features, you must define the age ranges for a **Reference Group** and a **Monitored Group** by entering values directly in each group.
 
-    Click **Next** to continue.
-
-1.  Each feature has specific requirements to configure. In this example, you define the **`Age`** ranges for a Reference Group and a Monitored Group by manually entering values directly in each group.
-
-    In this example, for the **`Age`** fairness attribute, if you feel that your model is likely to be biased against people with ages between 18 and 25, then the Monitored Group value will be `[18-25]` and the Reference Group value will be `[26-100]`. In case of the **`Gender`** fairness attribute, the Reference Group value might be `Male`, while the Monitored Group values could be `Female` and `Transgender`.
-
-    ![Configure age settings](images/fair-config-age.png)
-
-    Click **Next** to continue
-
-1.  Set the threshold limit for Fairness, for **`Age`**.
+1.  Set the fairness alert threshold for the feature.
 
     A Fairness threshold is used to specify an acceptable difference between the percentage of Favorable outcomes for the Monitored group as compared to the percentage of Favorable outcomes for the Reference group.
 
@@ -183,50 +172,26 @@ Consider a data point where, for `Gender=Male` (Reference value), the model pred
 
     If the Fairness threshold is set to 80%, then the algorithm will flag the model as being biased, because the computed Fairness exceeds the threshold. However, if the threshold is set to 70% then it will not report the model as being biased.
 
-    ![Configure age settings](images/fair-config-age-limit.png)
+     The values that you enter in these screens should be those that are sent to the model scoring endpoint (and consequently will be added to the payload table). If the data is being manipulated before sending to the scoring endpoint, then enter the manipulated values. For example, if the original data had values of `Male` and `Female` for *Gender* and it was manipulated so that the data sent to the scoring endpoint was `M` and `F`, then enter `M` and `F` on this screen.
 
-    Click **Next** once you have selected a Fairness threshhold.
-
-1.  Configure the `Gender` and `Ethnicity` features in the same manner:
-
-     ![Configure gender settings](images/fair-config-gender.png)
-
-     ![Configure ethnicity settings](images/fair-config-ethnic.png)
-
-     **Note**: The values that you enter in these screens should be those that are sent to the model scoring endpoint (and consequently will be added to the payload table). If the data is being manipulated before sending to the scoring endpoint, then enter the manipulated values. For example, if the original data had values of `Male` and `Female` for *Gender* and it was manipulated so that the data sent to the scoring endpoint was `M` and `F`, then enter `M` and `F` on this screen.
-
-     Click **Next** when you are done with each feature.
-
-1.  Now, specify values that represent a favorable outcome for the model. Values are derived from the `label` column in the [training data](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata), if the model output schema contains a mapping column. In {{site.data.keyword.pm_full}}, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
+1.  Specify values that represent a favorable outcome for the model. Values are derived from the `label` column in the [training data](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata), if the model output schema contains a mapping column. In {{site.data.keyword.pm_full}}, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
 
     For example, if the `prediction` value is `1.0`, the mapping column could have a value of `Loan denied`; this implies that the prediction of the model is `Loan denied`. So, if the model output schema contains a mapping column, then specify Favorable and Unfavorable values using those present in the mapping column.
 
     If, however, the mapping column is not present in the model output schema, then the Favorable and Unfavorable values need to be specified using the value of the `prediction` column (`0.0`, `1.0`, etc.)
 
-     ![Configure outcome](images/fair-config-outcome.png)
-
-     Click **Next**.
-
 1.  Finally, set a minimum sample size, to prevent measuring Fairness until a minimum number of records are available in the evaluation dataset. This ensures the sample size is not too small to skew results. Every time bias checking runs, it will use the minimum sample size to decide the number of records on which it will do the bias computation.
 
-     ![Configure sample size](images/fair-config-sample.png)
+    A summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, click **Save**.
 
-1.  Click the **Next** button.
-
-    A summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section.
-
-    You can also select the **Add another feature** link to return to the feature selection screen and add more features to the Fairness monitor, for example: `City`, `Zip Code` or `Account Balance`.
-
-1.  Click **Save** to complete your configuration.
+    You can also click **Add another feature** to return to the feature selection screen and add more features, such as `City`, `Zip Code` or `Account Balance` to the Fairness monitor.
 
 ### Understanding how de-biasing works
 {: #mf-debias}
 
-You will then be presented with a screen that provides a de-biased scoring endpoint.
+To check the debias endpoint, click the **Debias Endpoint** button. You can then view and copy the enpoint in different formats, such as cURL, Java, or Python. 
 
-  ![Debias API](images/fair-debias-api.png)
-
-The de-biased scoring endpoint can be used exactly as the normal scoring endpoint of your deployed model. In addition to returning the response of your deployed model, it also returns two extra columns called `debiased_prediction` and `debiased_probability`.
+The de-biased scoring endpoint can be used exactly as the normal scoring endpoint of your deployed model. In addition to returning the response of your deployed model, it also returns the `debiased_prediction` and `debiased_probability` columns.
 
 - The `debiased_prediction` column contains the debiased prediction value. In the case of {{site.data.keyword.pm_full}}, this is an encoded representation of the prediction. For example, if the model prediction is either "Loan Granted" or "Loan Denied", {{site.data.keyword.pm_full}} can encode these two values to "0.0" and "1.0", respectively. The `debiased_prediction` column contains such an encoded representation of the debiased prediction.
 
@@ -245,4 +210,4 @@ Finally, {{site.data.keyword.aios_short}} uses a threshold to decide that data i
 ## Next steps
 {: #mf-next}
 
-From the *Configure monitors* page, you can select another monitoring category.
+From the **Configure monitors** page, you can select another monitoring category.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: Amazon SageMaker, machine learning, services, AWS
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,6 +31,8 @@ subcollection: ai-openscale
 Your first step in the {{site.data.keyword.aios_short}} tool is to specify an Amazon SageMaker service instance. Your Amazon SageMaker service instance is where you store your AI models and deployments.
 {: shortdesc}
 
+You can also add your machine learning provider by using the Python SDK. For more information on performing this programmatically, see [Bind your Amazon SageMaker machine learning engine](/docs/services/ai-openscale?topic=ai-openscale-cml-connect#cml-smbind).
+
 ## Connect your Amazon SageMaker service instance
 {: #csm-config}
 
@@ -45,6 +47,10 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify an Am
     ![Select Amazon SageMaker service](images/connect-sage.png)
 
 1.  Enter your credentials:
+
+    - Access Key ID: Your AWS access key ID, `aws_access_key_id`, which verifies who you are and authenticates and authorizes calls that you make to AWS.
+    - Secret Access Key: Your AWS secret access key, `aws_secret_access_key`, which is required to verify who you are and to authenticate and authorize calls that you make to AWS.
+    - Region: Enter the region where your Access Key ID was created. Keys are stored and used in the region in which they were created and cannot be transferred to another region. 
 
     ![Enter Amazon SageMaker service credentials](images/connect-sage-cred.png)
 

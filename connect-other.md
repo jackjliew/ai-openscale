@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: machine learning, services, ml, custom 
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -85,15 +85,15 @@ This image shows the Custom environment support:
 
 You can also reference the following links:
 
-[AIOS payload logging API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[AIOS payload logging API](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: external}
 
-[Custom deployment API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
+[Custom deployment API](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: external}
 
-[Python client binding SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
+[Python client binding SDK](http://ai-openscale-python-client.mybluemix.net/#bindings){: external}
 
-[Working with Custom machine Learning engine ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[Working with Custom machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-[Python SDK for IBM Watson OpenScale ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
+[Python SDK for IBM Watson OpenScale](https://pypi.org/project/ibm-ai-openscale/){: external}
 
 - **Input criteria for model to support monitors**
 

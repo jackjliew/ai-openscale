@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: deployment, monitors, data
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,50 +31,79 @@ subcollection: ai-openscale
 Set up and enable monitors for each deployment that you are tracking with {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
+## Configuration
+{: #io-conf}
+
+The **Configure** tab ( ![Config tab](images/insight-config-tab.png) ) opens a Configuration Summary for the selected deployment.
+
+  ![Config summary](images/insight-config-summary.png)
+
+From here, you can directly edit the configuration settings for your deployment monitor.
+
 ## Selecting a deployment
 {: #mo-select-deploy}
 
 1.  First, you must select a deployment.
+
+    1. Click the **Add deployments** button. A list of available model deployments appears.
+    2. Click a model deployment and then click **Configure**.
 
     If there are multiple deployments for a given model, then when you configure one deployment, all other deployments for the same model also get configured.
     {: note}
 
     ![Select deployment page](images/config-select-deploy.png)
 
-1.  Select the *Prepare for monitoring* tile.
+1.  Click the **Configure monitors** button.
 
     ![Prepare for monitoring](images/config-prep-monitor.png)
 
-## Working with data
+## Provide payload logging details
 {: #mo-work-data}
 
-1.  Now you will provide information about your model and training data; click **Next**. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+You must provide information about your model and training data. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
-    ![Prepare explanation](images/config-what-monitor.png)
+![Prepare explanation](images/config-what-monitor.png)
 
-1.  From the drop-down menu, select the type of data your deployment analyzes, and click **Next**.
+- If you use an {{site.data.keyword.pm_full}} instance that is in the same region as your {{site.data.keyword.aios_short}} instance, your payload logging information is configured automatically for you.
+- Otherwise from the **Payload logging** tab and windows, you must enter information about your data and algorithm types and your payload logging. 
 
-    ![Select input type](images/config-input-monitor.png)
+   There are specific requirements depending on your selections. For more information, see [Numeric/categorical data](https://test.cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan).
+
+   Before you can configure your monitors, you need to copy one of the code snippets to run. Run the cURL command in your client application or the Python command in your data science notebook. This provides a way to log model deployment requests and write response data into the payload database.
+
+## Provide model details
+{: #mo-work-model-dets}
+
+Provide information about your model so that {{site.data.keyword.aios_short}} can access the database and understand how the model is set up.
+
+Specifically to configure monitors, you must perform the following tasks:
+
+1. Specify the location of the training data. You do this by entering the location, hostname or IP address, the database name, and the authentication information.
+2. Within the database, you must select the training table by selecting the schema and table.
+3. Select the label column from the training table.
+4. Select the features that were used to train the AI deployment.
+5. Select the text and categorical features.
+6. Select the deployment prediction column.
+7. Finally, you can review your model details before you save it.
+
+The following sections give some specific information that you encounter depending on the type of model, either [Numeric/categorical data](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan) or [Images and Unstructured text](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datai).
+
 
 ### Numeric/categorical data
 {: #mo-nuca}
 
 For numeric or categorical data, you need to provide information about the training data for your model, in order to configure the monitors.
 
-  ![Select config type](images/config-manual-monitor.png)
-
 - **Manually configure monitors** - Requires you to provide connection information to your training data.
 
     - Select the [algorithm type](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-understand), and click **Next**:
 
-      ![Multi-class](images/multiclass.png)
-
-      Please ensure that the format of the training data is exactly the same as that expected by your model. For example, if the model expects `M` and `F` for the feature *Gender* then the training data should have `M` and `F`, not `Male` and `Female`. Currently {{site.data.keyword.aios_short}} supports Db2 database or Cloud Object Storage locations only.
+      The format of the training data must match the model. For example, if the model expects `M` and `F` for the feature `Gender`, then the training data should have `M` and `F`, not `Male` and `Female`.  The current release of {{site.data.keyword.aios_short}} supports only Db2 database or Cloud Object Storage locations.
         {: important}
 
     - Specify the Location (either `Db2` or `Cloud Object Storage`), then:
 
-        - For a Db2 database, complete the following:
+        - For a Db2 database, enter the following information:
 
             - Host name or IP address
             - Port
@@ -82,61 +111,32 @@ For numeric or categorical data, you need to provide information about the train
             - Username
             - Password
 
-            ![Specify Db2 location of training data page](images/config-train-db2-monitor.png)
+        - For Cloud Object Storage, enter the following information:
 
-        - For Cloud Object Storage, complete the following:
-
-            - Login URL
-
-              The Login URL must match the region setting of the bucket where your training data is located. You will specify the training data bucket in the next step.
-              {: important}
-
+            - Login URL: The Login URL must match the region setting of the bucket where your training data is located. You will specify the training data bucket in the next step.
             - Resource instance (ID)
             - API key
 
-            ![Specify Cloud Object Storage location of training data page](images/config-train-cos-monitor.png)
-
-    - Ensure a valid connection by clicking the **Test** button to connect to the training data. Click **Next**.
-
+    - To ensure a valid connection, click the **Test** button to connect to the training data.
     - Specify the exact location in the Db2 database or Cloud Object Storage where the training data is located.
 
-        - For a Db2 database, select both a schema and a training table that includes columns expected by your model:
-
-          ![Specify Db2 location of schema and training table](images/fair-config-table-db2.png)
-
-        - For Cloud Object Storage, select a Bucket and a Data Set:
-
-          ![Specify Cloud Object Storage location of data set](images/fair-config-dset-cos.png)
-
-          Click **Next** to proceed to Step 5.
+        - For a Db2 database, select both a schema and a training table that includes columns expected by your model.
+        - For Cloud Object Storage, select a Bucket and a Data Set.
 
 - **Upload a configuration file** - Choose this option if you prefer to keep your training data private. You can use a custom Python notebook to provide {{site.data.keyword.aios_short}} with information to analyze your training data without providing access to the training data itself.
 
   Running the Python notebook lets you capture distinct values in the schema columns, as well as the column names. In addition, you can use the notebook to pre-configure the Fairness monitor.
 
-    - Download the [custom notebook ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: new_window}, and replace any credentials with your own credentials.
+   - Download the [custom notebook](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: external}, and replace any credentials with your own credentials.
+   - Review the notebook carefully, specifying data for your model where appropriate. Save the notebook.
+   - Run the notebook to generate a JSON-formatted configuration file.
+   - Upload the JSON configuration file.
 
-    - Review the notebook carefully, specifying data for your model where appropriate. Save the notebook.
+     ![Upload config JSON](images/config-json-monitor.png)
 
-    - Run the notebook to generate a JSON-formatted configuration file.
-
-    - Upload the JSON configuration file.
-
-        ![Upload config JSON](images/config-json-monitor.png)
-
-    - Click **Next**.
-
-- {{site.data.keyword.aios_short}} will locate your training data from the metadata stored with the model in {{site.data.keyword.pm_full}}. Choose the label column in the training data that contains your prediction values and click **Next**.
-
-  ![Select column label](images/fair-config-column.png)
-
-- Select the columns used to train the model - these are the features that your model deployment expects in a request. Click **Next**.
-
-    ![Select column label](images/explain-select-column.png)
-
-- Finally, select the columns that contained text, and have been converted to integers. For example, if the original training data contained `Male` and `Female` for *Gender*, and they have now been mapped to `0` and `1` respectively, the training data now contains `0` and `1` values for the *Gender* column. Identify such columns which now contain integers, but originally contained text values. Click **Next**.
-
-    ![Select data table](images/explain-text-column.png)
+- {{site.data.keyword.aios_short}} locates your training data from the metadata stored with the model in {{site.data.keyword.pm_full}}. Choose the label column in the training data that contains your prediction values.
+- Select the columns used to train the model - these are the features that your model deployment expects in a request.
+- Finally, select the columns that contained text, and have been converted to integers. For example, if the original training data contained `Male` and `Female` for `Gender`, and they have now been mapped to `0` and `1` respectively, the training data now contains `0` and `1` values for the `Gender` column. Identify such columns which now contain integers, but originally contained text values.
 
 ### Images and Unstructured text
 {: #mo-imun}
@@ -159,4 +159,4 @@ Review your selection summary and click **Save** to continue.
 ### Next steps
 {: #mo-next}
 
-To begin configuring monitors, select a category and click **Begin**.
+To begin configuring monitors, click the **Accuracy** tab and click **Begin**.

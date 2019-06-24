@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 
 keywords: troubleshooting, bias
@@ -12,7 +12,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -28,6 +28,26 @@ subcollection: ai-openscale
 
 # Troubleshooting
 {: #ts-trouble}
+
+## Common issues for {{site.data.keyword.aios_full}}
+{: #ts-trouble-common}
+
+The following issues are common for both {{site.data.keyword.aios_full}} on Cloud and {{site.data.keyword.wos4d_full}}.
+
+### Payload analytics does not display properly
+{: #ts-trouble-common-payloadfileformat}
+
+- Situation: The following error message displays:
+  - error code: AIQDT0044E
+  - error text: Forbidden character `"` in column name `<column name>`
+
+- Situation: For proper processing of payload analytics, {{site.data.keyword.aios_short}} does not support column names with double quotation marks (") in the payload. This affects both scoring payload and feedback data in CSV and JSON formats.
+- Solution: Remove double quotation marks (") from the column names of the payload file.
+
+## Issues specific to {{site.data.keyword.wos4d_full}}
+{: #ts-trouble-icp}
+
+The following issues are specific to {{site.data.keyword.wos4d_full}}:
 
 ## Bias/Fairness service is down
 {: #ts-bfdown}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: ai, getting started, tutorial, understanding, fast start
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -41,18 +41,18 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
 **Important**: For best performance, it's recommended that the prerequisite services are created in the same region as {{site.data.keyword.aios_short}}. To view available locations for {{site.data.keyword.aios_short}}, see [Service availability](/docs/resources?topic=resources-services_region).
 
-1.  Log in to your [{{site.data.keyword.Bluemix_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} with your {{site.data.keyword.ibmid}}.
+1.  Log in to your [{{site.data.keyword.Bluemix_notm}} account](https://{DomainName}){: external} with your {{site.data.keyword.ibmid}}.
 1.  For each of the following services that you don't already have associated with your account, create an instance by clicking the link, giving the service a name, selecting the **Lite** (free) plan, and clicking the **Create** button:
 
-    - [{{site.data.keyword.DSX}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-studio){: new_window}
+    - [{{site.data.keyword.DSX}}](https://{DomainName}/catalog/services/watson-studio){: external}
 
       ![Watson Studio](images/watson_studio.png)
 
-    - [{{site.data.keyword.pm_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/machine-learning){: new_window}
+    - [{{site.data.keyword.pm_full}}](https://{DomainName}/catalog/services/machine-learning){: external}
 
       ![Machine Learning](images/machine_learning.png)
 
-    - [Object Storage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}
+    - [Object Storage](https://{DomainName}/catalog/services/cloud-object-storage){: external}
 
       ![Object Storage](images/object_storage.png)
 
@@ -60,7 +60,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 ## Set up a Watson Studio project
 {: #gs-setup}
 
-1.  Log in to your [Watson Studio account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dataplatform.ibm.com/){: new_window} and begin by creating a new project. Select **New project**.
+1.  Log in to your [Watson Studio account](https://dataplatform.ibm.com/){: external} and begin by creating a new project. Select **New project**.
 
     ![Watson Studio create project](images/studio_create_proj.png)
 
@@ -104,7 +104,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 {: hide-dashboard}
 {: #gs-provaios}
 
-1.  [Provision a new {{site.data.keyword.aios_short}} service instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
+1.  [Provision a new {{site.data.keyword.aios_short}} service instance](https://{DomainName}/catalog/services/watson-openscale){: external}
 
     ![{{site.data.keyword.aios_short}}](images/openscale.png)
 
@@ -115,7 +115,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
 Now that the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models.
 
-1.  Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The **Welcome to {{site.data.keyword.aios_short}}** demo page opens. 
+1.  Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The **Welcome to {{site.data.keyword.aios_short}}** demo page opens.
 2. For this tutorial, click **No Thanks**, and then click **Begin**.
 
 1.  Click the **Watson Machine Learning** tile.
@@ -133,7 +133,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 1.  Next, you need to choose a database. You have two options: the free database, or an existing or new database. For this tutorial, select the **Use the free database hosted by {{site.data.keyword.aios_short}}** tile.
 
-    The free database has some important limitations. It is a hosted database that does not give you separate access to it. It gives {{site.data.keyword.aios_short}} acccess to your database and data. It is not GDPR-compliant. See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db) topic. The existing database can be a PostgreSQL database or a Db2 database. 
+    The free database has some important limitations. It is a hosted database that does not give you separate access to it. It gives {{site.data.keyword.aios_short}} acccess to your database and data. It is not GDPR-compliant. See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db) topic. The existing database can be a PostgreSQL database or a Db2 database.
     {: tip}
 
     ![Select database](images/gs-set-lite-db2.png)
@@ -154,7 +154,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 Before you can configure your monitors, you must generate at least one scoring request against your model in order to generate payload logging that the monitors can consume. In this section, you will provide sample data in the form of a JSON file to generate a scoring request.
 
-1.  Download the [credit_payload_data.json ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) file.
+1.  Download the [credit_payload_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) file.
 
 1.  From the **Deployments** tab of your Watson Studio project, click the **credit-risk-deploy** link, click the **Test** tab, and select the JSON input icon.
 
@@ -292,7 +292,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 
 To enable monitoring for accuracy, you must provide your model with feedback data. Accuracy data will not appear in the dashboard until that is done. You can generate the requests all at once by adding sample feedback data to the model for scoring. For this task, you'll download a CSV file that contains sample feedback data.
 
-1.  Download the [credit_feedback_data.csv ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) file.
+1.  Download the [credit_feedback_data.csv](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) file.
 
 1.  In {{site.data.keyword.aios_short}}, click the **Insights** tab.
 
@@ -327,13 +327,13 @@ To check the result immediately, from the **Insights** page, select a deployment
 ### View insights for your deployment
 {: #gs-viewin}
 
-1. From the [{{site.data.keyword.aios_short}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, click the **Insights** tab.
+1. From the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}, click the **Insights** tab.
 
   ![Insights](images/insight-dash-tab.png)
 
 1. View the Insights page to see an overview of metrics for your deployed models. You can view alerts for fairness or accuracy metrics that exceeds the 90% threshold.
 
-  Fairness and Accuracy metrics can take up to an hour to display. 
+  Fairness and Accuracy metrics can take up to an hour to display.
   {: tip}
 
   ![Insight overview](images/insight-overview.png)
@@ -363,11 +363,10 @@ To check the result immediately, from the **Insights** page, select a deployment
 1.  A list of transactions that contributed to bias for the past hour displays. To view a more detailed explanation of a particular transaction, from the **ACTION** column, click **Explain**.
 
     ![Transaction list](images/transaction_list_cr.png)
-
+    
 1.  An explanation of how the model arrived at its conclusion displays. This explanation includes how confident the model was, the factors that contributed to the confidence level, and the columns that were fed to the model.
 
     ![View Transaction](images/view_transaction1.png)
-
 
 ## Related information
 {: #wos-info}

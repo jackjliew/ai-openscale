@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: release notes, what's new 
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -104,7 +104,7 @@ In addition to usability improvements and security updates, our developers have 
 
 - __*Automated setup tour*__: A new tour-led way to set up your {{site.data.keyword.aios_short}} environment. Use the [Automated setup](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) to provision services and download and configure a model. You will notice this option when you have a new instance of {{site.data.keyword.aios_short}}.
 - __*Switch to beta*__: ![beta tag](images/beta.png) A new toggle, **Explore the new beta version**, enables you to work in our beta environment, where you can check out all the latest features and new functionality. Don't like what you see? Just switch back by clicking **Go back to the original version**. Your configuration and monitors are unaffected. The following capabilities are part of the current beta program:
-    - __*Confusion matrix*__: A [confusion matrix displays](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) the false positives and false negatives. Click a cell to view the subset of feedback records.
+    - __*Confusion matrix*__: A [confusion matrix displays](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx) the false positives and false negatives. Click a cell to view the subset of feedback records.
 
 ## 10 April 2019
 {: #rn-10April2019}
@@ -162,7 +162,7 @@ The following new features, changes, and known issues with the service are avail
 
 - __*Support for your model type*__: In addition to AI model deployments in {{site.data.keyword.pm_full}}, {{site.data.keyword.aios_short}} supports model deployments in Microsoft Azure, Amazon SageMaker, and Custom environments. See [Supported model types](/docs/services/ai-openscale?topic=ai-openscale-in-ov) for more information.
 
-- __*Free "lite" database*__: A free "lite" managed database provides everything you need to begin using {{site.data.keyword.aios_short}}. See the [{{site.data.keyword.aios_short}} pricing plans ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-openscale){: new_window} for details.
+- __*Free "lite" database*__: A free "lite" managed database provides everything you need to begin using {{site.data.keyword.aios_short}}. See the [{{site.data.keyword.aios_short}} pricing plans](https://{DomainName}/catalog/services/watson-openscale){: external} for details.
 
 - __*Bias monitoring*__: Support for protected attributes of type `float` and `double`, and bias detection on linear regression models. And {{site.data.keyword.aios_short}} can automatically de-bias your AI model for you. See [Understanding fairness](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor) for more information.
 

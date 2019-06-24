@@ -2,17 +2,17 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 
 keywords: deployment, monitoring 
 
-subcollection: ai-openscale-icp
+subcollection: ai-openscale
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -47,4 +47,4 @@ You have successfully configured {{site.data.keyword.aios_short}}.
 ## Next steps
 {: #dpl-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [specify your database](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-cdb-connect).
+{{site.data.keyword.aios_short}} is now ready for you to [specify your database](/docs/services/ai-openscale?topic=ai-openscale-cdb-connect).

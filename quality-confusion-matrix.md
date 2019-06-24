@@ -2,16 +2,16 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
-keywords: metrics, monitoring, custom metrics, thresholds
+keywords: metrics, monitoring, custom metrics, thresholds, confusion matrix
 
 subcollection: ai-openscale
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,19 +25,20 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Analyzing metrics and transactions ![beta tag](images/beta.png)
-{: #anlz_metrics}
-
-You can use {{site.data.keyword.aios_full}} to analyze metrics and transactions through a variety of means.
-{: shortdesc}
-
-## Confusion matrix ![beta tag](images/beta.png)
+# Confusion matrix ![beta tag](images/beta.png)
 {: #it-conf-mtx}
 
 As a detail of the quality metrics, you can view the records that the model analyzed incorrectly. Such anomalies can be false positives or false negatives for binary classification models or can be incorrect class assignments for multi-class models. You can also view a list of feedback records that the model did not analyze correctly.
 {: shortdesc}
 
-1. From any of the **Quality** charts, such as **Fairness** click on an hour/day in the chart.
+To review related details, such as confusion matrix for binary and multi-class classification, which are available for some metrics, click the chart.
+
+![detail table of quality metrics](images/quality_metrics_002.png)
+
+## Steps
+{: #it-conf-mtx-steps}
+
+1. From any of the **Quality** charts, such as **Accuracy** click on an hour/day in the chart.
     
     ![Transaction list biased](images/Confusion_Matrix_040819.004.png)
 

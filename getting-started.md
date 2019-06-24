@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -19,7 +19,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:hide-dashboard: .hide-dashboard}
 {:tip: .tip}
 {:important: .important}
@@ -90,17 +90,22 @@ To quickly see how {{site.data.keyword.aios_short}} monitors a model, run the de
 ## Before you begin
 {: #wos-prereqs}
 
-Before you begin the tour, you must have the following resources already set up:
+Before you begin the tour, you must have the following resources set up:
 
 - [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
+
+The automated setup tour is designed to work with the least possible user interaction. It automatically makes the following decisions for you:
+
+- If you have multiple {{site.data.keyword.pm_full}} instances set up, the install process runs and API call to list the instances and chooses whichever {{site.data.keyword.pm_short}} instance appears first in the resulting list. 
+- To create a new lite version {{site.data.keyword.pm_full}}, {{site.data.keyword.aios_short}} installer uses the default resource group for your {{site.data.keyword.Bluemix}} account.
 
 ### Provision an {{site.data.keyword.aios_full}} service
 {: #crt-wos-faststart}
 
 If you haven't already, ensure that you provision {{site.data.keyword.aios_full}}. 
 
-- [Provision a {{site.data.keyword.aios_short}} instance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/watson-openscale){: new_window} if you do not already have one associated with your account:
+- [Provision a {{site.data.keyword.aios_short}} instance](https://{DomainName}/catalog/services/watson-openscale){: external} if you do not already have one associated with your account:
 
   ![{{site.data.keyword.aios_short}} tile](images/wos-cloud-tile.png)
 

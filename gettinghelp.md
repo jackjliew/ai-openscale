@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: getting help, help, release notes, what's new, developer resources 
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -31,13 +31,23 @@ subcollection: ai-openscale
 If you have problems or questions when using {{site.data.keyword.aios_full}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 {: shortdesc}
 
+## Help tab
+{: #io-help}
+
+The Help tab ( ![help tab icon](images/insight-help-tab.png) ) provides additional information to assist you in using {{site.data.keyword.aios_short}}.
+
+![help panel](images/help-tab-flyout.png)
+
+## Asking questions
+{: #wos-get-help-forums}
+
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.aios_short}} development teams.
 
-If you have technical questions about {{site.data.keyword.aios_short}}, post your question on [StackOverflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/questions/tagged/watson-openscale) and tag your question with `watson-openscale`.
+If you have technical questions about {{site.data.keyword.aios_short}}, post your question on [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale) and tag your question with `watson-openscale`.
 
-For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/?s=openscale) forum. Include the `openscale` tag. See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html) for more details about using the forums.
+For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale) forum. Include the `openscale` tag. See [Getting help](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html) for more details about using the forums.
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/unifiedsupport/supportcenter) and click **Create a case**.
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://cloud.ibm.com/unifiedsupport/supportcenter) and click **Create a case**.
 
 ## Still looking for more?
 {: #looking}

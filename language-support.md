@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: language support, 
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -50,6 +50,7 @@ Because this is the first phase of support for a fully-globalized product, trans
 - The {{site.data.keyword.aios_short}} API has not been translated.
 - The installation mechanism for {{site.data.keyword.wos4d_full}} has not been translated.
 - Bidirectional languages are not currently supported.
+- Explainability for unstructured text models is not supported for continuous script languages, such as Japanese, Chinese, and Korean, which don't use whitespace or punctuation characters to separate words.
 
 ## Limitations for {{site.data.keyword.aios_short}} documentation
 {: #sl-langs-limit-doc}

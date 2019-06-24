@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: feedback data, data, feedback, models
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Formatting and uploading feedback data in {{site.data.keyword.aios_short}}
 {: #fmt-upld-fdbk-data}
 
-Feedback data is essential to maintain an ubiased model. You must upload feedback data to the {{site.data.keyword.aios_full}} service on a regular basis to ensure that your model takes into account up-to-date data that may indicate changes in the context of your predictive application.  With a feedback loop, the system learns continuously by monitoring the effectiveness of predictions and retraining when needed. Monitoring and using the resulting feedback are at the core of machine learning. The following information is meant to help you with formatting and uploading your feedback data.
+Feedback data is essential to maintain an unbiased model. You must upload feedback data to the {{site.data.keyword.aios_full}} service on a regular basis to ensure that your model takes into account up-to-date data that may indicate changes in the context of your predictive application.  With a feedback loop, the system learns continuously by monitoring the effectiveness of predictions and retraining when needed. Monitoring and using the resulting feedback are at the core of machine learning. The following information is meant to help you with formatting and uploading your feedback data.
 (: shortdesc)
 
 ## Formatting feedback data
@@ -57,8 +57,16 @@ subscription.feedback_logging.print_table_schema()
 
 Typically for a CSV file you provide data in columns and rows with a row for column names.
 
-Typically, no double quotation marks (") are needed when the column names are all uppercase, which makes them case-insensitive for Db2, however for other databases and in the instance where column names are mixed case, the case must match.
+No double quotation marks (") are needed when the column names are all uppercase, which makes them case-insensitive for Db2, however for other databases and in the instance where column names are mixed case, the case must match.
  
+The feedback CSV file is expected to have all feature values, and the manually assigned target/label value. For example, the drug model training data contains feature values `AGE`, `SEX`, `BP`, `CHOLESTEROL`,`NA`,`K`, and the target/label value `DRUG`. The feedback CSV file needs to include values for those fields; an example would look like `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. If a header is provided for the feedback CSV file, then field names are mapped using the header. Otherwise the field order **MUST** be exactly the same as in the training schema. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) 
+
+Please note that prediction types returned by your model, and the label/target column in your feedback data, must match.
+{: note}
+
+File sizes are currently limited to 8MB.
+{: note}
+
 If the file contains column names, columns do not necessarily have to match the table order, however, if the file has no column names, you must match the table order. It is possible to have columns that are not in the original training data. These columns are ignored during processing. The following sample shows a validly formatted CSV format file where double quotation marks (") are used for the column names:
 
 ```
@@ -195,3 +203,29 @@ The JSON format consists of a collection of objects with fields corresponding to
 ]
 }
 ```
+
+## Uploading feedback data
+{: #fmt-upld-fdbk-data-uploading}
+
+You can upload feedback data from a CSV file directly in the {{site.data.keyword.aios_short}} user interface. For uploading a JSON file, you can use {{site.data.keyword.DSX}}. 
+
+### Uploading a CSV file
+{: #fmt-upld-fdbk-data-upld-csv}
+
+To upload a CSV file, use the **Add feedback data** button.
+
+1. From the {{site.data.keyword.aios_short}} dashboard, click the deployment tile.
+2. From the model deployment window, click the **Configuration** ![the deployment configuration button is shown](images/configure-deployment-button.png) icon.
+3. Click the **Add feedback data** button, select the CSV file that contains the feedback data, and click **Open**.
+4. From the drop-down menu, click the field delimiter and click **Select**.
+
+### Uploading a JSON file
+{: #fmt-upld-fdbk-data-upld-json}
+
+1. Launch {{site.data.keyword.DSX}} and go to the project that contains the model.
+2. Download the JSON file.
+1. From the **Deployments** tab of your {{site.data.keyword.DSX}} project, click the **model** link, click the **Test** tab, and select the JSON input icon.
+
+    ![JSON test](images/json_test02.png)
+
+1.  Now, open the JSON file you downloaded, and copy the contents to the JSON field in the **Test** tab. Click the **Predict** button to send and score training payloads to your model.

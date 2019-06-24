@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: credentials, REST API, data mart
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -38,7 +38,7 @@ For enterprise accounts, an administrator can create the data mart, invite users
 
 To create a Platform API key, complete the following steps:
 
-- Log into [{{site.data.keyword.cloud_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}.
+- Log into [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}.
 
 - Select **Manage** --> **Security** --> **Platform API Keys**
 
@@ -111,3 +111,13 @@ To create credentials for {{site.data.keyword.aios_short}}, complete the followi
     ```
 
     The `GUID` value is your {{site.data.keyword.aios_short}} instance ID.
+        
+## Next steps
+{: #cred-create-next-steps}
+
+Specify your machine learning provider:
+
+- [Specifying an IBM Watson Machine Learning service instance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
+- [Specifying a Microsoft Azure ML Studio instance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
+- [Specifying an Amazon SageMaker ML service instance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
+- [Specifying a Custom ML service instance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-co-connect)

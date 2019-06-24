@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-24"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -25,31 +25,25 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Analyzing metrics and transactions ![beta tag](images/beta.png)
-{: #anlz_metrics}
+# Performance metrics overview ![beta tag](images/beta.png)
+{: #anlz_metrics_performance}
 
-You can use {{site.data.keyword.aios_full}} to analyze metrics and transactions through a variety of means.
+Use performance monitoring to know the velocity of data records processed by your deployment. You enable performance monitoring when you select the deployment to be tracked and monitored by {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
-## Confusion matrix ![beta tag](images/beta.png)
-{: #it-conf-mtx}
+Performance metrics are calculated based on the following information:
 
-As a detail of the quality metrics, you can view the records that the model analyzed incorrectly. Such anomalies can be false positives or false negatives for binary classification models or can be incorrect class assignments for multi-class models. You can also view a list of feedback records that the model did not analyze correctly.
-{: shortdesc}
+- scoring payload data
 
-1. From any of the **Quality** charts, such as **Fairness** click on an hour/day in the chart.
-    
-    ![Transaction list biased](images/Confusion_Matrix_040819.004.png)
+For proper monitoring purpose, every scoring request should be logged in {{site.data.keyword.aios_short}} as well. Payload data logging is automated for {{site.data.keyword.pm_full}} engines. For other machine learning engines, the payload data can be provided either by using using the Python client or the REST API. Performance monitoring does not create any additional scoring requests on the monitored deployment.
 
-1. A confusion matrix displays the false positives and false negatives. Click a cell to view the subset of feedback records.
+You can review performance metrics value over time on the {{site.data.keyword.aios_short}} dashboard:
 
-    ![Transaction list biased](images/Confusion_Matrix_040819.005.png)
+![performance chart](images/performance_metrics_001.png)
 
-1. Review the feedback records and request an explanation of the analysis against the feedback record.
+## Supported performance metrics
+{: #anlz_metrics_performance_supp_quality_mets}
 
-    ![Transaction list biased](images/Confusion_Matrix_040819.006.png)
+The following performance metrics are supported by {{site.data.keyword.aios_short}}:
 
-1. Transactions appear inline.
-
-    ![Transaction list biased](images/Confusion_Matrix_040819.007.png)
-
+- [Throughput](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)
