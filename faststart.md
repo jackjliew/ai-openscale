@@ -100,8 +100,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 ## Configure {{site.data.keyword.aios_short}}
 {: #gs-confaios}
 
-### Provision {{site.data.keyword.aios_short}}
-{: hide-dashboard}
+### Provision an instance of {{site.data.keyword.aios_short}}
 {: #gs-provaios}
 
 1.  [Provision a new {{site.data.keyword.aios_short}} service instance](https://{DomainName}/catalog/services/watson-openscale){: external}
@@ -109,54 +108,48 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
     ![{{site.data.keyword.aios_short}}](images/openscale.png)
 
 2.  Give your service a name, select the **Lite plan**, and click **Create**.
+3. After your instance is provisioned, select it from the dashboard and click the **Launch** button.
+4. If this is your first time launching {{site.data.keyword.aios_short}}, you are presented with the option of running the demo. For this tutorial, click **No thanks**.
+
+### Choose a database
+{: #gs-provaios}
+
+1.  Next, you need to choose a database. You have two options: the free database, or an existing or new database. For this tutorial, select the **Choose the free Lite plan database** tile and click **Save**.
+
+    ![Select database](images/gs-set-lite-db2.png)
+
+    The free database has some important limitations. It is a hosted database that does not give you separate access to it. It gives {{site.data.keyword.aios_short}} acccess to your database and data. It is not GDPR-compliant. See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db) topic. The existing database can be a PostgreSQL database or a Db2 database.
+    {: tip}
+
+1.  When prompted, click the **Select provider** button.
 
 ### Connect {{site.data.keyword.aios_short}} to your machine learning model
 {: #gs-ctmod}
 
-Now that the machine learning model has been deployed, you can configure {{site.data.keyword.aios_short}} to ensure trust and transparency with your models.
+Now that the machine learning model has been deployed, you can select a machine learning provider to work with {{site.data.keyword.aios_short}}.
 
-1.  Select the **Manage** tab of your {{site.data.keyword.aios_short}} instance, and click the **Launch application** button. The **Welcome to {{site.data.keyword.aios_short}}** demo page opens.
-2. For this tutorial, click **No Thanks**, and then click **Begin**.
+1.  For this tutorial, click the **Watson Machine Learning** tile.
 
-1.  Click the **Watson Machine Learning** tile.
-
-1.  For this tutorial, select your {{site.data.keyword.pm_full}} instance from the menu and click **Next**.
+1.  For this tutorial, select your {{site.data.keyword.pm_full}} instance from the menu and click **Save**.
 
     You also have the option to select a different {{site.data.keyword.pm_short}} location. See [Specifying an {{site.data.keyword.pm_full}} service instance](/docs/services/ai-openscale?topic=ai-openscale-wml-connect) for additional information.
     {: note}
 
     ![Set {{site.data.keyword.pm_short}} instance](images/gs-set-wml.png)
 
-1.  You are now able to select the deployed models that will be monitored by {{site.data.keyword.aios_short}}. Select the model you created and deployed and click **Next**.
+1.  You are now able to select the deployed models that will be monitored by {{site.data.keyword.aios_short}}. Select the model you created and deployed and click **Configure**.
 
     ![Select deployed models](images/gs-set-deploy0.png)
 
-1.  Next, you need to choose a database. You have two options: the free database, or an existing or new database. For this tutorial, select the **Use the free database hosted by {{site.data.keyword.aios_short}}** tile.
-
-    The free database has some important limitations. It is a hosted database that does not give you separate access to it. It gives {{site.data.keyword.aios_short}} acccess to your database and data. It is not GDPR-compliant. See more complete details about each of these options in the [Specifying a database](/docs/services/ai-openscale?topic=ai-openscale-connect-db) topic. The existing database can be a PostgreSQL database or a Db2 database.
-    {: tip}
-
-    ![Select database](images/gs-set-lite-db2.png)
-
-1.  Review the summary data and click **Save**. Confirm and, when prompted, click the **Continue with Configuration** button.
-
-    A Data Mart ID is also listed, which is the same thing as a {{site.data.keyword.aios_short}} instance ID.
-    {: tip}
-
-    ![Summary review](images/gs-setup-summary4.png)
-
-1.  Your screen might be similar to the following screen capture. Because you will use a GUI method to score your data, simply select the **Configure Monitors** button to complete this set-up.
-
-    ![Scoring request code](images/gs-config-send-scoring.png)
-
-### Provide a set of sample data to your model
+## Provide a set of sample data to your model
 {: #gs-samp}
 
 Before you can configure your monitors, you must generate at least one scoring request against your model in order to generate payload logging that the monitors can consume. In this section, you will provide sample data in the form of a JSON file to generate a scoring request.
 
 1.  Download the [credit_payload_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) file.
 
-1.  From the **Deployments** tab of your Watson Studio project, click the **credit-risk-deploy** link, click the **Test** tab, and select the JSON input icon.
+1.  Start {{site.data.keyword.DSX}}, go to the project that you created and from the **Deployments** tab click the **credit-risk-deploy** link.
+2. Click the **Test** tab, and select the JSON input icon.
 
     ![JSON test](images/json_test02.png)
 
@@ -164,10 +157,13 @@ Before you can configure your monitors, you must generate at least one scoring r
 
     ![JSON predict](images/json_test03.png)
 
+
+
+
 ### Preparing for monitoring
 {: #gs-prepmon}
 
-1.  Now, in the {{site.data.keyword.aios_short}} instance, select your deployment and click **Begin**.
+1.  Now, in the {{site.data.keyword.aios_short}} instance, click the **Add deployments** button, select your deployment and click **Configure**.
 
     ![Select deployment](images/config-select-deploy2.png)
 
