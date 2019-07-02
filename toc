@@ -48,18 +48,6 @@ Watson OpenScale
         wos-custom-ml-ovr.md
         wos-connect-other.md
         wos-custom-ml-examples.md
-
-    {: .topicgroup}
-    IBM SPSS C&DS
-        wos-frameworks-spss-cds.md
-
-    {: .topicgroup}
-    Google Cloud
-        wos-frameworks-google.md
-
-    {: .topicgroup}
-    SAS
-        wos-frameworks-sas.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
