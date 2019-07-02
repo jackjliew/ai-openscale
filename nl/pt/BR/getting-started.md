@@ -234,7 +234,7 @@ crie uma instância clicando no link, fornecendo um nome ao serviço, selecionan
 1.  [Provisione uma nova instância de serviço do {{site.data.keyword.aios_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
-    ![{{site.data.keyword.aios_short } } ] (images/openscale.png)
+    ![{{site.data.keyword.aios_short } } ] (images/wos-cloud-tile.png)
 --->
 
 2.  Forneça ao seu serviço um nome, selecione o plano Lite e clique em **Criar**.

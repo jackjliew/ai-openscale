@@ -290,7 +290,7 @@ et en cliquant sur le lien **CARS4U - Area and Action Model Deployment**.
 cliquez sur le lien **Catalogue** dans votre compte {{site.data.keyword.cloud_notm}} et filtrez sur "OpenScale". Sélectionnez le carreau de {{site.data.keyword.aios_short}}.
 
 <!---
-  ![{{site.data.keyword.aios_short}}](images/openscale.png)
+  ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 - Donnez un nom à votre service, sélectionnez le forfait Lite et cliquez sur **Créer**.

@@ -211,7 +211,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 1.  [佈建新的 {{site.data.keyword.aios_short}} 服務實例 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
-    ![{{site.data.keyword.aios_short}}](images/openscale.png)
+    ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 2.  為您的服務命名，選取 Lite 方案，並按一下**建立**。

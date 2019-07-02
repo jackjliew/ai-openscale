@@ -264,7 +264,7 @@ faites défiler jusqu'à la section **Modèles Watson Machine Learning** et cliq
 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
-    ![{{site.data.keyword.aios_short}}](images/openscale.png)
+    ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 2.  Donnez un nom à votre service, sélectionnez le forfait Lite et cliquez sur **Créer**.

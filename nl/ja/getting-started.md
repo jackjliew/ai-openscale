@@ -232,7 +232,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 1.  [新規の {{site.data.keyword.aios_short}} サービス・インスタンスをプロビジョンします ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
-    ![{{site.data.keyword.aios_short}}](images/openscale.png)
+    ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 2.  サービスに名前を付け、「Lite」プランを選択し、**「作成」**をクリックします。

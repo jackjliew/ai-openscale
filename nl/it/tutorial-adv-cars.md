@@ -264,7 +264,7 @@ Il notebook `CARS4U Action Recommendation - model` contiene le istruzioni dettag
 - Se non è già stato eseguito il provisioning di un'istanza di {{site.data.keyword.aios_short}}, fare clic sul link **Catalogo** dall'account {{site.data.keyword.cloud_notm}} ed inserire il filtro "OpenScale". Selezionare il riquadro per {{site.data.keyword.aios_short}}.
 
 <!---
-  ![{{site.data.keyword.aios_short}}](images/openscale.png)
+  ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 - Fornire un nome al servizio, selezionare il piano Lite e fare clic su **Crea**.

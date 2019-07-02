@@ -232,7 +232,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 1.  [새 {{site.data.keyword.aios_short}} 서비스 인스턴스 프로비저닝 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
-    ![{{site.data.keyword.aios_short}}](images/openscale.png)
+    ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 2.  서비스에 이름을 지정하고 Lite 플랜을 선택한 다음 **작성**을 클릭하십시오.

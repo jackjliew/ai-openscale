@@ -264,7 +264,7 @@ IBM ID で [{{site.data.keyword.cloud_notm}} アカウント ![外部リンク�
 - {{site.data.keyword.aios_short}} のインスタンスをまだプロビジョンしていない場合は、{{site.data.keyword.cloud_notm}} アカウントから**「カタログ」**リンクをクリックし、「OpenScale」でフィルタリングします。 {{site.data.keyword.aios_short}} のタイルを選択します。
 
 <!---
-  ![{{site.data.keyword.aios_short}}](images/openscale.png)
+  ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 - サービスに名前を付け、「Lite」プランを選択し、**「作成」**をクリックします。

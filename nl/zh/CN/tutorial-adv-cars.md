@@ -264,7 +264,7 @@ PostgreSQL  数据库和 {{site.data.keyword.pm_full}} 实例必须部署在同�
 - 如果您尚未供应 {{site.data.keyword.aios_short}} 的实例，请单击 {{site.data.keyword.cloud_notm}} 帐户中的**目录**链接，然后对“OpenScale”进行过滤。选择 {{site.data.keyword.aios_short}} 的磁贴。
 
 <!---
-  ![{{site.data.keyword.aios_short}}](images/openscale.png)
+  ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 - 指定服务的名称，选择 Lite 套餐，然后单击**创建**。

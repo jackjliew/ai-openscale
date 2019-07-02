@@ -264,7 +264,7 @@ IBM ID로 [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](..
 - {{site.data.keyword.aios_short}}의 인스턴스를 아직 프로비저닝하지 않았으면 {{site.data.keyword.cloud_notm}} 계정에서 **카탈로그** 링크를 클릭하여 "OpenScale"을 필터링하십시오. {{site.data.keyword.aios_short}}에 대한 타일을 선택하십시오.
 
 <!---
-  ![{{site.data.keyword.aios_short}}](images/openscale.png)
+  ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 - 서비스에 이름을 지정하고 Lite 플랜을 선택한 다음 **작성**을 클릭하십시오.

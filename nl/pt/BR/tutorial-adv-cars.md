@@ -264,7 +264,7 @@ O bloco de notas `CARS4U Action Recommendation - model` contém instruções det
 - Se você ainda não tiver provisionado uma instância do {{site.data.keyword.aios_short}}, clique no link **Catálogo** em sua conta do {{site.data.keyword.cloud_notm}} e filtre no "OpenScale". Selecione o ladrilho para {{site.data.keyword.aios_short}}.
 
 <!---
-  ![{{site.data.keyword.aios_short } } ] (images/openscale.png)
+  ![{{site.data.keyword.aios_short } } ] (images/wos-cloud-tile.png)
 --->
 
 - Dê ao seu serviço um nome, selecione o plano Lite e clique em **Criar**.

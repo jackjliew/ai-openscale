@@ -264,7 +264,7 @@ El cuaderno `CARS4U Modelo de recomendación de acción` contiene instrucciones 
 - Si no ha suministrado ya una instancia de {{site.data.keyword.aios_short}}, pulse el enlace **Catálogo** de la cuenta de {{site.data.keyword.cloud_notm}} y filtre por "OpenScale". Seleccione el mosaico de {{site.data.keyword.aios_short}}.
 
 <!---
-  ![{{site.data.keyword.aios_short}}](images/openscale.png)
+  ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 - Dé un nombre al servicio, seleccione el plan Lite y pulse **Crear**.

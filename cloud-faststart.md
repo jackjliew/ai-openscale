@@ -107,7 +107,7 @@ Now that the machine learning model has been deployed, you can configure {{site.
 
 1.  [Provision a new {{site.data.keyword.aios_short}} service instance](https://{DomainName}/catalog/services/watson-openscale){: external}
 
-    ![{{site.data.keyword.aios_short}}](images/openscale.png)
+    ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 
 2.  Give your service a name, select the **Lite plan**, and click **Create**.
 

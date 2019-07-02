@@ -228,7 +228,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 1.  [Eseguire il provisioning di una nuova istanza del servizio {{site.data.keyword.aios_short}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
-    ![{{site.data.keyword.aios_short}}](images/openscale.png)
+    ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 2.  Fornire un nome al servizio, selezionare il piano Lite e fare clic su **Crea**.

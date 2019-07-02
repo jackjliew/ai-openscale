@@ -254,7 +254,7 @@ PostgreSQL 資料庫和 {{site.data.keyword.pm_full}} 實例必須部署在相�
 - 如果您尚未佈建 {{site.data.keyword.aios_short}} 實例，請從您的 {{site.data.keyword.cloud_notm}} 帳戶，按一下**型錄**鏈結，並依 "OpenScale" 來過濾。選取 {{site.data.keyword.aios_short}} 的圖磚。
 
 <!---
-  ![{{site.data.keyword.aios_short}}](images/openscale.png)
+  ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 - 為您的服務命名，選取 Lite 方案，並按一下**建立**。

@@ -232,7 +232,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 1.  [Neue {{site.data.keyword.aios_short}}-Serviceinstanz einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
-    ![{{site.data.keyword.aios_short}}](images/openscale.png)
+    ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 --->
 
 2.  Benennen Sie Ihren Service, wählen Sie den Plan 'Lite' aus und klicken Sie auf **Erstellen**.
