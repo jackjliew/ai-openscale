@@ -113,13 +113,13 @@ If you haven't already, ensure that you provision {{site.data.keyword.aios_full}
 2. Give your service a name, choose a plan, and click the **Create** button.
 3. To start {{site.data.keyword.aios_short}}, click the **Get Started** button.
 
-## Working with the UI demo
+## Auto setup
 {: #wos-work-demo}
 
 1.  Sign into your {{site.data.keyword.aios_short}} instance on {{site.data.keyword.Bluemix}}.
-1.  To work with the demo scenario, click **Run Demo**.
+1.  To automatically set up your {{site.data.keyword.aios_short}} instance by using sample data, click **Auto setup**.
 
-   ![Demo welcome](images/fastpath_demo_11.31.04.png)
+   ![Demo welcome](images/cloud-auto-setup.png)
 
    As the {{site.data.keyword.aios_short}} services are being provisioned, you can review the demo scenario:
 
