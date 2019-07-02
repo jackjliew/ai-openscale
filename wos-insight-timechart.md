@@ -34,39 +34,42 @@ Monitoring data for individual deployments are displayed in a time series chart.
 ## Viewing data for a deployment
 {: #it-vdep}
 
-Select a deployment from the dashboard to see monitoring data for that deployment. The top of the monitoring data chart displays information about the deployed model, including when the model was last evaluated for Fairness and Accuracy, and when it will be evaluated next.
+Select a deployment from the dashboard to see monitoring data for that deployment. The heading displays information about the deployed model, such as the **Model ID** and **Created date** fields.
 
 ![Time series chart](images/insight-time-chart.png)
 
-Because the algorithm checks are only run every hour, there are also buttons provided to allow you to check Fairness and Accuracy on-demand. If you have not provided enough payload records (Fairness) or feedback records (Accuracy), you will see the following message, for example:
+Because the algorithm checks are only run every hour, there are also links provided to check fairness and quality on-demand. From the **Schedule** panel, you can click the following links to make an immediate check of your data:
 
-![Accuracy button](images/accuracy-button.png)
+![check fairness button](images/wos—fairness-button.png)
 
-Next, move the marker across the chart to see statistics for an individual hour. In this example, the time selected is 1:00 PM CST on September 18, which reveals the following statistics:
 
-![Time series chart detail](images/insight-time-detail.png)
+![check quality button](images/wos—quality-button.png)
 
-- ***Fairness***: Two of three Fairness features, Car Value and Area Code, met their set thresholds for approval. The third Fairness feature, Age, was flagged for bias. You can also see the number of expected outcomes (in this case percentages Approved vs. Denied) for an individual population in the features monitored for fairness.
-- ***Accuracy***: The Accuracy metric averaged 78%.
-- ***Avg. Reqs/Min***: On average, 300 records were processed per minute between 1:00 and 2:00 PM CST. The throughput is computed every minute, and its average value over the course of the hour is reported in the chart.
+Next, click the chart and move the marker across the chart to see statistics for an individual hour:
+
+![Time series chart detail](images/wos-insight-time-detail.png)
+
+- ***Fairness***: Two Fairness features, Sex and Age, met their set thresholds for approval.
+- ***Quality***: The **Aread under ROC** metric displays an alert because it was not within the configured treshold.
+- ***Avg. Reqs/Min***: Click the **Throughput** metric to see the number of records that were processed per minute between. The throughput is computed every minute, and its average value over the course of the hour is reported in the chart.
 
 ## Visualizing data for a specific hour
 {: #it-vdet}
 
-To see details behind a particular Fairness statistic, click the **View details** link for the selected hour.
+To see details behind a particular Fairness statistic, click the chart for a specific time.
 
-A visualization opens of the data points for a monitored feature at the selected hour. Following the previous example the Age feature, which has been tagged for bias, is shown.
+A visualization opens of the data points for a monitored feature at the selected hour. Following the previous example the Age feature is shown in the following example.
 
 Note the three filters at the top of the page (Feature, Date, and Hour) that let you select a different feature or time to review details.
 
-![Time series chart](images/insight-data-detail.png)
+![Time series chart](images/wos-insight-data-detail.png)
 
 ### Interpreting the chart
 {: #it-intp}
 
 The chart shows multiple things:
 
-- You can observe the population experiencing bias (customers between 18 and 23 years old). The chart also shows the percentage of expected outcome (52%) for this population.
+- You can observe the population experiencing bias (customers between 18 and 23 years old). The chart also shows the percentage of expected outcome for this population.
 
 - The chart shows the percentage of expected outcome (70%) for the reference population. This is the average of expected outcome across all reference populations.
 
