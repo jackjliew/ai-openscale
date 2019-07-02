@@ -309,71 +309,34 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 
     ![Insights tab - no data](images/gs-insight-overview.png)
 
-1.  Then, click the edit icon to edit the deployment configuration.
+1.  Then, click **Configure monitors**.
 
     ![Edit icon displays](images/gs-insight-edit-icon.png)
 
-1.  In the Summary side panel, click the **Add feedback data** button, and select the `credit_feedback_data.csv` file you downloaded. Select the **Comma (,)** delimiter, and then click **OK**.
+1.  Click **Accuracy**, and then click **Feedback**.
+1.  Click the **Add feedback data** button, and select the `credit_feedback_data.csv` file you downloaded and click **Open**. 
+2. Select the **Comma (,)** delimiter, and then click **Select**.
 
     File sizes are currently limited to 8 MB.
     {: note}
 
     ![Accuracy delimiter](images/accuracy-delimit.png)
 
-    Adding the CSV file provides feedback data to your model.
+Adding the CSV file provides feedback data to your model.
 
-    ![Summary panel](images/gs-insight-summary-panel-2.png)
+## Configure the Drift monitor
+{: gs-drift-config}
+
+For information about how to configure the Drift monitory, see [Configure the Drift Detection monitor](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).
 
 ## Viewing results
 {: #gs-viewres}
 
 After you configure accuracy monitoring, the accuracy check runs after one hour. In a production system, this makes sense so that your dashboard can accumulate feedback data. For the purposes of this tutorial, you'll probably want to trigger the accuracy check manually after you add your feedback data, so that you can see results in the **Insights** dashboard.
 
-To check the result immediately, from the **Insights** page, select a deployment, and then click the **Check Fairness Now** or **Check quality now** button.
+To check the result immediately, from the **Insights** page, select a deployment, and then click the **Check Fairness Now** or **Check quality now**.
 
-### View insights for your deployment
-{: #gs-viewin}
-
-1. From the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}, click the **Insights** tab.
-
-  ![Insights](images/insight-dash-tab.png)
-
-1. View the Insights page to see an overview of metrics for your deployed models. You can view alerts for fairness or accuracy metrics that exceeds the 90% threshold.
-
-  Fairness and Accuracy metrics can take up to an hour to display.
-  {: tip}
-
-  ![Insight overview](images/insight-overview.png)
-
-### View monitoring data for your deployment
-{: #gs-viewmon}
-
-1.  Select a deployment by clicking the tile on the Insights page. The monitoring data for that deployment is shown. Note: After you upload the feedback .csv file, you may find that the Fairness or Accuracy data is not updated. To check the result immediately, click the **Check Fairness Now** or **Check quality now** button.
-1.  Slide the marker across the chart to select data for the time frame during which you ran the sample data and sample feedback data. Then click **View details**.
-
-    ![Monitor data](images/insight-monitor-data.png)
-
-1.  Next, review the charts for the data you monitored. For this example, use the **Feature** menu to select either `Age` or `Sex` in order to see details about the monitored data.
-
-    See [Visualizing data for a specific hour](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet) for more information about how to read these charts.
-    {: tip}
-
-    ![Insight overview](images/insight-review-charts.png)
-
-### View explainability for a model transaction
-{: #gs-viewextx}
-
-1.  Click the **View transactions** button from the charts for the data you monitored.
-
-    ![View transactions](images/view_transactions.png)
-
-1.  A list of transactions that contributed to bias for the past hour displays. To view a more detailed explanation of a particular transaction, from the **ACTION** column, click **Explain**.
-
-    ![Transaction list](images/transaction_list_cr.png)
-    
-1.  An explanation of how the model arrived at its conclusion displays. This explanation includes how confident the model was, the factors that contributed to the confidence level, and the columns that were fed to the model.
-
-    ![View Transaction](images/view_transaction1.png)
+To learn about interpreting the results, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-io-ov)
 
 ## Related information
 {: #wos-info}
