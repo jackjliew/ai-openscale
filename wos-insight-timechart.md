@@ -40,10 +40,10 @@ Select a deployment from the dashboard to see monitoring data for that deploymen
 
 Because the algorithm checks are only run every hour, there are also links provided to check fairness and quality on-demand. From the **Schedule** panel, you can click the following links to make an immediate check of your data:
 
-![check fairness button](images/wos—fairness-button.png)
+![check fairness button](images/wos-fairness-button.png)
 
 
-![check quality button](images/wos—quality-button.png)
+![check quality button](images/wos-quality-button.png)
 
 Next, click the chart and move the marker across the chart to see statistics for an individual hour:
 
