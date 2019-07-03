@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: deployment, monitors, data
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # デプロイメントでのモニタリングのための準備
 {: #mo-config}
@@ -25,50 +31,79 @@ subcollection: ai-openscale
 {{site.data.keyword.aios_short}} で追跡するデプロイメントごとにモニターをセットアップして有効にします。
 {: shortdesc}
 
+## 構成
+{: #io-conf}
+
+**「構成」**タブ (![「構成」タブ](images/insight-config-tab.png)) を使用すると、選択したデプロイメントに対応する「構成の要約」が開きます。
+
+  ![構成の要約](images/insight-config-summary.png)
+
+この場所からデプロイメント・モニターの構成設定を直接編集できます。
+
 ## デプロイメントの選択
 {: #mo-select-deploy}
 
 1.  最初にデプロイメントを選択する必要があります。
+
+    1. **「デプロイメントの追加 (Add deployments)」**ボタンをクリックします。使用可能なモデル・デプロイメントのリストが表示されます。
+    2. モデル・デプロイメントをクリックしてから、**「構成」**をクリックします。
 
     特定の 1 つのモデルに複数のデプロイメントがある場合、1 つのデプロイメントを構成すると、同じモデルに属する他のすべてのデプロイメントも構成されます。
     {: note}
 
     ![デプロイメントの選択ページ](images/config-select-deploy.png)
 
-1.  *「モニタリングのための準備」*タイルを選択します。
+1.  **「モニタリングの構成」**ボタンをクリックします。
 
     ![モニタリングのための準備](images/config-prep-monitor.png)
 
-## データの操作
+## ペイロード・ロギングの詳細の入力
 {: #mo-work-data}
 
-1.  次に、モデルと訓練データに関する情報を入力します。**「次へ」**をクリックします。 訓練データの詳細については、[{{site.data.keyword.aios_short}} が訓練データにアクセスする必要があるのはなぜですか?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) を参照してください。
+モデルと訓練データに関する情報を入力する必要があります。訓練データの詳細については、[{{site.data.keyword.aios_short}} が訓練データにアクセスする必要があるのはなぜですか?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) を参照してください。
 
-    ![説明の準備](images/config-what-monitor.png)
+![説明の準備](images/config-what-monitor.png)
 
-1.  ドロップダウン・メニューからデプロイメントで分析するデータのタイプを選択し、**「次へ」**をクリックします。
+- {{site.data.keyword.aios_short}} インスタンスと同じ地域の {{site.data.keyword.pm_full}} インスタンスを使用する場合は、ペイロード・ロギング情報は自動的に構成されます。
+- そうでない場合は、**「ペイロード・ロギング (Payload logging)」**タブおよびウィンドウで、データ、アルゴリズム・タイプ、およびペイロード・ロギングに関する情報を入力する必要があります。 
 
-    ![入力タイプの選択](images/config-input-monitor.png)
+   選択内容に応じて固有の要件があります。詳しくは、[数値/カテゴリカル・データ](https://test.cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan)を参照してください。
+
+   モニターを構成するには、実行するコード・スニペットの 1 つをコピーしておく必要があります。クライアント・アプリケーションで cURL コマンドを実行するか、データ・サイエンス・ノートブックで Python コマンドを実行します。これにより、モデル・デプロイメントの要求をログに記録し、応答データをペイロード・データベースに書き込むことができます。
+
+## モデル詳細の入力
+{: #mo-work-model-dets}
+
+{{site.data.keyword.aios_short}} がデータベースにアクセスしてモデルのセットアップ方法を理解できるように、モデルに関する情報を入力します。
+
+具体的には、モニターを構成するために以下のタスクを実行する必要があります。
+
+1. 訓練データの場所を指定します。これを行うには、場所、ホスト名または IP アドレス、データベース名、および認証情報を入力します。
+2. データベース内で、スキーマとテーブルを選択して訓練テーブルを選択する必要があります。
+3. 訓練テーブルからラベル列を選択します。
+4. AI デプロイメントの訓練に使用された特徴量を選択します。
+5. テキストの特徴量とカテゴリカルの特徴量を選択します。
+6. デプロイメント予測列を選択します。
+7. 最後に、モデルの詳細を確認してから、そのモデルを保存できます。
+
+以下のセクションでは、モデルのタイプ ([数値/カテゴリカル・データ](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan)または[画像と非構造化テキスト](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datai)) に応じて必要になる具体的な情報について説明します。
+
 
 ### 数値/カテゴリカル・データ
 {: #mo-nuca}
 
 数値データまたはカテゴリカル・データの場合、モニターを構成するためにはモデルの訓練データに関する情報を入力する必要があります。
 
-  ![構成タイプの選択](images/config-manual-monitor.png)
-
 - **モニターの手動構成** - 訓練データの接続情報を入力する必要があります。
 
     - [アルゴリズムのタイプ](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-understand)を選択して、**「次へ」**をクリックします。
 
-      ![マルチクラス](images/multiclass.png)
-
-      訓練データのフォーマットが、ご使用のモデルで必要なフォーマットと厳密に同一であることを確認してください。 例えば、モデルで特徴量 *Gender* の値が `M` と `F` である必要がある場合、訓練データには `Male` と `Female` ではなく、`M` と `F` を入れておく必要があります。 現在 {{site.data.keyword.aios_short}} では、Db2 データベースまたは Cloud Object Storage のロケーションだけがサポートされています。
+      訓練データのフォーマットはモデルと一致する必要があります。例えば、モデルで特徴量 `Gender` の値に `M` と `F` を使用する必要がある場合は、訓練データに `Male` と `Female` ではなく、`M` と `F` が入っていなければなりません。現行リリースの {{site.data.keyword.aios_short}} では、Db2 データベースまたは Cloud Object Storage のロケーションのみサポートされています。
         {: important}
 
     - 「場所」(`Db2` または `Cloud Object Storage`) を指定し、以下のいずれかの操作を行います。
 
-        - Db2 データベースの場合、以下の情報を指定します。
+        - Db2 データベースの場合は、以下の情報を入力します。
 
             - ホスト名または IP アドレス
             - ポート
@@ -76,61 +111,33 @@ subcollection: ai-openscale
             - ユーザー名
             - パスワード
 
-            ![訓練データが配置されている Db2 の場所を指定するページ](images/config-train-db2-monitor.png)
+        - Cloud Object Storage の場合は、以下の情報を入力します。
 
-        - Cloud Object Storage の場合、以下の情報を指定します。
-
-            - ログイン URL
-
-              ログイン URL は、訓練データが配置されているバケットのリージョン設定に一致している必要があります。 訓練データのバケットは次のステップで指定します。
-              {: important}
-
+            - ログイン URL: ログイン URL は、訓練データが配置されているバケットの地域設定と一致している必要があります。訓練データのバケットは次のステップで指定します。
+              
             - リソース・インスタンス (ID)
             - API キー
 
-            ![訓練データが配置されている Cloud Object Storage の場所を指定するページ](images/config-train-cos-monitor.png)
-
-    - 有効な接続であることを確認するため、**「テスト」**ボタンをクリックして訓練データに接続します。 **「次へ」**をクリックします。
-
+    - 有効な接続であることを確認するには、**「テスト」**ボタンをクリックして訓練データに接続します。
     - 訓練データが配置されている Db2 データベースまたは Cloud Object Storage の正確な場所を指定します。
 
-        - Db2 データベースの場合、モデルに必要な列が格納されている訓練テーブルとスキーマの両方を選択します。
-
-          ![スキーマとト訓練テーブルが配置されている Db2 の場所の指定](images/fair-config-table-db2.png)
-
-        - Cloud Object Storage の場合、バケットとデータ・セットを選択します。
-
-          ![データ・セットが配置されている Cloud Object Storage の場所の指定](images/fair-config-dset-cos.png)
-
-          **「次へ」**をクリックして以下のステップ 5 に進みます。
+        - Db2 データベースの場合は、モデルに必要な列が含まれている訓練テーブルとスキーマの両方を選択します。
+        - Cloud Object Storage の場合は、バケットとデータ・セットを選択します。
 
 - **構成ファイルのアップロード** - 訓練データを秘密にしておく場合はこのオプションを選択します。 カスタム Python ノートブックを使用して、訓練データ自体にはアクセスできないように訓練データを分析するための情報を {{site.data.keyword.aios_short}} に提供できます。
 
   Python ノートブックを実行すると、スキーマ列の個別の値と列名をキャプチャーできます。 また、ノートブックを使用して公平性モニターを事前構成することもできます。
 
-    - [カスタム・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: new_window} をダウンロードし、資格情報をすべて独自の資格情報に置き換えます。
+   - [カスタム・ノートブック](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: external}をダウンロードし、資格情報をすべて独自の資格情報に置き換えます。
+   - ノートブックの内容を慎重に確認し、モデルのデータを適宜指定します。 ノートブックを保存します。
+   - ノートブックを実行して JSON 形式の構成ファイルを生成します。
+   - JSON 構成ファイルをアップロードします。
 
-    - ノートブックの内容を慎重に確認し、モデルのデータを適宜指定します。 ノートブックを保存します。
+     ![JSON 構成のアップロード](images/config-json-monitor.png)
 
-    - ノートブックを実行して JSON 形式の構成ファイルを生成します。
-
-    - JSON 構成ファイルをアップロードします。
-
-        ![JSON 構成のアップロード](images/config-json-monitor.png)
-
-    - **「次へ」**をクリックします。
-
-- {{site.data.keyword.aios_short}} により、WML でモデルと共に保管されているメタデータから訓練データが検出されます。 予測値を入れた訓練データのラベル列を選択し、**「次へ」**をクリックします。
-
-  ![列ラベルの選択](images/fair-config-column.png)
-
-- モデルのトレーニングに使用する列を選択します。これらの列は、モデルのデプロイメントでリクエストに含まれている必要がある特徴量です。 **「次へ」**をクリックします。
-
-    ![列ラベルの選択](images/explain-select-column.png)
-
-- 最後に、テキストから整数に変換された値が入っている列を選択します。 例えば、元の訓練データでは *Gender* として `Male` または `Female` が設定されていて、これらの値がそれぞれ `0` と `1` にマップされている場合、訓練データの *Gender* 列の値として `0` と `1` が設定されるようになります。 元の値はテキスト値で今は整数になっている列を指定します。 **「次へ」**をクリックします。
-
-    ![データ・テーブルの選択](images/explain-text-column.png)
+- {{site.data.keyword.aios_short}} は、{{site.data.keyword.pm_full}} にモデルと一緒に保管されているメタデータから訓練データを見つけます。予測値が入っている訓練データのラベル列を選択します。
+- モデルの訓練に使用する列を選択します。これらの列は、モデルのデプロイメントでリクエストに含まれている必要がある特徴量です。 
+- 最後に、テキストから整数に変換された値が入っている列を選択します。 例えば、元の訓練データでは `Gender` として `Male` または `Female` が設定されていて、これらの値がそれぞれ `0` と `1` にマップされている場合、訓練データの `Gender` 列の値として `0` と `1` が設定されるようになります。 最初はテキスト値が入っていたけれども今は整数が入るようになった列を確認します。
 
 ### イメージと非構造化テキスト
 {: #mo-imun}
@@ -153,4 +160,4 @@ subcollection: ai-openscale
 ### 次のステップ
 {: #mo-next}
 
-モニターの構成を開始するため、カテゴリーを選択して**「開始」**をクリックします。
+モニターの構成を開始するには、**「正解率」**タブをクリックしてから、**「開始」**をクリックします。

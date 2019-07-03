@@ -1,6 +1,6 @@
 ---
 
-title: Trust and transparency for your machine learning models with {{site.data.keyword.aios_short}}
+title: Vertrauen und Transparenz für Ihre Machine Learning-Modelle mit {{site.data.keyword.aios_short}}
 description: Monitor your machine learning deployments for bias, accuracy, and explainability
 duration: 120
 intro: In this tutorial, you will provision IBM Cloud machine learning and data services, create and deploy machine learning models in Watson studio, and configure the new IBM {{site.data.keyword.aios_full}} product to monitor your models for trust and transparency.
@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-05-29"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -232,7 +232,7 @@ For the {{site.data.keyword.composeForPostgreSQL}} service, a **paid** Standard 
 1.  [Neue {{site.data.keyword.aios_short}}-Serviceinstanz einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/watson-openscale){: new_window}
 
 <!---
-    ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
+    ![{{site.data.keyword.aios_short}}](images/openscale.png)
 --->
 
 2.  Benennen Sie Ihren Service, wählen Sie den Plan 'Lite' aus und klicken Sie auf **Erstellen**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,39 +11,39 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# Analyse des métriques et des transactions ![balise bêta](images/beta.png)
-{: #anlz_metrics}
+# Présentation des métriques de performances ![étiquette bêta](images/beta.png)
+{: #anlz_metrics_performance}
 
-{{site.data.keyword.aios_full}} permet d'analyser les métriques et les transactions par divers moyens.
+Utilisez la surveillance des performances pour connaître la vitesse des enregistrements de données traités par votre déploiement. Vous pouvez activer la surveillance des performances lorsque vous sélectionnez le déploiement qui doit être suivi et surveillé par {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
-## Matrice de confusion ![balise bêta](images/beta.png)
-{: #it-conf-mtx}
+Les métriques de performances sont calculées en fonction des informations suivantes :
 
-Comme détail des métriques de qualité, vous pouvez afficher les enregistrements que le modèle a analysés de manière incorrecte. De telles anomalies peuvent être des faux positifs ou des faux négatifs pour des modèles de classification binaire ou être des affectations de classes incorrectes pour des modèles multi-classes. Vous pouvez également afficher la liste des enregistrements de commentaires que le modèle n'a pas analysés correctement.
-{: shortdesc}
+- données de contenu d'évaluation
 
-1. A partir de l'un des graphiques **Qualité**, tels que **Equité**, cliquez sur une valeur d'heure/jour dans le graphique.
-    
-    ![Liste des transactions biaisées](images/Confusion_Matrix_040819.004.png)
+En vue d'une surveillance adéquate, toutes les demandes d'évaluation doivent être consignées également dans {{site.data.keyword.aios_short}}. La journalisation des données de contenu est automatisée pour les moteurs {{site.data.keyword.pm_full}}. Pour les autres moteurs d'apprentissage automatique, les données de contenu peuvent être fournies à l'aide du client Python ou de l'API REST. La surveillance des performances ne crée pas de demandes d'évaluation supplémentaires sur le déploiement surveillé.
 
-1. Une matrice de confusion affiche les faux positifs et les faux négatifs. Cliquez sur une cellule pour afficher le sous-ensemble d'enregistrements de commentaires.
+Vous pouvez examiner la valeur des métriques de performances au fil du temps dans le tableau de bord {{site.data.keyword.aios_short}} :
 
-    ![Liste des transactions biaisées](images/Confusion_Matrix_040819.005.png)
+![graphique de performances](images/performance_metrics_001.png)
 
-1. Passez en revue les enregistrements de commentaires et demandez une explication de l'analyse par rapport à l'enregistrement de commentaire.
+## Métriques de performances prises en charge
+{: #anlz_metrics_performance_supp_quality_mets}
 
-    ![Liste des transactions biaisées](images/Confusion_Matrix_040819.006.png)
+Les métriques de performances suivantes sont prises en charge par {{site.data.keyword.aios_short}} :
 
-1. Les transactions apparaissent en ligne.
-
-    ![Liste des transactions biaisées](images/Confusion_Matrix_040819.007.png)
-
+- [Débit](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

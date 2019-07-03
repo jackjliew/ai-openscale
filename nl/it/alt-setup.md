@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Installazione di un modulo Python per configurare {{site.data.keyword.aios_short}}
 {: #as-module}
@@ -40,7 +42,7 @@ Per automatizzare il provisioning e la configurazione dei servizi {{site.data.ke
 
 1. [Creare una chiave API {{site.data.keyword.cloud_notm}} e scaricarla](/docs/iam?topic=iam-userapikey#create_user_key). Sarà necessario immettere la chiave API in un passo successivo.
 
-2. [Installare qualsiasi release di Python 3 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.python.org/downloads/){: new_window}.
+2. [Installare qualsiasi release di Python 3](https://www.python.org/downloads/){: external}.
 
   Python 3 include il sistema di gestione del pacchetto pip richiesto.
   {: note}
@@ -55,7 +57,7 @@ Per automatizzare il provisioning e la configurazione dei servizi {{site.data.ke
     Se sul sistema è installata più di una versione di pip, potrebbe essere necessario eseguire `pip3` invece di `pip`, ad esempio `pip3 install -U ibm-ai-openscale-cli`.
     {: tip}
 
-4. Se si dispone già di un'istanza del servizio {{site.data.keyword.pm_short}}, controllare il dashboard [{{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}){: new_window} per verificare che il servizio sia gestito da {{site.data.keyword.iamshort}} (IAM), non da Cloud Foundry.
+4. Se si dispone già di un'istanza del servizio {{site.data.keyword.pm_short}}, controllare il dashboard [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external} per verificare che il servizio sia gestito da {{site.data.keyword.iamshort}} (IAM), non da Cloud Foundry.
 
   **Importante**: il modulo cerca un'istanza di {{site.data.keyword.pm_short}}. Se si dispone di un'istanza, il modulo la utilizza. Se l'istanza è gestita da Cloud Foundry, è necessario [migrarla a un gruppo di risorse IAM prima di poter eseguire il modulo. ](/docs/resources?topic=resources-migrate#migrate).
 
@@ -73,14 +75,14 @@ ibm-ai-openscale-cli --apikey <la chiave API>
 {{site.data.keyword.aios_short}}
 {: #as-open}
 
-Per visualizzare le informazioni sulla correttezza e l'accuratezza del modello, i dettagli dei dati monitorati e l'analisi di una singola transazione, aprire il dashboard [{{site.data.keyword.aios_short}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}.
+Per visualizzare le informazioni sulla correttezza e l'accuratezza del modello, i dettagli dei dati monitorati e l'analisi di una singola transazione, aprire il dashboard [{{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}.
 
 - Per comprendere lo scenario per i dati di esempio, leggere [Caso di utilizzo e valore di {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gs-use).
 
 ### Visualizzazione delle informazioni
 {: #as-insights}
 
-Dal dashboard [{{site.data.keyword.aios_short}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, fare clic sulla scheda **Insight**, che mostra una panoramica delle metriche per i modelli distribuiti: ![Insight](images/insight-dash-tab.png)
+Dal [dashboard {{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}, fare clic sulla scheda **Insight**, che mostra una panoramica delle metriche per i modelli distribuiti: ![Insight](images/insight-dash-tab.png)
 
 - La pagina Insight mostra in un'unica vista tutti i problemi di correttezza e accuratezza, come determinato dalle soglie configurate.
 

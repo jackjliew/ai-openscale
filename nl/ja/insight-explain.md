@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: explainability, monitoring, explain, explaining, transactions, transaction ID
 
@@ -11,7 +11,7 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
@@ -30,7 +30,7 @@ subcollection: ai-openscale
 
 選択したデプロイメント・タイルでナビゲーターの**「トランザクションの説明」**タブ (![「トランザクションの説明」タブ](images/insight-transact-tab.png)) を選択し、トランザクション ID を入力します。
 
-予測のためにデータがモデルに送信されるたびに、HTTP ヘッダーの `X-Global-Transaction-Id` フィールドにトランザクション ID が設定されます。 このトランザクション ID はペイロード・テーブルに保管されます。 特定の予測のモデルの動作の説明を見つけるには、その予測リクエストに関連付けられたトランザクション ID を指定します。 この動作は Watson Machine Learning (WML) トランザクションにのみ適用され、WML 以外のトランザクションには適用されないことに注意してください。
+予測のためにデータがモデルに送信されるたびに、HTTP ヘッダーの `X-Global-Transaction-Id` フィールドにトランザクション ID が設定されます。 このトランザクション ID はペイロード・テーブルに保管されます。 特定の予測のモデルの動作の説明を見つけるには、その評価要求に関連付けられたトランザクション ID を指定します。 この動作は {{site.data.keyword.pm_full}} トランザクションにのみ適用され、WML 以外のトランザクションには適用されないことに注意してください。
 {: note}
 
 ### {{site.data.keyword.aios_short}} でのトランザクション ID の検出
@@ -69,19 +69,96 @@ subcollection: ai-openscale
 
 ![説明性の二項分類](images/insight-explain-binary2.png)
 
-## 画像モデルの例
+## 画像モデル
 {: #ie-image}
 
-説明性の例が画像分類モデルである場合、画像のどの部分が予測結果のプラス要因となり、どの部分がマイナス要因となったのかを確認できます。 以下の例では、右側の画像は予測にプラスに影響した部分を示し、左側の画像は結果にマイナスの影響があった部分を示しています。
+{{site.data.keyword.aios_short}} は、画像データの説明性をサポートします。
 
-- {{site.data.keyword.pm_full}} の場合、機械学習ゲートウェイ経由で送信される摂動済みのイメージのペイロードは、1 MB を超えることはできません。 タイムアウトの問題を避けるには、イメージは 125 x 125 ピクセルを超えてはならず、最初のものが完了してから 2 番目のイメージの説明が要求されるように、順次送信される必要があります。
-{: note}
+### 画像モデルの処理
+{: #ie-image-working}
+
+1. 環境をセットアップします。
+   2. {{site.data.keyword.aios_short}} パッケージと {{site.data.keyword.pm_full}} パッケージをインストールします。
+   3. 資格情報を構成します。
+   4. モデルの作成や分析に必要なライブラリーをインストールします。これには、次のライブラリーが含まれます。
+      - `keras`
+      - `tensorflow`
+      - `keras_sequential_ascii`
+      - `numpy`
+      - `pillow`
+
+1. 画像ベースのモデルを作成してデプロイします。
+   2. 画像の分類に基づいて、画像用のフォルダーを作成します。
+       - メインの `data` ディレクトリー内に、`train` と `validation` の各サブディレクトリーを作成する必要があります。
+       - 各サブディレクトリー内に、独自の分類ディレクトリーを作成する必要があります。
+  2. 画像のサイズを標準化し、訓練用と検証用に使用するサブディレクトリーを設定します。
+  3. データを前処理してスケールを変更し、画像とそのクラスを取り出します。
+  4. モデルを定義し、訓練を行います。
+  5. モデルを保管します。
+  6. モデルをデプロイします。
+
+7. `APIClient` を割り当て、アセットをサブスクライブし、モデルを評価することで、{{site.data.keyword.aios_short}} を構成します。
+8. 説明性を構成します。
+   9. 説明性を有効にします。
+   10. トランザクションの説明性を取得します。
+   11. 説明された画像を表示します。 
+
+### 画像モデルのトランザクションの説明
+{: #ie-image-workingviewing}
+
+説明性の例が画像分類モデルである場合、画像のどの部分が予測結果のプラス要因となり、どの部分がマイナス要因となったのかを確認できます。 以下の例では、プラスのペインのイメージは予測にプラスに影響した部分を示し、マイナスのペインのイメージは結果にマイナスの影響があった部分を示しています。
 
 ![説明性の画像分類](images/insight-explain-image.png)
 
-## 非構造化テキスト・モデルの例
+{{site.data.keyword.pm_full}} では、ペイロード・ロギングのために送信する画像分類モデルの評価入力データは、1 MB を超えてはなりません。タイムアウトの問題を避けるには、イメージは 125 x 125 ピクセルを超えてはならず、最初のものが完了してから 2 番目のイメージの説明が要求されるように、順次送信される必要があります。
+{: note}
+
+
+### 画像モデルの例
+{: #ie-image-working-ntbks}
+
+次の 2 つのノートブックを使用して、詳細なコードの例を確認し、独自の {{site.data.keyword.aios_short}} デプロイメントを開発してください。
+
+- [画像ベース・モデルの説明を生成するチュートリアル](https://github.ibm.com/aiopenscale/explainability/blob/master/public/notebooks/demo/image_explanation.ipynb){: external}
+- [画像ベース 2 項分類器モデルの説明の生成に関するチュートリアル](https://github.ibm.com/aiopenscale/explainability/blob/master/public/notebooks/demo/image_explanation_binary.ipynb){: external}
+
+
+## 非構造化テキスト・モデル
 {: #ie-unstruct}
 
-最後に、この説明性の例で、非構造化テキストを評価する分類モデルを示します。 この説明は、モデル予測に対してプラスおよびマイナスの影響があったキーワードを示します。 また、モデルへの入力情報として提供された元のテキストの中で、識別されたキーワードの位置も表示されています。
+{{site.data.keyword.aios_short}} は、非構造化テキスト・データの説明性をサポートします。
+
+### 非構造化テキスト・モデルの処理
+{: #ie-unstruct-steps}
+
+1. 環境をセットアップします。
+   2. {{site.data.keyword.aios_short}} パッケージと {{site.data.keyword.pm_full}} パッケージをインストールします。
+   3. 資格情報を構成します。
+   4. モデルの作成や分析に必要なライブラリーをインストールします。これには、次のライブラリーが含まれます。
+      - `pandas`
+      - `pyspark` ({{site.data.keyword.DSX}} を使用しない場合)
+
+1. 画像ベースのモデルを作成してデプロイします。
+   2. 訓練データを pandas フレームにロードします。
+   2. データを使用してモデルを訓練します。
+   3. モデルをパブリッシュします。
+   4. モデルをデプロイして評価します。
+
+7. `APIClient` を割り当て、アセットをサブスクライブし、モデルを評価することで、{{site.data.keyword.aios_short}} を構成します。
+8. 説明性を構成します。
+   9. 説明性を有効にします。
+   10. トランザクションの説明性を取得します。
+
+### 非構造化テキストのトランザクションの説明
+{: #ie-unstruct-xplan}
+
+次の説明性の例は、非構造化テキストを評価する分類モデルを示しています。この説明は、モデル予測に対してプラスおよびマイナスの影響があったキーワードを示します。 また、モデルへの入力情報として提供された元のテキストの中で、識別されたキーワードの位置も表示されています。
 
 ![説明性の画像分類](images/insight-explain-text.png)
+
+### 非構造化テキスト・モデルの例
+{: #ie-unstruct-ntbkssample}
+
+次のノートブックを使用して、詳細なコード・サンプルを確認しながら独自の {{site.data.keyword.aios_short}} デプロイメントを開発します。
+
+- [テキスト・ベース・モデルの説明を生成するチュートリアル](https://github.ibm.com/aiopenscale/explainability/blob/master/public/notebooks/demo/text_explanation.ipynb){: external}

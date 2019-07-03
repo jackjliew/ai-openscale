@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: security, information security, GDPR, 
 
@@ -11,15 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 資訊安全
 {: #is-ov}
@@ -33,7 +37,7 @@ IBM 致力於為我們的客戶及合作夥伴提供創新的資料隱私權、�
 
 如果您需要針對建立的 {{site.data.keyword.cloud}} {{site.data.keyword.watson}} 資源要求 GDPR 支援
 
--   在歐盟 (EU) 地區，請參閱[要求在歐盟建立之 IBM Cloud Watson 資源的支援](/docs/services/watson?topic=watson-gdpr-sar#request-EU)。
+-   在歐盟 (EU) 地區，請參閱[要求在歐盟建立之 {{site.data.keyword.Bluemix}} Watson 資源的支援](/docs/services/watson?topic=watson-gdpr-sar#request-EU)。
 -   在歐盟以外地區，請參閱[要求歐盟以外資源的支援](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU)。
 
 ## 歐盟一般資料保護規章 (GDPR)
@@ -41,7 +45,7 @@ IBM 致力於為我們的客戶及合作夥伴提供創新的資料隱私權、�
 
 IBM 致力於為我們的客戶及合作夥伴提供創新的資料隱私權、安全及控管解決方案，以協助他們邁向 GDPR 合規性。
 
-進一步瞭解 IBM 本身的 GDPR 就緒過程、我們的 GDPR 功能以及可支援您邁向合規性過程的供應項目 [ ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](../../icons/launch-glyph.svg "「外部鏈結」圖示")](http://www.ibm.com/gdpr){: new_window}.
+如需進一步瞭解 IBM 本身的 GDPR 就緒過程、我們的 GDPR 功能以及可支援您邁向合規性過程的供應項目，請參閱 [這裡](../../icons/launch-glyph.svg "「外部鏈結」圖示") (http://www.ibm.com/gdpr){: external}.
 
 ## 在 {{site.data.keyword.aios_short}} 中標示及刪除資料
 {: #is-stda}

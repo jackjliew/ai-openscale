@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: databases, connections, scoring, requests
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 指定数据库
 {: #connect-db}
@@ -113,23 +119,9 @@ subcollection: ai-openscale
 
 1.  单击**下一步**以查看摘要数据，然后单击**保存**。
 
-## 发送评分请求
-{: #cdb-score}
 
-要配置监视器，{{site.data.keyword.aios_short}} 要求您发送评分有效内容，以便开始记录将受监视的数据。
-
-对于 {{site.data.keyword.pm_full}} 中部署的模型，只要对部署进行评分，{{site.data.keyword.pm_short}} 就会自动将评分有效内容发送到 {{site.data.keyword.aios_short}}。对于其他机器学习引擎（例如 Microsoft Azure、Amazon SageMaker 或定制机器学习引擎），必须使用有效内容日志记录 API 来发送评分有效内容。
-
-选择部署（在本例中为“欺诈检测器”），然后使用提供的 `cURL` 或 `Python` 代码片段来记录模型部署请求和响应数据。请参阅[非 Watson Machine Learning 服务实例的载荷日志记录](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)以获取更多详细信息。
-
-需要将代码片段中的字段和值替换为真实值，因为其中提供的值仅作参考之用。
-{: important}
-
-![选择数据库](images/config-send-scoring.png)
-
-一旦运行了载荷日志记录，就将在所选部署的“准备好监视”列中看到一个复选标记。单击**配置监视器**以继续。
 
 ## 后续步骤
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} 现在可供您用于[为部署配置监视器](/docs/services/ai-openscale?topic=ai-openscale-mo-config)。
+{{site.data.keyword.aios_short}} 现在可供您用于[发送评分有效内容](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score)和[为部署配置监视器](/docs/services/ai-openscale?topic=ai-openscale-mo-config)。

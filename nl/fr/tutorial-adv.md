@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Tutoriel sur le SDK Python (avancé)
 {: #crt-ov}
@@ -58,9 +60,9 @@ surveillera la propension du modèle déployé à donner un résultat favorable 
 
 Ce tutoriel utilise un bloc-notes Jupyter qui doit être exécuté dans un projet Watson Studio, en utilisant un environnement d'exécution "Python 3.5 avec Spark". Il nécessite des identifiants de service pour les services {{site.data.keyword.cloud_notm}} suivants :
 
-- Cloud Object Storage (pour stocker votre projet Watson Studio)
+- Cloud Object Storage (pour stocker votre projet {{site.data.keyword.DSX}})
 - {{site.data.keyword.aios_short}}
-- Watson Machine Learning
+- {{site.data.keyword.pm_full}}
 - (Facultatif) Databases for PostgreSQL ou Db2 Warehouse
 
 Le bloc-notes Jupyter formera, créera et déploiera un modèle de risque de crédit allemand,
@@ -70,24 +72,23 @@ et il fournira sept jours d'enregistrements et de mesures à afficher dans le ta
 ## Introduction
 {: #crt-intro}
 
-Dans ce tutoriel, vous allez :
+Dans ce tutoriel, vous allez effectuer les tâches suivantes :
 
-- Mettre à disposition des services d'apprentissage automatique et de stockage {{site.data.keyword.cloud_notm}}
-- Définir un projet Watson Studio et exécuter un bloc-notes Python pour créer, former et déployer un modèle d'apprentissage automatique
-- Exécuter un bloc-notes Python pour créer un magasin de données, configurer les moniteurs de performances, d'exactitude et d'équité, et créer des données à surveiller
-- Afficher les résultats dans l'onglet Analyses de {{site.data.keyword.aios_short}}
+- [Mettre à disposition des services d'apprentissage automatique et de stockage {{site.data.keyword.cloud_notm}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-services).
+- [Définir un projet Watson Studio et exécuter un bloc-notes Python pour créer, former et déployer un modèle d'apprentissage automatique](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-set-wstudio).
+- [Mettre à disposition {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-wos-adv).
+- [Exécuter un bloc-notes Python pour créer un magasin de données, configurer les moniteurs de performances, d'exactitude et d'équité, et créer des données à surveiller](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-edit-notebook).
+- [Afficher les résultats dans l'onglet Analyses de {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-view-results).
 
 ## Mettez à disposition les services {{site.data.keyword.cloud_notm}}
 {: #crt-services}
 
-Connectez-vous à votre [compte {{site.data.keyword.cloud_notm}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window} avec votre {{site.data.keyword.ibmid}}. Lors de la mise à disposition des services, en particulier si vous utilisez Db2 Warehouse, vérifiez que l'organisation et l'espace sélectionnés sont les mêmes pour tous les services.
+Connectez-vous à votre [compte {{site.data.keyword.cloud_notm}}](https://{DomainName}){: external} avec votre {{site.data.keyword.ibmid}}. Lors de la mise à disposition des services, en particulier si vous utilisez Db2 Warehouse, vérifiez que l'organisation et l'espace sélectionnés sont les mêmes pour tous les services.
 
 ### Créez un compte {{site.data.keyword.DSX}}
 {: #crt-wstudio}
 
-- Si vous n'en avez pas déjà une associée à votre compte, [créez une instance de {{site.data.keyword.DSX}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/watson-studio){: new_window} :
+- Si vous n'en avez pas déjà une associée à votre compte, [créez une instance de {{site.data.keyword.DSX}}](https://{DomainName}/catalog/services/watson-studio){: external} :
 
   ![Watson Studio](images/watson_studio.png)
 
@@ -96,8 +97,7 @@ Connectez-vous à votre [compte {{site.data.keyword.cloud_notm}}
 ### Mettez à disposition un service {{site.data.keyword.cos_full_notm}}
 {: #crt-cos}
 
-- Si vous n'en avez pas déjà un associé à votre compte, [mettez à disposition un service {{site.data.keyword.cos_short}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} :
+- Si vous n'en avez pas déjà un associé à votre compte, [mettez à disposition un service {{site.data.keyword.cos_short}}](https://{DomainName}/catalog/services/cloud-object-storage){: external} :
 
   ![Object Storage](images/object_storage.png)
 
@@ -106,12 +106,24 @@ Connectez-vous à votre [compte {{site.data.keyword.cloud_notm}}
 ### Mettez à disposition un service {{site.data.keyword.pm_full}}
 {: #crt-wml}
 
-- Si vous n'en avez pas déjà une associée à votre compte, [mettez à disposition une instance de {{site.data.keyword.pm_short}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/machine-learning){: new_window} :
+- Si vous n'en avez pas déjà une associée à votre compte, [mettez à disposition une instance de {{site.data.keyword.pm_short}}](https://{DomainName}/catalog/services/machine-learning){: external} :
 
   ![Machine Learning](images/machine_learning.png)
 
 - Donnez un nom à votre service, choisissez le forfait Lite (gratuit) et cliquez sur le bouton **Créer**.
+
+### Mettez à disposition un service {{site.data.keyword.aios_full}}
+{: #crt-wos-adv}
+
+Si vous ne l'avez pas déjà fait, mettez à disposition {{site.data.keyword.aios_full}}. 
+
+- Si vous n'en avez pas déjà une associée à votre compte, [mettez à disposition une instance de {{site.data.keyword.aios_short}}](https://{DomainName}/catalog/services/watson-openscale){: external} :
+
+  ![Carreau {{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
+
+1. Cliquez sur **Catalogue** > **IA** > **{{site.data.keyword.aios_short}}**.
+2. Donnez un nom à votre service, choisissez un forfait et cliquez sur le bouton **Créer**.
+3. Pour démarrer {{site.data.keyword.aios_short}}, cliquez sur le bouton **Commencer**.
 
 ### (Facultatif) Mettez à disposition un service Databases for PostgreSQL ou DB2 Warehouse
 {: #crt-db2}
@@ -123,10 +135,8 @@ vous pouvez utiliser le stockage PostgreSQL interne gratuit
 avec {{site.data.keyword.aios_short}}, mais vous ne pourrez pas configurer l'apprentissage continu pour votre modèle.
 
 - Si vous n'en avez pas déjà un associé à votre compte,
-[mettez à disposition un service Databases for PostgreSQL
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/databases-for-postgresql)
-ou [un service Db2 Warehouse
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/db2-warehouse) :
+[mettez à disposition un service Databases for PostgreSQL](https://{DomainName}/catalog/services/databases-for-postgresql)
+ou [un service Db2 Warehouse](https://{DomainName}/catalog/services/db2-warehouse) :
 
   ![DB for Postgres](images/dbpostgres.png)
 
@@ -137,7 +147,7 @@ ou [un service Db2 Warehouse
 ## Définissez un projet {{site.data.keyword.DSX}}
 {: #crt-set-wstudio}
 
-- Connectez-vous à votre compte [{{site.data.keyword.DSX}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://dataplatform.ibm.com/){: new_window}. Cliquez sur {{site.data.keyword.avatar}} et vérifiez que le compte que vous utilisez est bien celui que vous avez utilisé pour créer vos services {{site.data.keyword.cloud_notm}} :
+- Connectez-vous à votre [compte {{site.data.keyword.DSX}}](https://dataplatform.ibm.com/){: external}. Cliquez sur {{site.data.keyword.avatar}} et vérifiez que le compte que vous utilisez est bien celui que vous avez utilisé pour créer vos services {{site.data.keyword.cloud_notm}} :
 
   ![Même compte](images/same_account.png)
 
@@ -161,8 +171,7 @@ et cliquez sur **Créer**.
 
 - Téléchargez le fichier suivant :
 
-    - [Working with Watson Machine Learning
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [Working with Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - Dans l'onglet **Actifs** de votre projet {{site.data.keyword.DSX}},
 cliquez sur le bouton **Ajouter au projet** et sélectionnez **Bloc-notes** dans la liste déroulante :
@@ -194,7 +203,7 @@ cliquez sur l'icône **Editer** en regard du bloc-notes `Working with Watson Mac
 
     - Créez, copiez et collez une clé d'API {{site.data.keyword.cloud_notm}} en suivant les instructions.
 
-    - Remplacez les identifiants du service Watson Machine Learning (WML) par ceux que vous avez créés.
+    - Remplacez les identifiants du service {{site.data.keyword.pm_full}} par ceux que vous avez créés.
 
     - Remplacez les identifiants de base de données par ceux que vous avez créés pour Databases for PostgreSQL.
 
@@ -220,13 +229,12 @@ dans votre instance de service {{site.data.keyword.aios_short}} le modèle **Spa
 ### Affichez les analyses de votre déploiement
 {: #crt-view-insights}
 
-Dans le [tableau de bord {{site.data.keyword.aios_short}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window},
+Dans le [tableau de bord {{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external},
 cliquez sur l'onglet **Analyses** :
 
   ![Analyses](images/insight-dash-tab.png)
 
-La page Analyses fournit une vue d'ensemble des métriques de vos modèles déployés. Vous voyez des alertes pour les métriques d'équité ou d'exactitude passées sous le seuil défini lors de l'exécution du bloc-notes. Les données et paramètres utilisés dans ce tutoriel auront créé des métriques d'exactitude et d'équité similaires à celles présentées ici.
+La page Analyses fournit une vue d'ensemble des métriques de vos modèles déployés. Vous voyez des alertes pour les métriques d'équité ou d'exactitude qui dépassent le seuil défini lors de l'exécution du bloc-notes. Les données et paramètres utilisés dans ce tutoriel auront créé des métriques d'exactitude et d'équité similaires à celles présentées ici.
 
   ![Vue d'ensemble des analyses](images/insight-overview-adv-tutorial-2.png)
 

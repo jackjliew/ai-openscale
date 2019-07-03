@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: security, information security, GDPR, 
 
@@ -11,15 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Sécurité des informations
 {: #is-ov}
@@ -38,7 +42,7 @@ produits ou services permettent aux clients de se conformer aux lois ou régleme
 Si vous avez besoin d'une assistance RGPD pour les ressources {{site.data.keyword.cloud}} {{site.data.keyword.watson}} qui sont créées
 
 -   Dans l'Union européenne (UE), voir
-[Demande de support pour des ressources IBM Cloud Watson créées dans l'Union européenne](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
+[Demande de support pour des ressources Watson {{site.data.keyword.Bluemix}} créées dans l'Union européenne](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
 -   En dehors de l'UE, voir [Demande de support pour des ressources en dehors de l'Union européenne](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
 
 ## Règlement général sur la protection des données (RGPD) de l'Union Européenne
@@ -49,7 +53,7 @@ pour les accompagner dans leur mise en conformité au RGPD.
 
 Pour en savoir plus sur le parcours préparatoire au RGPD d'IBM
 ainsi que sur nos sessions proposées et offres liées au RGPD pour la prise en charge de votre parcours de conformité, cliquez
-[ici ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.com/gdpr){: new_window}.
+[ici](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.com/gdpr){: external}.
 
 ## Etiquetage et suppression de données dans {{site.data.keyword.aios_short}}
 {: #is-stda}

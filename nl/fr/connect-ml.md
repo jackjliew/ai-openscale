@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: payload, non-Watson, machine learning, services, subscription
 
@@ -11,37 +11,36 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# Journalisation du contenu pour les instances de service non-Watson Machine Learning
+# Journalisation du contenu pour les instances de service non-{{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.pm_short}}
 {: #cml-connect}
 
-Si votre modèle d'AI est déployé dans un moteur d'apprentissage automatique autre que Watson Machine Learning (WML),
+Si votre modèle d'AI est déployé dans un moteur d'apprentissage automatique autre que {{site.data.keyword.pm_full}},
 vous devez activer la journalisation du contenu pour le moteur d'apprentissage automatique externe avec un client Python.
 {: shortdesc}
 
 Pour une information plus complète, voir la
-[documentation du client Python {{site.data.keyword.aios_short}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://ai-openscale-python-client.mybluemix.net/){: new_window}
+[documentation du client Python {{site.data.keyword.aios_short}}](http://ai-openscale-python-client.mybluemix.net/){: external},
 et les exemples de bloc-notes du client Python {{site.data.keyword.aios_short}}
-des
-[tutoriels {{site.data.keyword.aios_short}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window}.
+des [tutoriels {{site.data.keyword.aios_short}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: external}.
 
 ## Avant de commencer
 {: #cml-prereq}
 
-Vous devrez avoir les données de formation de votre modèle disponibles dans Db2 ou Cloud Object Storage pour surveiller son biais. L'explicabilité et l'exactitude ne sont pas prises en charge pour les fonctions Python. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+Vous devrez avoir les données de formation de votre modèle disponibles dans Db2 ou {{site.data.keyword.cos_full}} pour surveiller son biais. L'explicabilité et l'exactitude ne sont pas prises en charge pour les fonctions Python. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - Importer et lancer {{site.data.keyword.aios_short}}
 
@@ -75,7 +74,9 @@ Vous devrez avoir les données de formation de votre modèle disponibles dans Db
 ### Lier votre moteur d'apprentissage automatique personnalisé
 {: #cml-cusbind}
 
-- Un moteur non-WML se lie comme personnalisé, ce qui signifie qu'il s'agit seulement de métadonnées ; il n'y a pas d'intégration directe avec le service non-WML.
+- Un moteur non-{{site.data.keyword.pm_full}} se lie comme personnalisé,
+ce qui signifie qu'il s'agit seulement de métadonnées ; il n'y a pas d'intégration directe avec le service non-{{site.data.keyword.pm_full}}. Vous pouvez lier plusieurs moteurs d'apprentissage automatique à {{site.data.keyword.aios_short}}
+en utilisant la méthode `client.data_mart.bindings.add`.
 
     ```python
     custom_engine_credentials = {
@@ -129,44 +130,14 @@ Vous devrez avoir les données de formation de votre modèle disponibles dans Db
     subscription.payload_logging.get_details()
     ```
 
+Pour plus d'information, voir [Journalisation du contenu]().
+
 ### Evaluation et journalisation du contenu
 {: #cml-cusscore}
 
 - Evaluez votre modèle. Pour un exemple complet, voir le
 [bloc-notes
-IBM {{site.data.keyword.aios_full}} & Custom ML Engine
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}.
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+IBM {{site.data.keyword.aios_full}} & Custom ML Engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}.
 
 - Stocker la demande et la réponse dans la table de journalisation du contenu
 
@@ -216,10 +187,11 @@ IBM {{site.data.keyword.aios_full}} & Custom ML Engine
 ## Utilisation du moteur d'apprentissage automatique Microsoft Azure
 {: #cml-azconfig}
 
-### Lier votre moteur MS Azure ML
+### Lier votre moteur d'apprentissage automatique Microsoft Azure
 {: #cml-azbind}
 
-- Un moteur non-WML se lie comme personnalisé, ce qui signifie qu'il s'agit seulement de métadonnées ; il n'y a pas d'intégration directe avec le service non-WML.
+- Un moteur non-{{site.data.keyword.pm_full}} se lie comme personnalisé,
+ce qui signifie qu'il s'agit seulement de métadonnées ; il n'y a pas d'intégration directe avec le service non-{{site.data.keyword.pm_full}}.
 
     ```python
     AZURE_ENGINE_CREDENTIALS = {
@@ -284,40 +256,8 @@ IBM {{site.data.keyword.aios_full}} & Custom ML Engine
 {: #cml-azscore}
 
 - Evaluez votre modèle. Pour un exemple complet, voir le
-[
-bloc-notes Working with Azure Machine Learning Studio Engine
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}.
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+[bloc-notes
+Working with Azure Machine Learning Studio Engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: external}.
 
 - Stocker la demande et la réponse dans la table de journalisation du contenu :
 
@@ -371,10 +311,11 @@ bloc-notes Working with Azure Machine Learning Studio Engine
 ## Utilisation du moteur d'apprentissage automatique Amazon SageMaker
 {: #cml-smconfig}
 
-### Lier votre moteur AWS SageMaker ML
+### Lier votre moteur d'apprentissage automatique Amazon SageMaker
 {: #cml-smbind}
 
-- Un moteur non-WML se lie comme personnalisé, ce qui signifie qu'il s'agit seulement de métadonnées ; il n'y a pas d'intégration directe avec le service non-WML.
+- Un moteur non-{{site.data.keyword.pm_full}} se lie comme personnalisé,
+ce qui signifie qu'il s'agit seulement de métadonnées ; il n'y a pas d'intégration directe avec le service non-{{site.data.keyword.pm_full}}.
 
     ```python
     SAGEMAKER_ENGINE_CREDENTIALS = {
@@ -438,40 +379,9 @@ bloc-notes Working with Azure Machine Learning Studio Engine
 {: #cml-smscore}
 
 - Evaluez votre modèle. Pour un exemple complet, voir le
-[
-bloc-notes Working with SageMaker Machine Learning Engine
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}.
+[bloc-notes
+Working with SageMaker Machine Learning Engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: external}.
 
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
 
 - Stocker la demande et la réponse dans la table de journalisation du contenu :
 
@@ -529,5 +439,4 @@ bloc-notes Working with SageMaker Machine Learning Engine
 [Spécification d'une base de données](/docs/services/ai-openscale?topic=ai-openscale-connect-db).
 
 - Pour continuer avec la bibliothèque de commandes Python,
-voir la [documentation du client Python
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://ai-openscale-python-client.mybluemix.net/){: new_window}.
+voir la [documentation du client Python](http://ai-openscale-python-client.mybluemix.net/){: external}.

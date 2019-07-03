@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: machine learning, services, ml, custom 
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 指定定制 ML 服务实例
 {: #co-connect}
@@ -79,15 +85,15 @@ subcollection: ai-openscale
 
 您还可以参考以下链接：
 
-[AIOS 载荷日志记录 API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[AIOS 有效内容日志记录 API](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: external}
 
-[定制部署 API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
+[定制部署 API](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: external}
 
-[Python 客户机绑定 SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
+[Python 客户机绑定 SDK](http://ai-openscale-python-client.mybluemix.net/#bindings){: external}
 
-[Working with Custom Machine Learning engine ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[使用定制机器学习引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-[Python SDK for IBM Watson OpenScale ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
+[Python SDK for IBM Watson OpenScale](https://pypi.org/project/ibm-ai-openscale/){: external}
 
 - **模型的用于支持监视器的输入条件**
 
@@ -168,7 +174,7 @@ subcollection: ai-openscale
 
   在此示例中，`“personal”`和`“camping”`是可能的类，并且每个评分输出中的分数会分配给这两个类。如果缺少预测概率，那么偏差检测将起作用，但自动除偏不会起作用。
 
-  以上评分输出应当可从 {{site.data.keyword.aios_short}} 能够通过 REST 调用的实时评分端点进行访问。对于 AzureML、SageMaker 和 WML，{{site.data.keyword.aios_short}} 直接连接到本机评分端点，（因此您不必担心如何实施评分规范）
+  以上评分输出应当可从 {{site.data.keyword.aios_short}} 能够通过 REST 调用的实时评分端点进行访问。对于 AzureML、SageMaker 和 {{site.data.keyword.pm_full}}，{{site.data.keyword.aios_short}} 直接连接到本机评分端点，（因此您不必担心如何实施评分规范）
 
 ### 后续步骤
 {: #co-next}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Supporto didattico per l'SDK Python (avanzato)
 {: #crt-ov}
@@ -44,9 +46,9 @@ Il modello rischio di credito fornito in questo supporto didattico utilizza un d
 
 Questo supporto didattico utilizza un notebook Jupyter da eseguire in un progetto Watson Studio, utilizzando un ambiente di runtime "Python 3.5 with Spark". Richiede le credenziali di servizio per i seguenti servizi {{site.data.keyword.cloud_notm}}:
 
-- Storage Object Storage (per memorizzare il progetto Watson Studio)
+- Cloud Object Storage (per memorizzare il progetto {{site.data.keyword.DSX}})
 - {{site.data.keyword.aios_short}}
-- Watson Machine Learning
+- {{site.data.keyword.pm_full}}
 - (Facoltativo) Databases for PostgreSQL o Db2 Warehouse
 
 Il notebook Jupyter addestra, crea e distribuisce un modello German Credit Risk, configura {{site.data.keyword.aios_short}} per monitorare quella distribuzione e fornire sette giorni di record cronologici e misurazioni per la visualizzazione nel dashboard Insight di {{site.data.keyword.aios_short}}. È anche possibile, facoltativamente, configurare il continuous learning con Watson Studio e Spark.
@@ -54,22 +56,23 @@ Il notebook Jupyter addestra, crea e distribuisce un modello German Credit Risk,
 ## Introduzione
 {: #crt-intro}
 
-In questo supporto didattico, verranno svolte le seguenti attività:
+In questo supporto didattico, verranno eseguite le seguenti attività:
 
-- Eseguire il provisioning di servizi di machine learning e storage di {{site.data.keyword.cloud_notm}}
-- Configurare un progetto Watson Studio ed eseguire un notebook Python per creare, eseguire il training e la distribuzione di un modello di machine learning
-- Eseguire un notebook Python per creare un data mart, configurare i monitor delle prestazioni, dell'accuratezza e della correttezza e creare dati da monitorare
-- Visualizzare i risultati nella scheda Insight di {{site.data.keyword.aios_short}}
+- [Eseguire il provisioning di servizi di machine learning e storage di {{site.data.keyword.cloud_notm}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-services).
+- [Configurare un progetto Watson Studio ed eseguire un notebook Python per creare, eseguire il training e la distribuzione di un modello di machine learning](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-set-wstudio).
+- [Eseguire il provisioning di {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-wos-adv).
+- [Eseguire un notebook Python per creare un data mart, configurare i monitor delle prestazioni, dell'accuratezza e della correttezza e creare dati da monitorare](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-edit-notebook).
+- [Visualizzare i risultati nella scheda Insight di {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-view-results).
 
 ## Eseguire il provisioning di servizi {{site.data.keyword.cloud_notm}}
 {: #crt-services}
 
-Accedere all'account [{{site.data.keyword.cloud_notm}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}){: new_window} con l'{{site.data.keyword.ibmid}}. Quando si esegue il provisioning dei servizi, in particolare se si utilizza Db2 Warehouse, verificare che l'organizzazione e lo spazio selezionati siano identici per tutti i servizi.
+Accedere all'[account {{site.data.keyword.cloud_notm}} ](https://{DomainName}){: external} con il proprio {{site.data.keyword.ibmid}}. Quando si esegue il provisioning dei servizi, in particolare se si utilizza Db2 Warehouse, verificare che l'organizzazione e lo spazio selezionati siano identici per tutti i servizi.
 
 ### Creare un account {{site.data.keyword.DSX}}
 {: #crt-wstudio}
 
-- [Creare un'istanza di {{site.data.keyword.DSX}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/watson-studio){: new_window} se non si dispone già di un'istanza associata all'account:
+- [Creare un'istanza  {{site.data.keyword.DSX}}](https://{DomainName}/catalog/services/watson-studio){: external} se non si dispone già di un'istanza associata all'account:
 
   ![Watson Studio](images/watson_studio.png)
 
@@ -78,7 +81,7 @@ Accedere all'account [{{site.data.keyword.cloud_notm}} ![icona link esterno](../
 ### Eseguire il provisioning di un servizio {{site.data.keyword.cos_full_notm}}
 {: #crt-cos}
 
-- [Eseguire il provisioning di un servizio {{site.data.keyword.cos_short}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} se non si dispone già di un servizio associato all'account:
+- [Eseguire il provisioning di un servizio {{site.data.keyword.cos_short}}](https://{DomainName}/catalog/services/cloud-object-storage){: external} se non si dispone già di un servizio associato all'account:
 
   ![Object Storage](images/object_storage.png)
 
@@ -87,18 +90,31 @@ Accedere all'account [{{site.data.keyword.cloud_notm}} ![icona link esterno](../
 ### Eseguire il provisioning di un servizio {{site.data.keyword.pm_full}}
 {: #crt-wml}
 
-- [Eseguire il provisioning di un'istanza {{site.data.keyword.pm_short}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/machine-learning){: new_window} se non si dispone già di un servizio associato all'account:
+- [Eseguire il provisioning di un'istanza {{site.data.keyword.pm_short}}](https://{DomainName}/catalog/services/machine-learning){: external} se non si dispone già di un servizio associato all'account:
 
   ![Machine Learning](images/machine_learning.png)
 
 - Fornire un nome al servizio, selezionare il piano Lite (gratuito) e fare clic sul pulsante **Crea**.
+
+### Eseguire il provisioning di un servizio {{site.data.keyword.aios_full}}
+{: #crt-wos-adv}
+
+Assicurarsi di aver eseguito il provisioning di {{site.data.keyword.aios_full}}. 
+
+- [Eseguire il provisioning di un'istanza {{site.data.keyword.aios_short}}](https://{DomainName}/catalog/services/watson-openscale){: external} se non si dispone già di un servizio associato all'account:
+
+  Riquadro ![{{site.data.keyword.aios_short}} ](images/wos-cloud-tile.png)
+
+1. Fare clic su **Catalogo** > **AI** > **{{site.data.keyword.aios_short}}**.
+2. Fornire un nome al servizio, selezionare un piano e fare clic sul pulsante **Crea**.
+3. Per avviare {{site.data.keyword.aios_short}}, fare clic sul pulsante **Introduzione**.
 
 ### (Facoltativo) Eseguire il provisioning di un servizio Databases for PostgreSQL o DB2 Warehouse
 {: #crt-db2}
 
 Se si dispone di un account {{site.data.keyword.cloud_notm}} a pagamento, è possibile fornire un servizio `Databases for PostgreSQL` o `Db2 Warehouse` per sfruttare tutti i vantaggi dell'integrazione con {{site.data.keyword.DSX}} e i servizi di continuous learning. Se si sceglie di non fornire un servizio a pagamento, è possibile utilizzare lo storage interno PostgreSQL gratuito con {{site.data.keyword.aios_short}}, ma non sarà possibile configurare il continuous learning per il modello.
 
-- [Eseguire il provisioning di un servizio Databases for PostgreSQL ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/databases-for-postgresql) o [di un servizio Db2 Warehouse ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://{DomainName}/catalog/services/db2-warehouse) se non si dispone già di un servizio associato all'account:
+- [Eseguire il provisioning di un servizio Databases for PostgreSQL](https://{DomainName}/catalog/services/databases-for-postgresql) o [di un servizio Db2 Warehouse ](https://{DomainName}/catalog/services/db2-warehouse) se non si dispone già di un servizio associato all'account:
 
   ![DB for Postgres](images/dbpostgres.png)
 
@@ -109,7 +125,7 @@ Se si dispone di un account {{site.data.keyword.cloud_notm}} a pagamento, è pos
 ## Configurare un progetto {{site.data.keyword.DSX}}
 {: #crt-set-wstudio}
 
-- Accedere all'account [{{site.data.keyword.DSX}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://dataplatform.ibm.com/){: new_window}. Fare clic su {{site.data.keyword.avatar}} e verificare che l'account che si sta utilizzando sia lo stesso account utilizzato per creare i servizi {{site.data.keyword.cloud_notm}}:
+- Accedere all'[account {{site.data.keyword.DSX}}](https://dataplatform.ibm.com/){: external}. Fare clic su {{site.data.keyword.avatar}} e verificare che l'account che si sta utilizzando sia lo stesso account utilizzato per creare i servizi {{site.data.keyword.cloud_notm}}:
 
   ![Stesso account](images/same_account.png)
 
@@ -131,7 +147,7 @@ Se si dispone di un account {{site.data.keyword.cloud_notm}} a pagamento, è pos
 
 - Scarica il seguente file:
 
-    - [Working with Watson Machine Learning ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [Utilizzo di Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - Dalla scheda **Asset** nel progetto {{site.data.keyword.DSX}}, fare clic sul pulsante **Aggiungi al progetto** e selezionare **Notebook** dal menu a discesa:
 
@@ -161,7 +177,7 @@ Il notebook `Working with Watson Machine Learning` contiene le istruzioni dettag
 
     - Seguire le istruzioni per creare, copiare e incollare una chiave API {{site.data.keyword.cloud_notm}}.
 
-    - Sostituire le credenziali del servizio WML (Watson Machine Learning) con quelle create in precedenza.
+    - Sostituire le credenziali del servizio {{site.data.keyword.pm_full}} con quelle create in precedenza.
 
     - Sostituire le credenziali DB con quelle create per Databases for PostgreSQL.
 
@@ -184,11 +200,11 @@ Il risultato finale è la creazione, addestramento e distribuzione del modello *
 ### Visualizzare gli insight per la distribuzione
 {: #crt-view-insights}
 
-Utilizzando il dashboard [{{site.data.keyword.aios_short}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, fare clic sulla scheda **Insight**:
+Utilizzando il [dashboard {{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}, fare clic sulla scheda **Insight**:
 
   ![Insight](images/insight-dash-tab.png)
 
-La pagina Insight fornisce una panoramica delle metriche per i modelli distribuiti. È possibile visualizzare facilmente gli avvisi per le metriche Correttezza o Accuratezza che sono scese al di sotto della soglia impostata quando si esegue il notebook. Per i dati e le impostazioni utilizzati in questo supporto didattico verranno create le metriche Accuratezza e Correttezza simili a quelle mostrate qui.
+La pagina Insight fornisce una panoramica delle metriche per i modelli distribuiti. È possibile visualizzare facilmente gli avvisi per le metriche Correttezza o Accuratezza che superano la soglia impostata quando si esegue il notebook. Per i dati e le impostazioni utilizzati in questo supporto didattico verranno create le metriche Accuratezza e Correttezza simili a quelle mostrate qui.
 
   ![Panoramica su Insight](images/insight-overview-adv-tutorial-2.png)
 

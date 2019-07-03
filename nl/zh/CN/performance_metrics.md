@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,39 +11,39 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# 分析度量和事务 ![beta 标签](images/beta.png)
-{: #anlz_metrics}
+# 性能度量概述 ![beta 标记](images/beta.png)
+{: #anlz_metrics_performance}
 
-可以使用 {{site.data.keyword.aios_full}} 通过各种方法来分析度量和交易。
+使用性能监视可了解部署处理数据记录的速度。可在选择要由 {{site.data.keyword.aios_short}} 跟踪和监视的部署时启用性能监视。
 {: shortdesc}
 
-## 混淆矩阵 ![beta 标签](images/beta.png)
-{: #it-conf-mtx}
+性能度量的计算是基于以下信息：
 
-作为质量度量的详细信息，您可以查看模型未正确分析的记录。对于二元分类模型，此类异常可能表示误报或漏报，对于多类模型，则可能表示类赋值不正确。您还可以查看模型未正确分析的反馈记录的列表。
-{: shortdesc}
+- 评分载荷数据
 
-1. 在任何**质量**图表中（如**公平性**），单击图表中的小时/日。
-    
-    ![事务列表 - 有偏差](images/Confusion_Matrix_040819.004.png)
+为了进行适当的监视，每个评分请求也应该记录在 {{site.data.keyword.aios_short}} 中。 对于 {{site.data.keyword.pm_full}} 引擎，将自动进行载荷数据记录。对于其他机器学习引擎，可以使用Python客户机或REST API来提供载荷数据。 性能监视不会在受监视的部署上创建任何其他评分请求。
 
-1. 混淆矩阵显示误报和漏报。 单击单元格可查看反馈记录的子集。
+您可以在 {{site.data.keyword.aios_short}} 仪表板上查看一段时间内的性能度量值：
 
-    ![事务列表 - 有偏差](images/Confusion_Matrix_040819.005.png)
+![性能图表](images/performance_metrics_001.png)
 
-1. 查看反馈记录并请求对反馈记录的分析结果进行说明。
+## 支持的性能度量
+{: #anlz_metrics_performance_supp_quality_mets}
 
-    ![事务列表 - 有偏差](images/Confusion_Matrix_040819.006.png)
+{{site.data.keyword.aios_short}} 支持以下性能度量：
 
-1. 事务以内联方式显示。
-
-    ![事务列表 - 有偏差](images/Confusion_Matrix_040819.007.png)
-
+- [吞吐量](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

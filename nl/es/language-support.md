@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: language support, 
 
@@ -11,15 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Idiomas soportados en {{site.data.keyword.aios_short}}
 {: #sl-langs}
@@ -44,8 +48,9 @@ De forma predeterminada el soporte de idiomas está habilitado. La interfaz de u
 Puesto que esta es la primera fase de soporte para un producto totalmente globalizado, la traducción está limitada a la interfaz de usuario y a los mensajes de {{site.data.keyword.aios_short}}, como la información, los avisos y los errores que se muestran al usuario durante el uso normal. Se da soporte a datos y caracteres multilingües en las definiciones, el contenido y los metadatos de los modelos de inteligencia artificial, como por ejemplo nombres, definiciones y valores. Existen las limitaciones siguientes con respecto a la interfaz de usuario y los controles traducidos:
 
 - La API de {{site.data.keyword.aios_short}} no se ha traducido.
-- El mecanismo de instalación de {{site.data.keyword.aios_full}} para {{site.data.keyword.icpfull}} for Data no se ha traducido.
+- El mecanismo de instalación para {{site.data.keyword.wos4d_full}} no se ha traducido.
 - Actualmente no se da soporte a idiomas bidireccionales.
+- La explicabilidad para modelos de texto no estructurados no está soportada para los lenguajes de script continuos como, por ejemplo, japonés, chino y coreano, que no utilizan espacios en blanco o caracteres de puntuación para separar las palabras.
 
 ## Limitaciones de la documentación de {{site.data.keyword.aios_short}}
 {: #sl-langs-limit-doc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: language support, 
 
@@ -11,15 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # {{site.data.keyword.aios_short}} 所支援的語言
 {: #sl-langs}
@@ -44,8 +48,9 @@ subcollection: ai-openscale
 因為這是全面全球化產品支援的第一個階段，所以翻譯僅限於 {{site.data.keyword.aios_short}} 使用者介面和訊息，例如在正常使用期間顯示給使用者的資訊、警告及錯誤。在 AI 模型定義、內容和 meta 資料中支援多語言資料及字元，例如名稱、定義及值。對於翻譯的使用者介面和控制，有下列限制：
 
 - {{site.data.keyword.aios_short}} API 不翻譯。
-- {{site.data.keyword.aios_full}} for {{site.data.keyword.icpfull}} for Data 的安裝機制不翻譯。
+- {{site.data.keyword.wos4d_full}} 的安裝機制不翻譯。
 - 目前不支援雙向語言。
+- 若為日文、中文和韓文等之類的連續書寫型語言（亦即，不使用空格或標點符號字元來區隔單字），則不支援非結構化文字模型的可解釋性。
 
 ## {{site.data.keyword.aios_short}} 文件的限制
 {: #sl-langs-limit-doc}

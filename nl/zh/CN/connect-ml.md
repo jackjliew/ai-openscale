@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: payload, non-Watson, machine learning, services, subscription
 
@@ -11,30 +11,32 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# 非 Watson Machine Learning 服务实例的载荷日志记录
+# 非 {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.pm_short}} 服务实例的有效内容日志记录
 {: #cml-connect}
 
-如果 AI 模型部署在除 Watson Machine Learning (WML) 以外的其他机器学习引擎中，那么必须使用 Python 客户机为外部机器学习引擎启用载荷日志记录。
+如果 AI 模型部署在除 {{site.data.keyword.pm_full}} 以外的其他机器学习引擎中，那么您必须使用 Python 客户机为外部机器学习引擎启用有效内容日志记录。
 {: shortdesc}
 
-请参阅 [{{site.data.keyword.aios_short}} Python客户机文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标ALT=")](http://ai-openscale-python-client.mybluemix.net/){: new_window}，以及样本 {{site.data.keyword.aios_short}} Python客户机笔记本（包含 [{{site.data.keyword.aios_short}} 教程 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window}），中的更多完整信息。
+请参阅 [{{site.data.keyword.aios_short}} Python 客户机文档](http://ai-openscale-python-client.mybluemix.net/){: external}以及样本 {{site.data.keyword.aios_short}} Python 客户机笔记本（包含在 [{{site.data.keyword.aios_short}} 教程中](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: external}），其中提供了更完整的信息。
 
 ## 开始之前
 {: #cml-prereq}
 
-您将需要在 Db2 或 Cloud Object Storage 中提供模型的训练数据，以监视模型的偏差。Python 函数不支持可解释性和准确性。有关训练数据的更多信息，请参阅[为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+您需要让 Db2 或 {{site.data.keyword.cos_full}} 能够使用您的模型的训练数据，这样才能监视模型的偏差。Python 函数不支持可解释性和准确性。有关训练数据的更多信息，请参阅 [ 为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - 导入并启动 {{site.data.keyword.aios_short}}
 
@@ -67,7 +69,7 @@ subcollection: ai-openscale
 ### 绑定定制机器学习引擎
 {: #cml-cusbind}
 
-- 非 WML 引擎绑定为“定制”，意味着这只是元数据；没有任何与非 WML 服务的直接集成。
+- 非 {{site.data.keyword.pm_full}} 引擎绑定为“定制”，意味着这只是元数据；没有任何与非 {{site.data.keyword.pm_full}} 服务的直接集成。您可以使用 `client.data_mart.bindings.add` 方法将多个机器学习引擎绑定到 {{site.data.keyword.aios_short}}。
 
     ```python
     custom_engine_credentials = {
@@ -121,41 +123,12 @@ subcollection: ai-openscale
     subscription.payload_logging.get_details()
     ```
 
+有关更多信息，请参阅[有效内容日志记录]()。
+
 ### 评分和载荷日志记录
 {: #cml-cusscore}
 
-- 对模型进行评分。有关完整示例，请参阅 [IBM {{site.data.keyword.aios_full}} 和定制 ML 引擎笔记本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}。
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- 对模型进行评分。有关完整示例，请参阅 [IBM {{site.data.keyword.aios_full}} & 定制 ML 引擎笔记本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}。
 
 - 在载荷日志记录表中存储请求和响应
 
@@ -205,10 +178,10 @@ subcollection: ai-openscale
 ## 使用 Microsoft Azure 机器学习引擎
 {: #cml-azconfig}
 
-### 绑定 MS Azure ML 引擎
+### 绑定 Microsoft Azure 机器学习引擎
 {: #cml-azbind}
 
-- 非 WML 引擎绑定为“定制”，意味着这只是元数据；没有任何与非 WML 服务的直接集成。
+- 非 {{site.data.keyword.pm_full}} 引擎绑定为“定制”，意味着这只是元数据；没有任何与非 {{site.data.keyword.pm_full}} 服务的直接集成。
 
     ```python
     AZURE_ENGINE_CREDENTIALS = {
@@ -272,38 +245,7 @@ subcollection: ai-openscale
 ### 评分和载荷日志记录
 {: #cml-azscore}
 
-- 对模型进行评分。有关完整示例，请参阅[使用 Azure Machine Learning Studio Engine 笔记本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}。
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- 对模型进行评分。有关完整示例，请参阅[使用 Azure Machine Learning Studio Engine 笔记本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: external}。
 
 - 在载荷日志记录表中存储请求和响应：
 
@@ -357,10 +299,10 @@ subcollection: ai-openscale
 ## 使用 Amazon SageMaker 机器学习引擎
 {: #cml-smconfig}
 
-### 绑定 AWS SageMaker ML 引擎
+### 绑定 Amazon SageMaker 机器学习引擎
 {: #cml-smbind}
 
-- 非 WML 引擎绑定为“定制”，意味着这只是元数据；没有任何与非 WML 服务的直接集成。
+- 非 {{site.data.keyword.pm_full}} 引擎绑定为“定制”，意味着这只是元数据；没有任何与非 {{site.data.keyword.pm_full}} 服务的直接集成。
 
     ```python
     SAGEMAKER_ENGINE_CREDENTIALS = {
@@ -423,38 +365,8 @@ subcollection: ai-openscale
 ### 评分和载荷日志记录
 {: #cml-smscore}
 
-- 对模型进行评分。有关完整示例，请参阅[使用 SageMaker 机器学习引擎笔记本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}。
+- 对模型进行评分。有关完整示例，请参阅[使用 SageMaker 机器学习引擎笔记本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: external}。
 
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
 
 - 在载荷日志记录表中存储请求和响应：
 
@@ -510,4 +422,4 @@ subcollection: ai-openscale
 
 - 要继续使用 {{site.data.keyword.aios_short}} 客户机，请参阅[指定数据库](/docs/services/ai-openscale?topic=ai-openscale-connect-db)。
 
-- 要继续使用 Python 命令库，请参阅 [Python 客户机文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://ai-openscale-python-client.mybluemix.net/){: new_window}。
+- 要继续使用 Python 命令库，请参阅 [Python 客户机文档](http://ai-openscale-python-client.mybluemix.net/){: external}。

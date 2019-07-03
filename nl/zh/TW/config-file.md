@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 使用 JSON 配置檔來配置資產部署
 {: #cf-ov}
@@ -45,7 +47,7 @@ subcollection: ai-openscale
       subscription_configuration = json.load(fp)
     ```
 
-這個檔案含有配置資料，以下顯示其範例。如需完整的配置內容範例，請參閱記事本。
+檔案含有配置資料。請參閱下列範例。如需完整的配置內容範例，請參閱記事本。
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
@@ -171,6 +173,9 @@ subcollection: ai-openscale
 
 會建立及配置資產部署供 {{site.data.keyword.aios_short}} 使用。
 
-如需完整資訊，請參閱 [{{site.data.keyword.aios_short}} Python 用戶端說明文件 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}。
+## 後續步驟
+{: #cf-results-nxt-steps}
 
-您也可以使用[匯入訂閱 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 和[匯出訂閱 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API 方法，將配置匯入及匯出至 {{site.data.keyword.aios_short}}。
+如需更完整的資訊，請參閱 [{{site.data.keyword.aios_short}} Python 用戶端說明文件](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: external}。
+
+您也可以使用[匯入訂閱](https://{DomainName}/apidocs/ai-openscale#import-subscription){: external}和[匯出訂閱](https://{DomainName}/apidocs/ai-openscale#export-subscription){: external} API 方法，將配置匯入及匯出至 {{site.data.keyword.aios_short}}。

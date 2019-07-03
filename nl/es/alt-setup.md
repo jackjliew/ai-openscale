@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Instalación de un módulo Python para configurar {{site.data.keyword.aios_short}}
 {: #as-module}
@@ -32,7 +34,9 @@ Para automatizar el suministro y la configuración de los servicios necesarios d
 ## Acerca de este módulo
 {: #as-about}
 
-- El módulo proporciona a los usuarios técnicos una manera alternativa para ver una instancia de {{site.data.keyword.aios_short}} en ejecución sin necesidad de suministrar y configurar los servicios usted mismo, tal como se describe en la guía de aprendizaje [Cómo empezar](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted).
+- El módulo proporciona una forma alternativa para que los usuarios técnicos vean una instancia de {{site.data.keyword.aios_short}} en
+ejecución sin necesidad de suministrar y configurar los servicios ellos mismos, tal como se describe en la guía de aprendizaje
+[Cómo empezar](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted).
 - El módulo Python ejecuta el proceso de comprobar los servicios de que dispone y de crear los servicios necesarios, incluido {{site.data.keyword.aios_short}}. Cuando el módulo se ha ejecutado correctamente, desde el panel de control de {{site.data.keyword.cloud_notm}} puede iniciar {{site.data.keyword.aios_short}} para ver cómo supervisa un modelo.
 
 ## Antes de empezar
@@ -40,7 +44,7 @@ Para automatizar el suministro y la configuración de los servicios necesarios d
 
 1. [Cree una clave de API de {{site.data.keyword.cloud_notm}} y descárguela](/docs/iam?topic=iam-userapikey#create_user_key). Necesitará especificar la clave de API en un paso posterior.
 
-2. [Instale cualquier release de Python 3 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.python.org/downloads/){: new_window}.
+2. [Instale cualquier release de Python 3](https://www.python.org/downloads/){: external}.
 
   Python 3 incluye el sistema de gestión de paquetes pip necesario.
   {: note}
@@ -55,7 +59,9 @@ Para automatizar el suministro y la configuración de los servicios necesarios d
     Si hay varias versiones de pip instaladas en el sistema, es posible que deba ejecutar `pip3` y no `pip`, como en `pip3 install -U ibm-ai-openscale-cli`.
     {: tip}
 
-4. Si tiene una instancia de servicio de {{site.data.keyword.pm_short}} existente, compruebe el panel de control de [{{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window} para asegurarse de que el servicio lo gestiona {{site.data.keyword.iamshort}} (IAM), no Cloud Foundry.
+4. Si tiene una instancia de servicio de {{site.data.keyword.pm_short}} existente, compruebe el panel de control
+de [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external} para asegurarse de que el servicio lo gestiona
+{{site.data.keyword.iamshort}} (IAM), no Cloud Foundry.
 
   **Importante**: El módulo comprueba si hay una instancia de {{site.data.keyword.pm_short}}. Si tiene una instancia, el módulo la utiliza. Sin embargo, si la instancia la gestiona Cloud Foundry, primero debe [migrarla a un grupo de recursos IAM antes de ejecutar el módulo](/docs/resources?topic=resources-migrate#migrate).
 
@@ -72,14 +78,18 @@ ibm-ai-openscale-cli --apikey <su clave de API>
 ## Visualización de los resultados en {{site.data.keyword.aios_short}}
 {: #as-open}
 
-Para ver los detalles de la equidad y la exactitud del modelo, detalles de los datos supervisados y la explicabilidad de una transacción individual, abra el panel de control de [{{site.data.keyword.aios_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}.
+Para ver información sobre la equidad y la exactitud del modelo, los detalles de los datos supervisados y la explicabilidad de una transacción
+individual, abra el panel de control de
+[{{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}.
 
 - Para comprender el escenario de los datos de ejemplo, lea [Caso de uso y el valor de {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gs-use).
 
 ### Ver detalles
 {: #as-insights}
 
-En el panel de control de [{{site.data.keyword.aios_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, pulse la pestaña **Detalles**, que muestra una descripción general de las métricas para los modelos desplegados: ![Detalles](images/insight-dash-tab.png)
+En el panel de control de [{{site.data.keyword.aios_short}}
+](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}, pulse la pestaña Detalles, que muestra una descripción general de las métricas para los modelos desplegados:
+![Detalles](images/insight-dash-tab.png)
 
 - La página Detalles muestra de un solo vistazo cualquier problema relacionado con la equidad y la exactitud, según determinan los umbrales configurados.
 

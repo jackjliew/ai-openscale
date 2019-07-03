@@ -264,7 +264,7 @@ Das Notizbuch `CARS4U Action Recommendation - model` enthält detaillierte Anwei
 - Wenn Sie noch keine Instanz von {{site.data.keyword.aios_short}} eingerichtet haben, klicken Sie in Ihrem {{site.data.keyword.cloud_notm}}-Konto auf den Link **Katalog** und filtern Sie nach 'OpenScale'. Wählen Sie die Kachel für {{site.data.keyword.aios_short}} aus.
 
 <!---
-  ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
+  ![{{site.data.keyword.aios_short}}](images/openscale.png)
 --->
 
 - Benennen Sie Ihren Service, wählen Sie den Plan 'Lite' aus und klicken Sie auf **Erstellen**.

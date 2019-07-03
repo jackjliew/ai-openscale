@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 安裝 Python 模組以設置 {{site.data.keyword.aios_short}}
 {: #as-module}
@@ -32,7 +34,7 @@ subcollection: ai-openscale
 ## 關於此模組
 {: #as-about}
 
-- 模組可為技術使用者提供另一種作法，不必自行佈建及配置服務，就可以查看已啟動且正在執行的 {{site.data.keyword.aios_short}} 實例，如[開始使用](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted)指導教學所述。
+- 模組可為技術使用者提供另一種作法，不必自行佈建及配置服務，就可以查看正在執行的 {{site.data.keyword.aios_short}} 實例，如[開始使用](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted)指導教學所述。
 - Python 模組會執行一項程序，以檢查您具有的服務，並且建立必要的服務，包括 {{site.data.keyword.aios_short}}。在模組順利執行之後，您可以從 {{site.data.keyword.cloud_notm}} 儀表板啟動 {{site.data.keyword.aios_short}}，以查看它如何監視模型。
 
 ## 開始之前
@@ -40,7 +42,7 @@ subcollection: ai-openscale
 
 1. [建立 {{site.data.keyword.cloud_notm}}API 金鑰並下載它](/docs/iam?topic=iam-userapikey#create_user_key)。您將需要在後續步驟中輸入 API 金鑰。
 
-2. [安裝 Python 3 任何版本 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://www.python.org/downloads/){: new_window}。
+2. [安裝 Python 3 任何版次](https://www.python.org/downloads/){: external}。
 
   Python 3 含有必要的 pip 套件管理系統。{: note}
 
@@ -54,7 +56,7 @@ subcollection: ai-openscale
     如果您的系統上安裝了多個 pip 版本，您可能需要執行 `pip3` 而非 `pip`，例如 `pip3 install -U ibm-ai-openscale-cli`。
     {: tip}
 
-4. 如果您已有 {{site.data.keyword.pm_short}} 服務實例，請檢查 [{{site.data.keyword.cloud_notm}} 儀表板 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}){: new_window}，以確定該服務是由 {{site.data.keyword.iamshort}} (IAM) 管理，而不是由 Cloud Foundry 管理。
+4. 如果您已有 {{site.data.keyword.pm_short}} 服務實例，請檢查 [{{site.data.keyword.cloud_notm}} 儀表板](https://{DomainName}){: external}，以確定該服務是由 {{site.data.keyword.iamshort}} (IAM) 管理，而不是由 Cloud Foundry 管理。
 
   **重要事項**：模組會檢查是否有 {{site.data.keyword.pm_short}} 實例。如果您有一個實例，模組會使用它。但是如果您的實例是由 Cloud Foundry 所管理，您必須先[將它移轉至 IAM 資源群組，再執行模組](/docs/resources?topic=resources-migrate#migrate)。
 
@@ -71,14 +73,14 @@ ibm-ai-openscale-cli --apikey <Your API key>
 ## 在 {{site.data.keyword.aios_short}} 中檢視結果
 {: #as-open}
 
-如果要檢視模型之公平性和精確度的相關洞察、受監視資料的明細，以及個別交易的可解釋性，請開啟 [{{site.data.keyword.aios_short}} 儀表板 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}。
+如果要檢視模型之公平性和精確度的相關洞察、受監視資料的明細，以及個別交易的可解釋性，請開啟 [{{site.data.keyword.aios_short}} 儀表板](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}。
 
 - 如果要瞭解樣本資料的實務，請閱讀 [{{site.data.keyword.aios_short}} 的使用案例和值](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gs-use)。
 
 ### 檢視洞察
 {: #as-insights}
 
-從 [{{site.data.keyword.aios_short}} 儀表板 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}，按一下**洞察**標籤，這會顯示所部署模型的度量概觀：![洞察](images/insight-dash-tab.png)
+從 [{{site.data.keyword.aios_short}} 儀表板](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}，按一下**洞察**標籤，這會顯示所部署模型的度量概觀：![洞察](images/insight-dash-tab.png)
 
 - 「洞察」頁面會根據所配置的臨界值，顯示公平性和精確度的任何問題，並且一目瞭然。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Python 모듈을 설치하여 {{site.data.keyword.aios_short}} 설정
 {: #as-module}
@@ -40,7 +42,7 @@ subcollection: ai-openscale
 
 1. [{{site.data.keyword.cloud_notm}} API 키를 작성하고 다운로드하십시오](/docs/iam?topic=iam-userapikey#create_user_key). 후속 단계에서 API 키를 입력해야 합니다.
 
-2. [Python 3의 임의의 릴리스를 설치![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.python.org/downloads/){: new_window}하십시오.
+2. [Python 3의 임의 릴리스 설치](https://www.python.org/downloads/){: external}.
 
   Python 3은 필수한 pip 패키지 관리 시스템을 포함합니다.
   {: note}
@@ -55,7 +57,7 @@ subcollection: ai-openscale
     시스템에 pip 버전이 둘 이상 설치된 경우, `pip3 install -U ibm-ai-openscale-cli`에서와 같이 `pip` 대신 `pip3`를 실행해야 합니다.
     {: tip}
 
-4. 기존 {{site.data.keyword.pm_short}} 서비스 인스턴스가 있는 경우, [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External 외부 링크 아이콘")](https://{DomainName}){: new_window}를 확인하여 서비스가 Cloud Foundry가 아니라 IAM({{site.data.keyword.iamshort}})에 의해 관리되는지 확인하십시오.
+4. 기존 {{site.data.keyword.pm_short}} 서비스 인스턴스가 있는 경우 [{{site.data.keyword.cloud_notm}} 대시보드](https://{DomainName}){: external}를 확인하여 Cloud Foundry가 아니라 {{site.data.keyword.iamshort}}(IAM)에서 서비스를 관리하는지 확인하십시오.
 
   **중요**: 모듈이 {{site.data.keyword.pm_short}}의 인스턴스를 확인합니다. 인스턴스가 있는 경우 모듈이 이를 사용합니다. 그러나 인스턴스가 Cloud Foundry에 의해 관리되는 경우, [모듈을 실행하기 전에 IAM 리소스 그룹으로 마이그레이션](/docs/resources?topic=resources-migrate#migrate)해야 합니다.
 
@@ -72,14 +74,14 @@ ibm-ai-openscale-cli --apikey <Your API key>
 ## {{site.data.keyword.aios_short}}에서 결과 보기
 {: #as-open}
 
-모델의 공정성 및 정확성, 모니터되는 데이터의 세부사항 및 개별 트랜잭션에 대한 설명 가능성에 대한 인사이트를 보려면 [{{site.data.keyword.aios_short}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}를 여십시오.
+모델의 공정성 및 정확성에 대한 인사이트, 모니터링하는 데이터의 세부사항 및 개별 트랜잭션에 대한 설명 가능성을 확인하려면 [{{site.data.keyword.aios_short}} 대시보드](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}를 여십시오.
 
 - 샘플 데이터에 대한 시나리오를 이해하려면 [유스 케이스 및 {{site.data.keyword.aios_short}}의 값](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gs-use)을 읽으십시오.
 
 ### 인사이트 보기
 {: #as-insights}
 
-[{{site.data.keyword.aios_short}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}에서 **인사이트** 탭을 클릭하면 배치된 모델에 대한 메트릭 개요가 표시됩니다. ![인사이트](images/insight-dash-tab.png)
+[{{site.data.keyword.aios_short}} 대시보드](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}에서 **인사이트** 탭을 클릭하십시오. 그러면 배치된 모델의 지표 개요를 표시합니다. ![인사이트](images/insight-dash-tab.png)
 
 - 인사이트 페이지에서는 구성되는 임계값에 의해 판별되는 공정성 및 정확성에 관한 문제를 한 눈에 볼 수 있습니다.
 

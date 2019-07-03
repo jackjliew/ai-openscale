@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-05-29"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -24,7 +24,7 @@ subcollection: ai-openscale
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Sobre
+# About
 {: #in-ov}
 
 O {{site.data.keyword.aios_full}} é um ambiente de classificação corporativa para aplicativos desenvolvidos com IA, fornecendo visibilidade às empresas sobre como a IA está sendo construída e usada e entregando retorno sobre investimento na escala de seu negócio.
@@ -45,7 +45,7 @@ Aqui está como você implementará {{site.data.keyword.aios_short}}:
     - [Precisão](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)
     - [Desempenho](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics#anlz_metrics_performance)
 
-- **Visualizar e editar dados monitorados**: o {{site.data.keyword.aios_short}} painel do [](/docs/services/ai-openscale?topic=ai-openscale-io-ov) permite visualizar facilmente os insights de chave e identificar problemas para suas implementações. A visualização de pontos de dados individuais para cada recurso monitorado fornece detalhes adicionais.
+- **Visualizar e editar dados monitorados**: o [painel](/docs/services/ai-openscale?topic=ai-openscale-io-ov) do {{site.data.keyword.aios_short}} permite visualizar facilmente insights importantes e identificar problemas para suas implementações. A visualização de pontos de dados individuais para cada recurso monitorado fornece detalhes adicionais.
 
 <p>&nbsp;</p>
 
@@ -69,15 +69,12 @@ armazenar dados relacionados ao modelo (dados de feedback, carga útil de escora
 
 - Há um limite de licença de 20 modelos implementados por instância do {{site.data.keyword.aios_short}}.
 
-- Para o {{site.data.keyword.pm_full}}, a carga útil de imagens perturbadas que estão
-sendo enviadas por meio do gateway de aprendizado de máquina não pode exceder 1 MB. Para evitar problemas
-de tempo limite, as imagens não devem exceder 125 x 125 pixels e devem ser enviadas sequencialmente, de
-modo que a explicação para a segunda imagem seja solicitada quando a primeira for concluída.
+- Para o {{site.data.keyword.pm_full}}, a carga útil de imagens perturbadas que estão sendo enviadas por meio do gateway de aprendizado de máquina não pode exceder 1 MB. Para evitar problemas de tempo limite, as imagens não devem exceder 125 x 125 pixels e devem ser enviadas sequencialmente de modo que a explicação para a segunda imagem seja solicitada quando a primeira estiver concluída.
 
 
 <p>&nbsp;</p>
 
-## Problemas conhecidos
+## Problemas Conhecidos
 {: #rn-12ki}
 
 - **Microsoft Azure**

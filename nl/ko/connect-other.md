@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: machine learning, services, ml, custom 
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 사용자 정의 ML 서비스 인스턴스 지정
 {: #co-connect}
@@ -79,15 +85,15 @@ subcollection: ai-openscale
 
 또한 다음 링크를 참조할 수 있습니다.
 
-[AIOS 페이로드 로깅 API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[AIOS 페이로드 로깅 API](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: external}
 
-[사용자 정의 배치 API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
+[사용자 정의 배치 API](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: external}
 
-[Python 클라이언트 바인딩 SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
+[Python 클라이언트 바인딩 SDK](http://ai-openscale-python-client.mybluemix.net/#bindings){: external}
 
-[사용자 정의 기계 학습 엔진에 대한 작업 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[사용자 정의 기계 학습 엔진에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-[IBM Watson OpenScale에 대한 Python SDK![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
+[IBM Watson OpenScale용 Python SDK](https://pypi.org/project/ibm-ai-openscale/){: external}
 
 - **모니터를 지원하기 위한 모델의 입력 기준**
 
@@ -168,7 +174,7 @@ subcollection: ai-openscale
 
   이 예에서 `"personal"` 및 `"camping"`은 가능한 클래스이며 각 스코어링 출력의 스코어는 두 클래스 모두에 지정됩니다. 예측 확률이 누락되면, 편향성 발견은 작동하나 자동 편향성 제거는 작동하지 않습니다.
 
-  위의 스코어링 출력은 {{site.data.keyword.aios_short}}이 REST를 통해 호출할 수 있는 라이브 스코어링 엔드포인트에서 액세스 가능해야 합니다. AzureML, SageMaker 및 WML의 경우, {{site.data.keyword.aios_short}}이 직접 원시 스코어링 엔드포인트에 연결합니다. 따라서 스코어링 스펙 구현에 대해 걱정할 필요가 없습니다.
+  이전 스코어링 출력은 {{site.data.keyword.aios_short}}이 REST를 통해 호출할 수 있는 라이브 스코어링 엔드포인트에서 액세스 가능해야 합니다. AzureML, SageMaker 및 {{site.data.keyword.pm_full}}의 경우, {{site.data.keyword.aios_short}}이 직접 원시 스코어링 엔드포인트에 연결합니다. 따라서 스코어링 스펙 구현에 대해 걱정할 필요가 없습니다.
 
 ### 다음 단계
 {: #co-next}

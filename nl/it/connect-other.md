@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: machine learning, services, ml, custom 
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Specifica di un'istanza del servizio ML personalizzata
 {: #co-connect}
@@ -79,15 +85,15 @@ Questa immagine mostra il supporto dell'ambiente personalizzato:
 
 È anche possibile fare riferimento ai seguenti link:
 
-[AIOS payload logging API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[AIOS payload logging API](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: external}
 
-[Custom deployment API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
+[Custom deployment API](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: external}
 
-[Python client binding SDK ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
+[Python client binding SDK](http://ai-openscale-python-client.mybluemix.net/#bindings){: external}
 
-[Working with Custom machine Learning engine ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[Utilizzo del motore di machine learning personalizzato](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-[Python SDK for IBM Watson OpenScale ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
+[Python SDK for IBM Watson OpenScale](https://pypi.org/project/ibm-ai-openscale/){: external}
 
 - **Criteri di input perché il modello supporti i monitor**
 
@@ -168,7 +174,7 @@ Questa immagine mostra il supporto dell'ambiente personalizzato:
 
   In questo esempio, `"personal”` e `“camping”` sono le possibili classi e i punteggi in ogni output di calcolo del punteggio sono assegnati a entrambe le classi. Se mancano le probabilità previsionali, il rilevamento della distorsione funzionerà, ma non funzionerà l'annullamento automatico della distorsione.
 
-  L'output del calcolo del punteggio sopra riportato deve essere accessibile da un endpoint di calcolo del punteggio attivo che {{site.data.keyword.aios_short}} può richiamare su REST. Per AzureML, SageMaker e WML, {{site.data.keyword.aios_short}} connette direttamente agli endpoint di calcolo del punteggio nativi, pertanto non occorre implementare la specifica di punteggio
+  L'output del calcolo del punteggio sopra riportato deve essere accessibile da un endpoint di calcolo del punteggio attivo che {{site.data.keyword.aios_short}} può richiamare su REST. Per AzureML, SageMaker e {{site.data.keyword.pm_full}}, {{site.data.keyword.aios_short}} connette direttamente agli endpoint di calcolo del punteggio nativi, pertanto non occorre implementare la specifica di punteggio.
 
 ### Passi successivi
 {: #co-next}

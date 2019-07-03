@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 監視「公平性」、「每分鐘的平均要求數」和「精確度」
 {: #it-ov}
@@ -64,7 +70,7 @@ subcollection: ai-openscale
 
 - 圖表會顯示參照族群的預期輸出結果百分比 (70%)。這是所有參照族群的預期輸出結果平均值。
 
-- 圖表指出存在偏頗，這是因為 18 歲到 23 歲族群之預期輸出結果百分比，與參照族群的預期輸出結果百分比的比率，低於臨界值。換句話說，0.52/0.7 = 0.74，這小於 0.8 臨界值。
+- 圖表指出存在偏誤，這是因為 18 歲到 23 歲族群之預期輸出結果百分比，與參照族群的預期輸出結果百分比的比率，超出臨界值。換句話說，0.52/0.7 = 0.74，這小於 0.8 臨界值。
 
 - 在分析有效負載表格資料中屬性的每一個值以識別偏誤之後，圖表也會一一顯示每一個特殊值之參照值與受監視值的分佈。換句話說，如果偏誤偵測演算法分析了有效負載表格中最近的 1790 筆記錄，這些記錄中有 120 筆是關於 18 歲到 23 歲的客戶，而在該項分佈中，會以長條圖來代表 `Approved` 和 `Denied` 輸出結果。會針對公平性屬性的每一個特殊值，一一顯示有效負載資料的分佈（即使會顯示參照值）。此資訊可用來使偏誤與模型所收到的資料量產生關聯。
 
@@ -75,7 +81,7 @@ subcollection: ai-openscale
 ## 執行時期與訓練資料
 {: #it-rtsw}
 
-執行時期資料 / 訓練資料開關可讓您在訓練模型，與執行時期所收集會觸發偏誤警告的資料之間，切換差異。如需訓練資料的相關資訊，請參閱 [{{site.data.keyword.aios_short}} 為何需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+執行時期資料 / 訓練資料開關可讓您在訓練模型，與執行時期所收集會觸發偏誤警告的資料之間，切換差異。如需訓練資料的相關資訊，請參閱[為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 ![執行時期與訓練的切換](images/runtime_train_data.png)
 
@@ -110,16 +116,18 @@ subcollection: ai-openscale
 ### 除去偏誤選項
 {: #it-dbo}
 
-- *被動的除去偏誤* - 當 {{site.data.keyword.aios_short}} 執行偏誤檢查時，也會對資料執行除去偏誤，其作法是分析模型的行為，並識別模型在其中以偏誤的方式執行的資料。
+{{site.data.keyword.aios_short}} 使用兩種類型的除去偏誤：被動和主動。被動除去偏誤可讓您知道您的偏誤現象，而主動除去偏誤則會藉由即時變更現行應用程式的模型，來阻止您繼續帶有該偏誤。
+
+- *被動除去偏誤* - 被動除去偏誤是 OpenScale 會自行、自動且每小時就會進行的工作。之所以視為被動，是因為它不需要使用者介入就會進行。當 {{site.data.keyword.aios_short}} 執行偏誤檢查時，也會對資料執行除去偏誤，其作法是分析模型的行為，並識別模型在其中以偏誤的方式執行的資料。
 
   接著，{{site.data.keyword.aios_short}} 會建置一個機器學習模型，以預測模型在給定的新資料點上，是否可能以偏誤的方式執行。接著，{{site.data.keyword.aios_short}} 會每小時分析一次模型所收到的資料，並尋找 {{site.data.keyword.aios_short}} 認為模型在其中以偏誤的方式執行的資料點。對於這類資料點，會從少到多擾動公平性屬性，並將擾動資料傳送給原始模型進行預測。對原始模型的這項預測，會作為已除去偏誤的輸出。
 
   {{site.data.keyword.aios_short}} 會針對過去一小時模型所收到的所有資料，每小時執行一次這項除去偏誤。它也會針對已除去偏誤的輸出，計算其公平性，並顯示在**除去偏誤模型**標籤中。
 
-- *主動除去偏誤* - 在主動除去偏誤中，您可以從您的應用程式利用除去偏誤 REST API 端點。此 REST API 端點會在內部呼叫您的模型，並檢查其行為。
+- *主動除去偏誤* - 主動除去偏誤可讓您透過 REST API 端點，要求取得已除去偏誤的結果，並帶到您的應用程式中。您是主動指示 {{site.data.keyword.aios_short}} 執行除去偏誤，並變更模型，以便能以無偏誤方式來執行您的應用程式。在主動除去偏誤中，您可以從您的應用程式利用除去偏誤 REST API 端點。此 REST API 端點會在內部呼叫您的模型，並檢查其行為。
 
-  如果 {{site.data.keyword.aios_short}} 認為模型以偏誤的方式執行，它會依照上述來執行資料擾動，並將它傳回給原始模型。會傳回原始模型對擾動資料的輸出，以作為已除去偏誤的預測。如果 {{site.data.keyword.aios_short}} 判定原始模型不會以偏誤的方式執行，則 {{site.data.keyword.aios_short}} 會傳回原始模型的預測，來作為已除去偏誤的預測。因此，藉由使用這個 REST API 端點，可確保您的應用程式不會根據模型的偏誤輸出來做出決策。
+  如果 {{site.data.keyword.aios_short}} 偵測到模型以偏誤的方式執行，它會依照上述來擾動資料，並將它傳回給原始模型。會傳回原始模型對擾動資料的輸出，以作為已除去偏誤的預測。如果 {{site.data.keyword.aios_short}} 判定原始模型不會以偏誤的方式執行，則 {{site.data.keyword.aios_short}} 會傳回原始模型的預測，來作為已除去偏誤的預測。因此，藉由使用這個 REST API 端點，可確保您的應用程式不會根據模型的偏誤輸出來做出決策。
 
-選取**已除去偏頗的評分端點**鏈結，以尋找您除去偏誤的 REST API 端點
+選取**已除去偏誤的評分端點**鏈結，以尋找您除去偏誤的 REST API 端點
 
 ![除去偏誤 API 端點](images/insight-debias-api.png)

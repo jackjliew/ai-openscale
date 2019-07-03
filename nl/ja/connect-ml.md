@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: payload, non-Watson, machine learning, services, subscription
 
@@ -11,30 +11,32 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# Watson Machine Learning サービス以外のインスタンスのペイロード・ロギング
+# {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.pm_short}} サービス以外のインスタンスのペイロード・ロギング
 {: #cml-connect}
 
-AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジンでデプロイしている場合、Python クライアントを使用して外部機械学習エンジンのペイロード・ロギングを有効にする必要があります。
+AI モデルを {{site.data.keyword.pm_full}} 以外の機械学習エンジンでデプロイしている場合、Python クライアントを使用して外部機械学習エンジンのペイロード・ロギングを有効にする必要があります。
 {: shortdesc}
 
-さらに詳しい情報については、[{{site.data.keyword.aios_short}} Python クライアント資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://ai-openscale-python-client.mybluemix.net/){: new_window}、および [{{site.data.keyword.aios_short}} チュートリアル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window} に含まれているサンプル {{site.data.keyword.aios_short}} Python クライアント・ノートブックを参照してください。
+さらに詳しい情報については、[{{site.data.keyword.aios_short}} Python クライアント資料](http://ai-openscale-python-client.mybluemix.net/){: external}、および [{{site.data.keyword.aios_short}} チュートリアル](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: external}に含まれているサンプル {{site.data.keyword.aios_short}} Python クライアント・ノートブックを参照してください。
 
 ## 始めに
 {: #cml-prereq}
 
-モデルのバイアスをモニターするためには、Db2 または Cloud Object Storage でモデルの訓練データが利用できる状態でなければなりません。 Python 関数では説明性と正解率はサポートされていません。 訓練データの詳細については、[{{site.data.keyword.aios_short}} が訓練データにアクセスする必要があるのはなぜですか?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) を参照してください。
+モデルのバイアスをモニターするためには、Db2 または {{site.data.keyword.cos_full}} でモデルの訓練データが利用できる状態になっている必要があります。 Python 関数では説明性と正解率はサポートされていません。 訓練データの詳細については、[{{site.data.keyword.aios_short}} が訓練データにアクセスする必要があるのはなぜですか?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) を参照してください。
 
 - {{site.data.keyword.aios_short}} をインポートして開始します
 
@@ -67,7 +69,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
 ### カスタム機械学習エンジンのバインド
 {: #cml-cusbind}
 
-- WML 以外のエンジンをカスタム、つまり単なるメタデータとしてバインドします。WML 以外のサービスとの直接的な統合はありません。
+- {{site.data.keyword.pm_full}} 以外のエンジンをカスタム、つまり単なるメタデータとしてバインドします。{{site.data.keyword.pm_full}} 以外のサービスとの直接的な統合はありません。 `client.data_mart.bindings.add` メソッドを使用して、複数の機械学習エンジンを {{site.data.keyword.aios_short}} にバインドできます。
 
     ```python
     custom_engine_credentials = {
@@ -121,41 +123,12 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
     subscription.payload_logging.get_details()
     ```
 
+詳しくは、[ペイロード・ロギング]()を参照してください。
+
 ### 評価とペイロード・ロギング
 {: #cml-cusscore}
 
-- モデルを評価します。 完全なサンプルについては、[IBM {{site.data.keyword.aios_full}} & カスタム ML エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window} を参照してください。
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- モデルを評価します。 完全なサンプルについては、[IBM {{site.data.keyword.aios_full}} & カスタム ML エンジン・ノートブック](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}を参照してください。
 
 - ペイロード・ロギング・テーブルにリクエストと応答を格納します
 
@@ -205,10 +178,10 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
 ## Microsoft Azure Machine Learning エンジンでの作業
 {: #cml-azconfig}
 
-### MS Azure ML エンジンのバインド
+### Microsoft Azure Machine Learning エンジンのバインド
 {: #cml-azbind}
 
-- WML 以外のエンジンをカスタム、つまり単なるメタデータとしてバインドします。WML 以外のサービスとの直接的な統合はありません。
+- {{site.data.keyword.pm_full}} 以外のエンジンをカスタム、つまり単なるメタデータとしてバインドします。{{site.data.keyword.pm_full}} 以外のサービスとの直接的な統合はありません。
 
     ```python
     AZURE_ENGINE_CREDENTIALS = {
@@ -272,38 +245,7 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
 ### 評価とペイロード・ロギング
 {: #cml-azscore}
 
-- モデルを評価します。 完全なサンプルについては、[Azure Machine Learning Studio エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window} を参照してください。
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- モデルを評価します。 完全なサンプルについては、[Azure Machine Learning Studio エンジン・ノートブック](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: external}を参照してください。
 
 - ペイロード・ロギング・テーブルにリクエストと応答を格納します。
 
@@ -357,10 +299,10 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
 ## Amazon SageMaker 機械学習エンジンでの作業
 {: #cml-smconfig}
 
-### AWS SageMaker ML エンジンのバインド
+### Amazon SageMaker 機械学習エンジンのバインド
 {: #cml-smbind}
 
-- WML 以外のエンジンをカスタム、つまり単なるメタデータとしてバインドします。WML 以外のサービスとの直接的な統合はありません。
+- {{site.data.keyword.pm_full}} 以外のエンジンをカスタム、つまり単なるメタデータとしてバインドします。{{site.data.keyword.pm_full}} 以外のサービスとの直接的な統合はありません。
 
     ```python
     SAGEMAKER_ENGINE_CREDENTIALS = {
@@ -423,38 +365,8 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
 ### 評価とペイロード・ロギング
 {: #cml-smscore}
 
-- モデルを評価します。 完全なサンプルについては、[SageMaker 機械学習エンジン・ノートブック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window} を参照してください。
+- モデルを評価します。 完全なサンプルについては、[SageMaker 機械学習エンジン・ノートブック](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: external}を参照してください。
 
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
 
 - ペイロード・ロギング・テーブルにリクエストと応答を格納します。
 
@@ -510,4 +422,4 @@ AI モデルを Watson Machine Learning (WML) 以外の機械学習エンジン�
 
 - {{site.data.keyword.aios_short}} クライアントの処理を続けるには、[データベースの指定](/docs/services/ai-openscale?topic=ai-openscale-connect-db)を参照してください。
 
-- Python コマンド・ライブラリーを使用して作業を続けるには、[Python クライアント資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://ai-openscale-python-client.mybluemix.net/){: new_window} を参照してください。
+- Python コマンド・ライブラリーを使用して作業を続けるには、[Python クライアント資料](http://ai-openscale-python-client.mybluemix.net/){: external}を参照してください。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: databases, connections, scoring, requests
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Specifica di un database
 {: #connect-db}
@@ -113,23 +119,9 @@ Per procedere con l'utilizzo del database gratuito, fare clic sul riquadro **Uti
 
 1.  Fare clic su **Avanti** per esaminare i dati di riepilogo, quindi fare clic su **Salva**.
 
-## Invio di una richiesta di calcolo del punteggio
-{: #cdb-score}
 
-Per configurare i monitor, {{site.data.keyword.aios_short}} richiede l'invio di un payload di calcolo del punteggio, per poter iniziare a registrare i dati che verranno monitorati.
-
-Per i modelli distribuiti in {{site.data.keyword.pm_full}} calcolare semplicemente il punteggio della propria distribuzione, {{site.data.keyword.pm_short}} invia automaticamente il payload di calcolo del punteggio per {{site.data.keyword.aios_short}}. Per altri motori di machine learning, come Microsoft Azure, Amazon SageMaker, o un motore di machine learning personalizzato, il payload di calcolo del punteggio deve essere inviato utilizzando l'API Registrazione payload. 
-
-Selezionare una distribuzione, in questo caso "Frode Detector", quindi utilizzare i frammenti di codice `cURL` o `Python` forniti per registrare i dati di richiesta e risposta di distribuzione del modello. Per maggiori dettagli, consultare [Registrazione payload per istanze di servizio non Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
-
-I campi e i valori nei frammenti di codice devono essere sostituiti con i propri valori reali, in quanto quelli forniti sono solo esempi.
-{: important}
-
-![Selezionare il database](images/config-send-scoring.png)
-
-Una volta eseguita la registrazione del payload, verrà visualizzato un segno di spunta nella colonna "Pronto a monitorare" per la distribuzione selezionata. Fare clic su **Configura monitor** per continuare.
 
 ## Passi successivi
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} ora è pronto per poter [configurare i monitor per le distribuzioni](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+{{site.data.keyword.aios_short}} ora è pronto per poter [inviare un payload di calcolo del punteggio](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score) e [configurare i monitor per le distribuzioni](/docs/services/ai-openscale?topic=ai-openscale-mo-config).

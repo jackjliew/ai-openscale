@@ -1,45 +1,58 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ai-openscale" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
+{: .toc subcollection="ai-openscale" category="ai" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
 Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
-    [Conheça o Watson OpenScale](https://www.ibm.com/cloud/watson-openscale/)
+    [Aprenda sobre o Watson OpenScale](https://www.ibm.com/cloud/watson-openscale/)
+    accessibility.md
     faststart.md
     alt-setup.md
     tutorial-adv.md
     addl-rsc.md
-    index.md
 
     {: .topicgroup}
-    Suporte à estrutura
+    Estrutura e suporte ao modelo
+        frameworks-ovr.md
         frameworks-wml-cloud.md
         frameworks-azure-ml-studio.md
+        frameworks-azure-ml-service.md
         frameworks-aws-sagemaker.md
         frameworks-custom.md
+        framework-workaround.md
+        framework-multi-eng.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     Configurando o Watson OpenScale
         creds.md
+        iam.md
         connect-wml.md
         connect-azureml.md
         connect-sagemaker.md
+        custom-ml-ovr.md
         connect-other.md
+        custom-ml-examples.md
+        connect-deploy.md
         connect-db.md
+        scoring.md
+        payload-logging.md
         connect-ml.md
+        payload-auto.md
         config-file.md
         feedback.md
+        schema-definition.md
 
     {: .topicgroup}
     Configurando monitores
         monitor-overview.md
-        monitor-fairness.md
         monitor-accuracy.md
+        monitor-fairness.md
         metrics.md
+        fairness_metrics
 
     {: .topicgroup}
     Obter insights
@@ -47,6 +60,51 @@ Watson OpenScale
         insight-timechart.md
         analyze-metrics-transactions.md
         insight-explain.md
+
+    {: .topicgroup}
+    Justiça
+        fairness-ovr.md
+        fairness-group.md
+
+    {: .topicgroup}
+    Qualidade
+        quality-overview.md
+        quality-confusion-matrix.md
+        quality-area-under-roc.md
+        quality-area-under-pr.md
+        quality-prop-expl-variance.md
+        quality-mean-abs-error.md
+        quality-mean-squared-error.md
+        quality-r-squared.md
+        quality-root-of-mean-sq-error.md
+        quality-accuracy.md
+        quality-wtpr.md
+        quality-tpr.md
+        quality-wfpr.md
+        quality-fpr.md
+        quality-wrecall.md
+        quality-recall.md
+        quality-wprecision.md
+        quality-precision.md
+        quality-wf1-measure.md
+        quality-f1-measure.md
+        quality-logarithmic-loss.md
+
+    {: .topicgroup}
+    Comportamento
+        behavior-overview.md
+        behavior-drift.md
+        behavior-anomalies.md
+
+    {: .topicgroup}
+    Desempenho
+        performance-throughput.md
+
+    {: .topicgroup}
+    Análise
+        analytics-ovr.md
+        analytics-confidence.md
+        analytics-chart-builder.md
 
     openscale-recovery.md
     {: .navgroup-end}
@@ -64,12 +122,14 @@ Watson OpenScale
     {: .navgroup id="help"}
     gettinghelp.md
     release-notes.md
-    ai-openscale-faqs.md
-    [Criar um caso de suporte](https://cloud.ibm.com/unifiedsupport/supportcenter)
+    troubleshoot.md
+    FAQs.md
+    known-wos-issues.md
 
     {: .topicgroup}
     Comunidade do desenvolvedor
         [IBM Developer](https://developer.ibm.com/?s=openscale)
         [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale)
-        [Fórum de Ideias](https://ibmanalytics.ideas.aha.io/?project=WSPHERE)
+        [Criar um caso de suporte](https://cloud.ibm.com/unifiedsupport/supportcenter)
+        [Fórum de ideia](https://ibmanalytics.ideas.aha.io/?project=WSPHERE)
     {: .navgroup-end}

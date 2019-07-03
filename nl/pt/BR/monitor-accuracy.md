@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: accuracy, 
 
@@ -11,99 +11,46 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# Precisão
+# Configurando o monitor de Precisão ou Qualidade
 {: #acc-monitor}
 
-A Precisão permite que você saiba o quão bem seu modelo prevê resultados.
+O monitor de Qualidade (anteriormente conhecido como monitor de Precisão) permite que você saiba com que eficiência seu modelo prediz resultados.
 {: shortdesc}
 
-## Entendendo a Precisão
-{: #acc-understand}
-
-A Precisão pode significar coisas diferentes dependendo do tipo do algoritmo:
-
-- *Classificação multiclasse*: a Precisão mede o número de vezes que qualquer classe foi prevista corretamente, normalizada pelo número de pontos de dados. Para obter mais detalhes, consulte [Classificação multiclasse ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#multiclass-classification){: new_window} na documentação do Apache Spark.
-
-- *Classificação binária*: para um algoritmo de classificação binária, a precisão é medida como a área sob uma curva ROC. Consulte [Classificação binária ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#binary-classification){: new_window} na documentação do Apache Spark para obter mais detalhes.
-
-- *Regressão*: os algoritmos de regressão são medidos usando o Coeficiente de Determinação, ou R2. Para obter mais detalhes, consulte [Avaliação do modelo de regressão ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://spark.apache.org/docs/2.1.0/mllib-evaluation-metrics.html#regression-model-evaluation){: new_window} na documentação do Apache Spark.
-
-### Como ele funciona
-{: #acc-works}
-
-É necessário incluir os dados de feedback rotulados manualmente por meio da IU do {{site.data.keyword.aios_short}} conforme mostrado abaixo, usando um [cliente Python ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: new_window} ou [API de Rest ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: new_window}.
-
-Revise [Estruturas suportadas](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) para obter as limitações de monitoramento de precisão.
-
-### Precisão com redução de propensão
-{: #acc-debias-view}
-
-Quando há dados para o suporte, a precisão do modelo inclui tanto o modelo original quanto o com propensão reduzida. O {{site.data.keyword.aios_full_notm}} calcula a precisão para a saída com propensão reduzida e a armazena na tabela de criação de log de carga útil como uma coluna adicional.
-
-![uma visualização do modelo aparece com precisão calculada para os modelos original e com propensão reduzida](images/debiased-accuracy.png)
-
-## Configurando o Monitor de Precisão
+## Etapas de configuração
 {: #acc-config}
 
-1.  Na página *O que é Precisão?*, clique em **Avançar** para iniciar o processo de configuração.
+Na guia **Precisão**, na página **O que é Precisão?**, clique em **Iniciar** para começar o processo de configuração.
 
-    ![O Que É Precisão? página](images/accuracy-what-is.png)
+![O Que É Precisão? página](images/accuracy-what-is.png)
 
-1.  Na página *Configurar limite de precisão*, selecione um valor que represente um nível de precisão aceitável.
+Defina as configurações a seguir nas páginas sucessivas da guia de configuração Precisão:
+
+-  Configure o limite de alerta de precisão. Selecione um valor que represente um nível de precisão aceitável.
 
     A Precisão é um valor sintetizado de métricas relevantes de ciência de dados associadas a cada tipo de modelo específico. A pontuação é uma medida normalizada para permitir que você compare com facilidade a precisão em diferentes tipos de modelo. Em situações típicas, uma pontuação de precisão de 80 é suficiente.
     {: note}
 
-    ![Set accuracy limit](images/accuracy-set-limit.png)
+-  Configure os tamanhos de amostra mínimos e máximos. O tamanho mínimo impede a medição de Precisão até que um número mínimo de registros esteja disponível no conjunto de dados de avaliação; isso assegura que o tamanho da amostra não seja muito pequeno para distorcer os resultados. O tamanho máximo da amostra ajuda a gerenciar melhor o tempo e o esforço que leva para avaliar o conjunto de dados; somente os registros mais recentes serão avaliados se esse tamanho for excedido.
 
-    Clique em **Avançar** para continuar.
 
-1.  Agora, configure os tamanhos mínimo e máximo de amostra. O tamanho mínimo impede a medição de Precisão até que um número mínimo de registros esteja disponível no conjunto de dados de avaliação; isso assegura que o tamanho da amostra não seja muito pequeno para distorcer os resultados. O tamanho máximo da amostra ajuda a gerenciar melhor o tempo e o esforço que leva para avaliar o conjunto de dados; somente os registros mais recentes serão avaliados se esse tamanho for excedido.
-
-     ![Configure sample size](images/accuracy-config-sample.png)
-
-1.  Clique no botão **Avançar**.
-
-    Um resumo de suas seleções é apresentado para revisão. Se você desejar mudar alguma coisa, clique no link **Editar** para essa seção.
-
-1.  Clique em **Salvar** para concluir a configuração.
-
-Agora você é apresentado com a opção de fornecer diretamente dados de feedback para seu modelo, para avaliar a precisão.
-
-  ![Enviar dados de feedback](images/accuracy-send-feedback0.png)
-
-Selecione o botão *Incluir dados de feedback* para fazer upload de um arquivo de
-dados formatado em CSV; configure o delimitador para corresponder aos seus dados.
-
-Espera-se que o arquivo CSV de feedback tenha todos os valores de recurso e o valor de destino/rótulo designado manualmente. Por exemplo, os dados de treinamento do modelo de remédio contém os valores de recurso `"AGE"`, `"SEX"`, `"BP"`, `"CHOLESTEROL"`,`"NA"`,`"K"` e o valor de destino/rótulo `"DRUG"`. O arquivo CSV de feedback precisa incluir valores para esses campos; um exemplo seria semelhante a `[43, M, HIGH, NORMAL, 0.6345, 1.4587, DrugX]`. Se um cabeçalho for fornecido para o arquivo CSV de feedback, os nomes dos campos serão mapeados usando o cabeçalho. Caso contrário, a ordem do campo **DEVE** ser exatamente a mesma que no esquema de treinamento. Para obter mais informações
-sobre os dados de treinamento, veja [Por
-que o {{site.data.keyword.aios_short}} precisa de acesso aos meus dados de treinamento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
-{: important}
-
-Observe que os tipos de predição retornados por seu modelo e a coluna de rótulo/destino em seus dados de feedback devem corresponder.
-{: note}
-
-  ![Accuracy delimiter](images/accuracy-delimit.png)
-
-Os tamanhos dos arquivos estão limitados atualmente a 8 MB.
-{: note}
-
-Alternativamente, é possível publicar dados de feedback usando os fragmentos de código `cURL` ou `Python` fornecidos.
-
-Os campos e valores nos fragmentos de código precisam ser substituídos por seus valores reais, uma vez que os fornecidos são apenas exemplos.
-{: important}
-
-Também é possível escolher **Sair** para ignorar esta etapa opcional; ainda será possível fazer upload de um arquivo CSV para avaliação posteriormente.
+Um resumo de suas seleções é apresentado para revisão. Se você desejar mudar alguma coisa, clique no link **Editar** para essa seção. Caso contrário, clique em **Salvar** para concluir sua configuração.
 
 ### Próximos passos
 {: #acc-next}
 
-Na página *Configurar monitores*, é possível selecionar outra categoria de monitoramento.
+Na página **Configurar monitores**, é possível selecionar outra categoria de monitoramento.

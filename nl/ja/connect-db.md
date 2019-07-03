@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: databases, connections, scoring, requests
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # データベースの指定
 {: #connect-db}
@@ -50,7 +56,7 @@ subcollection: ai-openscale
 
   ![データベースの選択](images/gs-config-database2.png)
   
-無料のデータベースから別のデータベースにアップグレードすることはできますが、Compose for Postgres、Database for Postgres、または Db2 インスタンスを再構成することによって無料のデータベースに切り替えることはできません。 アップグレード後は、無料のデータベースの使用に戻ることはできません。 構成、評価結果、説明などの現行データはすべて再利用できません。 別のスキーマやデータベースを選択すると、{{site.data.keyword.aios_short}} 環境は完全にリセットされます。
+無料のデータベースから別のデータベースにアップグレードすることはできますが、Compose for Postgres、Database for Postgres、または Db2 のインスタンスを再構成することによって無料のデータベースに切り替えることはできません。 アップグレード後は、無料のデータベースの使用に戻ることはできません。 構成、評価結果、説明などの現行データはすべて再利用できません。 別のスキーマやデータベースを選択すると、{{site.data.keyword.aios_short}} 環境は完全にリセットされます。
 
 
 
@@ -113,23 +119,9 @@ subcollection: ai-openscale
 
 1.  **「次へ」**をクリックして、要約データを確認し、**「保存」**をクリックします。
 
-## 予測リクエストの送信
-{: #cdb-score}
 
-モニターを構成するには、{{site.data.keyword.aios_short}} でモニター対象となるデータのログ記録を開始するために、ユーザーから評価ペイロードを送信する必要があります。
-
-{{site.data.keyword.pm_full}} にデプロイされ、デプロイメントを評価するだけのモデルの場合は、{{site.data.keyword.pm_short}} が自動で {{site.data.keyword.aios_short}} に評価ペイロードを送信します。その他の機械学習エンジン (Microsoft Azure や Amazon SageMaker など) やカスタムの機械学習エンジンを使用している場合は、Payload Logging API を使用して評価ペイロードを送信する必要があります。
-
-デプロイメント (この場合「Fraud Detector」) を選択し、提供されている `cURL` または `Python` のコード・スニペットを使用して、モデル・デプロイメントのリクエストと応答のデータをログ記録します。 詳細については、[Watson Machine Learning サービス以外のインスタンスのペイロード・ロギング](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)を参照してください。
-
-提供されている値は単なる例であるため、コード・スニペット内のフィールドと値を、実際の値に置換する必要があります。
-{: important}
-
-![データベースの選択](images/config-send-scoring.png)
-
-ペイロード・ロギングを実行すると、選択したデプロイメントの「モニタリングのための準備ができました」列にチェック・マークが表示されます。 **「モニターの構成」**をクリックして先に進みます。
 
 ## 次のステップ
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} で、[デプロイメント用のモニターを構成](/docs/services/ai-openscale?topic=ai-openscale-mo-config)する準備が整いました。
+{{site.data.keyword.aios_short}} で[評価ペイロードを送信し](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score)、[デプロイメント用のモニターを構成](/docs/services/ai-openscale?topic=ai-openscale-mo-config)する準備が整いました。

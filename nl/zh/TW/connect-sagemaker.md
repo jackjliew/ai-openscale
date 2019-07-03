@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: Amazon SageMaker, machine learning, services, AWS
 
@@ -11,19 +11,27 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 指定 Amazon SageMaker ML 服務實例
 {: #csm-connect}
 
 您在 {{site.data.keyword.aios_short}} 工具中的首要步驟是指定一個 Amazon SageMaker 服務實例。您的 Amazon SageMaker 服務實例就是您儲存 AI 模型和部署的所在。
 {: shortdesc}
+
+您也可以使用 Python SDK 來新增機器學習提供者。如需透過程式來執行此項的相關資訊，請參閱[連結 Amazon SageMaker 機器學習引擎](/docs/services/ai-openscale?topic=ai-openscale-cml-connect#cml-smbind)。
 
 ## 連接您的 Amazon SageMaker 服務實例
 {: #csm-config}
@@ -39,6 +47,10 @@ subcollection: ai-openscale
     ![選取 Amazon SageMaker 服務](images/connect-sage.png)
 
 1.  輸入您的認證：
+
+    - 存取金鑰 ID：您的 AWS 存取金鑰 ID `aws_access_key_id`，用來驗證您的身分，並針對您對 AWS 所發出的呼叫進行鑑別及授權。
+    - 秘密存取金鑰：您的 AWS 秘密存取金鑰 `aws_secret_access_key`，需要提供此項，以便驗證您的身分，並針對您對 AWS 所發出的呼叫進行鑑別及授權。
+    - 地區：輸入您「存取金鑰 ID」建立所在的地區。會儲存金鑰，並用在它們建立所在的地區，且無法傳送到另一個地區。
 
     ![輸入 Amazon SageMaker 服務認證](images/connect-sage-cred.png)
 

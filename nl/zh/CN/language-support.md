@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: language support, 
 
@@ -11,15 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # {{site.data.keyword.aios_short}} 支持的语言
 {: #sl-langs}
@@ -44,8 +48,9 @@ subcollection: ai-openscale
 由于这是完全全球化产品的第一支持阶段，因此翻译仅限于 {{site.data.keyword.aios_short}} 用户界面和消息，例如，在正常使用期间向用户显示的信息、警告和错误。AI 模型定义、内容和元数据（如名称、定义和值）支持多语言数据和字符。对于已翻译的用户界面和控件，存在以下限制：
 
 - {{site.data.keyword.aios_short}} API 尚未翻译。
-- {{site.data.keyword.aios_full}} for {{site.data.keyword.icpfull}} for Data 的安装机制尚未翻译。
+- {{site.data.keyword.wos4d_full}} 的安装机制尚未转换。
 - 当前不支持双向语言。
+- 对于不使用空格或标点符号分隔单词的连续脚本语言（例如日语、中文和朝鲜语），不支持非结构化文本模型的可解释性。
 
 ## {{site.data.keyword.aios_short}} 文档的限制
 {: #sl-langs-limit-doc}

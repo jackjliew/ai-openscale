@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Analyse des métriques et des transactions ![balise bêta](images/beta.png)
 {: #anlz_metrics}
@@ -43,7 +49,7 @@ Pour les moteurs d'apprentissage automatique autres que {{site.data.keyword.pm_f
 
 Vous pouvez examiner la valeur de toutes les métriques au fil du temps dans le tableau de bord {{site.data.keyword.aios_short}} :
 
-![graphique des métriques de l'équité montrant une baisse au-dessous du seuil](images/fairness_metrics_001.png)
+![graphique des métriques d'équité montrant une dérive au-dessous du seuil défini](images/fairness_metrics_001.png)
 
 Vous pouvez consulter les détails connexes, tels que des résultats favorables et défavorables :
 
@@ -420,7 +426,7 @@ Vous pouvez analyser le contenu d'évaluation envoyé à votre déploiement dans
    
    ![graphique mappant la répartition de la prévision en confiance](images/by_confidence.png)
    
-- En personnalisant le graphique (en faisant un choix parmi les fonctions, les classes de prévision et la confiance)
+- Par un graphique personnalisé (en faisant un choix parmi les fonctions, les classes de prévision et la confiance)
    
    ![graphique montrant la fonction de prévision pour le sexe par la fonction d'âge](images/by_custom_chart.png)
 

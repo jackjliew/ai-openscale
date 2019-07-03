@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: language support, 
 
@@ -11,15 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # {{site.data.keyword.aios_short}} でサポートされる言語
 {: #sl-langs}
@@ -44,8 +48,9 @@ subcollection: ai-openscale
 製品の完全グローバル化を目指したサポートはまだ始まったばかりであるため、翻訳されているのは {{site.data.keyword.aios_short}} ユーザー・インターフェース、および通常の使用でユーザーに表示されるメッセージ (通知、警告、エラーなど) のみとなります。 AI モデル定義、コンテンツ、およびメタデータ (名前、定義、値など) では、複数の言語のデータと文字がサポートされています。 翻訳版のユーザー・インターフェースとコントロールに関しては、以下の制限事項があります。
 
 - {{site.data.keyword.aios_short}} API は翻訳されていません。
-- {{site.data.keyword.aios_full}} for {{site.data.keyword.icpfull}} for Data のインストール・メカニズムは翻訳されていません。
+- {{site.data.keyword.wos4d_full}} のインストール・メカニズムは翻訳されていません。
 - 双方向言語は現在サポートされていません。
+- 非構造化テキストのモデルの説明性は、空白文字や句読文字で単語を区切らない連続記述言語 (日本語、中国語、韓国語など) ではサポートされていません。
 
 ## {{site.data.keyword.aios_short}} ドキュメンテーションの制限事項
 {: #sl-langs-limit-doc}

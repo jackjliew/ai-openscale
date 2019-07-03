@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Análisis de métricas y transacciones ![etiqueta beta](images/beta.png)
 {: #anlz_metrics}
@@ -65,7 +71,7 @@ Puede ver el punto final de puntuación sesgada recomendado:
 #### Equidad para un grupo
 {: #anlz_metrics_supfairmets_group}
 
-- **Descripción**: la propensidad de los modelos a entregar resultados favorables a un grupo más que a otro.
+- **Descripción**: la propensión de los modelos a entregar resultados favorables a un grupo más que a otro.
 - **Umbrales predeterminados**: límite inferior = 80%
 - **Recomendación predeterminada**: punto final de puntuación sesgada que puede utilizar en su aplicación empresarial para recibir respuestas sesgadas del modelo desplegado.
 - **Tipo de problema**: todos
@@ -97,7 +103,7 @@ Source of bias is also in fairness metrics
 ## Métricas de calidad
 {: #anlz_metrics_quality}
 
-Utilice la supervisión de calidad para determinar con qué precisión el modelo predice los resultados. Cuando la supervisión de calidad está habilitada, de forma predeterminada genera un conjunto de métricas cada hora. Puede generar estas métricas bajo demanda pulsando el botón **Comprobar calidad ahora** o utilizando el cliente Python.
+Utilice la supervisión de calidad para determinar con qué exactitud el modelo predice los resultados. Cuando la supervisión de calidad está habilitada, de forma predeterminada genera un conjunto de métricas cada hora. Puede generar estas métricas bajo demanda pulsando el botón **Comprobar calidad ahora** o utilizando el cliente Python.
 
 Las métricas de calidad se calculan según la siguiente información:
 

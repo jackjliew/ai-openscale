@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: databases, connections, scoring, requests
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Spécification d'une base de données
 {: #connect-db}
@@ -125,29 +131,11 @@ puis fournissez les informations de connexion :
 
 1.  Cliquez sur **Suivant**, vérifiez le récapitulatif et cliquez sur **Enregistrer**.
 
-## Envoi d'une demande d'évaluation
-{: #cdb-score}
 
-Pour configurer les moniteurs, {{site.data.keyword.aios_short}} requiert que vous envoyiez un contenu d'évaluation,
-afin de commencer à journaliser les données qui seront surveillées.
-
-Pour les modèles déployés dans {{site.data.keyword.pm_full}}, évaluez simplement votre déploiement,
-{{site.data.keyword.pm_short}} envoie automatiquement le contenu d'évaluation à {{site.data.keyword.aios_short}}.
-Pour les autres moteurs d'apprentissage automatique, comme Microsoft Azure, Amazon SageMaker ou un moteur d'apprentissage automatique personnalisé,
-le contenu d'évaluation doit être envoyé avec l'API de journalisation de contenu.
-
-Sélectionnez un déploiement, ici "Fraud Detector", puis utilisez les fragments de code `cURL` ou `Python` fournis
-pour journaliser les données de demande et de réponse de déploiement de modèle. Pour plus de détails, voir [Journalisation du contenu pour les instances de service non-Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
-
-Les zones et les valeurs des fragments de code doivent être remplacées par vos valeurs réelles, car les valeurs fournies ne sont que des exemples.
-{: important}
-
-![Sélection de la base de données](images/config-send-scoring.png)
-
-Une fois que vous aurez exécuté votre journalisation du contenu, vous verrez une coche dans la colonne "Prêt à surveiller" pour le déploiement sélectionné. Cliquez sur **Configurer les moniteurs** pour continuer.
 
 ## Etapes suivantes
 {: #cdb-next}
 
 {{site.data.keyword.aios_short}} est maintenant prêt
-à ce que vous [configuriez les moniteurs pour vos déploiements](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+à ce que vous [envoyiez un contenu d'évaluation](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score) et
+[configuriez les moniteurs pour vos déploiements](/docs/services/ai-openscale?topic=ai-openscale-mo-config).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: databases, connections, scoring, requests
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Especificación de una base de datos
 {: #connect-db}
@@ -116,23 +122,9 @@ Puede actualizar a otra base de datos desde la base de datos gratuita, pero no e
 
 1.  Pulse **Siguiente** para revisar los datos de resumen y a continuación pulse **Guardar**.
 
-## Envío de una solicitud de puntuación
-{: #cdb-score}
 
-Para configurar supervisores, {{site.data.keyword.aios_short}} le solicita que envíe una carga útil de puntuación, para empezar a registrar los datos que se supervisarán.
-
-Para los modelos desplegados en {{site.data.keyword.pm_full}} simplemente puntúe su despliegue, {{site.data.keyword.pm_short}} envía automáticamente la carga útil de puntuación a {{site.data.keyword.aios_short}}. Para otros motores de aprendizaje automático, como Microsoft Azure, Amazon SageMaker o un motor de aprendizaje automático personalizado, se debe enviar la carga útil de puntuación utilizando la API de registro de carga útil.
-
-Seleccione un despliegue, en este caso "Detector de fraude" y a continuación utilice los fragmentos de código `cURL` o `Python` proporcionados para registrar los datos de solicitud y respuesta de despliegue del modelo. Consulte [Registro de carga útil para instancias de servicio que no sea Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-cml-connect) para obtener más información.
-
-Los campos y valores de los fragmentos de código se deben sustituir con sus valores reales, ya que los que se proporcionan son sólo ejemplos.
-{: important}
-
-![Seleccionar base de datos](images/config-send-scoring.png)
-
-Una vez que ha ejecutado el registro de carga útil, verá una marca de comprobación en la columna "Preparado para supervisar" para el despliegue seleccionado. Pulse **Configurar supervisores** para continuar.
 
 ## Pasos siguientes
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} ahora está listo para que usted [configure supervisores para sus despliegues](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+{{site.data.keyword.aios_short}} ahora está listo para que [envíe una carga útil de puntuación](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score) y [configure supervisores para sus despliegues](/docs/services/ai-openscale?topic=ai-openscale-mo-config).

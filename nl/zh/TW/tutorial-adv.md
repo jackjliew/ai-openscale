@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Python SDK 指導教學（進階）
 {: #crt-ov}
@@ -29,13 +31,13 @@ subcollection: ai-openscale
 ## 實務
 {: #crt-scenario}
 
-傳統的貸方是在壓力之下，將其金融服務數位投資組合推廣給更大更多元的對象，這需採用新作法來為貸方風險建模。他們的資料科學團隊目前仰賴標準建模技術，例如：決策樹狀結構和邏輯迴歸（這對中型資料集來說還能應付得宜），且能做出易於解釋的建議。這符合信用貸款決策必須透明且可解釋的法規需求。
+傳統的貸方是在壓力之下，將其金融服務數位投資組合推廣給更大更多元的對象，這需採用新作法來為信用風險建模。他們的資料科學團隊目前仰賴標準建模技術，例如：決策樹狀結構和邏輯迴歸（這對中型資料集來說還能應付得宜），且能做出易於解釋的建議。這符合信用貸款決策必須透明且可解釋的法規需求。
 
 為了能信用存取更廣且風險更高的族群，必須跳脫傳統信用（例如：抵押貸款和汽車貸款），來擴增申請者的信用歷程，以交替使用公用事業和行動電話方案付款歷程，外加教育和工作職稱。這些新的資料來源雖提供承諾，但也帶來風險，亦即，出現非預期相關性的可能性增加，會因為申請者的年齡、性別或其他個人特質而造成偏誤。
 
 大多適用於這些多樣化資料集的資料科學技術（例如：梯度提升樹狀結構和神經網路）可以產生更加精確的風險模型，只是要付出代價。這類「黑盒」模型會產生不透明的預測，而必須設法變成透明，以確保能通過法規核准，例如：「一般資料保護規章 (GDPR)」第 22 條文，或「消費者金融保護局」所管理的聯邦「公平信用報告法案 (FCRA)」。
 
-本指導教學提供的貸方風險模型使用一個訓練資料集，其中含有每一個貸款申請者的 20 個相關屬性。其中兩個屬性（年齡和性別）可用來測試偏誤。在本指導教學中，焦點會放在對於性別與年齡的偏誤。如需訓練資料的相關資訊，請參閱 [{{site.data.keyword.aios_short}} 為何需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+本指導教學提供的信用風險模型使用一個訓練資料集，其中含有每一個貸款申請者的 20 個相關屬性。其中兩個屬性（年齡和性別）可用來測試偏誤。在本指導教學中，焦點會放在對於性別與年齡的偏誤。如需訓練資料的相關資訊，請參閱[為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 {{site.data.keyword.aios_short}} 會監視所部署模型的有利輸出結果（「無風險」），是否較傾向於某一個群組（參照群組），且高過另一個群組（受監視群組）。在本指導教學中，性別的「受監視群組」是 `female`，而年齡的「受監視群組」是 `18 to 25`。
 
@@ -44,9 +46,9 @@ subcollection: ai-openscale
 
 本指導教學利用 "Python 3.5 with Spark" 執行時期環境，來使用應在 Watson Studio 專案中執行的 Jupyter 記事本。它需要具備下列 {{site.data.keyword.cloud_notm}} 服務的服務認證：
 
-- Cloud Object Storage（用來儲存您的 Watson Studio 專案）
+- Cloud Object Storage（用來儲存您的 {{site.data.keyword.DSX}} 專案）
 - {{site.data.keyword.aios_short}}
-- Watson Machine Learning
+- {{site.data.keyword.pm_full}}
 - （選用）Databases for PostgreSQL 或 Db2 Warehouse
 
 Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，配置 {{site.data.keyword.aios_short}} 以監視該部署，以及提供 7 天的歷程記錄和測量，以供在 {{site.data.keyword.aios_short}} Insights 儀表板中檢視。您也可以選擇性地配置模型，以便使用 Watson Studio 和 Spark 來持續學習。
@@ -54,22 +56,23 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 ## 簡介
 {: #crt-intro}
 
-在本指導教學中，您將：
+在本指導教學中，您將執行下列作業：
 
-- 佈建 {{site.data.keyword.cloud_notm}} 機器學習和儲存服務
-- 設置一個 Watson Studio 專案，並執行 Python 記事本，以建立、訓練及部署機器學習模型
-- 執行 Python 記事本，以建立資料集區，配置效能、精確度和公平性監視器，以及建立資料來監視
-- 在 {{site.data.keyword.aios_short}} Insights 標籤中檢視結果
+- [佈建 {{site.data.keyword.cloud_notm}} 機器學習和儲存服務](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-services)。
+- [設置一個 Watson Studio 專案，並執行 Python 記事本，以建立、訓練及部署機器學習模型](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-set-wstudio)。
+- [佈建 {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-wos-adv)。
+- [執行 Python 記事本，以建立資料集區，配置效能、精確度和公平性監視器，以及建立資料來監視](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-edit-notebook)。
+- [在 {{site.data.keyword.aios_short}} 的「洞察」標籤中檢視結果](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-view-results)。
 
 ## 佈建 {{site.data.keyword.cloud_notm}} 服務
 {: #crt-services}
 
-以您的 {{site.data.keyword.ibmid}} 登入 [{{site.data.keyword.cloud_notm}} 帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}){: new_window}。在佈建服務時（尤其如果您使用 Db2 Warehouse），請驗證對於所有服務，您選取的組織和空間都是相同的。
+使用您的 {{site.data.keyword.ibmid}}，登入 [{{site.data.keyword.cloud_notm}} 帳戶](https://{DomainName}){: external}。在佈建服務時（尤其如果您使用 Db2 Warehouse），請驗證對於所有服務，您選取的組織和空間都是相同的。
 
 ### 建立 {{site.data.keyword.DSX}} 帳戶
 {: #crt-wstudio}
 
-- 如果您的帳戶尚無相關聯的實例，[請建立一個 {{site.data.keyword.DSX}} 實例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/services/watson-studio){: new_window}：
+- 如果您的帳戶尚無相關聯的實例，請[建立一個 {{site.data.keyword.DSX}} 實例](https://{DomainName}/catalog/services/watson-studio){: external}：
 
   ![Watson Studio](images/watson_studio.png)
 
@@ -78,7 +81,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 ### 佈建 {{site.data.keyword.cos_full_notm}} 服務
 {: #crt-cos}
 
-- 如果您的帳戶尚無相關聯的服務，[請佈建一個 {{site.data.keyword.cos_short}} 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}：
+- 如果您的帳戶尚無相關聯的服務，[請佈建一項 {{site.data.keyword.cos_short}} 服務](https://{DomainName}/catalog/services/cloud-object-storage){: external}。
 
   ![Object Storage](images/object_storage.png)
 
@@ -87,18 +90,31 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 ### 佈建 {{site.data.keyword.pm_full}} 服務
 {: #crt-wml}
 
-- 如果您的帳戶尚無相關聯的實例，[請佈建一個 {{site.data.keyword.pm_short}} 實例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/services/machine-learning){: new_window}：
+- 如果您的帳戶尚無相關聯的實例，請[佈建一個 {{site.data.keyword.pm_short}} 實例](https://{DomainName}/catalog/services/machine-learning){: external}：
 
   ![Machine Learning](images/machine_learning.png)
 
 - 為您的服務命名，選擇 Lite（免費）方案，並按一下**建立**按鈕。
+
+### 佈建 {{site.data.keyword.aios_full}} 服務
+{: #crt-wos-adv}
+
+如果您尚未這樣做，請確定您已佈建 {{site.data.keyword.aios_full}}。 
+
+- 如果您的帳戶尚無相關聯的實例，請[佈建一個 {{site.data.keyword.aios_short}} 實例](https://{DomainName}/catalog/services/watson-openscale){: external}：
+
+  ![{{site.data.keyword.aios_short}} 圖磚](images/wos-cloud-tile.png)
+
+1. 按一下**型錄** > **AI** > **{{site.data.keyword.aios_short}}**。
+2. 為您的服務命名，選擇一種方案，並按一下**建立**按鈕。
+3. 若要啟動 {{site.data.keyword.aios_short}}，請按一下**入門**按鈕。
 
 ### （選用）佈建 Databases for PostgreSQL 或 Db2 Warehouse 服務
 {: #crt-db2}
 
 如果您已有一個付費 {{site.data.keyword.cloud_notm}} 帳戶，您可以佈建 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服務，以便充分利用與 {{site.data.keyword.DSX}} 的整合及持續學習服務。如果您選擇不佈建付費服務，您可以將免費的內部 PostgreSQL 儲存空間與 {{site.data.keyword.aios_short}} 搭配使用，只是這就無法為模型配置持續學習。
 
-- [佈建 Databases for PostgreSQL 服務 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/catalog/services/databases-for-postgresql) 或 [Db2 Warehouse 服務 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/catalog/services/db2-warehouse)（如果您的帳戶尚無這類服務的話）：
+- [佈建 Databases for PostgreSQL 服務](https://{DomainName}/catalog/services/databases-for-postgresql)或 [Db2 Warehouse 服務](https://{DomainName}/catalog/services/db2-warehouse)（如果您的帳戶尚無此服務的話）：
 
   ![DB for Postgres](images/dbpostgres.png)
 
@@ -106,10 +122,10 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
 - 為您的服務命名，選擇「標準」方案 (Databases for PostgreSQL) 或「入門」方案 (Db2 Warehouse)，並按一下**建立**按鈕。
 
-## 設定 {{site.data.keyword.DSX}} 專案
+## 設置 {{site.data.keyword.DSX}} 專案
 {: #crt-set-wstudio}
 
-- 登入 [{{site.data.keyword.DSX}} 帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://dataplatform.ibm.com/){: new_window}。按一下 {{site.data.keyword.avatar}}，並驗證您使用的帳戶就是您用來建立 {{site.data.keyword.cloud_notm}} 服務的相同帳戶：
+- 登入 [{{site.data.keyword.DSX}} 帳戶](https://dataplatform.ibm.com/){: external}。按一下 {{site.data.keyword.avatar}}，並驗證您使用的帳戶就是您用來建立 {{site.data.keyword.cloud_notm}} 服務的相同帳戶：
 
   ![相同帳戶](images/same_account.png)
 
@@ -132,7 +148,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
 - 下載下列檔案：
 
-    - [Working with Watson Machine Learning ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [使用 Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - 從 {{site.data.keyword.DSX}} 專案的**資產**標籤中，按一下**新增至專案**按鈕，並從下拉功能表中選取**記事本**：
 
@@ -162,7 +178,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
     - 遵循指示來建立、複製和貼上 {{site.data.keyword.cloud_notm}} API 金鑰。
 
-    - 將 Watson Machine Learning (WML) 服務認證取代為您先前建立的認證。
+    - 將 {{site.data.keyword.pm_full}} 服務認證取代為您先前建立的認證。
 
     - 將資料庫認證取代為您建立給 Databases for PostgreSQL 的認證。
 
@@ -185,12 +201,12 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 ### 檢視您部署的相關洞察
 {: #crt-view-insights}
 
-使用 [{{site.data.keyword.aios_short}} 儀表板 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}，按一下**洞察**標籤：
+使用 [{{site.data.keyword.aios_short}} 儀表板](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}，按一下**洞察**標籤：
 
 
   ![洞察](images/insight-dash-tab.png)
 
-「洞察」頁面提供已部署模型的度量概觀。您很容易就可看到「公平性」或「精確度」度量已低於執行記事本時所設定的臨界值的相關警示。本指導教學中使用的資料和設定會建立與這裡所示類似的「精確度」和「公平性」度量。
+「洞察」頁面提供已部署模型的度量概觀。如果「公平性」或「精確度」度量超出執行記事本時所設定的臨界值，您很容易就可以看到相關警示。本指導教學中使用的資料和設定會建立與這裡所示類似的「精確度」和「公平性」度量。
 
   ![「洞察」概觀](images/insight-overview-adv-tutorial-2.png)
 

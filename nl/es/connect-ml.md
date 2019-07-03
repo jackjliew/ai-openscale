@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: payload, non-Watson, machine learning, services, subscription
 
@@ -11,30 +11,32 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# Registro de carga útil para instancias de servicio que no sea Watson Machine Learning
+# Registro de carga útil para instancias de servicio que no sean {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.pm_short}}
 {: #cml-connect}
 
-Si el modelo de inteligencia artificial se despliega en un motor de aprendizaje automático que no es Watson Machine Learning (WML), debe habilitar el registro de carga útil para el motor de aprendizaje automático externo con un cliente Python.
+Si el modelo de inteligencia artificial se despliega en un motor de aprendizaje automático que no es {{site.data.keyword.pm_full}}, debe habilitar el registro de carga útil para el motor de aprendizaje automático externo con un cliente Python.
 {: shortdesc}
 
-Consulte información más completa en la [documentación del cliente Python de {{site.data.keyword.aios_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://ai-openscale-python-client.mybluemix.net/){: new_window} y en los cuadernos de cliente Python de {{site.data.keyword.aios_short}} que forman parte de las guías de aprendizaje de [{{site.data.keyword.aios_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window}.
+Consulte información más completa en la [documentación del cliente Python de {{site.data.keyword.aios_short}}](http://ai-openscale-python-client.mybluemix.net/){: external} y en los cuadernos de cliente Python de {{site.data.keyword.aios_short}} que forman parte de las guías de aprendizaje de [{{site.data.keyword.aios_short}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: external}.
 
 ## Antes de empezar
 {: #cml-prereq}
 
-Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud Object Storage para supervisar si el modelo está sesgado. La explicabilidad y la exactitud no están soportadas para las funciones Python. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o {{site.data.keyword.cos_full}} para supervisar si el modelo está sesgado. La explicabilidad y la exactitud no están soportadas para las funciones Python. Para obtener más información sobre los datos de entrenamiento, consulte [¿Por qué {{site.data.keyword.aios_short}} necesita acceder a mis datos de entrenamiento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - Importe e inicialice {{site.data.keyword.aios_short}}
 
@@ -64,10 +66,12 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
 ## Trabajar con el motor de aprendizaje automático personalizado
 {: #cml-cusconfig}
 
-### Enlace su motor de aprendizaje automático personalizado
+### Enlazar el motor de aprendizaje automático personalizado
 {: #cml-cusbind}
 
-- Un motor no WML se enlaza como personalizado, lo que significa que es sólo metadatos, no hay ninguna integración directa con el servicio no WML.
+- Un motor que no es {{site.data.keyword.pm_full}} está enlazado como Personalizado, lo que significa que sólo son metadatos; no hay ninguna
+integración directa con el servicio no {{site.data.keyword.pm_full}}. Puede enlazar más de un motor de aprendizaje automático a
+{{site.data.keyword.aios_short}} utilizando el método `client.data_mart.bindings.add`.
 
     ```python
     custom_engine_credentials = {
@@ -121,41 +125,12 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
     subscription.payload_logging.get_details()
     ```
 
+Para obtener más información, consulte [Registro de carga útil]().
+
 ### Puntuación y registro de carga útil
 {: #cml-cusscore}
 
-- Puntúe el modelo. Para ver un ejemplo completo, consulte [IBM {{site.data.keyword.aios_full}} & Cuaderno del motor de aprendizaje automático personalizado ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}.
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- Puntúe el modelo. Para ver un ejemplo completo, consulte [IBM {{site.data.keyword.aios_full}} & Cuaderno del motor de aprendizaje automático personalizado](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}.
 
 - Almacene la solicitud y respuesta en la tabla de registro de carga útil
 
@@ -202,13 +177,14 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
     print("Request OK: " + str(req_response.ok))
     ```
 
-## Trabajar con el motor de aprendizaje automático de Microsoft Azure
+## Trabajar con el motor de Microsoft Azure Machine Learning
 {: #cml-azconfig}
 
-### Enlazar el motor de aprendizaje automático de MS Azure
+### Enlazar el motor de Microsoft Azure Machine Learning
 {: #cml-azbind}
 
-- Un motor no WML se enlaza como personalizado, lo que significa que es sólo metadatos, no hay ninguna integración directa con el servicio no WML.
+- Un motor que no es {{site.data.keyword.pm_full}} está enlazado como Personalizado, lo que significa que sólo son metadatos; no hay ninguna
+integración directa con el servicio no {{site.data.keyword.pm_full}}.
 
     ```python
     AZURE_ENGINE_CREDENTIALS = {
@@ -272,38 +248,7 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
 ### Puntuación y registro de carga útil
 {: #cml-azscore}
 
-- Puntúe el modelo. Para ver un ejemplo completo, consulte [Trabajar con el cuaderno del motor de Azure Machine Learning Studio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}.
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- Puntúe el modelo. Para ver un ejemplo completo, consulte el [cuaderno Trabajar el motor de Azure Machine Learning Studio](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: external}.
 
 - Almacene la solicitud y respuesta en la tabla de registro de carga útil:
 
@@ -357,10 +302,11 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
 ## Trabajar con el motor de aprendizaje automático de Amazon SageMaker
 {: #cml-smconfig}
 
-### Enlazar el motor de aprendizaje automático de AWS SageMaker
+### Enlazar el motor de aprendizaje automático de Amazon SageMaker
 {: #cml-smbind}
 
-- Un motor no WML se enlaza como personalizado, lo que significa que es sólo metadatos, no hay ninguna integración directa con el servicio no WML.
+- Un motor que no es {{site.data.keyword.pm_full}} está enlazado como Personalizado, lo que significa que sólo son metadatos; no hay ninguna
+integración directa con el servicio no {{site.data.keyword.pm_full}}.
 
     ```python
     SAGEMAKER_ENGINE_CREDENTIALS = {
@@ -423,38 +369,8 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
 ### Puntuación y registro de carga útil
 {: #cml-smscore}
 
-- Puntúe el modelo. Para ver un ejemplo completo, consulte [Trabajar con el cuaderno del motor de aprendizaje automático de SageMaker ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}.
+- Puntúe el modelo. Para ver un ejemplo completo, consulte el [cuaderno Trabajar con el motor de aprendizaje automático de SageMaker](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: external}.
 
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
 
 - Almacene la solicitud y respuesta en la tabla de registro de carga útil:
 
@@ -511,4 +427,4 @@ Deberá tener los datos de entrenamiento del modelo disponibles en Db2 o Cloud O
 - Para continuar con el cliente de {{site.data.keyword.aios_short}}, consulte
 [Especificación de una base de datos](/docs/services/ai-openscale?topic=ai-openscale-connect-db).
 
-- Para continuar con la biblioteca de mandatos de Python, consulte la [documentación del cliente Python ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://ai-openscale-python-client.mybluemix.net/){: new_window}.
+- Para continuar con la biblioteca de mandatos de Python, consulte la [documentación del cliente Python](http://ai-openscale-python-client.mybluemix.net/){: external}.

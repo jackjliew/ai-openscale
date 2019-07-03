@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 监视公平性、每分钟的平均请求数以及准确性
 {: #it-ov}
@@ -64,7 +70,7 @@ subcollection: ai-openscale
 
 - 图表显示参考群体的预期结果百分比 (70%)。这是所有参考群体的预期结果的平均值。
 
-- 图表指示存在偏差，因为年龄在 18 岁到 23 岁的群体的预期结果百分比与参考群体的预期结果百分比的比率低于阈值。换句话说，0.52/0.7 = 0.74，小于阈值 0.8。
+- 图表指示存在偏差，因为年龄在 18 岁到 23 岁的群体的预期结果百分比值与参考群体的预期结果百分比值的比率超过阈值。换句话说，0.52/0.7 = 0.74，小于阈值 0.8。
 
 - 图表还针对来自载荷表的数据（已进行分析来识别偏差）中属性的每个不同值，显示其参考值和受监视值的分布。换句话说，如果偏差检测算法分析了载荷表中的最后 1790 个记录，那么其中 120 个记录的客户年龄介于 18 岁到 23 岁之间，并且在该分布中，`Approved` 和 `Denied` 结果通过条形图来表示。对于公平性属性的每个不同值，将会显示载荷数据的分布（即使显示了参考值也如此）。此信息可用于将偏差与模型接收的数据量相关联。
 
@@ -75,7 +81,7 @@ subcollection: ai-openscale
 ## 运行时数据和训练数据
 {: #it-rtsw}
 
-通过运行时数据/训练数据切换，您可以切换经过训练的模型与在运行时收集的触发偏差警告的数据之间的差异。有关训练数据的更多信息，请参阅[为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+通过运行时数据/训练数据切换，您可以切换经过训练的模型与在运行时收集的触发偏差警告的数据之间的差异。有关训练数据的更多信息，请参阅 [ 为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 ![运行时训练切换](images/runtime_train_data.png)
 
@@ -110,15 +116,17 @@ subcollection: ai-openscale
 ### 除偏选项
 {: #it-dbo}
 
-- *被动除偏* - 当 {{site.data.keyword.aios_short}} 执行偏差检查时，它还通过分析模型的行为以及识别模型行为有偏差的数据来对数据执行除偏。
+{{site.data.keyword.aios_short}} 使用两种类型的除偏：被动和主动。被动除偏让您了解如何对您造成偏差，而主动除偏则通过为当前应用程序实时更改模型来防止您保持该偏差。
+
+- *被动除偏* - 被动除偏是 OpenScale 每小时自行自动执行的工作。由于它是在没有用户干预的情况下发生，因此被视为被动。当 {{site.data.keyword.aios_short}} 执行偏差检查时，它还通过分析模型的行为以及识别模型行为有偏差的数据来对数据执行除偏。
 
   然后，{{site.data.keyword.aios_short}} 构建机器学习模型以预测模型在给定的新数据点是否可能行为有偏差。{{site.data.keyword.aios_short}} 随后每小时分析模型接收的数据，并查找 {{site.data.keyword.aios_short}} 认为模型行为有偏差的数据点。对于此类数据点，公平性属性从少数到多数发生扰动，并且扰动数据会发送到原始模型以用于预测。原始模型的此预测用作已除偏输出。
 
   {{site.data.keyword.aios_short}} 每小时对模型在过去一小时接收到的所有数据执行此除偏。它还计算已除偏输出的公平性，并在**已除偏模型**选项卡中显示此公平性。
 
-- *主动除偏* - 在主动除偏中，您可以利用应用程序中的除偏 REST API 端点。此 REST API 端点将在内部调用模型并检查其行为。
+- *主动除偏* - 主动除偏是通过 REST API 端点来请求已除偏请求并将其引入到应用程序中的一种方式。您主动指导 {{site.data.keyword.aios_short}} 运行除偏并修改模型，以便能够以无偏差方式运行应用程序。在主动除偏中，您可以利用应用程序中的除偏 REST API 端点。此 REST API 端点将在内部调用模型并检查其行为。
 
-  如果 {{site.data.keyword.aios_short}} 认为模型行为有偏差，那么它将执行以上提及的数据扰动，并将其发回到原始模型。原始模型对扰动数据的输出将作为已除偏预测进行返回。如果 {{site.data.keyword.aios_short}} 确定原始模型行为没有偏差，那么 {{site.data.keyword.aios_short}} 会将原始模型的预测作为已除偏预测进行返回。因此，通过使用此 REST API 端点，可以确保应用程序不会基于模型的有偏差输出来制定决策。
+  如果 {{site.data.keyword.aios_short}} 检测到模型行为有偏差，那么它将执行以上提及的数据扰动，并将数据发回到原始模型。原始模型对扰动数据的输出将作为已除偏预测进行返回。如果 {{site.data.keyword.aios_short}} 确定原始模型行为没有偏差，那么 {{site.data.keyword.aios_short}} 会将原始模型的预测作为已除偏预测进行返回。因此，通过使用此 REST API 端点，可以确保应用程序不会基于模型的有偏差输出来制定决策。
 
 选择**已除偏评分端点**链接以查找除偏 REST API 端点
 

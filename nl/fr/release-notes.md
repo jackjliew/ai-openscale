@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: release notes, what's new 
 
@@ -11,19 +11,53 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Nouveautés
 {: #rn-relnotes}
 
 Ce document détaille les nouvelles fonctionnalités d'{{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
+
+## 11 juin 2019
+{: #rn-11June2019}
+
+Voici les nouvelles fonctionnalités et les changements apportés au service.
+
+- __*Modification des fonctions du tableau de bord*__ :
+Le tableau de bord de {{site.data.keyword.aios_short}} a fait l'objet de plusieurs révisions. Cette nouvelle version comprend les améliorations suivantes :
+
+    - Un nouveau panneau d'aide permet de trouver plus facilement les ressources, comme StackOverflow, le support IBM, et 
+    - La globalisation a été rendue possible pour le tableau de bord
+    - Plus grande facilité d'utilisation
+
+## 7 juin 2019
+{: #rn-7June2019}
+
+Voici les nouvelles fonctionnalités et les changements apportés au service.
+
+- __*Amélioration de l'interface ligne de commande*__ :
+l'interface ligne de commande, ibm-ai-openscale-cli, est passée à la version 0.2.148. Cette nouvelle version comprend les améliorations suivantes :
+
+    - L'historique des métriques de qualité a été modifié pour inclure la totalité des nouvelles métriques de qualité gérées par OpenScale
+    - Possibilité de spécifier un certificat SSL directement avec IBM DB2
+    - Prise en charge du nouveau SDK Python 2.1.8 ibm-ai-openscale
+    - Correction de bogues et améliorations de la stabilité
+
+   Effectuez l'installation depuis PyPI en exécutant la commande `pip install -U ibm-ai-openscale-cli` ;
+vous pouvez obtenir de l'aide avec la commande `ibm-ai-openscale-cli --help`. Pour plus d'information, voir la [page du projet PyPI](https://pypi.org/project/ibm-ai-openscale-cli).
 
 ## 29 mai 2019
 {: #rn-29May2019}
@@ -53,14 +87,14 @@ Le calcul de l'exactitude inclut la sortie débiaisée. Vous pouvez comparer l'e
 
 - __*Possibilité de moteurs d'apprentissage automatique multiples*__ :
 {{site.data.keyword.aios_short}} peut prendre en charge plusieurs moteurs d'apprentissage automatique
-dans une même instance à condition que la mise à disposition soit effectuée via l'interface de ligne de commande (CLI).
+dans une même instance à condition que la mise à disposition soit effectuée via le
+[SDK Python](http://ai-openscale-python-client.mybluemix.net/?cm_mc_uid=70732728440115575086192&cm_mc_sid_50200000=62539451560175957820).
 
    Pour plus d'information, voir
-[Outil de ligne de commande ModelOps](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-mop).
+[Possibilité de moteurs d'apprentissage automatique multiples](/docs/services/ai-openscale?topic=ai-openscale-fmrk-workaround-multmleng).
 
 - __*Internationalisation*__ :
-{{site.data.keyword.aios_short}} offre des versions localisées et permet de traiter les données dans les langues prises en charge.
-L'interface utilisateur, la documentation et les messages d'erreur sont actuellement traduits dans les langues suivantes : 
+{{site.data.keyword.aios_short}} offre des versions localisées et permet de traiter les données dans les langues prises en charge. L'interface utilisateur, la documentation et les messages d'erreur sont actuellement traduits dans les langues suivantes : 
     - Allemand
     - Français
     - Italien
@@ -78,7 +112,7 @@ L'interface utilisateur, la documentation et les messages d'erreur sont actuelle
 {{site.data.keyword.aios_short}} prend maintenant en charge les infrastructures scikit-learn et XGBoost avec le moteur {{site.data.keyword.pm_full}}.
 
    Pour plus d'information, voir
-[Infrastructures WML](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml).
+[Infrastructures {{site.data.keyword.pm_full}}](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-wml).
 
 ## 25 avril 2019
 {: #rn-25April2019}
@@ -89,7 +123,7 @@ Outre les améliorations en termes d'utilisation et les mises à jour de sécuri
 
 - __*Visite guidée de la configuration automatique*__ : un nouveau mode de configuration de votre environnement {{site.data.keyword.aios_short}}. Utilisez la [configuration automatique](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) pour mettre à disposition des services et télécharger et configurer un modèle. Vous remarquerez cette option une fois que vous avez une instance de {{site.data.keyword.aios_short}}.
 - __*Basculement vers la version bêta*__ : ![balise bêta](images/beta.png) un nouvel commutateur, **Explorer la nouvelle version bêta**, vous permet de travailler dans notre environnement bêta, où vous pouvez consulter toutes les fonctions les plus récentes et les nouvelles fonctionnalités. Vous n'êtes pas satisfait de ce que vous voyez ? Il suffit de revenir en arrière en cliquant sur **Revenir à la version d'origine**. Il n'y aura aucune incidence sur votre configuration et vos moniteurs. Les fonctionnalités suivantes font partie du programme bêta en cours :
-    - __*Matrice de confusion*__ : une [matrice de confusion affiche](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx#it-conf-mtx) les faux positifs et les faux négatifs. Cliquez sur une cellule pour afficher le sous-ensemble d'enregistrements de commentaires.
+    - __*Matrice de confusion*__ : une [matrice de confusion affiche](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx) les faux positifs et les faux négatifs. Cliquez sur une cellule pour afficher le sous-ensemble d'enregistrements de commentaires.
 
 ## 10 avril 2019
 {: #rn-10April2019}
@@ -146,7 +180,7 @@ Tous les nombres ont maintenant la même précision/échelle pour les valeurs po
 - __*Support SSL de Db2*__ :
 {{site.data.keyword.aios_short}} accepte la transmission des certificats autosignés (codés en base-64) avec les identifiants DB2.
 
-- __*Support des bases de données IBM Cloud*__ :
+- __*Support de base de données {{site.data.keyword.Bluemix}}*__ :
 {{site.data.keyword.aios_short}} accepte maintenant Databases for PostgreSQL, en plus de Compose for PostgreSQL et Db2)
 
 ## 14 décembre 2018
@@ -157,21 +191,20 @@ Voici les nouvelles fonctionnalités, les changements et les problèmes connus d
 Voici les fonctionnalités ajoutées à {{site.data.keyword.aios_short}} ou améliorées depuis l'édition bêta :
 
 - __*Disponibilité générale*__ :
-Edition Disponibilité générale d'{{site.data.keyword.aios_full_notm}} en forfait IBM Cloud standard (payant).
+Edition Disponibilité générale d'{{site.data.keyword.aios_full_notm}} en forfait {{site.data.keyword.Bluemix}} standard (payant).
 
-- __*IBM Cloud Private for Data V1.2*__ :
-Si vous utilisez {{site.data.keyword.aios_short}} on IBM Cloud Private for Data V1.2,
+- __*IBM Cloud Pak for Data V1.2*__ :
+Si vous utilisez {{site.data.keyword.wos4d_full}} V1.2,
 consultez la documentation, qui comprend les instructions d'installation, ici :
 [Liste de contrôle d'installation](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#install)
 
 - __*Prise en charge de votre type de modèle*__ :
-En plus des déploiements de modèle d'IA dans Watson Machine Learning,
+En plus des déploiements de modèle d'IA dans {{site.data.keyword.pm_full}},
 {{site.data.keyword.aios_short}} prend en charge les déploiements de modèle dans les environnements Microsoft Azure, Amazon SageMaker et personnalisés. Pour plus d'information, voir [Types de modèle pris en charge](/docs/services/ai-openscale?topic=ai-openscale-in-ov).
 
 - __*Base de données "légère" gratuite*__ :
 Une base de données gérée "légère" gratuite
-fournit tout ce dont vous avez besoin pour commencer à utiliser {{site.data.keyword.aios_short}}. Pour les détails, voir les [forfaits tarifaires {{site.data.keyword.aios_short}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/watson-openscale){: new_window}.
+fournit tout ce dont vous avez besoin pour commencer à utiliser {{site.data.keyword.aios_short}}. Pour plus de détails, voir les [forfaits {{site.data.keyword.aios_short}}](https://{DomainName}/catalog/services/watson-openscale){: external}.
 
 - __*Surveillance de biais*__ :
 Prise en charge d'attributs protégés de type `flottant` et `double`, et détection de biais
@@ -181,7 +214,7 @@ sur les modèles de régression linéaire. Et {{site.data.keyword.aios_short}} p
 Prise en charge des modèles de régression, des fonctions Python et des explications contrastives complémentaires. Pour plus d'information, voir [Surveillance de l'explicabilité](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
 - __*Magasin de données*__ :
-Surveillance de la qualité sans s'appuyer sur Watson Machine Learning,
+Surveillance de la qualité sans s'appuyer sur {{site.data.keyword.pm_full}},
 et possibilité d'utiliser votre propre base de données, qu'il s'agisse de Db2, Postgres ou Db2 on Cloud.
 
 - __*Interface utilisateur améliorée*__ :
@@ -189,8 +222,8 @@ L'interface utilisateur de {{site.data.keyword.aios_short}} a été améliorée
 pour inclure une distribution en histogramme de l'exécution
 avec commutation pour les données de formation, l'ID et la gestion de version du modèle, et un tableau des ID de transaction de l'histogramme. Pour plus d'information, voir [Visualisation des données d'une heure spécifique](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet).
 
-- __*Autre option pour la configuration du tutoriel*__ :
-Pour automatiser la mise à disposition et la configuration des services IBM Cloud requis
+- __*Possibilité de configuration par tutoriel*__ :
+Pour automatiser la mise à disposition et la configuration des services {{site.data.keyword.Bluemix}} requis
 et pour voir une application IBM {{site.data.keyword.aios_full}}, avec des exemples de données,
 vous pouvez installer et exécuter un module Python. Voir [Installation d'un module Python pour configurer {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)
 

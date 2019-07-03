@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,18 +11,24 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # カスタム・モニターとカスタム指標の作成 ![ベータ・タグ](images/beta.png)
 {: #cst_mtrcs}
 
-カスタム・モニターは、カスタム指標のセットを統合しているため、モデル・デプロイメントとビジネス・アプリケーションのあらゆる面を定量的に追跡できます。 カスタム指標を定義して、標準的な指標 ({{site.data.keyword.aios_full}} でモニターされるモデルの品質、パフォーマンス、公平性の指標など) と併用できます。
+カスタム・モニターが統合しているカスタム指標のセットを使用すると、モデル・デプロイメントとビジネス・アプリケーションのあらゆる面を定量的に追跡できます。 カスタム指標を定義して、標準的な指標 ({{site.data.keyword.aios_full}} でモニターされるモデルの品質、パフォーマンス、公平性の指標など) と併用できます。
 {: shortdesc}
 
 カスタム・モニターとカスタム指標を管理するには、Python SDK の一部であるプログラマチック・インターフェースを使用する必要があります。 同様に、カスタム指標を {{site.data.keyword.aios_short}} データマートに格納しておいて、必要なときにアクセスできます。 カスタム指標は、{{site.data.keyword.aios_short}} ダッシュボードでも視覚化されます。
@@ -38,7 +44,7 @@ subcollection: ai-openscale
 
 その方法については、次のアドバンスト・チュートリアルを参照してください。
 
-- [Working with Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [{{site.data.keyword.pm_full}} での作業](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
 カスタム・モニターはいつでも無効にでき、また再び有効にすることもできます。 不要になったカスタム・モニターは削除できます。
@@ -50,7 +56,7 @@ subcollection: ai-openscale
 
 カスタム指標にアクセスして視覚化するには、プログラマチック・インターフェースを使用できます。 その方法については、次のアドバンスト・チュートリアルを参照してください。
 
-- [Working with Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [{{site.data.keyword.pm_full}} での作業](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
    詳しくは、[Python SDK の資料](http://ai-openscale-python-client.mybluemix.net/)を参照してください。

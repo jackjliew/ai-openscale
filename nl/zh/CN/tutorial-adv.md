@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Python SDK 教程（高级）
 {: #crt-ov}
@@ -35,7 +37,7 @@ subcollection: ai-openscale
 
 最适合这些多样化数据集的数据科学方法（例如梯度提升树和神经网络）可以生成高度精确的风险模型，但是存在相应的代价。此类“黑匣”模型生成的是不透明的预测，这些预测必须以某种方式变为透明，以确保获得监管批准，例如通用数据保护条例 (GDPR) 第 22 条，或由消费者金融保护局管理的联邦公平信用报告法案 (FCRA)。
 
-本教程中提供的信用风险模型使用训练数据集，其中包含有关每个贷款申请人的 20 个属性。其中两个属性（年龄和性别）可以测试有无偏差。对于本教程，重点将在于针对性别和年龄的偏差。有关训练数据的更多信息，请参阅[为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+本教程中提供的信用风险模型使用训练数据集，其中包含有关每个贷款申请人的 20 个属性。其中两个属性（年龄和性别）可以测试有无偏差。对于本教程，重点将在于针对性别和年龄的偏差。有关训练数据的更多信息，请参阅 [ 为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 {{site.data.keyword.aios_short}} 将监视已部署模型中一个组（参考组）相对于另一个组（受监视组）获取有利结果（“无风险”）的倾向。在本教程中，性别的受监视组为 `female`，而年龄的受监视组为 `18 to 25`。
 
@@ -44,9 +46,9 @@ subcollection: ai-openscale
 
 本教程使用 Jupyter 笔记本，该笔记本应使用“Python 3.5 with Spark”运行时环境在 Watson Studio 项目中运行。它需要以下 {{site.data.keyword.cloud_notm}} 服务的服务凭证：
 
-- Cloud Object Storage（用于存储 Watson Studio 项目）
+- Cloud Object Storage（用于存储 {{site.data.keyword.DSX}} 项目）
 - {{site.data.keyword.aios_short}}
-- Watson Machine Learning
+- {{site.data.keyword.pm_full}}
 - （可选）Databases for PostgreSQL 或 Db2 Warehouse
 
 Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配置 {{site.data.keyword.aios_short}} 以监视该部署，并提供七天的历史记录和度量值以供在 {{site.data.keyword.aios_short}}“洞察”仪表板中进行查看。您还可以选择配置模型以使用 Watson Studio 和 Spark 进行持续学习。
@@ -54,22 +56,23 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 ## 简介
 {: #crt-intro}
 
-在本教程中，您将：
+在本教程中，您将执行以下任务：
 
-- 供应 {{site.data.keyword.cloud_notm}} 机器学习和存储服务
-- 设置 Watson Studio 项目，并运行 Python 笔记本以创建、训练和部署机器学习模型
-- 运行 Python 笔记本以创建数据集市，配置性能、准确性和公平性监视器，以及创建要监视的数据
-- 在 {{site.data.keyword.aios_short}}“洞察”选项卡中查看结果
+- [供应 {{site.data.keyword.cloud_notm}} 机器学习和存储服务](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-services)。
+- [设置 Watson Studio 项目，并运行 Python 笔记本以创建、训练和部署机器学习模型](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-set-wstudio)。
+- [供应 {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-wos-adv)。
+- [运行 Python 笔记本以创建数据集市，配置性能、准确性和公平性监视器，以及创建要监视的数据](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-edit-notebook)。
+- [在 {{site.data.keyword.aios_short}}“洞察”选项卡中查看结果](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-view-results)。
 
 ## 供应 {{site.data.keyword.cloud_notm}} 服务
 {: #crt-services}
 
-使用您的 {{site.data.keyword.ibmid}} 登录到 [{{site.data.keyword.cloud_notm}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}){: new_window}。供应服务时（尤其在使用 Db2 Warehouse 的情况下），请验证所选组织和空间是否对于所有服务都相同。
+使用 {{site.data.keyword.ibmid}} 登录到 [{{site.data.keyword.cloud_notm}} 帐户](https://{DomainName}){: external}。供应服务时（尤其在使用 Db2 Warehouse 的情况下），请验证所选组织和空间是否对于所有服务都相同。
 
 ### 创建 {{site.data.keyword.DSX}} 帐户
 {: #crt-wstudio}
 
-- [创建 {{site.data.keyword.DSX}} 实例 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/watson-studio){: new_window}（如果您还没有与帐户关联的实例）：
+- [创建 {{site.data.keyword.DSX}} 实例](https://{DomainName}/catalog/services/watson-studio){: external}（如果您还没有与帐户关联的实例）：
 
   ![Watson Studio](images/watson_studio.png)
 
@@ -78,7 +81,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 ### 供应 {{site.data.keyword.cos_full_notm}} 服务
 {: #crt-cos}
 
-- [供应 {{site.data.keyword.cos_short}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window}（如果您还没有与帐户关联的服务）：
+- [供应 {{site.data.keyword.cos_short}} 服务](https://{DomainName}/catalog/services/cloud-object-storage){: external}（如果您还没有与帐户关联的服务）：
 
   ![Object Storage](images/object_storage.png)
 
@@ -87,18 +90,31 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 ### 供应 {{site.data.keyword.pm_full}} 服务
 {: #crt-wml}
 
-- [供应 {{site.data.keyword.pm_short}} 实例 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/machine-learning){: new_window}（如果您还没有与帐户关联的实例）：
+- [供应 {{site.data.keyword.pm_short}} 实例](https://{DomainName}/catalog/services/machine-learning){: external}（如果您还没有与帐户关联的实例）：
 
   ![Machine Learning](images/machine_learning.png)
 
 - 指定服务的名称，选择 Lite（免费）套餐，然后单击**创建**按钮。
+
+### 供应 {{site.data.keyword.aios_full}} 服务
+{: #crt-wos-adv}
+
+如果您尚未供应，请确保供应 {{site.data.keyword.aios_full}}。 
+
+- [供应 {{site.data.keyword.aios_short}} 实例](https://{DomainName}/catalog/services/watson-openscale){: external}（如果您还没有与帐户关联的实例）：
+
+  ![{{site.data.keyword.aios_short}} 磁贴](images/wos-cloud-tile.png)
+
+1. 单击**目录** > **AI** > **{{site.data.keyword.aios_short}}**。
+2. 指定服务的名称，选择套餐，然后单击**创建**按钮。
+3. 要启动 {{site.data.keyword.aios_short}}，请单击**入门**按钮。
 
 ### （可选）供应 Databases for PostgreSQL 或 Db2 Warehouse 服务
 {: #crt-db2}
 
 如果您具有付费的 {{site.data.keyword.cloud_notm}} 帐户，那么可以供应 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服务来充分利用与 {{site.data.keyword.DSX}} 和持续学习服务的集成。如果选择不供应付费服务，那么可以将免费内部 PostgreSQL 存储与 {{site.data.keyword.aios_short}} 配合使用，但是将无法为模型配置持续学习。
 
-- [供应 Databases for PostgreSQL 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/databases-for-postgresql) 或 [Db2 Warehouse 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/db2-warehouse)（如果您尚未具有与帐户关联的服务）：
+- [供应 Databases for PostgreSQL 服务](https://{DomainName}/catalog/services/databases-for-postgresql)或 [Db2 Warehouse 服务](https://{DomainName}/catalog/services/db2-warehouse)（如果您还没有与帐户关联的服务）：
 
   ![DB for Postgres](images/dbpostgres.png)
 
@@ -109,7 +125,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 ## 设置 {{site.data.keyword.DSX}} 项目
 {: #crt-set-wstudio}
 
-- 登录到 [{{site.data.keyword.DSX}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dataplatform.ibm.com/){: new_window}。单击 {{site.data.keyword.avatar}} 并验证您使用的帐户是否与用于创建 {{site.data.keyword.cloud_notm}} 服务的帐户相同：
+- 登录到 [{{site.data.keyword.DSX}} 帐户](https://dataplatform.ibm.com/){: external}。单击 {{site.data.keyword.avatar}} 并验证您使用的帐户是否与用于创建 {{site.data.keyword.cloud_notm}} 服务的帐户相同：
 
   ![相同帐户](images/same_account.png)
 
@@ -131,7 +147,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - 下载以下文件：
 
-    - [Working with Watson Machine Learning ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [使用 Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - 从 {{site.data.keyword.DSX}} 项目中的**资产**选项卡单击**添加到项目**按钮，然后从下拉菜单中选择**笔记本**：
 
@@ -161,7 +177,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
     - 遵循指示信息来创建、复制和粘贴 {{site.data.keyword.cloud_notm}} API 密钥。
 
-    - 将 Watson Machine Learning (WML) 服务凭证替换为先前创建的凭证。
+    - 将 {{site.data.keyword.pm_full}} 服务凭证替换为先前创建的凭证。
 
     - 将数据库凭证替换为您为 Databases for PostgreSQL 创建的凭证。
 
@@ -184,11 +200,11 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 ### 查看部署的洞察
 {: #crt-view-insights}
 
-使用 [{{site.data.keyword.aios_short}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}，单击**洞察**选项卡：
+使用 [{{site.data.keyword.aios_short}} 仪表板](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}，单击**洞察**选项卡：
 
   ![洞察](images/insight-dash-tab.png)
 
-“洞察”页面提供已部署的模型的度量概述。针对已降至低于在运行笔记本时设置的阈值的“公平性”或“准确性”度量，您可以轻松查看相应警报。本教程中使用的数据和设置将创建与此处显示的值类似的“准确性”和“公平性”度量。
+“洞察”页面提供已部署的模型的度量概述。针对超过在运行笔记本时设置阈值的“公平性”或“准确性”度量，您可以轻松查看相应的警报。本教程中使用的数据和设置将创建与此处显示的值类似的“准确性”和“公平性”度量。
 
   ![洞察概述](images/insight-overview-adv-tutorial-2.png)
 

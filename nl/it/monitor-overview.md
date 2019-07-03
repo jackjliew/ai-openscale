@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: deployment, monitors, data
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Preparazione dei monitor per una distribuzione
 {: #mo-config}
@@ -25,50 +31,79 @@ subcollection: ai-openscale
 Configurare e abilitare i monitor per ogni distribuzioni di cui si sta tenendo traccia con {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
+## Configurazione
+{: #io-conf}
+
+La scheda **Configura** (![scheda Configura](images/insight-config-tab.png)) apre un Riepilogo di configurazione per la distribuzione selezionata.
+
+  ![Riepilogo configurazione](images/insight-config-summary.png)
+
+Da qui, è possibile modificare direttamente le impostazioni di configurazione per il monitor di distribuzione.
+
 ## Selezione di una distribuzione
 {: #mo-select-deploy}
 
 1.  Prima di tutto, è necessario selezionare una distribuzione.
+
+    1. Fare clic sul pulsante **Aggiungi distribuzioni**. Viene visualizzato un elenco di distribuzioni di modelli disponibili.
+    2. Fare clic su una distribuzione di modello, quindi su **Configura**.
 
     Se ci sono più distribuzioni per un dato modello, quando si configura una distribuzione, vengono configurate anche tutte le altre distribuzioni per lo stesso modello.
     {: note}
 
     ![Pagina Seleziona distribuzione](images/config-select-deploy.png)
 
-1.  Selezionare il riquadro *Preparazione per il monitoraggio*.
+1.  Fare clic sul pulsante **Configura monitor**.
 
     ![Preparazione per il monitoraggio](images/config-prep-monitor.png)
 
-## Gestione dei dati
+## Fornire i dettagli della registrazione del payload
 {: #mo-work-data}
 
-1.  Ora devono essere fornite le informazioni sul modello e i dati di training; fare clic su **Avanti**. Per ulteriori informazioni sui dati di training, consultare [Perché {{site.data.keyword.aios_short}} ha bisogno di accedere ai miei dati di training?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+È necessario fornire informazioni sui dati del modello e di training. Per ulteriori informazioni sui dati di training, consultare [Perché {{site.data.keyword.aios_short}} ha bisogno di accedere ai miei dati di training?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
-    ![Preparazione alla spiegazione](images/config-what-monitor.png)
+![Preparazione alla spiegazione](images/config-what-monitor.png)
 
-1.  Dal menu a discesa, selezionare il tipo di dati che la distribuzione analizza, e fare clic su **Avanti**.
+- Se si utilizza un'istanza {{site.data.keyword.pm_full}} che si trova nella stessa regione dell'istanza {{site.data.keyword.aios_short}}, le informazioni di registrazione del payload sono configurate automaticamente. 
+- Altrimenti dalla scheda e dalle finestre **Registrazione payload**, è necessario immettere le informazioni sui tipi di dati e di algoritmi e la registrazione del payload. 
 
-    ![Selezionare tipo di input](images/config-input-monitor.png)
+   Ci sono requisiti specifici a seconda delle selezioni. Per ulteriori informazioni, consultare [Dati numerici/categoriali](https://test.cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan).
+
+   Prima di poter configurare i monitor, è necessario copiare uno dei frammenti di codice da eseguire. Eseguire il comando cURL nell'applicazione client o il comando Python nel notebook di data science. Questo fornisce un modo per registrare le richieste di distribuzione modello e per scrivere i dati di risposta nel database di payload.
+
+## Fornire i dettagli sul modello
+{: #mo-work-model-dets}
+
+Fornire le informazioni sul modello in modo che {{site.data.keyword.aios_short}} possa accedere al database e comprendere come è configurato il modello.
+
+Nello specifico, per configurare i monitor, è necessario eseguire le seguenti attività:
+
+1. Specificare l'ubicazione dei dati di training. Immettere il percorso, il nome host o l'indirizzo IP, il nome del database e le informazioni di autenticazione.
+2. All'interno del database, è necessario selezionare la tabella di training selezionando lo schema e la tabella.
+3. Selezionare la colonna etichetta dalla tabella di training.
+4. Selezionare le funzioni che sono state utilizzate per addestrare la distribuzione AI.
+5. Selezionare le funzioni testo e categoriali.
+6. Selezionare la colonna di previsione di distribuzione.
+7. Infine, è possibile esaminare i dettagli del modello prima di salvarlo.
+
+Le seguenti sezioni forniscono alcune informazioni specifiche che si incontrano in base al tipo di modello, [Dati numerici/categoriali](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan) o [Immagini e testo non strutturato](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datai).
+
 
 ### Dati numerici/categoriali
 {: #mo-nuca}
 
 Per i dati numerici o categoriali, è necessario fornire informazioni sui dati di training per il modello, per poter configurare i monitor.
 
-  ![Selezionare tipo di configurazione](images/config-manual-monitor.png)
-
 - **Configura manualmente i monitor** - Richiede di fornire informazioni di connessione ai dati di training.
 
     - Selezionare il [tipo di algoritmo](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-understand) e fare clic su **Avanti**:
 
-      ![Multiclasse](images/multiclass.png)
-
-      Accertarsi che il formato dei dati di training sia esattamente uguale a quello previsto dal modello. Ad esempio, se il modello prevede `M` e `F` per la funzione *Gender*, i dati di training devono avere `M` e `F`, non `Male` e `Female`. Attualmente {{site.data.keyword.aios_short}} supporta solo le ubicazioni database Db2 o Cloud Object Storage.
+      Il formato dei dati di training deve corrispondere al modello. Ad esempio, se il modello prevede `M` e `F` per la funzione `Gender`, i dati di training devono avere `M` e `F`, non `Male` e `Female`.  La release corrente di {{site.data.keyword.aios_short}} supporta solo le ubicazioni database Db2 o Cloud Object Storage.
         {: important}
 
     - Specificare l'ubicazione (`Db2` o `Cloud Object Storage`), quindi:
 
-        - Per un database Db2, indicare le seguenti informazioni:
+        - Per un database Db2, immettere le seguenti informazioni:
 
             - Nome host o indirizzo IP
             - Porta
@@ -76,61 +111,32 @@ Per i dati numerici o categoriali, è necessario fornire informazioni sui dati d
             - Nome utente
             - Password
 
-            ![Specificare l'ubicazione Db2 della pagina dati di training](images/config-train-db2-monitor.png)
+        - Per Cloud Object Storage, immettere le seguenti informazioni:
 
-        - Per Cloud Object Storage, indicare le seguenti informazioni:
-
-            - URL di accesso
-
-              L'URL di accesso deve corrispondere all'impostazione della regione del bucket in cui si trovano i dati di training. Si specificherà il bucket di dati di training nel passo successivo.
-              {: important}
-
+            - URL di accesso: l'URL di accesso deve corrispondere all'impostazione della regione del bucket in cui si trovano i dati di training. Si specificherà il bucket di dati di training nel passo successivo.
             - Istanza risorsa (ID)
             - Chiave API
 
-            ![Pagina Specifica ubicazione Cloud Object Storage dei dati di training](images/config-train-cos-monitor.png)
-
-    - Assicurarsi che la connessione sia valida facendo clic sul pulsante **Verifica** per connettersi ai dati di training. Fare clic su **Avanti**.
-
+    - Per assicurarsi che la connessione sia valida, fare clic sul pulsante **Verifica** per connettersi ai dati di training. 
     - Specificare l'esatta ubicazione nel database Db2 o Cloud Object Storage in cui si trovano i dati di training.
 
-        - Per un database Db2, selezionare sia uno schema che una tabella di training che includa le colonne previste dal modello:
-
-          ![Specificare ubicazione Db2 di schema e tabella di training](images/fair-config-table-db2.png)
-
-        - Per Cloud Object Storage, selezionare un bucket e un dataset:
-
-          ![Specifica ubicazione Cloud Object Storage del dataset](images/fair-config-dset-cos.png)
-
-          Fare clic su **Avanti** per procedere al Passo 5 di seguito.
+        - Per un database Db2, selezionare sia uno schema che una tabella di training che includa le colonne previste dal modello.
+        - Per Cloud Object Storage, selezionare un bucket e un dataset.
 
 - **Carica un file di configurazione** - Scegliere questa opzione se si preferisce mantenere privati i dati di training. È possibile utilizzare un notebook Python personalizzato per fornire a {{site.data.keyword.aios_short}} informazioni per analizzare i dati di training senza fornire accesso ai dati di training stessi.
 
   L'esecuzione del notebook Python consente di catturare i valori distinti nelle colonne dello schema, così come i nomi delle colonne. Inoltre, è possibile utilizzare il notebook per pre-configurare il monitor di correttezza.
 
-    - Scaricare il [notebook personalizzato![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: new_window}, e sostituire le credenziali con le proprie.
+   - Scaricare il [notebook personalizzato](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: external} e sostituire le credenziali con le proprie.
+   - Esaminare attentamente il notebook, specificando i dati per il proprio modello, dove opportuno. Salvare il notebook.
+   - Eseguire il notebook per generare un file di configurazione in formato JSON.
+   - Caricare il file di configurazione JSON.
 
-    - Esaminare attentamente il notebook, specificando i dati per il proprio modello, dove opportuno. Salvare il notebook.
+     ![Caricare il JSON di configurazione](images/config-json-monitor.png)
 
-    - Eseguire il notebook per generare un file di configurazione in formato JSON.
-
-    - Caricare il file di configurazione JSON.
-
-        ![Caricare il JSON di configurazione](images/config-json-monitor.png)
-
-    - Fare clic su **Avanti**.
-
-- {{site.data.keyword.aios_short}} localizzerà i dati di training dai metadati memorizzati con il modello in WML. Scegliere la colonna etichetta nei dati di training che contengono i valori di previsione e fare clic su **Avanti**.
-
-  ![Selezionare etichetta colonna](images/fair-config-column.png)
-
-- Selezionare le colonne utilizzate per addestrare il modello - queste sono le funzioni che la distribuzione modello prevede in una richiesta. Fare clic su **Avanti**.
-
-    ![Selezionare etichetta colonna](images/explain-select-column.png)
-
-- Infine, selezionare le colonne che contenevano testo e sono state convertite in numeri interi. Ad esempio, se i dati di training originali contenevano `Male` e `Female` per *Gender*, e ora sono stati mappati rispettivamente a `0` e `1`, i dati di training ora contengono i valori `0` e `1` per la colonna *Gender*. Identificare le colonne che ora contengono numeri interi, ma originariamente contenevano valori testo. Fare clic su **Avanti**.
-
-    ![Selezionare tabella dati](images/explain-text-column.png)
+- {{site.data.keyword.aios_short}} localizza i dati di training dai metadati memorizzati con il modello in {{site.data.keyword.pm_full}}. Scegliere la colonna etichetta nei dati di training che contengono i valori di previsione. 
+- Selezionare le colonne utilizzate per addestrare il modello - queste sono le funzioni che la distribuzione modello prevede in una richiesta.
+- Infine, selezionare le colonne che contenevano testo e sono state convertite in numeri interi. Ad esempio, se i dati di training originali contenevano `Male` e `Female` per `Gender`, e ora sono stati mappati rispettivamente a `0` e `1`, i dati di training ora contengono i valori `0` e `1` per la colonna `Gender`. Identificare le colonne che ora contengono numeri interi, ma originariamente contenevano valori testo.
 
 ### Immagini e testo non strutturato
 {: #mo-imun}
@@ -153,4 +159,4 @@ Esaminare il riepilogo delle selezioni e fare clic su **Salva** per continuare.
 ### Passi successivi
 {: #mo-next}
 
-Per iniziare la configurazione dei monitor, selezionare una categoria e fare clic su **Inizia**.
+Per iniziare la configurazione dei monitor, fare clic sulla scheda **Accuratezza** e fare clic su **Inizia**.

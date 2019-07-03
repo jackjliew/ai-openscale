@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Criando monitores e métricas customizados ![tag beta](images/beta.png)
 {: #cst_mtrcs}
@@ -43,7 +49,7 @@ Para trabalhar com métricas customizadas, deve-se executar as tarefas a seguir:
 
 Os tutoriais avançados a seguir mostram como fazer isso:
 
-- [Trabalhando com o Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [Trabalhando com o {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [Trabalhando com o mecanismo de aprendizado de máquina customizado](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
 É possível desativar e ativar novamente o monitoramento customizado a qualquer momento. Você poderá
@@ -57,12 +63,12 @@ do SDK Python](http://ai-openscale-python-client.mybluemix.net/).
 
 Para acessar e visualizar métricas customizadas, é possível usar a interface programática. Os tutoriais avançados a seguir mostram como fazer isso:
 
-- [Trabalhando com o Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [Trabalhando com o {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [Trabalhando com o mecanismo de aprendizado de máquina customizado](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
    Para obter mais informações, veja [a documentação do SDK Python](http://ai-openscale-python-client.mybluemix.net/).
 
-A visualização de suas métricas customizadas é exibida no {{site.data.keyword.aios_short}} Dashboard.
+A visualização de suas métricas customizadas é exibida no painel do {{site.data.keyword.aios_short}}.
 
 <!---
 ![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)

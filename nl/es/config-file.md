@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Configure despliegues de activos utilizando archivos de configuración de JSON
 {: #cf-ov}
@@ -45,7 +47,7 @@ Para este ejemplo, el archivo `sagemaker_native_multiclass_breast-cancer_all_mon
       subscription_configuration = json.load(fp)
     ```
 
-El archivo contiene datos de configuración, un ejemplo de los cuales se muestra a continuación. Consulte el cuaderno para ver un ejemplo completo del contenido de configuración.
+El archivo contiene datos de configuración. Consulte el ejemplo siguiente. Consulte el cuaderno para ver un ejemplo completo del contenido de configuración.
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
@@ -172,6 +174,12 @@ El archivo contiene datos de configuración, un ejemplo de los cuales se muestra
 
 El despliegue de activo se crea y configura para que lo utilice {{site.data.keyword.aios_short}}.
 
-Consulte información más completa en la [documentación del cliente Python de {{site.data.keyword.aios_short}}![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}.
+## Pasos siguientes
+{: #cf-results-nxt-steps}
 
-También puede importar y exportar configuraciones a {{site.data.keyword.aios_short}} utilizando los métodos de API de [suscripción de importación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} y de [suscripción de exportación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window}.
+Consulte información más completa en la
+[documentación del cliente Python de {{site.data.keyword.aios_short}}](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: external}.
+
+También puede importar y exportar configuraciones a {{site.data.keyword.aios_short}} utilizando los métodos de API de
+[suscripción de importación](https://{DomainName}/apidocs/ai-openscale#import-subscription){: external} y
+[suscripción de exportación](https://{DomainName}/apidocs/ai-openscale#export-subscription){: external}.

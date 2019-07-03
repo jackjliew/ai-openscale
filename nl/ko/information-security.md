@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: security, information security, GDPR, 
 
@@ -11,15 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 정보 보안
 {: #is-ov}
@@ -37,7 +41,7 @@ IBM은 고객 및 파트너에게 혁신적인 데이터 개인정보 보호, �
 
 작성된 {{site.data.keyword.cloud}} {{site.data.keyword.watson}} 리소스에 대한 GDPR 지원을 요청해야 하는 경우
 
--   유럽 연합(EU)인 경우, [유럽 연합에서 작성된 IBM Cloud Watson 리소스에 대한 지원 요청](/docs/services/watson?topic=watson-gdpr-sar#request-EU)을 참조하십시오.
+-   유럽 연합(EU)인 경우, [유럽 연합에서 작성된 {{site.data.keyword.Bluemix}} Watson 리소스에 대한 지원 요청](/docs/services/watson?topic=watson-gdpr-sar#request-EU)을 참조하십시오.
 -   EU 외부인 경우, [유럽 연합 외부의 리소스에 대한 지원 요청](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU)을 참조하십시오.
 
 ## 유럽 연합의 일반 개인정보 보호법률(GDPR)
@@ -45,7 +49,7 @@ IBM은 고객 및 파트너에게 혁신적인 데이터 개인정보 보호, �
 
 IBM은 고객 및 파트너가 GDPR을 준수하는 데 도움을 줄 수 있도록 혁신적인 데이터 개인정보 보호, 보안 및 통제 솔루션을 제공하려 노력하고 있습니다.
 
-준수 준비를 지원하기 위한 IBM의 자체 GDPR 준비 과정 및 GDPR 기능과 오퍼링에 대한 자세한 정보를 보려면 [여기를 클릭하십시오 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/gdpr){: new_window}.
+준수 준비를 지원하기 위한 IBM의 자체 GDPR 준비 과정 및 GDPR 기능과 오퍼링에 대한 자세한 정보는 [여기](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/gdpr)에서 확인하십시오.{: external}.
 
 ## {{site.data.keyword.aios_short}}에서 데이터 레이블링 및 삭제
 {: #is-stda}

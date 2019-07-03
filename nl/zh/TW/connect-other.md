@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: machine learning, services, ml, custom 
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 指定「自訂」ML 服務實例
 {: #co-connect}
@@ -79,15 +85,15 @@ subcollection: ai-openscale
 
 您也可以參考下列鏈結：
 
-[AIOS 有效負載記載 API![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[AIOS 有效負載記載 API](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: external}
 
-[自訂部署 API![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
+[自訂部署 API](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: external}
 
-[Python 用戶端連結 SDK![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
+[Python 用戶端連結 SDK](http://ai-openscale-python-client.mybluemix.net/#bindings){: external}
 
-[使用「自訂」機器學習引擎![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[使用自訂機器學習引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-[Python SDK for IBM Watson OpenScale ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
+[Python SDK for IBM Watson OpenScale](https://pypi.org/project/ibm-ai-openscale/){: external}
 
 - **支援監視器的模型輸入準則**
 
@@ -168,7 +174,7 @@ subcollection: ai-openscale
 
   在本例中，`"personal"` 和 `"camping"` 是可能的類別，每一個評分輸出中的評分都會指派給這兩個類別。如果遺漏預測機率，偏誤偵測將會運作，但自動除去偏誤不會運作。
 
-  上述評分輸出應可從作用中的評分端點來存取，而 {{site.data.keyword.aios_short}} 可透過 REST 來呼叫該端點。若為 AzureML、SageMaker 和 WML，{{site.data.keyword.aios_short}} 會直接連接至原生評分端點（因此您不用擔心評分規格的實作）
+  上述評分輸出應可從作用中的評分端點來存取，而 {{site.data.keyword.aios_short}} 可透過 REST 來呼叫該端點。若為 AzureML、SageMaker 和 {{site.data.keyword.pm_full}}，{{site.data.keyword.aios_short}} 會直接連接至原生評分端點（因此您不用擔心評分規格的實作）
 
 ### 後續步驟
 {: #co-next}

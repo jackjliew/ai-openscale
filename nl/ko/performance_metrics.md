@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,39 +11,39 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# 메트릭 및 트랜잭션 분석 ![베타 태그](images/beta.png)
-{: #anlz_metrics}
+# 성능 메트릭 개요 ![베타 태그](images/beta.png)
+{: #anlz_metrics_performance}
 
-{{site.data.keyword.aios_full}}을 사용하여 다양한 방법으로 메트릭과 트랜잭션을 분석할 수 있습니다.
+성능 모니터링을 사용하여 배치에서 처리하는 데이터 레코드의 속도를 알 수 있습니다. {{site.data.keyword.aios_short}}에서 추적하고 모니터링할 배치를 선택하는 경우 성능 모니터링을 사용으로 설정합니다.
 {: shortdesc}
 
-## 오차 행렬 ![베타 태그](images/beta.png)
-{: #it-conf-mtx}
+성능 메트릭은 다음 정보를 기반으로 계산됩니다.
 
-품질 메트릭의 세부사항으로 모델이 잘못 분석한 레코드를 확인할 수 있습니다. 이러한 이상 항목은 2진 분류 모델에 대해 거짓 양성 또는 거짓 음성일 수 있으며 다중 클래스 모델에 대한 잘못된 클래스 지정일 수 있습니다. 또한 모델이 올바르게 분석하지 않은 피드백 레코드 목록도 볼 수 있습니다.
-{: shortdesc}
+- 스코어링 페이로드 데이터
 
-1. **품질** 차트(예: **공정성**)에서 시간/일을 클릭하십시오.
-    
-    ![편향된 트랜잭션 목록](images/Confusion_Matrix_040819.004.png)
+적합한 모니터링을 위해 모든 스코어링 요청을 {{site.data.keyword.aios_short}}에도 기록해야 합니다. 페이로드 데이터 로깅은 {{site.data.keyword.pm_full}} 엔진에 대해 자동으로 설정되어 있습니다. 다른 기계 학습 엔진의 경우 Python 클라이언트 또는 REST API를 사용하여 페이로드 데이터를 제공할 수 있습니다. 성능 모니터링은 모니터링된 배치에 대한 추가 스코어링 요청을 작성하지 않습니다.
 
-1. 오차 행렬은 거짓 양성 및 거짓 음성을 표시합니다. 피드백 레코드의 서브세트를 보려면 셀을 클릭하십시오.
+{{site.data.keyword.aios_short}} 대시보드에서 시간이 경과함에 따른 성능 메트릭 값을 검토할 수 있습니다.
 
-    ![편향된 트랜잭션 목록](images/Confusion_Matrix_040819.005.png)
+![성능 차트](images/performance_metrics_001.png)
 
-1. 피드백 레코드를 검토하고 피드백 레코드 분석 결과에 대해 설명을 요청하십시오.
+## 지원되는 성능 메트릭
+{: #anlz_metrics_performance_supp_quality_mets}
 
-    ![편향된 트랜잭션 목록](images/Confusion_Matrix_040819.006.png)
+다음 성능 메트릭이 {{site.data.keyword.aios_short}}에서 지원됩니다.
 
-1. 트랜잭션이 인라인으로 표시됩니다.
-
-    ![편향된 트랜잭션 목록](images/Confusion_Matrix_040819.007.png)
-
+- [처리량](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

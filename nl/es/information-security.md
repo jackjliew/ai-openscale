@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: security, information security, GDPR, 
 
@@ -11,15 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Seguridad de la información
 {: #is-ov}
@@ -34,7 +38,7 @@ Los productos, los servicios y otras prestaciones descritas en este documento no
 
 Si tiene que solicitar soporte de GDPR para los recursos de {{site.data.keyword.cloud}} {{site.data.keyword.watson}} que se crean
 
--   En la Unión Europea (UE), consulte [Solicitud de soporte para recursos de IBM Cloud Watson creados en la Unión Europea ](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
+-   En la Unión Europea (UE), consulte [Solicitud de soporte para recursos de {{site.data.keyword.Bluemix}} Watson creados en la Unión Europea](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
 -   Fuera de la Unión Europea, consulte [Solicitud de soporte para recursos fuera de la Unión Europea](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
 
 ## Reglamento General de Protección de Datos (GDPR) de la Unión Europea
@@ -42,7 +46,7 @@ Si tiene que solicitar soporte de GDPR para los recursos de {{site.data.keyword.
 
 IBM se ha comprometido a proporcionar a nuestros clientes y socios soluciones innovadoras de privacidad, seguridad y gobierno de datos para ayudarles a cumplir con el GDPR.
 
-Obtenga más información sobre la implantación del GDPR en IBM y las prestaciones y las ofertas de GDPR para ayudarle a cumplirlo [aquí ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/gdpr){: new_window}.
+Obtenga más información sobre la implantación del GDPR en IBM y las prestaciones y las ofertas de GDPR para ayudarle a cumplirlo [aquí](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/gdpr){: external}.
 
 ## Etiquetado y supresión de datos en {{site.data.keyword.aios_short}}
 {: #is-stda}

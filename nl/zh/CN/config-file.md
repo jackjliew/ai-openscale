@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 使用 JSON 配置文件来配置资产部署
 {: #cf-ov}
@@ -45,7 +47,7 @@ subcollection: ai-openscale
       subscription_configuration = json.load(fp)
     ```
 
-该文件包含配置数据，其示例如下所示。请参阅笔记本以获取配置内容的完整示例。
+该文件包含配置数据。请参阅以下示例。请参阅笔记本以获取配置内容的完整示例。
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
@@ -172,6 +174,9 @@ subcollection: ai-openscale
 
 资产部署即已创建并配置为可供 {{site.data.keyword.aios_short}} 使用。
 
-请参阅 [{{site.data.keyword.aios_short}} Python 客户机文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window} 中的更多完整信息。
+## 后续步骤
+{: #cf-results-nxt-steps}
 
-您还可以使用[导入预订 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 和[导出预订 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API 方法将配置导入到 {{site.data.keyword.aios_short}} 以及从中导出配置。
+请参阅 [{{site.data.keyword.aios_short}} Python 客户机文档](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: external}中提供的更多完整信息。
+
+您还可以使用 [import subscription](https://{DomainName}/apidocs/ai-openscale#import-subscription){: external} 和 [export subscription](https://{DomainName}/apidocs/ai-openscale#export-subscription){: external} API 方法在 {{site.data.keyword.aios_short}} 中导出和导入配置。

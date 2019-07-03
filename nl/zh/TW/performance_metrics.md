@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,39 +11,39 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# 分析度量及交易 ![測試版標記](images/beta.png)
-{: #anlz_metrics}
+# 效能度量概觀 ![測試版標記](images/beta.png)
+{: #anlz_metrics_performance}
 
-您可以使用 {{site.data.keyword.aios_full}}，透過各種方法來分析度量及交易。
+使用效能監視來瞭解部署所處理的資料記錄的速度。當您選取要由 {{site.data.keyword.aios_short}} 追蹤及監視的部署時，即啟用效能監視。
 {: shortdesc}
 
-## 混淆矩陣 ![測試版標記](images/beta.png)
-{: #it-conf-mtx}
+效能度量是根據下列資訊來計算：
 
-這是品質度量的詳細資料，您可以檢視模型分析錯誤的記錄。這類異常可能是二進位分類模型的誤肯定或誤否定，或是多類別模型的不正確類別指派。您也可以檢視模型未正確分析的意見記錄清單。
-{: shortdesc}
+- 評比有效負載資料
 
-1. 從任何**品質**圖表（例如**公平性**）中，按一下圖表中的小時/日。
-    
-    ![交易清單 - 偏誤](images/Confusion_Matrix_040819.004.png)
+為了達到適當的監視目的，每個評分要求都應該記載在 {{site.data.keyword.aios_short}} 中。對於 {{site.data.keyword.pm_full}} 引擎，會自動進行有效負載資料記載。對於其他機器學習引擎，可以使用 Python 用戶端或 REST API 來提供有效負載資料。效能監視不會在受監視部署上建立任何其他評分要求。
 
-1. 混淆矩陣顯示誤肯定和誤否定。按一下資料格以檢視意見記錄的子集。
+您可以在 {{site.data.keyword.aios_short}} 儀表板上檢閱一段時間的度量值：
 
-    ![交易清單 - 偏誤](images/Confusion_Matrix_040819.005.png)
+![效能圖表](images/performance_metrics_001.png)
 
-1. 檢閱意見記錄，並要求意見記錄的分析說明。
+## 支援的效能度量
+{: #anlz_metrics_performance_supp_quality_mets}
 
-    ![交易清單 - 偏誤](images/Confusion_Matrix_040819.006.png)
+{{site.data.keyword.aios_short}} 支援下列效能度量：
 
-1. 交易出現在行內。
-
-    ![交易清單 - 偏誤](images/Confusion_Matrix_040819.007.png)
-
+- [傳輸量](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,39 +11,39 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# Analisi delle metriche e delle transazioni ![tag beta](images/beta.png)
-{: #anlz_metrics}
+# Panoramica sulle metriche delle prestazioni ![tag beta](images/beta.png)
+{: #anlz_metrics_performance}
 
-È possibile utilizzare {{site.data.keyword.aios_full}} per analizzare le metriche e le transazioni tramite varie modalità.
+Utilizzare il monitoraggio delle prestazioni per conoscere la velocità dei record di dati elaborati dalla distribuzione. È possibile abilitare il monitoraggio delle prestazioni quando si seleziona la distribuzione che deve essere tracciata e monitorata da {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
-## Matrice di confusione ![tag beta](images/beta.png)
-{: #it-conf-mtx}
+Le metriche di prestazione sono calcolate in base alle seguenti informazioni:
 
-Come un dettaglio delle metriche di qualità, è possibile visualizzare i record che il modello ha analizzato in modo non corretto. Tali anomalie possono essere falsi positivi o falsi negativi per i modelli di classificazione binari o possono essere assegnazioni di classi non corrette per i modelli multi-classe. È anche possibile visualizzare un elenco di record di feedback che il modello non ha analizzato correttamente.
-{: shortdesc}
+- calcolo del punteggio dei dati del payload
 
-1. Da uno qualsiasi dei grafici **Qualità**, come **Correttezza** fare clic su un'ora/giorno nel grafico.
-    
-    ![Elenco transazioni distorte](images/Confusion_Matrix_040819.004.png)
+Al fine di un corretto monitoraggio, ogni richiesta di calcolo del punteggio dovrebbe essere registrata anche in {{site.data.keyword.aios_short}}. La registrazione dei dati di payload è automatizzata per i motori {{site.data.keyword.pm_full}}. Per altri motori di machine learning, i dati del payload possono essere forniti utilizzando il client Python o l'API REST. Il monitoraggio delle prestazioni non crea ulteriori richieste di calcolo del punteggio sulla distribuzione monitorata.
 
-1. Una matrice di confusione visualizza i falsi positivi e falsi negativi. Fare clic su una cella per visualizzare il sottoinsieme dei record di feedback.
+È possibile esaminare i valori delle metriche di prestazione nel tempo sul dashboard {{site.data.keyword.aios_short}}:
 
-    ![Elenco transazioni distorte](images/Confusion_Matrix_040819.005.png)
+![grafico prestazioni](images/performance_metrics_001.png)
 
-1. Esaminare i record di feedback e richiedere una spiegazione dell'analisi rispetto al record di feedback.
+## Metriche delle prestazioni supportate
+{: #anlz_metrics_performance_supp_quality_mets}
 
-    ![Elenco transazioni distorte](images/Confusion_Matrix_040819.006.png)
+Le seguenti metriche delle prestazioni sono supportate da {{site.data.keyword.aios_short}}:
 
-1. Le transazioni appaiono in linea.
-
-    ![Elenco transazioni distorte](images/Confusion_Matrix_040819.007.png)
-
+- [Velocità di trasmissione dei dati](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

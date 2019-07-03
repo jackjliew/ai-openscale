@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Guía de aprendizaje del SDK de Python (avanzada)
 {: #crt-ov}
@@ -44,9 +46,9 @@ El modelo de riesgo crediticio que se proporciona en esta guía de aprendizaje u
 
 Esta guía de aprendizaje utiliza un cuaderno Jupyter que se debe ejecutar en un proyecto de Watson Studio, utilizando un entorno de ejecución de "Python 3.5 con Spark". Requiere credenciales de servicio para los siguientes servicios de {{site.data.keyword.cloud_notm}}:
 
-- Cloud Object Storage (para almacenar el proyecto de Watson Studio)
+- Cloud Object Storage (para almacenar el proyecto de {{site.data.keyword.DSX}})
 - {{site.data.keyword.aios_short}}
-- Watson Machine Learning
+- {{site.data.keyword.pm_full}}
 - (Opcional) Databases for PostgreSQL o Db2 Warehouse
 
 El cuaderno Jupyter entrenará, creará y desplegará un modelo de riesgo crediticio alemán, configurará {{site.data.keyword.aios_short}} para supervisar ese despliegue y proporcionará medidas y registros históricos de un periodo de 7 días para su visualización en el panel de control Detalles de {{site.data.keyword.aios_short}}. También puede configurar opcionalmente el modelo para el aprendizaje continuo con Watson Studio y Spark.
@@ -54,22 +56,25 @@ El cuaderno Jupyter entrenará, creará y desplegará un modelo de riesgo credit
 ## Introducción
 {: #crt-intro}
 
-En esta guía de aprendizaje, aprenderá a:
+En esta guía de aprendizaje, realizará las tareas siguientes:
 
-- Suministrar aprendizaje automático y servicios de almacenamiento de {{site.data.keyword.cloud_notm}}
-- Configurar un proyecto de Watson Studio y ejecutar un cuaderno Python para crear, entrenar y desplegar un modelo de aprendizaje automático
-- Ejecutar un cuaderno Python para crear una despensa de datos, configurar supervisores de rendimiento, exactitud y equidad y crear datos para supervisar
-- Ver los resultados en la pestaña Detalles de {{site.data.keyword.aios_short}}
+- [Suministrar servicios de aprendizaje automático y almacenamiento de {{site.data.keyword.cloud_notm}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-services).
+- [Configurar un proyecto de Watson Studio y ejecutar un cuaderno de Python para crear, entrenar y desplegar un modelo de aprendizaje automático](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-set-wstudio).
+- [Suministrar {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-wos-adv).
+- [Ejecute un cuaderno de Python para crear una despensa de datos, configurar supervisores de rendimiento, exactitud y equidad y crear datos para supervisar](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-edit-notebook).
+- [Ver los resultados en la pestaña Detalles de {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-view-results).
 
 ## Suministre servicios de {{site.data.keyword.cloud_notm}}
 {: #crt-services}
 
-Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window} con su {{site.data.keyword.ibmid}}. Al suministrar servicios, especialmente si utiliza Db2 Warehouse, compruebe que su organización y espacio seleccionados son los mismos para todos los servicios.
+Inicie una sesión en su cuenta de [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external} con
+{{site.data.keyword.ibmid}}. Al suministrar servicios, especialmente si utiliza Db2 Warehouse, compruebe que su organización y espacio seleccionados son los mismos para todos los servicios.
 
 ### Cree una cuenta de {{site.data.keyword.DSX}}
 {: #crt-wstudio}
 
-- [Cree una instancia de {{site.data.keyword.DSX}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/watson-studio){: new_window} si no tiene aún una asociada con su cuenta:
+- [Cree una instancia de {{site.data.keyword.DSX}}](https://{DomainName}/catalog/services/watson-studio){: external}
+si todavía no tiene asociada una con su cuenta:
 
   ![Watson Studio](images/watson_studio.png)
 
@@ -78,7 +83,7 @@ Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enla
 ### Suministre un servicio de {{site.data.keyword.cos_full_notm}}
 {: #crt-cos}
 
-- [Suministre un servicio de {{site.data.keyword.cos_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} si no tiene aún uno asociado con su cuenta:
+- [Suministre un servicio de {{site.data.keyword.cos_short}}](https://{DomainName}/catalog/services/cloud-object-storage){: external} si todavía no tiene uno asociado con la cuenta:
 
   ![Object Storage](images/object_storage.png)
 
@@ -87,18 +92,34 @@ Inicie sesión en la cuenta de [{{site.data.keyword.cloud_notm}} ![Icono de enla
 ### Suministre un servicio de {{site.data.keyword.pm_full}}
 {: #crt-wml}
 
-- [Suministre una instancia de {{site.data.keyword.pm_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/machine-learning){: new_window} si no tiene aún una asociada con su cuenta:
+- [Suministre una instancia de {{site.data.keyword.pm_short}}](https://{DomainName}/catalog/services/machine-learning){: external} si todavía no tiene una asociada con su cuenta:
 
   ![Machine Learning](images/machine_learning.png)
 
 - Dé un nombre al servicio, elija el plan Lite (gratuito) y pulse el botón **Crear**.
 
+### Suministre un servicio de {{site.data.keyword.aios_full}}
+{: #crt-wos-adv}
+
+Si no lo ha hecho todavía, asegúrese de que suministre {{site.data.keyword.aios_full}}. 
+
+- [Suministre una instancia de {{site.data.keyword.aios_short}}](https://{DomainName}/catalog/services/watson-openscale){: external} si todavía no tiene una asociada con su cuenta:
+
+  ![mosaico de {{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
+
+1. Pulse **Catálogo** > **AI** > **{{site.data.keyword.aios_short}}**.
+2. Asigne un nombre a su servicio, elija un plan y pulse el botón **Crear**.
+3. Para empezar {{site.data.keyword.aios_short}}, pulse el botón **Cómo empezar** button.
+
 ### (Opcional) Suministre un servicio Databases for PostgreSQL o DB2 Warehouse
 {: #crt-db2}
 
-Si tiene una cuenta de {{site.data.keyword.cloud_notm}} de pago, debe suministrar un servicio `Databases for PostgreSQL` o `Db2 Warehouse` para aprovechar todas las ventajas de la integración con {{site.data.keyword.DSX}} y los servicios de aprendizaje continuo. Si elige no suministrar un servicio de pago, puede utilizar el almacenamiento PostgreSQL interno gratuito con {{site.data.keyword.aios_short}}, pero no podrá configurar el aprendizaje continuo para el modelo.
+Si tiene una cuenta de {{site.data.keyword.cloud_notm}} de pago, debe suministrar un servicio `Databases for PostgreSQL` o `Db2 Warehouse` para aprovechar todas las ventajas de la integración con {{site.data.keyword.DSX}} y los servicios de aprendizaje continuo. Si
+elige no adquirir un servicio de pago, puede utilizar el almacenamiento interno gratuito de PostgreSQL con {{site.data.keyword.aios_short}}, pero
+no podrá configurar el aprendizaje continuo para el modelo.
 
-- [Suministre un servicio de Databases for PostgreSQL![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/databases-for-postgresql) o [un servicio de Db2 Warehouse ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/db2-warehouse) si no tiene aún uno asociado con la cuenta:
+- [Suministre un servicio de bases de datos para PostgreSQL](https://{DomainName}/catalog/services/databases-for-postgresql) o
+[un servicio de Db2 Warehouse](https://{DomainName}/catalog/services/db2-warehouse) si todavía no tiene uno asociado con la cuenta:
 
   ![BD para Postgres](images/dbpostgres.png)
 
@@ -109,7 +130,7 @@ Si tiene una cuenta de {{site.data.keyword.cloud_notm}} de pago, debe suministra
 ## Configure un proyecto de {{site.data.keyword.DSX}}
 {: #crt-set-wstudio}
 
-- Inicie sesión en su cuenta de [{{site.data.keyword.DSX}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://dataplatform.ibm.com/){: new_window}. Pulse el {{site.data.keyword.avatar}} y compruebe que la cuenta que utilice sea la misma cuenta que ha utilizado para crear los servicios de {{site.data.keyword.cloud_notm}}:
+- Inicie una sesión en su cuenta de [{{site.data.keyword.DSX}}](https://dataplatform.ibm.com/){: external}. Pulse el {{site.data.keyword.avatar}} y compruebe que la cuenta que utilice sea la misma cuenta que ha utilizado para crear los servicios de {{site.data.keyword.cloud_notm}}:
 
   ![Misma cuenta](images/same_account.png)
 
@@ -131,7 +152,7 @@ Si tiene una cuenta de {{site.data.keyword.cloud_notm}} de pago, debe suministra
 
 - Descargue el archivo siguiente:
 
-    - [Trabajar con Watson Machine Learning ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [Trabajar con Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - En la pestaña **Activos** del proyecto de {{site.data.keyword.DSX}}, pulse el botón **Añadir a proyecto** y seleccione **Cuaderno** en el menú desplegable:
 
@@ -161,7 +182,7 @@ El cuaderno `Trabajar con Watson Machine Learning` contiene instrucciones detall
 
     - Siga las instrucciones para crear, copiar y pegar una clave de API de {{site.data.keyword.cloud_notm}}.
 
-    - Reemplace las credenciales de servicio de Watson Machine Learning (WML) con las que ha creado previamente.
+    - Sustituya las credenciales de servicio de {{site.data.keyword.pm_full}} por las que ha creado anteriormente.
 
     - Reemplace las credenciales de BD con las que ha creado para Databases for PostgreSQL.
 
@@ -184,11 +205,14 @@ El resultado neto es que habrá creado, entrenado y desplegado el modelo **Despl
 ### Ver detalles del despliegue
 {: #crt-view-insights}
 
-Utilizando el panel de control de [{{site.data.keyword.aios_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}, pulse en la pestaña **Detalles**:
+Utilizando el panel de control de
+[{{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}, pulse la pestaña
+**Detalles**:
 
   ![Detalles](images/insight-dash-tab.png)
 
-La página Detalles proporciona una descripción general de las métricas para los modelos desplegados. Puede ver fácilmente las alertas de las métricas de Equidad o Exactitud que han caído por debajo del umbral establecido al ejecutar el cuaderno. Los datos y los valores utilizados en esta guía de aprendizaje habrán creado métricas de Exactitud y Equidad similares a las que se muestran aquí.
+La página Detalles proporciona una descripción general de las métricas para los modelos desplegados. Puede ver fácilmente las alertas de las métricas
+de Equidad o Exactitud que han caído por debajo del umbral establecido al ejecutar el cuaderno. Los datos y los valores utilizados en esta guía de aprendizaje habrán creado métricas de Exactitud y Equidad similares a las que se muestran aquí.
 
   ![Descripción general de Detalles](images/insight-overview-adv-tutorial-2.png)
 

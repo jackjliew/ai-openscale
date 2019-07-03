@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # JSON 構成ファイルを使用したアセットのデプロイメントの構成
 {: #cf-ov}
@@ -45,7 +47,7 @@ JSON ファイルを処理する方法の優れた例については、[Watson O
       subscription_configuration = json.load(fp)
     ```
 
-このファイルには、以下の例に示すような構成データが含まれます。 構成コンテンツの完全な例を確認する場合は、ノートブックを参照してください。
+ファイルには構成データが含まれています。 以下の例を参照してください。 構成コンテンツの完全な例を確認する場合は、ノートブックを参照してください。
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
@@ -172,6 +174,9 @@ JSON ファイルを処理する方法の優れた例については、[Watson O
 
 アセットのデプロイメントが作成されて、{{site.data.keyword.aios_short}} で使用するための構成が行われます。
 
-さらに詳しい情報については、[{{site.data.keyword.aios_short}} Python クライアント資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window} を参照してください。
+## 次のステップ
+{: #cf-results-nxt-steps}
 
-{{site.data.keyword.aios_short}} との間の構成のインポートとエクスポートは、[サブスクリプションのインポート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} および[サブスクリプションのエクスポート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} の API メソッドを使用して行うこともできます。
+さらに詳しい情報については、[{{site.data.keyword.aios_short}} Python クライアント資料](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: external}を参照してください。
+
+{{site.data.keyword.aios_short}} との間の構成のインポートとエクスポートは、[サブスクリプションのインポート](https://{DomainName}/apidocs/ai-openscale#import-subscription){: external}および[サブスクリプションのエクスポート](https://{DomainName}/apidocs/ai-openscale#export-subscription){: external}の API メソッドを使用して行うこともできます。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: Amazon SageMaker, machine learning, services, AWS
 
@@ -11,19 +11,29 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Spécification d'une instance de service Amazon SageMaker ML
 {: #csm-connect}
 
 Votre première étape dans l'outil {{site.data.keyword.aios_short}} consiste à spécifier une instance de service Amazon SageMaker. Votre instance de service Amazon SageMaker est l'endroit où vous stockez vos modèles et déploiements d'IA.
 {: shortdesc}
+
+Vous pouvez également ajouter votre fournisseur d'apprentissage automatique avec le SDK Python.
+Pour savoir comment effectuer cela par programme, voir
+[Lier votre moteur d'apprentissage automatique Amazon SageMaker](/docs/services/ai-openscale?topic=ai-openscale-cml-connect#cml-smbind).
 
 ## Connectez votre instance de service Amazon SageMaker
 {: #csm-config}
@@ -39,6 +49,13 @@ Votre première étape dans l'outil {{site.data.keyword.aios_short}} consiste à
     ![Sélection du service Amazon SageMaker](images/connect-sage.png)
 
 1.  Entrez vos identifiants :
+
+    - ID clé d'accès : votre ID clé d'accès AWS, `aws_access_key_id`,
+qui vérifie qui vous êtes et authentifie et autorise les appels que vous faites à AWS.
+    - Clé d'accès secrète : votre clé d'accès secrète AWS, `aws_secret_access_key`,
+qui est nécessaire pour vérifier qui vous êtes et pour authentifier et autoriser les appels que vous faites à AWS.
+    - Région : entrez la région où votre ID clé d'accès a été créé.
+Les clés sont stockées et utilisées dans la région dans laquelle elles ont été créées et elles ne peuvent pas être transférées dans une autre région. 
 
     ![Entrée des identifiants du service Amazon SageMaker](images/connect-sage-cred.png)
 

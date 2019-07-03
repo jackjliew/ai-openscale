@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: payload, non-Watson, machine learning, services, subscription
 
@@ -11,30 +11,32 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# 비Watson Machine Learning 서비스 인스턴스에 대한 페이로드 로깅
+# 비{{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.pm_short}} 서비스 인스턴스의 페이로드 로깅
 {: #cml-connect}
 
-사용자의 AI 모델이 Watson Machine Learning(WML) 외의 기계 학습 엔진에 배치되면 Python 클라이언트로 외부 기계 학습 엔진에 대해 로깅할 수 있도록 설정해야 합니다.
+사용자의 AI 모델이 {{site.data.keyword.pm_full}} 이외의 기계 학습 엔진에 배치되면 Python 클라이언트로 외부 기계 학습 엔진에 대해 로깅할 수 있도록 설정해야 합니다.
 {: shortdesc}
 
-[{{site.data.keyword.aios_short}} Python 클라이언트 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://ai-openscale-python-client.mybluemix.net/){: new_window} 및 [{{site.data.keyword.aios_short}} 튜토리얼 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window}의 일부인 샘플 {{site.data.keyword.aios_short}} Python 클라이언트 노트북에서 전체 정보를 볼 수 있습니다.
+[{{site.data.keyword.aios_short}} Python 클라이언트 문서](http://ai-openscale-python-client.mybluemix.net/){: external} 및 [{{site.data.keyword.aios_short}} 튜토리얼](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: external}의 일부인 샘플 {{site.data.keyword.aios_short}} Python 클라이언트 노트북에서 전체 정보를 볼 수 있습니다.
 
 ## 시작하기 전에
 {: #cml-prereq}
 
-모델의 편향성을 모니터하려면 Db2 또는 Cloud Object Storage에서 사용 가능한 모델의 훈련 데이터가 필요합니다. Python 함수에 대해 설명 가능성 및 정확성은 지원되지 않습니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
+모델의 편향성을 모니터하려면 Db2 또는 {{site.data.keyword.cos_full}}에서 사용 가능한 모델의 훈련 데이터가 필요합니다. Python 함수에 대해 설명 가능성 및 정확성은 지원되지 않습니다. 훈련 데이터에 대한 자세한 정보는 [{{site.data.keyword.aios_short}}에서 내 훈련 데이터에 액세스해야 하는 이유는 무엇입니까?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)를 참조하십시오.
 
 - {{site.data.keyword.aios_short}}을 가져와서 시작하십시오.
 
@@ -67,7 +69,7 @@ subcollection: ai-openscale
 ### 사용자 정의 기계 학습 엔진을 바인딩하십시오.
 {: #cml-cusbind}
 
-- 비WML 엔진이 사용자 정의로 바인딩됩니다. 즉, 단지 메타데이터이며 비WML 서비스와의 직접 통합은 없습니다.
+- 비{{site.data.keyword.pm_full}} 엔진이 사용자 정의로 바인딩됩니다. 즉, 단지 메타데이터이며 비{{site.data.keyword.pm_full}} 서비스와의 직접 통합은 없습니다. `client.data_mart.bindings.add` 메소드를 사용하여 두 개 이상의 기계 학습 엔진을 {{site.data.keyword.aios_short}}에 바인딩할 수 있습니다.
 
     ```python
     custom_engine_credentials = {
@@ -121,41 +123,12 @@ subcollection: ai-openscale
     subscription.payload_logging.get_details()
     ```
 
+자세한 정보는 [페이로드 로깅]()을 참조하십시오. 
+
 ### 스코어링 및 페이로드 로깅
 {: #cml-cusscore}
 
-- 모델을 스코어링하십시오. 전체 예의 경우, [IBM {{site.data.keyword.aios_full}} & Custom ML engine notebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}을 참조하십시오.
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- 모델을 스코어링하십시오. 전체 예는 [IBM {{site.data.keyword.aios_full}} & 사용자 정의 ML 엔진 노트북](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}을 참조하십시오.
 
 - 페이로드 로깅 테이블에 요청 및 응답 저장
 
@@ -205,10 +178,10 @@ subcollection: ai-openscale
 ## Microsoft Azure 기계 학습 엔진에 대한 작업
 {: #cml-azconfig}
 
-### MS Azure ML 엔진을 바인딩하십시오.
+### Microsoft Azure 기계 학습 엔진 바인딩
 {: #cml-azbind}
 
-- 비WML 엔진이 사용자 정의로 바인딩됩니다. 즉, 단지 메타데이터이며 비WML 서비스와의 직접 통합은 없습니다.
+- 비{{site.data.keyword.pm_full}} 엔진이 사용자 정의로 바인딩됩니다. 즉, 단지 메타데이터이며 비{{site.data.keyword.pm_full}} 서비스와의 직접 통합은 없습니다.
 
     ```python
     AZURE_ENGINE_CREDENTIALS = {
@@ -272,38 +245,7 @@ subcollection: ai-openscale
 ### 스코어링 및 페이로드 로깅
 {: #cml-azscore}
 
-- 모델을 스코어링하십시오. 전체 예의 경우, [Working with Azure Machine Learning Studio Engine notebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}을 참조하십시오.
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- 모델을 스코어링하십시오. 전체 예는 [Azure Machine Learning Studio Engine 노트북에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: external}을 참조하십시오.
 
 - 페이로드 로깅 테이블에 요청 및 응답 저장:
 
@@ -357,10 +299,10 @@ subcollection: ai-openscale
 ## Amazon SageMaker 기계 학습 엔진에 대한 작업
 {: #cml-smconfig}
 
-### AWS SageMaker ML 엔진을 바인딩하십시오.
+### Amazon SageMaker 기계 학습 엔진 바인딩
 {: #cml-smbind}
 
-- 비WML 엔진이 사용자 정의로 바인딩됩니다. 즉, 단지 메타데이터이며 비WML 서비스와의 직접 통합은 없습니다.
+- 비{{site.data.keyword.pm_full}} 엔진이 사용자 정의로 바인딩됩니다. 즉, 단지 메타데이터이며 비{{site.data.keyword.pm_full}} 서비스와의 직접 통합은 없습니다.
 
     ```python
     SAGEMAKER_ENGINE_CREDENTIALS = {
@@ -423,38 +365,8 @@ subcollection: ai-openscale
 ### 스코어링 및 페이로드 로깅
 {: #cml-smscore}
 
-- 모델을 스코어링하십시오. 전체 예의 경우, [Working with SageMaker Machine Learning Engine notebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}을 참조하십시오.
+- 모델을 스코어링하십시오. 전체 예는 [SageMaker Machine Learning Engine 노트북에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: external}을 참조하십시오.
 
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
 
 - 페이로드 로깅 테이블에 요청 및 응답 저장:
 
@@ -508,6 +420,6 @@ subcollection: ai-openscale
 ## 다음 단계
 {: #cml-next}
 
-- {{site.data.keyword.aios_short}} 클라이언트를 계속하려면 [데이터베이스 지정](/docs/services/ai-openscale?topic=ai-openscale-connect-db)을 참조하십시오.
+- {{site.data.keyword.aios_short}} 클라이언트를 계속 사용하려면 [데이터베이스 지정](/docs/services/ai-openscale?topic=ai-openscale-connect-db)을 참조하십시오.
 
-- Python 명령 라이브러리를 계속하려면 [Python 클라이언트 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://ai-openscale-python-client.mybluemix.net/){: new_window}을 참조하십시오.
+- Python 명령 라이브러리를 계속 사용하려면 [Python 클라이언트 문서](http://ai-openscale-python-client.mybluemix.net/){: external}를 참조하십시오.

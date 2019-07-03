@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,41 +11,40 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# Analisando métricas e transações ![tag beta](images/beta.png)
-{: #anlz_metrics}
+# Visão geral das métricas de desempenho ![tag beta](images/beta.png)
+{: #anlz_metrics_performance}
 
-É possível usar o {{site.data.keyword.aios_full}} para analisar métricas e transações por meio de uma variedade de formas.
+Use o monitoramento de desempenho para saber a velocidade dos registros de dados processados por sua implementação. Você ativa o monitoramento de desempenho ao selecionar a implementação a ser rastreada e monitorada pelo {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
-## Matriz de confusão ![tag beta](images/beta.png)
-{: #it-conf-mtx}
+As métricas de desempenho são calculadas com base nas informações a seguir:
 
-Como um detalhe das métricas de qualidade, é possível visualizar os registros que o modelo analisou incorretamente. Essas anomalias podem ser falsos positivos ou falsos negativos para modelos de classificação binários ou podem ser designações de classe incorretas para modelos de várias classes. Também
-é possível visualizar uma lista de registros de feedback que o modelo não analisou corretamente.
-{: shortdesc}
+- dados de carga útil de pontuação
 
-1. Em qualquer um dos gráficos de **Qualidade**, tais como **Justiça**, clique em uma hora/dia no gráfico.
-    
-    ![Transaction list biased](images/Confusion_Matrix_040819.004.png)
+Para o propósito de monitoramento adequado, cada solicitação de pontuação também deve ser
+registrada no {{site.data.keyword.aios_short}}. A criação de log de dados de carga útil é automatizada para mecanismos do {{site.data.keyword.pm_full}}. Para outros mecanismos de aprendizado de máquina, os dados de carga útil podem ser fornecidos usando o cliente Python ou a API de REST. O monitoramento de desempenho não cria nenhuma solicitação de pontuação adicional na implementação monitorada.
 
-1. Uma matriz de confusão exibe os falsos positivos e os falsos negativos. Clique em uma célula
-para visualizar o subconjunto de registros de feedback.
+É possível revisar o valor das métricas de desempenho ao longo do tempo no painel do {{site.data.keyword.aios_short}}:
 
-    ![Transaction list biased](images/Confusion_Matrix_040819.005.png)
+![gráfico de desempenho](images/performance_metrics_001.png)
 
-1. Revise os registros de feedback e solicite uma explicação da análise com relação ao registro de feedback.
+## Métricas de desempenho suportadas
+{: #anlz_metrics_performance_supp_quality_mets}
 
-    ![Transaction list biased](images/Confusion_Matrix_040819.006.png)
+As métricas de desempenho a seguir são suportadas pelo {{site.data.keyword.aios_short}}:
 
-1. As transações aparecem em sequência.
-
-    ![Transaction list biased](images/Confusion_Matrix_040819.007.png)
-
+- [Rendimento](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

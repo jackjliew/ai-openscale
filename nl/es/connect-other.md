@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: machine learning, services, ml, custom 
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Especifique una instancia de servicio de Machine Learning personalizado
 {: #co-connect}
@@ -79,15 +85,15 @@ Esta imagen muestra el soporte de entorno personalizado:
 
 También puede consultar los enlaces siguientes:
 
-[API de registro de carga útil de AIOS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[API de registro de carga útil de AIOS](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: external}
 
-[API de despliegue personalizado ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
+[API de despliegue personalizado](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: external}
 
-[SDK de enlace de cliente Python ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
+[SDK de enlace de cliente Python](http://ai-openscale-python-client.mybluemix.net/#bindings){: external}
 
-[Trabajar con el motor de aprendizaje automático personalizado ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[Trabajar con el motor de aprendizaje automático personalizado](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-[SDK de Python para IBM Watson OpenScale ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
+[SDK de Python para IBM Watson OpenScale](https://pypi.org/project/ibm-ai-openscale/){: external}
 
 - **Criterios de entrada para que el modelo admita supervisores**
 
@@ -168,7 +174,9 @@ También puede consultar los enlaces siguientes:
 
   En este ejemplo, `"personal”` y `“camping”` son las clases posibles, y las puntuaciones de cada salida de puntuación se asignan a ambas clases. Si faltan las probabilidades de predicción, la detección de sesgo funcionará, pero la eliminación automática de sesgo no.
 
-  La salida de puntuación anterior debe ser accesible desde un punto final de puntuación en directo que {{site.data.keyword.aios_short}} podría llamar mediante REST. Para AzureML, SageMaker y WML, {{site.data.keyword.aios_short}} se conecta directamente a los puntos finales de puntuación nativos, por lo que no debe preocuparse de implementar la especificación de puntuación
+  La salida de puntuación anterior debe ser accesible desde un punto final de puntuación en directo que {{site.data.keyword.aios_short}}
+podría llamar mediante REST. Para AzureML, SageMaker y {{site.data.keyword.pm_full}}, {{site.data.keyword.aios_short}} se conecta
+directamente a los puntos finales de puntuación nativos, por lo que no debe preocuparse de implementar la especificación de puntuación.
 
 ### Pasos siguientes
 {: #co-next}

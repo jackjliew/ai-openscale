@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,39 +11,39 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# Análisis de métricas y transacciones ![etiqueta beta](images/beta.png)
-{: #anlz_metrics}
+# Descripción general de las métricas de rendimiento ![etiqueta beta](images/beta.png)
+{: #anlz_metrics_performance}
 
-Puede utilizar {{site.data.keyword.aios_full}} para analizar métricas y transacciones mediante diversos medios.
+Utilice la supervisión de rendimiento para conocer la velocidad de los registros de datos procesados por el despliegue. La supervisión de rendimiento se habilita al seleccionar el despliegue para el seguimiento y la supervisión por parte de {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
-## Confusion Matrix ![etiqueta beta](images/beta.png)
-{: #it-conf-mtx}
+Las métricas de rendimiento se calculan en función de la información siguiente:
 
-Como un detalle de las métricas de calidad, puede ver los registros que el modelo ha analizado incorrectamente. Estas anomalías pueden ser falsos positivos o falsos negativos para modelos de clasificación binarios o pueden ser asignaciones de clases incorrectas para modelos multiclase. También puede ver una lista de los registros de opiniones que el modelo no ha analizado correctamente.
-{: shortdesc}
+- Los datos de carga útil de puntuación
 
-1. Desde cualquiera de los gráficos **Calidad**, por ejemplo **Equidad** pulse en una hora/día del gráfico.
-    
-    ![Lista de transacciones sesgadas](images/Confusion_Matrix_040819.004.png)
+Para una supervisión adecuada, cada solicitud de puntuación se debe registrar también en {{site.data.keyword.aios_short}}. El registro de datos de carga útil está automatizado para los motores de {{site.data.keyword.pm_full}}. Para otros motores de aprendizaje automático, los datos de carga útil se pueden proporcionar mediante el cliente Python o la API REST. La supervisión de rendimiento no crea ninguna solicitud de puntuación adicional en el despliegue supervisado.
 
-1. Confusion Matrix muestra los falsos positivos y los falsos negativos. Pulse en una celda para ver el subconjunto de registros de opiniones.
+Puede revisar el valor de las métricas de rendimiento a lo largo del tiempo en el panel de control de {{site.data.keyword.aios_short}}:
 
-    ![Lista de transacciones sesgadas](images/Confusion_Matrix_040819.005.png)
+![Gráfico de rendimiento](images/performance_metrics_001.png)
 
-1. Revise los registros de opiniones y solicite una explicación de los análisis en relación con el registro de opiniones.
+## Métricas de rendimiento soportadas
+{: #anlz_metrics_performance_supp_quality_mets}
 
-    ![Lista de transacciones sesgadas](images/Confusion_Matrix_040819.006.png)
+{{site.data.keyword.aios_short}} da soporte a las siguientes métricas de rendimiento:
 
-1. Transacciones aparece en línea.
-
-    ![Lista de transacciones sesgadas](images/Confusion_Matrix_040819.007.png)
-
+- [Productividad](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

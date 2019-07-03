@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # JSON 구성 파일을 사용하여 자산 배치 구성
 {: #cf-ov}
@@ -45,7 +47,7 @@ JSON 파일에 대해 작업하는 방법에 대한 좋은 예는 [Watson OpenSc
       subscription_configuration = json.load(fp)
     ```
 
-파일은 아래 예와 같이 구성 데이터를 포함합니다. 구성 컨텐츠의 전체 예를 보려면 노트북을 참조하십시오.
+파일에는 구성 데이터가 포함되어 있습니다. 다음 예를 참조하십시오. 구성 컨텐츠의 전체 예를 보려면 노트북을 참조하십시오.
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
@@ -172,6 +174,9 @@ JSON 파일에 대해 작업하는 방법에 대한 좋은 예는 [Watson OpenSc
 
 자산 배치가 작성되고 {{site.data.keyword.aios_short}}에서 사용하도록 구성됩니다.
 
-[{{site.data.keyword.aios_short}} Python 클라이언트 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}에서 전체 정보를 참조하십시오.
+## 다음 단계
+{: #cf-results-nxt-steps}
 
-[구독 가져오기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} 및 [구독 내보내기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window} API 메소드를 사용하여 {{site.data.keyword.aios_short}}에 대한 구성을 가져오고 내보낼 수도 있습니다.
+[{{site.data.keyword.aios_short}} Python 클라이언트 문서](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: external}에서 더 자세한 정보를 확인하십시오.
+
+[구독 가져오기](https://{DomainName}/apidocs/ai-openscale#import-subscription){: external} 및 [구독 내보내기](https://{DomainName}/apidocs/ai-openscale#export-subscription){: external} API 메소드를 사용하여 {{site.data.keyword.aios_short}}에 구성을 가져오고 내보낼 수도 있습니다.

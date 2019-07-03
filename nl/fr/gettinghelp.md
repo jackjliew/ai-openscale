@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: getting help, help, release notes, what's new, developer resources 
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Aide et assistance pour {{site.data.keyword.aios_full_notm}}
 {: #wos-get-help}
@@ -25,13 +31,29 @@ subcollection: ai-openscale
 Si vous avez des problèmes ou des questions quand vous utilisez {{site.data.keyword.aios_full}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez également ouvrir un ticket de demande de service.
 {: shortdesc}
 
+## Onglet Aide
+{: #io-help}
+
+L'onglet Aide ( ![icône de l'onglet d'aide](images/insight-help-tab.png) )
+fournit une information supplémentaire pour vous aider dans l'utilisation de {{site.data.keyword.aios_short}}.
+
+![panneau d'aide](images/help-tab-flyout.png)
+
+## Questions
+{: #wos-get-help-forums}
+
 Si vous utilisez les forums pour poser une question, prenez soin d'étiqueter cette dernière de sorte qu'elle soit vue par les équipes de développement {{site.data.keyword.aios_short}}.
 
-Si vous avez des questions techniques sur {{site.data.keyword.aios_short}}, envoyez votre question sur [StackOverflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://stackoverflow.com/questions/tagged/watson-openscale) et étiquetez votre question avec `watson-openscale`.
+Si vous avez des questions techniques sur {{site.data.keyword.aios_short}},
+postez-les sur [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale)
+et étiquetez-les `watson-openscale`.
 
-Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum [IBM developerWorks dW Answers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/?s=openscale). Insérez l'étiquette `openscale`. Pour plus d'informations sur l'utilisation des forums, voir la rubrique expliquant [comment obtenir de l'aide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html).
+Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum
+[IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale). Indiquez l'étiquette `openscale`. Pour plus de détails sur l'utilisation des forums, voir
+[Obtention d'aide](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html).
 
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM ou sur les niveaux d'assistance et les gravités de ticket, voir la rubrique expliquant [comment contacter le service d'assistance![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/unifiedsupport/supportcenter) et cliquez sur l'option permettant de **créer un dossier**.
+Pour savoir comment ouvrir un ticket de support IBM ou connaître les niveaux de support et les gravités de ticket, consultez la rubrique
+[Contacter le support](https://cloud.ibm.com/unifiedsupport/supportcenter) et cliquez sur **Ouvrir un ticket**.
 
 ## Recherchez-vous d'autres informations ?
 {: #looking}

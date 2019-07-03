@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Configurer les déploiements d'actifs à l'aide des fichiers de configuration JSON
 {: #cf-ov}
@@ -46,7 +48,7 @@ définit des données de configuration pour un modèle qui prévoit un type de c
       subscription_configuration = json.load(fp)
     ```
 
-Le fichier contient des données de configuration, dont un exemple est présenté ci-dessous. Pour un exemple complet du contenu de la configuration, voir le bloc-notes.
+Ce fichier contient des données de configuration. Voir l'exemple suivant. Pour un exemple complet du contenu de la configuration, voir le bloc-notes.
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
@@ -173,12 +175,13 @@ Le fichier contient des données de configuration, dont un exemple est présent�
 
 Le déploiement d'actif est créé et configuré pour être utilisé par {{site.data.keyword.aios_short}}.
 
+## Etapes suivantes
+{: #cf-results-nxt-steps}
+
 Pour une information plus complète, voir la
-[{{site.data.keyword.aios_short}}documentation du client Python
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}.
+[documentation du client Python
+{{site.data.keyword.aios_short}}](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: external}.
 
 Vous pouvez également importer et exporter des configurations dans {{site.data.keyword.aios_short}}
-avec les méthodes [import subscription
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window}
-et [export subscription
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window}.
+avec les méthodes d'API [import subscription](https://{DomainName}/apidocs/ai-openscale#import-subscription){: external} et
+[export subscription](https://{DomainName}/apidocs/ai-openscale#export-subscription){: external}.

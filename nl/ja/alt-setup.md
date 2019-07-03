@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # {{site.data.keyword.aios_short}} をセットアップするための Python モジュールのインストール
 {: #as-module}
@@ -40,7 +42,7 @@ subcollection: ai-openscale
 
 1. [{{site.data.keyword.cloud_notm}} API キーを作成して、ダウンロードします](/docs/iam?topic=iam-userapikey#create_user_key)。 後ほどのステップでこの API キーを入力する必要があります。
 
-2. [Python 3 の任意のリリース ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.python.org/downloads/){: new_window} をインストールします。
+2. [Python 3 の任意のリリースをインストールします](https://www.python.org/downloads/){: external}。
 
   Python 3 には、必要な pip パッケージ管理システムが含まれています。
   {: note}
@@ -55,7 +57,7 @@ subcollection: ai-openscale
     システムに複数のバージョンの pip がインストールされている場合、`pip` ではなく `pip3` を `pip3 install -U ibm-ai-openscale-cli` と実行する必要があります。
     {: tip}
 
-4. 既存の {{site.data.keyword.pm_short}} サービス・インスタンスがある場合、[{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){: new_window} を確認して、サービスが Cloud Foundry ではなく {{site.data.keyword.iamshort}} (IAM) によって管理されていることを確かめます。
+4. 既存の {{site.data.keyword.pm_short}} サービス・インスタンスがある場合、[{{site.data.keyword.cloud_notm}} ダッシュボード](https://{DomainName}){: external}を確認して、サービスが Cloud Foundry ではなく {{site.data.keyword.iamshort}} (IAM) によって管理されていることを確かめます。
 
   **重要**: このモジュールは、{{site.data.keyword.pm_short}} のインスタンスの有無を検査します。 インスタンスがある場合、モジュールはそのインスタンスを使用します。 ただし、インスタンスが Cloud Foundry によって管理されている場合、最初に[ IAM リソース・グループにマイグレーションしてからモジュールを実行する必要があります](/docs/resources?topic=resources-migrate#migrate)。
 
@@ -72,14 +74,14 @@ ibm-ai-openscale-cli --apikey <Your API key>
 ## {{site.data.keyword.aios_short}} における結果の表示
 {: #as-open}
 
-モデルの公平性と正解率に関するインサイト、モニター対象データの詳細、および個々のトランザクションの説明性を表示するには、[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を開きます。
+モデルの公平性と正解率、モニター対象データの詳細、個々のトランザクションの説明性に対するインサイトを表示するには、[{{site.data.keyword.aios_short}} ダッシュボード](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}を開きます。
 
 - サンプル・データのシナリオを把握するには、[{{site.data.keyword.aios_short}} のユースケースと利用価値に関する説明](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gs-use)を参照してください。
 
 ### インサイトの表示
 {: #as-insights}
 
-[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} で**「インサイト」**タブをクリックします。このタブには、デプロイ済みモデルの指標の概要が示されます。![インサイト](images/insight-dash-tab.png)
+[{{site.data.keyword.aios_short}} ダッシュボード](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}で**「インサイト」**タブをクリックします。このタブには、デプロイ済みモデルの指標の概要が示されます。![インサイト](images/insight-dash-tab.png)
 
 - 「インサイト」ページには、公平性と正解率に関する問題が一目で分かるように表示されます。問題の判定には、構成されたしきい値が使用されます。
 

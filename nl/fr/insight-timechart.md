@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Surveillance de l'équité, du nombre moyen de demandes par minute et de l'exactitude
 {: #it-ov}
@@ -68,7 +74,7 @@ Le graphe montre plusieurs choses :
 - Le graphe indique le pourcentage de résultat attendu (70%) pour la population de référence. Il s'agit de la moyenne de résultat attendu pour toutes les populations de référence.
 
 - Le graphe indique la présence de biais car le rapport du pourcentage de résultats attendus pour les populations âgées de 18 à 23 ans
-sur celui pour la population de référence est inférieur au seuil. En d'autres termes, 0,52/0,7 = 0,74, qui est inférieur au seuil de 0,8.
+sur celui pour la population de référence dépasse le seuil. En d'autres termes, 0,52/0,7 = 0,74, qui est inférieur au seuil de 0,8.
 
 - Le graphe montre aussi la distribution des valeurs de référence et surveillée
 pour chaque valeur distincte de l'attribut dans les données de la table de contenu analysées pour identifier le biais. En d'autres termes, si l'algorithme de détection de biais a analysé les 1790 derniers enregistrements de la table de contenu,
@@ -124,7 +130,12 @@ En sélectionnant l'onglet **Modèle débiaisé**, vous voyez les changements da
 ### Options de débiaisement
 {: #it-dbo}
 
-- *Débiaisement passif* -
+{{site.data.keyword.aios_short}} utilise deux types de débiaisement : passif et actif.
+Le débiaisement passif vous permet de savoir comment vous avez étiez biaisé,
+tandis que le débiaisement actif vous empêche de prolonger le biais en modifiant le modèle en temps réel pour l'application en cours.
+
+- *Débiaisement passif* - le débiaisement passif est le travail qu'OpenScale effectue lui-même, automatiquement, toutes le heures.
+Il est considéré passif car il s'effectue sans intervention de l'utilisateur.
 Lorsque {{site.data.keyword.aios_short}} effectue un contrôle de biais, il effectue également un débiaisement des données,
 en analysant le comportement du modèle et en identifiant les données où il agit de manière biaisée.
 
@@ -137,10 +148,14 @@ et les données perturbées sont envoyées au modèle initial pour prévision. C
 sur toutes les données reçues par le modèle au cours de la dernière heure. Il calcule également l'équité de la sortie débiaisée et l'affiche dans l'onglet **Modèle débiaisé**.
 
 - *Débiaisement actif* -
-Dans le débiaisement actif, vous pouvez utiliser un noeud final d'API REST de débiaisement depuis votre application. Ce noeud final d'API REST appellera votre modèle en interne et contrôlera son comportement.
+le débiaisement actif est une manière pour vous de demander des résultats débiaisés dans votre application via le noeud final d'API REST.
+Vous demandez activement à {{site.data.keyword.aios_short}} d'exécuter un débiaisement et de modifier le modèle
+pour que vous puissiez utiliser votre application d'une manière non biaisée.
+Dans le débiaisement actif, vous pouvez utiliser un noeud final d'API REST de débiaisement depuis votre application.
+Ce noeud final d'API REST appellera votre modèle en interne et contrôlera son comportement.
 
-  Si {{site.data.keyword.aios_short}} pense que le modèle agit de manière biaisée,
-il perturbera les données comme indiqué plus haut et les renverra au modèle initial. La sortie du modèle initial avec les données perturbées sera renvoyée comme prévision débiaisée. Si {{site.data.keyword.aios_short}} détermine que le modèle initial n'agit pas de manière biaisée,
+  Si {{site.data.keyword.aios_short}} détecte que le modèle agit de manière biaisée,
+il perturbe les données comme indiqué précédemment et les renvoie au modèle initial. La sortie du modèle initial avec les données perturbées sera renvoyée comme prévision débiaisée. Si {{site.data.keyword.aios_short}} détermine que le modèle initial n'agit pas de manière biaisée,
 il renverra la prévision de celui-ci comme prévision débiaisée. Ainsi, en utilisant ce noeud final d'API REST,
 vous pouvez faire en sorte que votre application ne prenne pas de décisions basées sur une sortie biaisée de vos modèles.
 

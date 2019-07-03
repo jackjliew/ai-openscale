@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-05-29"
 
 keywords: FAQs, frequently asked questions, questions
 
@@ -49,16 +49,16 @@ WML には出力スキーマの概念があり、WML 予測エンドポイント
 ### {{site.data.keyword.aios_short}} が訓練データにアクセスする必要があるのはなぜですか?
 {: #trainingdata}
 
-Db2 または {{site.data.keyword.cos_full_notm}} に格納されている訓練データへのアクセス権限を {{site.data.keyword.aios_short}} に提供するか、または訓練データにアクセスできるノートブックを実行する必要があります。 以下の理由で、{{site.data.keyword.aios_short}} には訓練データに対するアクセス権限が必要です。
+Db2 または {{site.data.keyword.cos_full_notm}} に格納されている訓練データへのアクセス権限を {{site.data.keyword.aios_short}} に提供するか、または訓練データにアクセスできるノートブックを実行する必要があります。 以下の理由で、{{site.data.keyword.aios_short}} は訓練データにアクセスする必要があります。
 
-- 対比的説明を生成するため。説明を作成するには、訓練データの中の統計 (中央値、標準偏差、個別の値など) に対するアクセス権限が必要です。
-- 訓練データの統計を表示するため。 バイアスの詳細ページにデータを表示するために、{{site.data.keyword.aios_short}} は統計を生成する基になる訓練データを必要とします。
+- 対比的説明を生成するため。説明を作成するには、訓練データの統計 (中央値、標準偏差、個別の値など) に対するアクセス権限が必要です。
+- 訓練データの統計を表示するため。 バイアスの詳細ページにデータを取り込むために、{{site.data.keyword.aios_short}} は統計を生成する基になる訓練データを必要とします。
 
 <!---
 - To compute drift: Training data is required to build the drift detection model.
 - To identify and suggest features to monitor for fairness: {{site.data.keyword.aios_short}} needs access to training data to suggest reference and monitored ranges.
 --->
 
-ノートブック・ベースの方法では、{{site.data.keyword.aios_short}} でデプロイメントを構成する際に統計などの情報をアップロードすることが求められます。 こうすることは、環境で実行されているノートブック以外の訓練データには、{{site.data.keyword.aios_short}} がアクセスできなくなることを意味します。 構成中にアップロードされた情報にのみアクセスできることになります。
+ノートブック・ベースの方法では、{{site.data.keyword.aios_short}} でデプロイメントを構成する際に統計およびその他の情報をアップロードすることが求められます。 こうすることは、環境で実行されているノートブック以外の訓練データには、{{site.data.keyword.aios_short}} がアクセスできなくなることを意味します。 構成中にアップロードされた情報にのみアクセスできることになります。
 
 

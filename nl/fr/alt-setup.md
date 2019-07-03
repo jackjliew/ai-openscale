@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Installation d'un module Python pour configurer {{site.data.keyword.aios_short}}
 {: #as-module}
@@ -46,8 +48,7 @@ pour voir comment il surveille un modèle.
 
 1. [Créez une clé d'API {{site.data.keyword.cloud_notm}} et téléchargez-la](/docs/iam?topic=iam-userapikey#create_user_key). Vous aurez à l'entrer plus loin.
 
-2. [Installez une édition quelconque de Python 3
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.python.org/downloads/){: new_window}.
+2. [Installez une édition quelconque de Python 3](https://www.python.org/downloads/){: external}.
 
   Python 3 comprend le système de gestion de package pip requis.
   {: note}
@@ -64,8 +65,7 @@ il peut être nécessaire d'exécuter `pip3` au lieu de `pip` : `pip3 install -U
     {: tip}
 
 4. Si vous disposez d'une instance de service {{site.data.keyword.pm_short}} existante,
-consultez le [tableau de bord {{site.data.keyword.cloud_notm}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window}
+consultez le [tableau de bord {{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}
 pour vérifier que le service est géré par {{site.data.keyword.iamshort}} (IAM) et non par Cloud Foundry.
 
   **Important** :
@@ -86,8 +86,7 @@ ibm-ai-openscale-cli --apikey <votre clé d'API>
 {: #as-open}
 
 Pour voir les analyses de l'équité et de l'exactitude du modèle, les détails des données surveillées ou l'explicabilité d'une transaction donnée,
-ouvrez le [tableau de bord {{site.data.keyword.aios_short}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window}.
+ouvrez le [tableau de bord {{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}.
 
 - Pour comprendre le scénario des exemples de données, lisez
 [Scénario d'utilisation et valeur de {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#gs-use).
@@ -95,8 +94,7 @@ ouvrez le [tableau de bord {{site.data.keyword.aios_short}}
 ### Afficher les analyses
 {: #as-insights}
 
-Dans le [tableau de bord {{site.data.keyword.aios_short}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window},
+Dans le [tableau de bord {{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external},
 cliquez sur l'onglet **Analyses**,
 qui affiche une vue d'ensemble des métriques des modèles déployés :
 ![Analyses](images/insight-dash-tab.png)

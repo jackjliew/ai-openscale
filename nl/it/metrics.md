@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Creazione di monitor personalizzati e metriche ![tag beta](images/beta.png)
 {: #cst_mtrcs}
@@ -38,7 +44,7 @@ Per gestire le metriche personalizzate è necessario eseguire le seguenti attivi
 
 I seguenti supporti didattici avanzati mostrano come eseguire queste operazioni:
 
-- [Utilizzo di Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [Utilizzo di {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [Utilizzo del motore di Machine Learning personalizzato](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
 È possibile disabilitare e abilitare di nuovo il monitoraggio personalizzato in qualsiasi momento. È possibile rimuovere il monitor personalizzato se non è più necessario.
@@ -50,7 +56,7 @@ Per ulteriori informazioni, consultare la [documentazione dell'SDK Python](http:
 
 Per accedere e visualizzare le metriche personalizzate è possibile utilizzare l'interfaccia programmatica. I seguenti supporti didattici avanzati mostrano come eseguire queste operazioni:
 
-- [Utilizzo di Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [Utilizzo di {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [Utilizzo del motore di Machine Learning personalizzato](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
    Per ulteriori informazioni, consultare la [documentazione dell'SDK Python](http://ai-openscale-python-client.mybluemix.net/).

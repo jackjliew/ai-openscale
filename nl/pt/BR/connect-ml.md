@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: payload, non-Watson, machine learning, services, subscription
 
@@ -11,30 +11,32 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# Criação de log de carga útil para instâncias de serviço não do Watson Machine Learning
+# Criação de log de carga útil para instâncias de serviço não {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.pm_short}}
 {: #cml-connect}
 
-Se o seu modelo de IA é implementado em um mecanismo de aprendizado de máquina diferente do Watson Machine Learning (WML), deve-se ativar a criação de log de carga útil para o mecanismo de aprendizado de máquina externo com um cliente Python.
+If your AI model is deployed in a machine learning engine other than {{site.data.keyword.pm_full}}, you must enable payload logging for the external machine learning engine with a Python client
 {: shortdesc}
 
-Consulte informações mais completas na [documentação do cliente Python do {{site.data.keyword.aios_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://ai-openscale-python-client.mybluemix.net/){: new_window} e nos blocos de notas de amostra do cliente Python do {{site.data.keyword.aios_short}} Python que fazem parte dos [tutoriais do {{site.data.keyword.aios_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window}.
+Veja informações mais completas na [documentação do cliente Python do {{site.data.keyword.aios_short}}](http://ai-openscale-python-client.mybluemix.net/){: external} e nos blocos de notas do cliente Python do {{site.data.keyword.aios_short}} que fazem parte dos [tutoriais do {{site.data.keyword.aios_short}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: external}.
 
-## Antes de Começar
+## Antes de começar
 {: #cml-prereq}
 
-Você precisará ter os dados de treinamento de seu modelo disponíveis no Db2 ou no Cloud Object Storage para monitorar a propensão para o seu modelo. A explicabilidade e a precisão não são suportadas para as funções Python. Para
+Você precisará ter os dados de treinamento de seu modelo disponíveis no Db2 ou {{site.data.keyword.cos_full}} para monitorar a propensão para seu modelo. A explicabilidade e a precisão não são suportadas para as funções Python. Para
 obter mais informações sobre os dados de treinamento, veja [Por que o {{site.data.keyword.aios_short}} precisa de acesso aos meus dados de treinamento?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - Importar e iniciar o {{site.data.keyword.aios_short}}
@@ -68,7 +70,7 @@ obter mais informações sobre os dados de treinamento, veja [Por que o {{site.d
 ### Ligar seu mecanismo de aprendizado de máquina customizado
 {: #cml-cusbind}
 
-- Um mecanismo não WML é ligado como Customizado, significando que se trata apenas de metadados; não há integração direta com o serviço não WML.
+- Um mecanismo não {{site.data.keyword.pm_full}} é ligado como Customizado, o que significa que isso se trata apenas de metadados; não há integração direta com o serviço não {{site.data.keyword.pm_full}}. É possível ligar mais de um mecanismo de aprendizado de máquina ao {{site.data.keyword.aios_short}} usando o método `client.data_mart.bindings.add`.
 
     ```python
     custom_engine_credentials = {
@@ -122,41 +124,12 @@ obter mais informações sobre os dados de treinamento, veja [Por que o {{site.d
     subscription.payload_logging.get_details ()
     ```
 
+Para obter mais informações, consulte [Criação de log da carga útil]().
+
 ### Log de Pontuação e Carga Útil
 {: #cml-cusscore}
 
-- Pontuem seu modelo. Para obter um exemplo integral, consulte o [Bloco de notas do mecanismo do IBM {{site.data.keyword.aios_full}} & Custom ML![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}.
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- Pontuem seu modelo. Para obter um exemplo integral, consulte o [bloco de notas IBM {{site.data.keyword.aios_full}} e mecanismo de aprendizado de máquina customizado](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}.
 
 - Armazene a solicitação e a resposta na tabela de criação de log de carga útil
 
@@ -206,10 +179,10 @@ obter mais informações sobre os dados de treinamento, veja [Por que o {{site.d
 ## Trabalhando com o mecanismo de aprendizado de máquina Microsoft Azure
 {: #cml-azconfig}
 
-### Ligar o mecanismo MS Azure ML
+### Ligar seu mecanismo de aprendizado de máquina do Microsoft Azure
 {: #cml-azbind}
 
-- Um mecanismo não WML é ligado como Customizado, significando que se trata apenas de metadados; não há integração direta com o serviço não WML.
+- Um mecanismo não {{site.data.keyword.pm_full}} é ligado como Customizado, o que significa que isso se trata apenas de metadados; não há integração direta com o serviço não {{site.data.keyword.pm_full}}.
 
     ```python
     AZURE_ENGINE_CREDENTIALS = {
@@ -273,38 +246,7 @@ obter mais informações sobre os dados de treinamento, veja [Por que o {{site.d
 ### Log de Pontuação e Carga Útil
 {: #cml-azscore}
 
-- Pontuem seu modelo. Para obter um exemplo integral, consulte o [bloco de notas Trabalhando com o mecanismo Azure Machine Learning Studio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}.
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- Pontuem seu modelo. Para ver um exemplo completo, consulte o [bloco de notas Trabalhando com o mecanismo Azure Machine Learning Studio](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: external}.
 
 - Armazene a solicitação e a resposta na tabela de criação de log de carga útil:
 
@@ -358,10 +300,10 @@ obter mais informações sobre os dados de treinamento, veja [Por que o {{site.d
 ## Trabalhando com o mecanismo de aprendizado de máquina Amazon SageMaker
 {: #cml-smconfig}
 
-### Ligar o mecanismo ML AWS SageMaker
+### Ligar seu mecanismo de aprendizado de máquina do Amazon SageMaker
 {: #cml-smbind}
 
-- Um mecanismo não WML é ligado como Customizado, significando que se trata apenas de metadados; não há integração direta com o serviço não WML.
+- Um mecanismo não {{site.data.keyword.pm_full}} é ligado como Customizado, o que significa que isso se trata apenas de metadados; não há integração direta com o serviço não {{site.data.keyword.pm_full}}.
 
     ```python
     SAGEMAKER_ENGINE_CREDENTIALS = {
@@ -424,38 +366,8 @@ obter mais informações sobre os dados de treinamento, veja [Por que o {{site.d
 ### Log de Pontuação e Carga Útil
 {: #cml-smscore}
 
-- Pontuem seu modelo. Para obter um exemplo integral, consulte o [bloco de notas Trabalhando com o mecanismo de aprendizado de máquina SageMaker ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}.
+- Pontuem seu modelo. Para ver um exemplo completo, consulte o [bloco de notas Trabalhando com o mecanismo de aprendizado de máquina SageMaker](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: external}.
 
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
 
 - Armazene a solicitação e a resposta na tabela de criação de log de carga útil:
 
@@ -511,4 +423,4 @@ obter mais informações sobre os dados de treinamento, veja [Por que o {{site.d
 
 - Para continuar com o cliente {{site.data.keyword.aios_short}}, consulte [Especificando um banco de dados](/docs/services/ai-openscale?topic=ai-openscale-connect-db).
 
-- Para continuar com a biblioteca de comandos do Python, consulte a [documentação do cliente Python ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://ai-openscale-python-client.mybluemix.net/){: new_window}.
+- Para continuar com a biblioteca de comandos do Python, consulte a [documentação do cliente Python](http://ai-openscale-python-client.mybluemix.net/){: external}.

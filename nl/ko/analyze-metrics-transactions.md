@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 메트릭 및 트랜잭션 분석 ![베타 태그](images/beta.png)
 {: #anlz_metrics}
@@ -43,7 +49,7 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}} 대시보드에서 시간이 경과함에 따른 모든 메트릭 값을 검토할 수 있습니다.
 
-![임계값 이하 드리프트를 보여주는 공정성 메트릭 차트](images/fairness_metrics_001.png)
+![설정된 임계값 미만 드리프트를 보여주는 공정성 지표 차트](images/fairness_metrics_001.png)
 
 선호 및 비선호 결과와 같은 관련된 세부사항을 검토할 수 있습니다.
 
@@ -165,7 +171,7 @@ Microsoft Azure ML Studio 또는 Amazon Sagemaker ML과 같은 {{site.data.keywo
 #### 평균 절대 오차
 {: #anlz_metrics_supqualdets_abserror}
 
-- **설명**: 모델 예측과 대상 값 간의 절대 오차의 평균입니다.
+- **설명**: 모델 예측과 목표값 간의 절대 오차의 평균입니다.
 - **기본 임계값**: 상한값 = 80%
 - **기본 권장사항**:
    - **상승세**: 상승세는 메트릭이 나빠지고 있음을 표시합니다. 피드백 데이터가 훈련 데이터와 크게 달라집니다.
@@ -178,7 +184,7 @@ Microsoft Azure ML Studio 또는 Amazon Sagemaker ML과 같은 {{site.data.keywo
 #### 평균 제곱 오차
 {: #anlz_metrics_supqualdets_squerror}
 
-- **설명**: 모델 예측과 대상 값 간의 제곱 오차의 평균입니다.
+- **설명**: 모델 예측과 목표값 간의 제곱 오차의 평균입니다.
 - **기본 임계값**: 상한값 = 80%
 - **기본 권장사항**:
    - **상승세**: 상승세는 메트릭이 나빠지고 있음을 표시합니다. 피드백 데이터가 훈련 데이터와 크게 달라집니다.
@@ -204,7 +210,7 @@ Microsoft Azure ML Studio 또는 Amazon Sagemaker ML과 같은 {{site.data.keywo
 #### 평균 제곱근 오차
 {: #anlz_metrics_supqualdets_squ_errors_mean}
 
-- **설명**: 모델 예측과 대상 값 간의 제곱 오차 평균의 제곱근입니다.
+- **설명**: 모델 예측과 목표값 간의 제곱 오차 평균의 제곱근입니다.
 - **기본 임계값**: 상한값 = 80%
 - **기본 권장사항**:
    - **상승세**: 상승세는 메트릭이 나빠지고 있음을 표시합니다. 피드백 데이터가 훈련 데이터와 크게 달라집니다.

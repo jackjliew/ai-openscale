@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Analisi delle metriche e delle transazioni ![tag beta](images/beta.png)
 {: #anlz_metrics}
@@ -43,7 +49,7 @@ Per i motori di machine learning diversi da {{site.data.keyword.pm_full}}, il mo
 
 È possibile esaminare tutti i valori di metrica nel tempo sul dashboard {{site.data.keyword.aios_short}}:
 
-![grafico delle metriche di correttezza che mostra la deviazione al di sotto della soglia](images/fairness_metrics_001.png)
+![grafico delle metriche di correttezza che mostra la deviazione al di sotto della soglia impostata](images/fairness_metrics_001.png)
 
 È possibile esaminare i dettagli correlati, ad esempio risultati favorevoli e sfavorevoli:
 
@@ -126,7 +132,7 @@ Le seguenti metriche di qualità sono supportate da {{site.data.keyword.aios_sho
 #### Area sotto la curva ROC
 {: #anlz_metrics_supqualdets_roc}
 
-- **Descrizione**: l'rea sotto la curva della percentuale di richiami e falsi positivi
+- **Descrizione**: l'area sotto la curva della percentuale di richiami e falsi positivi
 - **Soglie predefinite**: limite inferiore = 80%
 - **Raccomandazione predefinita**:
    - **Andamento crescente**: un andamento crescente indica che la metrica sta migliorando. Ciò significa che il nuovo training del modello è efficace.
@@ -360,7 +366,7 @@ Le seguenti metriche di qualità sono supportate da {{site.data.keyword.aios_sho
 #### Perdita logaritmica
 {: #anlz_metrics_supqualdets_log_loss}
 
-- **Descrizione**: la media delle probabilità della classe obiettivo dei logaritmi (confidenza). È nota anche come Probabilità log prevista.
+- **Descrizione**: la media delle probabilità della classe obiettivo dei logaritmi (confidenza). È nota anche come logaritmo della verosimiglianza prevista.
 - **Soglie predefinite**: limite inferiore = 80%
 - **Raccomandazione predefinita**:
    - **Andamento crescente**: un andamento crescente indica che la metrica sta migliorando. Ciò significa che il nuovo training del modello è efficace.

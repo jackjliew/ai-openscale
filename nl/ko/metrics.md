@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 사용자 정의 모니터 및 메트릭 작성 ![베타 태그](images/beta.png)
 {: #cst_mtrcs}
@@ -38,7 +44,7 @@ subcollection: ai-openscale
 
 다음의 고급 튜토리얼에서는 이를 수행하는 방법을 보여줍니다.
 
-- [Watson Machine Learning에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [{{site.data.keyword.pm_full}}에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [사용자 정의 기계 학습 엔진에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
 언제든지 사용자 정의 모니터링을 사용 및 사용 안함으로 설정할 수 있습니다. 더 이상 필요하지 않게 되면 사용자 정의 모니터를 제거할 수 있습니다.
@@ -50,7 +56,7 @@ subcollection: ai-openscale
 
 사용자 정의 메트릭에 액세스하고 시각화하기 위해 프로그램 인터페이스를 사용할 수 있습니다. 다음의 고급 튜토리얼에서는 이를 수행하는 방법을 보여줍니다.
 
-- [Watson Machine Learning에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
+- [{{site.data.keyword.pm_full}}에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
 - [사용자 정의 기계 학습 엔진에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
 
    자세한 정보는 [Python SDK 문서](http://ai-openscale-python-client.mybluemix.net/)를 참조하십시오.

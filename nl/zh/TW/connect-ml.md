@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: payload, non-Watson, machine learning, services, subscription
 
@@ -11,30 +11,32 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
-# 非 Watson Machine Learning 服務實例的有效負載記載
+# 非 {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.pm_short}} 服務實例的有效負載記載
 {: #cml-connect}
 
-如果您的 AI 模型部署在 Watson Machine Learning (WML) 以外的機器學習引擎中，您必須使用 Python 用戶端，針對外部機器學習引擎啟用有效負載記載。
+如果您的 AI 模型部署在 {{site.data.keyword.pm_full}} 以外的機器學習引擎中，您必須使用 Python 用戶端，針對外部機器學習引擎啟用有效負載記載。
 {: shortdesc}
 
-請參閱 [{{site.data.keyword.aios_short}} Python 用戶端說明文件 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](http://ai-openscale-python-client.mybluemix.net/){: new_window}，以及樣本 {{site.data.keyword.aios_short}} Python 用戶端記事本（為 [{{site.data.keyword.aios_short}} 指導教學![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: new_window} 的一部分），以取得更完整的資訊。
+如需更完整的資訊，請參閱 [{{site.data.keyword.aios_short}} Python 用戶端說明文件](http://ai-openscale-python-client.mybluemix.net/){: external}，以及樣本 {{site.data.keyword.aios_short}} Python 用戶端記事本（為 [{{site.data.keyword.aios_short}} 指導教學](https://github.com/pmservice/ai-openscale-tutorials/blob/master/README.md){: external}的一部分）。
 
 ## 開始之前
 {: #cml-prereq}
 
-Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視您模型的偏誤。對於 Python 函數，不支援可解釋性和精確度。如需訓練資料的相關資訊，請參閱 [{{site.data.keyword.aios_short}} 為何需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+Db2 或 {{site.data.keyword.cos_full}} 中需要有模型訓練資料可用，才能監視您模型的偏誤。對於 Python 函數，不支援可解釋性和精確度。如需訓練資料的相關資訊，請參閱[為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 - 匯入並起始 {{site.data.keyword.aios_short}}
 
@@ -67,7 +69,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
 ### 連結您的「自訂」機器學習引擎
 {: #cml-cusbind}
 
-- 會將非 WML 引擎當成「自訂」來連結，也就是說，這僅僅是 meta 資料；不會與非 WML 服務直接整合。
+- 會將非 {{site.data.keyword.pm_full}} 引擎當成「自訂」來連結，也就是說，這僅僅是 meta 資料；不會與非 {{site.data.keyword.pm_full}} 服務直接整合。您可以使用 `client.data_mart.bindings.add` 方法，將多個機器學習引擎連結至 {{site.data.keyword.aios_short}}。
 
     ```python
     custom_engine_credentials = {
@@ -121,41 +123,12 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
     subscription.payload_logging.get_details()
     ```
 
+如需相關資訊，請參閱[有效負載記載]()。
+
 ### 評分和有效負載記載
 {: #cml-cusscore}
 
-- 對您的模型評分。如需完整範例，請參閱 [IBM {{site.data.keyword.aios_full}} 和「自訂」ML 引擎記事本 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}。
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- 對您的模型評分。如需完整範例，請參閱 [IBM {{site.data.keyword.aios_full}} 和自訂 ML 引擎記事本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}。
 
 - 將要求和回應儲存在有效負載記載表格中
 
@@ -205,10 +178,10 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
 ## 使用 Microsoft Azure 機器學習引擎
 {: #cml-azconfig}
 
-### 連結您的 MS Azure ML 引擎
+### 連結您的 Microsoft Azure 機器學習引擎
 {: #cml-azbind}
 
-- 會將非 WML 引擎當成「自訂」來連結，也就是說，這僅僅是 meta 資料；不會與非 WML 服務直接整合。
+- 會將非 {{site.data.keyword.pm_full}} 引擎當成「自訂」來連結，也就是說，這僅僅是 meta 資料；不會與非 {{site.data.keyword.pm_full}} 服務直接整合。
 
     ```python
     AZURE_ENGINE_CREDENTIALS = {
@@ -272,38 +245,7 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
 ### 評分和有效負載記載
 {: #cml-azscore}
 
-- 對您的模型評分。如需完整範例，請參閱[使用 Azure Machine Learning Studio Engine 記事本 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: new_window}。
-
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
+- 對您的模型評分。如需完整範例，請參閱[使用 Azure Machine Learning Studio 引擎記事本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: external}。
 
 - 將要求和回應儲存在有效負載記載表格中：
 
@@ -357,10 +299,10 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
 ## 使用 Amazon SageMaker 機器學習引擎
 {: #cml-smconfig}
 
-### 連結您的 AWS SageMaker ML 引擎
+### 連結您的 Amazon SageMaker 機器學習引擎
 {: #cml-smbind}
 
-- 會將非 WML 引擎當成「自訂」來連結，也就是說，這僅僅是 meta 資料；不會與非 WML 服務直接整合。
+- 會將非 {{site.data.keyword.pm_full}} 引擎當成「自訂」來連結，也就是說，這僅僅是 meta 資料；不會與非 {{site.data.keyword.pm_full}} 服務直接整合。
 
     ```python
     SAGEMAKER_ENGINE_CREDENTIALS = {
@@ -423,38 +365,8 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
 ### 評分和有效負載記載
 {: #cml-smscore}
 
-- 對您的模型評分。如需完整範例，請參閱[使用 SageMaker Machine Learning Engine 記事本 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: new_window}。
+- 對您的模型評分。如需完整範例，請參閱[使用 SageMaker 機器學習引擎記事本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20SageMaker%20ML%20Engine.ipynb){: external}。
 
-<!---
-    ```python
-    import urllib.request
-    import json
-
-    data = {
-            {
-             "input1":
-             [
-                {
-                  <YOUR-JSON-DATA>
-                }
-             ],
-            },
-    }
-
-    body = str.encode(json.dumps(data))
-
-    url = '<YOUR-SERVICE-URL>'
-    api_key = '<API-KEY-FOR-YOUR-WEB-SERVICE>'
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-
-    req = urllib.request.Request(url, body, headers)
-    response = urllib.request.urlopen(req)
-
-    result = response.read()
-    result = json.loads(result.decode())['Results']['output1'][0]
-    print(json.dumps(result, indent=2))
-    ```
---->
 
 - 將要求和回應儲存在有效負載記載表格中：
 
@@ -510,4 +422,4 @@ Db2 或 Cloud Object Storage 中需要有模型訓練資料可用，才能監視
 
 - 如果要繼續執行 {{site.data.keyword.aios_short}} 用戶端，請參閱[指定資料庫](/docs/services/ai-openscale?topic=ai-openscale-connect-db)。
 
-- 如果要繼續執行 Python 指令程式庫，請參閱 [Python 用戶端說明文件 ![「外部鏈結」圖示](../../icons/launch-glyph.svg "「外部鏈結」圖示")](http://ai-openscale-python-client.mybluemix.net/){: new_window}。
+- 如果要繼續執行 Python 指令庫，請參閱 [Python 用戶端說明文件](http://ai-openscale-python-client.mybluemix.net/){: external}。

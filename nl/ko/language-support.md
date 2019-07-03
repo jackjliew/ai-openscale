@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: language support, 
 
@@ -11,15 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # {{site.data.keyword.aios_short}}에 지원되는 언어
 {: #sl-langs}
@@ -44,8 +48,9 @@ subcollection: ai-openscale
 이 단계가 제품의 세계화를 위한 첫 번째 단계이므로 번역은 {{site.data.keyword.aios_short}} 사용자 인터페이스 및 메시지(예: 일반 사용 중에 사용자에게 표시되는 정보, 경고 및 오류)로 제한됩니다. 다국어 데이터 및 문자는 AI 모델 정의, 컨텐츠, 메타데이터(예: 이름, 정의, 값)에서 지원됩니다. 번역된 사용자 인터페이스 및 제어에 다음 제한사항이 적용됩니다.
 
 - {{site.data.keyword.aios_short}} API는 번역되지 않았습니다.
-- {{site.data.keyword.aios_full}} for {{site.data.keyword.icpfull}} for Data의 설치 메커니즘은 번역되지 않았습니다.
+- {{site.data.keyword.wos4d_full}}의 설치 메커니즘은 번역되지 않았습니다.
 - 양방향 언어는 현재 지원되지 않습니다.
+- 일본어, 중국어, 한국어와 같은 연속적 스크립트 언어의 경우 공백 또는 구두점 문자로 단어를 구분하지 않으므로 비정형 텍스트 모델에 대한 설명 가능성이 지원되지 않습니다. 
 
 ## {{site.data.keyword.aios_short}} 문서에 대한 제한사항
 {: #sl-langs-limit-doc}

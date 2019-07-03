@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: databases, connections, scoring, requests
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 指定資料庫
 {: #connect-db}
@@ -61,7 +67,7 @@ subcollection: ai-openscale
 
 1.  選取您現有的資料庫類型（Compose for Postgres、Database for Postgres 或 Db2）、從**資料庫**下拉功能表中選取一個資料庫，然後選取一項**綱目**：
 
-    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援「精簡 Db2」方案。如需訓練資料的相關資訊，請參閱 [ 為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援「精簡 Db2」方案。如需訓練資料的相關資訊，請參閱[為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
     ![選取資料庫](images/gs-config-database3.png)
@@ -112,23 +118,9 @@ subcollection: ai-openscale
 
 1.  按**下一步**，檢閱摘要資料，然後按一下**儲存**。
 
-## 傳送評分要求
-{: #cdb-score}
 
-如果要配置監視器，{{site.data.keyword.aios_short}} 會要求您傳送評分有效負載，以便開始記載將要監視的資料。
-
-如果部署在 {{site.data.keyword.pm_full}} 中的模型才剛針對您的部署評分，{{site.data.keyword.pm_short}} 會自動傳送評分有效負載至 {{site.data.keyword.aios_short}}。對於其他的機器學習引擎（例如 Microsoft Azure、Amazon SageMaker 或自訂機器學習引擎），則必須使用「有效負載記載 API」來傳送評分有效負載。
-
-選取一項部署，在本例中是 "Fraud Detector"，然後使用所提供的 `cURL` 或 `Python` 程式碼 Snippet，來記載模型部署要求和回應資料。如需詳細資料，請參閱[非 Watson Machine Learning 服務實例的有效負載記載](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
-
-程式碼 Snippet 中的欄位和值需要換成實際值，因為所提供的欄位及值只是範例。
-{: important}
-
-![選取資料庫](images/config-send-scoring.png)
-
-執行有效負載記載之後，您會在所選部署的「準備監視」直欄中看到一個勾號。請按一下**配置監視器**以繼續。
 
 ## 後續步驟
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} 現在已備妥，可供您[配置部署的監視器](/docs/services/ai-openscale?topic=ai-openscale-mo-config)。
+{{site.data.keyword.aios_short}} 現在已備妥，可供您[傳送評分有效負載](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score)以及[配置部署的監視器](/docs/services/ai-openscale?topic=ai-openscale-mo-config)。

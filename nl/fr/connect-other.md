@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: machine learning, services, ml, custom 
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Spécification d'une instance de service ML personnalisé
 {: #co-connect}
@@ -79,20 +85,15 @@ Cette image montre la prise en charge de l'environnement personnalisé :
 
 Vous pouvez également consulter les liens suivants :
 
-[API de journalisation de contenu AIOS
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[API de journalisation de contenu AIOS](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: external}
 
-[API de déploiement personnalisé
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
+[API de déploiement personnalisé](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: external}
 
-[SDK de liaison du client Python
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
+[SDK de liaison du client Python](http://ai-openscale-python-client.mybluemix.net/#bindings){: external}
 
-[Utilisation du moteur d'apprentissage automatique personnalisé
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[Utilisation du moteur d'apprentissage automatique personnalisé](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-[SDK Python pour IBM Watson OpenScale
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
+[SDK Python pour IBM Watson OpenScale](https://pypi.org/project/ibm-ai-openscale/){: external}
 
 - **Critères d'entrée pour que le modèle supporte les moniteurs**
 
@@ -178,8 +179,8 @@ le modèle ne peut pas être traité par la plateforme {{site.data.keyword.aios_
   Dans cet exemple, `"personal”` et `“camping”` sont les classes possibles,
 et les scores de chaque sortie d'évaluation sont affectés aux deux classes. S'il manque les probabilités de prévision, la détection de biais fonctionnera mais pas le débiais automatique.
 
-  La sortie d'évaluation ci-dessus doit être accessible depuis un noeud final d'évaluation actif
-que {{site.data.keyword.aios_short}} peut appeler par REST. Pour AzureML, SageMaker et WML, {{site.data.keyword.aios_short}} se connecte directement aux noeuds finaux d'évaluation natifs
+  La sortie d'évaluation précédente doit être accessible depuis un noeud final d'évaluation actif que {{site.data.keyword.aios_short}} peut appeler par REST. Pour AzureML, SageMaker et {{site.data.keyword.pm_full}},
+{{site.data.keyword.aios_short}} se connecte directement aux noeuds finaux d'évaluation natifs
 (donc vous n'avez pas à vous inquiéter de l'implémentation de la spécification d'évaluation)
 
 ### Etapes suivantes

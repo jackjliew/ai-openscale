@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: ai, artificial intelligence, high availability, disaster recovery, recovery, load-balancing, postgres
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Haute disponibilité et reprise après incident
 {: #openscale-availability-recovery}
@@ -25,10 +31,9 @@ subcollection: ai-openscale
 {{site.data.keyword.aios_full}} est à haute disponibilité sur plusieurs sites {{site.data.keyword.cloud_notm}}, tels que Dallas et Washington. Toutefois, la reprise après un incident potentiel affectant tout un site nécessite une planification et une préparation.
 {: shortdesc}
 
-Vous êtes tenu de comprendre votre configuration, votre personnalisation et votre utilisation du service. Vous êtes également tenu d'être prêt à recréer une instance du service sur un nouveau site et à restaurer vos données sur n'importe quel site. Pour plus d'information, voir [Comment garantir une indisponibilité zéro ?
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/overview?topic=overview-zero-downtime#zero-downtime){: new_window}.
+Vous êtes tenu de comprendre votre configuration, votre personnalisation et votre utilisation du service. Vous êtes également tenu d'être prêt à recréer une instance du service sur un nouveau site et à restaurer vos données sur n'importe quel site. Pour plus d'information, voir [Comment garantir zéro indisponibilité ?](/docs/overview?topic=overview-zero-downtime#zero-downtime){: external}.
 
-##Haute disponibilité 
+## Haute disponibilité 
 {: #openscale-high-availability}
 
 {{site.data.keyword.aios_short}} est déployé et disponible dans les data centers
@@ -50,7 +55,7 @@ l'équipe d'exploitation {{site.data.keyword.aios_short}} sera en mesure de rest
 Les clients sont responsables de sauvegarder et de restaurer leurs données,
 y compris les données de formation et/ou de modèle personnalisé ainsi que tous les modèles personnalisés générés par eux. Pour les instructions de sauvegarde et de restauration client, voir la documentation d'{{site.data.keyword.cloud_notm}}.
  
-##Reprise après incident
+## Reprise après incident
 {: #openscale-disaster-recovery}
 
 La continuité des opérations dans une région est assurée en

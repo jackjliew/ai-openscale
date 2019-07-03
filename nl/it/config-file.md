@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Configurare distribuzioni di asset utilizzando i file di configurazione JSON
 {: #cf-ov}
@@ -45,7 +47,7 @@ Per questo esempio, il file `sagemaker_native_multiclass_breast-cancer_all_monit
       subscription_configuration = json.load(fp)
     ```
 
-Il file contiene i dati di configurazione, di cui viene visualizzato un esempio di seguito. Consultare il notebook per un esempio completo del contenuto di configurazione.
+Il file contiene i dati di configurazione. Fare riferimento al seguente esempio. Consultare il notebook per un esempio completo del contenuto di configurazione.
 
   ```python
   {'asset': {'asset_id': '0530ab0cd4f4dd5486b19c08df8b6914',
@@ -172,6 +174,9 @@ Il file contiene i dati di configurazione, di cui viene visualizzato un esempio 
 
 La distribuzione dell'asset viene creata e configurata per l'utilizzo da parte di {{site.data.keyword.aios_short}}.
 
-Consultare informazioni più complete nella documentazione del client  [{{site.data.keyword.aios_short}} Python ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: new_window}.
+## Passi successivi
+{: #cf-results-nxt-steps}
 
-È anche possibile importare ed esportare le configurazioni in {{site.data.keyword.aios_short}} utilizzando i metodi API  [Importa sottoscrizione![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/ai-openscale#import-subscription){: new_window} e [Esporta sottoscrizione![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/ai-openscale#export-subscription){: new_window}.
+Consultare informazioni più complete nella [documentazione del client {{site.data.keyword.aios_short}} Python](http://ai-openscale-python-client-dev.mybluemix.net/#subscriptions){: external}.
+
+È anche possibile importare ed esportare le configurazioni in {{site.data.keyword.aios_short}} utilizzando i metodi API [Importa sottoscrizione](https://{DomainName}/apidocs/ai-openscale#import-subscription){: external} e [Esporta sottoscrizione](https://{DomainName}/apidocs/ai-openscale#export-subscription){: external}.

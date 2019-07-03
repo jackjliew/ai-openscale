@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: ai, artificial intelligence, high availability, disaster recovery, recovery, load-balancing, postgres
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Alta disponibilità e ripristino di emergenza
 {: #openscale-availability-recovery}
@@ -25,9 +31,9 @@ subcollection: ai-openscale
 {{site.data.keyword.aios_full}} è altamente disponibile all'interno di più ubicazioni {{site.data.keyword.cloud_notm}}, come Dallas e Washington, DC. Tuttavia, il ripristino da potenziali emergenze che influenza un'intera ubicazione richiede pianificazione e preparazione.
 {: shortdesc}
 
-Si è responsabili della comprensione della configurazione, della personalizzazione e dell'utilizzo del servizio. Si è anche responsabili di essere in grado di ricreare un'istanza del servizio in una nuova ubicazione e di ripristinare i dati in qualsiasi ubicazione. Vedi [Come garantisco nessun tempo di inattività? ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/overview?topic=overview-zero-downtime#zero-downtime){: new_window} per ulteriori informazioni.
+Si è responsabili della comprensione della configurazione, della personalizzazione e dell'utilizzo del servizio. Si è anche responsabili di essere in grado di ricreare un'istanza del servizio in una nuova ubicazione e di ripristinare i dati in qualsiasi ubicazione. Consultare [Come garantisco nessun tempo di inattività?](/docs/overview?topic=overview-zero-downtime#zero-downtime){: external} per ulteriori informazioni.
 
-##Alta disponibilità 
+## Alta disponibilità 
 {: #openscale-high-availability}
 
 {{site.data.keyword.aios_short}} è distribuito e disponibile nei data center **degli Stati Uniti meridionali** con MZR (multiple zone routing) su tre zone di disponibilità. In qualsiasi momento, se una zona non è disponibile, il sistema continuerà ad essere disponibile in altre zone di disponibilità. Il sistema di bilanciamento del carico globale e il server DNS instradano il traffico verso le zone disponibili senza alcuna interruzione dell'utente.
@@ -45,7 +51,7 @@ I database Compose, come i database PostgreSQL e <code>etc</code> directory (etc
 
 I clienti sono responsabili del backup e del ripristino dei propri dati, compresi i dati modello personalizzati e/o di training nonché i modelli personalizzati generati dal cliente. Per le istruzioni di backup e ripristino del cliente, consultare la documentazione di {{site.data.keyword.cloud_notm}}.
  
-##Ripristino di emergenza
+## Ripristino di emergenza
 {: #openscale-disaster-recovery}
 
 La continuità del business in-regione è completata grazie allo sfruttamento della replica automatica tra zone di disponibilità in-regione all'interno dei data center {{site.data.keyword.cloud_notm}}. I clienti sono responsabili del ripristino di emergenza tra più regioni. Le responsabilità includono il backup, il ripristino e la sincronizzazione delle politiche di sicurezza, i dati modello personalizzati e/o di training così come i modelli personalizzati generati dal cliente. Inoltre, il cliente è responsabile dell'instradamento e/o del bilanciamento del carico tra le regioni. Per le istruzioni di backup e ripristino del cliente, consultare la documentazione di {{site.data.keyword.cloud_notm}}.

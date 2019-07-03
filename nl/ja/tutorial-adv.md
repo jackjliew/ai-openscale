@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: tutorial, Jupyter notebooks, Watson Studio projects, projects, models, deploy, 
 
@@ -11,17 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Python SDK チュートリアル (上級)
 {: #crt-ov}
@@ -44,9 +46,9 @@ subcollection: ai-openscale
 
 このチュートリアルで使用する Jupyter ノートブックは、Watson Studio プロジェクトで「Python 3.5 with Spark」ランタイム環境を使用して実行する必要があります。 以下の {{site.data.keyword.cloud_notm}} サービスのサービス資格情報が必要です。
 
-- Cloud Object Storage (Watson Studio プロジェクト保管のため)
+- Cloud Object Storage ({{site.data.keyword.DSX}} プロジェクト保管のため)
 - {{site.data.keyword.aios_short}}
-- Watson Machine Learning
+- {{site.data.keyword.pm_full}}
 - (オプション) Databases for PostgreSQL または Db2 Warehouse
 
 Jupyter ノートブックは、German Credit Risk モデルをトレーニング、作成、デプロイし、デプロイメントをモニターするように {{site.data.keyword.aios_short}} を構成し、{{site.data.keyword.aios_short}} の「インサイト」ダッシュボードに表示する 7 日分の履歴レコードと指標値を提供します。 また、Watson Studio と Spark を使用した継続的な学習のためにモデルを構成することもできます。
@@ -54,22 +56,23 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 ## 概要
 {: #crt-intro}
 
-このチュートリアルでは以下の作業を行います。
+このチュートリアルでは、以下のタスクを実行します。
 
-- {{site.data.keyword.cloud_notm}} の機械学習サービスとストレージ・サービスをプロビジョンします
-- 機械学習モデルを作成、トレーニング、およびデプロイするために、Watson Studio プロジェクトをセットアップして Python ノートブックを実行します
-- Python ノートブックを実行することによって、データマートを作成し、パフォーマンス・モニター、正解率モニター、および公平性モニターを構成し、モニター対象データを作成します
-- {{site.data.keyword.aios_short}} の「インサイト」タブで結果を表示します
+- [{{site.data.keyword.cloud_notm}} の機械学習サービスとストレージ・サービスをプロビジョンします](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-services)。
+- [機械学習モデルを作成、トレーニング、およびデプロイするために、Watson Studio プロジェクトをセットアップして Python ノートブックを実行します](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-set-wstudio)。
+- [{{site.data.keyword.aios_short}} をプロビジョンします](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-wos-adv)。
+- [Python ノートブックを実行することによって、データマートを作成し、パフォーマンス・モニター、正解率モニター、および公平性モニターを構成し、モニター対象データを作成します](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-edit-notebook)。
+- [{{site.data.keyword.aios_short}} の「インサイト」タブで結果を表示します](/docs/services/ai-openscale?topic=ai-openscale-crt-ov#crt-view-results)。
 
 ## {{site.data.keyword.cloud_notm}} サービスのプロビジョン
 {: #crt-services}
 
-{{site.data.keyword.ibmid}} を使用して [{{site.data.keyword.cloud_notm}} アカウント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){: new_window} にログインします。 サービスをプロビジョンする際、特に Db2 Warehouse を使用する場合は、選択した組織とスペースがすべてのサービスで同じであることを確認してください。
+{{site.data.keyword.ibmid}} を使用して、[{{site.data.keyword.cloud_notm}} アカウント ](https://{DomainName}){: external} にログインします。 サービスをプロビジョンする際、特に Db2 Warehouse を使用する場合は、選択した組織とスペースがすべてのサービスで同じであることを確認してください。
 
 ### {{site.data.keyword.DSX}} アカウントの作成
 {: #crt-wstudio}
 
-- [{{site.data.keyword.DSX}} インスタンスを作成します ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/watson-studio){: new_window} (アカウントに関連付けられているものがまだない場合)。
+- [{{site.data.keyword.DSX}} インスタンス](https://{DomainName}/catalog/services/watson-studio){: external}を作成します (アカウントに関連付けられているものがまだない場合)。
 
   ![Watson Studio](images/watson_studio.png)
 
@@ -78,7 +81,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 ### {{site.data.keyword.cos_full_notm}} サービスのプロビジョン
 {: #crt-cos}
 
-- [{{site.data.keyword.cos_short}} サービスをプロビジョンします ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/cloud-object-storage){: new_window} (アカウントに関連付けられているものがまだない場合)。
+- [{{site.data.keyword.cos_short}} サービスをプロビジョンします](https://{DomainName}/catalog/services/cloud-object-storage){: external} (アカウントに関連付けられているものがまだない場合)。
 
   ![Object Storage](images/object_storage.png)
 
@@ -87,18 +90,31 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 ### {{site.data.keyword.pm_full}} サービスのプロビジョン
 {: #crt-wml}
 
-- [{{site.data.keyword.pm_short}} インスタンスをプロビジョンします ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/machine-learning){: new_window} (アカウントに関連付けられているものがまだない場合)。
+- [{{site.data.keyword.pm_short}} インスタンスをプロビジョンします](https://{DomainName}/catalog/services/machine-learning){: external} (アカウントに関連付けられているものがまだない場合)。
 
   ![Machine Learning](images/machine_learning.png)
 
 - サービスに名前を付け、「Lite」(無料) プランを選択し、**「作成」**ボタンをクリックします。
+
+### {{site.data.keyword.aios_full}} サービスのプロビジョン
+{: #crt-wos-adv}
+
+まだ {{site.data.keyword.aios_full}} をプロビジョンしていない場合は、確実にプロビジョンしてください。 
+
+- [{{site.data.keyword.aios_short}} インスタンスをプロビジョンします](https://{DomainName}/catalog/services/watson-openscale){: external} (アカウントに関連付けられているものがまだない場合)。
+
+  ![{{site.data.keyword.aios_short}} タイル](images/wos-cloud-tile.png)
+
+1. **「カタログ」**>**「AI」**>**「{{site.data.keyword.aios_short}}」**をクリックします。
+2. サービスに名前を付け、プランを選択し、**「作成」**ボタンをクリックします。
+3. {{site.data.keyword.aios_short}} を開始するには、**「開始」**ボタンをクリックします。
 
 ### (オプション) Databases for PostgreSQL サービスまたは DB2 Warehouse サービスのプロビジョン
 {: #crt-db2}
 
 有料の {{site.data.keyword.cloud_notm}} アカウントを持っている場合、`Databases for PostgreSQL` サービスまたは `Db2 Warehouse` サービスをプロビジョンし、{{site.data.keyword.DSX}} サービスと統合して継続的な学習サービスを十分に活用できます。 有料サービスをプロビジョンしない場合、無料の内部 PostgreSQL ストレージを {{site.data.keyword.aios_short}} で使用できますが、ご使用のモデル向けに継続的な学習を構成することはできません。
 
-- [Databases for PostgreSQL サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/databases-for-postgresql) または [Db2 Warehouse サービスをプロビジョンします ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/db2-warehouse) (アカウントに関連付けられているものがまだない場合)。
+- [Databases for PostgreSQL サービス](https://{DomainName}/catalog/services/databases-for-postgresql)または [Db2 Warehouse サービス](https://{DomainName}/catalog/services/db2-warehouse)をプロビジョンします (アカウントに関連付けられているものがまだない場合)。
 
   ![DB for Postgres](images/dbpostgres.png)
 
@@ -109,7 +125,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 ## {{site.data.keyword.DSX}} プロジェクトのセットアップ
 {: #crt-set-wstudio}
 
-- [{{site.data.keyword.DSX}} アカウント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://dataplatform.ibm.com/){: new_window} にログインします。 {{site.data.keyword.avatar}} をクリックし、使用しているアカウントが {{site.data.keyword.cloud_notm}} サービスの作成に使用したアカウントと同じであることを確認します。
+- [{{site.data.keyword.DSX}} アカウント](https://dataplatform.ibm.com/){: external}にログインします。 {{site.data.keyword.avatar}} をクリックし、使用しているアカウントが {{site.data.keyword.cloud_notm}} サービスの作成に使用したアカウントと同じであることを確認します。
 
   ![同じアカウント](images/same_account.png)
 
@@ -131,7 +147,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 - 以下のファイルをダウンロードします。
 
-    - [Working with Watson Machine Learning ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: new_window}
+    - [Working with Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - {{site.data.keyword.DSX}} プロジェクトの**「Assets」**タブで**「Add to project」**ボタンをクリックし、ドロップダウンから**「Notebook」**を選択します。
 
@@ -161,7 +177,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
     - 説明に従い、{{site.data.keyword.cloud_notm}} API キーを作成、コピー、および貼り付けします。
 
-    - Watson Machine Learning (WML) サービス資格情報を、以前に作成した資格情報に置き換えます。
+    - {{site.data.keyword.pm_full}} サービス資格情報を、以前に作成した資格情報に置き換えます。
 
     - DB 資格情報を、Databases for PostgreSQL のために作成した資格情報に置き換えます。
 
@@ -184,11 +200,11 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 ### デプロイメントに関するインサイトの表示
 {: #crt-view-insights}
 
-[{{site.data.keyword.aios_short}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale.cloud.ibm.com/aiopenscale/){: new_window} を使用して**「Insights」**タブをクリックします。
+[{{site.data.keyword.aios_short}} ダッシュボード](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}を使用して**「インサイト」**タブをクリックします。
 
   ![インサイト](images/insight-dash-tab.png)
 
-「インサイト」ページには、デプロイ済みモデルの指標の概要が表示されます。 ノートブックの実行時に設定したしきい値を下回っている公平性または正解率の指標の警告を簡単に確認できます。 このチュートリアルで使用するデータと設定により、以下のような正解率と公平性の指標が作成されます。
+「インサイト」ページには、デプロイ済みモデルの指標の概要が表示されます。 ノートブックの実行時に設定したしきい値を超えている公平性または正解率の指標の警告を簡単に確認できます。 このチュートリアルで使用するデータと設定により、以下のような正解率と公平性の指標が作成されます。
 
   ![「インサイト」の概要](images/insight-overview-adv-tutorial-2.png)
 

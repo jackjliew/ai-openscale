@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # Monitoraggio della correttezza, Richieste medie al minuto e Accuratezza
 {: #it-ov}
@@ -64,7 +70,7 @@ Il grafico mostra più cose:
 
 - Il grafico mostra anche la percentuale di risultati previsti (70%) per la popolazione di riferimento. Questa è la media dei risultati previsti in tutte le popolazioni di riferimento.
 
-- Il grafico indica la presenza di distorsione, perché il rapporto tra la percentuale di risultati previsti per le popolazioni di età tra i 18 e i 23 anni e la percentuale di risultati previsti per la popolazione di riferimento è al di sotto della soglia. In altre parole, 0.52/0.7 = 0.74, che è inferiore alla soglia 0.8.
+- Il grafico indica la presenza di distorsione, perché il rapporto tra la percentuale di risultati previsti per le popolazioni di età tra i 18 e i 23 anni e la percentuale di risultati previsti per la popolazione di riferimento che supera la soglia. In altre parole, 0.52/0.7 = 0.74, che è inferiore alla soglia 0.8.
 
 - Il grafico mostra anche la distribuzione dei valori di riferimento e monitorati per ogni valore distinto dell'attributo nei dati della tabella payload che è stata analizzata per identificare la distorsione. In altre parole, se l'algoritmo di rilevamento della distorsione ha analizzato gli ultimi 1790 record dalla tabella di payload, per 120 di questi record l'età del cliente era tra i 18 e i 23, e fuori da quella distribuzione i risultati `Approvato` e `Denied` sono rappresentati dal grafico a barre. La distribuzione dei dati di payload viene visualizzata per ogni valore distinto dell'attributo di correttezza (sono visualizzati anche i valori di riferimento). Queste informazioni possono essere utilizzate per correlare la distorsione con la quantità di dati ricevuti dal modello.
 
@@ -110,15 +116,17 @@ Selezionando la scheda **Modello con distorsione annullata** vengono mostrati i 
 ### Opzioni di annullamento distorsione
 {: #it-dbo}
 
-- *Annullamento distorsione passivo* - Quando {{site.data.keyword.aios_short}} esegue il controllo della distorsione effettua anche un annullamento della distorsione dei dati analizzando il comportamento del modello e identificando i dati in cui il modello contribuisce alla distorsione.
+{{site.data.keyword.aios_short}} utilizza due tipi di annullamento della distorsione: passivo e attivo. La modalità passiva permette di sapere l'entità della distorsione, mentre quella attiva impedisce la prosecuzione della distorsione modificando il modello in tempo reale per l'applicazione corrente. 
+
+- *Annullamento distorsione passivo* - l'annullamento distorsione passivo è il lavoro che OpenScale fa da solo, automaticamente, ogni ora. È considerato passivo perché si verifica senza l'intervento dell'utente. Quando {{site.data.keyword.aios_short}} esegue il controllo della distorsione effettua anche un annullamento della distorsione dei dati analizzando il comportamento del modello e identificando i dati in cui il modello contribuisce alla distorsione.
 
   {{site.data.keyword.aios_short}} poi creare un modello di machine learning per prevedere se è probabile che il modello contribuirà alla distorsione su un nuovo punto di dati fornito. {{site.data.keyword.aios_short}} poi analizza i dati ricevuti dal modello, su base oraria, e trova i punti di dati in cui {{site.data.keyword.aios_short}} crede che il modello stia contribuendo alla distorsione. Per questi punti di dati, l'attributo di correttezza è perturbato da minoranza a maggioranza, e i dati perturbati vengono inviati al modello originale per la previsione. Questa previsione del modello originale viene utilizzata come output con distorsione annullata.
 
   {{site.data.keyword.aios_short}} esegue questo annullamento della distorsione ogni ora, su tutti i dati che sono stati ricevuti dal modello nell'ultima ora. Calcola anche la correttezza per l'output con distorsione annullata e lo visualizza nella scheda **Modello con distorsione annullata**.
 
-- *Annullamento distorsione attivo* - In modalità di annullamento distorsione attiva è possibile utilizzare un endpoint API REST di annullamento distorsione dall'applicazione. Questo endpoint API REST richiamerà internamente il modello e ne verificherà il comportamento.
+- *Annullamento distorsione attivo* - l'annullamento distorsione attivo dà all'utente la possibilità di richiedere e portare i risultati senza distorsione nell'applicazione attraverso l'endpoint API REST. È possibile indirizzare in modo attivo {{site.data.keyword.aios_short}} verso l'esecuzione dell'annullamento della distorsione e la modifica del modello in modo da poter eseguire l'applicazione senza distorsione. In modalità di annullamento distorsione attiva è possibile utilizzare un endpoint API REST di annullamento distorsione dall'applicazione. Questo endpoint API REST richiamerà internamente il modello e ne verificherà il comportamento.
 
-  Se {{site.data.keyword.aios_short}} ritiene che il modello sta contribuendo alla distorsione, eseguirà la perturbazione dei dati come indicato in precedenza e li invierà di nuovo al modello originale. L'output del modello originale sui dati perturbati sarà restituito come previsione senza distorsione. Se {{site.data.keyword.aios_short}} determina che il modello originale non sta agendo in modo distorto, {{site.data.keyword.aios_short}} restituirà la previsione del modello originale come previsione senza distorsione. Pertanto, utilizzando questo endpoint API REST, è possibile assicurarsi che l'applicazione non prenda decisione in base all'output distorto dei modelli.
+  Se {{site.data.keyword.aios_short}} rileva che il modello sta contribuendo alla distorsione, perturba i dati, come descritto in precedenza, e li invia di nuovo al modello originale. L'output del modello originale sui dati perturbati sarà restituito come previsione senza distorsione. Se {{site.data.keyword.aios_short}} determina che il modello originale non sta agendo in modo distorto, {{site.data.keyword.aios_short}} restituirà la previsione del modello originale come previsione senza distorsione. Pertanto, utilizzando questo endpoint API REST, è possibile assicurarsi che l'applicazione non prenda decisione in base all'output distorto dei modelli.
 
 Selezionare il link **Endpoint di calcolo del punteggio di distorsioni annullate** per trovare l'endpoint API REST di annullamento distorsione
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: machine learning, services, ml, custom 
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # カスタム ML サービス・インスタンスの指定
 {: #co-connect}
@@ -79,15 +85,15 @@ subcollection: ai-openscale
 
 以下のリンクも参照できます。
 
-[AIOS ペイロード・ロギング API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: new_window}
+[AIOS ペイロード・ロギング API](https://{DomainName}/apidocs/ai-openscale#publish-scoring-payload){: external}
 
-[カスタム・デプロイメント API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: new_window}
+[カスタム・デプロイメント API](https://aiopenscale-custom-deployement-spec.mybluemix.net/){: external}
 
-[Python クライアント・バインディング SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://ai-openscale-python-client.mybluemix.net/#bindings){: new_window}
+[Python クライアント・バインディング SDK](http://ai-openscale-python-client.mybluemix.net/#bindings){: external}
 
-[Working with Custom machine Learning engine ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: new_window}
+[Working with Custom machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-[Python SDK for IBM Watson OpenScale ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://pypi.org/project/ibm-ai-openscale/){: new_window}
+[Python SDK for IBM Watson OpenScale](https://pypi.org/project/ibm-ai-openscale/){: external}
 
 - **モニターをサポートするためのモデルの入力基準**
 
@@ -168,7 +174,7 @@ subcollection: ai-openscale
 
   この例では、`"personal”`と`“camping”`が候補となるクラスで、それぞれの予測出力のスコアが両方のクラスに割り当てられます。 予測の確率がない場合、バイアスの検出は行われますが、自動バイアス修正は行われません。
 
-  前述の予測出力は、{{site.data.keyword.aios_short}} が REST を介して呼び出すことが可能なライブ・予測エンドポイントからアクセス可能でなければなりません。 AzureML、SageMaker、WML の場合、{{site.data.keyword.aios_short}} はネイティブの予測エンドポイントに直接接続します (そのため、お客様が予測仕様を実装する必要はありません)
+  前述の予測出力は、{{site.data.keyword.aios_short}} が REST を介して呼び出すことが可能なライブ評価エンドポイントからアクセス可能でなければなりません。 AzureML、SageMaker、および {{site.data.keyword.pm_full}} の場合、{{site.data.keyword.aios_short}} はネイティブの評価エンドポイントに直接接続します (そのため、お客様が予測仕様を実装する必要はありません)。
 
 ### 次のステップ
 {: #co-next}

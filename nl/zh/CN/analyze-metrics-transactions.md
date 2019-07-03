@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-06-11"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -11,13 +11,19 @@ subcollection: ai-openscale
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
+{:download: .download}
 {:screen: .screen}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:java: .ph data-hd-programlang='java'}
+{:python: .ph data-hd-programlang='python'}
+{:swift: .ph data-hd-programlang='swift'}
+{:faq: data-hd-content-type='faq'}
 
 # 分析度量和事务 ![beta 标签](images/beta.png)
 {: #anlz_metrics}
@@ -43,7 +49,7 @@ subcollection: ai-openscale
 
 您可以在 {{site.data.keyword.aios_short}} 仪表板上查看一段时间内的所有度量值：
 
-![显示漂移阈值下限的公平性度量图表](images/fairness_metrics_001.png)
+![公平性度量图表，显示了低于设置阈值的漂移](images/fairness_metrics_001.png)
 
 您可以查看相关详细信息，例如有利结果和不利结果：
 
