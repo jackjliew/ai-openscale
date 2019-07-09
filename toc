@@ -107,7 +107,7 @@ Watson OpenScale
         wos-quality-logarithmic-loss.md
 
     {: .topicgroup}
-    Drift detection
+    Drift
         wos-behavior-drift.md
 
     {: .topicgroup}

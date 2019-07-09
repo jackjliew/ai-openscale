@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Drift detection ![beta tag](images/beta.png)
+# Drift magnitude ![beta tag](images/beta.png)
 {: #behavior-drift-ovr}
 
 Over time, the importance and impact of certain features in a model change. This affects the associated applications and resulting business outcomes. Through drift detection, {{site.data.keyword.aios_short}} provides a way to track model metrics, model performance, and the way in which feature weights change over time. 
