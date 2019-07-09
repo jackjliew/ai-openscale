@@ -79,8 +79,13 @@ Watson OpenScale
     Get insights
         wos-insight-overview.md
         wos-insight-timechart.md
-        wos-analyze-metrics-transactions.md
+        wos-insight-viz-data-by-time.md
+        wos-insight-debias.md
         wos-insight-explain.md
+        wos-insight-categorical.md
+        wos-insight-imagemodel.md
+        wos-insight-unstructmodel.md
+        wos-insight-contrastive.md
 
     {: .topicgroup}
     Fairness

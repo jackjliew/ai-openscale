@@ -25,15 +25,17 @@ subcollection: ai-openscale
 For each deployment, you can see explainability data for specific transactions.
 {: shortdesc}
 
-## Explaining transactions
+## Viewing explanations by transaction ID
 {: #ie-view}
 
-In the selected deployment tile, select the **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) in the navigator and enter a transaction ID.
+1. Click a deployment tile.
+2. Click the **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) in the navigator.
+3. Type a transaction ID.
 
 Whenever data is sent to the model for scoring, it sets a transaction ID in the HTTP header by setting the `X-Global-Transaction-Id` field. This transaction ID gets stored in the payload table. To find an explanation of the model behavior for a particular scoring, specify the transaction ID associated with that scoring request. Please note that this behavior applies only to {{site.data.keyword.pm_full}} transactions, and is not applicable for non-WML transactions.
 {: note}
 
-### Finding a transaction ID in {{site.data.keyword.aios_short}}
+## Finding a transaction ID in {{site.data.keyword.aios_short}}
 {: #ie-find}
 
 1.  From the time chart for your deployment, slide the marker across the chart and click the **View details** link to [visualize data for a specific hour](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet).
@@ -47,131 +49,18 @@ Whenever data is sent to the model for scoring, it sets a transaction ID in the 
 
   ![Explainability transaction ID](images/insight-explain-trans-id.png)
 
-## Categorical model example
-{: #ie-class}
+## Finding explanations through chart details
+{: #ie-view-ui}
 
-This example of explainability is for a binary classification model that approves or denies insurance claims. You can see the factors that contributed positively or negatively to the final outcome of `DENIED` in this case.
+Because explanations exist for fairness and drift metrics, you can click the charts to get a detailed view of the data set and then either click the **View transactions** button for fairness metrics or click a drift transaction tile to see transaction explanations.
 
-The feature *POLICY AGE* having a value of `< 1 year` had the maximum impact in the model deciding a DENIED outcome. The other features that contributed to this outcome were *CLAIM FREQUENCY* (`High`) and *AGE* (`18`), with only a minor impact from *CAR VALUE* (`$50,000`).
+- For one of the fairness attributes, such as sex or age click the attribute, then click the chart, and then click the **View transactions** button.
+- For the drift monitor, click **Drift magnitude**, click the chart, and then click a tile to see the transactions associated with that particular drift group.
 
-![Explainability binary classification](images/insight-explain-binary.png)
+## Next steps
+{: #ie-trans-id-next}
 
-While the charts are useful in showing the most significant factors in determining the outcome of a transaction, classification models can also include advanced explanations, detailed in the `Minimum changes for Approved outcome` and `Minimum changes for this outcome` sections.
-
-Advanced explanations are not available for regression, image, and unstructured text models.
-{: note}
-
-The `Minimum changes for Approved outcome` tells us that, if the values of the features were changed to the values listed in this section, then the prediction of the model will change.
-
-Likewise, the `Minimum changes for this outcome` tells us that, even if the values of the features were changed to those listed in this section, the prediction of the model would not have changed.
-
-Thus, these two values tell us the behavior of the model in the vicinity of the data point for which the explanation is being generated.
-
-![Explainability binary classification](images/insight-explain-binary2.png)
-
-## Image models
-{: #ie-image}
-
-{{site.data.keyword.aios_short}} supports explainability for image data.
-
-### Working with an image model
-{: #ie-image-working}
-
-1. Set up your environment.
-   2. Install the {{site.data.keyword.aios_short}} and {{site.data.keyword.pm_full}} packages.
-   3. Configure your credentials.
-   4. Install the libraries that are needed for creating the models and doing analysis. These include the following libraries:
-      - `keras`
-      - `tensorflow`
-      - `keras_sequential_ascii`
-      - `numpy`
-      - `pillow`
-
-1. Create and deploy your image-based model.
-   2. Create folders for the images based on how you classify them.
-       - Inside the main `data` directory you must have `train` and `validation` subdirectories.
-       - Within each of the subdirectories, you must have your classification directories.
-  2. Standardize the image size and then set the subdirectories to be used for training and validation.
-  3. Preprocess the data to rescale and retrieve the images and their classes.
-  4. Define and train the model.
-  5. Store the model.
-  6. Deploy the model.
-
-7. Configure {{site.data.keyword.aios_short}} by assigning the `APIClient`, sbuscribing the asset and scoring the model.
-8. Configure explainability.
-   9. Enable the explainability.
-   10. Get explanations for the transactions.
-   11. Display the explained images. 
-
-### Explaining image model transactions
-{: #ie-image-workingviewing}
-
-For an image classification model example of explainability, you can see which parts of an image contributed positively to the predicted outcome and which contributed negatively. In the following example, the image in the positive pane shows the parts which impacted positively to the prediction and the image in the negative pane shows the parts of images that had a negative impact on the outcome.
-
-![Explainability image classification](images/insight-explain-image.png)
-
-For {{site.data.keyword.pm_full}}, scoring input for image classification models that are sent for payload logging cannot exceed 1 MB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
-{: note}
-
-
-### Image model examples
-{: #ie-image-working-ntbks}
-
-Use the following two notebooks to see detailed code samples and develop your own {{site.data.keyword.aios_short}} deployments:
-
-- [Tutorial on generating an explanation for an image-based model](https://github.ibm.com/aiopenscale/explainability/blob/master/public/notebooks/demo/image_explanation.ipynb){: external}
-- [Tutorial on generating an explanation for an image-based binary classifier model](https://github.ibm.com/aiopenscale/explainability/blob/master/public/notebooks/demo/image_explanation_binary.ipynb){: external}
-
-
-## Unstructured text models
-{: #ie-unstruct}
-
-{{site.data.keyword.aios_short}} supports explainability for unstructured text data.
-
-### Working with unstructured text models
-{: #ie-unstruct-steps}
-
-1. Set up your environment.
-   2. Install the {{site.data.keyword.aios_short}} and {{site.data.keyword.pm_full}} packages.
-   3. Configure your credentials.
-   4. Install the libraries that are needed for creating the models and doing analysis. These include the following libraries:
-      - `pandas`
-      - `pyspark` (if not using {{site.data.keyword.DSX}})
-
-1. Create and deploy your image-based model.
-   2. Load training data into a pandas frame.
-   2. Train the model on the data.
-   3. Publish the model.
-   4. Deploy and score the model.
-
-7. Configure {{site.data.keyword.aios_short}} by assigning the `APIClient`, sbuscribing the asset and scoring the model.
-8. Configure explainability.
-   9. Enable the explainability.
-   10. Get explanations for the transactions.
-
-### Explaining unstructured text transactions
-{: #ie-unstruct-xplan}
-
-The following example of explainability shows a classification model that evaluates unstructured text. The explanation shows the keywords that had a positive as well as a negative impact on the model prediction. We also show the position of the identified keywords in the original text which was fed as input to the model.
-
-![Explainability image classification](images/insight-explain-text.png)
-
-### Unstructured text model example
-{: #ie-unstruct-ntbkssample}
-
-Use the following notebook to see detailed code samples and develop your own {{site.data.keyword.aios_short}} deployments:
-
-- [Tutorial on generating an explanation for a text-based model](https://github.ibm.com/aiopenscale/explainability/blob/master/public/notebooks/demo/text_explanation.ipynb){: external}
-
-## Constrastive explanations use pertinent positives and pertinent negatives
-{: #ie-pp-pn}
-
-For contrastive explanations, {{site.data.keyword.aios_short}} displays pertinent positive and pertinent negative values. 
-
-- Pertinent positives are findings that are critical for determining what something is.
-- Pertinent negatives are non-findings that are important by their absence.
-
-{{site.data.keyword.aios_short}} always displays a pertinent positive, however, sometimes there are no pertinent negatives to be displayed. In this case, values for this feature are either already at the median or the prediction has not changed as a result of moving values away from the median.
-
-To understand this better, consider that when {{site.data.keyword.aios_short}} calculates the pertinent negative value, it changes the values of all the features away from their median value. For pertinent negatives this means the feature values that are farthest away from the median. If the values of a data point are already at the median or if even after changing the value away from median, the prediction does not change, then there are no pertinent negatives to display. In case of pertinent positives, {{site.data.keyword.aios_short}} finds the maximum change in the feature values towards the median such that the prediction does not change. Practically, this means that there is almost always a pertinent positive to explain a transaction.
-
+- [Explaining categorical models](/docs/services/ai-openscale?topic=ai-openscale-ie-class)
+- [Explaining image models](/docs/services/ai-openscale?topic=ai-openscale-ie-image)
+- [Explaining unstructured text models](/docs/services/ai-openscale?topic=ai-openscale-ie-unstruct)
+- [Constrastive explanations](/docs/services/ai-openscale?topic=ai-openscale-ie-pp-pn)

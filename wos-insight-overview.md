@@ -46,16 +46,34 @@ The **Insights** tab ( ![Insight dashboard](images/insight-dash-tab.png) ) provi
 
 Each tile provides a summary of monitoring activity for that deployment. Note that the `Call Center Routing` deployment tile shows no issues, indicating a fairly stable, accurate model.
 
-### Next steps
-{: #io-next}
 
-Select any of the individual deployment tiles to view more details about that deployment. For more information, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale?topic=ai-openscale-it-ov) and [Monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
+## Fairness, quality, performance, accuracy, and analytics insights
+{: #it-ov}
 
+Select any of the individual deployment tiles to view more details about that deployment. Monitoring data for individual deployments displays in a series of charts. The charts track metrics, such as fairness, average requests per minute, and accuracy over days, weeks, or months.
 
+- [Viewing data for a deployment](/docs/services/ai-openscale?topic=ai-openscale-it-vdep)
+- [Visualizing data for a specific hour](/docs/services/ai-openscale?topic=ai-openscale-it-vdet)
+- [Fairness](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_fairness)
+- [Quality](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics)
+- [Drift](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)
+- [Performance](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_performance)
+- [Analytics](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_payload)
+- [De-biasing options](/docs/services/ai-openscale?topic=ai-openscale-it-dbo)
 
-## Transactions
+## Explainability
 {: #io-tran}
 
-Use the **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) to search a specific transaction ID to explain a particular deployment transaction. For more information, see [Monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
+Use the **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) to search a specific transaction ID to explain a particular deployment transaction.
 
+- [Explaining transactions](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)
+- [Explaining categorical models](/docs/services/ai-openscale?topic=ai-openscale-ie-class)
+- [Explaining image models](/docs/services/ai-openscale?topic=ai-openscale-ie-image)
+- [Explaining unstructured text models](/docs/services/ai-openscale?topic=ai-openscale-ie-unstruct)
+- [Constrastive explanations](/docs/services/ai-openscale?topic=ai-openscale-ie-pp-pn)
+
+## Next steps
+{: #io-next}
+
+- [Add more deployments to monitor](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-dpl-select).
 

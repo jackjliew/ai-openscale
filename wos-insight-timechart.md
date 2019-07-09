@@ -25,16 +25,11 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Monitoring Fairness, Average Requests per Minute, and Accuracy
-{: #it-ov}
-
-Monitoring data for individual deployments are displayed in a time series chart. The chart tracks Fairness, Average Requests per Minute, and Accuracy over the last seven days.
-{: shortdesc}
-
-## Viewing data for a deployment
+# Viewing data for a deployment
 {: #it-vdep}
 
 Select a deployment from the dashboard to see monitoring data for that deployment. The heading displays information about the deployed model, such as the **Model ID** and **Created date** fields.
+{: shortdesc}
 
 ![Time series chart](images/insight-time-chart.png)
 
@@ -53,33 +48,6 @@ Next, click the chart and move the marker across the chart to see statistics for
 - ***Quality***: The **Aread under ROC** metric displays an alert because it was not within the configured treshold.
 - ***Avg. Reqs/Min***: Click the **Throughput** metric to see the number of records that were processed per minute between. The throughput is computed every minute, and its average value over the course of the hour is reported in the chart.
 
-## Visualizing data for a specific hour
-{: #it-vdet}
-
-To see details behind a particular Fairness statistic, click the chart for a specific time.
-
-A visualization opens of the data points for a monitored feature at the selected hour. Following the previous example the Age feature is shown in the following example.
-
-Note the three filters at the top of the page (Feature, Date, and Hour) that let you select a different feature or time to review details.
-
-![Time series chart](images/wos-insight-data-detail.png)
-
-### Interpreting the chart
-{: #it-intp}
-
-The chart shows multiple things:
-
-- You can observe the population experiencing bias (customers between 18 and 23 years old). The chart also shows the percentage of expected outcome for this population.
-
-- The chart shows the percentage of expected outcome (70%) for the reference population. This is the average of expected outcome across all reference populations.
-
-- The chart is indicating the presence of bias, because the ratio of percentage of expected outcomes for populations age 18 to 23 years old to the percentage of expected outcomes for the reference population exceeds the threshold. In other words, 0.52/0.7 = 0.74, which is less than the 0.8 threshold.
-
-- The chart also shows the distribution of the reference and monitored values for each distinct value of the attribute in the data from the payload table which was analyzed to identify bias. In other words, if the bias detection algorithm analyzed the last 1790 records from the payload table, then 120 of those records had customer age between 18 and 23, and out of that distribution the `Approved` and `Denied` outcomes are represented by the bar chart. The distribution of the payload data is shown for each distinct value of the fairness attribute (even reference values are shown). This information can be used to correlate the bias with the amount of data received by the model.
-
-- The chart additionally shows that the population with ages between 31 and 35 years received 91% expected outcomes. This signifies the source of the bias, which means that data in this group skewed the results, and led to an increase in the percentage of expected outcomes for the reference class. This information can be used to identify parts of the data which can then be under-sampled when retraining the model.
-
-- Another important thing that the chart shows is the name of the table containing the data which has been identified for manual labeling. Whenever the algorithm detects bias in a model, it also identifies the data points which can be sent for manual labeling by humans. This manually-labeled data can then be used along with the original training data to retrain the model. This retrained model is likely to not have the bias. The manual labeling table is present in the database associated with the {{site.data.keyword.aios_short}} instance.
 
 ## View transactions
 {: #it-tra}
@@ -98,32 +66,4 @@ Select the **Biased transactions** view to see only the subset of transactions t
 
 ![Transaction list biased](images/transaction_list2.png)
 
-## Production model and De-biased model
-{: #it-prdb}
 
-You can use these two tabs to toggle between your production model and a de-biased model created by {{site.data.keyword.aios_short}}. See [Understanding how de-biasing works](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor#mf-debias) for more details.
-
-![Runtime Training toggle](images/bias-debias.png)
-
-Selecting the **De-biased model** tab shows you the changes in the de-biased model, versus the model in production. In this example, the model Fairness has increased from 74% to 93%, with a drop of only 1% in Accuracy. The chart also reflects the improved outcome status for groups aged 18 to 23.
-
-![Runtime Training toggle](images/insight-data-detail2.png)
-
-### De-biasing options
-{: #it-dbo}
-
-{{site.data.keyword.aios_short}} uses two types of de-biasing: passive and active. Passive de-biasing lets you know how you were biased, while active de-biasing prevents you from carrying that bias forward by changing the model in real time for the current application.
-
-- *Passive de-biasing* - Passive de-biasing is the work that OpenScale does by itself, automatically, every hour. It is considered passive because it happens without user intervention. When {{site.data.keyword.aios_short}} does bias checking, it also does a de-biasing of the data, by analyzing the behavior of the model, and identifying the data where the model is acting in a biased manner.
-
-  {{site.data.keyword.aios_short}} then builds a machine learning model to predict whether the model is likely to act in a biased manner on a given, new data point. {{site.data.keyword.aios_short}} then analyzes the data which is received by the model, on an hourly basis, and finds the data points where {{site.data.keyword.aios_short}} believes the model is acting in a biased manner. For such data points, the fairness attribute is perturbed from minority to majority, and the perturbed data is sent to the original model for prediction. This prediction of the original model is used as the de-biased output.
-
-  {{site.data.keyword.aios_short}} performs this de-biasing hourly, on all the data which has been received by the model in the past hour. It also computes the fairness for the de-biased output, and displays it in the **De-biased model** tab.
-
-- *Active de-biasing* - Active de-biasing is a way for you to request and bring de-biased results into your application through the REST API endpoint. You are actively directing {{site.data.keyword.aios_short}} to run de-biasing and alter the model so that you can run your application in a non-bias way. In active de-biasing, you can make use of a de-biasing REST API endpoint from your application. This REST API endpoint will internally call your model, and check its behavior.
-
-  If {{site.data.keyword.aios_short}} detects that the model is acting in a biased manner, it perturbs the data as mentioned previously, and sends it back to the original model. The output of the original model on the perturbed data will be returned as the de-biased prediction. If {{site.data.keyword.aios_short}} determines that the original model is not acting in a biased manner, then {{site.data.keyword.aios_short}} will return the original model's prediction as the de-biased prediction. Thus, by using this REST API endpoint, you can ensure that your application does not make decisions based on biased output of your models.
-
-Select the **Debiased Scoring Endpoint** link to find your de-biasing REST API endpoint
-
-![Debias API endpoint](images/insight-debias-api.png)
