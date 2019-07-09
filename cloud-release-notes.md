@@ -31,6 +31,15 @@ subcollection: ai-openscale
 This document outlines new features for {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
 
+## 9 July 2019
+{: #rn-9jul2019}
+
+The following new features and changes to {{site.data.keyword.aios_short}} are available.
+
+- __*Updated and expanded online help*__: The {{site.data.keyword.aios_short}} online help was recently reorganized to make it easier to find topics by using the contents pane. In addition, many new topics were written and expanded.
+
+   For more information, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-io-ov) and [Updating {{site.data.keyword.aios_short}} from a lite to a paid plan](/docs/services/ai-openscale?topic=ai-openscale-cf-upgrade).
+   
 ## 2 July 2019
 {: #rn-2jul2019}
 
