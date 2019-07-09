@@ -64,6 +64,7 @@ Watson OpenScale
         wos-config-file.md
         wos-feedback.md
         wos-schema-definition.md
+        cloud-upgrading.md
 
     {: .topicgroup}
     Configuring monitors
