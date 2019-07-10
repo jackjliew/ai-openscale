@@ -26,37 +26,27 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Known issues and limitations for {{site.data.keyword.aios_short}}
+# Known issues and limitations for {{site.data.keyword.aios_short}} for {{site.data.keyword.Bluemix}}
 {: #rn-12ki}
 
-The following lists contains the known issues and limitation for {{site.data.keyword.aios_full}} and {{site.data.keyword.wos4d_full}}.
+The following lists contains the known issues and limitation that are common for {{site.data.keyword.aios_full}} for {{site.data.keyword.Bluemix}} and {{site.data.keyword.wos4d_full}} and also those that are specific to  {{site.data.keyword.aios_full}} for {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
 <p>&nbsp;</p>
 
-## Limitations
+## Common issues
+{: #wos-common-issues}
+
+The following limitations and known issues are common to both {{site.data.keyword.aios_full}} on {{site.data.keyword.Bluemix}} and {{site.data.keyword.wos4d_full}}.
+
+<p>&nbsp;</p>
+
+
+### Common limitations
 {: #wos-limitations}
-
-- {{site.data.keyword.aios_short}} supports multiple machine learning engines, provided you configure additional engines by using the Python SDK.
-
-- The current release only supports one database, one {{site.data.keyword.pm_full}} instance, and one instance of {{site.data.keyword.aios_short}}
-
-- The database and {{site.data.keyword.pm_full}} instance must be deployed in the same {{site.data.keyword.cloud_notm}} account.
-
-- The Lite (free) plan has the following monthly limits:
-
-    - Two deployed models monitored
-    - 20 transactions explained
-    - 50,000 payload records (cumulative)
-    - 50,000 feedback records (cumulative)
-
-- {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model related data (feedback data, scoring payload) and calculated metrics. Lite Db2 plans are not currently supported.
-
-- There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
 
 - For {{site.data.keyword.pm_full}}, scoring input for image classification models that are sent for payload logging cannot exceed 1 MB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
 
-- The free Lite plan database is not GDPR compliant. If your model processes personally identifiable information (PII), you must purchase a new database or use an existing database that does conform to GDPR rules. 
 
 - Explainability for unstructured text models is not supported for continuous script languages, such as Japanese, Chinese, and Korean, which don't use whitespace or punctuation characters to separate words.
 
@@ -64,12 +54,6 @@ The following lists contains the known issues and limitation for {{site.data.key
 
 <p>&nbsp;</p>
 
-## Common issues
-{: #wos-common-issues}
-
-The following issues are common to both {{site.data.keyword.aios_full}} on {{site.data.keyword.Bluemix}} and {{site.data.keyword.wos4d_full}}.
-
-<p>&nbsp;</p>
 
 ### Drift configuration errors prevent configuration of drift monitor
 {: #wos-common-issues-mismatchdatatype}
@@ -244,102 +228,7 @@ If you are using a different load balancer, other than HAProxy, you may need to 
 <p>&nbsp;</p>
 
 
-## Known issues for {{site.data.keyword.wos4d_notm}}
-{: #rn-16April2019ki}
-
-The following issues are specific to {{site.data.keyword.wos4d_full}}.
-
-<p>&nbsp;</p>
-
-### Microsoft Azure Machine Learning Service
-{: #icp4d-azure-service-status403}
-
-When running {{site.data.keyword.wos4d_full}}, you may encounter issues where {{site.data.keyword.aios_short}} is not able to communicate with Azure Machine Learning Service, when it needs to invoke deployment scoring endpoints. Security tools that enforce your enterprise security policies, such as Symantec Blue Coat may prevent such access.
-
-If you encounter errors that indicate scoring against Azure Machine Learning Service cannot be reached, such as receiving an HTTP Status Code of 403, check your enterprise security policies and ensure that the scoring URL is properly re-categorized with the tools used, as needed, to allow {{site.data.keyword.aios_short}} to properly access the scoring endpoints.
-
-<p>&nbsp;</p>
-
-
-### IBM SPSS Collaboration and Deployment Services (C&DS)
-{: #rn-16April2019ki-icp-spss}
-
-- **Explainability support limited**
-
-   - Explainability is supported for binary models and for SPSS multiclass models that return probabilities for all classes. 
-   - Explainability is not supported for SPSS multiclass models that return only the winning class probability.
-
-
-
-<p>&nbsp;</p>
-
-
-
-
-- **IBM SPSS Collaboration and Deployment Services (C&DS) (Binary-type only) requires additional payload request to be made**
-
-    - For IBM SPSS Collaboration & Deployment Services binary subscriptions, you must make another [payload logging (scoring) request](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-cdb-connect#cdb-scoring) after [preparing monitors for a deployment](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-config), or after all monitors are configured. This ensures that [Explainability](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov#ie-ov) will be accurate.
-
-<p>&nbsp;</p>
-
-
-- **IBM SPSS C&DS (Binary-type only) corrected records count may be wrong**
-
-    - For IBM SPSS Collaboration & Deployment Services binary subscriptions, the *Corrected Records* count might not be accurate when viewed using the **View Transactions** button.
-
-<p>&nbsp;</p>
-
-### Metrics
-{: #rn-16April2019ki-icp-metrics}
-
-- **{{site.data.keyword.pm_full}} performance metrics not collected**
-
-    - In a Cloud Pak for Data environment, performance metrics from {{site.data.keyword.pm_full}} are not collected.
-
-<p>&nbsp;</p>
-
-- **Explainability support limitations**
-
-    - When building your models, do not include the target (label) column from the input request for scoring. If the model requires the target column to be included in the input request, then bias checking, de-biasing, and explainability will not work.
-
-
-<p>&nbsp;</p>
-
-
-### Python functions
-{: #rn-16April2019ki-icp-python}
-
-- **Python functions not supported**
-
-    - Bias checking, de-biasing, and explainability is not supported for Python functions, in the current release.
-
-<p>&nbsp;</p>
-
-
-### Installation and configuration
-{: #rn-16April2019ki-icp-install}
-
-
-- **The uninstall script does not delete Kafka topics**
-
-    - Running the uninstall script does not remove the {{site.data.keyword.aios_short}} Kafka topics that were created in EventStream during installation.
-
-<p>&nbsp;</p>
-
-### Databases
-{: #rn-16April2019ki-icp-dbs}
-
-- **Row size limitation using Db2 Warehouse**
-
-    - There is a 1 MB row size limit for Db2 Warehouse. When there are multiple (greater than 30) text columns (32000 bytes for each VARCHAR), the limit is exceeded. This limitation is most noticeable when using Amazon SageMaker, as SageMaker native format has all columns as string format.
-
-       Because {{site.data.keyword.aios_short}} uses the default tablespace for creating database objects, the actual limits depend on your database configuration. Additional information about this limitation is available in [IBM Knowledge Center Db2 documentation](https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0001029.html).
-
-
-
-
-
-## Browser support
+### Browser support
 {: #abt-browser}
 
 The {{site.data.keyword.aios_short}} service tooling requires the same level of browser software as is required by {{site.data.keyword.cloud_notm}}. See the {{site.data.keyword.cloud_notm}} [Prerequisites](/docs/overview?topic=overview-prereqs-platform#browsers) topic for details.
@@ -347,20 +236,40 @@ The {{site.data.keyword.aios_short}} service tooling requires the same level of 
 <p>&nbsp;</p>
 
 
-## Python client
+### Python client
 {: #abt-python}
 
 The [{{site.data.keyword.aios_short}} Python client](http://ai-openscale-python-client.mybluemix.net/){: external} is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure the datamart database, bind your machine learning engine, and select and monitor deployments. For examples using the Python client in this way, see the [{{site.data.keyword.aios_short}} sample notebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks).
+
+
+## Issues specific to {{site.data.keyword.aios_short}}
+{: #cloud-issues}
+
+The following limitation and issues are specific to {{site.data.keyword.aios_short}} for {{site.data.keyword.Bluemix}}.
+
+<p>&nbsp;</p>
+
+### Limitations
+{: #cloud-limitations}
+
+- The current release only supports one database, one {{site.data.keyword.pm_full}} instance, and one instance of {{site.data.keyword.aios_short}}. 
+
+- The database and {{site.data.keyword.pm_full}} instance must be deployed in the same {{site.data.keyword.cloud_notm}} account.
+
+- {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model related data (feedback data, scoring payload) and calculated metrics. Lite Db2 plans are not currently supported.
+
+- There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
+
+
+- The free Lite plan database is not GDPR compliant. If your model processes personally identifiable information (PII), you must purchase a new database or use an existing database that does conform to GDPR rules.
+
+
 
 <p>&nbsp;</p>
 ## Next steps
 {: #abt-next}
 
-- [Get started](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-gs-get-started) with the service.
-- [](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-gettingstarted)
+- [Getting started](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted)
 - View the [API Reference material](https://{DomainName}/apidocs/ai-openscale){: external}.
-
-Still have questions? 
-
-- [What's new in {{site.data.keyword.wos4d_full}}](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-rn-relnotes)
+- [What's new in {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-rn-relnotes)
 - [Contact IBM](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: external}.

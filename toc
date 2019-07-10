@@ -138,7 +138,7 @@ Watson OpenScale
     cloud-release-notes.md
     wos-troubleshoot.md
     wos-FAQs.md
-    wos-known-wos-issues.md
+    cloud-known-wos-issues.md
 
     {: .topicgroup}
     Developer community
