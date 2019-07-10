@@ -29,7 +29,7 @@ subcollection: ai-openscale
 # Known issues and limitations for {{site.data.keyword.aios_short}}
 {: #rn-12ki}
 
-The following lists contains the known issues and limitation for {{site.data.keyword.aios_full}} and {{site.data.keyword.wos4dfull}}.
+The following lists contains the known issues and limitation for {{site.data.keyword.aios_full}} and {{site.data.keyword.wos4d_full}}.
 {: shortdesc}
 
 <p>&nbsp;</p>
@@ -362,5 +362,5 @@ The [{{site.data.keyword.aios_short}} Python client](http://ai-openscale-python-
 
 Still have questions? 
 
-- [What's new in {{site.data.keyword.wos4dfull}}](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-rn-relnotes)
+- [What's new in {{site.data.keyword.wos4d_full}}](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-rn-relnotes)
 - [Contact IBM](https://www.ibm.com/account/reg/us-en/signup?formid=MAIL-watson){: external}.
