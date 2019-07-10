@@ -97,4 +97,4 @@ This option is useful if the training data is not stored in Db2 or {{site.data.k
 ## Next steps
 {: #behavior-drift-config-next-steps}
 
-- Increase your drift IQ by reading [Understanding Model Drift with IBM Watson OpenScale](https://medium.com/@manish.bhide/4c5401aa8da4)
+- For more information about interpreting drift, see [Drift magnitude](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)

@@ -67,5 +67,4 @@ Drift transactions are available in the transaction details screen, where you ca
 
 ## Next steps
 
-- For information on how to interpret drift, see [Configuring the drift detection monitor](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)
-- Increase your drift IQ by reading [Understanding Model Drift with IBM Watson OpenScale](https://medium.com/@manish.bhide/4c5401aa8da4)
+- For information on how to set up drift detection, see [Configuring the drift detection monitor](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)
