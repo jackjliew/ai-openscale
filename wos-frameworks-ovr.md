@@ -37,10 +37,6 @@ The {{site.data.keyword.aios_short}} service supports the following machine lear
 - [Custom](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-custom#frmwrks-custom)
 - [SPSS C&DS](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss) (only available in {{site.data.keyword.wos4d_full}})
 
-- [SAS AI Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-sas#frmwrks-sas)
-{: download}
-- [Google Cloud ML Engine](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-google#frmwrks-google)
-{: download}
 
 Full support includes the following features for the specific framework, problem, and data type:
 
