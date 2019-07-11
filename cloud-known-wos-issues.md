@@ -258,9 +258,6 @@ The following limitation and issues are specific to {{site.data.keyword.aios_sho
 
 - {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model related data (feedback data, scoring payload) and calculated metrics. Lite Db2 plans are not currently supported.
 
-- There is a license limit of 20 deployed models per instance of {{site.data.keyword.aios_short}}.
-
-
 - The free Lite plan database is not GDPR compliant. If your model processes personally identifiable information (PII), you must purchase a new database or use an existing database that does conform to GDPR rules.
 
 
