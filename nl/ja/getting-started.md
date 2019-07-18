@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -95,7 +95,7 @@ subcollection: ai-openscale
 - [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
-自動セットアップ・ツアーは、ユーザーとの対話が最小限になるように設計されています。このツアーは、ユーザーの代わりに以下を自動で決定します。
+自動セットアップ・ツアーは、ユーザーとの対話が最小限になるように設計されています。 このツアーは、ユーザーの代わりに以下を自動で決定します。
 
 - {{site.data.keyword.pm_full}} インスタンスが複数セットアップされている場合、インストール・プロセスは、インスタンスをリストする API 呼び出しを実行し、その結果、表示されたリストの一番先頭に現れた {{site.data.keyword.pm_short}} インスタンスを選択します。 
 - {{site.data.keyword.pm_full}} のライト・バージョンを新しく作成するために、{{site.data.keyword.aios_short}} インストーラーは、{{site.data.keyword.Bluemix}} アカウントのデフォルトのリソース・グループを使用します。
@@ -113,13 +113,13 @@ subcollection: ai-openscale
 2. サービスに名前を付け、プランを選択し、**「作成」**ボタンをクリックします。
 3. {{site.data.keyword.aios_short}} を開始するには、**「開始」**ボタンをクリックします。
 
-## UI デモの利用
+## 自動セットアップ
 {: #wos-work-demo}
 
 1.  {{site.data.keyword.Bluemix}} 上の {{site.data.keyword.aios_short}} インスタンスにサインインします。
-1.  デモ・シナリオを利用するには、**「デモを実行」**をクリックします。
+1.  サンプル・データを使用して {{site.data.keyword.aios_short}} インスタンスを自動的にセットアップするには、**「自動セットアップ (Auto setup)」**をクリックします。
 
-   ![デモの「ようこそ」](images/fastpath_demo_11.31.04.png)
+   ![デモの「ようこそ」](images/cloud-auto-setup.png)
 
    {{site.data.keyword.aios_short}} サービスがプロビジョンされる過程で、以下のように、デモ・シナリオを確認できます。
 

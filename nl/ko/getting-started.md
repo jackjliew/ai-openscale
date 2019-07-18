@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -90,15 +90,15 @@ subcollection: ai-openscale
 ## 시작하기 전에
 {: #wos-prereqs}
 
-둘러보기를 시작하기 전에 다음 리소스가 설정되어 있어야 합니다. 
+둘러보기를 시작하기 전에 다음 리소스가 설정되어 있어야 합니다.
 
 - [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
-자동화된 설정 둘러보기는 사용자와의 상호작용을 가능한 최소화하도록 설계되었습니다. 따라서 다음 사항을 자동으로 결정합니다. 
+자동화된 설정 둘러보기는 사용자와의 상호작용을 가능한 최소화하도록 설계되었습니다. 따라서 다음 사항을 자동으로 결정합니다.
 
-- {{site.data.keyword.pm_full}} 인스턴스가 여러 개 설정되어 있는 경우, 설치 프로세스가 인스턴스 나열을 위한 API 호출을 실행하고 결과 목록에서 제일 먼저 표시할 {{site.data.keyword.pm_short}} 인스턴스를 선택합니다.  
-- {{site.data.keyword.pm_full}}의 새 Lite 버전을 작성하기 위해 {{site.data.keyword.aios_short}} 설치 프로그램이 {{site.data.keyword.Bluemix}} 계정에 대해 기본 리소스 그룹을 사용합니다. 
+- {{site.data.keyword.pm_full}} 인스턴스가 여러 개 설정되어 있는 경우, 설치 프로세스가 인스턴스 나열을 위한 API 호출을 실행하고 결과 목록에서 제일 먼저 표시할 {{site.data.keyword.pm_short}} 인스턴스를 선택합니다. 
+- {{site.data.keyword.pm_full}}의 새 Lite 버전을 작성하기 위해 {{site.data.keyword.aios_short}} 설치 프로그램이 {{site.data.keyword.Bluemix}} 계정에 대해 기본 리소스 그룹을 사용합니다.
 
 ### {{site.data.keyword.aios_full}} 서비스 프로비저닝
 {: #crt-wos-faststart}
@@ -113,13 +113,13 @@ subcollection: ai-openscale
 2. 서비스에 이름을 지정하고 플랜을 선택한 다음 **작성** 단추를 클릭하십시오.
 3. {{site.data.keyword.aios_short}}를 시작하려면 **시작하기** 단추를 클릭하십시오.
 
-## UI 데모에 대한 작업
+## 자동 설정
 {: #wos-work-demo}
 
 1.  {{site.data.keyword.Bluemix}}에서 {{site.data.keyword.aios_short}} 인스턴스에 로그인하십시오.
-1.  데모 시나리오에 대해 작업하려면 **데모 실행**을 클릭하십시오.
+1.  샘플 데이터를 사용하여 {{site.data.keyword.aios_short}} 인스턴스를 자동으로 설정하려면 **자동 설정**을 클릭하십시오. 
 
-   ![데모 시작](images/fastpath_demo_11.31.04.png)
+   ![데모 시작](images/cloud-auto-setup.png)
 
    {{site.data.keyword.aios_short}} 서비스가 프로비저닝되면 데모 시나리오를 검토할 수 있습니다.
 

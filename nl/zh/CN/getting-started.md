@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -113,13 +113,13 @@ subcollection: ai-openscale
 2. 指定服务的名称，选择套餐，然后单击**创建**按钮。
 3. 要启动 {{site.data.keyword.aios_short}}，请单击**入门**按钮。
 
-## 使用 UI 演示
+## 自动设置
 {: #wos-work-demo}
 
 1.  登录到 {{site.data.keyword.Bluemix}} 上的 {{site.data.keyword.aios_short}} 实例。
-1.  要使用演示方案，请单击**运行演示**。
+1.  要通过使用样本数据来自动设置 {{site.data.keyword.aios_short}} 实例，请单击**自动设置**。
 
-   ![演示欢迎](images/fastpath_demo_11.31.04.png)
+   ![演示欢迎](images/cloud-auto-setup.png)
 
    在供应 {{site.data.keyword.aios_short}} 服务时，您可以查看演示方案：
 

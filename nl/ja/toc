@@ -7,124 +7,132 @@ Watson OpenScale
     {: .navgroup id="learn"}
     getting-started.md
     [Watson OpenScale について](https://www.ibm.com/cloud/watson-openscale/)
-    accessibility.md
-    faststart.md
-    alt-setup.md
-    tutorial-adv.md
-    addl-rsc.md
+    wos-accessibility.md
+    cloud-faststart.md
+    cloud-alt-setup.md
+    cloud-tutorial-adv.md
+    cloud-addl-rsc.md
 
     {: .topicgroup}
-    フレームワークとモデルのサポート
-        frameworks-ovr.md
-        frameworks-wml-cloud.md
-        frameworks-azure-ml-studio.md
-        frameworks-azure-ml-service.md
-        frameworks-aws-sagemaker.md
-        frameworks-custom.md
-        framework-workaround.md
-        framework-multi-eng.md
+    Framework & モデルのサポート
+        wos-frameworks-ovr.md
+        wos-framework-workaround.md
+        wos-framework-multi-eng.md
+
+    {: .topicgroup}
+    Watson Machine Learning
+        wos-frameworks-wml-cloud.md
+        wos-connect-wml.md
+
+    {: .topicgroup}
+    Microsoft Azure ML Studio
+        wos-frameworks-azure-ml-studio.md
+        wos-connect-azureml.md
+        wos-payload-azure-studio.md
+
+    {: .topicgroup}
+    Microsoft Azure ML Service
+        wos-frameworks-azure-ml-service.md
+        wos-connect-azureml-srvc.md
+        wos-payload-azure-service.md
+
+    {: .topicgroup}
+    Amazon SageMaker
+        wos-frameworks-aws-sagemaker.md
+        wos-connect-sagemaker.md
+        wos-payload-aws.md
+
+    {: .topicgroup}
+    カスタム機械学習エンジン
+        wos-frameworks-custom.md
+        wos-custom-ml-ovr.md
+        wos-connect-other.md
+        wos-custom-ml-examples.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     Watson OpenScale の構成
-        creds.md
-        iam.md
-        connect-wml.md
-        connect-azureml.md
-        connect-sagemaker.md
-        custom-ml-ovr.md
-        connect-other.md
-        custom-ml-examples.md
-        connect-deploy.md
-        connect-db.md
-        scoring.md
-        payload-logging.md
-        connect-ml.md
-        payload-auto.md
-        config-file.md
-        feedback.md
-        schema-definition.md
+        wos-creds.md
+        wos-iam.md
+        wos-connect-deploy.md
+        wos-connect-db.md
+        wos-scoring.md
+        wos-payload-logging.md
+        wos-connect-ml.md
+        wos-payload-auto.md
+        wos-config-file.md
+        wos-feedback.md
+        wos-schema-definition.md
 
     {: .topicgroup}
     モニターの構成
-        monitor-overview.md
-        monitor-accuracy.md
-        monitor-fairness.md
-        metrics.md
-        fairness_metrics
+        wos-monitor-overview.md
+        wos-monitor-accuracy.md
+        wos-monitor-fairness.md
+        wos-monitor-drift.md
+        wos-metrics.md
+        wos-fairness_metrics
 
     {: .topicgroup}
     インサイトの取得
-        insight-overview.md
-        insight-timechart.md
-        analyze-metrics-transactions.md
-        insight-explain.md
+        wos-insight-overview.md
+        wos-insight-timechart.md
+        wos-analyze-metrics-transactions.md
+        wos-insight-explain.md
 
     {: .topicgroup}
     公平性
-        fairness-ovr.md
-        fairness-group.md
+        wos-fairness-ovr.md
+        wos-fairness-group.md
 
     {: .topicgroup}
-    品質
-        quality-overview.md
-        quality-confusion-matrix.md
-        quality-area-under-roc.md
-        quality-area-under-pr.md
-        quality-prop-expl-variance.md
-        quality-mean-abs-error.md
-        quality-mean-squared-error.md
-        quality-r-squared.md
-        quality-root-of-mean-sq-error.md
-        quality-accuracy.md
-        quality-wtpr.md
-        quality-tpr.md
-        quality-wfpr.md
-        quality-fpr.md
-        quality-wrecall.md
-        quality-recall.md
-        quality-wprecision.md
-        quality-precision.md
-        quality-wf1-measure.md
-        quality-f1-measure.md
-        quality-logarithmic-loss.md
+    モデル性能
+        wos-quality-overview.md
+        wos-quality-confusion-matrix.md
+        wos-quality-area-under-roc.md
+        wos-quality-area-under-pr.md
+        wos-quality-accuracy.md
+        wos-quality-tpr.md
+        wos-quality-fpr.md
+        wos-quality-recall.md
+        wos-quality-precision.md
+        wos-quality-f1-measure.md
+        wos-quality-logarithmic-loss.md
 
     {: .topicgroup}
-    動作
-        behavior-overview.md
-        behavior-drift.md
-        behavior-anomalies.md
+    ドリフトの検出
+        wos-behavior-drift.md
 
     {: .topicgroup}
     パフォーマンス
-        performance-throughput.md
+        wos-performance-throughput.md
 
     {: .topicgroup}
     分析
-        analytics-ovr.md
-        analytics-confidence.md
-        analytics-chart-builder.md
+        wos-analytics-ovr.md
+        wos-analytics-confidence.md
+        wos-analytics-chart-builder.md
 
-    openscale-recovery.md
+    cloud-openscale-recovery.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [API リファレンス](https://cloud.ibm.com/apidocs/ai-openscale)
     [ModelOps CLI](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
-    [Python Client](http://ai-openscale-python-client.mybluemix.net/)
-    activity-tracker.md
-    language-support.md
-    information-security.md
+    [Python クライアント](http://ai-openscale-python-client.mybluemix.net/)
+    wos-activity-tracker.md
+    wos-language-support.md
+    wos-information-security.md
     [Watson GitHub リポジトリー](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    gettinghelp.md
-    release-notes.md
-    troubleshoot.md
-    FAQs.md
-    known-wos-issues.md
+    wos-gettinghelp.md
+    cloud-release-notes.md
+    wos-troubleshoot.md
+    wos-FAQs.md
+    wos-known-wos-issues.md
 
     {: .topicgroup}
     開発者コミュニティー

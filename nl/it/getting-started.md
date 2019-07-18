@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -97,7 +97,7 @@ Prima di iniziare il tour, è necessario disporre delle seguenti risorse configu
 
 Il tour di configurazione automatizzato è progettato per funzionare con una minima interazione dell'utente. Prende automaticamente le seguenti decisioni per l'utente:
 
-- Se si dispone di più istanze {{site.data.keyword.pm_full}} configurate, il processo di installazione esegue una chiamata API per elencare le istanze e sceglie l'istanza {{site.data.keyword.pm_short}} che appare per prima nell'elenco risultante.  
+- Se si dispone di più istanze {{site.data.keyword.pm_full}} configurate, il processo di installazione esegue una chiamata API per elencare le istanze e sceglie l'istanza {{site.data.keyword.pm_short}} che appare per prima nell'elenco risultante. 
 - Per creare una nuova versione {{site.data.keyword.pm_full}} lite, il programma di installazione di {{site.data.keyword.aios_short}} utilizza il gruppo di risorse predefinito per l'account {{site.data.keyword.Bluemix}}.
 
 ### Eseguire il provisioning di un servizio {{site.data.keyword.aios_full}}
@@ -113,13 +113,13 @@ Assicurarsi di aver eseguito il provisioning di {{site.data.keyword.aios_full}}.
 2. Fornire un nome al servizio, selezionare un piano e fare clic sul pulsante **Crea**.
 3. Per avviare {{site.data.keyword.aios_short}}, fare clic sul pulsante **Introduzione**.
 
-## Utilizzo della demo IU
+## Configurazione automatica
 {: #wos-work-demo}
 
 1.  Accedere all'istanza {{site.data.keyword.aios_short}} su {{site.data.keyword.Bluemix}}.
-1.  Per utilizzare lo scenario demo, fare clic su **Esegui demo**.
+1.  Per configurare automaticamente l'istanza {{site.data.keyword.aios_short}} utilizzando i dati campione, fare clic su **Configurazione automatica**.
 
-   ![Demo - Benvenuti](images/fastpath_demo_11.31.04.png)
+   ![Demo - Benvenuti](images/cloud-auto-setup.png)
 
    Mentre viene eseguito il provisioning dei servizi {{site.data.keyword.aios_short}}, è possibile riesaminare lo scenario demo:
 
