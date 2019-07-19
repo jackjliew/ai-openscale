@@ -42,11 +42,14 @@ Table 1. Framework support details
 | XGBoost | Regression | Structured |
 | scikit-learn | Classification | Structured |
 | scikit-learn | Regression | Structured |
-| Keras with TensorFlow<sup>1</sup> | Classification | Unstructured (image, text) |
-| Keras with TensorFlow<sup>1</sup> | Regression | Unstructured (image, text) |
+| Keras with TensorFlow<sup>1</sup><sup>&</sup><sup>2</sup> | Classification | Unstructured (image, text) |
+| Keras with TensorFlow<sup>1</sup><sup>&</sup><sup>2</sup> | Regression | Unstructured (image, text) |
 {: caption="Framework support details" caption-side="top"}
 
 <sup>1</sup>Keras support does not include support for fairness.
+{: note}
+
+<sup>2</sup>If your model / framework outputs prediction probabilities.
 {: note}
 
 
