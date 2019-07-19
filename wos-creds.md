@@ -36,15 +36,18 @@ For enterprise accounts, an administrator can create the data mart, invite users
 ## Creating the platform API key
 {: #cred-create-apikey}
 
-To create a Platform API key, complete the following steps:
+To create an IBM Cloud API key, complete the following steps:
 
-1. Log into [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}.
+- Log into [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}.
+- Select **Manage** --> **Access (IAM)** --> **{{site.data.keyword.cloud_notm}} API Keys**
+- Click the **Create an IBM Cloud API key** button.
+- Give your key a name and description and click **Create**.
 
-2. Select **Manage** --> **Security** --> **Platform API Keys**
+To find your data mart (or service instance) ID:
 
-    ![Platform API Keys](images/cred-api-key.png)
+In the {{site.data.keyword.aios_short}} **Payload logging** page, which is shown when selecting **Configure monitors** for a deployment.
 
-3. Create and save a Platform API key.
+![Data Mart ID](images/data-mart-id.png)
 
 To find your data mart (or service instance) ID:
 
@@ -58,7 +61,7 @@ To find your data mart (or service instance) ID:
 ## Creating service instance credentials by using the command console
 {: #cred-creds}
 
-To create credentials for {{site.data.keyword.aios_short}}, complete the following steps by using the {{site.data.keyword.cloud_notm}} [command console](/docs/cli?topic=cloud-cli-ibmcloud-cli):
+To create credentials for {{site.data.keyword.aios_short}}, complete the following steps by using the {{site.data.keyword.cloud_notm}} [command console](/docs/cli?):
 
 1. Retrieve your API key by running the following command:
 
@@ -76,6 +79,7 @@ To create credentials for {{site.data.keyword.aios_short}}, complete the followi
     Locked       false
     UUID         ApiKey-xxxxxxxxx-afd7-xxxxx-b0e1-xxxxxxxxxxx
     ```
+
 2. Verify the Resource Group you are using in your {{site.data.keyword.cloud_notm}} account.
 
   ![Resource Group in Cloud](images/cloud-resource.png)

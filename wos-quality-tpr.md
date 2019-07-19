@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # True positive rate (TPR) ![beta tag](images/beta.png)
 {: #quality_tpr}
 
-The True positive rate (TPR) gives the proportion of correct predictions in predictions of positive class.
+The True positive rate (TPR) gives the proportion of correct predictions in predictions of positive class. 
 {: shortdesc}
 
 ## True positive rate (TPR) at a glance

@@ -72,3 +72,24 @@ The Fairness for a group metric gives the model's propensity to deliver favourab
 {: #quality_group-zip}
 
 {{site.data.keyword.aios_short}} recommends that within the **zip code** attribute, the bias monitor be configured such that individual zip codes are scored.
+
+## Interpreting the display
+{: #quality_group-display}
+
+### Fairness Score for a group
+{: #quality_group-display-fairnessscore}
+
+
+
+### Monitored Groups
+{: #quality_group-display-monitoredgroups}
+
+
+
+### Schedule
+{: #quality_group-display-schedule}
+
+The **Schedule** pane shows the 
+
+
+

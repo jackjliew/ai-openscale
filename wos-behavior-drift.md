@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Drift magnitude ![beta tag](images/beta.png)
 {: #behavior-drift-ovr}
 
-Over time, the importance and impact of certain features in a model change. This affects the associated applications and resulting business outcomes. Through drift detection, {{site.data.keyword.aios_short}} provides a way to track model metrics, model performance, and the way in which feature weights change over time. 
+Over time, the importance and impact of certain features in a model change. This affects the associated applications and resulting business outcomes. Through drift detection, {{site.data.keyword.aios_short}} provides a way to track model metrics, model performance, and the way in which feature weights change over time. As data changes, the ability of your model to make accurate predictions may deteriorate. Drift magnitude is the extent of the degradation of predictive performance over time. Use the information about drift to take corrective action.
 {: shortdesc}
 
 ## Understanding drift detection
@@ -67,4 +67,7 @@ Drift transactions are available in the transaction details screen, where you ca
 
 ## Next steps
 
-- For information on how to set up drift detection, see [Configuring the drift detection monitor](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)
+- For information on how to set up drift detection, see [Configuring the drift detection monitor](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).
+- To mitigate drift, after it has been detected by Watson OpenScale, you must build a new version of the model that fixes the problem. A good place to start is with the data points that are highlighted as reasons for the drift. Introduce the new data to the predictive model after you have manually labeled the drifted transactions and use them to re-train the model.
+
+

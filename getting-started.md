@@ -67,7 +67,7 @@ The credit risk model provided in this tutorial uses a training dataset that con
 
 There are several setup options, depending on your preference and level of expertise.
 
-- [The following automated setup](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) guides you through the process by performing tasks for you in the background.
+- [The following automated setup](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start) guides you through the process by performing tasks for you in the background.
 
    Use of a tour means that you can watch and click through to the next part of the tour.
    
@@ -92,7 +92,7 @@ To quickly see how {{site.data.keyword.aios_short}} monitors a model, run the de
 
 Before you begin the tour, you must have the following resources set up:
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
 The automated setup tour is designed to work with the least possible user interaction. It automatically makes the following decisions for you:
@@ -100,7 +100,7 @@ The automated setup tour is designed to work with the least possible user intera
 - If you have multiple {{site.data.keyword.pm_full}} instances set up, the install process runs and API call to list the instances and chooses whichever {{site.data.keyword.pm_short}} instance appears first in the resulting list. 
 - To create a new lite version {{site.data.keyword.pm_full}}, {{site.data.keyword.aios_short}} installer uses the default resource group for your {{site.data.keyword.Bluemix}} account.
 
-### Provision an {{site.data.keyword.aios_full}} service
+### Provision a {{site.data.keyword.aios_short}} service
 {: #crt-wos-faststart}
 
 If you haven't already, ensure that you provision {{site.data.keyword.aios_full}}. 
@@ -164,7 +164,7 @@ At a glance, the Insights page shows any issues with fairness and accuracy, as d
     
    ![Demo Lets go](images/fastpath_demo_11.34.27.png)
 
-    - For information about interpreting the chart of the data points at a specific hour, see [Data visualization](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual).
+    - For information about interpreting the chart of the data points at a specific hour, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp).
 
 
 ### View explainability

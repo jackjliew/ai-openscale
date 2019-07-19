@@ -30,9 +30,9 @@ subcollection: ai-openscale
 
 In this tutorial, you perform the following steps:
 
-- [Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services](/docs/services/ai-openscale?topic=ai-openscale-gs-obj&locale=en-US#gs-prps).
-- [Set up a Watson Studio project, and create, train and deploy a machine learning model](/docs/services/ai-openscale?topic=ai-openscale-gs-obj&locale=en-US#gs-setup).
-- [Configure and explore trust, transparency and explainability for your model](/docs/services/ai-openscale?topic=ai-openscale-gs-obj&locale=en-US#gs-confaios).
+- [Provision {{site.data.keyword.Bluemix_notm}} machine learning and storage services](/docs/services/ai-openscale?topic=ai-openscale-gs-obj#gs-prps).
+- [Set up a Watson Studio project, and create, train and deploy a machine learning model](/docs/services/ai-openscale?topic=ai-openscale-gs-obj#gs-setup).
+- [Configure and explore trust, transparency and explainability for your model](/docs/services/ai-openscale?topic=ai-openscale-gs-obj#gs-confaios).
 
 ## Provision prerequisite {{site.data.keyword.Bluemix_notm}} services
 {: #gs-prps}
@@ -174,7 +174,7 @@ Before you can configure your monitors, you must generate at least one scoring r
 ### Preparing for monitoring
 {: #gs-prepmon}
 
-1.  Now, in the {{site.data.keyword.aios_short}} instance, select your deployment and click **Begin**.
+1.  Now, in the {{site.data.keyword.aios_short}} instance, select your deployment and click **Configure**.
 
     ![Select deployment](images/wos-select-model-deployment.png)
 
@@ -325,7 +325,7 @@ To enable monitoring for accuracy, you must provide your model with feedback dat
 Adding the CSV file provides feedback data to your model.
 
 ## Configure the Drift monitor
-{: gs-drift-config}
+{: #gs-drift-config}
 
 For information about how to configure the Drift monitory, see [Configure the Drift Detection monitor](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).
 
@@ -343,4 +343,4 @@ To learn about interpreting the results, see [Getting insights](/docs/services/a
 
 - To learn about biases, see [Fairness](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mf-monitor).
 - To learn about how well your model predicts outcomes, see [Accuracy](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-acc-monitor).
-- To learn about interpreting charts, data, and transactions, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart).
+- To learn about interpreting charts, data, and transactions, see [Getting insights with {{site.data.keyword.aios_short}}](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart).

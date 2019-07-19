@@ -30,7 +30,7 @@ subcollection: ai-openscale
 IBM is committed to accessibility. Accessibility features that follow compliance guidelines are included in {{site.data.keyword.aios_full}} content and documentation to benefit users with disabilities. Parts of the user interface of {{site.data.keyword.aios_short}} are accessible, but not entirely. Only documentation is compliant, with a subset of parts of the overall product.
 {: shortdesc}
 
-{{site.data.keyword.aios_short}} documentation uses the latest W3C Standard, <a href="https://www.w3.org/TR/wai-aria/" rel="noopener noreferrer" target="_blank">WAI-ARIA 1.0</a> to ensure compliance with the <a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/" rel="noopener noreferrer" target="_blank">United States Access Board Section 508 Standards</a>, and the <a href="https://www.w3.org/TR/WCAG20/" rel="noopener noreferrer" target="_blank"> Web Content Accessibility Guidelines (WCAG) 2.0</a>.
+{{site.data.keyword.aios_short}} documentation uses the latest W3C Standard, [WAI-ARIA 1.0](https://www.w3.org/TR/wai-aria/){: external}, to ensure compliance with the [United States Access Board Section 508 Standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/){: external}, and the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/){: external}.
 
 The {{site.data.keyword.aios_short}} online product documentation is enabled for accessibility. Accessibility features help users who have a disability, such as restricted mobility or limited vision, to use information technology products successfully. Documentation is provided in HTML so that it is easily accessible through assistive technology.
 With the accessibility features of {{site.data.keyword.aios_short}}, you can do the following tasks:
@@ -39,7 +39,7 @@ With the accessibility features of {{site.data.keyword.aios_short}}, you can do 
 - Use screen magnifiers to magnify what is displayed on the screen.
 - Operate specific or equivalent features by using only the keyboard.
 
-For more information about the commitment that IBM has to accessibility, see [IBM Accessibility](http://www.ibm.com/able).
+For more information about the commitment that IBM has to accessibility, see [IBM Accessibility](http://www.ibm.com/able){: external}.
 
 ## TTY service
 

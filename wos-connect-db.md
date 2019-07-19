@@ -112,4 +112,4 @@ You can upgrade to another database from the free database, however it is not po
 ## Next steps
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [send a scoring payload](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score) and [configure monitors for your deployments](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+{{site.data.keyword.aios_short}} is now ready for you to [send a scoring payload](/docs/services/ai-openscale?topic=ai-openscale-cdb-score) and [configure monitors for your deployments](/docs/services/ai-openscale?topic=ai-openscale-mo-config).

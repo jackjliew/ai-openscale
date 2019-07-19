@@ -43,3 +43,10 @@ subcollection: ai-openscale
 Select the **Debiased Scoring Endpoint** link to find your de-biasing REST API endpoint
 
 ![Debias API endpoint](images/insight-debias-api.png)
+
+## Next steps
+{: #it-dbo-nextsteps}
+
+- To mitigate bias, after it has been detected, you must build a new version of the model that fixes the problem. {{site.data.keyword.aios_short}} stores biased records in the manual labelling table. These biased records need to be manually labelled and then the model needs to be retrained using this additional data to build a new version of the model which is unbiased.
+
+

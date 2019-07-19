@@ -29,6 +29,7 @@ subcollection: ai-openscale
 {: #anlz_metrics}
 
 Use quality monitoring to determine how well your model predicts outcomes. When quality monitoring is enabled, it generates a set of metrics every hour by default. You can generate these metrics on demand by clicking the **Check quality now** button or by using the Python client.
+{: shortdesc}
 
 Quality metrics are calculated based on the following information:
 
@@ -56,11 +57,21 @@ The following quality metrics are supported by {{site.data.keyword.aios_short}}:
 
 - [Area under ROC](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_roc)
 - [Area under PR](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-area-pr)
+- [Proportion explained variance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_var)
+- [Mean absolute error](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_abserror)
+- [Mean squared error](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_squerror)
+- [R squared](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_r_squared)
+- [Root of mean squared error](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-supqualdets_squ_errors_mean)
 - [Accuracy](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-accuracy-opener)
+- [Weighted True Positive Rate (wTPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-wtpr)
 - [True positive rate (TPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_tpr)
+- [Weighted False Positive Rate (wFPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wfpr_weighted)
 - [False positive rate (FPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_fpr_false)
+- [Weighted recall](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_weighted_recall)
 - [Recall](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_recall)
+- [Weighted precision](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wgth_prec)
 - [Precision](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_precision)
+- [Weighted F1-Measure](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wght_f1-measure)
 - [F1-Measure](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_f1-measr)
 - [Logarithmic loss](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_log_loss)
 
@@ -75,3 +86,8 @@ The following details for quality metrics are supported by {{site.data.keyword.a
 Confusion matrix helps you to understand for which of your feedback data the monitored deployment response is correct and for which it is not.
 
 For more information, see [Confusion matrix](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx).
+
+## Next steps
+
+- After {{site.data.keyword.aios_short}} detects problems with quality, such as accuracy threshold violations, you must build a new version of the model that fixes the problem. Using the manually labelled data in the feedback table, you must retrain the model along with the original training data.
+

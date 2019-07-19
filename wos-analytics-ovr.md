@@ -25,9 +25,6 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-
-
-
 # Analytics overview
 {: #anlz_metrics_payload}
 

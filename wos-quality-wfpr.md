@@ -34,11 +34,11 @@ The Weighted False Positive Rate (wFPR) gives the weighted mean of class False P
 ## Weighted False Positive Rate (wFPR) at a glance
 {: #quality_wfpr_weighted-glance}
 
-- **Description**: Weighted mean of class FPR with weights equal to class probability
+- **Description**: Proportion of incorrect predictions in positive class
 - **Default thresholds**: Lower limit = 80%
 - **Default recommendation**:
-   - **Upward trend**: An upward trend indicates that the metric is improving. This means that model retraining is effective.
-   - **Downward trend**: A downward trend indicates that the metric is deteriorating. Feedback data is becoming significantly different than the training data.
+   - **Upward trend**: An upward trend indicates that the metric is deteriorating. Feedback data is becoming significantly different than the training data.
+   - **Downward trend**: A downward trend indicates that the metric is improving. This means that model retraining is effective.
    - **Erratic or irregular variation**: An erratic or irregular variation indicates that the feedback data is not consistent between evaluations. Increase the minimum sample size for the Quality monitor.
 - **Problem type**: Multiclass classification
 - **Chart values**: Last value in the time frame

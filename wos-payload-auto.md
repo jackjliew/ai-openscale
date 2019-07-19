@@ -40,13 +40,13 @@ If your applications use an original payload format that cannot be changed, choo
 
    Depending on the payload format: {{site.data.keyword.aios_short}} ({{site.data.keyword.pm_full}}-like) or user’s one return the output in corresponding format. If the format is user’s one convert it to {{site.data.keyword.aios_short}} one and store as payload record in payload logging table. If the scoring input format is {{site.data.keyword.aios_short}} one, do not store the payload (this payload is coming from {{site.data.keyword.aios_short}} not from user).
 
-   For more information, see [Using two payload formats](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-notsuppt).
+   For more information, see [Using two payload formats](#fmrk-workaround-notsuppt).
 
 - Option 2: If for some reasons embedding such logic in a single REST API endpoint is not possible, you can define two endpoints. 
 
    One is used by your application, however, you must add payload logging and convert it to the expected format. The second endpoint is used by {{site.data.keyword.aios_short}} to make required calculations, such as bias and explainability. No payload logging is required for this enpoint. During {{site.data.keyword.aios_short}} configuration, the second endpoint should be pointed to the one with compatible formats.
 
-   For more information, see [Using two endpoints](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-opt2-cs1).
+   For more information, see [Using two endpoints](#fmrk-workaround-opt2-cs1).
 
 - Option 3: Move the payload logging module to the original endpoint or downstream application. 
 

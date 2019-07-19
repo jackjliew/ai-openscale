@@ -50,7 +50,7 @@ Recommended bias monitors help to speed up configuration and ensure that you are
 
 {{site.data.keyword.aios_short}} checks your deployed model for bias at runtime. To detect bias for a deployed model, you must define fairness attributes, such as Age or Gender, as detailed in the following [Configuring the Fairness monitor](#mf-config) section.
 
-It is mandatory to specify the output schema for a model or function in Watson {{site.data.keyword.pm_short}}, for bias checking to be enabled in {{site.data.keyword.aios_short}}. The output schema can be specified using the `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` property in the metadata part of the `store_model` API. For more information, see the [{{site.data.keyword.pm_full}} client documentation](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}.
+It is mandatory to specify the output schema for a model or function in {{site.data.keyword.pm_short}}, for bias checking to be enabled in {{site.data.keyword.aios_short}}. The output schema can be specified using the `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` property in the metadata part of the `store_model` API. For more information, see the [{{site.data.keyword.pm_full}} client documentation](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}.
 
 ### How it works
 {: #mf-works}
@@ -138,7 +138,8 @@ The results of these determinations are available in the bias visualization, whi
    
 
    
-- **Debiased**: The output of the debiasing algorithm after processing the runtime and perturbed data.
+- **Debiased**: The output of the debiasing algorithm after processing the runtime and perturbed data. Selecting the **De-biased** radio button shows you the changes in the de-biased model, versus the model in production. The chart reflects the improved outcome status for groups.
+
 
    Take note of the following debiased details:
    
