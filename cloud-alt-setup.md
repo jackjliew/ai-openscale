@@ -97,7 +97,7 @@ From the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.
 
    - For example, the following screen shows data for a specific date and time. The dates and times vary, depending on when you run the module.
 
-   - For information about interpreting the time series chart, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
+   - For information about interpreting the time series chart, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
     ![Monitor data](images/setup02-0206.png)
 
@@ -105,7 +105,7 @@ From the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.
 
   - Notice that in the following screen capture, no bias exists.
 
-  - For information about interpreting the chart of the data points at a specific hour, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp).
+  - For information about interpreting the chart of the data points at a specific hour, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp).
 
     ![View details](images/setup03-0206.png)
 
@@ -125,5 +125,5 @@ For information about finding and explaining transactions, see [Explaining trans
 
 - To learn about biases, see [Fairness](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor).
 - To learn about how well your model predicts outcomes, see [Accuracy](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).
-- To learn about interpreting charts and data, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
+- To learn about interpreting charts and data, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 - To learn how underlying factors influence outcomes, see [Monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).

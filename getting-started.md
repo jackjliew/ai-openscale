@@ -154,7 +154,7 @@ At a glance, the Insights page shows any issues with fairness and accuracy, as d
 
      - For example, the following screen shows data for a specific date and time. The dates and times vary, depending on when you run the module.
 
-     - For information about interpreting the time series chart, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart).
+     - For information about interpreting the time series chart, see [Getting insights](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-it-ov).
 
    ![Demo Lets go](images/fastpath_demo_11.34.17.png)
 
@@ -164,7 +164,7 @@ At a glance, the Insights page shows any issues with fairness and accuracy, as d
     
    ![Demo Lets go](images/fastpath_demo_11.34.27.png)
 
-    - For information about interpreting the chart of the data points at a specific hour, see [Monitoring Fairness, Average Requests per Minute, and Accuracy](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp).
+    - For information about interpreting the chart of the data points at a specific hour, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp).
 
 
 ### View explainability
