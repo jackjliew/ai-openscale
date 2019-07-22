@@ -63,7 +63,7 @@ Table 1. Model support details
 | **Image Classification**      | No - active research topic | No - active research topic | Yes<sup>1</sup> | No ||
 {: caption="Model support details" caption-side="top"}
 
-<sup>1</sup> If your model / framework outputs prediction probabilities
+<sup>1</sup> Explainability is supported if your model / framework outputs prediction probabilities.
 
 <p>&nbsp;</p>
 

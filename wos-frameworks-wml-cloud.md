@@ -49,7 +49,7 @@ Table 1. Framework support details
 <sup>1</sup>Keras support does not include support for fairness.
 {: note}
 
-<sup>2</sup>If your model / framework outputs prediction probabilities.
+<sup>2</sup>Explainability is supported if your model / framework outputs prediction probabilities..
 {: note}
 
 
