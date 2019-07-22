@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Constrastive explanations use pertinent positives and pertinent negatives
+# Contrastive explanations use pertinent positives and pertinent negatives
 {: #ie-pp-pn}
 
 For contrastive explanations, {{site.data.keyword.aios_short}} displays pertinent positive and pertinent negative values. 

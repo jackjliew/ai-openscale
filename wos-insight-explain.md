@@ -63,4 +63,4 @@ Because explanations exist for fairness and drift metrics, you can click the cha
 - [Explaining categorical models](/docs/services/ai-openscale?topic=ai-openscale-ie-class)
 - [Explaining image models](/docs/services/ai-openscale?topic=ai-openscale-ie-image)
 - [Explaining unstructured text models](/docs/services/ai-openscale?topic=ai-openscale-ie-unstruct)
-- [Constrastive explanations](/docs/services/ai-openscale?topic=ai-openscale-ie-pp-pn)
+- [Contrastive explanations](/docs/services/ai-openscale?topic=ai-openscale-ie-pp-pn)
