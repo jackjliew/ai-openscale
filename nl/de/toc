@@ -1,75 +1,143 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ai-openscale" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
+{: .toc subcollection="ai-openscale" category="ai" audience="service" arm="4109554"  href="/docs/services/ai-openscale/getting-started.html" path="services/ai-openscale"}
 Watson OpenScale
 
     {: .navgroup id="learn"}
     getting-started.md
     [Informationen zu Watson OpenScale](https://www.ibm.com/cloud/watson-openscale/)
-    faststart.md
-    alt-setup.md
-    tutorial-adv.md
-    addl-rsc.md
-    index.md
+    wos-accessibility.md
+    cloud-faststart.md
+    cloud-alt-setup.md
+    cloud-tutorial-adv.md
+    cloud-addl-rsc.md
 
     {: .topicgroup}
-    Frameworkunterstützung
-        frameworks-wml-cloud.md
-        frameworks-azure-ml-studio.md
-        frameworks-aws-sagemaker.md
-        frameworks-custom.md
+    Framework- und Modellunterstützung
+        wos-frameworks-ovr.md
+        wos-framework-workaround.md
+        wos-framework-multi-eng.md
+
+    {: .topicgroup}
+    Watson Machine Learning
+        wos-frameworks-wml-cloud.md
+        wos-connect-wml.md
+
+    {: .topicgroup}
+    Microsoft Azure ML Studio
+        wos-frameworks-azure-ml-studio.md
+        wos-connect-azureml.md
+        wos-payload-azure-studio.md
+
+    {: .topicgroup}
+    Microsoft Azure ML Service
+        wos-frameworks-azure-ml-service.md
+        wos-connect-azureml-srvc.md
+        wos-payload-azure-service.md
+
+    {: .topicgroup}
+    Amazon SageMaker
+        wos-frameworks-aws-sagemaker.md
+        wos-connect-sagemaker.md
+        wos-payload-aws.md
+
+    {: .topicgroup}
+    Angepasste Machine Learning-Engine
+        wos-frameworks-custom.md
+        wos-custom-ml-ovr.md
+        wos-connect-other.md
+        wos-custom-ml-examples.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     Watson OpenScale konfigurieren
-        creds.md
-        connect-wml.md
-        connect-azureml.md
-        connect-sagemaker.md
-        connect-other.md
-        connect-db.md
-        connect-ml.md
-        config-file.md
-        feedback.md
+        wos-creds.md
+        wos-iam.md
+        wos-connect-deploy.md
+        wos-connect-db.md
+        wos-scoring.md
+        wos-payload-logging.md
+        wos-connect-ml.md
+        wos-payload-auto.md
+        wos-config-file.md
+        wos-feedback.md
+        wos-schema-definition.md
 
     {: .topicgroup}
     Überwachungen konfigurieren
-        monitor-overview.md
-        monitor-fairness.md
-        monitor-accuracy.md
-        metrics.md
+        wos-monitor-overview.md
+        wos-monitor-accuracy.md
+        wos-monitor-fairness.md
+        wos-monitor-drift.md
+        wos-metrics.md
+        wos-fairness_metrics
 
     {: .topicgroup}
-    Insights abrufen
-        insight-overview.md
-        insight-timechart.md
-        analyze-metrics-transactions.md
-        insight-explain.md
+    Insights
+        wos-insight-overview.md
+        wos-insight-timechart.md
+        wos-analyze-metrics-transactions.md
+        wos-insight-explain.md
 
-    openscale-recovery.md
+    {: .topicgroup}
+    Fairness
+        wos-fairness-ovr.md
+        wos-fairness-group.md
+
+    {: .topicgroup}
+    Qualität
+        wos-quality-overview.md
+        wos-quality-confusion-matrix.md
+        wos-quality-area-under-roc.md
+        wos-quality-area-under-pr.md
+        wos-quality-accuracy.md
+        wos-quality-tpr.md
+        wos-quality-fpr.md
+        wos-quality-recall.md
+        wos-quality-precision.md
+        wos-quality-f1-measure.md
+        wos-quality-logarithmic-loss.md
+
+    {: .topicgroup}
+    Drifterkennung
+        wos-behavior-drift.md
+
+    {: .topicgroup}
+    Leistung
+        wos-performance-throughput.md
+
+    {: .topicgroup}
+    Analyse
+        wos-analytics-ovr.md
+        wos-analytics-confidence.md
+        wos-analytics-chart-builder.md
+
+    cloud-openscale-recovery.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [API-Referenz](https://cloud.ibm.com/apidocs/ai-openscale)
-    [ModelOps-CLI](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
+    [ModelOps-Befehlszeilenschnittstelle](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
     [Python-Client](http://ai-openscale-python-client.mybluemix.net/)
-    activity-tracker.md
-    language-support.md
-    information-security.md
+    wos-activity-tracker.md
+    wos-language-support.md
+    wos-information-security.md
     [Watson GitHub-Repositorys](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    gettinghelp.md
-    release-notes.md
-    ai-openscale-faqs.md
-    [Supportfall erstellen](https://cloud.ibm.com/unifiedsupport/supportcenter)
+    wos-gettinghelp.md
+    cloud-release-notes.md
+    wos-troubleshoot.md
+    wos-FAQs.md
+    wos-known-wos-issues.md
 
     {: .topicgroup}
-    Entwicklercommunity
+    Entwickler-Community
         [IBM Developer](https://developer.ibm.com/?s=openscale)
         [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale)
+        [Supportfall erstellen](https://cloud.ibm.com/unifiedsupport/supportcenter)
         [Ideenforum](https://ibmanalytics.ideas.aha.io/?project=WSPHERE)
     {: .navgroup-end}
