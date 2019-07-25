@@ -59,7 +59,7 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a ser
 
    ![Enter service credentials](images/connect-custom-cred.png)
 
-2. After you save your machine learning setup, return to the **Dashboard**, click the **Insights** tab, and then click the **Add deployments** button.
+2. After you save your machine learning setup, return to the **Dashboard**, click the **Insights** tab, and then click the **Add to dashboard** button.
 
 3. Select a deployment from the list and click **Configure**.
 
@@ -70,7 +70,7 @@ You are now ready to configure monitors.
 
 1. If you selected the **Enter individual scoring endpoints** tile, enter your credentials for the API Endpoint, then click **Save**.
 
-2. After you save your machine learning setup, return to the **Dashboard**, click the **Insights** tab, and then click the **Add deployments** button.
+2. After you save your machine learning setup, return to the **Dashboard**, click the **Insights** tab, and then click the **Add to dashboard** button.
 
 3. Click the **Add Endpoint** button.
 

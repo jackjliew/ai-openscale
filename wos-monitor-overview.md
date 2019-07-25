@@ -34,7 +34,7 @@ Set up and enable monitors for each deployment that you are tracking with {{site
 ## Selecting a deployment
 {: #mo-select-deploy}
 
-1. From the **Insights** tab, click the **Add deployments** button. 
+1. From the **Insights** tab, click the **Add to dashboard** button. 
 
    ![Select deployment page](images/config-select-deploy.png)
 
