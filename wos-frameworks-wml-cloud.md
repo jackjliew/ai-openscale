@@ -46,12 +46,13 @@ Table 1. Framework support details
 | scikit-learn | Regression | Structured |
 | Keras with TensorFlow<sup>1</sup><sup>&</sup><sup>2</sup> | Classification | Unstructured (image, text) |
 | Keras with TensorFlow<sup>1</sup><sup>&</sup><sup>2</sup> | Regression | Unstructured (image, text) |
+| Apache Spark MLLib | Regression | Structured |
 {: caption="Framework support details" caption-side="top"}
 
 <sup>1</sup>Keras support does not include support for fairness.
 {: note}
 
-<sup>2</sup>Explainability is supported if your model / framework outputs prediction probabilities..
+<sup>2</sup>Explainability is supported if your model / framework outputs prediction probabilities.
 {: note}
 
 ## Specifying an {{site.data.keyword.ibmwatson_notm}} {{site.data.keyword.pm_short}} service instance

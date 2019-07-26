@@ -41,7 +41,7 @@ Table 1. Framework support details
 | Native | Regression<sup>1</sup> | Structured |
 {: caption="Framework support details" caption-side="top"}
 
-<sup>1</sup>Support for regression models only includes bias and explainability in {{site.data.keyword.aios_short}}. It does not include drift magnitude.
+<sup>1</sup>Support for regression models does not include drift magnitude.
 
 ## Adding Amazon SageMaker to {{site.data.keyword.aios_short}}
 {: #frmwrks-aws-sage-add}

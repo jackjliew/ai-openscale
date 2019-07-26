@@ -38,6 +38,7 @@ Table 1. Framework support details
 | Framework | Problem type | Data type |
 |:---|:---:|:---:|
 | Native | Classification | Structured |
+| Native | Regression | Structured |
 {: caption="Framework support details" caption-side="top"}
 
 ## Adding Microsoft Azure ML Studio to {{site.data.keyword.aios_short}}
