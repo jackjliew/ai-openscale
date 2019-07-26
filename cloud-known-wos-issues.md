@@ -26,7 +26,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Known issues and limitations for {{site.data.keyword.aios_short}} for {{site.data.keyword.Bluemix}}
+# Known issues and limitations for {{site.data.keyword.aios_short}} for {{site.data.keyword.cloud_notm}}
 {: #rn-12ki}
 
 The following lists contains the known issues and limitation that are common for {{site.data.keyword.aios_full}} for {{site.data.keyword.Bluemix}} and {{site.data.keyword.wos4d_full}} and also those that are specific to  {{site.data.keyword.aios_full}} for {{site.data.keyword.Bluemix}}.
@@ -45,7 +45,7 @@ The following limitations and known issues are common to both {{site.data.keywor
 ### Common limitations
 {: #wos-limitations}
 
-- For {{site.data.keyword.pm_full}}, scoring input for image classification models that are sent for payload logging cannot exceed 1 MB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
+- For {{site.data.keyword.pm_full}}, scoring input for image classification models that are sent for payload logging cannot exceedai-open-scale-ibm-aios-scheduling  | 1 | Scheduling serviceMB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
 
 
 - Explainability for unstructured text models is not supported for continuous script languages, such as Japanese, Chinese, and Korean, which don't use whitespace or punctuation characters to separate words.

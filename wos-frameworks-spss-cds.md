@@ -27,6 +27,8 @@ subcollection: ai-openscale
 # IBM SPSS C&DS frameworks
 {: #frmwrks-spss}
 
+You can use IBM SPSS C&DS to perform payload logging, feedback logging, and to measure performance accuracy, run-time bias detection, explainability, and auto-debias function in {{site.data.keyword.aios_full}}.
+
 {{site.data.keyword.aios_full}} plans to fully support the following IBM SPSS Collaboration and Deployment Services (C&DS) frameworks:
 {: shortdesc}
 

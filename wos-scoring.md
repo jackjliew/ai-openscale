@@ -30,13 +30,15 @@ subcollection: ai-openscale
 
 To configure monitors, {{site.data.keyword.aios_short}} requires you to send a scoring payload, in order to begin to log the data that will be monitored.
 
-- For models deployed in {{site.data.keyword.pm_full}}, you have the option of scoring deployed models in {{site.data.keyword.pm_full}} or by using the Payload logging API. For deployed models that are scored in {{site.data.keyword.pm_short}}, they are  automatically sent to {{site.data.keyword.aios_short}}. 
-- For other machine learning engines, such as Microsoft Azure, Amazon SageMaker, or a custom machine learning engine the scoring payload must be sent using the Payload Logging API. For more information, see [Payload logging for non-{{site.data.keyword.pm_full}} service instances](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
+- For models deployed in {{site.data.keyword.pm_full}}, they are  automatically sent to {{site.data.keyword.aios_short}}. For scoring requests that are sent automatically, you do not need to complete this task and no code snippets appear.
+- For other machine learning engines, such as Microsoft Azure, Amazon SageMaker, or a custom machine learning engine the scoring payload must be sent using the Payload Logging API. For this, you must use a code snippet in either cURL or Python format, which you can retrieve from the Payload logging page. For more information, see [Payload logging for non-{{site.data.keyword.pm_full}} service instances](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
 
 ## Steps for payload logging
 {: #cdb-score-apisteps}
 
-1. Select a deployment and go to the **Payload logging** page.
+1. From the {{site.data.keyword.aios_short}} dashboard, click a deployment tile.
+2. Click **Configure monitors** . 
+3. In the navigation pane, click **Payload logging**.
 2. Choose whether to use the `cURL` or `Python` code by clicking the `cURL` or `Python` tab.
 3. Click **Copy to clipboard** and paste it into to log model deployment request and response data. For more information, see [Payload logging for non-{{site.data.keyword.pm_full}} service instances](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
 
@@ -54,12 +56,12 @@ Scoring requests are an integral part of {{site.data.keyword.aios_short}} proces
 
 - For tabular, text, image models the following baseline request generates data points:
 
-   - 1 scoring request generates 5000 data points.
+   -ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling servicescoring request generates 5000 data points.
 
 - For tabular classification models only, there are additional scoring requests that are made for contrastive explanation. The following requests are added to the preceding baseline request:
 
    - 100 scoring requests generates 51 additional data points per request.
-   - 101 scoring requests generates 1 additional data point per request.
+   - 101 scoring requests generatesai-open-scale-ibm-aios-scheduling  | 1 | Scheduling serviceadditional data point per request.
 
 
 ## Next steps

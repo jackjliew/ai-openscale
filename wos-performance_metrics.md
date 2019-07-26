@@ -46,4 +46,4 @@ You can review performance metrics value over time on the {{site.data.keyword.ai
 
 The following performance metrics are supported by {{site.data.keyword.aios_short}}:
 
-- [Throughput](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)
+- [Throughput](/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

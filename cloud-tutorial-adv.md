@@ -28,6 +28,18 @@ subcollection: ai-openscale
 # Python SDK Tutorial (Advanced)
 {: #crt-ov}
 
+In this tutorial, you learn to perform the following tasks:
+
+- Run a Python notebook to create, train and deploy a machine learning model.
+- Create a data mart, configure performance, accuracy, and fairness monitors, and create data to monitor.
+- View results in the {{site.data.keyword.aios_short}} Insights tab.
+
+
+## Python client
+{: #in-pyc}
+
+The [{{site.data.keyword.aios_short}} Python client](http://ai-openscale-python-client.mybluemix.net/){: external} is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service on {{site.data.keyword.cloud_notm}}. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure a logging database, bind your machine learning engine, and select and monitor deployments. For examples using the Python client in this way, see the [{{site.data.keyword.aios_short}} sample notebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks){: external}.
+
 ## Scenario
 {: #crt-scenario}
 
@@ -114,7 +126,7 @@ If you haven't already, ensure that you provision {{site.data.keyword.aios_full}
 
 If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a `Databases for PostgreSQL` or `Db2 Warehouse` service to take full advantage of integration with {{site.data.keyword.DSX}} and continuous learning services. If you choose not to provision a paid service, you can use the free internal PostgreSQL storage with {{site.data.keyword.aios_short}}, but you will not be able to configure continuous learning for your model.
 
-- [Provision a Databases for PostgreSQL service](https://{DomainName}/catalog/services/databases-for-postgresql) or [a Db2 Warehouse service](https://{DomainName}/catalog/services/db2-warehouse) if you do not already have one associated with your account:
+- [Provision a Databases for PostgreSQL service](https://{DomainName}/catalog/services/databases-for-postgresql){: external} or [a Db2 Warehouse service](https://{DomainName}/catalog/services/db2-warehouse){: external} if you do not already have one associated with your account:
 
   ![DB for Postgres](images/dbpostgres.png)
 
@@ -145,7 +157,7 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 ### Add the `Working with Watson Machine Learning` notebook to your {{site.data.keyword.DSX}} project
 {: #crt-add-notebook}
 
-- Download the following file:
+- Access the following file. If you have a GitHub account, you can sign in to clone and download the file. Otherwise, you can view the raw version, by clicking the **Raw** button and copy the text of the file into a new file with a .ipynb extension.
 
     - [Working with Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
@@ -161,7 +173,7 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 
   ![New Notebook Form](images/new_notebook_name2a.png)
 
-- In the **Select runtime** section, choose a Python 3.5 with Spark option:
+- In the **Select runtime** section, choose the latest Python with Spark option:
 
 - Click **Create Notebook**.
 
@@ -175,7 +187,7 @@ The `Working with Watson Machine Learning` notebook contains detailed instructio
 
 - In the "Provision services and configure credentials" section, make the following changes:
 
-    - Follow the instructions to create, copy, and paste an {{site.data.keyword.cloud_notm}} API key.
+    - Follow the instructions in the notebook to create, copy, and paste an {{site.data.keyword.cloud_notm}} API key.
 
     - Replace the {{site.data.keyword.pm_full}} service credentials with the ones you created previously.
 

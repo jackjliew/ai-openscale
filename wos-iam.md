@@ -42,7 +42,7 @@ Policies enable access to be granted at different levels. Some of the options in
 
 After you define the scope of the access policy, you assign a role which determines the user's level of access. Review the following tables which outline what actions each role allows within the {{site.data.keyword.aios_short}} service.
 
-With platform management roles, users can be assigned varying levels of permission for performing platform actions within the account and on a service. For example, platform management roles that are assigned for catalog resources enable users to complete actions such as creating, deleting, editing, and viewing service instances. And, the platform management roles that are assigned for account management services enable users to complete actions such as inviting and removing users, working with resource groups, and viewing billing information. For more information about the account management services, see [Assigning access to account management services](/docs/iam?topic=iam-account-services#account-services).
+With platform management roles, users can be assigned varying levels of permission for performing platform actions within the account and on a service. For example, platform management roles that are assigned for catalog resources enable users to complete actions such as creating, deleting, editing, and viewing service instances. And, the platform management roles that are assigned for account management services enable users to complete actions such as inviting and removing users, working with resource groups, and viewing billing information. For more information about the account management services, see [Assigning access to account management services](/docs/iam?topic=iam-account-services#account-services){: external}.
 
 Select all roles that apply when creating a policy. Each role allows separate actions to be completed and doesn't inherit the actions of the lesser roles.
 {: tip}
@@ -64,6 +64,6 @@ The following table provides examples for some of the platform management action
 {: #platformrolestable1}
 
 
-For service access roles, which enable users access to {{site.data.keyword.aios_short}} as well as the ability to call the REST API, {{site.data.keyword.aios_short}} defers to the platform management roles that are listed in the preceding table. For information about assigning user roles in the UI, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#iammanidaccser).
+For service access roles, which enable users access to {{site.data.keyword.aios_short}} as well as the ability to call the REST API, {{site.data.keyword.aios_short}} defers to the platform management roles that are listed in the preceding table. For information about assigning user roles in the UI, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser#iammanidaccser){: external}.
 
  

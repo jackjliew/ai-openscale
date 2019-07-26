@@ -92,4 +92,4 @@ Finally, {{site.data.keyword.aios_short}} uses a threshold to decide that data i
 ## Next steps
 {: #mf-next}
 
-From the **Configure monitors** page, you can select another monitoring category.
+To continue configuring monitors, click the **Drift** tab and click **Begin**. For more information, see [Configuring the drift detection monitor](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).

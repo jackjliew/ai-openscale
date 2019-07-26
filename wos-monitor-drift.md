@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Configuring the drift detection monitor
+# Configuring the drift detection monitor ![beta tag](images/beta.png)
 {: #behavior-drift-config}
 
 You must configure the {{site.data.keyword.aios_full}} drift monitor before it can begin to analyze your model. There are two options, either training your model online or using a notebook.
@@ -41,7 +41,7 @@ If you use {{site.data.keyword.pm_full}}, you have the option of using the {{sit
 
 1. From the **Drift** tab, on the **What is Drift**? page, click **Begin** to start the configuration process.
 
-   ![What is Drift? page](images/drift-config-1.png)
+   ![What is Drift? page](images/wos-drift-config-1.png)
 
 2. Click the **Train in Watson OpenScale** tile.
 
@@ -70,15 +70,15 @@ This option is useful if the training data is not stored in Db2 or {{site.data.k
 
 1. From the **Drift** tab, on the **What is Drift**? page, click **Begin** to start the configuration process.
 
-   ![What is Drift? page](images/drift-config-1.png)
+   ![What is Drift? page](images/wos-drift-config-1.png)
 
 2. Click the **Train in a notebook** tile.
 
-   ![What is Drift? page](images/drift-config-2.png)
+   ![Drift configuration page with an online option and a notebook option](images/drift-config-2.png)
 
 3. Drag the compressed model file into the target zone, or browse to select it and click **Next**.
 
-   ![What is Drift? page](images/drift-config-2b.png)
+   ![What is Drift? page](images/wos-drift-config-2b.png)
    
 3. Upload the drift detection model and click **Next**.
 

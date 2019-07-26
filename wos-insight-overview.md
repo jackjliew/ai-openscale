@@ -40,7 +40,7 @@ The **Insights** tab ( ![Insight dashboard](images/insight-dash-tab.png) ) provi
 
 - ***Deployments Monitored*** - In this example, a total of 10 deployments are being monitored. Eight of the ten following deployments are shown as individual tiles.
 
-- ***Accuracy Alerts*** - A total of 3 Accuracy alerts are represented in the following tiles. In this example, the `Driver Performance`, `Market Analytics`, and `Pricing Risk` deployments show Accuracy values of `60%`, `65%`, and `79%`, respectively.
+- ***Quality Alerts*** - A total of 3 Quality (previously called Accuracy) alerts are represented in the following tiles. In this example, the `Driver Performance`, `Market Analytics`, and `Pricing Risk` deployments show Accuracy values of `60%`, `65%`, and `79%`, respectively.
 
 - ***Fairness Alerts*** - There are a total of 6 Fairness alerts, represented in the following tiles, and by a small `BIAS` tag. In this example, the `Driver Performance`, `Market Analytics`, `Regulatory Compliance`, `Fraud Detection`, `Premium Optimization`, and `Damage Cost Estimator` deployments show Fairness values of `59%`, `68%`, `62%`, `64%`, `79%`, and `63%`, respectively.
 
@@ -75,5 +75,5 @@ Use the **Explain a transaction** tab ( ![Explain a transaction tab](images/insi
 ## Next steps
 {: #io-next}
 
-- [Add more deployments to monitor](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-dpl-select).
+- [Add more deployments to monitor](/docs/services/ai-openscale?topic=ai-openscale-dpl-select).
 

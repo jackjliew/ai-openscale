@@ -56,7 +56,7 @@ The R squared metric is defined in the following formula.
 
 ```
                   explained variation
-R squared = 1 -  _____________________
+R squared =ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service-  _____________________
 
                     total variation
 ```

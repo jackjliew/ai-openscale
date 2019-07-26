@@ -31,7 +31,7 @@ subcollection: ai-openscale
 This example of explainability is for a binary classification model that approves or denies insurance claims. You can see the factors that contributed positively or negatively to the final outcome of `DENIED` in this case.
 {: shortdesc}
 
-The feature *POLICY AGE* having a value of `< 1 year` had the maximum impact in the model deciding a DENIED outcome. The other features that contributed to this outcome were *CLAIM FREQUENCY* (`High`) and *AGE* (`18`), with only a minor impact from *CAR VALUE* (`$50,000`).
+The feature *POLICY AGE* having a value of `<ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling serviceyear` had the maximum impact in the model deciding a DENIED outcome. The other features that contributed to this outcome were *CLAIM FREQUENCY* (`High`) and *AGE* (`18`), with only a minor impact from *CAR VALUE* (`$50,000`).
 
 ![Explainability binary classification](images/insight-explain-binary.png)
 

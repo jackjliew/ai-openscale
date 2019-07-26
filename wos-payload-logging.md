@@ -56,7 +56,6 @@ subscription.payload_logging.store(records=records_list)
 ```
 
 ### Previewing the payload logging table
-{: #cdb-preview-payload-log-table}
 
 You can preview the content of your payload logging table either by directly connecting to the database or by using the Python SDK, which is shown in the following sample output. 
 
@@ -86,11 +85,7 @@ req_response = requests.post(endpoint,
                              headers = headers)
 ```
 
-
-
 ## Next steps
-{: #cdb-payload-nxt-stps}
 
-For more information, see [Payload Logging/publishScoringPayload](http://aiopenscale-api.mybluemix.net/#/Payload%20Logging%20(Public%20API){: external}
-
+After you set up payload logging, you can continue configuring monitors by entering model details. For more information, see [Provide model details](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-work-model-dets).
 

@@ -53,7 +53,7 @@ The following new features and changes to {{site.data.keyword.aios_short}} are a
 
 - __*Microsoft Azure ML Service support*__: {{site.data.keyword.aios_short}} now supports Microsoft Azure ML Service, which provides a means for integrating your Azure ML service AI models with the fairness, accuracy, and explainability of {{site.data.keyword.aios_short}}.
 
-   For more information, see [Microsoft Azure ML Service frameworks](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-frmwrks-azure-service).
+   For more information, see [Microsoft Azure ML Service frameworks](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service).
 
 - __*Improved work flow*__: {{site.data.keyword.aios_short}} has been busy improving the workflow so that you can speed through your work with fewer clicks and more explainability. The navigation panel lets you see where you are and makes it easy to jump back and forth between configuration tasks.
 
@@ -198,7 +198,7 @@ The following new features, changes, and known issues with the service are avail
 
 - __*General availability*__: The General Availability (GA) release of {{site.data.keyword.aios_full_notm}} as an {{site.data.keyword.Bluemix}} Standard (paid) plan.
 
-- __*{{site.data.keyword.icp4dfull_notm}} V1.2*__: If you are using {{site.data.keyword.wos4d_full}} V1.2, see the documentation, including installation instructions, here: [Installation checklist](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#install)
+- __*{{site.data.keyword.icp4dfull_notm}} V1.2*__: If you are using {{site.data.keyword.wos4d_full}} V1.2, see the documentation, including installation instructions, here: [Installation checklist](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#install)
 
 - __*Support for your model type*__: In addition to AI model deployments in {{site.data.keyword.pm_full}}, {{site.data.keyword.aios_short}} supports model deployments in Microsoft Azure, Amazon SageMaker, and Custom environments. See [Supported model types](/docs/services/ai-openscale?topic=ai-openscale-in-ov) for more information.
 
@@ -227,4 +227,4 @@ The following new features, changes, and known issues with the service are avail
 Still have questions?
 
 - [Limitations](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
-- [Known issues](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)
+- [Known issues](/docs/services/ai-openscale?topic=ai-openscale-rn-12ki#cloud-limitations)

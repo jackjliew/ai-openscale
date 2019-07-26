@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # Google Cloud ML Engine frameworks
 {: #frmwrks-google}
 
-{{site.data.keyword.aios_full}} plans to support Google Cloud Machine Learning Engine frameworks in a future release.
+You can use Google Cloud ML Engine to perform payload logging, feedback logging, and to measure performance accuracy, run-time bias detection, explainability, and auto-debias function in {{site.data.keyword.aios_full}}.
+
+{{site.data.keyword.aios_full}} fully supports the following Google Cloud Machine Learning Engine frameworks:
 {: shortdesc}
 
 Table 1. Framework support details

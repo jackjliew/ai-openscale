@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Activity Tracker events
 {: #at-events}
 
-When you have {{site.data.keyword.aios_short}} provisioned as a service in your {{site.data.keyword.cloud_notm}} account, you can see the following events in the [{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
+When you have {{site.data.keyword.aios_short}} provisioned as a service in your {{site.data.keyword.cloud_notm}} account, you can see the following events in the [{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov){: external}.
 {: shortdesc}
 
 ## Events for public APIs

@@ -40,7 +40,7 @@ To automate the provisioning and configuration of the required {{site.data.keywo
 ## Before you begin
 {: #as-prereqs}
 
-1. [Create an {{site.data.keyword.cloud_notm}} API key and download it](/docs/iam?topic=iam-userapikey#create_user_key). You will need to enter the API key in a later step.
+1. [Create an {{site.data.keyword.cloud_notm}} API key and download it](/docs/iam?topic=iam-userapikey#create_user_key){: external}. You will need to enter the API key in a later step.
 
 2. [Install any release of Python 3](https://www.python.org/downloads/){: external}.
 
@@ -105,7 +105,7 @@ From the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.
 
   - Notice that in the following screen capture, no bias exists.
 
-  - For information about interpreting the chart of the data points at a specific hour, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp).
+  - For information about interpreting the chart of the data points at a specific hour, see [Visualizing data for a specific hour](/docs/services/ai-openscale?topic=ai-openscale-it-vdet).
 
     ![View details](images/setup03-0206.png)
 

@@ -29,19 +29,20 @@ subcollection: ai-openscale
 # Select deployments to monitor
 {: #dpl-select}
 
-Select from a list of deployments to monitor.
+To add monitors to the {{site.data.keyword.aios_short}} dashboard, you must have deployed models that are available through one of the machine learning providers that you have configured for {{site.data.keyword.aios_short}}. Select from a list of machine learning providers and deployments to monitor.
 {: shortdesc}
 
 ## Choosing deployments
 {: #dpl-config}
 
+1.  From the {{site.data.keyword.aios_short}} dashboard, click **Add to dashboard**.
 1.  {{site.data.keyword.aios_short}} checks your machine learning providers to compile a list of deployed models. From the list of deployments, you can select the ones that you want to monitor.
 
     ![Select deployments](images/wos-select-model-deployment.png)
 
 1.  Click **Configure**.
 
-You have successfully selected deployments. 
+You have successfully selected deployments to monitor. You must now configure the monitors for this model. 
 
 ## Next steps
 {: #dpl-next}

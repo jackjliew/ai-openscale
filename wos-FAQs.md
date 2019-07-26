@@ -86,7 +86,7 @@ When your ready to transition from the Lite plan, there's a **Standard** pricing
 ### I want to run {{site.data.keyword.aios_short}} on my own servers. How much computer processing power should I allocate?
 {: #faq-sizing}
 
-There are specific guidelines for [hardware configuration](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#inst-hwt) for three-node and six-node configurations. Your IBM Technical Sales team can also help you with sizing your specific configuration. Because {{site.data.keyword.aios_short}} run as an add-on to {{site.data.keyword.icp4dfull_notm}}, you need to consider the requirements for both software products.
+There are specific guidelines for [hardware configuration](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#inst-hwt) for three-node and six-node configurations. Your IBM Technical Sales team can also help you with sizing your specific configuration. Because {{site.data.keyword.aios_short}} run as an add-on to {{site.data.keyword.icp4dfull_notm}}, you need to consider the requirements for both software products.
 
 ### How do I convert a prediction column from an integer data type to a categorical data type?
 {: #wos-faqs-convert-data-types}

@@ -61,8 +61,6 @@ Accuracy can mean different things depending on the type of the algorithm:
 
 You need to add manually-labelled feedback data through the {{site.data.keyword.aios_short}} UI as shown in the following examples, using a [Python client](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: external} or [Rest API](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: external}.
 
-Review [Supported frameworks](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) for accuracy monitoring limitations.
-
 ### De-biased accuracy
 {: #acc-debias-view}
 

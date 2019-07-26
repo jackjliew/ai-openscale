@@ -67,7 +67,7 @@ For an image classification model example of explainability, you can see which p
 
 ![Explainability image classification](images/insight-explain-image.png)
 
-For {{site.data.keyword.pm_full}}, scoring input for image classification models that are sent for payload logging cannot exceed 1 MB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
+For {{site.data.keyword.pm_full}}, scoring input for image classification models that are sent for payload logging cannot exceedai-open-scale-ibm-aios-scheduling  | 1 | Scheduling serviceMB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
 {: note}
 
 

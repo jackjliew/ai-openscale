@@ -22,7 +22,7 @@ subcollection: ai-openscale
 # Explaining transactions
 {: #ie-ov}
 
-For each deployment, you can see explainability data for specific transactions.
+For each deployment, you can see explainability data for specific transactions. Transactions appear only when there is data to support the monitors and is based on the thresholds that you set, the time that monitors are scheduled to run, and availability of payload data from {{site.data.keyword.pm_full}}.
 {: shortdesc}
 
 ## Viewing explanations by transaction ID

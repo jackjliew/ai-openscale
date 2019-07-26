@@ -31,16 +31,16 @@ subcollection: ai-openscale
 Set up and enable monitors for each deployment that you are tracking with {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
+For example, if you are using the **German Credit Risk model** for the interactive tutorial, select the model deployment, set the data type for payload logging, and confirm the settings that are presented as part of the model details section.
+
 ## Selecting a deployment
 {: #mo-select-deploy}
 
 1. From the **Insights** tab, click the **Add to dashboard** button. 
 
-   ![Select deployment page](images/config-select-deploy.png)
+   A list of available model deployments appears. If you don't see any model deployments, you must deploy a model using your machine learning provider. For the tutorial, select the **German Credit Risk model**.
 
-   A list of available model deployments appears.
-
-   ![Prepare for monitoring](images/wos-select-model-deployment.png)
+   ![The select a model deployment screen is shown. It has selections for a machine learning provider and a deployment.](images/wos-select-model-deployment.png)
 
 2. Click a model deployment and then click **Configure**.
 
@@ -53,20 +53,20 @@ Set up and enable monitors for each deployment that you are tracking with {{site
 ## Provide payload logging details
 {: #mo-work-data}
 
-You must provide information about your model and training data. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+You must provide information about your model and training data. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) For the tutorial, in the **Data type** field, select **Numeric/categorical** and for the **Algorithm type**, select **Binary classification**.
 
-![Prepare explanation](images/config-what-monitor.png)
+![The specify type of input screen is shown with selections for data type and algorithm type](images/config-what-monitor.png)
 
-- If you use an {{site.data.keyword.pm_full}} instance that is in the same region as your {{site.data.keyword.aios_short}} instance, although you must select Data type and Algorithm type, some payload logging information is configured automatically for you.
+- If you use an {{site.data.keyword.pm_full}} instance that is in the same region as your {{site.data.keyword.aios_short}} instance, although you must select Data type and Algorithm type, some payload logging information is configured automatically for you. 
 - Otherwise from the **Payload logging** tab and windows, you must enter information about your data and algorithm types and your payload logging. 
 
-   There are specific requirements depending on your selections. For more information, see [Numeric/categorical data](https://test.cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan).
+   There are specific requirements depending on your selections. For more information, see [Numeric/categorical data](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan).
 
    Before you can configure your monitors, you need to copy one of the code snippets to run. Run the cURL command in your client application or the Python command in your data science notebook. This provides a way to log model deployment requests and write response data into the payload database.
    
 After you send the payload logging details, either by using the local {{site.data.keyword.pm_full}} method or by using the API, you must return to the **Payload logging** screen and click **I'm finished**.
 
-![payload logging screen is pictures](images/payload-logging-gosales001.png)
+![payload logging screen is pictured](images/payload-logging-gosales001.png)
 
 If the scoring is sent correctly to {{site.data.keyword.aios_short}}, the following screen is shown after you click the **I'm finished** button. The button is hidden and you see the message, **Logging activated successfully**.
 
@@ -76,19 +76,19 @@ If the scoring is sent correctly to {{site.data.keyword.aios_short}}, the follow
 ### Provide model details
 {: #mo-work-model-dets}
 
-Provide information about your model so that {{site.data.keyword.aios_short}} can access the database and understand how the model is set up.
+Provide information about your model so that {{site.data.keyword.aios_short}} can access the database and understand how the model is set up. For example, if you are using the **German Credit Risk model** for the interactive tutorial, many of the following fields are completed automatically for you.
 
 Specifically to configure monitors, you must perform the following tasks:
 
 1. Specify the location of the training data. You do this by entering the location, hostname or IP address, the database name, and the authentication information.
 2. Within the database, you must select the training table by selecting the schema and table.
-3. Select the label column from the training table.
+3. Select the label column from the training table, for example, for the tutorial, click the **Risk** tile.
 4. Select the features that were used to train the AI deployment.
 5. Select the text and categorical features.
-6. Select the deployment prediction column.
+6. Select the deployment prediction column, for example, for the tutorial, click the **predictedLabel** tile.
 7. Finally, you can review your model details before you save it.
 
-The following sections give some specific information that you encounter depending on the type of model, either [Numeric/categorical data](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan) or [Images and Unstructured text](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datai).
+The following sections give some specific information that you encounter depending on the type of model, either [Numeric/categorical data](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan) or [Images and Unstructured text](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datai).
 
 
 ### Numeric/categorical data
@@ -161,4 +161,4 @@ Review your selection summary and click **Save** to continue.
 ### Next steps
 {: #mo-next}
 
-To continue configuring monitors, click the **Accuracy** tab and click **Begin**. For more information, see [Configuring the Accuracy or Quality monitor](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).
+To continue configuring monitors, click the **Quality** tab and click **Begin**. For more information, see [Configuring the Quality monitor](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).

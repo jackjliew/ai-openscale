@@ -31,9 +31,8 @@ subcollection: ai-openscale
 You can upgrade {{site.data.keyword.aios_full}} from a free lite plan to a paid plan by using the {{site.data.keyword.Bluemix}} dashboard. How do you know it's time to upgrade? If you are getting error messages, such as `403 Errors.AIQFM0011: 'Lite plan has exceeded the 50,000 rows limitation for Debias`.
 {: shortdesc}
 
-1. Log on to {{site.data.keyword.Bluemix}} using your {{site.data.keyword.ibmid}} credentials.
-2. From the **Navigation Menu**, click **Dashboard**.
-3. Click **Services** and then click **Watson OpenScale**.
+1. From the {{site.data.keyword.aios_short}} dashboard, click your avatar.
+2. Click **View upgrade options**.
 4. Set the **Standard** check box and then click **Upgrade**.
 
 After you upgrade, it takes about 5 minutes to take effect. It is possible to get an error message during this period, however, after the upgrade, any error messages about exceeding limitations desist.
@@ -41,4 +40,4 @@ After you upgrade, it takes about 5 minutes to take effect. It is possible to ge
 ## Next steps
 {: #cf-upgrade-ns}
 
-To understand more about upgrading {{site.data.keyword.Bluemix}} services, see [Changing service plans](/docs/resources?topic=resources-changing).
+To understand more about upgrading {{site.data.keyword.Bluemix}} services, see [Changing service plans](/docs/resources?topic=resources-changing){: external}.

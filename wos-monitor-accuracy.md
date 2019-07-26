@@ -25,27 +25,27 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Configuring the Accuracy or Quality monitor
+# Configuring the Quality (Accuracy) monitor
 {: #acc-monitor}
 
-The Quality monitor (preiously known as the Accuracy monitor) lets you know how well your model predicts outcomes.
+The Quality monitor (previously known as the Accuracy monitor) lets you know how well your model predicts outcomes.
 {: shortdesc}
 
 ## Configuration steps
 {: #acc-config}
 
-From the **Accuracy** tab, on the **What is Accuracy?** page, click **Begin** to start the configuration process.
+From the **Quality** tab, on the **What is the Quality monitor?** page, click **Begin** to start the configuration process.
 
-![What is Accuracy? page](images/accuracy-what-is.png)
+![The What is the Quality monitor? page is shown and it explains that the quality monitor evaluates how well you model predicts accurate outcomes](images/wos-quality-what-is.png)
 
 Configure the following settings on the successive pages of the Accuracy configuration tab:
 
--  Set the accuracy alert threshold. Select a value that represents an acceptable accuracy level.
+-  Set the accuracy alert threshold. Select a value that represents an acceptable accuracy level. For example, if you are using the **German Credit Risk model** for the interactive tutorial, set the alert to **90%**.
 
-    Accuracy is a value synthesized from relevant data science metrics associated with each particular model type. The score is a normalized measure to allow you to easily compare accuracy across different model types. In typical situations, an accuracy score of 80 is sufficient.
+    Accuracy is a value synthesized from relevant data science metrics associated with each particular model type. The score is a normalized measure to allow you to easily compare accuracy across different model types. In typical situations, an accuracy score of 80 is sufficient. For the tutorial, to generate more data, we recommend 90.
     {: note}
 
--  Set minimum and maximum sample sizes. Minimum size prevents measuring Accuracy until a minimum number of records are available in the evaluation dataset; this ensures the sample size is not too small to skew results. The maximum sample size helps better manage the time and effort it takes to evaluate the dataset; only the most recent records will be evaluated if this size is exceeded.
+-  Set minimum and maximum sample sizes. Minimum size prevents measuring Accuracy until a minimum number of records are available in the evaluation dataset; this ensures the sample size is not too small to skew results. The maximum sample size helps better manage the time and effort it takes to evaluate the dataset; only the most recent records will be evaluated if this size is exceeded. For example, if you are using the **German Credit Risk model** for the interactive tutorial, set the minimum sample size to **100** and the maximum sample size to **10000**.
 
 
 A summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section. Otherwise, click **Save** to complete your configuration.
@@ -53,4 +53,4 @@ A summary of your selections is presented for review. If you want to change anyt
 ### Next steps
 {: #acc-next}
 
-From the **Configure monitors** page, you can select another monitoring category.
+To continue configuring monitors, click the **Fairness** tab and click **Begin**. For more information, see [Configuring the fairness monitor](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor).

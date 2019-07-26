@@ -43,7 +43,7 @@ Currently, {{site.data.keyword.aios_short}} detects and recommends monitors for 
 
 In addition to detecting protected attributes, {{site.data.keyword.aios_short}} recommends which values within each attribute should be set as the monitored and the reference values. So, for example, {{site.data.keyword.aios_short}} recommends that within the "Sex" attribute, the bias monitor be configured such that "Woman" and "Non-Binary" are the monitored values, and "Male" is the reference value. If you want to change any of the recommendations, you can edit them via the bias configuration panel. 
 
-Recommended bias monitors help to speed up configuration and ensure that you are checking your AI models for fairness against sensitive attributes. As regulators begin to turn a sharper eye on algorithmic bias, it is becoming more critical that organizations have a clear understanding of how their models are performing, and whether they are producing unfair outcomes for certain groups. 
+Recommended bias monitors help to speed up configuration and ensure that you are checking your AI models for fairness against sensitive attributes. As regulators begin to turn a sharper eye on algorithmic bias, it is becoming more critical that organizations have a clear understanding of how their models are performing, and whether they are producing unfair outcomes for certain groups.
 
 ## Understanding Fairness
 {: #mf-understand}
@@ -100,7 +100,7 @@ When potential bias is detected, {{site.data.keyword.aios_short}} performs sever
 
 Two different datasets are used for computing fairness and accuracy. Fairness is computed by using the payload + perturbed data. Accuracy is computed by using the feedback data. To compute accuracy, {{site.data.keyword.aios_short}} needs manually labelled data, which is only present in feedback table.
 
-The results of these determinations are available in the bias visualization, which includes the following views: 
+The results of these determinations are available in the bias visualization, which includes the following views. (You only see the views if there is data to support
 
 - **Payload + Perturbed**: Includes the scoring request received for the selected hour plus additional records from previous hours if the minimum number of records required for evaluation was not met. Includes additional perturbed/synthesized records used to test the model's response when the value of the monitored feature changes.
 

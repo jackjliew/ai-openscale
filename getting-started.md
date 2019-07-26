@@ -75,7 +75,7 @@ There are several setup options, depending on your preference and level of exper
 
    Use the interface to perform common tasks with a sample model and injected data.
    
-- [The advanced tutorial](/docs/services/ai-openscale?topic=ai-openscale-crt-ov) enables more technical users to install a Python module that automates the provisioning and configuration of prerequisite services. This advanced tutorial is for data scientists or users who are comfortable with coding, Python and Notebooks. It's an example of how the {{site.data.keyword.aios_short}} client can be used to perform functionality programatically. The notebook that is used in this tutorial results in the same place as following the [automated setup](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start).
+- [The advanced tutorial](/docs/services/ai-openscale?topic=ai-openscale-crt-ov) enables more technical users to install a Python module that automates the provisioning and configuration of prerequisite services. This advanced tutorial is for data scientists or users who are comfortable with coding, Python and Notebooks. It's an example of how the {{site.data.keyword.aios_short}} client can be used to perform functionality programatically. The notebook that is used in this tutorial results in the same place as following the [automated setup](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start).
 
    This module requires that Python 3 is installed, which includes the pip package management system. For instructions, see, [Installing a Python module to set up {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module).
 
@@ -111,7 +111,7 @@ If you haven't already, ensure that you provision {{site.data.keyword.aios_full}
 
 1. Click **Catalog** > **AI** > **{{site.data.keyword.aios_short}}**.
 2. Give your service a name, choose a plan, and click the **Create** button.
-3. To start {{site.data.keyword.aios_short}}, click the **Get Started** button.
+3. To start {{site.data.keyword.aios_short}}, click the **Launch Application** button.
 
 ## Auto setup
 {: #wos-work-demo}
@@ -121,14 +121,7 @@ If you haven't already, ensure that you provision {{site.data.keyword.aios_full}
 
    ![Demo welcome](images/cloud-auto-setup.png)
 
-   As the {{site.data.keyword.aios_short}} services are being provisioned, you can review the demo scenario:
-
-   ![Demo preview](images/fastpath_demo_11.31.58.png)
-
-When provisioning is complete, click the **Let's Go** button to tour the {{site.data.keyword.aios_short}} dashboard, and proceed with [Viewing results in {{site.data.keyword.aios_short}}](#wos-open).
-
-   ![Demo Let's go](images/fastpath_demo_11.33.45.png)
-
+   As the {{site.data.keyword.aios_short}} services are being provisioned, you can review the demo scenario. When provisioning is complete, click the **Start tour** button to tour the {{site.data.keyword.aios_short}} dashboard, and proceed with [Viewing results in {{site.data.keyword.aios_short}}](#wos-open).
 
 ## Viewing results in {{site.data.keyword.aios_short}}
 {: #wos-open}
@@ -150,22 +143,9 @@ At a glance, the Insights page shows any issues with fairness and accuracy, as d
 {: #wos-monitoring}
 
 1.  From the Insights page, click the `GermanCreditRiskModelICP` tile to view details about the monitored data.
-1.  Click and drag the marker across the chart to view a day and time period that shows data and then click the **View details** link. Alternatively, you can click different time periods in the chart to change the data that you see.
+1.  Click and drag the marker across the chart to view a day and time period that shows data and then click the **View details** link. Alternatively, you can click different time periods in the chart to change the data that you see. 
 
-     - For example, the following screen shows data for a specific date and time. The dates and times vary, depending on when you run the module.
-
-     - For information about interpreting the time series chart, see [Getting insights](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-it-ov).
-
-   ![Demo Lets go](images/fastpath_demo_11.34.17.png)
-
-1.  To see details about `SEX` data monitoring, ensure that `SEX` is selected from the drop-down menu.
-
-    - Notice that in the following screen capture, bias exists.
-    
-   ![Demo Lets go](images/fastpath_demo_11.34.27.png)
-
-    - For information about interpreting the chart of the data points at a specific hour, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp).
-
+For information about interpreting the time series chart, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
 ### View explainability
 {: #wos-explain}
@@ -178,20 +158,17 @@ Transaction IDs for the past hour are listed for those transactions that have bi
 
    ![Demo Lets go](images/fastpath_demo_11.35.12.png)
 
-For information about finding and explaining transactions, see [Monitoring explainability](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov).
+For information about finding and explaining transactions, see [Monitoring explainability](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
    ![Demo Lets go](images/fastpath_demo_11.35.50.png)
 
 ## Finishing the tour
 {: #wos-done-demo}
 
-1. Click the **Done** button.
+After you finish the tour, you can either add your own model deployment to the dashboard or continue to explore the tutorial deployment. 
 
-   ![Demo Lets go](images/fastpath_demo_11.37.22.png)
-
-2. Click the **Let's Go** button to start working with {{site.data.keyword.aios_short}}.
-
-   ![Demo Lets go](images/fastpath_demo_11.33.45.png)
+- To add your own model to the dashboard, click the **Add to dashboard** button.
+- To continue exploring the tutorial model, click the German Credit Risk tile.
 
 ## Next steps
 {: #gs-next}

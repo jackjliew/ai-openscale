@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # SAS AI Solutions frameworks
 {: #frmwrks-sas}
 
-{{site.data.keyword.aios_full}} plans to support SAS AI Solutions frameworks in a future release.
+You can use SAS AI Solutions to perform payload logging, feedback logging, and to measure performance accuracy, run-time bias detection, explainability, and auto-debias function in {{site.data.keyword.aios_full}}.
+
+{{site.data.keyword.aios_full}} fully supports the following SAS AI Solutions frameworks:
 {: shortdesc}
 
 

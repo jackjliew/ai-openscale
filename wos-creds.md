@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: credentials, REST API, data mart
+keywords: credentials, REST API, datamart ID, IDs, binding ID,  deployment ID, subscription ID
 
 subcollection: ai-openscale
 
@@ -43,25 +43,22 @@ To create an IBM Cloud API key, complete the following steps:
 - Click the **Create an IBM Cloud API key** button.
 - Give your key a name and description and click **Create**.
 
-To find your data mart (or service instance) ID:
+## Finding service IDs:
+{: #cred-find-datamart-id}
 
-In the {{site.data.keyword.aios_short}} **Payload logging** page, which is shown when selecting **Configure monitors** for a deployment.
-
-![Data Mart ID](images/data-mart-id.png)
-
-To find your data mart (or service instance) ID:
+Find your datamart, deployment, subscription, or binding IDs, on the {{site.data.keyword.aios_short}} **Payload logging** page, which is shown when selecting **Configure monitors** for a deployment.
 
 1. Click the model deployment tile. 
-2. Click the **Configure** ![the configure icon](images/configure-deployment-button.png) icon.
-3. Click **View payload logging endpoint**.
-4. On the {{site.data.keyword.aios_short}} **Payload logging** page, find the **Datamart ID** field.
+2. Click **Configure monitors** ![the configure icon](images/configure-deployment-button.png).
+3. Click **Payload logging**.
+4. On the {{site.data.keyword.aios_short}} **Payload logging** page, in the **Details** pane, find the ID for which you are looking. For example, the **Datamart ID** field:
 
     ![Data Mart ID](images/data-mart-id.png)
 
 ## Creating service instance credentials by using the command console
 {: #cred-creds}
 
-To create credentials for {{site.data.keyword.aios_short}}, complete the following steps by using the {{site.data.keyword.cloud_notm}} [command console](/docs/cli?):
+To create credentials for {{site.data.keyword.aios_short}}, complete the following steps by using the {{site.data.keyword.cloud_notm}} [command console](/docs/cli?){: external}:
 
 1. Retrieve your API key by running the following command:
 
@@ -82,6 +79,10 @@ To create credentials for {{site.data.keyword.aios_short}}, complete the followi
 
 2. Verify the Resource Group you are using in your {{site.data.keyword.cloud_notm}} account.
 
+   1. Go to the Dashboard.
+   2. From the **Navigation Menu** click **Resource list**.
+   3. From the **Group** column, click the **Filter by group or organization** drop-down selection and set the **Default** check box.
+
   ![Resource Group in Cloud](images/cloud-resource.png)
 
   If you are not using the `Default` resource group, then run the following command to get your credential for {{site.data.keyword.aios_short}}:
@@ -97,6 +98,7 @@ To create credentials for {{site.data.keyword.aios_short}}, complete the followi
     ```curl
     ibmcloud resource service-instance '<Your_Watson_OpenScale_instance_name>'
     ```
+
     **Note**: If you are using the {{site.data.keyword.cloud_notm}} command console on Windows, replace the single quotes (') in the preceding commands with double quotes (").
 
     The following information displays:
@@ -124,8 +126,8 @@ To create credentials for {{site.data.keyword.aios_short}}, complete the followi
 
 Specify your machine learning provider:
 
-- [Specifying an IBM Watson Machine Learning service instance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
-- [Specifying a Microsoft Azure ML Studio instance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
-- [Specifying a Microsoft Azure ML Service instance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
-- [Specifying an Amazon SageMaker ML service instance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
-- [Specifying a Custom ML service instance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-co-connect)
+- [Specifying an IBM Watson Machine Learning service instance](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
+- [Specifying a Microsoft Azure ML Studio instance](/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
+- [Specifying a Microsoft Azure ML Service instance](/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
+- [Specifying an Amazon SageMaker ML service instance](/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
+- [Specifying a Custom ML service instance](/docs/services/ai-openscale?topic=ai-openscale-co-connect)

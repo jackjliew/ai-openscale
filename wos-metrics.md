@@ -44,25 +44,21 @@ To work with custom metrics you must perform the following tasks:
 
 The following advanced tutorials show how to do this:
 
-- [Working with {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [Working with {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
 You can disable and enable again custom monitoring at any time. You can remove custom monitor if you do not need it anymore.
 
-For more information, see the [Python SDK documentation](http://ai-openscale-python-client.mybluemix.net/).
+For more information, see the [Python SDK documentation](http://ai-openscale-python-client.mybluemix.net/){: external}.
 
 ## Accessing and visualizing custom metrics
 {: #cst_mtrcs_viz}
 
 To access and visualize custom metrics you can use programmatic interface. The following advanced tutorials show how to do this:
 
-- [Working with {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [Working with {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-   For more information, see [the Python SDK documentation](http://ai-openscale-python-client.mybluemix.net/).
+   For more information, see [the Python SDK documentation](http://ai-openscale-python-client.mybluemix.net/){: external}.
 
 Visualization of your custom metrics appear on the {{site.data.keyword.aios_short}} Dashboard.
-
-<!---
-![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
---->

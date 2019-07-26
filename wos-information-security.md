@@ -38,15 +38,15 @@ The products, services, and other capabilities described herein are not suitable
 
 If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.keyword.watson}} resources that are created
 
--   In the European Union (EU), see [Requesting support for {{site.data.keyword.Bluemix}} Watson resources created in the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
--   Outside of the EU, see [Requesting support for resources outside the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
+-   In the European Union (EU), see [Requesting support for {{site.data.keyword.Bluemix}} Watson resources created in the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: external}.
+-   Outside of the EU, see [Requesting support for resources outside the European Union](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU){: external}.
 
 ## European Union General Data Protection Regulation (GDPR)
 {: #is-gdpr}
 
 IBM is committed to providing our clients and partners with innovative data privacy, security and governance solutions to assist them on their journey to GDPR compliance.
 
-Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/gdpr){: external}.
+Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here](http://www.ibm.com/gdpr){: external}.
 
 ## Labeling and deleting data in {{site.data.keyword.aios_short}}
 {: #is-stda}

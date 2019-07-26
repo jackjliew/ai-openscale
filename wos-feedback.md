@@ -212,13 +212,20 @@ You can upload feedback data from a CSV file directly in the {{site.data.keyword
 ### Uploading a CSV file
 {: #fmt-upld-fdbk-data-upld-csv}
 
-To upload a CSV file, use the **Add feedback data** button.
+To upload a CSV file, use the **Add feedback data** button. To follow along with the following steps as part of the tutorial, open and copy the contents of the [`credit_feedback_data.csv`](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) file.
 
 1. From the {{site.data.keyword.aios_short}} dashboard, click the deployment tile.
-2. From the model deployment window, click the **Configuration** ![the deployment configuration button is shown](images/configure-deployment-button.png) icon.
-3. Click the **Add feedback data** button, select the CSV file that contains the feedback data, and click **Open**.
+2. From the model deployment window, click **Configuration monitors** ![the deployment configuration button is shown](images/configure-deployment-button.png).
+3. In the navigation pane, click **Quality**.
+4. Click **Feedback** and then click the **Add feedback data** button.
+5. Select the CSV file that contains the feedback data, and click **Open**. For the tutorial, select the `credit_feedback_data.csv` file you downloaded.
+
+    File sizes are currently limited to 8 MB.
+    {: note}
+
 4. From the drop-down menu, click the field delimiter and click **Select**.
 
+Adding the CSV file provides feedback data to your model.
 ### Uploading a JSON file
 {: #fmt-upld-fdbk-data-upld-json}
 
@@ -229,3 +236,8 @@ To upload a CSV file, use the **Add feedback data** button.
     ![JSON test](images/json_test02.png)
 
 1.  Now, open the JSON file you downloaded, and copy the contents to the JSON field in the **Test** tab. Click the **Predict** button to send and score training payloads to your model.
+
+### Viewing results
+{: #fmt-upld-fdbk-view-results-after}
+
+To check the result immediately, from the **Insights** page, select a deployment, click one of the **Quality** metrics, and then click **Check quality now**.

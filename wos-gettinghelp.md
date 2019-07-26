@@ -43,11 +43,11 @@ The Help tab ( ![help tab icon](images/insight-help-tab.png) ) provides addition
 
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.aios_short}} development teams.
 
-If you have technical questions about {{site.data.keyword.aios_short}}, post your question on [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale) and tag your question with `watson-openscale`.
+If you have technical questions about {{site.data.keyword.aios_short}}, post your question on [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale){: external} and tag your question with `watson-openscale`.
 
-For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale) forum. Include the `openscale` tag. See [Getting help](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html) for more details about using the forums.
+For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale){: external} forum. Include the `openscale` tag. See [Getting help](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html){: external} for more details about using the forums.
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://cloud.ibm.com/unifiedsupport/supportcenter) and click **Create a case**.
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://cloud.ibm.com/unifiedsupport/supportcenter){: external} and click **Create a case**.
 
 ## Still looking for more?
 {: #looking}
