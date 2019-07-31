@@ -38,15 +38,15 @@ Table 1. Framework support details
 | Framework | Problem type | Data type |
 |:---|:---:|:---:|
 | Apache Spark MLlib | Classification | Structured |
-| Python function | Classification | Structured |
-| Python function | Regression | Structured |
-| XGBoost | Classification | Structured |
-| XGBoost | Regression | Structured |
-| scikit-learn | Classification | Structured |
-| scikit-learn | Regression | Structured |
+| Apache Spark MLLib | Regression | Structured |
 | Keras with TensorFlow<sup>1</sup><sup>&</sup><sup>2</sup> | Classification | Unstructured (image, text) |
 | Keras with TensorFlow<sup>1</sup><sup>&</sup><sup>2</sup> | Regression | Unstructured (image, text) |
-| Apache Spark MLLib | Regression | Structured |
+| Python function | Classification | Structured |
+| Python function | Regression | Structured |
+| scikit-learn | Classification | Structured |
+| scikit-learn | Regression | Structured |
+| XGBoost | Classification | Structured |
+| XGBoost | Regression | Structured |
 {: caption="Framework support details" caption-side="top"}
 
 <sup>1</sup>Keras support does not include support for fairness.
