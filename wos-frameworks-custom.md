@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Custom ML frameworks
 {: #frmwrks-custom}
 
-You can use your custom machine learning framework to perform payload logging, feedback logging, and to measure performance accuracy, run-time bias detection, explainability, and auto-debias function in {{site.data.keyword.aios_full}}. The custom machine learning framework must have equivalency to {{site.data.keywor.pm_full}}.
+You can use your custom machine learning framework to perform payload logging, feedback logging, and to measure performance accuracy, run-time bias detection, explainability, and auto-debias function in {{site.data.keyword.aios_full}}. The custom machine learning framework must have equivalency to {{site.data.keyword.pm_full}}.
 
 {{site.data.keyword.aios_full}} fully supports the following custom machine learning frameworks:
 {: shortdesc}
