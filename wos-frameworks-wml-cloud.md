@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: supported frameworks, models, model types, limitations, limits
+keywords: frameworks, models, model types, limitations, limits, wml, Watson, machine learning, 
 
 subcollection: ai-openscale
 
@@ -73,9 +73,11 @@ You should have provisioned an {{site.data.keyword.pm_full}} instance in the sam
 
 1.  From the **Configure** tab, in the navigation pane, click **Machine learning providers**.
 
-    ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection.png)
 
 2.  Click the **Add machine learning provider** button, and then click the {{site.data.keyword.pm_full}} tile. {{site.data.keyword.aios_short}} checks your {{site.data.keyword.Bluemix_notm}} account to locate any existing {{site.data.keyword.pm_full}} instances. 
+
+    ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection-wml.png)
+
 3. Select an instance from the **Watson Machine Learning service** drop-down menu.
 
     ![Select {{site.data.keyword.pm_short}} service](images/gs-set-wml.png)
@@ -86,9 +88,7 @@ You should have provisioned an {{site.data.keyword.pm_full}} instance in the sam
 
     Click **Save**.
 
-1.  {{site.data.keyword.aios_short}} lists your deployed models; select the ones you want to monitor and click **Configure**.
-
 ## Next steps
 {: #wml-next}
 
-{{site.data.keyword.aios_short}} is now ready for you to [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+{{site.data.keyword.aios_short}} is now ready for you to [add deployments to your dashboard](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-select-deploy) and [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
