@@ -126,15 +126,6 @@ Next, you need to choose a database. You have two options: the free database, or
 
 1.  Review the summary data and click **Save**. Confirm and, when prompted, click the **Continue with Configuration** button.
 
-    A Data Mart ID is also listed, which is the same thing as a {{site.data.keyword.aios_short}} instance ID.
-    {: tip}
-
-    ![Summary review](images/gs-setup-summary4.png)
-
-1.  Your screen might be similar to the following screen capture. Because you will use a GUI method to score your data, simply select the **Configure Monitors** button to complete this set-up.
-
-    ![Scoring request code](images/gs-config-send-scoring.png)
-
 ### Connect {{site.data.keyword.aios_short}} to your machine learning model
 {: #gs-ctmod}
 
@@ -156,7 +147,7 @@ You are now able to select the deployed models that will be monitored by {{site.
 
 Before you can configure your monitors, you must generate at least one scoring request against your model in order to generate payload logging that the monitors can consume. In this section, you will provide sample data to Watson Studio in the form of a JSON file to generate a scoring request.
 
-1.  Download the [credit_payload_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json) file.
+1.  Download the [credit_payload_data.json](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_payload_data.json){: external} file.
 
 1.  From the **Deployments** tab of your Watson Studio project, click the **credit-risk-deploy** link, click the **Test** tab, and select the JSON input icon.
 
