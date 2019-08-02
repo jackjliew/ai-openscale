@@ -28,11 +28,26 @@ subcollection: ai-openscale
 # Configuring the drift detection monitor ![beta tag](images/beta.png)
 {: #behavior-drift-config}
 
-You must configure the {{site.data.keyword.aios_full}} drift monitor before it can begin to analyze your model. There are two options, either training your model online or using a notebook.
+You must configure the {{site.data.keyword.aios_full}} drift monitor before it can begin to analyze your model. You can train your model online by using the {{site.data.keyword.aios_full}} user interface or by using a notebook.
 {: shortdesc}
 
 You can train your model online by using {{site.data.keyword.aios_short}}
 if you use {{site.data.keyword.pm_full}} and your data does not exceed 500 MB. Otherwise, you must use a notebook to train the model.
+
+## Requirements
+{: #behavior-drift-config-steps-wos-reqs}
+
+Throughout this process, {{site.data.keyword.aios_full}} analyzes your model and makes recommendations based on the most logical outcome. On the successive pages of the **Drift** tab, you must provide the following information:
+
+### Alert threshold
+{: #behavior-drift-config-steps-wos-reqs-alert}
+
+{{site.data.keyword.aios_full}} tracks the degree of change in model accuracy when compared to accuracy at training time. The alert threshold, which must be at least 5%, indicates the degree of tolerance for change over time.
+
+### Sample size
+{: #behavior-drift-config-steps-wos-reqs-sample}
+
+By setting a minimum sample size, you prevent measuring drift until a minimum number of records are available in the evaluation dataset. This ensures the sample size is not too small to skew results. Every time drift checking runs, it will use the minimum sample size to decide the number of records on which it will do the computation.
 
 ## Steps to configure drift in {{site.data.keyword.aios_short}}
 {: #behavior-drift-config-steps-wos}
@@ -47,15 +62,7 @@ If you use {{site.data.keyword.pm_full}}, you have the option of using the {{sit
 
    ![What is Drift? page](images/drift-config-2.png)
 
-3. Set the alert threshold.
-
-   ![What is Drift? page](images/drift-config-3.png)
-
-3. Set the sample size.
-
-   ![What is Drift? page](images/drift-config-4.png)
-   
-3. Click **Save**.
+5. Follow the prompts and enter required information. When you finish, a summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, save your work.
 
 
 ## Steps to configure drift using a notebook
@@ -65,7 +72,7 @@ If you use a machine learning provider other than {{site.data.keyword.pm_full}},
 
 This option is useful if the training data is not stored in Db2 or {{site.data.keyword.cos_full}}. Using a notebook, you must read the training data into a dataframe. The specialized notebook that you can download from {{site.data.keyword.aios_short}} then creates a specialized output that you can upload to {{site.data.keyword.aios_short}}.
 
-1. Create a notebook to generate the drift detection model. Use [the sample notebook](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb) that is available from the {{site.data.keyword.aios_short}} UI.
+1. Create a notebook to generate the drift detection model. Use [the sample notebook](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: external} that is available from the {{site.data.keyword.aios_short}} UI.
 2. Use compression software to compress the drift detection model into a .tar.gz file.
 
 1. From the **Drift** tab, on the **What is Drift**? page, click **Begin** to start the configuration process.
@@ -84,15 +91,7 @@ This option is useful if the training data is not stored in Db2 or {{site.data.k
 
    ![What is Drift? page](images/drift-config-upload.png)
    
-3. Set the alert threshold.
-
-   ![What is Drift? page](images/drift-config-3.png)
-
-3. Set the sample size.
-
-   ![What is Drift? page](images/drift-config-4.png)
-   
-3. Click **Save**.
+5. Follow the prompts and enter required information. When you finish, a summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, save your work.
 
 ## Next steps
 {: #behavior-drift-config-next-steps}

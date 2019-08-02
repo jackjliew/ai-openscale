@@ -60,9 +60,9 @@ You must provide information about your model and training data. For more inform
 - If you use an {{site.data.keyword.pm_full}} instance that is in the same region as your {{site.data.keyword.aios_short}} instance, although you must select Data type and Algorithm type, some payload logging information is configured automatically for you. 
 - Otherwise from the **Payload logging** tab and windows, you must enter information about your data and algorithm types and your payload logging. 
 
-   There are specific requirements depending on your selections. For more information, see [Numeric/categorical data](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan).
+- There are specific requirements depending on your selections. For more information, see [Numeric/categorical data](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan).
 
-   Before you can configure your monitors, you need to copy one of the code snippets to run. Run the cURL command in your client application or the Python command in your data science notebook. This provides a way to log model deployment requests and write response data into the payload database.
+- Before you can configure your monitors, you need to copy one of the code snippets to run. Run the cURL command in your client application or the Python command in your data science notebook. This provides a way to log model deployment requests and write response data into the payload database.
    
 After you send the payload logging details, either by using the local {{site.data.keyword.pm_full}} method or by using the API, you must return to the **Payload logging** screen and click **I'm finished**.
 
@@ -78,15 +78,27 @@ If the scoring is sent correctly to {{site.data.keyword.aios_short}}, the follow
 
 Provide information about your model so that {{site.data.keyword.aios_short}} can access the database and understand how the model is set up. For example, if you are using the **German Credit Risk model** for the interactive tutorial, many of the following fields are completed automatically for you.
 
-Specifically to configure monitors, you must perform the following tasks:
+Specifically to configure monitors, you must provide the following information:
 
-1. Specify the location of the training data. You do this by entering the location, hostname or IP address, the database name, and the authentication information.
-2. Within the database, you must select the training table by selecting the schema and table.
-3. Select the label column from the training table, for example, for the tutorial, click the **Risk** tile.
-4. Select the features that were used to train the AI deployment.
-5. Select the text and categorical features.
-6. Select the deployment prediction column, for example, for the tutorial, click the **predictedLabel** tile.
-7. Finally, you can review your model details before you save it.
+- The location of the training data
+
+  You do this by entering the location, hostname or IP address, the database name, and the authentication information.
+
+- The training table
+
+  You do this by selecting the schema and table.
+
+- The label column from the training table 
+
+  For example, for the tutorial, click the **Risk** tile.
+
+- The features that were used to train the AI deployment
+- The text and categorical features
+- The deployment prediction column 
+
+  For example, for the tutorial, click the **predictedLabel** tile.
+
+When you finish providing all the required information, a summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, save your work.
 
 The following sections give some specific information that you encounter depending on the type of model, either [Numeric/categorical data](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan) or [Images and Unstructured text](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datai).
 

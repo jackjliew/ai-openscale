@@ -31,42 +31,57 @@ subcollection: ai-openscale
 In {{site.data.keyword.aios_full}}, the fairness monitor scans your deployment for biases, to ensure fair outcomes across different populations.
 {: shortdesc}
 
+## Requirements
+{: #mf-monitor-reqs}
+
+Throughout this process, {{site.data.keyword.aios_full}} analyzes your model and makes recommendations based on the most logical outcome. On the successive pages of the **Fairness** tab, you must provide the following information:
+
+### Values that represent a favorable outcome for the model
+{: #mf-monitor-reqs-fave}
+
+Values are derived from the `label` column in the [training data](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata), if the model output schema contains a mapping column. In {{site.data.keyword.pm_full}}, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
+
+For example, if the `prediction` value is `1.0`, the mapping column could have a value of `Loan denied`; this implies that the prediction of the model is `Loan denied`. So, if the model output schema contains a mapping column, then specify Favorable and Unfavorable values using those present in the mapping column.
+
+If, however, the mapping column is not present in the model output schema, then the Favorable and Unfavorable values need to be specified using the value of the `prediction` column (`0.0`, `1.0`, etc.)
+
+### Features to monitor
+{: #mf-monitor-reqs-feats}
+
+Only features which are of categorical, numeric (integer), float, or double fairness data type are supported. Features with other data types are not supported. For each of the features, you must configure the following values:
+
+#### Reference and monitored groups
+{: #mf-monitor-reqs-refandmon}
+
+Each feature has specific requirements to configure. For example, if you choose `age` as one of your monitored features, you must define the age ranges for a **Reference Group** and a **Monitored Group** by entering values directly in each group.
+
+#### Fairness alert threshold for the feature
+{: #mf-monitor-reqs-thresh}
+
+A Fairness threshold is used to specify an acceptable difference between the percentage of Favorable outcomes for the Monitored group as compared to the percentage of Favorable outcomes for the Reference group.
+
+Consider a model that predicts who should get a loan (`favorable outcome=loan granted`) and who shouldn’t (`unfavorable outcome=loan denied`). Further, the Monitored value for age is `[18,25]`, and the Reference value is `[26,100]`. When the bias detection algorithm runs, if it finds that the percentage of Favorable outcomes for people in the age group `[18,25]` in the last `N` records plus perturbed data is `50%`, while the percentage of Favorable outcomes for people in the age group `[26,100]` is `70%`, then Fairness is computed as 50*100/70 = 71.42.
+
+If the Fairness threshold is set to 80%, then the algorithm will flag the model as being biased, because the computed Fairness exceeds the threshold. However, if the threshold is set to 70% then it will not report the model as being biased.
+
+The values that you enter in these screens should be those that are sent to the model scoring endpoint (and consequently will be added to the payload table). If the data is being manipulated before sending to the scoring endpoint, then enter the manipulated values. For example, if the original data had values of `Male` and `Female` for *Gender* and it was manipulated so that the data sent to the scoring endpoint was `M` and `F`, then enter `M` and `F` on this screen.
+
+
+### Minimum sample size
+{: #mf-monitor-reqs-min}
+
+By setting a minimum sample size, you prevent measuring fairness until a minimum number of records are available in the evaluation dataset. This ensures the sample size is not too small to skew results. Every time bias checking runs, it will use the minimum sample size to decide the number of records on which it will do the bias computation.
+
 ## Steps
 {: #mf-config}
 
-From the **Fairness** tab, on the **What is Fairness?** page, click **Begin** to start the configuration process.
+To start the configuration process, from the **Fairness** tab, on the **What is the Fairness monitor?** page, click **Begin**.
 
 ![What is fairness? page](images/fair-what-is.png)
 
-Throughout this process, {{site.data.keyword.aios_full}} analyzes your model and makes recommendations based on the most logical outcome. On the successive pages of the **Fairness** tab, you must perform the following tasks:
+Follow the prompts and enter required information. When you finish, a summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, save your work.
 
-1. Select the features to monitor. Only features which are of categorical, numeric (integer), float, or double fairness data type are supported. Features with other data types are not supported.
-
-1. Specify reference and monitored groups.
-
-   Each feature has specific requirements to configure. For example, if you choose `age` as one of your monitored features, you must define the age ranges for a **Reference Group** and a **Monitored Group** by entering values directly in each group.
-
-1.  Set the fairness alert threshold for the feature.
-
-    A Fairness threshold is used to specify an acceptable difference between the percentage of Favorable outcomes for the Monitored group as compared to the percentage of Favorable outcomes for the Reference group.
-
-    Consider a model that predicts who should get a loan (`favorable outcome=loan granted`) and who shouldn’t (`unfavorable outcome=loan denied`). Further, the Monitored value for age is `[18,25]`, and the Reference value is `[26,100]`. When the bias detection algorithm runs, if it finds that the percentage of Favorable outcomes for people in the age group `[18,25]` in the last `N` records plus perturbed data is `50%`, while the percentage of Favorable outcomes for people in the age group `[26,100]` is `70%`, then Fairness is computed as 50*100/70 = 71.42.
-
-    If the Fairness threshold is set to 80%, then the algorithm will flag the model as being biased, because the computed Fairness exceeds the threshold. However, if the threshold is set to 70% then it will not report the model as being biased.
-
-     The values that you enter in these screens should be those that are sent to the model scoring endpoint (and consequently will be added to the payload table). If the data is being manipulated before sending to the scoring endpoint, then enter the manipulated values. For example, if the original data had values of `Male` and `Female` for *Gender* and it was manipulated so that the data sent to the scoring endpoint was `M` and `F`, then enter `M` and `F` on this screen.
-
-1.  Specify values that represent a favorable outcome for the model. Values are derived from the `label` column in the [training data](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata), if the model output schema contains a mapping column. In {{site.data.keyword.pm_full}}, the `prediction` column always has a double value. The mapping column is used to specify the mapping of this `prediction` value to the class label.
-
-    For example, if the `prediction` value is `1.0`, the mapping column could have a value of `Loan denied`; this implies that the prediction of the model is `Loan denied`. So, if the model output schema contains a mapping column, then specify Favorable and Unfavorable values using those present in the mapping column.
-
-    If, however, the mapping column is not present in the model output schema, then the Favorable and Unfavorable values need to be specified using the value of the `prediction` column (`0.0`, `1.0`, etc.)
-
-1.  Finally, set a minimum sample size, to prevent measuring Fairness until a minimum number of records are available in the evaluation dataset. This ensures the sample size is not too small to skew results. Every time bias checking runs, it will use the minimum sample size to decide the number of records on which it will do the bias computation.
-
-    A summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, click **Save**.
-
-    You can also click **Add another feature** to return to the feature selection screen and add more features, such as `City`, `Zip Code` or `Account Balance` to the Fairness monitor.
+You can also click **Add another feature** to return to the feature selection screen and add more features, such as `City`, `Zip Code` or `Account Balance` to the Fairness monitor.
 
 ### Understanding how de-biasing works
 {: #mf-debias}

@@ -86,7 +86,7 @@ Log in to your [{{site.data.keyword.cloud_notm}} account](https://{DomainName}){
 
 - [Create a {{site.data.keyword.DSX}} instance](https://{DomainName}/catalog/services/watson-studio){: external} if you do not already have one associated with your account:
 
-  ![Watson Studio](images/watson_studio.png)
+  ![Watson Studio tile is displayed](images/watson_studio.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
@@ -95,7 +95,7 @@ Log in to your [{{site.data.keyword.cloud_notm}} account](https://{DomainName}){
 
 - [Provision an {{site.data.keyword.cos_short}} service](https://{DomainName}/catalog/services/cloud-object-storage){: external} if you do not already one associated with your account:
 
-  ![Object Storage](images/object_storage.png)
+  ![Object Storage tile is displayed](images/object_storage.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
@@ -104,7 +104,7 @@ Log in to your [{{site.data.keyword.cloud_notm}} account](https://{DomainName}){
 
 - [Provision a {{site.data.keyword.pm_short}} instance](https://{DomainName}/catalog/services/machine-learning){: external} if you do not already have one associated with your account:
 
-  ![Machine Learning](images/machine_learning.png)
+  ![Machine Learning tile is displayed](images/machine_learning.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
@@ -115,7 +115,7 @@ If you haven't already, ensure that you provision {{site.data.keyword.aios_full}
 
 - [Provision a {{site.data.keyword.aios_short}} instance](https://{DomainName}/catalog/services/watson-openscale){: external} if you do not already have one associated with your account:
 
-  ![{{site.data.keyword.aios_short}} tile](images/wos-cloud-tile.png)
+  ![{{site.data.keyword.aios_short}} tile is displayed](images/wos-cloud-tile.png)
 
 1. Click **Catalog** > **AI** > **{{site.data.keyword.aios_short}}**.
 2. Give your service a name, choose a plan, and click the **Create** button.
@@ -128,9 +128,9 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 
 - [Provision a Databases for PostgreSQL service](https://{DomainName}/catalog/services/databases-for-postgresql){: external} or [a Db2 Warehouse service](https://{DomainName}/catalog/services/db2-warehouse){: external} if you do not already have one associated with your account:
 
-  ![DB for Postgres](images/dbpostgres.png)
+  ![DB for Postgres tile is displayed](images/dbpostgres.png)
 
-  ![Db2 Warehouse](images/db2_warehouse.png)
+  ![Db2 Warehouse tile is displayed](images/db2_warehouse.png)
 
 - Give your service a name, choose the Standard plan (Databases for PostgreSQL) or Entry plan (Db2 Warehouse), and click the **Create** button.
 
@@ -145,9 +145,9 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 
   ![Watson Studio create project](images/studio_create_proj.png)
 
-- Select the **Standard** tile, to create the project:
+1.  Click the **Create an empty project** tile.
 
-  ![Watson Studio select Standard project](images/studio_create_standard.png)
+  ![Watson Studio select Standard project tile is displayed](images/studio_create_standard.png)
 
 - Give your project a name and description, make sure the Cloud Object Storage service you created is selected in the **Storage** dropdown, and click **Create**.
 
@@ -163,7 +163,7 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 
 - From the **Assets** tab in your {{site.data.keyword.DSX}} project, click the **Add to project** button and select **Notebook** from the dropdown:
 
-  ![Add Connection](images/add_notebook.png)
+  ![the choose asset type with a notebook tile highlighted is displayed](images/add_notebook.png)
 
 - Select **From file**:
 
@@ -214,11 +214,11 @@ The net result is that you will have created, trained, and deployed the **Spark 
 
 Using the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}, click on the **Insights** tab:
 
-  ![Insights](images/insight-dash-tab.png)
+  ![Insights icon is displayed](images/insight-dash-tab.png)
 
 The Insights page provides an overview of metrics for your deployed models. You can easily see alerts for Fairness or Accuracy metrics that exceed the threshold set when running the notebook. The data and settings used in this tutorial will have created Accuracy and Fairness metrics similar to the ones shown here.
 
-  ![Insight overview](images/insight-overview-adv-tutorial-2.png)
+  ![Insight overview dashboard displays with a tile for the German Credit Risk model](images/insight-overview-adv-tutorial-2.png)
 
 ### View monitoring data for your deployment
 {: #crt-view-mon-data}

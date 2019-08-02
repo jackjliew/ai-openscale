@@ -112,13 +112,13 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a ser
 
 2. Click the **Add machine learning provider** button, and then click the **Custom environment** tile.
 
-   ![Select custom](images/ml-custom-provider.png)
+   ![the custom machine learning provider configuration screen is shown with fields for credentials, instance name and description](images/ml-custom-provider.png)
 
 3. Enter a name and description for your custom machine learning provider and click **Next**. 
 
 4. Choose whether to connect to your deployments [by requesting a list](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list) or [by entering individual scoring endpoints](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints).
 
-   ![Select custom](images/ml-custom-connect-deployments.png)
+   ![The connect to deployments screen is shown with options for requesting a list of deployments or entering an individual scoreing endpoint](images/ml-custom-connect-deployments.png)
     
 5. Click **Next**.
 
@@ -127,7 +127,7 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a ser
 
 1. If you selected the **Request the list of deployments** tile, enter your credentials and API Endpoint, then click **Save**.
 
-   ![Enter service credentials](images/connect-custom-cred.png)
+   ![the list of deployments screen is shown with fields to enter service credentials and an API endpoint](images/connect-custom-cred.png)
 
 2. After you save your machine learning setup, return to the **Dashboard**, click the **Insights** tab, and then click the **Add to dashboard** button.
 
@@ -153,7 +153,7 @@ You are now ready to configure monitors.
 
 The following image shows the Custom environment support:
 
-![How Custom works](images/custom-how-works.png)
+![How Custom works chart is displayed. It shows boxes for the custom environment with the client API and the Watson OpenScale API](images/custom-how-works.png)
 
 You can also reference the following links:
 
