@@ -38,13 +38,13 @@ The **Insights** ![Insight dashboard](images/insight-dash-tab.png) tab provides 
 
   ![Insight dashboard](images/wos-insight-dashboard.png)
 
-- ***Deployments Monitored*** - In this example, a total of 2 deployments are being monitored. The deployments are shown as individual tiles.
+- ***Deployments Monitored*** - In this example, a total of 25 deployments are being monitored. The deployments are shown as individual tiles. Ten of the 25 tiles are visible in the sample.
 
-- ***Quality Alerts*** - A total of 2 Quality (previously called Accuracy) alerts are represented in the tiles and both show values of `74%`.
+- ***Quality Alerts*** - A total of 7 Quality (previously called Accuracy) alerts are represented in the tiles and show values of various percentages.
 
-- ***Fairness Alerts*** - There is 1 Fairness alert, which displays in the `GermanCreditRiskModel` tile, represented by a small `BIAS` tag. The deployment shows a Fairness value of `93%` and is based on 1 of 2 attributes.
+- ***Fairness Alerts*** - There are also 7 Fairness alerts, which displays in several of the tiles, represented by a small `BIAS` tag. The deployment shows various Fairness values as a percentage and also displays an indication of how many attributes are being reported.
 
-Each tile provides a summary of monitoring activity for that deployment. Note that the `GDR Credit analyzer app` deployment tile shows no bias, yet, perhaps because fairness evaluation has not yet completed.
+Each tile provides a summary of monitoring activity for that deployment. Note that some deployment tiles show no bias yet, perhaps because fairness evaluation has not yet completed.
 
 ## Fairness, quality, performance, and analytics insights
 {: #it-ov}
