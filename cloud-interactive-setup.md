@@ -71,7 +71,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 ### Associate your {{site.data.keyword.Bluemix_notm}} Services with your Watson project
 {: #gs-assoc}
 
-1.  Open your Watson Studio project and select the **Settings** tab. In the **Associated Services** section, click **Add service** and then click **Watson**.
+1.  Open your {{site.data.keyword.DSX}} project and select the **Settings** tab. In the **Associated Services** section, click **Add service** and then click **Watson**.
 
     ![Add Watson Service](images/add_watson_service.png)
 
@@ -79,20 +79,23 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 2.  On the **Existing** tab, from the **Existing Service Instance** drop-down, click the service you created previously.
 3. Click **Select**.
 
-### Add the `Credit Risk` model
+### Add the **Credit Risk** model
 {: #gs-addmod}
 
-1.  In {{site.data.keyword.DSX}}, select the **Assets** tab of your project, scroll to the **Watson Machine Learning Models** section, and click the **New Watson Machine Learning model** button.
+1.  In {{site.data.keyword.DSX}}, from your project, click the **Add to project** button, and click the **Watson Machine Learning model** tile.
 
-1.  From the **Select model type** section, select **From sample** and the `Credit Risk` model, and then click **Create**.
+    ![the credit risk tile is shown](images/wos-credit-sample-model-asset.png)
 
-    ![the credit risk tile is shown](images/credit-sample-model.png)
+1.  On the **Import Model** page, in the **Select model type** section, click the **From sample** radio button.
+2.  Click the **Credit Risk** model tile, and then click **Import**.
 
-### Deploy the `Credit Risk` model
+    ![the credit risk tile is shown](images/wos-credit-sample-model.png)
+
+### Deploy the **Credit Risk** model
 {: #gs-depmod}
 
-1.  From the the `Credit Risk` model page, click the **Deployments** tab, and then, click **Add Deployment**.
-1.  Enter `credit-risk-deploy` as the name for your deployment, and select the **Web service** deployment type.
+1.  From the the **Credit Risk** model page, click the **Deployments** tab, and then, click **Add Deployment**.
+1.  Type `credit-risk-deploy` as the name for your deployment, and select the **Web service** deployment type.
 1.  Click **Save**.
 
 ## Configure {{site.data.keyword.aios_short}}
