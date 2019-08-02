@@ -29,9 +29,10 @@ subcollection: ai-openscale
 {: #cdb-score}
 
 To configure monitors, {{site.data.keyword.aios_short}} requires you to send a scoring payload, in order to begin to log the data that will be monitored.
+{: shortdesc}
 
-- For models deployed in {{site.data.keyword.pm_full}}, they are  automatically sent to {{site.data.keyword.aios_short}}. For scoring requests that are sent automatically, you do not need to complete this task and no code snippets appear.
-- For other machine learning engines, such as Microsoft Azure, Amazon SageMaker, or a custom machine learning engine the scoring payload must be sent using the Payload Logging API. For this, you must use a code snippet in either cURL or Python format, which you can retrieve from the Payload logging page. For more information, see [Payload logging for non-{{site.data.keyword.pm_full}} service instances](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
+- For models deployed in {{site.data.keyword.pm_full}}, you have to score your model using {{site.data.keyword.pm_full}} API. The scoring payload is automatically sent to {{site.data.keyword.aios_short}} when you score the model.
+- For other machine learning engines, such as Microsoft Azure, Amazon SageMaker, or a custom machine learning engine the scoring payload must be sent using the Payload Logging API. For more information, see [Payload logging for non-{{site.data.keyword.pm_full}} service instances](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
 
 ## Steps for payload logging
 {: #cdb-score-apisteps}
@@ -54,17 +55,17 @@ After you run your payload logging, a checkmark appears in the **Ready to Monito
 
 Scoring requests are an integral part of {{site.data.keyword.aios_short}} processing. Each transaction record that you send to the model to be scored generates additional processing so that the {{site.data.keyword.aios_short}} service can perform perturbation and create explanations.
 
-- For tabular, text, image models the following baseline request generates data points:
+- For tabular, text, or image models the following baseline request generates data points:
 
-   -ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling servicescoring request generates 5000 data points.
+   - 1 scheduling service scoring request generates 5000 data points.
 
 - For tabular classification models only, there are additional scoring requests that are made for contrastive explanation. The following requests are added to the preceding baseline request:
 
    - 100 scoring requests generates 51 additional data points per request.
-   - 101 scoring requests generatesai-open-scale-ibm-aios-scheduling  | 1 | Scheduling serviceadditional data point per request.
+   - 101 scoring requests generates 1 additional data point per request.
 
 
 ## Next steps
 {: #cdb-score-next-steps-scoringreq}
 
-[Configure monitors](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+[Configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
