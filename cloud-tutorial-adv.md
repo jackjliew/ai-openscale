@@ -143,11 +143,11 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 
 - In {{site.data.keyword.DSX}}, begin by creating a new project. Select "Create a project":
 
-  ![Watson Studio create project](images/studio_create_proj.png)
+  ![Watson Studio create project](images/cloud-studio_create_proj.png)
 
 1.  Click the **Create an empty project** tile.
 
-  ![Watson Studio select Standard project tile is displayed](images/studio_create_standard.png)
+  ![Watson Studio select Standard project tile is displayed](images/cloud-studio_create_standard.png)
 
 - Give your project a name and description, make sure the Cloud Object Storage service you created is selected in the **Storage** dropdown, and click **Create**.
 

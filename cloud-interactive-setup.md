@@ -63,7 +63,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
 1.  Log in to your [Watson Studio account](https://dataplatform.ibm.com/){: external} and begin by creating a new project. Click **Create a project**.
 
-    ![Watson Studio create project](images/studio_create_proj.png)
+    ![Watson Studio create project](images/cloud-studio_create_proj.png)
 
 1.  Click the **Create an empty project** tile.
 1.  Give your project a name and description, make sure the Object Storage service you created in the previous step is selected in the **Storage** menu, and click **Create**.
