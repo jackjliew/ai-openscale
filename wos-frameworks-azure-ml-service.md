@@ -191,7 +191,13 @@ For instructions about how to get your Microsoft Azure credentials, see [How to:
 
 1.  From the **Configure** ![configuration icon is shown](images/insight-config-tab.png) tab, in the navigation pane, click **Machine learning providers**.
 1.  Click the **Add machine learning provider** button, and then click the **Microsoft Azure ML Service** tile.
+
+       ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection-azr-srvc.png)
+
+
 1.  Enter and save your credentials:
+
+    ![Enter Azure ML Studio credentials](images/wos-connect-azure—srvc-cred.png)
 
 
 ## Payload logging with the Microsoft Azure ML Service engine
