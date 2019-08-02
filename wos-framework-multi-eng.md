@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Support for multiple machine learning engines
 {: #fmrk-workaround-multmleng}
 
-{{site.data.keyword.aios_short}} supports multiple machine learning engines within a single instance. You can provision them through the {{site.data.keyword.aios_short}} dashboard configuration or the [Python SDK](http://ai-openscale-python-client.mybluemix.net/?cm_mc_uid=70732728440115575086192&cm_mc_sid_50200000=62539451560175957820).
+{{site.data.keyword.aios_short}} supports multiple machine learning engines within a single instance. You can provision them through the {{site.data.keyword.aios_short}} dashboard configuration or the [Python SDK](http://ai-openscale-python-client.mybluemix.net/?cm_mc_uid=70732728440115575086192&cm_mc_sid_50200000=62539451560175957820){: external}.
 {: shortdesc}
 
 When you first set up {{site.data.keyword.aios_short}}, you may have used the user interface or the automated setup option to provision your first machine learning engine. Adding machine learning engines requires that you either use the configuration tab on the {{site.data.keyword.aios_short}} dashboard or the Python SDK.
@@ -36,18 +36,21 @@ When you first set up {{site.data.keyword.aios_short}}, you may have used the us
 ## Using the dashboard to add providers
 {: #fmrk-workaround-multmleng-dashboard}
 
-1. After you open {{site.data.keyword.aios_short}}, from the **Configure** tab, click the **Add machine learning providers** buttons.
+1. After you open {{site.data.keyword.aios_short}}, from the **Configure** ![configuration icon is shown](images/insight-config-tab.png) tab, click the **Add machine learning provider** button.
 
    ![the add providers button is shown on the machine learning providers window](images/wos-configure-multi-providers.png)
 
-2. Click the tile of the provider you want to add and click **Next**.
-
-   ![the machine learning providers selection screen is shown](images/wos-machine-learning-providers-selection.png)
-
+2. Select the provider you want to add.
 3. Enter the required information, such as credentials and click **Save**.
 
-After you save your configuration, you are given the option of going to the dashboard, choosing deployments, or configuring monitors.
+After you save your configuration, you are ready to go to the dashboard to choose deployments and configure monitors.
 
+## Editing machine learning providers
+{: #fmrk-workaround-editingproviders-dashboard}
+
+Do you need to make an edit to a machine learning provider? Click the tile menu ![the tile menu icon](images/v-three-dots.png) icon and then click **View & edit details**.
+
+   ![the machine learning providers view and edit option is shown](images/wos-machine-learning-providers-edit.png)
 
 ## Adding machine learning providers by using the Python SDK binding method
 {: #fmrk-workaround-multmleng-binding}
@@ -107,5 +110,11 @@ For information about specific machine learning engines, see the following topic
 - [Bind your Amazon SageMaker machine learning engine](/docs/services/ai-openscale?topic=ai-openscale-cml-smbind#cml-smbind)
 
 
-For a working example of an actual notebook, see [the {{site.data.keyword.aios_short}} sample notebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks).
+For a working example of an actual notebook, see [the {{site.data.keyword.aios_short}} sample notebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks){: external}.
+
+## Next steps
+{: #fmrk-workaround-multmleng-next-steps}
+
+{{site.data.keyword.aios_short}} is now ready for you to [add deployments to your dashboard](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-select-deploy) and [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+
 

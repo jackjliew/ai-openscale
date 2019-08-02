@@ -106,15 +106,15 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a ser
 
 {{site.data.keyword.aios_short}} connects to AI models and deployments in a service instance. You can connect a custom service
 
-1.  From the **Configure** tab, in the navigation pane, click **Machine learning providers**.
-
-   ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection.png)
-
+1.  From the **Configure** ![configuration icon is shown](images/insight-config-tab.png) tab, in the navigation pane, click **Machine learning providers**.
 2. Click the **Add machine learning provider** button, and then click the **Custom environment** tile.
+
+   ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection-custom.png)
+
+1.  Enter and save your credentials:
 
    ![the custom machine learning provider configuration screen is shown with fields for credentials, instance name and description](images/ml-custom-provider.png)
 
-3. Enter a name and description for your custom machine learning provider and click **Next**. 
 
 4. Choose whether to connect to your deployments [by requesting a list](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list) or [by entering individual scoring endpoints](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints).
 
@@ -387,6 +387,5 @@ For more information, see [Payload logging](/docs/services/ai-openscale?topic=ai
 ## Next steps
 {: #fmrk-workaround-nxt-steps-over}
 
-{{site.data.keyword.aios_short}} is now ready for you to [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
-
-Implement your own solution by using one of these [Custom machine learning examples](/docs/services/ai-openscale?topic=ai-openscale-fmrk-workaround-cstmmlsengex).
+- {{site.data.keyword.aios_short}} is now ready for you to [add deployments to your dashboard](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-select-deploy) and [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+- Implement your own solution by using one of these [Custom machine learning examples](/docs/services/ai-openscale?topic=ai-openscale-fmrk-workaround-cstmmlsengex).
