@@ -106,14 +106,13 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a ser
 
 {{site.data.keyword.aios_short}} connects to AI models and deployments in a service instance. You can connect a custom service
 
-1.  From the **Configure** ![configuration icon is shown](images/insight-config-tab.png) tab, in the navigation pane, click **Machine learning providers**.
+1. From the **Configure** ![configuration icon is shown](images/insight-config-tab.png) tab, in the navigation pane, click **Machine learning providers**.
 2. Click the **Add machine learning provider** button, and then click the **Custom environment** tile.
-
+   
    ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection-custom.png)
-
-
+   
 4. Choose whether to connect to your deployments [by requesting a list](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list) or [by entering individual scoring endpoints](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints).
-
+   
    ![The connect to deployments screen is shown with options for requesting a list of deployments or entering an individual scoreing endpoint](images/ml-custom-connect-deployments.png)
     
 5. Click **Next**.
