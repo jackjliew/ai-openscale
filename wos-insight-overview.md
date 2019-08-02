@@ -36,7 +36,7 @@ You can track all the deployments you are monitoring through the {{site.data.key
 
 The **Insights** tab ( ![Insight dashboard](images/insight-dash-tab.png) ) provides a high-level view of your deployment monitoring.
 
-  ![Insight dashboard](images/insight-dashboard.png)
+  ![Insight dashboard](images/wos-insight-dashboard.png)
 
 - ***Deployments Monitored*** - In this example, a total of 10 deployments are being monitored. Eight of the ten following deployments are shown as individual tiles.
 
@@ -47,7 +47,7 @@ The **Insights** tab ( ![Insight dashboard](images/insight-dash-tab.png) ) provi
 Each tile provides a summary of monitoring activity for that deployment. Note that the `Call Center Routing` deployment tile shows no issues, indicating a fairly stable, accurate model.
 
 
-## Fairness, quality, performance, accuracy, and analytics insights
+## Fairness, quality, performance, and analytics insights
 {: #it-ov}
 
 Select any of the individual deployment tiles to view more details about that deployment. Monitoring data for individual deployments displays in a series of charts. The charts track metrics, such as fairness, average requests per minute, and accuracy over days, weeks, or months.
