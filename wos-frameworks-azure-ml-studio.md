@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: supported frameworks, models, model types, limitations, limits, azure, studio
+keywords: supported frameworks, models, model types, limitations, limits, azure, studio, Microsoft
 
 subcollection: ai-openscale
 
@@ -90,7 +90,7 @@ The actual string value of the secret, which verifies who you are and authentica
 
 #### Tenant
 
-Your tenant ID corresponds to your organization and is a dedicated instance of Azure AD. To find the tenant ID, hover over your account name to get the directory / tenant ID, or select Azure Active Directory > Properties > Directory ID in the Azure portal.
+Your tenant ID corresponds to your organization and is a dedicated instance of Azure AD. To find the tenant ID, hover over your account name to get the directory / tenant ID, or select **Azure Active Directory** > **Properties** > **Directory ID** in the Azure portal.
 
 #### Subscription ID: 
 
