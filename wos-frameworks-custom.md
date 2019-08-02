@@ -111,10 +111,6 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a ser
 
    ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection-custom.png)
 
-1.  Enter and save your credentials:
-
-   ![the custom machine learning provider configuration screen is shown with fields for credentials, instance name and description](images/ml-custom-provider.png)
-
 
 4. Choose whether to connect to your deployments [by requesting a list](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list) or [by entering individual scoring endpoints](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints).
 
@@ -127,7 +123,7 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a ser
 
 1. If you selected the **Request the list of deployments** tile, enter your credentials and API Endpoint, then click **Save**.
 
-   ![the list of deployments screen is shown with fields to enter service credentials and an API endpoint](images/connect-custom-cred.png)
+   ![the list of deployments screen is shown with fields to enter service credentials and an API endpoint](images/wos-connect-custom-cred.png)
 
 2. After you save your machine learning setup, return to the **Dashboard**, click the **Insights** tab, and then click the **Add to dashboard** button.
 
@@ -139,6 +135,8 @@ You are now ready to configure monitors.
 {: #co-config-scoring-endpoints}
 
 1. If you selected the **Enter individual scoring endpoints** tile, enter your credentials for the API Endpoint, then click **Save**.
+
+   ![the list of deployments screen is shown with fields to enter service credentials and an API endpoint](images/wos-connect-custom-cred-api.png)
 
 2. After you save your machine learning setup, return to the **Dashboard**, click the **Insights** tab, and then click the **Add to dashboard** button.
 
