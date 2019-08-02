@@ -1,6 +1,6 @@
 # ai-openscale - IBM Watson OpenScale
 
-This repository is for the IBM Watson OpenScale for IBM Cloud STAGING build.
+This repository is for the IBM Watson OpenScale for IBM Cloud PRODUCTION build.
 
 The following document explains everything that a content designer would need to know to work with this product and specifically with the Markdown files in this repository.
 
@@ -30,11 +30,22 @@ Thursday: Weekly Dev Playbacks, weekly at 10:00am Eastern, chair: Rishi Patel ht
 
 ### Squad meetings / [4] Four-in-a-box
 
+As of 2019-08-02
 
+| Squad | Time (EST) | Lead |
+|:---:|:---:|:---:|
+| Model Risk Management (MRM) | Tuesdays at 9:00AM | Carmen Ruppach |
+| Platform | Tuesday at 1:00PM | Alex Jones |
+| Metrics | Wednesdays at 10:00AM | Barbara Kowalczyk |
+| Explainability & Bias | Wednesdays at 11:00AM | Carmen Ruppach |
+| AIOS Dev/Design | Wednesdays at 9:00PM | Kimberly Iungerman |
+| Drift | Thursdays at 11:00AM | Anshu Jain |
+
+Yes. That's Wednesdays at 9:00 post meridian for the AIOS Dev/Design checkpoint.
 
 ## GHE issue tracker (with doc issues label)
 
-https://github.ibm.com/aiopenscale/tracker/issues?q=is%3Aopen+is%3Aissue+label%3ADocumentation
+One of the brilliant aspects of the way that Watson OpenScale is set up from an operations point of view is the consistent use of a single GitHub repository to track all work for all squads, including documentation. The following link is for issues that are tagged [`Documentation`](https://github.ibm.com/aiopenscale/tracker/issues?q=is%3Aopen+is%3Aissue+label%3ADocumentation).
 
 
 ## OpenScale main documentation repos
@@ -72,14 +83,16 @@ FYI: Creating and publishing API docs for IBM Cloud
 ## OpenScale test environments
 
 - [Cloud](https://aiopenscale.test.cloud.ibm.com/aiopenscale/onboarding)
-- [ICP](https://9.30.109.153:31843/aiopenscale/onboarding) (Note: To log onto this system, you must request a username and password. Zhi Li is usually able to provide one for you to do testing.)
+- [ICP](https://9.30.109.153:31843/aiopenscale/onboarding)
+
+  (Note: To log onto this system, you must request a username and password. Zhi Li is usually able to provide one for you to do testing.)
 
 
 ## Usabilla doc issue owners file
 
 The following file maps owners of doc repos to Usabilla, which is used to get feedback from users. For more information, see Docs app user feedback tool.
 
-https://github.ibm.com/Bluemix/UsabillaGithub/blob/master/json/docUrlToAssigneeMap.json
+[Usabilla assignments](https://github.ibm.com/Bluemix/UsabillaGithub/blob/master/json/docUrlToAssigneeMap.json)
 
 
 ## Release manager
@@ -89,46 +102,47 @@ Rishi Patel
 
 ## Aha! link for OM roadmap
 
-https://bigblue.aha.io/products/WSPHERE/feature_cards
+[Aha! board](https://bigblue.aha.io/products/WSPHERE/feature_cards)
 
 
 ## Development managers/architects/leads
 
-Note:
-This isn't a complete list, but I tried to represent at least one contact from each squad or location (Poland, India, US/California, US/New York, US/Massachusetts).
+**Note**: This isn't a complete list, but I tried to represent at least one contact from each squad or location (Poland, India, US/California, US/New York, US/Massachusetts).
 
 
-Kamila Baron-Palucka (on maternity leave)
-Barbara Kowalczyk (manager)
-Manish Bhide (STSM, India Lab)
-Yong Li (manager, ICP, fastpath script/Python module, and other things)
-Ken Matsuoka (GUI)
-Ramesh Somisetty (explainability, maybe other things as well)
-Charlie Wiecha (manager from Yorktown who reports to Gaurav Rao, Director of Engineering for OpenScale)
-Lukasz Cmielowski
-Dave Royer (fastpath)
-Rohit Gargate (fastpath, ICP)
-Eric Martens (Digital Technical Engagement)
-Trent Gray-Donald, Gaurav Rao, and Gaurav’s team will move to Dinesh Nirmal's team (see Dinesh's blog for more information at https://apps.na.collabserv.com/blogs/77488779-12e6-4302-a944-7ca6bad90db4/entry/ANNOUNCEMENT_New_Analytics_Development_Organizational_Alignment).
+- Kamila Baron-Palucka (on maternity leave)
+- Barbara Kowalczyk (manager)
+- Manish Bhide (STSM, India Lab)
+- Yong Li (manager, ICP, fastpath script/Python module, and other things)
+- Ken Matsuoka (GUI)
+- Ramesh Somisetty (explainability, maybe other things as well)
+- Charlie Wiecha (manager from Yorktown who reports to Gaurav Rao, Director of Engineering for OpenScale)
+- Lukasz Cmielowski
+- Dave Royer (fastpath)
+- Rohit Gargate (fastpath, ICP)
+- Eric Martens (Digital Technical Engagement)
+- Trent Gray-Donald, Gaurav Rao, and Gaurav’s team will move to Dinesh Nirmal's team. For more information, see [Dinesh's blog](https://apps.na.collabserv.com/blogs/77488779-12e6-4302-a944-7ca6bad90db4/entry/ANNOUNCEMENT_New_Analytics_Development_Organizational_Alignment).
 
 
 ## Offering managers
 
-Taken from Beth Smith's blog at https://w3-connections.ibm.com/blogs/76f4974e-15fb-41d1-8fa5-5ad4abc1ae4d/entry/Team_announcements_Joining_Analytics_and_AI
+Taken from [Beth Smith's blog](https://w3-connections.ibm.com/blogs/76f4974e-15fb-41d1-8fa5-5ad4abc1ae4d/entry/Team_announcements_Joining_Analytics_and_AI)
+
 AI lifecycle tools & runtime: We are combining Watson Studio, Watson Machine Learning, and OpenScale as a comprehensive set of tools and runtimes for AI, running on Kubernetes. This team will work closely with IBM Research to deliver AI automation throughout the lifecycle.
-The offering management team for AI OpenScale will move to Shadi Copty
-Anshu Jain (all-around, very good with UX and documentation)
-Alex Jones
-Rebecca Kim (metrics)
-Rohan Vaidyanathan w/ his team (marketing/go to market)
+The offering management team for AI OpenScale will move to Shadi Copty and includes the following OMs:
+
+- Anshu Jain (all-around, very good with UX and documentation)
+- Alex Jones
+- Rebecca Kim (metrics)
+- Rohan Vaidyanathan w/ his team (marketing/go to market)
 
 
 ## Design
 
-Thomas Hollifield (manager/lead)
-Kim Iungerman (project manager, chairs the Design 4 in a Box meeting)
-Kev Bittner
-Cory Marko
+- Thomas Hollifield (manager/lead)
+- Kim Iungerman (project manager, chairs the Design 4 in a Box meeting)
+- Kev Bittner
+- Cory Marko
 
 ## Slack channels
 
@@ -151,11 +165,24 @@ We discussed the feasibility of development providing translated screen captures
 
 ### Project codes for translation kits
 
-Mike: Add screen caps of translation kit screens
+The following screen shots show you how to fill out the TCT Light screens for the translation kits:
+
+#### IBM Watson OpenScale for IBM Cloud
+
+- MTP charge to ID: WOS21ABD001
+
+  ![TCT Light OpenScale ICP4D settings](images/WOS21ABD001.png)
+
+#### IBM Watson OpenScale for IBM Cloud Pak for Data
+
+- MTP charge to ID: WOS21ABD002
+
+  ![TCT Light OpenScale ICP4D settings](images/WOS21ABD002.png)
+
 
 ## Accessibility testing
 
-The documentation has been tested. (Add URL)
+The documentation has been tested. [IBM Watson OpenScale Documentation Accessibility Checklist](https://acs.w3ibm.mybluemix.net/auth/checklist?checklistId=4b1cfcec-5ee8-4fdf-8a0f-04f80e4a6643&deliverableId=34dd21a8-e5d8-473f-902e-c0980ccb8418)
 
 Link to Cloud doc about ACS compliance records, https://test.cloud.ibm.com/docs/developing/writing?topic=writing-accessibility-requirements-for-information-developers#step-7-submitting-your-checklists-and-compliance-records-in-acs
 
