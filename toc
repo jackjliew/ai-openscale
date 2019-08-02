@@ -86,6 +86,7 @@ Watson OpenScale
 
     {: .topicgroup}
     Performance
+        wos-performance_metrics.md
         wos-performance-throughput.md
 
     {: .topicgroup}
