@@ -28,24 +28,23 @@ subcollection: ai-openscale
 # Getting insights with {{site.data.keyword.aios_short}}
 {: #io-ov}
 
-You can track all the deployments you are monitoring through the {{site.data.keyword.aios_full}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}} and provides you with the means of getting insights into how your models are performing.
+You can track all the deployed models, also known as deployments, that you are monitoring through the {{site.data.keyword.aios_full}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}} and provides you with the means of getting insights into how your models are performing.
 {: shortdesc}
 
 ## Insights
 {: #io-ins}
 
-The **Insights** tab ( ![Insight dashboard](images/insight-dash-tab.png) ) provides a high-level view of your deployment monitoring.
+The **Insights** ![Insight dashboard](images/insight-dash-tab.png) tab provides a high-level view of your deployment monitoring.
 
   ![Insight dashboard](images/wos-insight-dashboard.png)
 
-- ***Deployments Monitored*** - In this example, a total of 10 deployments are being monitored. Eight of the ten following deployments are shown as individual tiles.
+- ***Deployments Monitored*** - In this example, a total of 2 deployments are being monitored. The deployments are shown as individual tiles.
 
-- ***Quality Alerts*** - A total of 3 Quality (previously called Accuracy) alerts are represented in the following tiles. In this example, the `Driver Performance`, `Market Analytics`, and `Pricing Risk` deployments show Accuracy values of `60%`, `65%`, and `79%`, respectively.
+- ***Quality Alerts*** - A total of 2 Quality (previously called Accuracy) alerts are represented in the tiles and both show values of `74%`.
 
-- ***Fairness Alerts*** - There are a total of 6 Fairness alerts, represented in the following tiles, and by a small `BIAS` tag. In this example, the `Driver Performance`, `Market Analytics`, `Regulatory Compliance`, `Fraud Detection`, `Premium Optimization`, and `Damage Cost Estimator` deployments show Fairness values of `59%`, `68%`, `62%`, `64%`, `79%`, and `63%`, respectively.
+- ***Fairness Alerts*** - There is 1 Fairness alert, which displays in the `GermanCreditRiskModel` tile, represented by a small `BIAS` tag. The deployment shows a Fairness value of `93%` and is based on 1 of 2 attributes.
 
-Each tile provides a summary of monitoring activity for that deployment. Note that the `Call Center Routing` deployment tile shows no issues, indicating a fairly stable, accurate model.
-
+Each tile provides a summary of monitoring activity for that deployment. Note that the `GDR Credit analyzer app` deployment tile shows no bias, yet, perhaps because fairness evaluation has not yet completed.
 
 ## Fairness, quality, performance, and analytics insights
 {: #it-ov}
@@ -64,7 +63,7 @@ Select any of the individual deployment tiles to view more details about that de
 ## Explainability
 {: #io-tran}
 
-Use the **Explain a transaction** tab ( ![Explain a transaction tab](images/insight-transact-tab.png) ) to search a specific transaction ID to explain a particular deployment transaction.
+Use the **Explain a transaction** ![Explain a transaction tab](images/insight-transact-tab.png) tab to search a specific transaction ID to explain a particular transaction record.
 
 - [Explaining transactions](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)
 - [Explaining categorical models](/docs/services/ai-openscale?topic=ai-openscale-ie-class)
