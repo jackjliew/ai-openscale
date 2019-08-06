@@ -167,18 +167,22 @@ You can also add your machine learning provider by using the Python SDK. For mor
 To connect your Microsoft Azure instance to {{site.data.keyword.aios_short}}, you must provide the following credentials:
 
 #### Client ID
+{: #connect-azureservice-client-id}
 
 The actual string value of your client ID, which verifies who you are and authenticates and authorizes calls that you make to Azure Service.
 
 #### Client Secret
+{: #connect-azureservice-clientsecret}
 
 The actual string value of the secret, which verifies who you are and authenticates and authorizes calls that you make to Azure Service.
 
 #### Tenant
+{: #connect-azureservice-tenant}
 
 Your tenant ID corresponds to your organization and is a dedicated instance of Azure AD. To find the tenant ID, hover over your account name to get the directory / tenant ID, or select **Azure Active Directory** > **Properties** > **Directory ID** in the Azure portal.
 
 #### Subscription ID
+{: #connect-azureservice-subid}
 
 Subscription credentials that uniquely identify your Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 

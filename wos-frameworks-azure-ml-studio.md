@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: supported frameworks, models, model types, limitations, limits, azure, studio, Microsoft
+keywords: supported frameworks, models, model types, limitations, limits, azure, studio
 
 subcollection: ai-openscale
 
@@ -81,18 +81,22 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a Mic
 To connect your Microsoft Azure instance to {{site.data.keyword.aios_short}}, you must provide the following credentials:
 
 #### Client ID
+{: #ca-connect-azurestudio-clientid}
 
 The actual string value of your client ID, which verifies who you are and authenticates and authorizes calls that you make to Azure Studio.
 
 #### Client Secret
+{: #ca-connect-azurestudio-clientsecret}
 
 The actual string value of the secret, which verifies who you are and authenticates and authorizes calls that you make to Azure Studio.
 
 #### Tenant
+{: #ca-connect-azurestudio-tenant}
 
-Your tenant ID corresponds to your organization and is a dedicated instance of Azure AD. To find the tenant ID, hover over your account name to get the directory / tenant ID, or select **Azure Active Directory** > **Properties** > **Directory ID** in the Azure portal.
+Your tenant ID corresponds to your organization and is a dedicated instance of Azure AD. To find the tenant ID, hover over your account name to get the directory / tenant ID, or select Azure Active Directory > Properties > Directory ID in the Azure portal.
 
 #### Subscription ID: 
+{: #ca-connect-azurestudio-subid}
 
 Subscription credentials which uniquely identify your Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
@@ -100,7 +104,7 @@ Confused about where to find all this information? For instructions about how to
 
 
 ### Steps to connect your Azure ML Studio instance
-{: #ca-connect}
+{: #ca-connect-studio}
 
 {{site.data.keyword.aios_short}} connects to AI models and deployments in a Azure ML Studio instance.
 
@@ -237,6 +241,6 @@ Confused about where to find all this information? For instructions about how to
 
 
 ## Next steps
-{: #ca-next}
+{: #ca-next-studio}
 
 {{site.data.keyword.aios_short}} is now ready for you to [add deployments to your dashboard](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-select-deploy) and [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).

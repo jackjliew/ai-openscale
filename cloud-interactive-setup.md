@@ -53,7 +53,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
       ![Machine Learning](images/machine_learning.png)
 
-    - [Object Storage](https://{DomainName}/catalog/services/cloud-object-storage){: external}
+    - [{{site.data.keyword.cos_full_notm}}](https://{DomainName}/catalog/services/cloud-object-storage){: external}
 
       ![Object Storage](images/object_storage.png)
 
@@ -65,8 +65,11 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
     ![Watson Studio create project](images/cloud-studio_create_proj.png)
 
-1.  Click the **Create an empty project** tile.
-1.  Give your project a name and description, make sure the Object Storage service you created in the previous step is selected in the **Storage** menu, and click **Create**.
+1. Click the **Create an empty project** tile.
+
+  ![Watson Studio Create an empty project tile is displayed](images/cloud-studio_create_standard.png)
+
+1. Give your project a name and description, make sure that the {{site.data.keyword.cos_full_notm}} service that you created is selected in the **Storage** dropdown, and click **Create**.
 
 ### Associate your {{site.data.keyword.Bluemix_notm}} Services with your Watson project
 {: #gs-assoc}
@@ -77,7 +80,7 @@ In addition to {{site.data.keyword.aios_short}}, to complete this tutorial, you 
 
 1.  Click the **Add** link on the **Machine Learning** tile.
 2.  On the **Existing** tab, from the **Existing Service Instance** drop-down, click the service you created previously.
-3. Click **Select**.
+3.  Click **Select**.
 
 ### Add the **Credit Risk** model
 {: #gs-addmod}

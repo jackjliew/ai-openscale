@@ -44,6 +44,17 @@ The following issues are common for both {{site.data.keyword.aios_full}} on Clou
 - Situation: For proper processing of payload analytics, {{site.data.keyword.aios_short}} does not support column names with double quotation marks (") in the payload. This affects both scoring payload and feedback data in CSV and JSON formats.
 - Solution: Remove double quotation marks (") from the column names of the payload file.
 
+### Active debias records do not reach the payload logging table
+{: #ts-trouble-common-payloadlogging-1000k-limit}
+
+Not all debias records reach the payload logging table. There is also a mis-match in the records count in the error log, where you might see the following error message:
+
+`com.ibm.analytics.aios.utils.clients.db.TableSchemaMismatch: Existing table schema does not match with expectation`
+
+When you use the active debias API, there is a limit of 1000 records that can be sent at one time for payload logging.
+
+To avoid loss of data, you must use the active debias API to score in chunks of 1000 records or fewer.
+
 ## Issues specific to {{site.data.keyword.wos4d_full}}
 {: #ts-trouble-icp}
 
