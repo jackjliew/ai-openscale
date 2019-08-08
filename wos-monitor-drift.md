@@ -97,7 +97,7 @@ This option is useful if the training data is not stored in Db2 or {{site.data.k
 
 2. Click the **Train in a notebook** tile.
 
-   ![Drift configuration page with an online option and a notebook option](images/drift-config-2.png)
+   ![What is Drift? page](images/wos-drift-config-1a.png)
 
 3. Drag the compressed model file into the target zone, or browse to select it and click **Next**.
 
