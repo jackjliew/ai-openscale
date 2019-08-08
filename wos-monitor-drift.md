@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: accuracy, 
+keywords: accuracy, drift, configuration, monitors
 
 subcollection: ai-openscale
 
@@ -63,6 +63,22 @@ If you use {{site.data.keyword.pm_full}}, you have the option of using the {{sit
    ![What is Drift? page](images/drift-config-2.png)
 
 5. Follow the prompts and enter required information. When you finish, a summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, save your work.
+
+## Steps to configure drift without retraining
+{: #behavior-drift-config-steps-no-training}
+
+Reconfigure the drift monitor without re-training the drift model to update parameters without performing additional processing. You might do this to update the minimum sample size and threshold to produce more data on the currently trained model without incurring additional processing costs. It is one way to avoid intensive CPU usage when the underlying data hasn't changed and you only want to view drift magnitude with different thresholds. Drift model retraining is only required when training data or schema has changed.
+
+1. From the **Drift** tab, on the **What is Drift**? page, click **Begin** to start the configuration process.
+
+   ![What is Drift? page](images/wos-drift-config-1.png)
+
+2. Click the **Use the existing drift model** tile.
+
+   ![What is Drift? page](images/drift-config-2.png)
+
+5. Follow the prompts and enter required information. When you finish, a summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, save your work.
+
 
 
 ## Steps to configure drift using a notebook
