@@ -60,7 +60,7 @@ If you use {{site.data.keyword.pm_full}}, you have the option of using the {{sit
 
 2. Click the **Train in Watson OpenScale** tile.
 
-   ![What is Drift? page](images/drift-config-2.png)
+   ![What is Drift? page](images/wos-drift-config-1a.png)
 
 5. Follow the prompts and enter required information. When you finish, a summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, save your work.
 
@@ -73,7 +73,7 @@ Reconfigure the drift monitor without re-training the drift model to update para
 
    ![What is Drift? page](images/wos-drift-config-1.png)
 
-2. Click the **Use the existing drift model** tile.
+2. Click **Edit** and then click the **Use the existing drift model** tile.
 
    ![What is Drift? page](images/drift-config-2.png)
 
