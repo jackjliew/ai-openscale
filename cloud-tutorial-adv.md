@@ -86,7 +86,7 @@ Log in to your [{{site.data.keyword.cloud_notm}} account](https://{DomainName}){
 
 - [Create a {{site.data.keyword.DSX}} instance](https://{DomainName}/catalog/services/watson-studio){: external} if you do not already have one associated with your account:
 
-  ![Watson Studio tile is displayed](images/watson_studio.png)
+  ![Watson Studio tile is displayed](images/wos-watson_studio.png)
 
 - Give your service a name, choose the Lite (free) plan, and click the **Create** button.
 
@@ -137,19 +137,19 @@ If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a
 ## Set up a {{site.data.keyword.DSX}} project
 {: #crt-set-wstudio}
 
-- Log in to your [{{site.data.keyword.DSX}} account](https://dataplatform.ibm.com/){: external}. Click the {{site.data.keyword.avatar}} and verify that the account you are using is the same account you used to create your {{site.data.keyword.cloud_notm}} services:
+1. Log in to your [{{site.data.keyword.DSX}} account](https://dataplatform.ibm.com/){: external}. Click the {{site.data.keyword.avatar}} and verify that the account you are using is the same account you used to create your {{site.data.keyword.cloud_notm}} services:
 
   ![Same Account](images/same_account.png)
 
-- In {{site.data.keyword.DSX}}, begin by creating a new project. Select "Create a project":
+1. In {{site.data.keyword.DSX}}, begin by creating a new project. Click the **Create a project** tile.
 
   ![Watson Studio create project](images/cloud-studio_create_proj.png)
 
-1.  Click the **Create an empty project** tile.
+1. Click the **Create an empty project** tile.
 
-  ![Watson Studio select Standard project tile is displayed](images/cloud-studio_create_standard.png)
+  ![Watson Studio Create an empty project tile is displayed](images/cloud-studio_create_standard.png)
 
-- Give your project a name and description, make sure the Cloud Object Storage service you created is selected in the **Storage** dropdown, and click **Create**.
+1. Give your project a name and description, make sure that the {{site.data.keyword.cos_full_notm}} service that you created is selected in the **Storage** dropdown, and click **Create**.
 
 ## Create and deploy a {{site.data.keyword.pm_short}} model
 {: #crt-make-model}
