@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 適合率 ![ベータ・タグ](images/beta.png)
+# 適合率
 {: #quality_precision}
 
 適合率は、肯定クラスの予測の正解率です。

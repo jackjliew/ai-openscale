@@ -38,7 +38,7 @@ subcollection: ai-openscale
 
 1.  選擇資料庫。您有兩個選項：免費資料庫，或是現有資料庫或新的資料庫。
 
-    ![選取資料庫](images/gs-config-database.png)
+    ![會顯示「選取您的資料庫」畫面，其中提供兩個選項，以便選擇要使用免費 Lite 方案，還是使用現有的資料庫](images/gs-config-database.png)
 
     如果您已有一個付費 {{site.data.keyword.cloud_notm}} 帳戶，您可以佈建 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服務，以便充分利用與 Watson Studio 和持續學習服務的整合。如果您選擇不佈建付費服務，您可以將免費的內部 PostgreSQL 儲存空間與 {{site.data.keyword.aios_short}} 搭配使用，只是這就無法為模型配置持續學習。
     {: note}
@@ -54,7 +54,7 @@ subcollection: ai-openscale
 
 若要繼續使用免費資料庫，請按一下**使用免費 Lite 方案資料庫**圖磚，然後按一下**儲存**。
 
-  ![選取資料庫](images/gs-config-database2.png)
+  ![會顯示「資料庫已儲存」蹦現訊息，其中已選取「選取提供者」按鈕](images/gs-config-database2.png)
   
 您可以從免費資料庫升級至另一個資料庫，但是無法將 Compose for Postgres、Database for Postgres 或 Db2 實例重新配置到免費資料庫。升級之後，就無法回去使用免費資料庫。您將無法重複使用所有現行資料，例如配置、評分結果和說明。透過選取另一個綱目或資料庫，將 {{site.data.keyword.aios_short}} 環境完全重設。
 
@@ -67,15 +67,14 @@ subcollection: ai-openscale
 
 1.  選取您現有的資料庫類型（Compose for Postgres、Database for Postgres 或 Db2）、從**資料庫**下拉功能表中選取一個資料庫，然後選取一項**綱目**：
 
-    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援「精簡 Db2」方案。如需訓練資料的相關資訊，請參閱[為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援 Lite Db2 方案。如需訓練資料的相關資訊，請參閱[為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
-    ![選取資料庫](images/gs-config-database3.png)
+    ![會顯示「選取資料庫」畫面，其中具有一些欄位，供您輸入資料庫類型、資料庫名稱和綱目。](images/gs-config-database3.png)
 
 1.  您也可以按一下**選取不同位置**，以指定一個位於您 {{site.data.keyword.Bluemix_notm}} 帳戶之外的資料庫位置。
 
-    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援「精簡 Db2」方案。
-    {: note}
+    {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援 Lite Db2 方案。{: note}
 
     - 選取**資料庫類型**（`Compose for PostgreSQL`、`Database for PostgreSQL` 或 `Db2`），然後提供連線資訊：
 
@@ -111,4 +110,4 @@ subcollection: ai-openscale
 ## 後續步驟
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} 現在已備妥，可供您[傳送評分有效負載](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score)以及[配置部署的監視器](/docs/services/ai-openscale?topic=ai-openscale-mo-config)。
+{{site.data.keyword.aios_short}} 現在已備妥，可供您[傳送評分有效負載](/docs/services/ai-openscale?topic=ai-openscale-cdb-score)以及[配置部署的監視器](/docs/services/ai-openscale?topic=ai-openscale-mo-config)。

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Misura F1 ponderata ![tag beta](images/beta.png)
+# Misura F1 ponderata
 {: #quality_wght_f1-measure}
 
 La misura F1 ponderata dà la media ponderata della misura F1 con pesi uguali alla probabilità di classe.

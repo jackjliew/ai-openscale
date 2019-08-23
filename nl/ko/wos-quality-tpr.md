@@ -25,10 +25,10 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 참 양성 비율(TPR) ![베타 태그](images/beta.png)
+# 참 양성 비율(TPR)
 {: #quality_tpr}
 
-참 양성 비율(TPR)은 양성 클래스 예측에서 올바른 예측의 비율을 제공합니다.
+참 양성 비율(TPR)은 양성 클래스 예측에서 올바른 예측의 비율을 제공합니다. 
 {: shortdesc}
 
 ## 참 양성 비율(TPR) 개요

@@ -67,7 +67,7 @@ subcollection: ai-openscale
 
 환경 설정 및 전문 지식 레벨에 따라 여러 가지 설정 옵션이 있습니다.
 
-- [다음 자동 설정](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)에서는 백그라운드에서 태스크를 수행하여 프로세스를 안내합니다.
+- [다음 자동 설정](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start)에서는 백그라운드에서 태스크를 수행하여 프로세스를 안내합니다.
 
    둘러보기를 사용하면 둘러보기를 보고 클릭하여 다음 부분으로 이동할 수 있습니다.
    
@@ -75,7 +75,7 @@ subcollection: ai-openscale
 
    샘플 모델과 삽입된 데이터로 공통 작업을 수행하는 데 인터페이스를 사용하십시오.
    
-- [고급 튜토리얼](/docs/services/ai-openscale?topic=ai-openscale-crt-ov)을 사용하면 더 많은 기술 사용자가 전제조건 서비스를 자동으로 프로비저닝하고 구성하는 Python 모듈을 설치할 수 있습니다. 이 고급 튜토리얼은 수월하게 Python과 Notebook을 코딩할 수 있는 사용자나 데이터 과학자용입니다. 프로그래밍 방식으로 기능을 수행하는 데 {{site.data.keyword.aios_short}} 클라이언트를 사용하는 방법의 예입니다. 이 튜토리얼에서 사용하는 노트북은 [자동 설정](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)에 따를 때와 동일한 위치에 생깁니다.
+- [고급 튜토리얼](/docs/services/ai-openscale?topic=ai-openscale-crt-ov)을 사용하면 더 많은 기술 사용자가 전제조건 서비스를 자동으로 프로비저닝하고 구성하는 Python 모듈을 설치할 수 있습니다. 이 고급 튜토리얼은 수월하게 Python과 Notebook을 코딩할 수 있는 사용자나 데이터 과학자용입니다. 프로그래밍 방식으로 기능을 수행하는 데 {{site.data.keyword.aios_short}} 클라이언트를 사용하는 방법의 예입니다. 이 튜토리얼에서 사용하는 노트북은 [자동 설정](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start)에 따를 때와 동일한 위치에 생깁니다.
 
    이 모듈에는 pip 패키지 관리 시스템을 포함하는 Python 3이 설치되어 있어야 합니다. 지시사항을 보려면 [Python 모듈을 설치하여 {{site.data.keyword.aios_short}} 설정](/docs/services/ai-openscale?topic=ai-openscale-as-module)을 참조하십시오.
 
@@ -92,7 +92,7 @@ subcollection: ai-openscale
 
 둘러보기를 시작하기 전에 다음 리소스가 설정되어 있어야 합니다.
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
 자동화된 설정 둘러보기는 사용자와의 상호작용을 가능한 최소화하도록 설계되었습니다. 따라서 다음 사항을 자동으로 결정합니다.
@@ -100,7 +100,7 @@ subcollection: ai-openscale
 - {{site.data.keyword.pm_full}} 인스턴스가 여러 개 설정되어 있는 경우, 설치 프로세스가 인스턴스 나열을 위한 API 호출을 실행하고 결과 목록에서 제일 먼저 표시할 {{site.data.keyword.pm_short}} 인스턴스를 선택합니다. 
 - {{site.data.keyword.pm_full}}의 새 Lite 버전을 작성하기 위해 {{site.data.keyword.aios_short}} 설치 프로그램이 {{site.data.keyword.Bluemix}} 계정에 대해 기본 리소스 그룹을 사용합니다.
 
-### {{site.data.keyword.aios_full}} 서비스 프로비저닝
+### {{site.data.keyword.aios_short}} 서비스 프로비저닝
 {: #crt-wos-faststart}
 
 아직 수행하지 않은 경우 {{site.data.keyword.aios_full}}을 프로비저닝하십시오. 
@@ -111,24 +111,17 @@ subcollection: ai-openscale
 
 1. **카탈로그** > **AI** > **{{site.data.keyword.aios_short}}**를 클릭하십시오.
 2. 서비스에 이름을 지정하고 플랜을 선택한 다음 **작성** 단추를 클릭하십시오.
-3. {{site.data.keyword.aios_short}}를 시작하려면 **시작하기** 단추를 클릭하십시오.
+3. {{site.data.keyword.aios_short}}을 시작하려면 **애플리케이션 시작** 단추를 클릭하십시오.
 
 ## 자동 설정
 {: #wos-work-demo}
 
 1.  {{site.data.keyword.Bluemix}}에서 {{site.data.keyword.aios_short}} 인스턴스에 로그인하십시오.
-1.  샘플 데이터를 사용하여 {{site.data.keyword.aios_short}} 인스턴스를 자동으로 설정하려면 **자동 설정**을 클릭하십시오. 
+1.  샘플 데이터를 사용하여 {{site.data.keyword.aios_short}} 인스턴스를 자동으로 설정하려면 **자동 설정**을 클릭하십시오.
 
    ![데모 시작](images/cloud-auto-setup.png)
 
-   {{site.data.keyword.aios_short}} 서비스가 프로비저닝되면 데모 시나리오를 검토할 수 있습니다.
-
-   ![데모 미리보기](images/fastpath_demo_11.31.58.png)
-
-프로비저닝이 완료되면 **시작합니다** 단추를 클릭하여 {{site.data.keyword.aios_short}} 대시보드를 둘러보고 [{{site.data.keyword.aios_short}}에서 결과 보기](#wos-open)를 진행하십시오.
-
-   ![데모를 시작합니다](images/fastpath_demo_11.33.45.png)
-
+   {{site.data.keyword.aios_short}} 서비스가 프로비저닝 중인 동안 데모 시나리오를 검토할 수 있습니다. 프로비저닝이 완료되면 **둘러보기 시작** 단추를 클릭하여 {{site.data.keyword.aios_short}} 대시보드를 둘러보고 [{{site.data.keyword.aios_short}}에서 결과 보기](#wos-open)를 진행하십시오.
 
 ## {{site.data.keyword.aios_short}}에서 결과 보기
 {: #wos-open}
@@ -150,22 +143,9 @@ subcollection: ai-openscale
 {: #wos-monitoring}
 
 1.  인사이트 페이지에서 `GermanCreditRiskModelICP` 타일을 클릭하여 모니터링한 데이터의 세부사항을 확인하십시오.
-1.  차트에서 마커를 클릭한 후 끌어서 데이터를 표시하는 일 및 기간을 확인한 다음 **세부사항 보기** 링크를 클릭하십시오. 또는 차트에서 다른 기간을 클릭하여 표시되는 데이터를 변경할 수 있습니다.
+1.  차트에서 마커를 클릭한 후 끌어서 데이터를 표시하는 일 및 기간을 확인한 다음 **세부사항 보기** 링크를 클릭하십시오. 또는 차트에서 다른 기간을 클릭하여 표시되는 데이터를 변경할 수 있습니다. 
 
-     - 예를 들면, 다음 화면은 특정 날짜 및 시간에 대한 데이터를 표시합니다. 날짜 및 시간은 언제 모듈을 실행하는지에 따라서 다릅니다.
-
-     - 시계열 차트를 해석하는 것에 대한 정보는 [공정성, 분당 평균 요청 및 정확성 모니터링](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart)을 참조하십시오.
-
-   ![데모를 시작합니다](images/fastpath_demo_11.34.17.png)
-
-1.  `SEX` 데이터 모니터링에 대한 세부사항을 보려면 드롭 다운 메뉴에서 `SEX`가 선택되었는지 확인하십시오.
-
-    - 다음 화면 캡처에는 편향성이 있다는 점에 주의하십시오.
-    
-   ![데모를 시작합니다](images/fastpath_demo_11.34.27.png)
-
-    - 특정 시간에 데이터 점 차트의 해석에 대한 정보는 [데이터 시각화](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual)를 참조하십시오.
-
+시계열 차트의 해석에 대한 정보는 [인사이트 확보](/docs/services/ai-openscale?topic=ai-openscale-it-ov)를 참조하십시오. 
 
 ### 설명 가능성 보기
 {: #wos-explain}
@@ -178,20 +158,17 @@ subcollection: ai-openscale
 
    ![데모를 시작합니다](images/fastpath_demo_11.35.12.png)
 
-트랜잭션을 발견하고 설명하는 것에 대한 정보는 [설명 가능성 모니터링](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov)을 참조하십시오.
+트랜잭션을 발견하고 설명하는 것에 대한 정보는 [설명 가능성 모니터링](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)을 참조하십시오.
 
    ![데모를 시작합니다](images/fastpath_demo_11.35.50.png)
 
 ## 둘러보기 완료
 {: #wos-done-demo}
 
-1. **완료** 단추를 클릭하십시오.
+둘러보기를 마치면 자체 모델 배치를 대시보드에 추가하거나 튜토리얼 배치의 탐색을 계속할 수 있습니다.  
 
-   ![데모를 시작합니다](images/fastpath_demo_11.37.22.png)
-
-2. **시작합니다** 단추를 클릭하여 {{site.data.keyword.aios_short}}에 대한 작업을 시작하십시오.
-
-   ![데모를 시작합니다](images/fastpath_demo_11.33.45.png)
+- 자체 모델을 대시보드에 추가하려면 **대시보드에 추가** 단추를 클릭하십시오. 
+- 튜토리얼 모델 탐색을 계속하려면 독일 신용 위험 타일을 클릭하십시오. 
 
 ## 다음 단계
 {: #gs-next}

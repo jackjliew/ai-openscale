@@ -28,6 +28,18 @@ subcollection: ai-openscale
 # Python SDK 튜토리얼(고급)
 {: #crt-ov}
 
+이 튜토리얼에서는 다음 태스크를 수행하는 방법을 학습합니다. 
+
+- Python 노트북을 실행하여 기계 학습 모델을 작성하고 훈련하며 배치합니다.
+- 데이터 마트를 작성하고 성능, 정확성 및 공정성 모니터를 구성하며 모니터할 데이터를 작성합니다.
+- {{site.data.keyword.aios_short}} 인사이트 탭에서 결과를 봅니다.
+
+
+## Python 클라이언트
+{: #in-pyc}
+
+[{{site.data.keyword.aios_short}} Python 클라이언트](http://ai-openscale-python-client.mybluemix.net/){: external}는 {{site.data.keyword.cloud_notm}}에서 {{site.data.keyword.aios_short}} 서비스를 사용하여 직접 작업할 수 있게 하는 Python 라이브러리입니다. {{site.data.keyword.aios_short}} 클라이언트 UI 대신 Python 클라이언트를 사용하여 직접 로깅 데이터베이스를 구성하고 기계 학습 엔진을 바인드하고 배치를 선택 및 모니터할 수 있습니다. 이 방법으로 Python 클라이언트를 사용하는 예를 보려면 [{{site.data.keyword.aios_short}} 샘플 노트북](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks){: external}을 참조하십시오.
+
 ## 시나리오
 {: #crt-scenario}
 
@@ -74,7 +86,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
 - [계정과 연관된 인스턴스가 아직 없으면 {{site.data.keyword.DSX}} 인스턴스를 작성](https://{DomainName}/catalog/services/watson-studio){: external}하십시오.
 
-  ![Watson Studio](images/watson_studio.png)
+  ![Watson Studio 타일이 표시됨](images/watson_studio.png)
 
 - 서비스에 이름을 지정하고 Lite(무료) 플랜을 선택한 다음 **작성** 단추를 클릭하십시오.
 
@@ -83,7 +95,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
 - [계정과 연관된 서비스가 아직 없으면 {{site.data.keyword.cos_short}} 서비스를 프로비저닝](https://{DomainName}/catalog/services/cloud-object-storage){: external}하십시오.
 
-  ![Object Storage](images/object_storage.png)
+  ![Object Storage 타일이 표시됨](images/object_storage.png)
 
 - 서비스에 이름을 지정하고 Lite(무료) 플랜을 선택한 다음 **작성** 단추를 클릭하십시오.
 
@@ -92,7 +104,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
 - [계정과 연관된 인스턴스가 아직 없으면 {{site.data.keyword.pm_short}} 인스턴스를 프로비저닝](https://{DomainName}/catalog/services/machine-learning){: external}하십시오.
 
-  ![기계 학습](images/machine_learning.png)
+  ![기계 학습 타일이 표시됨](images/machine_learning.png)
 
 - 서비스에 이름을 지정하고 Lite(무료) 플랜을 선택한 다음 **작성** 단추를 클릭하십시오.
 
@@ -103,7 +115,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
 - 계정과 아직 연관된 인스턴스가 없으면 [{{site.data.keyword.aios_short}} 인스턴스를 프로비저닝](https://{DomainName}/catalog/services/watson-openscale){: external}하십시오.
 
-  ![{{site.data.keyword.aios_short}} 타일](images/wos-cloud-tile.png)
+  ![{{site.data.keyword.aios_short}} 타일이 표시됨](images/wos-cloud-tile.png)
 
 1. **카탈로그** > **AI** > **{{site.data.keyword.aios_short}}**를 클릭하십시오.
 2. 서비스에 이름을 지정하고 플랜을 선택한 다음 **작성** 단추를 클릭하십시오.
@@ -114,11 +126,11 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
 유료 {{site.data.keyword.cloud_notm}} 계정이 있는 경우 `Databases for PostgreSQL` 또는 `Db2 Warehouse` 서비스를 프로비저닝하여 {{site.data.keyword.DSX}} 및 지속적인 학습 서비스와의 통합을 최대한 활용할 수 있습니다. 유료 서비스를 프로비저닝하지 않기로 선택하는 경우 무료 내부 PostgreSQL 스토리지를 {{site.data.keyword.aios_short}}과 함께 사용할 수 있으나 모델에 대한 연속 학습을 구성할 수 없습니다.
 
-- [계정과 연관된 서비스가 아직 없으면 Databases for PostgreSQL 서비스](https://{DomainName}/catalog/services/databases-for-postgresql) 또는 [Db2 Warehouse 서비스를 프로비저닝](https://{DomainName}/catalog/services/db2-warehouse)하십시오.
+- [계정과 연관된 서비스가 아직 없으면 Databases for PostgreSQL 서비스](https://{DomainName}/catalog/services/databases-for-postgresql){: external} 또는 [Db2 Warehouse 서비스를 프로비저닝](https://{DomainName}/catalog/services/db2-warehouse){: external}하십시오.
 
-  ![DB for Postgres](images/dbpostgres.png)
+  ![DB for Postgres 타일이 표시됨](images/dbpostgres.png)
 
-  ![Db2 Warehouse](images/db2_warehouse.png)
+  ![Db2 Warehouse 타일이 표시됨](images/db2_warehouse.png)
 
 - 서비스에 이름을 지정하고 표준 플랜(Databases for PostgreSQL) 또는 입문 플랜(Db2 Warehouse)을 선택한 다음 **작성** 단추를 클릭하십시오.
 
@@ -135,7 +147,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
 - **표준** 타일을 선택하여 프로젝트를 작성하십시오.
 
-  ![Watson Studio 표준 프로젝트 선택](images/studio_create_standard.png)
+  ![Watson Studio 표준 프로젝트 선택 타일이 표시됨](images/studio_create_standard.png)
 
 - 프로젝트에 이름과 설명을 지정하고 작성한 Cloud Object Storage 서비스가 **스토리지** 드롭 다운에서 선택되어 있는지 확인하고 **작성**을 클릭하십시오.
 
@@ -145,13 +157,13 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 ### `Working with Watson Machine Learning` 노트북을 {{site.data.keyword.DSX}} 프로젝트에 추가
 {: #crt-add-notebook}
 
-- 다음 파일을 다운로드하십시오.
+- 다음 파일에 액세스하십시오. GitHub 계정이 있으면 로그인하여 파일을 복제 및 다운로드할 수 있습니다. 그렇지 않으면, **원시** 단추를 클릭하여 원시 버전을 보고 파일의 텍스트를 .ipynb 확장자의 새 파일로 복사할 수 있습니다. 
 
     - [Watson Machine Learning에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - **자산** 탭의 {{site.data.keyword.DSX}} 프로젝트에서 **프로젝트에 추가** 단추를 클릭하고 드롭 다운 메뉴에서 **노트북**을 선택하십시오.
 
-  ![연결 추가](images/add_notebook.png)
+  ![노트북 타일이 강조표시된 자산 유형 선택이 표시됨](images/add_notebook.png)
 
 - **파일에서**를 선택하십시오.
 
@@ -161,7 +173,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
   ![새 Notebook 양식](images/new_notebook_name2a.png)
 
-- **런타임 선택** 섹션에서 Spark 옵션이 있는 Python 3.5를 선택하십시오.
+- **런타임 선택** 섹션에서 Spark 옵션의 최신 Python을 선택하십시오. 
 
 - **Notebook 작성**을 클릭하십시오.
 
@@ -175,7 +187,7 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
 - "서비스 프로비저닝 및 인증 정보 구성" 섹션에서 다음과 같이 변경하십시오.
 
-    - 지침에 따라 {{site.data.keyword.cloud_notm}} API 키를 작성하고 복사하여 붙여넣으십시오.
+    - 노트북의 지시사항에 따라 {{site.data.keyword.cloud_notm}} API 키를 작성, 복사하고 붙여넣으십시오. 
 
     - {{site.data.keyword.pm_full}} 서비스 인증 정보를 이전에 작성한 인증서로 바꾸십시오.
 
@@ -202,11 +214,11 @@ Jupyter Notebook은 독일어 신용 위험 모델을 교육, 작성 및 배치�
 
 [{{site.data.keyword.aios_short}} 대시보드](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}를 사용하여 **인사이트** 탭을 클릭하십시오.
 
-  ![인사이트](images/insight-dash-tab.png)
+  ![인사이트 아이콘이 표시됨](images/insight-dash-tab.png)
 
 인사이트 페이지에서 배치된 모델에 대한 메트릭 개요를 볼 수 있습니다. Notebook을 실행할 때 설정한 임계값을 초과하는 공정성 또는 정확성 메트릭에 대한 경보를 쉽게 볼 수 있습니다. 이 튜토리얼에서 사용된 데이터와 설정은 여기에서 표시된 정확성 및 공정성과 유사한 메트릭을 갖게 됩니다.
 
-  ![인사이트 개요](images/insight-overview-adv-tutorial-2.png)
+  ![인사이트 개요 대시보드가 독일 신용 위험 모델의 타일과 함께 표시됨](images/insight-overview-adv-tutorial-2.png)
 
 ### 배치에 대한 모니터링 데이터 보기
 {: #crt-view-mon-data}

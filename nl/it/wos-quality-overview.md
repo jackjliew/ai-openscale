@@ -25,10 +25,11 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Panoramica sulle metriche di qualità ![tag beta](images/beta.png)
+# Panoramica sulle metriche di qualità
 {: #anlz_metrics}
 
 Utilizzare il monitoraggio della qualità per determinare la precisione con cui il modello predice i risultati. Quando il monitoraggio della qualità è abilitato, genera una serie di metriche ogni ora per impostazione predefinita. È possibile generare queste metriche on-demand facendo clic sul pulsante **Controlla qualità ora** o utilizzando il client Python.
+{: shortdesc}
 
 Le metriche di qualità sono calcolate in base alle seguenti informazioni:
 
@@ -56,11 +57,21 @@ Le seguenti metriche di qualità sono supportate da {{site.data.keyword.aios_sho
 
 - [Area sotto la curva ROC](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_roc)
 - [Area sotto la curva PR](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-area-pr)
+- [Varianza spiegata dalla proporzione](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_var)
+- [Errore assoluto medio](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_abserror)
+- [Errore quadratico medio](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_squerror)
+- [R quadro](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_r_squared)
+- [Radice dell'errore quadratico medio](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-supqualdets_squ_errors_mean)
 - [Accuratezza](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-accuracy-opener)
+- [Tasso ponderato di veri positivi (wTPR - Weighted True Positive Rate)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-wtpr)
 - [Tasso di veri positivi (TPR - True positive rate)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_tpr)
+- [Tasso ponderato di falsi positivi (wFPR - Weighted False Positive Rate)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wfpr_weighted)
 - [Tasso di falsi positivi (FPR - False positive rate)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_fpr_false)
+- [Richiamo ponderato](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_weighted_recall)
 - [Richiamo](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_recall)
+- [Precisione ponderata](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wgth_prec)
 - [Precisione](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_precision)
+- [Misura F1 ponderata](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wght_f1-measure)
 - [Misura F1](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_f1-measr)
 - [Perdita logaritmica](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_log_loss)
 
@@ -75,3 +86,8 @@ I seguenti dettagli delle metriche di qualità sono supportati da {{site.data.ke
 La matrice di confusione consente di comprendere per quale dei dati di feedback la risposta della distribuzione monitorata è corretta e per la quale non lo è.
 
 Per ulteriori informazioni, consultare [Matrice di confusione](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx).
+
+## Passi successivi
+
+- Quando {{site.data.keyword.aios_short}} rileva problemi nella qualità, come violazioni di soglia di accuratezza, è necessario creare una nuova versione del modello che risolva il problema. Utilizzando i dati etichettati manualmente nella tabella di feedback, è necessario riaddestrare il modello insieme ai dati di training originali.
+

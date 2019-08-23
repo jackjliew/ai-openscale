@@ -213,13 +213,20 @@ Sie können in einer CSV-Datei enthaltene Rückmeldedaten direkt in die Benutzer
 ### CSV-Datei hochladen
 {: #fmt-upld-fdbk-data-upld-csv}
 
-Verwenden Sie zum Hochladen einer CSV-Datei die Schaltfläche **Rückmeldedaten hinzufügen**.
+Verwenden Sie zum Hochladen einer CSV-Datei die Schaltfläche **Rückmeldedaten hinzufügen**. Um den folgenden Schritten im Rahmen des Lernprogramms zu folgen, öffnen und kopieren Sie die Inhalte der Datei [`credit_feedback_data.csv`](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv).
 
 1. Klicken Sie im {{site.data.keyword.aios_short}}-Dashboard auf die Bereitstellungskachel.
-2. Klicken Sie im Modellbereitstellungsfenster auf das Symbol **Konfiguration**![Darstellung der Schaltfläche für die Bereitstellungskonfiguration](images/configure-deployment-button.png).
-3. Klicken Sie auf die Schaltfläche **Rückmeldedaten hinzufügen**, wählen Sie die CSV-Datei aus, die die Rückmeldedaten enthält, und klicken Sie auf **Öffnen**.
+2. Klicken Sie im Modellbereitstellungsfenster auf **Konfigurationsüberwachungen** ![Darstellung der Schaltfläche für die Bereitstellungskonfiguration](images/configure-deployment-button.png).
+3. Klicken Sie im Navigationsfenster auf **Qualität**.
+4. Klicken Sie auf **Feedback** und dann auf **Rückmeldedaten hinzufügen**.
+5. Wählen Sie die CSV-Datei mit Rückmeldedaten aus und klicken Sie auf **Öffnen**. Für das Lernprogramm wählen Sie die Datei `credit_feedback_data.csv` aus, die Sie heruntergeladen haben.
+
+    Die Größe für Dateien ist gegenwärtig auf 8 MB begrenzt.
+    {: note}
+
 4. Klicken Sie im Dropdown-Menü auf das Feldtrennzeichen und danach auf **Auswählen**.
 
+Durch Hinzufügen der CSV-Datei werden Ihrem Modell Rückmeldedaten zur Verfügung gestellt.
 ### JSON-Datei hochladen
 {: #fmt-upld-fdbk-data-upld-json}
 
@@ -230,3 +237,8 @@ Verwenden Sie zum Hochladen einer CSV-Datei die Schaltfläche **Rückmeldedaten 
     ![JSON-Test](images/json_test02.png)
 
 1.  Öffnen Sie jetzt die heruntergeladene JSON-Datei und kopieren Sie den Inhalt dieser Datei in das JSON-Feld auf der Registerkarte **Testen**. Klicken Sie auf die Schaltfläche **Vorhersagen**, um Trainingsnutzdaten an Ihr Modell zu senden und sie zu bewerten.
+
+### Ergebnisse anzeigen
+{: #fmt-upld-fdbk-view-results-after}
+
+Wenn Sie das Ergebnis sofort überprüfen möchten, wählen Sie auf der Seite **Insights** eine Bereitstellung aus, klicken Sie auf eine der Metriken für **Qualität** und dann auf **Qualität jetzt überprüfen**.

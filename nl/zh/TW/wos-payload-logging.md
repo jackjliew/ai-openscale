@@ -85,11 +85,7 @@ req_response = requests.post(endpoint,
                              headers = headers)
 ```
 
-
-
 ## 後續步驟
-{: #cdb-payload-nxt-stps}
 
-如需相關資訊，請參閱[有效負載記載](http://aiopenscale-api.mybluemix.net/#/Payload%20Logging%20(Public%20API)/publishScoringPayload){: external}
-
+在您設置內容記載之後，您可以輸入模型明細，以繼續配置監視器。如需相關資訊，請參閱[提供模型明細](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-work-model-dets)。
 

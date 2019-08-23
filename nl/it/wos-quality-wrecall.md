@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Richiamo ponderato ![tag beta](images/beta.png)
+# Richiamo ponderato
 {: #quality_weighted_recall}
 
 Il richiamo ponderato dà la media ponderata di richiamo con pesi uguali alla probabilità di classe.

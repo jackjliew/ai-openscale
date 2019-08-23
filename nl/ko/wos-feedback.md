@@ -214,13 +214,20 @@ CSV 파일의 피드백 데이터는 {{site.data.keyword.aios_short}} 사용자 
 ### CSV 파일 업로드
 {: #fmt-upld-fdbk-data-upld-csv}
 
-CSV 파일을 업로드하려면 **피드백 데이터 추가** 단추를 사용하십시오.
+CSV 파일을 업로드하려면 **피드백 데이터 추가** 단추를 사용하십시오. 튜토리얼의 일부로서 다음 단계를 따라 진행하려면 [`credit_feedback_data.csv`](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) 파일의 컨텐츠를 열고 복사하십시오. 
 
 1. {{site.data.keyword.aios_short}} 대시보드에서 배치 타일을 클릭하십시오.
-2. 모델 배치 창에서 **구성** ![배치 구성 단추가 표시되어 있음](images/configure-deployment-button.png) 아이콘을 클릭하십시오.
-3. **피드백 데이터 추가** 단추를 클릭하고 피드백 데이터가 포함된 CSV 파일을 선택한 후 **열기**를 클릭하십시오.
+2. 모델 배치 창에서 **구성 모니터** ![배치 구성 단추가 표시됨](images/configure-deployment-button.png)를 클릭하십시오. 
+3. 탐색 분할창에서 **품질**을 클릭하십시오.
+4. **피드백**을 클릭한 후 **피드백 데이터 추가** 단추를 클릭하십시오.
+5. 피드백 데이터가 포함된 CSV 파일을 선택한 후 **열기**를 클릭하십시오. 튜토리얼의 경우 다운로드한 `credit_feedback_data.csv` 파일을 선택하십시오. 
+
+    파일 크기가 현재 8MB로 제한됩니다.
+    {: note}
+
 4. 드롭 다운 메뉴에서 필드 구분 기호를 클릭하고 **선택**을 클릭하십시오.
 
+CSV 파일을 추가하면 모델에 피드백 데이터가 제공됩니다.
 ### JSON 파일 업로드
 {: #fmt-upld-fdbk-data-upld-json}
 
@@ -231,3 +238,8 @@ CSV 파일을 업로드하려면 **피드백 데이터 추가** 단추를 사용
     ![JSON 테스트](images/json_test02.png)
 
 1.  이제 다운로드한 JSON 파일을 열고 컨텐츠를 **테스트** 탭의 JSON 필드로 복사하십시오. **예측** 단추를 클릭하여 모델에 대한 교육 페이로드를 전송하고 스코어링하십시오.
+
+### 결과 보기
+{: #fmt-upld-fdbk-view-results-after}
+
+결과를 즉시 확인하려면 **인사이트** 페이지에서 배치를 선택하고 **품질** 메트릭 중 하나를 클릭한 후 **지금 품질 확인**을 클릭하십시오. 

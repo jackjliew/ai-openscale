@@ -31,16 +31,16 @@ subcollection: ai-openscale
 針對您要使用 {{site.data.keyword.aios_short}} 來追蹤的每一項部署，設置並啟用監視器。
 {: shortdesc}
 
+例如，在互動式指導教學中，如果您使用 **German Credit Risk 模型**，請選取模型部署，設定有效負載記載的資料類型，並確認模型明細區段所隨附的一些設定。
+
 ## 選取部署
 {: #mo-select-deploy}
 
-1. 從**洞察**標籤，按一下**新增部署**按鈕。 
+1. 從**洞察**標籤，按一下**新增至儀表板**按鈕。 
 
-   ![「選取部署」頁面](images/config-select-deploy.png)
+   會出現可用的模型部署清單。如果您看不到任何模型部署，則必須使用機器學習提供者來部署模型。在本指導教學中，請選取 **German Credit Risk 模型**。
 
-   會出現可用的模型部署清單。
-
-   ![準備監視](images/wos-select-model-deployment.png)
+   ![會顯示「選取模型部署」畫面。其中顯示所選取的機器學習提供者和部署。](images/wos-select-model-deployment.png)
 
 2. 按一下模型部署，然後按一下**配置**。
 
@@ -54,19 +54,20 @@ subcollection: ai-openscale
 {: #mo-work-data}
 
 您必須提供您模型和訓練資料的相關資訊。如需訓練資料的相關資訊，請參閱[為何 {{site.data.keyword.aios_short}} 需要存取我的訓練資料？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    就本指導教學來說，請在**資料類型**欄位中，選取**數值/種類**，並針對**演算法類型**，選取**二進位分類**。
 
-![準備解釋](images/config-what-monitor.png)
+![會顯示「指定輸入的類型」畫面，其中顯示所選取的資料類型和演算法類型](images/config-what-monitor.png)
 
-- 如果您所用 {{site.data.keyword.pm_full}} 實例的所在地區，與您的 {{site.data.keyword.aios_short}} 實例相同，您必須選取「資料類型」和「演算法類型」，不過，會為您自動配置有效負載記載資訊。
+- 如果您所用 {{site.data.keyword.pm_full}} 實例的所在地區，與您的 {{site.data.keyword.aios_short}} 實例相同，您必須選取「資料類型」和「演算法類型」，不過，會為您自動配置有效負載記載資訊。 
 - 否則，必須在**有效負載記載**標籤和視窗中，輸入您資料類型、演算法類型和有效負載記載的相關資訊。 
 
-   視您的選擇而定，會有特定的需求。如需相關資訊，請參閱[數值/種類資料](https://test.cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan)。
+   視您的選擇而定，會有特定的需求。如需相關資訊，請參閱[數值/種類資料](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan)。
 
    您需要先複製其中一個要執行的程式碼 Snippet，才能配置監視器。請在您的用戶端應用程式中執行 cURL 指令，或在資料科學記事本中執行 Python 指令。這可讓您藉以記載模型部署要求，並將回應資料寫入至有效負載資料庫。
    
 在您使用本端 {{site.data.keyword.pm_full}} 方法或使用 API，來傳送有效負載記載明細之後，必須回到**有效負載記載**畫面，並按一下**我已完成**。
 
-![有效負載記載畫面圖](images/payload-logging-gosales001.png)
+![此圖顯示「有效負載記載」畫面](images/payload-logging-gosales001.png)
 
 如果已正確將評分傳送給 {{site.data.keyword.aios_short}}，在您按一下**我已完成**按鈕之後，會顯示下列畫面。會隱藏按鈕，您會看到**已順利啟動記載**訊息。
 
@@ -76,19 +77,19 @@ subcollection: ai-openscale
 ### 提供模型明細
 {: #mo-work-model-dets}
 
-提供您模型的相關資訊，讓 {{site.data.keyword.aios_short}} 可以存取資料庫，並瞭解模型的設置方式。
+提供您模型的相關資訊，讓 {{site.data.keyword.aios_short}} 可以存取資料庫，並瞭解模型的設置方式。例如，在互動式指導教學中，如果您使用 **German Credit Risk 模型**，則會為您自動完成下列許多欄位。
 
 特別是如果要配置監視器，您必須執行下列作業：
 
 1. 指定訓練資料的位置。做法是輸入位置、主機名稱或 IP 位址、資料庫名稱，以及鑑別資訊。
 2. 在資料庫內，您必須選取綱目和表格，以選取訓練表格。
-3. 從訓練表格中選取標籤直欄。
+3. 從訓練表格中選取標籤直欄，例如，在本指導教學中，請按一下**風險**圖磚。
 4. 選取用來訓練 AI 部署的特性。
 5. 選取文字及種類特性。
-6. 選取部署預測直欄。
+6. 選取部署預測直欄，例如，在本指導教學中，按一下 **predictedLabel**圖磚。
 7. 最後，您可以先檢閱模型明細，再加以儲存。
 
-下列各節根據模型的類型，提供您會遇到的特定資訊：[數值/種類資料](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan)或[影像和非結構化文字](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datai)。
+下列各節根據模型的類型，提供您會遇到的特定資訊：[數值/種類資料](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan)或[影像和非結構化文字](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datai)。
 
 
 ### 數值/種類資料
@@ -160,4 +161,4 @@ subcollection: ai-openscale
 ### 後續步驟
 {: #mo-next}
 
-如果要繼續配置監視器，請按一下**精確度**標籤，並按一下**開始**。如需相關資訊，請參閱[配置「精確度」或「品質」監視器](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)。
+如果要繼續配置監視器，請按一下**品質**標籤，並按一下**開始**。如需相關資訊，請參閱[配置「品質」監視器](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)。

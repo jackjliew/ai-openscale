@@ -25,10 +25,11 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 漂移检测 ![beta 标记](images/beta.png)
+# 漂移量级 ![beta 标记](images/beta.png)
 {: #behavior-drift-ovr}
 
 随着时间的推移，模型中某些特征的重要性和影响会发生更改。这会影响关联的应用程序和产生的业务结果。通过漂移检测，{{site.data.keyword.aios_short}} 提供了一种方法来跟踪模型度量、模型性能以及特征权重随时间变化的方式。
+随着数据的更改，模型进行准确预测的能力可能会衰退。漂移量级是指预测性能随时间推移下降的程度。使用有关漂移的信息来执行纠正操作。
 {: shortdesc}
 
 ## 了解漂移检测
@@ -66,5 +67,7 @@ subcollection: ai-openscale
 
 ## 后续步骤
 
-- 有关如何解释漂移的信息，请参阅[配置漂移监视器](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)
-- 通过阅读[使用 IBM Watson OpenScale 了解模型漂移](https://medium.com/@manish.bhide/4c5401aa8da4)来增加漂移 IQ
+- 有关如何设置漂移检测的信息，请参阅[配置漂移检测监视器](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)。
+- 要缓解漂移，在 Watson OpenScale 检测到它之后，必须构建用于修正问题的新模型版本。理想做法是从突显为漂移原因的数据点着手。在手动标注漂移事务后将新数据引入到预测模型，并使用这些数据重新训练模型。
+
+

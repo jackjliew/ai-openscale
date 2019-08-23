@@ -40,7 +40,7 @@ subcollection: ai-openscale
 ## 始めに
 {: #as-prereqs}
 
-1. [{{site.data.keyword.cloud_notm}} API キーを作成して、ダウンロードします](/docs/iam?topic=iam-userapikey#create_user_key)。 後ほどのステップでこの API キーを入力する必要があります。
+1. [{{site.data.keyword.cloud_notm}} API キーを作成して、ダウンロードします](/docs/iam?topic=iam-userapikey#create_user_key){: external}。後ほどのステップでこの API キーを入力する必要があります。
 
 2. [Python 3 の任意のリリースをインストールします](https://www.python.org/downloads/){: external}。
 
@@ -85,9 +85,10 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
 - 「インサイト」ページには、公平性と正解率に関する問題が一目で分かるように表示されます。問題の判定には、構成されたしきい値が使用されます。
 
-- 各デプロイメントはタイルとして表示されます。 以下の画面キャプチャーに示すように、このモジュールでは `GermanCreditRiskModel` というデプロイメントが構成されています。
+- 各デプロイメントはタイルとして表示されます。 いずれかのチュートリアルを行っている場合は、`GermanCreditRiskModel` というデプロイメントがダッシュボードに表示されます。以下のサンプルは、デプロイ済みのモニター対象モデルが多数表示されているダッシュボードを示します。
 
-  ![「洞察」の概要](images/setup01-0206.png)
+    ![多数のデプロイメントがそれぞれタイトルとして表示されている「インサイト」ダッシュボード](images/insight-dashboard.png)
+
 
 ### モニタリング・データの表示
 {: #as-monitoring}
@@ -97,17 +98,17 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
    - 例えば、以下の画面には、特定の日時のデータが表示されています。 モジュールの実行タイミングによって日時は異なります。
 
-   - 時系列グラフの解釈について詳しくは、[公平性、毎分平均リクエスト数、正解率のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
+   - 時系列グラフの解釈について詳しくは、[インサイトの取得](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
 
-    ![モニター・データ](images/setup02-0206.png)
+    ![モニター・データが表示されています](images/setup02-0206.png)
 
 3. `AGE` データのモニタリングに関する詳細を確認するには、ドロップダウン・メニューで `AGE` が選択されていることを確認します。
 
   - 以下の画面キャプチャーでは、バイアスが存在しないことに注目してください。
 
-  - 特定時刻におけるデータ・ポイントのグラフの解釈について詳しくは、[公平性、毎分平均リクエスト数、正解率のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp)を参照してください。
+  - 特定時間のデータ・ポイントグラフの解釈については、[特定の時間のデータの視覚化](/docs/services/ai-openscale?topic=ai-openscale-it-vdet)を参照してください。
 
-    ![詳細を表示します](images/setup03-0206.png)
+    ![「詳細を表示」が表示されています](images/setup03-0206.png)
 
 ### 説明性の表示
 {: #as-explain}
@@ -125,5 +126,5 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
 - バイアスについては、[公平性](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)を参照してください。
 - モデルの予測結果の精度については、[正解率](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)を参照してください。
-- グラフとデータの解釈方法については、[公平性、毎分平均リクエスト数、正解率のモニター](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
+- グラフとデータの解釈方法については、[インサイトの取得](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
 - 背後にある要因が結果に及ぼす影響については、[説明性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。

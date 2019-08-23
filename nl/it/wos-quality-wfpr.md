@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Tasso ponderato di falsi positivi (wFPR - Weighted False Positive Rate) ![tag beta](images/beta.png)
+# Tasso ponderato di falsi positivi (wFPR - Weighted False Positive Rate)
 {: #quality_wfpr_weighted}
 
 Il tasso ponderato di falsi positivi (wFPR) fornisce la media ponderata della classe tasso falsi positivi (FPR) con pesi uguali alla probabilità della classe.
@@ -34,11 +34,11 @@ Il tasso ponderato di falsi positivi (wFPR) fornisce la media ponderata della cl
 ## Tasso ponderato di falsi positivi (wFPR - Weighted False Positive Rate) a colpo d'occhio
 {: #quality_wfpr_weighted-glance}
 
-- **Descrizione**: la media ponderata della classe FPR con pesi uguali alla probabilità della classe
+- **Descrizione**: la proporzione di previsioni errate nella classe dei positivi
 - **Soglie predefinite**: limite inferiore = 80%
 - **Raccomandazione predefinita**:
-   - **Andamento crescente**: un andamento crescente indica che la metrica sta migliorando. Ciò significa che il nuovo training del modello è efficace.
-   - **Andamento decrescente**: un andamento decrescente indica che la metrica sta peggiorando. I dati di feedback stanno riportando differenze significative rispetto ai dati di training.
+   - **Andamento crescente**: un andamento crescente indica che la metrica sta peggiorando. I dati di feedback stanno riportando differenze significative rispetto ai dati di training.
+   - **Andamento decrescente**: un andamento decrescente indica che la metrica sta migliorando. Ciò significa che il nuovo training del modello è efficace.
    - **Variazione anomala o irregolare**: una variazione anomala o irregolare indica che i dati di feedback non sono congruenti tra le valutazioni. Incrementare la dimensione minima del campione per il monitor Qualità.
 - **Tipo di problema**: classificazione multi-classe
 - **Valori del grafico**: ultimo valore nel periodo di tempo

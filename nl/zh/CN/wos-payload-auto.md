@@ -40,13 +40,13 @@ subcollection: ai-openscale
 
    根据有效内容格式：{{site.data.keyword.aios_short}}（类似于 {{site.data.keyword.pm_full}}）或用户的有效内容格式，返回对应格式的输出。如果格式是用户的格式，请将其转换为 {{site.data.keyword.aios_short}} 格式并作为有效内容记录存储有效内容日志记录表中。如果评分输入格式是 {{site.data.keyword.aios_short}} 格式，请勿存储有效内容（此有效内容来自 {{site.data.keyword.aios_short}} 而不是来自用户）。
 
-   有关更多信息，请参阅[使用两种有效内容格式](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-notsuppt)。
+   有关更多信息，请参阅[使用两种有效内容格式](#fmrk-workaround-notsuppt)。
 
 - 选项 2：如果出于某些原因无法在单个 REST API 端点中嵌入此类逻辑，那么可以定义两个端点。 
 
    您的应用程序使用其中一个端点，但是，必须添加有效内容日志记录并将其转换为预期格式。第二个端点由 {{site.data.keyword.aios_short}} 用于进行所需的计算，例如偏差和可解释性。此端点无需进行任何有效内容日志记录。在 {{site.data.keyword.aios_short}} 配置期间，应将第二个端点指向具有兼容格式的端点。
 
-   有关更多信息，请参阅[使用两个端点](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-opt2-cs1)。
+   有关更多信息，请参阅[使用两个端点](#fmrk-workaround-opt2-cs1)。
 
 - 选项 3：将有效内容日志记录模块移至原始端点或下游应用程序。 
 
@@ -99,7 +99,7 @@ subcollection: ai-openscale
 1. 在 Microsoft Azure 机器学习服务中，使用笔记本为信用风险模型 (scikit-learn) 部署创建评分端点。有关更多信息，请参阅[此样本笔记本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20model%20with%20Azure%20ML%20Service%20and%20scikit-learn.ipynb)。
 2. 创建定制机器学习引擎，并将其作为 Flask 应用程序部署在 Microsoft Azure Cloud 上。创建扰动端点和发现端点。有关更多信息，请参阅[这些部署指示信息](https://github.com/pmservice/ai-openscale-tutorials/tree/master/applications/custom-ml-engine-azure)。
 3. 配置 {{site.data.keyword.aios_short}} 以使用定制机器学习引擎。有关更多信息，请参阅[此样本笔记本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/OpenScale%20and%20Custom%20ML%20Engine%20configuration.ipynb)。
-4. 创建用于在 Microsoft Azure 机器学习服务上自动执行有效内容日志记录的评分端点包装器。有关更多信息，请参阅[此样本笔记本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20scoring%20endpoint%20wrapper%20with%20payload%20logging.ipynb)。
+4. 创建用于在 Microsoft Azure Machine Learning Service 上自动执行有效内容日志记录的评分端点包装器。有关更多信息，请参阅[此样本笔记本](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20scoring%20endpoint%20wrapper%20with%20payload%20logging.ipynb)。
 
 请特别注意以下各项：
 

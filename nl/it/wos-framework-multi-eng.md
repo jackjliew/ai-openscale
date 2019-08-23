@@ -48,6 +48,12 @@ Quando si configura per la prima volta {{site.data.keyword.aios_short}}, è poss
 
 Dopo aver salvato la configurazione, si ha l'opzione di andare al dashboard, scegliere le distribuzioni o configurare i monitor.
 
+## Modifica dei provider di machine learning
+{: #fmrk-workaround-editingproviders-dashboard}
+
+Occorre apportare una modifica a un provider di machine learning? Fare clic sull'icona del menu a riquadri ![icona del menu a riquadri](images/v-three-dots.png) e fare clic su **Visualizza & dettagli di modifica**.
+
+   ![Viene visualizzata la vista Provider di machine learning e l'opzione di modifica](images/wos-machine-learning-providers-edit.png)
 
 ## Aggiunta di provider di machine learning utilizzando il metodo di bind dell'SDK Python
 {: #fmrk-workaround-multmleng-binding}

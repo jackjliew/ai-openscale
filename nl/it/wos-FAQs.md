@@ -86,7 +86,7 @@ Quando si è pronti a transitare dal piano Lite, si può adottare un piano di pr
 ### Voglio eseguire {{site.data.keyword.aios_short}} sui miei server. Quanta potenza di elaborazione devo allocare?
 {: #faq-sizing}
 
-Esistono linee guida specifiche per la [configurazione hardware](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#inst-hwt) per le configurazioni a tre nodi e a sei nodi. Il team IBM Technical Sales può inoltre aiutare a vagliare la propria configurazione specifica. Poiché {{site.data.keyword.aios_short}} funziona come un componente aggiuntivo per {{site.data.keyword.icp4dfull_notm}}, è necessario considerare i requisiti per entrambi i prodotti software.
+Esistono linee guida specifiche per la [configurazione hardware](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#inst-hwt) per le configurazioni a tre nodi e a sei nodi. Il team IBM Technical Sales può inoltre aiutare a vagliare la propria configurazione specifica. Poiché {{site.data.keyword.aios_short}} funziona come un componente aggiuntivo per {{site.data.keyword.icp4dfull_notm}}, è necessario considerare i requisiti per entrambi i prodotti software.
 
 ### Come posso convertire una colonna di previsione da un tipo di dati numerici a un tipo di dati categoriali?
 {: #wos-faqs-convert-data-types}

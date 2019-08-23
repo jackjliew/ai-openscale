@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 로그 손실 ![베타 태그](images/beta.png)
+# 로그 손실
 {: #quality_log_loss}
 
 로그 손실은 대상 클래스 가능성(신뢰도)의 로그 평균을 제공합니다. 기대 로그 우도라고도 하며, 모델 성능을 가늠하는 효과적인 척도입니다.
@@ -48,6 +48,30 @@ subcollection: ai-openscale
 {: #quality_log_loss-display}
 
 ![로그 손실이 표시되어 있습니다.](images/quality-log-loss.png)
+
+### 공정성 스코어
+{: #quality_log_loss-display-fairness-score}
+
+로그 손실 메트릭의 경우 다음 공정성 스코어가 표시됩니다.  
+
+![재현율 스코어 백분율이 표시됩니다.](images/wos-quality-logloss-score.png)
+
+### 스케줄
+{: #quality_log_loss-display-schedule}
+
+**스케줄** 분할창은 **마지막 평가** 및 **다음 평가** 시간을 표시합니다. 수량 메트릭은 매시간 평가됩니다. **지금 품질 확인**을 클릭하여 평가를 강제 실행할 수 있습니다. **피드백 데이터 추가**를 클릭하여 피드백을 추가할 수도 있습니다. 
+
+![마지막 평가 시간과 다음 평가 시간을 표시하는 스케줄 분할창이 표시됩니다.](images/wos-quality-schedule.png)
+
+
+### 권장사항
+{: #quality_log_loss-display-recommendations}
+
+차트 해석에 도움이 되도록, 모델 효과를 개선 또는 개악하는 트랜드를 표시하는 **권장사항** 분할창이 표시합니다. 
+
+![권장사항 분할창이 표시됩니다.](images/wos-quality-negative-recommendation.png)
+
+
 
 ## 계산법
 {: #quality_log_loss-math}

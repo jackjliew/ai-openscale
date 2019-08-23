@@ -42,7 +42,7 @@ subcollection: ai-openscale
 
 定义访问策略的作用域后，您可分配一个角色，用于确定用户的访问级别。复查下表，其中概述每个角色在 {{site.data.keyword.aios_short}} 服务中允许的操作。
 
-通过平台管理角色，可以为用户分配各种不同级别的许可权，以在帐户中和服务上执行平台操作。例如，为目录资源分配的平台管理角色使用户能够完成诸如创建、删除、编辑和查看服务实例之类的操作。并且，为帐户管理服务分配的平台管理角色使用户能够完成诸如邀请和移除用户、使用资源组以及查看计费信息之类的操作。有关帐户管理服务的更多信息，请参阅[分配对帐户管理服务的访问权](/docs/iam?topic=iam-account-services#account-services)。
+通过平台管理角色，可以为用户分配各种不同级别的许可权，以在帐户中和服务上执行平台操作。例如，为目录资源分配的平台管理角色使用户能够完成诸如创建、删除、编辑和查看服务实例之类的操作。并且，为帐户管理服务分配的平台管理角色使用户能够完成诸如邀请和移除用户、使用资源组以及查看计费信息之类的操作。有关帐户管理服务的更多信息，请参阅[分配对帐户管理服务的访问权](/docs/iam?topic=iam-account-services#account-services){: external}。
 
 选择创建策略时应用的所有角色。每个角色允许完成不同的操作，并且不会继承次要角色的操作。
 {: tip}
@@ -64,6 +64,6 @@ subcollection: ai-openscale
 {: #platformrolestable1}
 
 
-对于支持用户访问 {{site.data.keyword.aios_short}} 以及能够调用 REST API 的服务访问角色，{{site.data.keyword.aios_short}} 遵从上表中所列的平台管理角色。有关在 UI 中分配用户角色的信息，请参阅[管理对资源的访问权](/docs/iam?topic=iam-iammanidaccser#iammanidaccser)。
+对于支持用户访问 {{site.data.keyword.aios_short}} 以及能够调用 REST API 的服务访问角色，{{site.data.keyword.aios_short}} 遵从上表中所列的平台管理角色。有关在 UI 中分配用户角色的信息，请参阅[管理对资源的访问权](/docs/iam?topic=iam-iammanidaccser#iammanidaccser){: external}。
 
  

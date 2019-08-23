@@ -63,7 +63,6 @@ uid	                                   name	                      service_type	 
 ```
 {: codeblock}
     
-    
 ## Microsoft Azure ML Service-Abonnement hinzufügen
 {: #cml-azsrvsub}
 

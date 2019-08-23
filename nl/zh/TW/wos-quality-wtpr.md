@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加權真肯定率 (wTPR) ![測試版標記](images/beta.png)
+# 加權真肯定率 (wTPR)
 {: #quality-wtpr}
 
 「加權真肯定率」提供類別 TPR 的加權平均值，且其加權等於類別機率。{: shortdesc)

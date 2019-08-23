@@ -27,6 +27,8 @@ subcollection: ai-openscale
 # Framework IBM SPSS C&DS
 {: #frmwrks-spss}
 
+È possibile utilizzare IBM SPSS C&DS per eseguire la registrazione del payload, del feedback e per misurare l'accuratezza delle prestazioni, il rilevamento della distorsione al run-time, l'esplicabilità e la funzione di annullamento della distorsione automatico in {{site.data.keyword.aios_full}}.
+
 {{site.data.keyword.aios_full}} prevede di supportare completamente i seguenti framework di IBM SPSS Collaboration and Deployment Services (C&DS):
 {: shortdesc}
 

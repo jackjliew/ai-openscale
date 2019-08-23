@@ -43,14 +43,14 @@ Verwenden Sie die Fairnessüberwachung in {{site.data.keyword.aios_full}}, um fe
 
 Zusätzlich zum Erkennen geschützter Attribute empfiehlt {{site.data.keyword.aios_short}} die Werte in den einzelnen Attribute, die als zu überwachende Werte, und die Werte, die als Referenzwerte festgelegt werden sollten. {{site.data.keyword.aios_short}} empfiehlt z. B., im Attribut für Geschlecht (sex) die Werte für Frau (Woman) und nicht-binär (Non-binary) als zu überwachende Werte und den Wert für Mann (Male) als Referenzwert für die Verzerrungsüberwachung zu konfigurieren. Die Empfehlungen können Sie bei Bedarf über die Anzeige für die Verzerrungskonfiguration ändern. 
 
-Empfohlene Werte für die Verzerrungsüberwachung beschleunigen die Konfiguration und stellen sicher, dass Sie Ihre AI-Modelle auf Fairness gegenüber sensiblen Attributen überprüfen. Da die Regulierungsbehörden den Blick für algorithmische Verzerrung schärfen, wird es immer wichtiger, dass Unternehmen ein konkrete Vorstellung davon haben, wie ihre Modelle funktionieren und ob sie Ergebnisse für bestimmte Gruppen liefern, die den Anforderungen an Fairness nicht entsprechen. 
+Empfohlene Werte für die Verzerrungsüberwachung beschleunigen die Konfiguration und stellen sicher, dass Sie Ihre AI-Modelle auf Fairness gegenüber sensiblen Attributen überprüfen. Da die Regulierungsbehörden den Blick für algorithmische Verzerrung schärfen, wird es immer wichtiger, dass Unternehmen ein konkrete Vorstellung davon haben, wie ihre Modelle funktionieren und ob sie Ergebnisse für bestimmte Gruppen liefern, die den Anforderungen an Fairness nicht entsprechen.
 
 ## Informationen zu Fairness
 {: #mf-understand}
 
 {{site.data.keyword.aios_short}} überprüft Ihr bereitgestelltes Modell während der Laufzeit auf Verzerrungen. Damit Verzerrungen für ein bereitgestelltes Modell erkannt werden können, müssen Sie Fairnessattribute wie etwa Alter oder Geschlecht definieren, wie nachfolgend im Abschnitt [Fairnessüberwachung konfigurieren](#mf-config) detailliert beschrieben wird.
 
-Damit das Ausgabeschema für ein Modell oder eine Funktion in Watson {{site.data.keyword.pm_short}} angegeben werden kann, ist es zwingend erforderlich, dass die Verzerrungsprüfung in {{site.data.keyword.aios_short}} aktiviert ist. Das Ausgabeschema kann anhand der Eigenschaft `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` im Metadatenbereich er API `store_model` angegeben werden. Weitere Informationen finden Sie in der [Dokumentation zum {{site.data.keyword.pm_full}}-Client](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}.
+Damit die Verzerrungsprüfung in {{site.data.keyword.aios_short}} aktiviert werden kann, muss das Ausgabeschema für ein Modell oder eine Funktion in {{site.data.keyword.pm_short}} angegeben werden. Das Ausgabeschema kann anhand der Eigenschaft `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` im Metadatenbereich er API `store_model` angegeben werden. Weitere Informationen finden Sie in der [Dokumentation zum {{site.data.keyword.pm_full}}-Client](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}.
 
 ### Funktionsweise
 {: #mf-works}
@@ -100,7 +100,7 @@ Wenn eine potenzielle Verzerrung festgestellt wird, führt {{site.data.keyword.a
 
 Zur Berechnung der Fairness und der Genauigkeit werden zwei unterschiedliche Datensätze verwendet. Die Fairness wird anhand der Nutzdaten und der durch Perturbation veränderten Daten berechnet. Die Genauigkeit wird anhand der Rückmeldedaten berechnet. Zur Berechnung der Genauigkeit benötigt {{site.data.keyword.aios_short}} manuell gekennzeichnete Daten. Diese sind nur in Rückmeldungstabelle vorhanden.
 
-Die Ergebnisse dieser Feststellungen sind in der Visualisierung für Verzerrungen verfügbar, die die folgenden Ansichten umfasst: 
+Die Ergebnisse dieser Feststellungen sind in der Visualisierung für Verzerrungen verfügbar, die die folgenden Ansichten umfasst. (Die Ansichten werden nur dann angezeigt, wenn Daten zur Unterstützung vorhanden sind.)
 
 - **Nutzdaten + durch Perturbation veränderten Daten**: Enthält die für die ausgewählte Stunde erhaltene Scoring-Anforderung sowie zusätzliche Datensätze für vorherige Stunden, falls die für die Bewertung erforderliche Mindestanzahl von Datensätzen nicht erreicht wurde. Darüber hinaus sind zusätzliche durch Perturbation veränderte/synthetisierte Datensätze enthalten, die dazu verwendet werden, die Antwort des Modells zu testen, wenn sich der Wert des überwachten Merkmals ändert.
 
@@ -138,7 +138,8 @@ Die Ergebnisse dieser Feststellungen sind in der Visualisierung für Verzerrunge
    
 
    
-- **Verzerrungsbereinigte Daten**: Die Ausgabe des Verzerrungsbereinigungsalgorithmus nach der Verarbeitung der Laufzeitdaten und der durch Perturbation veränderten Daten.
+- **Verzerrungsbereinigte Daten**: Die Ausgabe des Verzerrungsbereinigungsalgorithmus nach der Verarbeitung der Laufzeitdaten und der durch Perturbation veränderten Daten. Bei Auswahl des Optionsfelds **Verzerrungsbereinigt** werden die Änderungen im verzerrungsbereinigten Modell im Vergleich zum Produktionsmodell angezeigt. Das Diagramm spiegelt den verbesserten Ergebnisstatus für Gruppen wider.
+
 
    Beachten Sie die folgenden Details zu verzerrungsbereinigten Daten:
    
@@ -215,7 +216,7 @@ Die folgenden Details für Fairnessmetriken werden von {{site.data.keyword.aios_
 - Fairnessdurchschnittswerte für alle Fairnessgruppen
 
 ```
-                                    (% der günstigen Ergebnisse in der überwachten Gruppe)
+                          (% der günstigen Ergebnisse in der überwachten Gruppe)
 Quote der ungleichen Auswirkung =  ________________________________________________________
                                       (% der günstigen Ergebnisse in der Referenzgruppe)
 ```

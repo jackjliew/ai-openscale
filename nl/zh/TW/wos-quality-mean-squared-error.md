@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 均方誤差 ![測試版標記](images/beta.png)
+# 均方誤差
 {: #quality_squerror}
 
 「均方誤差」提供模型預測與目標值間之平方差的平均值。可作為預估器品質的測量。

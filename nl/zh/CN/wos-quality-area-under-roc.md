@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# ROC 下的面积 ![beta 标记](images/beta.png)
+# ROC 下的面积
 {: #quality_roc}
 
 接收者操作特征曲线下的面积给出查全率和假正率曲线下的面积。它针对错检率计算敏感度。

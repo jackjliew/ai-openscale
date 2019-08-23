@@ -38,9 +38,9 @@ Sie können Ihren Machine-Learning-Anbieter auch mithilfe des Python-SDK hinzuf�
 
 {{site.data.keyword.aios_short}} stellt eine Verbindung zu AI-Modellen und -Bereitstellungen in einer Azure ML Studio-Instanz her.
 
-1.  Klicken Sie auf der Registerkarte **Konfigurieren** auf **Machine Learning-Anbieter**.
+1. Klicken Sie auf der Registerkarte **Konfigurieren** auf **Machine Learning-Provider**. Abhängig von Ihrer Umgebung werden möglicherweise nicht alle der folgenden Provider angezeigt:
 
-    ![Die Anzeige für die Auswahl des Machine Learning-Anbieters mit Kacheln für die unterstützten Machine Learning-Engines wird angezeigt.](images/wos-machine-learning-providers-selection.png)
+   ![Die Anzeige für die Auswahl des Machine Learning-Providers mit Kacheln für die unterstützten Machine Learning-Engines wird angezeigt.](images/wos-machine-learning-providers-selection.png)
 
 1.  Klicken Sie auf die Kachel **Microsoft Azure ML Studio**.
 
@@ -52,6 +52,9 @@ Sie können Ihren Machine-Learning-Anbieter auch mithilfe des Python-SDK hinzuf�
     - Geheimer Clientschlüssel: Der tatsächliche Zeichenfolgewert Ihres geheimen Clientschlüssels, der Ihre Identität nachweist und Ihre Azure Studio-Aufrufe authentifiziert und autorisiert.
     - Tenant: Ihre Tenant-ID entspricht Ihrem Unternehmen und stellt eine dedizierte Azure AD-Instanz dar. Ermitteln Sie die Tenant-ID, indem Sie den Mauszeiger über Ihrem Kontonamen bewegen, um die Verzeichnis-/Tenant-ID zu erhalten, oder wählen Sie Azure Active Directory > Eigenschaften > Verzeichnis-ID im Azure-Portal aus.
     - Abonnement-ID: Abonnementberechtigungsnachweise, die Ihr Microsoft Azure-Abonnement eindeutig kennzeichnen. Die Abonnement-ID ist ein Bestandteil der URI für die einzelnen Serviceaufrufe.
+    - Instanzname des Service-Providers: Der spezifische Name, der diesem Service-Provider zugeordnet ist.
+    - Beschreibung: (optional) Ihre Beschreibung dieser Service-Provider-Instanz in einfacher Sprache. Wenn Sie Produktions- und Testumgebungen haben, wäre dies ein guter Ort, um diese Informationen einzuschließen.
+
 
     Anweisungen dazu, wie Sie Ihre Berechtigungsnachweise für Microsoft Azure beziehen, finden Sie in der zugehörigen Dokumentation unter [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: external}.
     {: note}

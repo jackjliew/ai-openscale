@@ -40,13 +40,13 @@ Wenn Ihre Anwendungen eine ursprünglich Nutzdatenformat verwenden, das nicht ge
 
    Je nach Nutzdatenformat: Bei Nutzdaten in {{site.data.keyword.aios_short}}-Format (ähnlich wie {{site.data.keyword.pm_full}}) oder in Benutzerformat wird die Ausgabe im entsprechenden Format zurückgegeben. Bei Verwendung des Benutzerformats als Format müssen Sie eine Konvertierung in das {{site.data.keyword.aios_short}}-Format vornehmen und die Daten anschließend als in der Nutzdatenprotokollierungstabelle als Datensätze für Nutzdaten speichern. Speichern Sie bei Verwendung des {{site.data.keyword.aios_short}}-Formats als Format für die Scoring-Eingabe die Nutzdaten nicht, denn diese Nutzdaten stammen von {{site.data.keyword.aios_short}} und nicht vom Benutzer.
 
-   Weitere Informationen enthält der Abschnitt [Zwei Nutzdatenformate verwenden](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-notsuppt).
+   Weitere Informationen enthält der Abschnitt [Zwei Nutzdatenformate verwenden](#fmrk-workaround-notsuppt).
 
 - Option 2: Sollte die Einbettung einer solchen Logik in einen einzigen REST-API-Endpunkt aus einem beliebigen Grund nicht möglich sein, können Sie zwei Endpunkte definieren. 
 
    Einer der beiden Endpunkte wird von Ihrer Anwendung verwendet. Sie müssen jedoch die Protokollierung der Nutzdaten hinzufügen und die Konvertierung in das erwartete Format vornehmen. Der zweite Endpunkt wird von {{site.data.keyword.aios_short}} verwendet, um erforderliche Berechnungen wie etwa die Verzerrung oder die Erklärbarkeit durchzuführen. Für diesen Endpunkt ist keine Nutzdatenprotokollierung erforderlich. Während der Konfiguration von {{site.data.keyword.aios_short}} sollte der zweite Endpunkt auf denjenigen mit kompatiblen Formaten verweisen.
 
-   Weitere Informationen hierzu enthält [Zwei Endpunkte verwenden](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-opt2-cs1).
+   Weitere Informationen hierzu enthält [Zwei Endpunkte verwenden](#fmrk-workaround-opt2-cs1).
 
 - Option 3: Sie verschieben das Modul für die Nutzdatenprotokollierung zum ursprünglichen Endpunkt oder zur nachgeordneten Anwendung. 
 

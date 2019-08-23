@@ -46,4 +46,4 @@ subcollection: ai-openscale
 
 다음 성능 메트릭이 {{site.data.keyword.aios_short}}에서 지원됩니다.
 
-- [처리량](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)
+- [처리량](/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

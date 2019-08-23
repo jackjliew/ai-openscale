@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 平均二乗誤差平方根 ![ベータ・タグ](images/beta.png)
+# 平均平方二乗誤差
 {: #supqualdets_squ_errors_mean}
 
 平均二乗誤差平方根 (RMSE) ビューは、モデルの予測値と観測値の差を示します。

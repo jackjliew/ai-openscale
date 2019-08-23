@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 거짓 양성 비율(FPR) ![베타 태그](images/beta.png)
+# 거짓 양성 비율(FPR)
 {: #quality_fpr_false}
 
 거짓 양성 비율은 양성 클래스에서 잘못된 예측의 비율을 제공합니다.

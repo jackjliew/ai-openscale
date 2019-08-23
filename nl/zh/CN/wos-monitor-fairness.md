@@ -93,4 +93,4 @@ subcollection: ai-openscale
 ## 后续步骤
 {: #mf-next}
 
-从**配置监视器**页面中，可以选择其他监视类别。
+要继续配置监视器，请单击**漂移**选项卡，然后单击**开始**。有关更多信息，请参阅[配置漂移检测监视器](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)。

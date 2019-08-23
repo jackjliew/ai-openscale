@@ -40,7 +40,7 @@ Per automatizzare il provisioning e la configurazione dei servizi {{site.data.ke
 ## Prima di iniziare
 {: #as-prereqs}
 
-1. [Creare una chiave API {{site.data.keyword.cloud_notm}} e scaricarla](/docs/iam?topic=iam-userapikey#create_user_key). Sarà necessario immettere la chiave API in un passo successivo.
+1. [Creare una chiave API {{site.data.keyword.cloud_notm}} e scaricarla](/docs/iam?topic=iam-userapikey#create_user_key){: external}. Sarà necessario immettere la chiave API in un passo successivo.
 
 2. [Installare qualsiasi release di Python 3](https://www.python.org/downloads/){: external}.
 
@@ -86,9 +86,10 @@ Dal [dashboard {{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.c
 
 - La pagina Insight mostra in un'unica vista tutti i problemi di correttezza e accuratezza, come determinato dalle soglie configurate.
 
-- Ogni distribuzione viene mostrata come un riquadro. Il modulo ha configurato una distribuzione denominata `GermanCreditRiskModel`, come mostrato nella seguente figura:
+- Ogni distribuzione viene mostrata come un riquadro. Se si segue uno qualsiasi dei supporti didattici, nel dashboard, si vede una distribuzione denominata `GermanCreditRiskModel`. Il seguente esempio mostra un dashboard con molti modelli distribuiti e monitorati:
 
-  ![Panoramica su Insight](images/setup01-0206.png)
+    ![il dashboard Insight con molte distribuzioni, ognuna mostrata come un riquadro](images/insight-dashboard.png)
+
 
 ### Visualizzazione dei dati di monitoraggio
 {: #as-monitoring}
@@ -98,17 +99,17 @@ Dal [dashboard {{site.data.keyword.aios_short}}](https://aiopenscale.cloud.ibm.c
 
    - Ad esempio, la figura che segue mostra i dati per una data e ora specifica. Le date e le ore variano, a seconda di quando si esegue il modulo.
 
-   - Per informazioni sull'interpretazione del grafico delle serie temporali, consultare [Monitoraggio della correttezza, Richieste medie al minuto e Accuratezza](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
+   - Per informazioni sull'interpretazione del grafico delle serie temporali, consultare [Acquisizione degli insight](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
-    ![Monitoraggio dati](images/setup02-0206.png)
+    ![vengono visualizzati i dati del monitor ](images/setup02-0206.png)
 
 3. Per visualizzare i dettagli relativi al monitoraggio dei dati `Età`, assicurarsi che `Età` sia selezionato dal menu a discesa.
 
   - Notare che nella seguente immagine, non esiste alcuna distorsione.
 
-  - Per informazioni sull'interpretazione del grafico dei punti di dati a un'ora specifica, consultare [Monitoraggio della correttezza, Richieste medie al minuto e Accuratezza](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp).
+  - Per informazioni sull'interpretazione del grafico dei punti di dati a un'ora specifica, consultare [Visualizzazione dei dati per un'ora specifica](/docs/services/ai-openscale?topic=ai-openscale-it-vdet).
 
-    ![Visualizzazione dettagli](images/setup03-0206.png)
+    ![sono visualizzati i dettagli della vista](images/setup03-0206.png)
 
 ### Visualizzazione spiegazione
 {: #as-explain}
@@ -126,5 +127,5 @@ Per informazioni relative alla ricerca e alla spiegazione delle transazioni, con
 
 - Per informazioni sulle distorsioni, consultare [Correttezza](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor).
 - Per informazioni sulla bontà dei risultati previsionali del modello, consultare [Accuratezza](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).
-- Per informazioni sull'interpretazione dei grafici e dei dati, consultare [Monitoraggio della correttezza, Richieste medie al minuto e Accuratezza](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
+- Per informazioni sull'interpretazione dei grafici e dei dati, consultare [Acquisizione degli insight](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 - Per informazioni su come i fattori sottostanti influenzino i risultati, consultare [Monitoraggio esplicabilità](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).

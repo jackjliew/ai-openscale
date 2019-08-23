@@ -38,15 +38,15 @@ I prodotti, i servizi e altre funzionalità qui descritti non sono idonei a tutt
 
 Se occorre richiedere il supporto GDPR per le risorse {{site.data.keyword.cloud}} {{site.data.keyword.watson}} che vengono create
 
--   Nell'Unione Europea (UE), consultare [Richiesta di supporto per le risorse {{site.data.keyword.Bluemix}} Watson create nell'Unione Europea](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
--   Al di fuori dell'Unione Europea, consultare [Richiesta di supporto per le risorse fuori dall'Unione Europea](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
+-   Nell'Unione Europea (UE), consultare [Richiesta di supporto per le risorse {{site.data.keyword.Bluemix}} Watson create nell'Unione Europea](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: external}.
+-   Al di fuori dell'Unione Europea, consultare [Richiesta di supporto per le risorse fuori dall'Unione Europea](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU){: external}.
 
 ## Regolamento generale sulla protezione dei dati (GDPR) dell'Unione Europea
 {: #is-gdpr}
 
 IBM si impegna a offrire ai nostri clienti e partner soluzioni innovative per la privacy, la sicurezza e la governance dei dati per assisterli nel loro percorso verso la conformità al GDPR.
 
-È possibile trovare ulteriori informazioni sul percorso di preparazione al GDPR e sulle nostre funzionalità e offerte GDPR che supportano il tuo percorso di conformità [qui](../../icons/launch-glyph.svg "Icona link esterno")](http://www.ibm.com/gdpr){: external}.
+È possibile trovare ulteriori informazioni sul percorso di preparazione al GDPR e sulle nostre funzionalità e offerte GDPR che supportano il tuo percorso di conformità [qui](http://www.ibm.com/gdpr){: external}.
 
 ## Etichettatura ed eliminazione dei dati in {{site.data.keyword.aios_short}}
 {: #is-stda}

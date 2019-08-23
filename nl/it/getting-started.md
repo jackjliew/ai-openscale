@@ -67,7 +67,7 @@ Il modello rischio di credito fornito in questo supporto didattico utilizza un d
 
 Ci sono diverse opzioni di configurazione, a seconda delle preferenze e del livello di competenza.
 
-- [La seguente configurazione automatizzata](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) guida attraverso il processo svolgendo le attività al posto dell'utente in background.
+- [La seguente configurazione automatizzata](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start) guida attraverso il processo svolgendo le attività al posto dell'utente in background.
 
    L'utilizzo di un tour permette di guardare e scegliere di passare alla parte successiva del tour.
    
@@ -75,7 +75,7 @@ Ci sono diverse opzioni di configurazione, a seconda delle preferenze e del live
 
    Utilizzare l'interfaccia per eseguire attività comuni con un modello di esempio e dati inseriti.
    
-- [Il supporto didattico avanzato](/docs/services/ai-openscale?topic=ai-openscale-crt-ov) consente agli utenti più tecnici di installare un modulo Python che automatizza il provisioning e la configurazione dei servizi prerequisiti. Questo supporto didattico avanzato è per gli analisti di dati o per gli utenti che conoscono la codifica, Python e i notebook. È un esempio di come è possibile utilizzare il client {{site.data.keyword.aios_short}} per eseguire funzioni programmaticamente. Il notebook che viene utilizzato in questo supporto didattico si trova nello stesso posto della [configurazione automatizzata](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start).
+- [Il supporto didattico avanzato](/docs/services/ai-openscale?topic=ai-openscale-crt-ov) consente agli utenti più tecnici di installare un modulo Python che automatizza il provisioning e la configurazione dei servizi prerequisiti. Questo supporto didattico avanzato è per gli analisti di dati o per gli utenti che conoscono la codifica, Python e i notebook. È un esempio di come è possibile utilizzare il client {{site.data.keyword.aios_short}} per eseguire funzioni programmaticamente. Il notebook che viene utilizzato in questo supporto didattico si trova nello stesso posto della [configurazione automatizzata](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start).
 
    Questo modulo richiede che sia installato Python 3, che include il sistema di gestione del pacchetto pip. Per istruzioni, consultare [Installazione di un modulo Python per configurare {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module).
 
@@ -92,7 +92,7 @@ Per vedere rapidamente come {{site.data.keyword.aios_short}} monitora un modello
 
 Prima di iniziare il tour, è necessario disporre delle seguenti risorse configurate:
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
 Il tour di configurazione automatizzato è progettato per funzionare con una minima interazione dell'utente. Prende automaticamente le seguenti decisioni per l'utente:
@@ -100,7 +100,7 @@ Il tour di configurazione automatizzato è progettato per funzionare con una min
 - Se si dispone di più istanze {{site.data.keyword.pm_full}} configurate, il processo di installazione esegue una chiamata API per elencare le istanze e sceglie l'istanza {{site.data.keyword.pm_short}} che appare per prima nell'elenco risultante. 
 - Per creare una nuova versione {{site.data.keyword.pm_full}} lite, il programma di installazione di {{site.data.keyword.aios_short}} utilizza il gruppo di risorse predefinito per l'account {{site.data.keyword.Bluemix}}.
 
-### Eseguire il provisioning di un servizio {{site.data.keyword.aios_full}}
+### Eseguire il provisioning di un servizio {{site.data.keyword.aios_short}}
 {: #crt-wos-faststart}
 
 Assicurarsi di aver eseguito il provisioning di {{site.data.keyword.aios_full}}. 
@@ -111,7 +111,7 @@ Assicurarsi di aver eseguito il provisioning di {{site.data.keyword.aios_full}}.
 
 1. Fare clic su **Catalogo** > **AI** > **{{site.data.keyword.aios_short}}**.
 2. Fornire un nome al servizio, selezionare un piano e fare clic sul pulsante **Crea**.
-3. Per avviare {{site.data.keyword.aios_short}}, fare clic sul pulsante **Introduzione**.
+3. Per avviare {{site.data.keyword.aios_short}}, fare clic sul pulsante **Avvia applicazione**.
 
 ## Configurazione automatica
 {: #wos-work-demo}
@@ -121,14 +121,7 @@ Assicurarsi di aver eseguito il provisioning di {{site.data.keyword.aios_full}}.
 
    ![Demo - Benvenuti](images/cloud-auto-setup.png)
 
-   Mentre viene eseguito il provisioning dei servizi {{site.data.keyword.aios_short}}, è possibile riesaminare lo scenario demo:
-
-   ![Demo - Anteprima](images/fastpath_demo_11.31.58.png)
-
-Quando il provisioning è completo, fare clic sul pulsante **Andiamo** per eseguire il tour del dashboard  {{site.data.keyword.aios_short}}, quindi procedere con [Visualizzazione dei risultati in {{site.data.keyword.aios_short}}](#wos-open).
-
-   ![Demo - Andiamo](images/fastpath_demo_11.33.45.png)
-
+   Mentre viene eseguito il provisioning dei servizi {{site.data.keyword.aios_short}}, è possibile riesaminare lo scenario demo. Quando il provisioning è completo, fare clic sul pulsante **Inizia tour** per eseguire il tour del dashboard  {{site.data.keyword.aios_short}}, quindi procedere con [Visualizzazione dei risultati in {{site.data.keyword.aios_short}}](#wos-open).
 
 ## Visualizzazione dei risultati in
 {{site.data.keyword.aios_short}}
@@ -151,22 +144,9 @@ La pagina Insight mostra in un'unica vista tutti i problemi di correttezza e acc
 {: #wos-monitoring}
 
 1.  Dalla pagina Insight, fare clic sul riquadro `GermanCreditRiskModelICP` per visualizzare i dettagli relativi ai dati monitorati.
-1.  Fare clic e trascinare il puntatore nel grafico per visualizzare un periodo di giorni e ore che mostrano dati e fare clic sul link **Visualizza dettagli**. In alternativa, è possibile  fare clic su un periodo di tempo differente nel grafico per modificare i dati visualizzati.
+1.  Fare clic e trascinare il puntatore nel grafico per visualizzare un periodo di giorni e ore che mostrano dati e fare clic sul link **Visualizza dettagli**. In alternativa, è possibile  fare clic su un periodo di tempo differente nel grafico per modificare i dati visualizzati. 
 
-     - Ad esempio, la figura che segue mostra i dati per una data e ora specifica. Le date e le ore variano, a seconda di quando si esegue il modulo.
-
-     - Per informazioni sull'interpretazione del grafico delle serie temporali, consultare [Monitoraggio della correttezza, Richieste medie al minuto e Accuratezza](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart).
-
-   ![Demo - Andiamo](images/fastpath_demo_11.34.17.png)
-
-1.  Per visualizzare i dettagli relativi al monitoraggio dei dati `Sesso`, assicurarsi che `Sesso` sia selezionato dal menu a discesa.
-
-    - Notare che nella seguente immagine, la distorsione esiste.
-    
-   ![Demo - Andiamo](images/fastpath_demo_11.34.27.png)
-
-    - Per informazioni sull'interpretazione del grafico dei punti di dati a un'ora specifica, consultare [Visualizzazione dei dati](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual).
-
+Per informazioni sull'interpretazione del grafico delle serie temporali, consultare [Acquisizione degli insight](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
 ### Visualizzazione spiegazione
 {: #wos-explain}
@@ -179,20 +159,17 @@ Vengono elencati gli ID transazione per l'ultima ora per le transazioni che hann
 
    ![Demo - Andiamo](images/fastpath_demo_11.35.12.png)
 
-Per informazioni relative alla ricerca e alla spiegazione delle transazioni, consultare [Monitoraggio esplicabilità](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov).
+Per informazioni relative alla ricerca e alla spiegazione delle transazioni, consultare [Monitoraggio esplicabilità](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
    ![Demo - Andiamo](images/fastpath_demo_11.35.50.png)
 
 ## Completamento del tour
 {: #wos-done-demo}
 
-1. Fare clic sul pulsante **Eseguito**.
+Dopo aver terminato il tour, è possibile aggiungere la propria distribuzione di modello al dashboard oppure continuare ad esplorare la distribuzione del supporto didattico. 
 
-   ![Demo - Andiamo](images/fastpath_demo_11.37.22.png)
-
-2. Fare clic sul pulsante **Andiamo** per iniziare a lavorare con {{site.data.keyword.aios_short}}.
-
-   ![Demo - Andiamo](images/fastpath_demo_11.33.45.png)
+- Per aggiungere il proprio modello al dashboard, fare clic sul pulsante **Aggiungi al dashboard**. 
+- Per continuare ad esplorare il modello del supporto didattico, fare clic sul riquadro German Credit Risk. 
 
 ## Passi successivi
 {: #gs-next}

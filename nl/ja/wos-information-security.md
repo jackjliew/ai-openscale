@@ -38,15 +38,15 @@ IBM は、お客様やパートナーに、データ・プライバシー、セ�
 
 以下の場所で作成された {{site.data.keyword.cloud}} {{site.data.keyword.watson}} リソースの GDPR サポートを要請する必要がある場合の手順
 
--   欧州連合 (EU) 内については、[EU で作成された {{site.data.keyword.Bluemix}} Watson リソースのサポートの要求](/docs/services/watson?topic=watson-gdpr-sar#request-EU)を参照してください。
--   EU 外の場合、[EU 外のリソースのサポートのリクエスト](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU)を参照してください。
+-   欧州連合 (EU) 内については、[EU で作成された {{site.data.keyword.Bluemix}} Watson リソースのサポートの要求](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: external}を参照してください。
+-   EU 外の場合、[EU 外のリソースのサポートのリクエスト](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU){: external}を参照してください。
 
 ## EU 一般データ保護規則 (GDPR)
 {: #is-gdpr}
 
 IBM は、お客様やパートナーに、データ・プライバシー、セキュリティー、およびガバナンスに関する革新的なソリューションを提供して、GDPR に対する準拠が完了するまでの過程を支援します。
 
-GDPR に対する準備を整えるための IBM 独自の過程と、準拠が完了するまでの過程をサポートする弊社の GDPR 機能とオファリングについて詳しくは、[ここ](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/gdpr) を参照してください。{: external}.
+GDPR に対応するための IBM 独自の過程と、お客様の準拠の過程をサポートする弊社の GDPR 機能およびオファリングについて詳しくは、[ここ](http://www.ibm.com/gdpr){: external}を参照してください。
 
 ## {{site.data.keyword.aios_short}} でのデータのラベル付けと削除
 {: #is-stda}

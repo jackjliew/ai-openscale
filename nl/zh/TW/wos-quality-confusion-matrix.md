@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 混淆矩陣 ![測試版標記](images/beta.png)
+# 混淆矩陣
 {: #it-conf-mtx}
 
 這是品質度量的詳細資料，您可以檢視模型分析錯誤的記錄。這類異常可能是二進位分類模型的誤肯定或誤否定，或是多類別模型的不正確類別指派。您也可以檢視模型未正確分析的意見記錄清單。

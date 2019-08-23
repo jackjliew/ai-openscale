@@ -36,15 +36,20 @@ Il primo passo nello strumento {{site.data.keyword.aios_short}} è quello di spe
 
 {{site.data.keyword.aios_short}} si collega ai modelli e alle distribuzioni AI in un'istanza del servizio. È possibile collegare un servizio personalizzato
 
-1. Dalla scheda **Configura**, fare clic su **Provider di machine learning**.
+1. Dalla scheda **Configura**, fare clic su **Provider di machine learning**. A seconda del proprio ambiente, è possibile che non si vedano tutti i seguenti provider:
 
    ![viene visualizzato il pannello per la selezione del provider del servizio di machine learning con i riquadri per i motori di machine learning supportati](images/wos-machine-learning-providers-selection.png)
 
 2. Selezionare il riquadro **Ambiente personalizzato**.
 
-   ![Selezionare personalizzato](images/ml-custom-provider.png)
+   ![Viene visualizzato il pannello di configurazione del provider di machine learning personalizzato, con i campi per le credenziali, il nome dell'istanza e la descrizione](images/ml-custom-provider.png)
 
-3. Immettere un nome e una descrizione per il provider di machine learning personalizzato e fare clic su **Avanti**. 
+1.  Immettere e salvare le credenziali:
+
+    - Nome utente: il nome utente del provider di machine learning personalizzato.
+    - Password: la password del provider di machine learning personalizzato.
+    - Nome istanza del provider di servizi: il nome specifico assegnato a questo provider di servizi.
+    - Descrizione: (facoltativo) la descrizione in parole semplici di questa istanza del provider di servizi. Se si dispone di ambienti di produzione e di test, può essere utile includere tali informazioni.
 
 4. Scegliere se connettersi alle distribuzioni [richiedendo un elenco](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list) o [immettendo singoli endpoint di calcolo del punteggio](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints).
 
@@ -59,7 +64,7 @@ Il primo passo nello strumento {{site.data.keyword.aios_short}} è quello di spe
 
    ![Immettere le credenziali del servizio](images/connect-custom-cred.png)
 
-2. Dopo aver salvato l'impostazione del machine learning, tornare al **Dashboard**, fare clic sulla scheda **Insight**, quindi fare clic sul pulsante **Aggiungi distribuzioni**.
+2. Dopo aver salvato l'impostazione del machine learning, tornare al **Dashboard**, fare clic sulla scheda **Insight**, quindi fare clic sul pulsante **Aggiungi al dashboard**.
 
 3. Selezionare una distribuzione dall'elenco e fare clic su **Configura**.
 
@@ -70,9 +75,9 @@ Ora si è pronti a configurare i monitor.
 
 1. Se si seleziona il riquadro **Immetti gli endpoint del punteggio individuali**, immettere le credenziali per l'endpoint API, quindi fare clic su **Salva**.
 
-2. Dopo aver salvato l'impostazione del machine learning, tornare al **Dashboard**, fare clic sulla scheda **Insight**, quindi fare clic sul pulsante **Aggiungi distribuzioni**.
+2. Dopo aver salvato l'impostazione del machine learning, tornare al **Dashboard**, fare clic sulla scheda **Insight**, quindi fare clic sul pulsante **Aggiungi al dashboard**.
 
-3. Fare clic sul pulsante **Aggiungi endpoint**. 
+3. Fare clic sul pulsante **Aggiungi endpoint**.
 
 4. Dal menu a discesa, selezionare l'ambiente personalizzato, immettere il nome della distribuzione e l'endpoint API, quindi fare clic su **Salva**.
 

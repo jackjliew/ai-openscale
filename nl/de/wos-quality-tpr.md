@@ -25,10 +25,10 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Wahr-positiv-Rate (TPR) ![Beta-Tag](images/beta.png)
+# Wahr-positiv-Rate (TPR)
 {: #quality_tpr}
 
-Die Wahr-positiv-Rate (TPR) gibt den Anteil der richtigen Vorhersagen an den Vorhersagen der positiven Klasse an.
+Die Wahr-positiv-Rate (TPR) gibt den Anteil der richtigen Vorhersagen an den Vorhersagen der positiven Klasse an. 
 {: shortdesc}
 
 ## Wahr-positiv-Rate (TPR) - auf einen Blick
@@ -55,8 +55,8 @@ Die Wahr-positiv-Rate (TPR) gibt den Anteil der richtigen Vorhersagen an den Vor
 Die Wahr-positiv-Rate wird anhand der folgenden Formel berechnet:
 
 ```
-                                              Anzahl der wahr-positiven Ergebnisse
+                  Anzahl der wahr-positiven Ergebnisse
 Wahr-positiv-Rate (TPR) =  _______________________________________________________________________________
 
-                           (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
+        (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
 ```

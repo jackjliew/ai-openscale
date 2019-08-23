@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Varianza spiegata dalla proporzione ![tag beta](images/beta.png)
+# Varianza spiegata dalla proporzione
 {: #quality_var}
 
 La varianza spiegata dalla proporzione fornisce il rapporto tra varianza spiegata e varianza obiettivo. La varianza spiegata indica la differenza tra varianza obiettivo e varianza dell'errore di previsione.

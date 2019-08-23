@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Gewichtete Falsch-positiv-Rate (wFPR) ![Beta-Tag](images/beta.png)
+# Gewichtete Falsch-positiv-Rate (wFPR)
 {: #quality_wfpr_weighted}
 
 Die gewichtete Falsch-positiv-Rate (weighted False Positive Rate, FPR) gibt das gewichtete Mittel der FPR-Klasse mit Gewichtungen gleich der Klassenwahrscheinlichkeit an.
@@ -34,11 +34,11 @@ Die gewichtete Falsch-positiv-Rate (weighted False Positive Rate, FPR) gibt das 
 ## Gewichtete Falsch-positiv-Rate (wFPR) - auf einen Blick
 {: #quality_wfpr_weighted-glance}
 
-- **Beschreibung**: Gewichteter Mittelwert der Klasse FPR mit Gewichtungen, die gleich der Klassenwahrscheinlichkeit sind.
+- **Beschreibung**: Anteil der falschen Vorhersagen innerhalb der positiven Klasse.
 - **Standardschwellenwerte**: Unterer Grenzwert = 80 %
 - **Standardempfehlung**:
-   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
-   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Aufwärtstrend**: Ein Aufwärtstrend gibt eine Verschlechterung der Metrik an. Die Differenz zwischen den Rückmeldedaten und den Trainingsdaten vergrößert sich signifikant.
+   - **Abwärtstrend**: Ein Abwärtstrend gibt eine Verbesserung der Metrik an. Dies bedeutet, dass das Retraining des Modells effektiv ist.
    - **Ungleichmäßige oder unregelmäßige Variation**: Eine ungleichmäßige oder unregelmäßige Variation weist darauf hin, dass die Rückmeldedaten zwischen den Bewertungen nicht konsistent sind. Erhöhen Sie den Mindeststichprobenumfang für die Qualitätsüberwachung.
 - **Problemtyp**: Klassifizierung mit mehreren Klassen
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
@@ -55,7 +55,7 @@ Die gewichtete Falsch-positiv-Rate (weighted False Positive Rate, FPR) gibt das 
 Die gewichtete Falsch-positiv-Rate ist die Anwendung der Falsch-positiv-Rate mit gewichteten Daten.
 
 ```
-                       Anzahl falsch-positiver Ergebnisse
+                   Anzahl falsch-positiver Ergebnisse
 FPR =  __________________________________________________________________________
 
        (Anzahl falsch-positiver Ergebnisse + Anzahl richtig-negativer Ergebnisse)

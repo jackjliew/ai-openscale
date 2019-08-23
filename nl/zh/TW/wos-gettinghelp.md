@@ -43,11 +43,11 @@ subcollection: ai-openscale
 
 使用討論區來提問時，請標記您的問題，讓 {{site.data.keyword.aios_short}} 開發團隊可以看到它。
 
-如果您有關於 {{site.data.keyword.aios_short}} 的技術問題，請在 [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale) 上張貼您的問題，並以 `watson-openscale` 標記您的問題。
+如果您有關於 {{site.data.keyword.aios_short}} 的技術問題，請在 [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale){: external} 上張貼您的問題，並以 `watson-openscale` 標記您的問題。
 
-若為服務及入門指示的相關問題，請使用 [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale) 討論區。請包含 `openscale` 標記。如需使用討論區的詳細資料，請參閱[取得協助](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html)。
+若為服務及入門指示的相關問題，請使用 [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale){: external} 討論區。請包含 `openscale` 標記。如需使用討論區的詳細資料，請參閱[取得協助](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html){: external}。
 
-如需開啟 IBM 支援問題單或支援層次及問題單嚴重性的相關資訊，請參閱[聯絡支援中心](https://cloud.ibm.com/unifiedsupport/supportcenter)，然後按一下**建立案例**。
+如需開啟 IBM 支援問題單或支援層次及問題單嚴重性的相關資訊，請參閱[聯絡支援中心](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}，然後按一下**建立案例**。
 
 ## 仍要尋找更多項目？
 {: #looking}

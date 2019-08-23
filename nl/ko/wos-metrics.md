@@ -44,25 +44,21 @@ subcollection: ai-openscale
 
 다음의 고급 튜토리얼에서는 이를 수행하는 방법을 보여줍니다.
 
-- [{{site.data.keyword.pm_full}}에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [사용자 정의 기계 학습 엔진에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [{{site.data.keyword.pm_full}}에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [사용자 정의 기계 학습 엔진에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
 언제든지 사용자 정의 모니터링을 사용 및 사용 안함으로 설정할 수 있습니다. 더 이상 필요하지 않게 되면 사용자 정의 모니터를 제거할 수 있습니다.
 
-자세한 정보는 [Python SDK 문서](http://ai-openscale-python-client.mybluemix.net/)를 참조하십시오.
+자세한 정보는 [Python SDK 문서](http://ai-openscale-python-client.mybluemix.net/){: external}를 참조하십시오.
 
 ## 사용자 정의 메트릭 액세스 및 시각화
 {: #cst_mtrcs_viz}
 
 사용자 정의 메트릭에 액세스하고 시각화하기 위해 프로그램 인터페이스를 사용할 수 있습니다. 다음의 고급 튜토리얼에서는 이를 수행하는 방법을 보여줍니다.
 
-- [{{site.data.keyword.pm_full}}에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [사용자 정의 기계 학습 엔진에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [{{site.data.keyword.pm_full}}에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [사용자 정의 기계 학습 엔진에 대한 작업](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-   자세한 정보는 [Python SDK 문서](http://ai-openscale-python-client.mybluemix.net/)를 참조하십시오.
+   자세한 정보는 [Python SDK 문서](http://ai-openscale-python-client.mybluemix.net/){: external}를 참조하십시오.
 
 고객 메트릭의 시각화는 {{site.data.keyword.aios_short}} 대시보드에 표시됩니다.
-
-<!---
-![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
---->

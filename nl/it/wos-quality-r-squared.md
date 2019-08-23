@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# R quadrato ![tag beta](images/beta.png)
+# R quadro
 {: #quality_r_squared}
 
 L'R quadrato è il rapporto della differenza tra la varianza obiettivo e la varianza dell'errore di previsione rispetto alla varianza obiettivo. Può indicare quanto si adattano alla regressione i dati utilizzati per creare il modello.
@@ -56,7 +56,7 @@ La metrica dell'R quadrato è definita nella seguente formula.
 
 ```
                   variazione spiegata
-R quadrato = 1 -  _____________________
+R quadrato =ai-open-scale-ibm-aios-scheduling  | 1 | Servizio pianificazione-  _____________________
 
                     variazione totale
 ```

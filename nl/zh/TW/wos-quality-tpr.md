@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 真肯定率 (TPR) ![測試版標記](images/beta.png)
+# 真肯定率 (TPR)
 {: #quality_tpr}
 
 「真肯定率」提供肯定類別預測中正確預測的比例。

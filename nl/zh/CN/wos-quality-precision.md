@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 查准率 ![beta 标记](images/beta.png)
+# 查准率
 {: #quality_precision}
 
 查准率给出正确预测在正类预测中的比例。

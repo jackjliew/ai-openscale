@@ -63,7 +63,6 @@ uid	                                   name	                      service_type	 
 ```
 {: codeblock}
     
-    
 ## Aggiungere la sottoscrizione a Microsoft Azure ML Service
 {: #cml-azsrvsub}
 
@@ -126,7 +125,7 @@ subscription.payload_logging.store(records=records_list)
 {: codeblock}
 {: python}
    
-Per i linguaggi diversi da Python, è possibile anche eseguire direttamente la registrazione del payload, utilizzando un'API REST. 
+Per i linguaggi diversi da Python, è possibile anche eseguire direttamente la registrazione del payload, utilizzando un'API REST.
    
 ```
 token_endpoint = "https://iam.cloud.ibm.com/identity/token"

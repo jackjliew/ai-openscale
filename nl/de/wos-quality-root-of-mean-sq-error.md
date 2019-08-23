@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Wurzel des mittleren quadratischen Fehlers ![Beta-Tag](images/beta.png)
+# Wurzel für mittleren quadratischen Fehler
 {: #supqualdets_squ_errors_mean}
 
 Die Ansicht für die Wurzel des mittleren quadratischen Fehlers (Root-Mean-Squared Error, RMSE) zeigt den Unterschied zwischen den vorhergesagten und den beobachteten Werten in Ihrem Modell an.

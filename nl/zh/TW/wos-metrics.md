@@ -44,25 +44,21 @@ subcollection: ai-openscale
 
 下列進階指導教學說明怎麼做：
 
-- [使用 {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [使用自訂機器學習引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [使用 {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [使用自訂機器學習引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
 您隨時可以停用及啟用自訂監視。如果您不再需要自訂監視器，您可以移除它。
 
-如需相關資訊，請參閱 [Python SDK 文件](http://ai-openscale-python-client.mybluemix.net/)。
+如需相關資訊，請參閱 [Python SDK 文件](http://ai-openscale-python-client.mybluemix.net/){: external}。
 
 ## 存取及視覺化自訂度量
 {: #cst_mtrcs_viz}
 
 若要存取及視覺化自訂度量，您可以使用可程式介面。下列進階指導教學說明怎麼做：
 
-- [使用 {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [使用自訂機器學習引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [使用 {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [使用自訂機器學習引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-   如需相關資訊，請參閱 [Python SDK 文件](http://ai-openscale-python-client.mybluemix.net/)。
+   如需相關資訊，請參閱 [Python SDK 文件](http://ai-openscale-python-client.mybluemix.net/){: external}。
 
 您自訂度量的視覺化會出現在 {{site.data.keyword.aios_short}} 儀表板上。
-
-<!---
-![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
---->

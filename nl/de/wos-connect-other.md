@@ -36,15 +36,20 @@ Als ersten Schritt im {{site.data.keyword.aios_short}}-Tool geben Sie eine Servi
 
 {{site.data.keyword.aios_short}} stellt die Verbindung zu AI-Modellen und Bereitstellungen in einer Serviceinstanz her. Sie können eine Verbindung zu einem angepassten Service herstellen.
 
-1. Klicken Sie auf der Registerkarte **Konfigurieren** auf **Machine Learning-Anbieter**.
+1. Klicken Sie auf der Registerkarte **Konfigurieren** auf **Machine Learning-Provider**. Abhängig von Ihrer Umgebung werden möglicherweise nicht alle der folgenden Provider angezeigt:
 
-   ![Die Anzeige für die Auswahl des Machine Learning-Anbieters mit Kacheln für die unterstützten Machine Learning-Engines wird angezeigt.](images/wos-machine-learning-providers-selection.png)
+   ![Darstellung der Anzeige für die Auswahl des Machine Learning-Providers, mit Kacheln für die unterstützten Machine Learning-Engines.](images/wos-machine-learning-providers-selection.png)
 
 2. Wählen Sie die Kachel **Angepasste Umgebung** aus.
 
-   !['Angepasst' auswählen](images/ml-custom-provider.png)
+   ![Darstellung der Konfigurationsanzeige für angepasste ML-Provider mit Feldern für Berechtigungsnachweise, Instanznamen und Beschreibung](images/ml-custom-provider.png)
 
-3. Geben Sie einen Namen und eine Beschreibung für Ihren Anbieter für angepasstes Machine Learning ein und klicken Sie auf **Weiter**. 
+1.  Geben Sie Ihre Berechtigungsnachweise ein und speichern Sie sie:
+
+    - Benutzername: Der Benutzername für Ihren angepassten ML-Provider.
+    - Kennwort: Das Kennwort für Ihren angepassten ML-Provider.
+    - Instanzname des Service-Providers: Der spezifische Name, der diesem Service-Provider zugeordnet ist.
+    - Beschreibung: (optional) Ihre Beschreibung dieser Service-Provider-Instanz in einfacher Sprache. Wenn Sie Produktions- und Testumgebungen haben, wäre dies ein guter Ort, um diese Informationen einzuschließen.
 
 4. Wählen Sie aus, ob Sie eine Verbindung zu Ihren Bereitstellungen herstellen möchten, indem Sie eine [Liste anfordern](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list) oder indem Sie [einzelne Scoring-Endpunkte eingeben](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints).
 
@@ -59,7 +64,7 @@ Als ersten Schritt im {{site.data.keyword.aios_short}}-Tool geben Sie eine Servi
 
    ![Serviceberechtigungsnachweise eingeben](images/connect-custom-cred.png)
 
-2. Kehren Sie nach dem Speichern Ihrer Machine Learning-Konfiguration zum **Dashboard** zurück, klicken Sie auf die Registerkarte **Insights** und klicken Sie dann auf die Schaltfläche **Bereitstellungen hinzufügen**.
+2. Kehren Sie nach dem Speichern Ihrer Machine Learning-Konfiguration zum **Dashboard** zurück, klicken Sie auf die Registerkarte **Insights** und dann auf die Schaltfläche **Zum Dashboard hinzufügen**.
 
 3. Wählen Sie eine Bereitstellung in der Liste aus und klicken Sie auf **Konfigurieren**.
 
@@ -70,7 +75,7 @@ Nun können Sie die Überwachung konfigurieren.
 
 1. Geben Sie bei Auswahl der Kachel **Individuelle Scoring-Endpunkte eingeben** Ihre Berechtigungsnachweise für den API-Endpunkt ein und klicken Sie dann auf **Speichern**.
 
-2. Kehren Sie nach dem Speichern Ihrer Machine Learning-Konfiguration zum **Dashboard** zurück, klicken Sie auf die Registerkarte **Insights** und klicken Sie dann auf die Schaltfläche **Bereitstellungen hinzufügen**.
+2. Kehren Sie nach dem Speichern Ihrer Machine Learning-Konfiguration zum **Dashboard** zurück, klicken Sie auf die Registerkarte **Insights** und dann auf **Zum Dashboard hinzufügen** button.
 
 3. Klicken Sie auf die Schaltfläche **Endpunkt hinzufügen**.
 

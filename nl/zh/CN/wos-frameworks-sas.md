@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # SAS AI 解决方案框架
 {: #frmwrks-sas}
 
-{{site.data.keyword.aios_full}} 计划在未来发行版中支持 SAS AI 解决方案框架。
+您可以使用 SAS AI 解决方案在 {{site.data.keyword.aios_full}} 中执行有效内容日志记录、反馈日志记录以及度量性能准确性、运行时偏差检测、可解释性和自动除偏功能。
+
+{{site.data.keyword.aios_full}} 完全支持以下 SAS AI 解决方案框架：
 {: shortdesc}
 
 

@@ -43,14 +43,14 @@ subcollection: ai-openscale
 
 除检测受保护属性以外，{{site.data.keyword.aios_short}} 还建议应将每个属性中的哪些值设置为受监视值和参考值。因此，例如，{{site.data.keyword.aios_short}} 建议在“Sex”属性中配置偏差监视器，以便“Woman”和“Non-Binary”为受监视值，“Male”为参考值。如果要更改任何建议，那么可以通过偏差配置面板对其进行编辑。 
 
-建议的偏差监视器有助于加速配置，并确保您正在检查 AI 模型以了解针对敏感属性的公平性。随着监管者开始对算法偏差更加密切关注，各组织清楚了解其模型的性能及其是否针对特定组生成不公平结果变得日益重要。 
+建议的偏差监视器有助于加速配置，并确保您正在检查 AI 模型以了解针对敏感属性的公平性。随着监管者开始对算法偏差更加密切关注，各组织清楚了解其模型的性能及其是否针对特定组生成不公平结果变得日益重要。
 
 ## 了解公平性
 {: #mf-understand}
 
 {{site.data.keyword.aios_short}} 在运行时检查已部署模型是否存在偏差。要检测已部署模型的偏差，必须定义 Age 或 Gender 之类的公平性属性，如下面的[配置公平性监视器](#mf-config)部分中所详述。
 
-必须在 Watson {{site.data.keyword.pm_short}} 中指定模型或函数的输出模式，以在 {{site.data.keyword.aios_short}} 中启用偏差检查。可以使用 `store_model` API 的元数据部分中的 `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` 属性来指定输出模式。有关更多信息，请参阅 [{{site.data.keyword.pm_full}} 客户机文档](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}。
+必须在 {{site.data.keyword.pm_short}} 中指定模型或函数的输出模式，以在 {{site.data.keyword.aios_short}} 中启用偏差检查。可以使用 `store_model` API 的元数据部分中的 `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` 属性来指定输出模式。有关更多信息，请参阅 [{{site.data.keyword.pm_full}} 客户机文档](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}。
 
 ### 工作方式
 {: #mf-works}
@@ -100,7 +100,7 @@ Disparate impact =   ___________________________________________________________
 
 使用两个不同的数据集来计算公平性和准确性。使用有效内容 + 扰动数据来计算公平性。使用反馈数据来计算准确性。要计算准确性，{{site.data.keyword.aios_short}} 需要手动标记的数据，该数据仅出现在反馈表中。
 
-这些决定的结果可在偏差可视化中获取，其中包含以下视图： 
+这些决定的结果可在偏差可视化中获取，其中包含以下视图。（仅当存在要支持的数据时，您才会看到视图）
 
 - **有效内容 + 扰动量**：包括在所选小时内接收到的评分请求以及前几个小时的其他记录（如果未满足评估所需的最小记录数）。包含其他扰动/合成的记录，用于在受监视功能部件的值发生更改时测试模型的响应。
 
@@ -138,7 +138,8 @@ Disparate impact =   ___________________________________________________________
    
 
    
-- **除偏**：处理运行时数据和扰动数据后除偏算法的输出。
+- **除偏**：处理运行时数据和扰动数据后除偏算法的输出。选择**已除偏**单选按钮会向您显示已除偏模型与生产中模型相比较的更改。图表反映组的结果状态有所改进。
+
 
    记录以下除偏详细信息：
    

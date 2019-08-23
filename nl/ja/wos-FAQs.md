@@ -60,23 +60,23 @@ Watson OpenScale を使用すると、AI の結果をライフサイクルを通
 ### {{site.data.keyword.aios_short}} の価格はどのように設定されていますか?
 {: #faq-pricing}
 
-ライト・プランから移行する準備ができたら、**「Standard」**の価格設定プランがあります。このプランでは、最大 24 個のデプロイ済みモデルをモニターできます。説明性に関するペイロード数、フィードバック行数、トランザクション数の制限はありません。最新の情報については、[{{site.data.keyword.Bluemix}} カタログ](https://cloud.ibm.com/catalog/services/watson-openscale?cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_OpenScale-_-AIOSProductPage){: external}を参照してください。
+ライト・プランから移行する準備ができたら、**「Standard」**の価格設定プランがあります。このプランでは、最大 24 個のデプロイ済みモデルをモニターできます。説明性に関するペイロード数、フィードバック行数、トランザクション数の制限はありません。 最新の情報については、[{{site.data.keyword.Bluemix}} カタログ](https://cloud.ibm.com/catalog/services/watson-openscale?cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_OpenScale-_-AIOSProductPage){: external}を参照してください。
 
 
 ### {{site.data.keyword.aios_short}} の無料試用版はありますか?
 {: #faq-freetrial}
 
-{{site.data.keyword.aios_short}} には、ライト・プランの無料試用版が用意されています。登録するには、[{{site.data.keyword.aios_short}} Web ページ](https://www.ibm.com/cloud/watson-openscale/){: external}にアクセスして、**「Get started now」**をクリックします。ライト・プランの使用期間は無制限です (毎月リフレッシュされる月単位の使用量制限はあります)。
+{{site.data.keyword.aios_short}} には、ライト・プランの無料試用版が用意されています。 登録するには、[{{site.data.keyword.aios_short}} Web ページ](https://www.ibm.com/cloud/watson-openscale/){: external}にアクセスして、**「Get started now」**をクリックします。 ライト・プランの使用期間は無制限です (毎月リフレッシュされる月単位の使用量制限はあります)。
 
 ### 私の AI モデルはすべて Azure にあります。 {{site.data.keyword.aios_short}} で Microsoft Azure ML エンジンを使用することはできますか?
 {: #faq-azure}
 
-{{site.data.keyword.aios_short}} は、Microsoft Azure ML Studio エンジンと Microsoft Azure ML Service エンジンの両方をサポートしています。詳しくは、[Microsoft Azure ML Studio フレームワーク](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure)および [Microsoft Azure ML Service フレームワーク](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service)を参照してください。
+{{site.data.keyword.aios_short}} は、Microsoft Azure ML Studio エンジンと Microsoft Azure ML Service エンジンの両方をサポートしています。 詳しくは、[Microsoft Azure ML Studio フレームワーク](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure)および [Microsoft Azure ML Service フレームワーク](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service)を参照してください。
 
 ### 私の AI モデルはすべて Amazon にあります。 {{site.data.keyword.aios_short}} で Amazon SageMaker ML エンジンを使用することはできますか?
 {: #faq-sagemaker}
 
-{{site.data.keyword.aios_short}} は Amazon SageMaker ML エンジンをサポートしています。詳しくは、[Amazon SageMaker フレームワーク](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-aws-sage)を参照してください。
+{{site.data.keyword.aios_short}} は Amazon SageMaker ML エンジンをサポートしています。 詳しくは、[Amazon SageMaker フレームワーク](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-aws-sage)を参照してください。
 
 ### {{site.data.keyword.aios_short}} は {{site.data.keyword.icp4dfull_notm}} で使用できますか?
 {: #faq-icp}
@@ -86,7 +86,7 @@ Watson OpenScale を使用すると、AI の結果をライフサイクルを通
 ### 自分のサーバーで {{site.data.keyword.aios_short}} を実行したいと思っています。 コンピューターの処理能力はどれくらい割り当てる必要がありますか?
 {: #faq-sizing}
 
-3 ノード構成および 6 ノード構成については、固有の[ハードウェア構成](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#inst-hwt)ガイドラインがあります。具体的な構成のサイズ設定について、IBM の技術販売チームから支援を受けることもできます。{{site.data.keyword.aios_short}} は {{site.data.keyword.icp4dfull_notm}} のアドオンとして実行されるので、この両方のソフトウェア製品の要件を検討する必要があります。
+3 ノード構成および 6 ノード構成については、固有の[ハードウェア構成](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#inst-hwt)ガイドラインがあります。 具体的な構成のサイズ設定について、IBM の技術販売チームから支援を受けることもできます。 {{site.data.keyword.aios_short}} は {{site.data.keyword.icp4dfull_notm}} のアドオンとして実行されるので、この両方のソフトウェア製品の要件を検討する必要があります。
 
 ### 整数データ型の予測列をカテゴリカル・データ型にどのように変換できますか?
 {: #wos-faqs-convert-data-types}

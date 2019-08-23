@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Fläche unterhalb der PR-Kurve ![Beta-Tag](images/beta.png)
+# Fläche unterhalb der PR-Kurve
 {: #quality-area-pr}
 
 Die Fläche unterhalb der PR-Kurve (PR = Precision Recall, Trefferquote und Genauigkeit) gibt den Bereich unter der Kurve für Genauigkeit und Trefferquote an. Diese Metrik ist hilfreich, wenn ein besonders großes Ungleichgewicht im Hinblick auf die Klassen besteht.
@@ -49,24 +49,50 @@ Die Fläche unterhalb der PR-Kurve (PR = Precision Recall, Trefferquote und Gena
 
 ![Abbildung zur Fläche unterhalb der PR-Kurve mit einem Abwärtstrend bei den Metriken](images/quality-area-under-pr.png)
 
+### Fairness-Score
+{: #quality-area-pr-display-fairness-score}
+
+Für die Metrik der Fläche unterhalb der PR-Kurve wird der folgende Fairness-Score angezeigt. 
+
+![Darstellung des Score-Prozentsatzes der Fläche unterhalb der PR-Kurve.](images/wos-quality-area-pr-score.png)
+
+### Zeitplan
+{: #quality-area-pr-display-schedule}
+
+Das Fenster **Zeitplan** zeigt die Uhrzeiten für **Letzte Bewertung** und **Nächste Bewertung** an. Qualitätsmetriken werden stündlich ausgewertet. Sie können die Bewertung erzwingen, indem Sie auf **Qualität jetzt überprüfen** klicken. Sie können auch eine Rückmeldung hinzufügen, indem Sie auf **Rückmeldedaten hinzufügen** klicken.
+
+![Darstellung des Zeitplan-Fensters mit Uhrzeiten für letzte und nächste Bewertung](images/wos-quality-schedule.png)
+
+
+### Empfehlung
+{: #quality-area-pr-display-recommendations}
+
+Zur Erleichterung der Diagramminterpretation wird im Teilfenster **Empfehlung** angezeigt, welche Trends auf eine Verbesserung oder Verschlechterung der Modelleffektivität hinweisen.
+
+![Darstellung des Empfehlungsfensters.](images/wos-quality-positive-recommendation.png)
+
+
+
 
 ## Berechnung
 {: #quality-area-pr-math}
 
-Der Bereich unter der PR-Kurve entspricht der Summe von `Genauigkeit und Trefferquote`. 
+Der Bereich unter der PR-Kurve entspricht der Summe von `Genauigkeit und Trefferquote`.
 
 Die Genauigkeit (P) ist definiert als die Anzahl der wahr-positiven Ergebnisse (Tp) im Verhältnis zur Anzahl der wahr-positiven Ergebnisse zuzüglich der Anzahl der falsch-positiven Ergebnisse (Fp).
 
 ```
-                                 Anzahl der wahr-positiven Ergebnisse
+               Anzahl der wahr-positiven Ergebnisse
 Genauigkeit =  ______________________________________________________________________________
-               (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-positiven Ergebnisse)
+
+              (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-positiven Ergebnisse)
 ```
 
 Die Trefferquote (R) ist definiert als die Anzahl der wahr-positiven Ergebnisse (Tp) im Verhältnis zur Anzahl der wahr-positiven Ergebnisse zuzüglich der Anzahl der falsch-negativen Ergebnisse (Fn).
 
 ```
-                                 Anzahl der wahr-positiven Ergebnisse
+            Anzahl der wahr-positiven Ergebnisse
 Trefferquote =  ______________________________________________________________________________
-                (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
+
+           (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
 ```

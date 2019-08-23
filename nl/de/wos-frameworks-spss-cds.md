@@ -27,6 +27,8 @@ subcollection: ai-openscale
 # IBM SPSS C&DS-Frameworks
 {: #frmwrks-spss}
 
+Mit IBM SPSS C&DS können Sie Nutzdatenprotokollierung, Rückmeldungsprotokollierung sowie Messungen der Leistungsgenauigkeit, Verzerrungserkennung zur Laufzeit, der Erklärbarkeit und der Funktion für automatische Verzerrungsbereinigung in {{site.data.keyword.aios_full}} ausführen.
+
 Bei {{site.data.keyword.aios_full}} ist eine umfassende Unterstützung der folgenden IBM SPSS Collaboration and Deployment Services-Frameworks (C&DS-Frameworks) geplant:
 {: shortdesc}
 

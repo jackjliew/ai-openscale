@@ -40,13 +40,13 @@ Se le applicazioni utilizzano un formato di payload originale che non può esser
 
    A seconda del formato payload: {{site.data.keyword.aios_short}} (come {{site.data.keyword.pm_full}}) o quello dell'utente restituiscono l'output in formato corrispondente. Se il formato è quello dell'utente, convertirlo in quello {{site.data.keyword.aios_short}} e memorizzarlo come record di payload nella tabella di registrazione payload. Se il formato di input di calcolo del punteggio è quello di {{site.data.keyword.aios_short}}, non memorizzare il payload (questo payload proviene da {{site.data.keyword.aios_short}} non dall'utente).
 
-   Per ulteriori informazioni, consultare [Utilizzo di due formati di payload](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-notsuppt).
+   Per ulteriori informazioni, consultare [Utilizzo di due formati di payload](#fmrk-workaround-notsuppt).
 
 - Opzione 2: Se, per qualche motivo, incorporare tale logica in un unico endpoint API REST non è possibile, è possibile definire due endpoint. 
 
    Uno viene utilizzato dalla propria applicazione, tuttavia, è necessario aggiungere la registrazione del payload e convertirla nel formato previsto. Il secondo endpoint è utilizzato da {{site.data.keyword.aios_short}} per effettuare i calcoli richiesti, come la distorsione e l'esplicabilità. Non è richiesta alcuna registrazione payload per questo enpoint. Durante la configurazione di {{site.data.keyword.aios_short}}, il secondo endpoint deve essere indirizzato a quello con formati compatibili.
 
-   Per ulteriori informazioni, consultare [Utilizzo di due endpoint](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-opt2-cs1).
+   Per ulteriori informazioni, consultare [Utilizzo di due endpoint](#fmrk-workaround-opt2-cs1).
 
 - Opzione 3: Spostare il modulo di registrazione del payload nell'endpoint originale o nell'applicazione di downstream. 
 

@@ -31,36 +31,45 @@ subcollection: ai-openscale
 이 문서는 {{site.data.keyword.aios_full_notm}}의 새 기능에 대해 간략하게 설명합니다.
 {: shortdesc}
 
+## 2019년 7월 9일
+{: #rn-9jul2019}
+
+다음과 같은 {{site.data.keyword.aios_short}}의 새로운 기능 및 변경사항이 제공됩니다.
+
+- __*업데이트 및 확장된 온라인 도움말*__: {{site.data.keyword.aios_short}} 온라인 도움말은 컨텐츠 분할창을 사용한 주제 찾기가 보다 쉽도록 최근에 재구성되었습니다. 또한 많은 새 주제가 작성되고 확장되었습니다. 
+
+   자세한 정보는 [인사이트 확보](/docs/services/ai-openscale?topic=ai-openscale-io-ov) 및 [Lite에서 유료 플랜으로 {{site.data.keyword.aios_short}} 업데이트](/docs/services/ai-openscale?topic=ai-openscale-cf-upgrade)를 참조하십시오. 
+   
 ## 2019년 7월 2일
 {: #rn-2jul2019}
 
-다음과 같은 {{site.data.keyword.aios_short}}의 새로운 기능 및 변경사항이 제공됩니다. 
+다음과 같은 {{site.data.keyword.aios_short}}의 새로운 기능 및 변경사항이 제공됩니다.
 
 - __*드리프트 발견*__: ![베타 태그](images/beta.png)
 
-  {{site.data.keyword.aios_short}}은 이제 드리프트 발견을 지원합니다. 
+  {{site.data.keyword.aios_short}}은 이제 드리프트 발견을 지원합니다.
 
-   자세한 정보는 [드리프트 발견](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)을 참조하십시오. 
+   자세한 정보는 [드리프트 발견](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)을 참조하십시오.
 
-- __*Microsoft Azure ML 서비스 지원*__: {{site.data.keyword.aios_short}}은 이제 Azure ML 서비스 AI 모델과 {{site.data.keyword.aios_short}}의 공정성, 정확성 및 설명 가능성을 통합하는 방법을 제공하는 Microsoft Azure ML 서비스를 지원합니다. 
+- __*Microsoft Azure ML 서비스 지원*__: {{site.data.keyword.aios_short}}은 이제 Azure ML 서비스 AI 모델과 {{site.data.keyword.aios_short}}의 공정성, 정확성 및 설명 가능성을 통합하는 방법을 제공하는 Microsoft Azure ML 서비스를 지원합니다.
 
-   자세한 정보는 [Microsoft Azure ML 서비스 프레임워크](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-frmwrks-azure-service)를 참조하십시오. 
+   자세한 정보는 [Microsoft Azure ML 서비스 프레임워크](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service)를 참조하십시오.
 
-- __*개선된 워크플로우*__: {{site.data.keyword.aios_short}}은 더 적은 수의 클릭과 더 많은 설명 가능성을 통해 작업을 빠르게 수행할 수 있도록 워크플로우를 개선하기 위해 열심히 노력해 왔습니다. 탐색 패널을 사용하면 사용자의 위치를 확인하고 구성 태스크 사이에서 앞뒤로 쉽게 이동할 수 있습니다. 
+- __*개선된 워크플로우*__: {{site.data.keyword.aios_short}}은 더 적은 수의 클릭과 더 많은 설명 가능성을 통해 작업을 빠르게 수행할 수 있도록 워크플로우를 개선하기 위해 열심히 노력해 왔습니다. 탐색 패널을 사용하면 사용자의 위치를 확인하고 구성 태스크 사이에서 앞뒤로 쉽게 이동할 수 있습니다.
 
-   자세한 정보는 [배치를 위해 모니터 준비](/docs/services/ai-openscale?topic=ai-openscale-mo-config)를 참조하십시오. 
+   자세한 정보는 [배치를 위해 모니터 준비](/docs/services/ai-openscale?topic=ai-openscale-mo-config)를 참조하십시오.
 
-- __*복수의 기계 학습 제공자*__: 하나의 기계 학습 제공자 또는 엔진에 묶여 있을 이유가 없습니다. {{site.data.keyword.aios_short}}의 새 버전을 사용하면 복수의 제공자를 추가하여 해당 제공자의 고유 기능을 활용하거나 레거시 앱에 지속성을 제공할 수 있습니다. 
+- __*복수의 기계 학습 제공자*__: 하나의 기계 학습 제공자 또는 엔진에 묶여 있을 이유가 없습니다. {{site.data.keyword.aios_short}}의 새 버전을 사용하면 복수의 제공자를 추가하여 해당 제공자의 고유 기능을 활용하거나 레거시 앱에 지속성을 제공할 수 있습니다.
 
    자세한 정보는 [여러 기계 학습 엔진 지원](/docs/services/ai-openscale?topic=ai-openscale-fmrk-workaround-multmleng)을 참조하십시오.
 
-- __*더 많은 즉시 사용 가능한 메트릭*__: {{site.data.keyword.aios_short}}이 이 버전을 사용하면 많은 새 공정성, 품질, 동작, 성능 및 분석 메트릭이 제공됩니다. 더 큰 상자가 필요합니다! 
+- __*더 많은 즉시 사용 가능한 메트릭*__: {{site.data.keyword.aios_short}}이 이 버전을 사용하면 많은 새 공정성, 품질, 동작, 성능 및 분석 메트릭이 제공됩니다. 더 큰 상자가 필요합니다!
 
-   자세한 정보를 보려면 [품질 메트릭 개요](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics)를 참조한 후 주위를 클릭하여 [공정성](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_fairness), [성능](/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through), [분석](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_payload) 및 [동작](/docs/services/ai-openscale?topic=ai-openscale-behavior-ovr)으로 이동하십시오. 
+   자세한 정보를 보려면 [품질 메트릭 개요](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics)를 참조한 후 주위를 클릭하여 [공정성](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_fairness), [성능](/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through), [분석](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_payload) 및 [동작](/docs/services/ai-openscale?topic=ai-openscale-behavior-ovr)으로 이동하십시오.
 
-- __*편향성을 따라 가속화*__: 편향성 구성에 대해 제안된 공정성 속성 및 자동 값을 사용하면 {{site.data.keyword.aios_short}}이 배치된 모델에서 잠재적인 공정성 임계값 위반을 발견하는 위치를 쉽게 확인할 수 있습니다. 추천된 특성을 승인하거나 값을 변경하도록 선택할 수 있습니다. 
+- __*편향성을 따라 가속화*__: 편향성 구성에 대해 제안된 공정성 속성 및 자동 값을 사용하면 {{site.data.keyword.aios_short}}이 배치된 모델에서 잠재적인 공정성 임계값 위반을 발견하는 위치를 쉽게 확인할 수 있습니다. 추천된 특성을 승인하거나 값을 변경하도록 선택할 수 있습니다.
 
-   자세한 정보는 [공정성 메트릭 개요](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_fairness)를 참조하십시오. 
+   자세한 정보는 [공정성 메트릭 개요](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_fairness)를 참조하십시오.
 
 ## 2019년 6월 11일
 {: #rn-11June2019}
@@ -189,7 +198,7 @@ subcollection: ai-openscale
 
 - __*GA(General Availability)*__: {{site.data.keyword.Bluemix}} 표준(유료) 플랜으로서의 {{site.data.keyword.aios_full_notm}}의 GA(General Availability) 릴리스
 
-- __*{{site.data.keyword.icp4dfull_notm}} V1.2*__: {{site.data.keyword.wos4d_full}} V1.2를 사용하는 경우 [설치 체크리스트](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#install)에서 설치 지시사항을 포함한 문서를 참조하십시오. 
+- __*{{site.data.keyword.icp4dfull_notm}} V1.2*__: {{site.data.keyword.wos4d_full}} V1.2를 사용하는 경우 [설치 체크리스트](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#install)에서 설치 지시사항을 포함한 문서를 참조하십시오.
 
 - __*모델 유형에 대한 지원*__: {{site.data.keyword.aios_short}}은 {{site.data.keyword.pm_full}}에서의 AI 모델 배치 외에 Microsoft Azure, Amazon SageMaker 및 사용자 정의 환경에서의 모델 배치를 지원합니다. 자세한 정보는 [지원되는 모델 유형](/docs/services/ai-openscale?topic=ai-openscale-in-ov)을 참조하십시오.
 
@@ -218,4 +227,4 @@ subcollection: ai-openscale
 다른 질문이 있으십니까?
 
 - [제한사항](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
-- [알려진 문제](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)
+- [알려진 문제](/docs/services/ai-openscale?topic=ai-openscale-rn-12ki#cloud-limitations)

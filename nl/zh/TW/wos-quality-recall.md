@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 查全率 ![測試版標記](images/beta.png)
+# 查全率
 {: #quality_recall}
 
 「查全率」提供肯定類別中正確預測的比例。
@@ -44,10 +44,35 @@ subcollection: ai-openscale
 - **圖表值**：時間範圍內的最後一個值
 - **可用的度量詳細資料**：混淆矩陣
 
-## 解讀顯示畫面
+## 解讀查全率度量顯示畫面
 {: #quality_recall-display}
 
 ![顯示「查全率」圖表。](images/quality-recall.png)
+
+### 公平性評分
+{: #quality_recall-display-fairness-score}
+
+對於查全率度量，會顯示下列的公平性評分。 
+
+![顯示「查全率」評分百分比。](images/wos-quality-recall-score.png)
+
+### 排程
+{: #quality_recall-display-schedule}
+
+**排程**窗格會顯示**前次評估**和**下次評估**的時間。品質度量每小時會評估一次。您可以按一下**立即檢查品質**，以強制評估。您也可以按一下**新增回饋資料**，以新增回饋。
+
+![顯示排程窗格，其中顯示前次評估時間和下次評估時間](images/wos-quality-schedule.png)
+
+
+### 建議
+{: #quality_recall-display-recommendations}
+
+為了協助您解讀圖表，**建議**窗格會顯示哪些趨勢代表改進中或惡化中的模型成效。
+
+![顯示建議窗格。](images/wos-quality-positive-recommendation.png)
+
+
+
 
 ## 數學計算
 {: #quality_recall-math}

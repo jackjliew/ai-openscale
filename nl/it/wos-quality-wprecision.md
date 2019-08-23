@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Precisione ponderata ![tag beta](images/beta.png)
+# Precisione ponderata
 {: #quality_wgth_prec}
 
 La precisione ponderata dà la media ponderata della precisione con pesi uguali alla probabilità di classe.

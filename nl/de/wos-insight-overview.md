@@ -40,22 +40,40 @@ Die Registerkarte **Insights** (![Dashboard für Insights](images/insight-dash-t
 
 - ***Überwachte Bereitstellungen***: In diesem Beispiel werden insgesamt 10 Bereitstellungen überwacht. Acht der zehn folgenden Bereitstellungen werden als einzelne Kacheln angezeigt.
 
-- ***Genauigkeitsalerts*** - In den unten aufgeführten Kacheln werden insgesamt drei Genauigkeitsalerts dargestellt. In diesem Beispiel weisen die Bereitstellungen `Treiberleistung`, `Marktanalyse` und `Preisrisiko` Genauigkeitswerte in Höhe von `60 %`, `65 %` bzw. `79 %` auf.
+- ***Qualitäts-Alerts*** - Insgesamt 3 Qualitäts- (zuvor als Genauigkeit bezeichnet) Alerts werden in den folgenden Kacheln dargestellt. In diesem Beispiel weisen die Bereitstellungen `Treiberleistung`, `Marktanalyse` und `Preisrisiko` Genauigkeitswerte in Höhe von `60 %`, `65 %` bzw. `79 %` auf.
 
 - ***Fairnessalerts*** - Es werden insgesamt sechs Fairnessalerts angegeben, die in den folgenden Kacheln und mit einer kleinen Markierung `BIAS` dargestellt werden. In diesem Beispiel weisen die Bereitstellungen `Treiberleistung`, `Marktanalyse`, `Einhaltung gesetzlicher Bestimmungen`, `Betrugserkennung`, `Premium-Optimierung` und `Kostenschätzer für Schaden` Fairnesswerte von `59 %`, `68 %`, `62 %`, `64 %`, `79 %` und `63 %` auf.
 
 Jede Kachel liefert eine Zusammenfassung der Überwachungsaktivitäten für diese Bereitstellung. Beachten Sie, dass die Kachel für die Bereitstellung `Call-Center-Routing` keine Probleme aufweist, was auf ein recht stabiles, genaues Modell hinweist.
 
-### Weitere Schritte
-{: #io-next}
 
-Wählen Sie eine beliebige einzelne Bereitstellungskachel aus, damit weitere Details zu dieser Bereitstellung angezeigt werden. Weitere Informationen enthalten die Abschnitte [Fairness, durchschnittliche Zahl der Anforderungen pro Minute und Genauigkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-it-ov) und [Erklärbarkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
+## Einblicke in Fairness, Qualität, Leistung, Genauigkeit und Analyse
+{: #it-ov}
 
+Wählen Sie eine beliebige einzelne Bereitstellungskachel aus, damit weitere Details zu dieser Bereitstellung angezeigt werden. Überwachungsdaten für einzelne Bereitstellungen werden in einer Reihe von Diagrammen angezeigt. Die Diagramme verfolgen Metriken, wie z. B. Fairness, durchschnittliche Anforderungen pro Minute sowie Genauigkeit über Tage, Wochen oder Monate.
 
+- [Daten für eine Bereitstellung anzeigen](/docs/services/ai-openscale?topic=ai-openscale-it-vdep)
+- [Visualisierung von Daten für eine bestimmte Stunde anzeigen](/docs/services/ai-openscale?topic=ai-openscale-it-vdet)
+- [Fairness](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_fairness)
+- [Qualität](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics)
+- [Drift](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)
+- [Leistung](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_performance)
+- [Analyse](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_payload)
+- [Optionen für die Verzerrungsbereinigung](/docs/services/ai-openscale?topic=ai-openscale-it-dbo)
 
-## Transaktionen
+## Erklärbarkeit
 {: #io-tran}
 
-Mit der Registerkarte **Transaktion erklären** (![Registerkarte 'Transaktion erklären'](images/insight-transact-tab.png)) können Sie nach einer bestimmten Transaktions-ID suchen, um eine Erklärung einer bestimmten Bereitstellungstransaktion zu erhalten. Weitere Informationen hierzu enthält der Abschnitt [Erklärbarkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
+Mit der Registerkarte **Transaktion erklären** (![Registerkarte 'Transaktion erklären'](images/insight-transact-tab.png)) können Sie nach einer bestimmten Transaktions-ID suchen, um eine Erklärung einer bestimmten Bereitstellungstransaktion zu erhalten.
 
+- [Transaktionen erklären](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)
+- [Kategoriale Modelle erklären](/docs/services/ai-openscale?topic=ai-openscale-ie-class)
+- [Imagemodelle erklären](/docs/services/ai-openscale?topic=ai-openscale-ie-image)
+- [Modelle mit unstrukturiertem Text erklären](/docs/services/ai-openscale?topic=ai-openscale-ie-unstruct)
+- [Kontrastierende Erklärungen](/docs/services/ai-openscale?topic=ai-openscale-ie-pp-pn)
+
+## Weitere Schritte
+{: #io-next}
+
+- [Weitere zu überwachende Bereitstellungen hinzufügen](/docs/services/ai-openscale?topic=ai-openscale-dpl-select).
 

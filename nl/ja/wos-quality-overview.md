@@ -25,10 +25,11 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# モデル性能の指標の概要 ![ベータ・タグ](images/beta.png)
+# 品質指標の概要
 {: #anlz_metrics}
 
-モデル性能モニタリングを使用して、モデルがどの程度正確な結果を予測するかを判別します。 モデル性能モニタリングを有効にすると、デフォルトでは 1 時間ごとに指標のセットが生成されます。 これらの指標は、**「今すぐ品質を評価」**ボタンをクリックするか、Python クライアントを使用して、オンデマンドで生成できます。
+モデル性能モニタリングを使用して、モデルがどの程度正確な結果を予測するかを判別します。 モデル性能モニタリングを有効にすると、デフォルトでは 1 時間ごとに指標のセットが生成されます。 これらの指標は、**「今すぐ品質を評価」**ボタンをクリックするか、または Python クライアントを使用して、オンデマンドで生成できます。
+{: shortdesc}
 
 品質指標は、以下の情報に基づいて計算されます。
 
@@ -56,11 +57,21 @@ Microsoft Azure ML Studio、Microsoft Azure ML Service、Amazon Sagemaker ML な
 
 - [ROC 曲線下面積](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_roc)
 - [PR 曲線下面積](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-area-pr)
+- [分散説明率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_var)
+- [平均絶対誤差](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_abserror)
+- [平均二乗誤差](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_squerror)
+- [R2 (決定係数)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_r_squared)
+- [平均平方二乗誤差](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-supqualdets_squ_errors_mean)
 - [正解率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-accuracy-opener)
+- [加重真陽性率 (wTPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-wtpr)
 - [真陽性率 (TPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_tpr)
+- [加重偽陽性率 (wFPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wfpr_weighted)
 - [偽陽性率 (FPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_fpr_false)
+- [加重再現率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_weighted_recall)
 - [再現率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_recall)
+- [加重適合率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wgth_prec)
 - [適合率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_precision)
+- [加重 F1 値](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wght_f1-measure)
 - [F1 値](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_f1-measr)
 - [対数損失](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_log_loss)
 
@@ -75,3 +86,8 @@ Microsoft Azure ML Studio、Microsoft Azure ML Service、Amazon Sagemaker ML な
 混同行列は、モニター対象デプロイメントの応答が、どのフィードバック・データに関して正しく、どのフィードバック・データに関しては正しくないかを理解するのに役立ちます。
 
 詳しくは、[混同行列](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx)を参照してください。
+
+## 次のステップ
+
+- {{site.data.keyword.aios_short}} により品質の問題 (正解率しきい値違反など) が検出された後で、その問題を修正する新しいバージョンのモデルを作成する必要があります。フィードバック・テーブルにある手動でラベル付けされたデータを使用して、モデルを元の訓練データとともに再訓練する必要があります。
+

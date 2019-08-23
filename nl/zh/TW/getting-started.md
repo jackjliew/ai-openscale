@@ -67,7 +67,7 @@ subcollection: ai-openscale
 
 視您的喜好設定和專業程度，有幾個設置選項可選。
 
-- [下列自動設置](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)會引導您在背景中執行作業，以完成這項處理程序。
+- [下列自動設置](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start)會引導您在背景中執行作業，以完成這項處理程序。
 
    使用導覽表示您可以觀看並透過點選，進入導覽的下一個部分。
    
@@ -75,7 +75,7 @@ subcollection: ai-openscale
 
    請使用介面，以使用範例模型和注入的資料，來執行一般作業。
    
-- [進階指導教學](/docs/services/ai-openscale?topic=ai-openscale-crt-ov)可讓較為技術性的使用者安裝一個 Python 模組，以自動執行必備服務的佈建及配置。這項進階指導教學適用於熟悉編碼、Python 和「記事本」的資料科學家或使用者。這是一個範例，指出如何使用 {{site.data.keyword.aios_short}} 用戶端，以程式設計方式來執行功能。本指導教學中使用的記事本所產生的位置，與遵循[自動設置](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)的結果是一樣的。
+- [進階指導教學](/docs/services/ai-openscale?topic=ai-openscale-crt-ov)可讓較為技術性的使用者安裝一個 Python 模組，以自動執行必備服務的佈建及配置。這項進階指導教學適用於熟悉編碼、Python 和「記事本」的資料科學家或使用者。這是一個範例，指出如何使用 {{site.data.keyword.aios_short}} 用戶端，以程式設計方式來執行功能。本指導教學中使用的記事本所產生的位置，與遵循[自動設置](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start)的結果是一樣的。
 
    這個模組需要安裝 Python 3，其中含有 PIP 套件管理系統。如需相關指示，請參閱[安裝 Python 模組以設置 {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)。
 
@@ -92,7 +92,7 @@ subcollection: ai-openscale
 
 開始進行導覽之前，您必須已設置下列資源：
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
 依照設計，自動設置導覽盡可能與使用者減少互動。它會為您自動做出下列的決策：
@@ -100,7 +100,7 @@ subcollection: ai-openscale
 - 如果您設置了多個 {{site.data.keyword.pm_full}} 實例，安裝程序會執行並發出 API 呼叫，來列出實例，並在產生的清單中，選擇第一個出現的 {{site.data.keyword.pm_short}} 實例。 
 - 如果要建立新的 {{site.data.keyword.pm_full}} 精簡版本，{{site.data.keyword.aios_short}} 安裝程式會使用您 {{site.data.keyword.Bluemix}} 帳戶的預設資源群組。
 
-### 佈建 {{site.data.keyword.aios_full}} 服務
+### 佈建 {{site.data.keyword.aios_short}} 服務
 {: #crt-wos-faststart}
 
 如果您尚未這樣做，請確定您已佈建 {{site.data.keyword.aios_full}}。 
@@ -111,7 +111,7 @@ subcollection: ai-openscale
 
 1. 按一下**型錄** > **AI** > **{{site.data.keyword.aios_short}}**。
 2. 為您的服務命名，選擇一種方案，並按一下**建立**按鈕。
-3. 若要啟動 {{site.data.keyword.aios_short}}，請按一下**入門**按鈕。
+3. 如果要啟動 {{site.data.keyword.aios_short}}，請按一下**啟動應用程式**按鈕。
 
 ## 自動設置
 {: #wos-work-demo}
@@ -121,14 +121,7 @@ subcollection: ai-openscale
 
    ![示範 - 歡迎使用](images/cloud-auto-setup.png)
 
-   在佈建 {{site.data.keyword.aios_short}} 服務時，您可以檢閱示範實務：
-
-   ![示範預覽](images/fastpath_demo_11.31.58.png)
-
-當佈建完成時，按一下**讓我們開始**按鈕，以導覽 {{site.data.keyword.aios_short}} 儀表板，然後繼續[在 {{site.data.keyword.aios_short}} 中檢視結果](#wos-open)。
-
-   ![示範 - 讓我們開始](images/fastpath_demo_11.33.45.png)
-
+   在佈建 {{site.data.keyword.aios_short}} 服務時，您可以檢閱示範實務。當佈建完成時，按一下**開始導覽**按鈕，以導覽 {{site.data.keyword.aios_short}} 儀表板，然後繼續[在 {{site.data.keyword.aios_short}} 中檢視結果](#wos-open)。
 
 ## 在 {{site.data.keyword.aios_short}} 中檢視結果
 {: #wos-open}
@@ -150,22 +143,9 @@ subcollection: ai-openscale
 {: #wos-monitoring}
 
 1.  從「洞察」頁面，按一下 `GermanCreditRiskModelICP` 圖磚，以檢視受監視資料的相關明細。
-1.  在圖表中按一下並拖曳標記，以檢視某一天和某個時段（這會顯示資料），然後按一下**檢視明細**鏈結。或者，您可以在圖表中按一下不同的時段，來變更您要查看的資料。
+1.  在圖表中按一下並拖曳標記，以檢視某一天和某個時段（這會顯示資料），然後按一下**檢視明細**鏈結。或者，您可以在圖表中按一下不同的時段，來變更您要查看的資料。 
 
-     - 例如，下列畫面顯示特定日期和時間的資料。日期和時間會因您執行模組的時間而異。
-
-     - 如需解讀時間序列圖表的相關資訊，請參閱[監視「公平性」、「每分鐘的平均要求數」和「精確度」](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart)。
-
-   ![示範 - 讓我們開始](images/fastpath_demo_11.34.17.png)
-
-1.  如果要查看 `SEX` 資料監視的相關詳細資料，請確定已從下拉功能表中選取 `SEX`。
-
-    - 請注意，在下列畫面擷取中，有存在偏誤。
-    
-   ![示範 - 讓我們開始](images/fastpath_demo_11.34.27.png)
-
-    - 如需如何解讀特定小時之資料點圖表的相關資訊，請參閱[資料視覺化](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual)。
-
+如需如何解讀時間序列圖表的相關資訊，請參閱[取得洞察](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
 
 ### 檢視可解釋性
 {: #wos-explain}
@@ -178,20 +158,17 @@ subcollection: ai-openscale
 
    ![示範 - 讓我們開始](images/fastpath_demo_11.35.12.png)
 
-如需尋找及解釋交易的相關資訊，請參閱[監視可解釋性](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov)。
+如需尋找及解釋交易的相關資訊，請參閱[監視可解釋性](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)。
 
    ![示範 - 讓我們開始](images/fastpath_demo_11.35.50.png)
 
 ## 完成導覽
 {: #wos-done-demo}
 
-1. 按一下**完成**按鈕。
+當完成導覽之後，您可以將自己的模型部署新增至儀表板，或繼續探索指導教學部署。 
 
-   ![示範 - 讓我們開始](images/fastpath_demo_11.37.22.png)
-
-2. 按一下**讓我們開始**按鈕，以開始使用 {{site.data.keyword.aios_short}}。
-
-   ![示範 - 讓我們開始](images/fastpath_demo_11.33.45.png)
+- 如果要將自己的模型新增至儀表板，請按一下**新增至儀表板**按鈕。
+- 如果要繼續探索指導教學模型，請按一下 German Credit Risk 圖磚。
 
 ## 後續步驟
 {: #gs-next}

@@ -38,9 +38,9 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}} 连接到 Azure ML Studio 实例中的 AI 模型和部署。
 
-1.  从**配置**选项卡中，单击**机器学习提供程序**。
+1. 从**配置**选项卡中，单击**机器学习提供程序**。根据您的环境，您可能看不到以下所有提供程序：
 
-    ![显示“选择机器学习服务提供程序”屏幕，其中包含受支持的机器学习引擎的磁贴](images/wos-machine-learning-providers-selection.png)
+   ![显示“选择机器学习服务提供程序”屏幕，其中包含受支持的机器学习引擎的磁贴](images/wos-machine-learning-providers-selection.png)
 
 1.  单击 **Microsoft Azure ML Studio** 磁贴。
 
@@ -52,6 +52,9 @@ subcollection: ai-openscale
     - 客户机私钥：私钥的实际字符串值，用于验证您的身份，并认证和授权您对 Azure Studio 进行的呼叫。
     - 租户：租户标识与组织对应，并且是 Azure AD 的专用实例。要查找租户标识，请将鼠标悬停在帐户名称上以获取目录/租户标识，或者选择 Azure 门户网站中的 Azure Active Directory >“属性”>“目录标识”。
     - 预订标识：用于唯一识别 Microsoft Azure 预订的预订凭证。预订标识构成每个服务调用的 URI 的一部分。
+    - 服务提供程序实例名称：分配给此服务提供程序的特定名称。
+    - 描述：（可选）此服务提供程序实例的简明语言描述。如果您具有生产和测试环境，那么这将是包含该信息的理想位置。
+
 
     请参阅[操作方法：使用门户网站来创建能够访问资源的 Azure AD 应用程序和服务主体](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: external} 以了解有关如何获取 Microsoft Azure 凭证的指示信息。{: note}
 

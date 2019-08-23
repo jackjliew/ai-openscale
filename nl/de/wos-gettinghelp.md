@@ -36,7 +36,6 @@ Wenn bei der Verwendung von {{site.data.keyword.aios_full}} Probleme oder Fragen
 
 Die Registerkarte 'Hilfe' (![Symbol für Registerkarte 'Hilfe'](images/insight-help-tab.png)) liefert zusätzliche Informationen, die Sie bei der Verwendung von {{site.data.keyword.aios_short}} unterstützen.
 
-
 ![Hilfetextanzeige](images/help-tab-flyout.png)
 
 ## Fragen stellen
@@ -44,11 +43,11 @@ Die Registerkarte 'Hilfe' (![Symbol für Registerkarte 'Hilfe'](images/insight-h
 
 Wenn Sie Fragen über ein Forum stellen, versehen Sie Ihre Frage mit einem Tag, damit sie von den {{site.data.keyword.aios_short}}-Entwicklungsteams zur Kenntnis genommen wird.
 
-Wenn Sie technische Fragen zu {{site.data.keyword.aios_short}} haben, veröffentlichen Sie Ihre Frage auf [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale) und kennzeichnen Sie sie mit dem Tag `watson-openscale`.
+Wenn Sie technische Fragen zu {{site.data.keyword.aios_short}} haben, veröffentlichen Sie Ihre Frage auf [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale){: external} und kennzeichnen Sie sie mit dem Tag `watson-openscale`.
 
-Bei Fragen zum Service und zu einführenden Anweisungen sollten Sie das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale) nutzen. Geben Sie dabei den Tag `openscale` an. Weitere Details zur Verwendung der Foren finden Sie im Abschnitt [Hilfe anfordern](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html).
+Bei Fragen zum Service und zu einführenden Anweisungen sollten Sie das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale){: external} nutzen. Geben Sie dabei den Tag `openscale` an. Weitere Details zur Verwendung der Foren finden Sie im Abschnitt [Hilfe anfordern](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html){: external}.
 
-Informationen zum Öffnen eines IBM Support-Tickets oder zu Support-Levels und Prioritätsstufen von Tickets finden Sie, wenn Sie unter [Kontaktaufnahme mit dem Support](https://cloud.ibm.com/unifiedsupport/supportcenter) auf **Fall erstellen** klicken.
+Informationen zum Öffnen eines IBM Support-Tickets oder zu Support-Levels und Prioritätsstufen von Tickets finden Sie, wenn Sie unter [Kontaktaufnahme mit dem Support](https://cloud.ibm.com/unifiedsupport/supportcenter){: external} auf **Fall erstellen** klicken.
 
 ## Ihr Wissensdurst ist immer noch nicht gestillt?
 {: #looking}

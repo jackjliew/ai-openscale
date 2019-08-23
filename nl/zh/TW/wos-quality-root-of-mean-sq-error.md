@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 均方根誤差 ![測試版標記](images/beta.png)
+# 均方誤差的根
 {: #supqualdets_squ_errors_mean}
 
 「均方根誤差 (RMSE)」視圖顯示模型中預測值與觀察值之間的誤差。

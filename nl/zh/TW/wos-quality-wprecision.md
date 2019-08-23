@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加權查準率 ![測試版標記](images/beta.png)
+# 加權查準率
 {: #quality_wgth_prec}
 
 「加權查準率」提供查準率的加權平均值，且其加權等於類別機率。

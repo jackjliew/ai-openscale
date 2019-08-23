@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # 「活動追蹤器」的事件
 {: #at-events}
 
-當您將 {{site.data.keyword.aios_short}} 當成服務佈建於您的 {{site.data.keyword.cloud_notm}} 帳戶中之後，您可以在 [{{site.data.keyword.cloud_notm}} 活動追蹤器](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov) 中看到下事件。
+當您將 {{site.data.keyword.aios_short}} 當成服務佈建於您的 {{site.data.keyword.cloud_notm}} 帳戶中之後，您可以在 [{{site.data.keyword.cloud_notm}} 活動追蹤器](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov){: external} 中看到下事件。
 {: shortdesc}
 
 ## 公用 API 事件

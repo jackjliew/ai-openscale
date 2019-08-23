@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: credentials, REST API, data mart
+keywords: credentials, REST API, datamart ID, IDs, binding ID,  deployment ID, subscription ID
 
 subcollection: ai-openscale
 
@@ -36,29 +36,30 @@ Per gli account enterprise, un amministratore può creare il data mart, invitare
 ## Creazione della chiave API della piattaforma
 {: #cred-create-apikey}
 
-Per creare una chiave API della piattaforma, completare la seguente procedura:
+Per creare una chiave API IBM Cloud, completare i seguenti passi:
 
-1. Accedere a [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}.
+- Accedere a [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}.
+- Selezionare **Gestisci** --> **Accedi (IAM)** --> **Chiavi API {{site.data.keyword.cloud_notm}}**
+- Fare clic sul pulsante **Crea una chiave API IBM Cloud**.
+- Assegnare alla chiave un nome e una descrizione e fare clic su **Crea**.
 
-2. Selezionare **Gestisci** --> **Sicurezza** --> **Chiavi API della piattaforma**
+## Ricerca di ID di servizio:
+{: #cred-find-datamart-id}
 
-    ![Chiavi API della piattaforma](images/cred-api-key.png)
+Trovare gli ID datamart, distribuzione, sottoscrizione o binding sulla pagina {{site.data.keyword.aios_short}}**Registrazione payload**, visualizzata quando si seleziona **Configura monitor** per una distribuzione. 
 
-3. Creare e salvare una chiave API della piattaforma.
+1. Fare clic sul riquadro della distribuzione del modello. 
+2. Fare clic su **Configura monitor** ![l'icona Configura](images/configure-deployment-button.png).
+3. Fare clic su **Registrazione payload**.
+4. Nella pagina {{site.data.keyword.aios_short}} **Registrazione payload**, nel riquadro **Dettagli** trovare l'ID che si sta cercando. Ad esempio, il campo **ID datamart**:
 
-Per trovare l'ID (o l'istanza del servizio) del data mart dell'utente:
 
-1. Fare clic sul riquadro della distribuzione del modello.
-2. Fare clic sull'icona **Configura** ![icona di configurazione](images/configure-deployment-button.png).
-3. Fare clic su **Visualizza endpoint di registrazione payload**.
-4. Nella pagina {{site.data.keyword.aios_short}} **Registrazione payload**, trovare il campo **ID datamart**.
-
-    ![ID data mart](images/data-mart-id.png)
+    ![ID datamart](images/data-mart-id.png)
 
 ## Creazione delle credenziali dell'istanza del servizio utilizzando la console dei comandi
 {: #cred-creds}
 
-Per creare le credenziali per {{site.data.keyword.aios_short}}, completare i seguenti passi utilizzando la [console dei comandi](/docs/cli?topic=cloud-cli-ibmcloud-cli) di {{site.data.keyword.cloud_notm}}:
+Per creare le credenziali per {{site.data.keyword.aios_short}}, completare i seguenti passi utilizzando la console dei comandi {{site.data.keyword.cloud_notm}}[](/docs/cli?){: external}:
 
 1. Richiamare la chiave API eseguendo il seguente comando:
 
@@ -76,7 +77,12 @@ Per creare le credenziali per {{site.data.keyword.aios_short}}, completare i seg
     Locked       false
     UUID         ApiKey-xxxxxxxxx-afd7-xxxxx-b0e1-xxxxxxxxxxx
     ```
+
 2. Verificare il gruppo di risorse che si sta utilizzando nell'account {{site.data.keyword.cloud_notm}}.
+
+   1. Andare al Dashboard.
+   2. Dal **menu di navigazione** fare clic su **Elenco risorse**.
+   3. Dalla colonna **Gruppo**, fare clic sull'elenco a discesa **Filtra per gruppo o organizzazione** e impostare la casella di spunta **Predefinito**.
 
   ![Gruppo di risorse nel cloud](images/cloud-resource.png)
 
@@ -93,6 +99,7 @@ Per creare le credenziali per {{site.data.keyword.aios_short}}, completare i seg
     ```curl
     ibmcloud resource service-instance '<nome_istanza_Watson_OpenScale>'
     ```
+
     **Nota**: se si utilizza la console dei comandi {{site.data.keyword.cloud_notm}} su Windows, sostituire gli apici (') nei comandi sopra riportati con le virgolette (").
 
     Sono visualizzate le seguenti informazioni:
@@ -120,8 +127,8 @@ Per creare le credenziali per {{site.data.keyword.aios_short}}, completare i seg
 
 Specificare il provider di machine learning:
 
-- [Specifica di un'istanza del servizio IBM Watson Machine Learning](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
-- [Specifica di un'istanza di Microsoft Azure ML Studio](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
-- [Specifica di un'istanza di Microsoft Azure ML Service](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
-- [Specifica di un'istanza del servizio Amazon SageMaker ML](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
-- [Specifica di un'istanza del servizio ML personalizzata](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-co-connect)
+- [Specifica di un'istanza del servizio IBM Watson Machine Learning](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
+- [Specifica di un'istanza di Microsoft Azure ML Studio](/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
+- [Specifica di un'istanza di Microsoft Azure ML Service](/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
+- [Specifica di un'istanza del servizio Amazon SageMaker ML](/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
+- [Specifica di un'istanza del servizio ML personalizzata](/docs/services/ai-openscale?topic=ai-openscale-co-connect)

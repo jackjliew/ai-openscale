@@ -30,7 +30,7 @@ subcollection: ai-openscale
 IBM 承诺落实辅助功能选项。{{site.data.keyword.aios_full}} 内容和文档中包含遵循合规性准则的辅助功能选项，以帮助残疾用户。{{site.data.keyword.aios_short}} 的部分用户界面可访问，但不是完全可访问。只有文档与整体产品的各部件的子集相符。
 {: shortdesc}
 
-{{site.data.keyword.aios_short}} 文档使用最新的 W3C 标准 <a href="https://www.w3.org/TR/wai-aria/" rel="noopener noreferrer" target="_blank">WAI-ARIA 1.0</a> 来确保符合<a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/" rel="noopener noreferrer" target="_blank">美国 Access Board 第 508 条标准</a>和 <a href="https://www.w3.org/TR/WCAG20/" rel="noopener noreferrer" target="_blank">Web 内容辅助功能准则 (WCAG) 2.0</a>。
+{{site.data.keyword.aios_short}} 文档使用最新的 W3C 标准 [WAI-ARIA 1.0](https://www.w3.org/TR/wai-aria/){: external} 来确保符合[美国 Access Board 第 508 条标准](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/){: external}和 [Web 内容辅助功能准则 (WCAG) 2.0](https://www.w3.org/TR/WCAG20/){: external}。
 
 {{site.data.keyword.aios_short}} 联机产品文档支持辅助功能选项。辅助功能选项帮助有残疾（例如行动不便或有视力障碍）的用户成功使用信息技术产品。文档以 HTML 形式提供，以便可以通过辅助技术轻松进行访问。
 借助 {{site.data.keyword.aios_short}} 的辅助功能选项，您可以执行以下任务：
@@ -39,7 +39,7 @@ IBM 承诺落实辅助功能选项。{{site.data.keyword.aios_full}} 内容和�
 - 使用屏幕放大器放大屏幕上显示的内容。
 - 仅使用键盘来操作特定功能或等效功能。
 
-有关 IBM 对辅助功能选项的承诺的更多信息，请参阅 [IBM 辅助功能选项](http://www.ibm.com/able)。
+有关 IBM 对辅助功能选项的承诺的更多信息，请参阅 [IBM 辅助功能选项](http://www.ibm.com/able){: external}。
 
 ## TTY 服务
 

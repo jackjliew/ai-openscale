@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 查準率 ![測試版標記](images/beta.png)
+# 查準率
 {: #quality_precision}
 
 「查準率」提供肯定類別預測中正確預測的比例。

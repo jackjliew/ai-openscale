@@ -46,4 +46,4 @@ Leistungsmetrikwerte für einen bestimmten Zeitraum können im {{site.data.keywo
 
 Die folgenden Leistungsmetriken werden von {{site.data.keyword.aios_short}} unterstützt:
 
-- [Durchsatz](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)
+- [Durchsatz](/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

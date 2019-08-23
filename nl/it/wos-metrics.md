@@ -44,25 +44,21 @@ Per gestire le metriche personalizzate è necessario eseguire le seguenti attivi
 
 I seguenti supporti didattici avanzati mostrano come eseguire queste operazioni:
 
-- [Utilizzo di {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [Utilizzo del motore di Machine Learning personalizzato](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [Utilizzo di {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [Utilizzo del motore di Machine Learning personalizzato](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
 È possibile disabilitare e abilitare di nuovo il monitoraggio personalizzato in qualsiasi momento. È possibile rimuovere il monitor personalizzato se non è più necessario.
 
-Per ulteriori informazioni, consultare la [documentazione dell'SDK Python](http://ai-openscale-python-client.mybluemix.net/).
+Per ulteriori informazioni, consultare la [documentazione dell'SDK Python](http://ai-openscale-python-client.mybluemix.net/){: external}.
 
 ## Accesso e visualizzazione di metriche personalizzate
 {: #cst_mtrcs_viz}
 
 Per accedere e visualizzare le metriche personalizzate è possibile utilizzare l'interfaccia programmatica. I seguenti supporti didattici avanzati mostrano come eseguire queste operazioni:
 
-- [Utilizzo di {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [Utilizzo del motore di Machine Learning personalizzato](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [Utilizzo di {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [Utilizzo del motore di Machine Learning personalizzato](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-   Per ulteriori informazioni, consultare la [documentazione dell'SDK Python](http://ai-openscale-python-client.mybluemix.net/).
+   Per ulteriori informazioni, consultare la [documentazione dell'SDK Python](http://ai-openscale-python-client.mybluemix.net/){: external}.
 
 La visualizzazione delle metriche personalizzate compare sul dashboard {{site.data.keyword.aios_short}}.
-
-<!---
-![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
---->

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加重再現率 ![ベータ・タグ](images/beta.png)
+# 加重再現率
 {: #quality_weighted_recall}
 
 加重再現率は、クラス確率に相当する値で重みづけした再現率の平均です。

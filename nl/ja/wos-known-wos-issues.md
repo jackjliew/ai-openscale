@@ -39,7 +39,7 @@ subcollection: ai-openscale
 
 - {{site.data.keyword.aios_short}} は、Python SDK を使用して、追加のエンジンを構成する場合に、複数の機械学習エンジンをサポートします。
 
-- 現行リリースでサポートされているのは、1 つのデータベース、1 つの {{site.data.keyword.pm_full}} インスタンス、1 つの {{site.data.keyword.aios_short}} インスタンスのみです
+- 現行リリースでサポートされるのは、1 つのデータベース、1 つの {{site.data.keyword.pm_full}} インスタンス、および 1 つの {{site.data.keyword.aios_short}} インスタンスのみです
 
 - データベースと {{site.data.keyword.pm_full}} インスタンスは、同じ {{site.data.keyword.cloud_notm}} アカウントにデプロイする必要があります。
 
@@ -74,7 +74,7 @@ subcollection: ai-openscale
 ### ドリフト構成エラーのためにドリフト・モニターを構成できない
 {: #wos-common-issues-mismatchdatatype}
 
-モデル構成画面の柔軟性は、後でドリフト検出モニターなどのモニターを構成する際の問題につながることもあります。データ・タイプを選択できるので、選択したものがモデルのオリジナルのものを反映していることを確認する必要があります。予測列のタイプを適切に選択していないと、次のエラーが発生する場合があります。
+モデル構成画面の柔軟性は、後でドリフト検出モニターなどのモニターを構成する際の問題につながることもあります。 データ・タイプを選択できるので、選択したものがモデルのオリジナルのものを反映していることを確認する必要があります。 予測列のタイプを適切に選択していないと、次のエラーが発生する場合があります。
 
 ```
 "error": AIQDS2003E",
@@ -254,7 +254,7 @@ HAProxy 以外のロード・バランサーを使用している場合も、同
 ### Microsoft Azure Machine Learning Service
 {: #icp4d-azure-service-status403}
 
-{{site.data.keyword.wos4d_full}} の実行中に、{{site.data.keyword.aios_short}} がデプロイメント評価エンドポイントを呼び出す必要があるときに Azure Machine Learning Service と通信できないという問題が発生する場合があります。企業のセキュリティー・ポリシーを適用するセキュリティー・ツール (例えば Symantec Blue Coat など) がそのようなアクセスを妨げている可能性があります。
+{{site.data.keyword.wos4d_full}} の実行中に、{{site.data.keyword.aios_short}} がデプロイメント評価エンドポイントを呼び出す必要があるときに Azure Machine Learning Service と通信できないという問題が発生する場合があります。 企業のセキュリティー・ポリシーを適用するセキュリティー・ツール (例えば Symantec Blue Coat など) がそのようなアクセスを妨げている可能性があります。
 
 Azure Machine Learning Service に対する評価に到達できないことを示すエラーが発生した場合 (例えば、HTTP 状況コード 403 を受け取った場合) は、企業のセキュリティー・ポリシーを確認し、必要に応じて、使用しているツールで評価 URL を適切に再カテゴリー化して、{{site.data.keyword.aios_short}} が評価エンドポイントに適切にアクセスできるようにしてください。
 

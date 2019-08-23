@@ -38,7 +38,7 @@ subcollection: ai-openscale
 
 1.  データベースを選択します。 無料のデータベースと、既存または新規のデータベースという 2 つのオプションがあります。
 
-    ![データベースの選択](images/gs-config-database.png)
+    ![「データベースの選択」画面に 2 つのオプション (無料のライト・プランを使用するオプションと既存のデータベースを使用するオプション) が表示されています](images/gs-config-database.png)
 
     有料の {{site.data.keyword.cloud_notm}} アカウントを持っている場合、`Databases for PostgreSQL` サービスまたは `Db2 Warehouse` サービスをプロビジョンし、Watson Studio サービスと統合して継続的な学習サービスを十分に活用できます。 有料サービスをプロビジョンしない場合、無料の内部 PostgreSQL ストレージを {{site.data.keyword.aios_short}} で使用できますが、ご使用のモデル向けに継続的な学習を構成することはできません。
     {: note}
@@ -54,7 +54,7 @@ subcollection: ai-openscale
 
 無料のデータベースを使用して作業を進めるには、**「無料のライト・プラン・データベースを使用する」**タイルをクリックしてから、**「保存」**をクリックします。
 
-  ![データベースの選択](images/gs-config-database2.png)
+  ![「プロバイダーの選択 (Select Provider)」ボタンが選択された状態で「データベースが保存されました (Database Saved)」ポップアップ・メッセージが表示されています](images/gs-config-database2.png)
   
 無料のデータベースから別のデータベースにアップグレードすることはできますが、Compose for Postgres、Database for Postgres、または Db2 のインスタンスを再構成することによって無料のデータベースに切り替えることはできません。 アップグレード後は、無料のデータベースの使用に戻ることはできません。 構成、評価結果、説明などの現行データはすべて再利用できません。 別のスキーマやデータベースを選択すると、{{site.data.keyword.aios_short}} 環境は完全にリセットされます。
 
@@ -70,7 +70,7 @@ subcollection: ai-openscale
     {{site.data.keyword.aios_short}} は PostgreSQL データベースまたは Db2 データベースを使用して、モデル関連データ (フィードバック・データ、評価ペイロード) や計算された指標を保管します。 Db2 の Lite プランは現在サポートされていません。 訓練データの詳細については、[{{site.data.keyword.aios_short}} が訓練データにアクセスする必要があるのはなぜですか?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) を参照してください。
     {: note}
 
-    ![データベースの選択](images/gs-config-database3.png)
+    ![「データベースの選択」画面にデータベース・タイプ、データベース名、およびスキーマを入力するフィールドが表示されています。](images/gs-config-database3.png)
 
 1.  **「別の場所を選択」**をクリックして、{{site.data.keyword.Bluemix_notm}} アカウントに含まれないデータベースの場所を指定することもできます。
 
@@ -112,4 +112,4 @@ subcollection: ai-openscale
 ## 次のステップ
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} で[評価ペイロードを送信し](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score)、[デプロイメント用のモニターを構成](/docs/services/ai-openscale?topic=ai-openscale-mo-config)する準備が整いました。
+{{site.data.keyword.aios_short}} で[評価ペイロードを送信し](/docs/services/ai-openscale?topic=ai-openscale-cdb-score)、[デプロイメント用のモニターを構成](/docs/services/ai-openscale?topic=ai-openscale-mo-config)する準備が整いました。

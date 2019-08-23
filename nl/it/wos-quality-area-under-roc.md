@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Area sotto la curva ROC ![tag beta](images/beta.png)
+# Area sotto la curva ROC
 {: #quality_roc}
 
 L'area sotto la curva ROC (receiver operating characteristic) fornisce l'area sotto la curva della percentuale di richiami e falsi positivi. Calcola la sensibilità rispetto al tasso di ricaduta.

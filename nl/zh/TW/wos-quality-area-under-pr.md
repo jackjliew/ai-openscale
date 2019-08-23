@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# PR 下方的區域 ![測試版標記](images/beta.png)
+# PR 下方的區域
 {: #quality-area-pr}
 
 「查準率及查全率下方的區域」提供查準率和查全率曲線下方的區域，這在類別格外不平衡時就很好用。
@@ -48,6 +48,30 @@ subcollection: ai-openscale
 {: #quality-area-pr-display}
 
 ![顯示「PR 下方的區域」，其中度量為下跌趨勢](images/quality-area-under-pr.png)
+
+### 公平性評分
+{: #quality-area-pr-display-fairness-score}
+
+對於「PR 下方的區域」度量，會顯示下列公平性評分。 
+
+![顯示「PR 下方的區域」評分百分比。](images/wos-quality-area-pr-score.png)
+
+### 排程
+{: #quality-area-pr-display-schedule}
+
+**排程**窗格會顯示**前次評估**和**下次評估**的時間。品質度量每小時會評估一次。您可以按一下**立即檢查品質**，以強制評估。您也可以按一下**新增回饋資料**，以新增回饋。
+
+![顯示排程窗格，其中顯示前次評估時間和下次評估時間](images/wos-quality-schedule.png)
+
+
+### 建議
+{: #quality-area-pr-display-recommendations}
+
+為了協助您解讀圖表，**建議**窗格會顯示哪些趨勢代表改進中或惡化中的模型成效。
+
+![顯示建議窗格。](images/wos-quality-positive-recommendation.png)
+
+
 
 
 ## 數學計算

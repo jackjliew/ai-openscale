@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -67,7 +67,7 @@ El modelo de riesgo crediticio que se proporciona en esta guía de aprendizaje u
 
 Existen varias opciones de configuración, en función de su preferencia y nivel de experiencia.
 
-- [La siguiente configuración automática](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) le guía por el proceso,
+- [La siguiente configuración automática](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start) le guía por el proceso,
 realizando tareas en su nombre en segundo plano.
 
    El uso de una visita guiada significa que puede ver y pulsar la siguiente parte de la visita guiada.
@@ -81,7 +81,7 @@ script fácil de seguir.
 un módulo de Python que automatiza el suministro y la configuración de servicios de requisito previo. Esta guía de aprendizaje avanzada es para usuarios o
 científicos de datos que se sienten cómodos con códigos, Python y cuadernos. Es un ejemplo de cómo el cliente de {{site.data.keyword.aios_short}}
 se puede utilizar para realizar funcionalidad de forma programada. El cuaderno que se utiliza en esta guía de aprendizaje está en el mismo lugar que la
-[configuración automática](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) siguiente.
+[configuración automática](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start) siguiente.
 
    Este módulo requiere que Python 3 esté instalado, lo que incluye el sistema de gestión de paquetes PIP. Para ver instrucciones, consulte
 [Instalación de un módulo Python para configurar {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module).
@@ -100,7 +100,7 @@ Para ver rápidamente cómo {{site.data.keyword.aios_short}} supervisa un modelo
 
 Antes de empezar la visita guiada, debe tener configurados los recursos siguientes:
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
 La visita de configuración automatizada está diseñada para funcionar con la menor interacción posible con el usuario. Toma automáticamente las siguientes decisiones:
@@ -108,7 +108,7 @@ La visita de configuración automatizada está diseñada para funcionar con la m
 - Si tiene configuradas varias instancias de {{site.data.keyword.pm_full}}, el proceso de instalación se ejecuta, llama a la API para listar las instancias, y elige la instancia de {{site.data.keyword.pm_short}} que aparece primero en la lista resultante. 
 - Para crear una nueva versión Lite de {{site.data.keyword.pm_full}}, el instalador de {{site.data.keyword.aios_short}} utiliza el grupo de recursos predeterminado para su cuenta de {{site.data.keyword.Bluemix}}.
 
-### Suministre un servicio de {{site.data.keyword.aios_full}}
+### Suministre un servicio de {{site.data.keyword.aios_short}}
 {: #crt-wos-faststart}
 
 Si no lo ha hecho todavía, asegúrese de que suministre {{site.data.keyword.aios_full}}. 
@@ -119,24 +119,17 @@ Si no lo ha hecho todavía, asegúrese de que suministre {{site.data.keyword.aio
 
 1. Pulse **Catálogo** > **AI** > **{{site.data.keyword.aios_short}}**.
 2. Asigne un nombre a su servicio, elija un plan y pulse el botón **Crear**.
-3. Para empezar {{site.data.keyword.aios_short}}, pulse el botón **Cómo empezar** button.
+3. Para iniciar {{site.data.keyword.aios_short}}, pulse el botón **Iniciar aplicación**.
 
-## Trabajar con la demostración de la interfaz de usuario
+## Configuración automática
 {: #wos-work-demo}
 
 1.  Inicie sesión en la instancia de {{site.data.keyword.aios_short}} en {{site.data.keyword.Bluemix}}.
-1.  Para trabajar con el escenario de demo, pulse **Ejecutar demo**.
+1.  Para configurar automáticamente la instancia de {{site.data.keyword.aios_short}} utilizando datos de ejemplo, pulse **Configuración automática**.
 
-   ![Bienvenido a la demo](images/fastpath_demo_11.31.04.png)
+   ![Bienvenido a la demo](images/cloud-auto-setup.png)
 
-   Mientras se proporcionan los servicios de {{site.data.keyword.aios_short}}, puede revisar el escenario de demostración:
-
-   ![Vista previa de la demo](images/fastpath_demo_11.31.58.png)
-
-Cuando se haya completado el suministro, pulse el botón **Adelante** para realizar la visita guiada del panel de control de {{site.data.keyword.aios_short}} y continúe con [Visualización de los resultados en {{site.data.keyword.aios_short}}](#wos-open).
-
-   ![Demo Adelante](images/fastpath_demo_11.33.45.png)
-
+   Mientras se proporcionan los servicios de {{site.data.keyword.aios_short}}, puede revisar el escenario de demostración. Cuando se haya completado el suministro, pulse el botón **Iniciar visita guiada** del panel de control de {{site.data.keyword.aios_short}} y continúe con [Visualización de los resultados en {{site.data.keyword.aios_short}}](#wos-open).
 
 ## Visualización de los resultados en {{site.data.keyword.aios_short}}
 {: #wos-open}
@@ -159,22 +152,9 @@ La página Detalles muestra de un solo vistazo cualquier problema relacionado co
 {: #wos-monitoring}
 
 1.  En la página Detalles, pulse el mosaico `GermanCreditRiskModelICP` para ver los detalles sobre los datos supervisados.
-1.  Pulse y arrastre el marcador por el gráfico para ver un periodo de día y hora que muestre datos y a continuación pulse el enlace **Ver detalles**. Como alternativa, puede pulsar distintos periodos de tiempo en el gráfico para cambiar los datos que se visualizan.
+1.  Pulse y arrastre el marcador por el gráfico para ver un periodo de día y hora que muestre datos y a continuación pulse el enlace **Ver detalles**. Como alternativa, puede pulsar distintos periodos de tiempo en el gráfico para cambiar los datos que se visualizan. 
 
-     - Por ejemplo, la pantalla siguiente muestra datos correspondientes a una fecha y hora específicas. Las fechas y las horas varían, en función de cuándo se ejecuta el módulo.
-
-     - Para obtener información sobre cómo interpretar el gráfico de series de tiempo, consulte [Supervisión de la equidad, solicitudes promedio por minuto y exactitud](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart).
-
-   ![Demo Adelante](images/fastpath_demo_11.34.17.png)
-
-1.  Para ver detalles sobre la supervisión de datos de `SEXO`, asegúrese de que `SEXO` esté seleccionado en el menú desplegable.
-
-    - Observe que en la siguiente captura de pantalla existe un sesgo.
-    
-   ![Demo Adelante](images/fastpath_demo_11.34.27.png)
-
-    - Para obtener información sobre cómo interpretar el gráfico de los puntos de datos de una hora específica, consulte [Visualización de datos](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual).
-
+Para obtener información sobre cómo interpretar el gráfico de series de tiempo, consulte [Obtención de detalles](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
 ### Ver explicabilidad
 {: #wos-explain}
@@ -187,20 +167,17 @@ Se listan los ID de transacción de la última hora correspondientes a las trans
 
    ![Demo Adelante](images/fastpath_demo_11.35.12.png)
 
-Para obtener información sobre cómo buscar y explicar transacciones, consulte [Supervisión de la explicabilidad](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov).
+Para obtener información sobre cómo buscar y explicar transacciones, consulte [Supervisión de la explicabilidad](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
    ![Demo Adelante](images/fastpath_demo_11.35.50.png)
 
 ## Finalización de la visita guiada
 {: #wos-done-demo}
 
-1. Pulse el botón **Fin**.
+Una vez finalizada la visita guiada, puede añadir su propio despliegue de modelo al panel de control para continuar explorando el despliegue de la guía de aprendizaje. 
 
-   ![Demo Adelante](images/fastpath_demo_11.37.22.png)
-
-2. Pulse el botón **Adelante** para empezar a trabajar con {{site.data.keyword.aios_short}}.
-
-   ![Demo Adelante](images/fastpath_demo_11.33.45.png)
+- Para añadir su propio modelo al panel de control, pulse el botón **Añadir a panel de control**.
+- Para continuar explorando el modelo de la guía de aprendizaje, pulse en el mosaico de riesgo crediticio alemán.
 
 ## Pasos siguientes
 {: #gs-next}

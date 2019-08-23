@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Perdita logaritmica ![tag beta](images/beta.png)
+# Perdita logaritmica
 {: #quality_log_loss}
 
 La Perdita logaritmica dà la media delle probabilità della classe obiettivo dei logaritmi (confidenza). È nota anche come logaritmo della verosimiglianza prevista ed è una misurazione efficace delle prestazioni del modello.
@@ -48,6 +48,30 @@ La Perdita logaritmica dà la media delle probabilità della classe obiettivo de
 {: #quality_log_loss-display}
 
 ![viene visualizzata la perdita logaritmica](images/quality-log-loss.png)
+
+### Punteggio di correttezza
+{: #quality_log_loss-display-fairness-score}
+
+Per la metrica di perdita logaritmica, viene visualizzato il seguente punteggio di correttezza. 
+
+![viene visualizzata la percentuale del punteggio del richiamo.](images/wos-quality-logloss-score.png)
+
+### Pianifica
+{: #quality_log_loss-display-schedule}
+
+Il riquadro **Pianifica** mostra i tempi per **Ultima valutazione** e **Valutazione successiva**. Le metriche di qualità vengono valutate ogni ora. È possibile forzare la valutazione facendo clic su **Controlla qualità ora**. È anche possibile aggiungere il feedback facendo clic su **Aggiungi dati di feedback**.
+
+![viene visualizzato il riquadro Pianifica, che mostra l'ora dell'ultima valutazione e quella della successiva](images/wos-quality-schedule.png)
+
+
+### Suggerimento
+{: #quality_log_loss-display-recommendations}
+
+Per facilitare l'interpretazione del grafico, viene visualizzato il riquadro **Suggerimento**, le cui tendenze indicano il miglioramento o il peggioramento dell'efficacia del modello.
+
+![viene visualizzato il riquadro Suggerimento.](images/wos-quality-negative-recommendation.png)
+
+
 
 ## Calcolo matematico
 {: #quality_log_loss-math}

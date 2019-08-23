@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 平均二乗誤差 (MSE) ![ベータ・タグ](images/beta.png)
+# 平均二乗誤差
 {: #quality_squerror}
 
 平均二乗誤差 (MSE) は、モデル予測とターゲット値の差の二乗の平均です。 推定量の質を表す指標として使用できます。

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Richiamo ![tag beta](images/beta.png)
+# Richiamo
 {: #quality_recall}
 
 Il richiamo dà la proporzione di previsioni corrette nella classe dei positivi.
@@ -44,10 +44,35 @@ Il richiamo dà la proporzione di previsioni corrette nella classe dei positivi.
 - **Valori del grafico**: ultimo valore nel periodo di tempo
 - **Dettagli di metriche disponibili**: matrice di confusione
 
-## Interpretazione del pannello
+## Interpretazione del pannello delle metriche di richiamo
 {: #quality_recall-display}
 
 ![viene visualizzato il grafico del richiamo.](images/quality-recall.png)
+
+### Punteggio di correttezza
+{: #quality_recall-display-fairness-score}
+
+Per la metrica di richiamo, viene visualizzato il seguente punteggio di correttezza. 
+
+![viene visualizzata la percentuale del punteggio del richiamo.](images/wos-quality-recall-score.png)
+
+### Pianifica
+{: #quality_recall-display-schedule}
+
+Il riquadro **Pianifica** mostra i tempi per **Ultima valutazione** e **Valutazione successiva**. Le metriche di qualità vengono valutate ogni ora. È possibile forzare la valutazione facendo clic su **Controlla qualità ora**. È anche possibile aggiungere il feedback facendo clic su **Aggiungi dati di feedback**.
+
+![viene visualizzato il riquadro Pianifica, che mostra l'ora dell'ultima valutazione e quella della successiva](images/wos-quality-schedule.png)
+
+
+### Suggerimento
+{: #quality_recall-display-recommendations}
+
+Per facilitare l'interpretazione del grafico, viene visualizzato il riquadro **Suggerimento**, le cui tendenze indicano il miglioramento o il peggioramento dell'efficacia del modello.
+
+![viene visualizzato il riquadro Suggerimento.](images/wos-quality-positive-recommendation.png)
+
+
+
 
 ## Calcolo matematico
 {: #quality_recall-math}

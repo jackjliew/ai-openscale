@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Area sotto la curva PR ![tag beta](images/beta.png)
+# Area sotto la curva PR
 {: #quality-area-pr}
 
 L'area sotto la curva PR (Precision Recall) dà l'area sotto la curva di precisione e richiamo, che può essere utile quando le classi sono particolarmente sbilanciate.
@@ -48,6 +48,30 @@ L'area sotto la curva PR (Precision Recall) dà l'area sotto la curva di precisi
 {: #quality-area-pr-display}
 
 ![viene visualizzata l'area sotto PR con metrica che tende al basso](images/quality-area-under-pr.png)
+
+### Punteggio di correttezza
+{: #quality-area-pr-display-fairness-score}
+
+Per la metrica Area sotto la curva PR, viene visualizzato il seguente punteggio di correttezza. 
+
+![viene visualizzata la percentuale del punteggio dell'Area sotto la curva PR.](images/wos-quality-area-pr-score.png)
+
+### Pianifica
+{: #quality-area-pr-display-schedule}
+
+Il riquadro **Pianifica** mostra i tempi per **Ultima valutazione** e **Valutazione successiva**. Le metriche di qualità vengono valutate ogni ora. È possibile forzare la valutazione facendo clic su **Controlla qualità ora**. È anche possibile aggiungere il feedback facendo clic su **Aggiungi dati di feedback**.
+
+![viene visualizzato il riquadro Pianifica, che mostra l'ora dell'ultima valutazione e quella della successiva](images/wos-quality-schedule.png)
+
+
+### Suggerimento
+{: #quality-area-pr-display-recommendations}
+
+Per facilitare l'interpretazione del grafico, viene visualizzato il riquadro **Suggerimento**, le cui tendenze indicano il miglioramento o il peggioramento dell'efficacia del modello.
+
+![viene visualizzato il riquadro Suggerimento.](images/wos-quality-positive-recommendation.png)
+
+
 
 
 ## Calcolo matematico

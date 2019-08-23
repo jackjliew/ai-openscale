@@ -30,13 +30,15 @@ subcollection: ai-openscale
 
 모니터를 구성하기 위해 {{site.data.keyword.aios_short}}은 모니터할 데이터의 로깅을 시작할 수 있도록 스코어링 페이로드의 전송을 요구합니다.
 
-- {{site.data.keyword.pm_full}}에 배치된 모델의 경우 페이로드 로깅 API를 사용하거나 {{site.data.keyword.pm_full}}에서 배치된 모델을 배치하는 옵션이 있습니다. {{site.data.keyword.pm_short}}에서 스코어링되는 배치된 모델의 경우 {{site.data.keyword.aios_short}}에 자동으로 전송됩니다.  
-- Microsoft Azure, Amazon SageMaker 등의 기타 기계 학습 엔진 또는 사용자 정의 기계 학습 엔진의 경우에는 페이로드 로깅 API를 사용하여 스코어링 페이로드를 전송해야 합니다. 자세한 정보는 [비{{site.data.keyword.pm_full}} 서비스 인스턴스의 페이로드 로깅](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)을 참조하십시오.
+- {{site.data.keyword.pm_full}}에 배치된 모델의 경우 이는 {{site.data.keyword.aios_short}}에 자동으로 전송됩니다. 자동 전송된 스코어링 요청의 경우 이 태스크를 완료할 필요가 없으며 코드 스니펫이 나타나지 않습니다. 
+- Microsoft Azure, Amazon SageMaker 등의 기타 기계 학습 엔진 또는 사용자 정의 기계 학습 엔진의 경우에는 페이로드 로깅 API를 사용하여 스코어링 페이로드를 전송해야 합니다. 이를 위해서는 페이로드 로깅 페이지에서 검색이 가능한 cURL 또는 Python 형식의 코드 스니펫을 사용해야 합니다. 자세한 정보는 [비{{site.data.keyword.pm_full}} 서비스 인스턴스의 페이로드 로깅](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)을 참조하십시오.
 
 ## 페이로드 로깅 단계
 {: #cdb-score-apisteps}
 
-1. 배치를 선택한 후 **페이로드 로깅** 페이지로 이동하십시오. 
+1. {{site.data.keyword.aios_short}} 대시보드에서 배치 타일을 클릭하십시오. 
+2. **모니터 구성**을 클릭하십시오.  
+3. 탐색 분할창에서 **페이로드 로깅**을 클릭하십시오.
 2. `cURL` 또는 `Python` 탭을 클릭하여 `cURL` 또는 `Python` 코드를 사용할지 여부를 선택하십시오.
 3. **클립보드에 복사**를 클릭한 후 붙여넣어 모델 배치 요청 및 응답 데이터를 로깅하십시오. 자세한 정보는 [비{{site.data.keyword.pm_full}} 서비스 인스턴스의 페이로드 로깅](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)을 참조하십시오.
 
@@ -54,12 +56,12 @@ subcollection: ai-openscale
 
 - 표 형식, 텍스트, 이미지 모델의 경우 다음과 같은 기준선 요청이 데이터 점을 생성합니다.
 
-   - 1개의 스코어링 요청이 5000개의 데이터 점을 생성합니다.
+   -ai-open-scale-ibm-aios-scheduling  | 1 | 스케줄링 서비스 스코어링 요청으로 500개의 데이터 점이 생성됩니다. 
 
 - 표 형식 분류 모델의 경우에만 대조 설명을 위해 추가 스코어링 요청이 작성됩니다. 선행 기준선 요청에 다음 요청이 추가됩니다.
 
    - 100개의 스코어링 요청은 요청당 51개의 추가 데이터 점을 생성합니다.
-   - 101개의 스코어링 요청은 요청당 1개의 추가 데이터 점을 생성합니다.
+   - 101개의 스코어링 요청으로 요청당 ai-open-scale-ibm-aios-scheduling | 1 | 스케줄링 서비스 추가 데이터 점이 생성됩니다. 
 
 
 ## 다음 단계

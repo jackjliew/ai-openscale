@@ -31,16 +31,16 @@ subcollection: ai-openscale
 为使用 {{site.data.keyword.aios_short}} 跟踪的每个部署设置和启用监视器。
 {: shortdesc}
 
+例如，如果针对交互式教程使用的是**德国信用风险模型**，请选择模型部署，设置有效内容日志记录的数据类型，并确认作为模型详细信息部分的一部分提供的设置。
+
 ## 选择部署
 {: #mo-select-deploy}
 
-1. 从**洞察**选项卡中，单击**添加部署**按钮。 
+1. 从**洞察**选项卡中，单击**添加到仪表板**按钮。 
 
-   ![选择部署页面](images/config-select-deploy.png)
+   这将显示可用模型部署的列表。如果您看不到任何模型部署，那么必须使用机器学习提供程序来部署模型。对于教程，请选择**德国信用风险模型**。
 
-   这将显示可用模型部署的列表。
-
-   ![准备监视](images/wos-select-model-deployment.png)
+   ![显示“选择模型部署”屏幕。它包含对应于机器学习提供程序和部署的选择。](images/wos-select-model-deployment.png)
 
 2. 单击模型部署，然后单击**配置**。
 
@@ -55,19 +55,20 @@ subcollection: ai-openscale
 {: #mo-work-data}
 
 您必须提供有关模型和训练数据的信息。有关训练数据的更多信息，请参阅 [ 为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+    对于教程，请在**数据类型**字段中，选择**数字/分类**；对于**算法类型**，请选择**二元分类**。
 
-![准备解释](images/config-what-monitor.png)
+![显示“指定输入类型”屏幕，其中包含对应于数据类型和算法类型的选择](images/config-what-monitor.png)
 
-- 如果使用与 {{site.data.keyword.aios_short}} 实例位于同一区域中的 {{site.data.keyword.pm_full}} 实例，那么即使必须选择数据类型和算法类型，也会自动为您配置某些有效内容日志记录信息。
+- 如果使用与 {{site.data.keyword.aios_short}} 实例位于同一区域中的 {{site.data.keyword.pm_full}} 实例，那么即使必须选择数据类型和算法类型，也会自动为您配置某些有效内容日志记录信息。 
 - 否则，必须从**有效内容日志记录**选项卡和窗口中输入有关数据和算法类型以及有效内容日志记录的信息。 
 
-   根据您的选择，存在特定需求。有关更多信息，请参阅[数字/分类数据](https://test.cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan)。
+   根据您的选择，存在特定需求。有关更多信息，请参阅[数字/分类数据](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan)。
 
    您需要复制要运行的其中一个代码片段，然后才能配置监视器。运行 cURL 命令（在客户机应用程序中）或 Python 命令（在数据科学笔记本中）。这提供了一种在有效内容数据中记录模型部署请求和写入响应数据的方法。
    
 在通过使用本地 {{site.data.keyword.pm_full}} 方法或通过使用 API 发送有效内容日志记录详细信息后，必须返回到**有效内容日志记录**屏幕并单击**我已完成**。
 
-![有效内容日志记录屏幕是图像](images/payload-logging-gosales001.png)
+![显示有效内容日志记录屏幕图像](images/payload-logging-gosales001.png)
 
 如果将评分正确发送到 {{site.data.keyword.aios_short}}，那么在单击**我已完成**按钮后会显示以下屏幕。该按钮已隐藏，您会看到消息**已成功激活日志记录**。
 
@@ -77,19 +78,19 @@ subcollection: ai-openscale
 ### 提供模型详细信息
 {: #mo-work-model-dets}
 
-提供有关模型的信息，以便 {{site.data.keyword.aios_short}} 可以访问数据库并了解模型的设置方式。
+提供有关模型的信息，以便 {{site.data.keyword.aios_short}} 可以访问数据库并了解模型的设置方式。例如，如果针对交互式教程使用的是**德国信用风险模型**，那么将自动为您完成以下许多字段。
 
 具体而言，要配置监视器，必须执行以下任务：
 
 1. 指定训练数据的位置。通过输入位置、主机名或 IP 地址、数据库名称以及认证信息来完成此操作。
 2. 在数据库中，必须通过选择模式和表来选择训练表。
-3. 从训练表中选择标签列。
+3. 从训练表中选择标签列，例如，对于教程，请单击**风险**磁贴。
 4. 选择用于训练 AI 部署的特征。
 5. 选择文本特征和分类特征。
-6. 选择部署预测列。
+6. 选择部署预测列，例如，对于教程，请单击 **predictedLabel** 磁贴。
 7. 最后，可以在保存之前复审模型详细信息。
 
-以下部分提供根据模型类型（[数字/分类数据](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan)或[图像和非结构化文本](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datai)）所遇到的某些具体信息。
+以下部分提供根据模型类型（[数字/分类数据](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan)或[图像和非结构化文本](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datai)）所遇到的某些具体信息。
 
 
 ### 数字/分类数据
@@ -162,4 +163,4 @@ subcollection: ai-openscale
 ### 后续步骤
 {: #mo-next}
 
-要继续配置监视器，请单击**准确性**选项卡，然后单击**开始**。有关更多信息，请参阅[配置准确性或质量监视器](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)。
+要继续配置监视器，请单击**质量**选项卡，然后单击**开始**。有关更多信息，请参阅[配置质量监视器](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)。

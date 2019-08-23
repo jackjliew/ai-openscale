@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # Google Cloud ML Engine 框架
 {: #frmwrks-google}
 
-{{site.data.keyword.aios_full}} 计划在未来发行版中支持 Google Cloud Machine Learning Engine 框架。
+您可以使用 Google Cloud ML Engine 在 {{site.data.keyword.aios_full}} 中执行有效内容日志记录、反馈日志记录以及度量性能准确性、运行时偏差检测、可解释性和自动除偏功能。
+
+{{site.data.keyword.aios_full}} 完全支持以下 Google Cloud Machine Learning Engine 框架：
 {: shortdesc}
 
 表 1. 框架支持详细信息

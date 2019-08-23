@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Gewichtete Trefferquote ![Beta-Tag](images/beta.png)
+# Gewichtete Trefferquote
 {: #quality_weighted_recall}
 
 Die gewichtete Trefferquote gibt den gewichteten Mittelwert der Trefferquote mit Gewichtungen gleich der Klassenwahrscheinlichkeit an.
@@ -55,7 +55,8 @@ Die gewichtete Trefferquote gibt den gewichteten Mittelwert der Trefferquote mit
 Die gewichtete Trefferquote (wR) ist definiert als die Anzahl der wahr-positiven Ergebnisse (Tp) im Verhältnis zur Anzahl der wahr-positiven Ergebnisse zuzüglich der Anzahl der falsch-negativen Ergebnisse (Fn) mit gewichteten Daten. 
 
 ```
-                                 Anzahl der wahr-positiven Ergebnisse
+            Anzahl der wahr-positiven Ergebnisse
 Trefferquote =  ______________________________________________________________________________
-                (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
+
+           (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
 ```

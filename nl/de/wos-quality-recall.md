@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Trefferquote ![Beta-Tag](images/beta.png)
+# Trefferquote
 {: #quality_recall}
 
 Die Trefferquote gibt den Anteil der richtigen Vorhersagen an den Vorhersagen der positiven Klasse an.
@@ -44,10 +44,35 @@ Die Trefferquote gibt den Anteil der richtigen Vorhersagen an den Vorhersagen de
 - **Diagrammwerte**: Letzter Wert im Zeitrahmen
 - **Verfügbare Metrikdetails**: Wahrheitsmatrix
 
-## Anzeige interpretieren
+## Anzeige der Trefferquoten-Metrik
 {: #quality_recall-display}
 
 ![Abbildung des Diagramms für Trefferquote](images/quality-recall.png)
+
+### Fairness-Score
+{: #quality_recall-display-fairness-score}
+
+Für die Trefferquoten-Metrik wird der folgende Fairness-Score angezeigt. 
+
+![Darstellung des Trefferquoten-Score-Prozentsatzes.](images/wos-quality-recall-score.png)
+
+### Zeitplan
+{: #quality_recall-display-schedule}
+
+Das Fenster **Zeitplan** zeigt die Uhrzeiten für **Letzte Bewertung** und **Nächste Bewertung** an. Qualitätsmetriken werden stündlich ausgewertet. Sie können die Bewertung erzwingen, indem Sie auf **Qualität jetzt überprüfen** klicken. Sie können auch eine Rückmeldung hinzufügen, indem Sie auf **Rückmeldedaten hinzufügen** klicken.
+
+![Darstellung des Zeitplan-Fensters mit Uhrzeiten für letzte und nächste Bewertung](images/wos-quality-schedule.png)
+
+
+### Empfehlung
+{: #quality_recall-display-recommendations}
+
+Zur Erleichterung der Diagramminterpretation wird im Teilfenster **Empfehlung** angezeigt, welche Trends auf eine Verbesserung oder Verschlechterung der Modelleffektivität hinweisen.
+
+![Darstellung des Empfehlungsfensters.](images/wos-quality-positive-recommendation.png)
+
+
+
 
 ## Berechnung
 {: #quality_recall-math}
@@ -55,7 +80,8 @@ Die Trefferquote gibt den Anteil der richtigen Vorhersagen an den Vorhersagen de
 Die Trefferquote (R) ist definiert als die Anzahl der wahr-positiven Ergebnisse (Tp) im Verhältnis zur Anzahl der wahr-positiven Ergebnisse zuzüglich der Anzahl der falsch-negativen Ergebnisse (Fn).
 
 ```
-                                 Anzahl der wahr-positiven Ergebnisse
+                       Anzahl der wahr-positiven Ergebnisse
 Trefferquote =  ______________________________________________________________________________
-                (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
+
+           (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
 ```

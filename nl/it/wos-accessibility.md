@@ -30,7 +30,7 @@ subcollection: ai-openscale
 IBM si impegna a garantire funzioni di accesso facilitato. Per avvantaggiare gli utenti con disabilità, nel contenuto e nella documentazione  {{site.data.keyword.aios_full}} sono incluse funzioni di accesso facilitato che seguono le linee guida di conformità. Tali funzioni sono presenti solo in parti dell'interfaccia utente di {{site.data.keyword.aios_short}}, ma non in tutta. Solo la documentazione è conforme, con un sottoinsieme di parti del prodotto completo.
 {: shortdesc}
 
-La documentazione di {{site.data.keyword.aios_short}} utilizza lo standard W3C più recente, <a href="https://www.w3.org/TR/wai-aria/" rel="noopener noreferrer" target="_blank">WAI-ARIA 1.0</a>, per  garantire la conformità con   <a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/" rel="noopener noreferrer" target="_blank">United States Access Board Section 508Standards</a> e <a href="https://www.w3.org/TR/WCAG20/" rel="noopener noreferrer" target="_blank"> Web Content Accessibility Guidelines (WCAG) 2.0</a>.
+La documentazione di {{site.data.keyword.aios_short}} utilizza lo standard W3C più recente, [WAI-ARIA 1.0](https://www.w3.org/TR/wai-aria/){: external}, per  garantire la conformità con   [United States Access Board Section 508Standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/){: external} e [ Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/){: external}.
 
 La documentazione online per {{site.data.keyword.aios_short}} è abilitata per l'accesso facilitato. Le funzioni di accesso facilitato assistono gli utenti disabili,
 ad esempio con limitazioni nei movimenti o nella vista, affinchè possano utilizzare correttamente
@@ -41,7 +41,7 @@ Con le funzioni di accesso facilitato di {{site.data.keyword.aios_short}}, è po
 - Utilizzare programmi di ingrandimento dello schermo per ingrandire le informazioni visualizzate sullo schermo.
 - Eseguire funzioni specifiche o equivalenti utilizzando soltanto la tastiera.
 
-Per maggiori informazioni sull'mpegno preso da IBM relativamente all'accesso facilitato, fare riferimento a [IBM Accessibility](http://www.ibm.com/able).
+Per maggiori informazioni sull'mpegno preso da IBM relativamente all'accesso facilitato, fare riferimento a [IBM Accessibility](http://www.ibm.com/able){: external}.
 
 ## Servizio TTY
 

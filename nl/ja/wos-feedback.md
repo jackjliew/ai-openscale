@@ -213,13 +213,20 @@ JSON 形式は、列名に対応するフィールドが含まれるオブジェ
 ### CSV ファイルのアップロード
 {: #fmt-upld-fdbk-data-upld-csv}
 
-CSV ファイルをアップロードするには、**「フィードバック・データの追加」**ボタンを使用します。
+CSV ファイルをアップロードするには、**「フィードバック・データの追加」**ボタンを使用します。チュートリアルの一部として以下の手順に従い、[`credit_feedback_data.csv`](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) ファイルを開いて内容をコピーします。
 
 1. {{site.data.keyword.aios_short}} ダッシュボードから、デプロイメント・タイルをクリックします。
-2. 「モデルのデプロイメント (model deployment)」ウィンドウで、**「構成」**![「デプロイメント構成 (deployment configuration)」ボタンが表示されています](images/configure-deployment-button.png)アイコンをクリックします。
-3. **「フィードバック・データの追加」**ボタンをクリックし、フィードバック・データが含まれている CSV ファイルを選択して、**「開く (Open)」**をクリックします。
+2. 「モデルのデプロイメント (model deployment)」ウィンドウで**「構成モニタリング (Configuration monitors)」** ![デプロイメント構成ボタンが表示されています](images/configure-deployment-button.png) をクリックします。
+3. ナビゲーション・ペインで**「品質」**をクリックします。
+4. **「フィードバック」**をクリックし、**「フィードバック・データの追加」**ボタンをクリックします。
+5. フィードバック・データが含まれている CSV ファイルを選択し、**「開く」**をクリックします。チュートリアルの場合、ダウンロードした `credit_feedback_data.csv` ファイルを選択します。
+
+    現在、ファイルのサイズは 8 MB に制限されています。
+    {: note}
+
 4. ドロップダウン・メニューから、フィールド区切り文字をクリックし、**「選択」**をクリックします。
 
+CSV ファイルを追加することで、モデルにフィードバック・データが追加されます。
 ### JSON ファイルのアップロード
 {: #fmt-upld-fdbk-data-upld-json}
 
@@ -230,3 +237,8 @@ CSV ファイルをアップロードするには、**「フィードバック�
     ![JSON テスト](images/json_test02.png)
 
 1.  今度は、ダウンロードした JSON ファイルを開き、その内容を**「テスト」**タブの JSON フィールドにコピーします。 **「Predict」**ボタンをクリックして、訓練ペイロードをモデルに送信し、評価を実行します。
+
+### 結果の表示
+{: #fmt-upld-fdbk-view-results-after}
+
+結果をすぐに確認するには、**「インサイト」**ページからデプロイメントを選択してから、**「品質」**指標のいずれかを選択し、**「今すぐ品質を評価」**をクリックします。

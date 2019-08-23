@@ -40,7 +40,7 @@ Um die Einrichtung und Konfiguration der erforderlichen {{site.data.keyword.clou
 ## Vorbereitende Schritte
 {: #as-prereqs}
 
-1. [Erstellen Sie einen {{site.data.keyword.cloud_notm}}-API-Schlüssel und laden Sie ihn herunter](/docs/iam?topic=iam-userapikey#create_user_key). Diesen API-Schlüssel müssen Sie in einem späteren Schritt eingeben.
+1. [Erstellen Sie einen {{site.data.keyword.cloud_notm}}-API-Schlüssel und laden Sie ihn herunter](/docs/iam?topic=iam-userapikey#create_user_key){: external}. Diesen API-Schlüssel müssen Sie in einem späteren Schritt eingeben.
 
 2. [Installieren Sie ein beliebiges Release von Python 3](https://www.python.org/downloads/){: external}.
 
@@ -85,9 +85,10 @@ Klicken Sie im [{{site.data.keyword.aios_short}}-Dashboard](https://aiopenscale.
 
 - Auf der Seite 'Insights' werden auf einen Blick alle eventuellen Probleme im Zusammenhang mit Fairness und Genauigkeit angezeigt, wie sie anhand der konfigurierten Schwellenwerte festgestellt wurden.
 
-- Jede Bereitstellung wird als Kachel angezeigt. Das Modul hat eine Bereitstellung namens `GermanCreditRiskModel` konfiguriert, wie auf dem folgenden Screenshot zu sehen ist:
+- Jede Bereitstellung wird als Kachel angezeigt. Wenn Sie einem der Lernprogramme folgen, sehen Sie in Ihrem Dashboard eine Bereitstellung mit dem Namen `GermanCreditRiskModel`. Das folgende Beispiel zeigt ein Dashboard mit vielen bereitgestellten und überwachten Modellen:
 
-  ![Überblick über 'Insights'](images/setup01-0206.png)
+    ![Insight-Dashboard mit vielen Bereitstellungen, jeweils als Kachel dargestellt](images/insight-dashboard.png)
+
 
 ### Überwachungsdaten anzeigen
 {: #as-monitoring}
@@ -97,17 +98,17 @@ Klicken Sie im [{{site.data.keyword.aios_short}}-Dashboard](https://aiopenscale.
 
    - Die folgende Anzeige enthält beispielsweise Daten für ein bestimmtes Datum und eine bestimmte Uhrzeit. Die Daten und Zeiten variieren je nachdem, wann Sie das Modul ausführen.
 
-   - Informationen zur Interpretation des Zeitreihendiagramms erhalten Sie in [Fairness, durchschnittliche Zahl der Anforderungen pro Minute und Genauigkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
+   - Informationen zur Interpretation des Zeitreihendiagramms erhalten Sie im Abschnitt [Insights abrufen](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
-    ![Daten überwachen](images/setup02-0206.png)
+    ![Darstellung von Überwachungsdaten](images/setup02-0206.png)
 
 3. Damit Details zur Überwachung von Daten zum `ALTER` angezeigt werden, stellen Sie sicher, dass im Dropdown-Menü die Option `ALTER` ausgewählt ist.
 
   - Beachten Sie, dass im folgenden Screenshot keine Verzerrung vorliegt.
 
-  - Informationen zur Interpretation des Diagramms der Datenpunkte zu einer bestimmten Uhrzeit enthält der Abschnitt [Fairness, durchschnittliche Zahl der Anforderungen pro Minute und Genauigkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp).
+  - Informationen zum Interpretieren des Diagramms der Datenpunkte zu einer bestimmten Stunde finden Sie unter [Visualisierung von Daten für eine bestimmte Stunde anzeigen](/docs/services/ai-openscale?topic=ai-openscale-it-vdet).
 
-    ![Details anzeigen](images/setup03-0206.png)
+    ![Darstellung von 'Details anzeigen'](images/setup03-0206.png)
 
 ### Erklärbarkeit anzeigen
 {: #as-explain}
@@ -125,5 +126,5 @@ Informationen dazu, wie Sie Transaktionen suchen und erläutern, finden Sie in [
 
 - Wenn Sie mehr über Verzerrungen erfahren möchten, können Sie in [Fairness](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor) nachlesen.
 - Informationen dazu, wie gut Ihr Modell Ergebnisse vorhersagt, finden Sie in [Genauigkeit](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).
-- Informationen zur Interpretation von Diagrammen und Daten enthält [Fairness, durchschnittliche Zahl der Anforderungen pro Minute und Genauigkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
+- Informationen zur Interpretation von Diagrammen und Daten enthält [Insights abrufen](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 - Um zu erfahren, wie zugrunde liegende Faktoren die Ergebnisse beeinflussen, lesen Sie [Erklärbarkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).

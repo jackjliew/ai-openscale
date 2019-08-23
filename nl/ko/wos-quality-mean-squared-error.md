@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 평균 제곱 오차 ![베타 태그](images/beta.png)
+# 평균 제곱 오차
 {: #quality_squerror}
 
 평균 제곱 오차는 모델 예측과 목표값 간 제곱 오차의 평균을 제공합니다. 추정기의 품질 척도로 사용할 수 있습니다.

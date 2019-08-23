@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 可解釋變異比例 ![測試版標記](images/beta.png)
+# 可解釋變異比例
 {: #quality_var}
 
 「可解釋變異比例」提供可解釋變異與目標變異的比例。可解釋變異是指目標變異與預測錯誤變異之間的差異。

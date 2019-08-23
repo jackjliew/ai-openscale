@@ -30,7 +30,7 @@ subcollection: ai-openscale
 IBM setzt sich für Barrierefreiheit ein. Zugunsten von Benutzern mit Behinderungen wurde der Inhalt von {{site.data.keyword.aios_full}} und die zugehörige Dokumentation mit Funktionen zur barrierefreien Bedienung ausgestattet, die den Richtlinien zur Einhaltung der entsprechenden Vorschriften entsprechen. Die Benutzerschnittstelle von {{site.data.keyword.aios_short}} ist in Teilen für die barrierefreie Bedienung geeignet, nicht aber in ihrer Gesamtheit. Nur die Dokumentation ist konform wie auch eine Untergruppe der Komponenten des Gesamtprodukts.
 {: shortdesc}
 
-Die Dokumentation zu {{site.data.keyword.aios_short}} verwendet den neuesten W3C-Standard <a href="https://www.w3.org/TR/wai-aria/" rel="noopener noreferrer" target="_blank">WAI-ARIA 1.0</a>, um die Einhaltung der Vorgaben in den <a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/" rel="noopener noreferrer" target="_blank">United States Access Board Section 508 Standards</a> und der Richtlinien <a href="https://www.w3.org/TR/WCAG20/" rel="noopener noreferrer" target="_blank">Web Content Accessibility Guidelines (WCAG) 2.0</a> sicherzustellen.
+Die {{site.data.keyword.aios_short}}-Dokumentation verwendet den neuesten W3C-Standard, [WAI-ARIA 1.0](https://www.w3.org/TR/wai-aria/){: external}, um die Einhaltung der Vorgaben in den [United States Access Board Section 508 Standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/){: external} und den Richtlinien [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/){: external} sicherzustellen.
 
 Die Online-Produktdokumentation für {{site.data.keyword.aios_short}} ist auf barrierefreie Bedienung ausgerichtet. Funktionen zur barrierefreien Bedienung helfen Benutzern mit Behinderungen wie zum Beispiel mit eingeschränkter Bewegungsfähigkeit oder mit einer Sehbehinderung bei der erfolgreichen Nutzung von IT-Produkten. Die Dokumentation steht in HTML zur Verfügung, sodass der Zugriff auf sie unter Verwendung von Technologie für behindertengerechte Bedienung einfach möglich ist.
 Die Funktionen von {{site.data.keyword.aios_short}} zur behindertengerechten Bedienung ermöglichen die Ausführung der folgenden Tasks:
@@ -39,7 +39,7 @@ Die Funktionen von {{site.data.keyword.aios_short}} zur behindertengerechten Bed
 - Verwendung von Einrichtungen zur Vergrößerung der Anzeige zur vergrößerten Darstellung des Bildschirminhalts.
 - Bedienung bestimmter oder funktional entsprechender Funktionen unter ausschließlicher Verwendung der Tastatur.
 
-Weitere Informationen zu den Bestrebungen seitens IBM in Bezug auf die behindertengerechte Bedienung finden Sie auf der Seite [IBM Accessibility](http://www.ibm.com/able).
+Weitere Informationen zu den Bestrebungen seitens IBM in Bezug auf die behindertengerechte Bedienung finden Sie auf der Seite [IBM Accessibility](http://www.ibm.com/able){: external}.
 
 ## TTY-Service
 

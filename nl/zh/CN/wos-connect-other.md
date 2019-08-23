@@ -36,15 +36,20 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}} 连接到服务实例中的 AI 模型和部署。您可以连接定制服务
 
-1. 从**配置**选项卡中，单击**机器学习提供程序**。
+1. 从**配置**选项卡中，单击**机器学习提供程序**。根据您的环境，您可能看不到以下所有提供程序：
 
    ![显示“选择机器学习服务提供程序”屏幕，其中包含受支持的机器学习引擎的磁贴](images/wos-machine-learning-providers-selection.png)
 
 2. 选择**定制环境**磁贴。
 
-   ![选择定制](images/ml-custom-provider.png)
+   ![显示定制机器学习提供程序配置屏幕，其中包含表示凭证和实例名称以及描述的字段](images/ml-custom-provider.png)
 
-3. 输入定制机器学习提供程序的名称和描述，然后单击**下一步**。 
+1.  输入并保存凭证：
+
+    - 用户名：您的定制机器学习提供程序用户名。
+    - 密码：您的定制机器学习提供程序密码。
+    - 服务提供程序实例名称：分配给此服务提供程序的特定名称。
+    - 描述：（可选）此服务提供程序实例的简明语言描述。如果您具有生产和测试环境，那么这将是包含该信息的理想位置。
 
 4. 选择[通过请求列表](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list)还是[通过输入个别评分端点](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints)来连接到部署。
 
@@ -59,7 +64,7 @@ subcollection: ai-openscale
 
    ![输入服务凭证](images/connect-custom-cred.png)
 
-2. 保存机器学习设置后，返回到**仪表板**，单击**洞察**选项卡，然后单击**添加部署**按钮。
+2. 保存机器学习设置后，返回到**仪表板**，单击**洞察**选项卡，然后单击**添加到仪表板**按钮。
 
 3. 从列表中选择部署，然后单击**配置**。
 
@@ -70,7 +75,7 @@ subcollection: ai-openscale
 
 1. 如果选择了**输入个别评分端点**磁贴，请输入 API 端点的凭证，然后单击**保存**。
 
-2. 保存机器学习设置后，返回到**仪表板**，单击**洞察**选项卡，然后单击**添加部署**按钮。
+2. 保存机器学习设置后，返回到**仪表板**，单击**洞察**选项卡，然后单击**添加到仪表板**按钮。
 
 3. 单击**添加端点**按钮。
 

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# ROC 曲線下面積 ![ベータ・タグ](images/beta.png)
+# ROC 曲線下面積
 {: #quality_roc}
 
 受信者操作特性曲線下面積は、再現率と偽陽性率を示す曲線の下の領域です。 フォールアウト率に対する感度を計算します。

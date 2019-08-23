@@ -74,17 +74,17 @@ subcollection: ai-openscale
 ### 드리프트 구성 오류가 드리프트 모니터 구성을 방해함
 {: #wos-common-issues-mismatchdatatype}
 
-모델 구성 화면의 유연성으로 인해 나중에 모니터(예: 드리프트 발견 모니터) 구성을 원할 때 문제점이 발생할 수도 있습니다. 데이터 유형을 선택할 수 있으므로 모델의 원본을 반영하는 항목을 선택해야 합니다. 예측 열 유형을 제대로 선택하지 않으면 다음과 같은 오류가 발생할 수 있습니다. 
+모델 구성 화면의 유연성으로 인해 나중에 모니터(예: 드리프트 발견 모니터) 구성을 원할 때 문제점이 발생할 수도 있습니다. 데이터 유형을 선택할 수 있으므로 모델의 원본을 반영하는 항목을 선택해야 합니다. 예측 열 유형을 제대로 선택하지 않으면 다음과 같은 오류가 발생할 수 있습니다.
 
 ```
 "error": AIQDS2003E",
 "message": "The model predictions '[0. 1.]' are different from class names in training data '['No' 'Yes']' for the subscription <<number>> in datamart <<datamart ID>> and service binding <<binding ID>>.
 ```
 
-다음과 같은 경우가 가장 가능성이 높은 원인입니다. 
+다음과 같은 경우가 가장 가능성이 높은 원인입니다.
 
-- `class` 레이블이 문자열 유형이고 `modeling_role` **예측**이 **예측** 열에 double 유형으로 지정됩니다. 왜냐하면 이것이 출력 데이터 스키마를 정의하는 방식이기 때문입니다. 
-- UI에서 double 유형의 **예측** 열을 선택했으며 이것이 제한되지 않습니다. 
+- `class` 레이블이 문자열 유형이고 `modeling_role` **예측**이 **예측** 열에 double 유형으로 지정됩니다. 왜냐하면 이것이 출력 데이터 스키마를 정의하는 방식이기 때문입니다.
+- UI에서 double 유형의 **예측** 열을 선택했으며 이것이 제한되지 않습니다.
 
 
 ### 페이로드 형식
@@ -254,9 +254,9 @@ subcollection: ai-openscale
 ### Microsoft Azure 기계 학습 서비스
 {: #icp4d-azure-service-status403}
 
-{{site.data.keyword.wos4d_full}} 실행 시 {{site.data.keyword.aios_short}}이 배치 스코어링 엔드포인트를 호출해야 할 때 Azure 기계 학습 서비스와 통신할 수 없는 문제가 발생할 수 있습니다. 엔터프라이즈 보안 정책을 적용하는 보안 도구(예: Symantec Blue Coat)가 이러한 액세스를 방해할 수 있습니다. 
+{{site.data.keyword.wos4d_full}} 실행 시 {{site.data.keyword.aios_short}}이 배치 스코어링 엔드포인트를 호출해야 할 때 Azure 기계 학습 서비스와 통신할 수 없는 문제가 발생할 수 있습니다. 엔터프라이즈 보안 정책을 적용하는 보안 도구(예: Symantec Blue Coat)가 이러한 액세스를 방해할 수 있습니다.
 
-Azure 기계 학습 서비스에 대한 스코어링에 도달할 수 없음을 나타내는 오류가 발생하는 경우(예: HTTP 상태 코드 403 수신) 엔터프라이즈 보안 정책을 확인하여 {{site.data.keyword.aios_short}}이 스코어링 엔드포인트에 제대로 액세스할 수 있도록 스코어링 URL이 사용된 도구와 함께 필요한 대로 제대로 다시 분류되어 있는지 확인하십시오. 
+Azure 기계 학습 서비스에 대한 스코어링에 도달할 수 없음을 나타내는 오류가 발생하는 경우(예: HTTP 상태 코드 403 수신) 엔터프라이즈 보안 정책을 확인하여 {{site.data.keyword.aios_short}}이 스코어링 엔드포인트에 제대로 액세스할 수 있도록 스코어링 URL이 사용된 도구와 함께 필요한 대로 제대로 다시 분류되어 있는지 확인하십시오.
 
 <p>&nbsp;</p>
 

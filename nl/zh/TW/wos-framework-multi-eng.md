@@ -48,6 +48,12 @@ subcollection: ai-openscale
 
 儲存配置之後，您可以選擇移至儀表板、選擇部署，或是配置監視器。
 
+## 編輯機器學習提供者
+{: #fmrk-workaround-editingproviders-dashboard}
+
+您是否需要編輯機器學習提供者？請按一下圖磚功能表 ![「圖磚功能表」圖示](images/v-three-dots.png) 圖示，然後按一下**檢視及編輯明細**。
+
+   ![會顯示機器學習提供者視圖和編輯選項](images/wos-machine-learning-providers-edit.png)
 
 ## 使用 Python SDK 連結方法來新增機器學習提供者
 {: #fmrk-workaround-multmleng-binding}

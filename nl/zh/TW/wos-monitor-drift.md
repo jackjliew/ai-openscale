@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 配置漂移偵測監視器
+# 配置漂移偵測監視器 ![測試版標記](images/beta.png)
 {: #behavior-drift-config}
 
 您必須先配置 {{site.data.keyword.aios_full}} 漂移監視器，它才會開始分析您的模型。您有兩個選項，看是訓練模型或者使用記事本。
@@ -40,7 +40,7 @@ subcollection: ai-openscale
 
 1. 從**漂移**標籤，在**何謂漂移？**頁面中，按一下**開始**，啟動配置處理程序。
 
-   ![「何謂漂移？」頁面](images/drift-config-1.png)
+   ![「何謂漂移？」頁面](images/wos-drift-config-1.png)
 
 2. 按一下**在 Watson OpenScale 中訓練**圖磚。
 
@@ -69,15 +69,15 @@ subcollection: ai-openscale
 
 1. 從**漂移**標籤，在**何謂漂移？**頁面中，按一下**開始**，啟動配置處理程序。
 
-   ![「何謂漂移？」頁面](images/drift-config-1.png)
+   ![「何謂漂移？」頁面](images/wos-drift-config-1.png)
 
 2. 按一下**在記事本中訓練**圖磚。
 
-   ![「何謂漂移？」頁面](images/drift-config-2.png)
+   ![「漂移配置」頁面，其中含有一個線上選項和記事本選項](images/drift-config-2.png)
 
 3. 將壓縮後的模型檔拖曳至目標區域，或是瀏覽並選取它，並按**下一步**。
 
-   ![「何謂漂移？」頁面](images/drift-config-2b.png)
+   ![「何謂漂移？」頁面](images/wos-drift-config-2b.png)
    
 3. 上傳漂移偵測模型，並按**下一步**。
 
@@ -96,4 +96,4 @@ subcollection: ai-openscale
 ## 後續步驟
 {: #behavior-drift-config-next-steps}
 
-- 閱讀[利用 IBM Watson OpenScale 瞭解模型漂移](https://medium.com/@manish.bhide/4c5401aa8da4)，以增加您的漂移 IQ
+- 如需解讀漂移的相關資訊，請參閱[漂移幅度](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)

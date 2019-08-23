@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Precisione ![tag beta](images/beta.png)
+# Precisione
 {: #quality_precision}
 
 La precisione dà la proporzione di previsioni corrette nelle previsioni della classe dei positivi.

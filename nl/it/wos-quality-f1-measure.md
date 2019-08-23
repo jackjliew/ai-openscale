@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Misura F1 ![tag beta](images/beta.png)
+# Misura F1
 {: #quality_f1-measr}
 
 La misura F1 dà la media armonica di precisione e richiamo.

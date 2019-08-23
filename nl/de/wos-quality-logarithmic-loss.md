@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Logarithmischer Verlust ![Beta-Tag](images/beta.png)
+# Logarithmischer Verlust
 {: #quality_log_loss}
 
 Der logarithmische Verlust gibt den Mittelwert der Zielklassenwahrscheinlichkeit (Konfidenz) der Logarithmen an. Der Verlust wird auch als 'erwartete Log-Likelihood' bezeichnet und stellt eine nützliche Kennzahl für die Modellleistung dar.
@@ -47,7 +47,31 @@ Der logarithmische Verlust gibt den Mittelwert der Zielklassenwahrscheinlichkeit
 ## Anzeige interpretieren
 {: #quality_log_loss-display}
 
-![Abbildung zum logarithmischen Verlust](images/quality-log-loss.png)
+![Darstellung zum logarithmischen Verlust](images/quality-log-loss.png)
+
+### Fairness-Score
+{: #quality_log_loss-display-fairness-score}
+
+Für die Metrik für logarithmischen Verlust wird der folgende Fairness-Score angezeigt. 
+
+![Darstellung des Trefferquoten-Score-Prozentsatzes.](images/wos-quality-logloss-score.png)
+
+### Zeitplan
+{: #quality_log_loss-display-schedule}
+
+Das Fenster **Zeitplan** zeigt die Uhrzeiten für **Letzte Bewertung** und **Nächste Bewertung** an. Qualitätsmetriken werden stündlich ausgewertet. Sie können die Bewertung erzwingen, indem Sie auf **Qualität jetzt überprüfen** klicken. Sie können auch eine Rückmeldung hinzufügen, indem Sie auf **Rückmeldedaten hinzufügen** klicken.
+
+![Darstellung des Zeitplan-Fensters mit Uhrzeiten für letzte und nächste Bewertung](images/wos-quality-schedule.png)
+
+
+### Empfehlung
+{: #quality_log_loss-display-recommendations}
+
+Zur Erleichterung der Diagramminterpretation wird im Teilfenster **Empfehlung** angezeigt, welche Trends auf eine Verbesserung oder Verschlechterung der Modelleffektivität hinweisen.
+
+![Darstellung des Empfehlungsfensters.](images/wos-quality-negative-recommendation.png)
+
+
 
 ## Berechnung
 {: #quality_log_loss-math}

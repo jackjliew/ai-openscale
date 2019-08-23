@@ -25,10 +25,11 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 质量度量概述 ![beta 标记](images/beta.png)
+# 质量度量概述
 {: #anlz_metrics}
 
 使用质量监视来确定模型预测结果的精确程度。启用了质量监视时，缺省情况下，每小时生成一组度量。您也可以通过单击**立即检查质量**按钮或使用 Python 客户机，根据需要来生成这些度量。
+{: shortdesc}
 
 质量度量的计算是基于以下信息：
 
@@ -56,11 +57,21 @@ subcollection: ai-openscale
 
 - [ROC 下的面积](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_roc)
 - [PR 下的面积](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-area-pr)
+- [可解释方差的比例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_var)
+- [平均绝对误差](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_abserror)
+- [均方误差](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_squerror)
+- [R 平方](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_r_squared)
+- [均方根误差](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-supqualdets_squ_errors_mean)
 - [准确性](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-accuracy-opener)
+- [加权真正率 (wTPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-wtpr)
 - [真正率 (TPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_tpr)
+- [加权误报率 (wFPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wfpr_weighted)
 - [误报率 (FPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_fpr_false)
+- [加权查全率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_weighted_recall)
 - [查全率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_recall)
+- [加权查准率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wgth_prec)
 - [查准率](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_precision)
+- [加权 F1 度量](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wght_f1-measure)
 - [F1 度量](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_f1-measr)
 - [对数损失](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_log_loss)
 
@@ -75,3 +86,8 @@ subcollection: ai-openscale
 混淆矩阵可帮助您了解受监视部署响应对于哪些反馈数据来说正确，以及对于哪些反馈数据不正确。
 
 有关更多信息，请参阅[混淆矩阵](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx)。
+
+## 后续步骤
+
+- 在 {{site.data.keyword.aios_short}} 检测到质量问题（例如准确性阈值违例）之后，必须构建用于修正问题的新模型版本。使用反馈表中手动标注的数据，您必须重新训练模型以及原始训练数据。
+

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# F1- 値 ![ベータ・タグ](images/beta.png)
+# F1 値
 {: #quality_f1-measr}
 
 F1- 値は、適合率と再現率の調和平均を算出します。

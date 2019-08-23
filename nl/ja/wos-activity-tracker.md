@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Activity Tracker イベント
 {: #at-events}
 
-{{site.data.keyword.aios_short}} を {{site.data.keyword.cloud_notm}} アカウントでサービスとしてプロビジョンした場合、[{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov) で以下のイベントを表示できます。
+{{site.data.keyword.aios_short}} を {{site.data.keyword.cloud_notm}} アカウントでサービスとしてプロビジョンした場合、[{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov){: external} で以下のイベントを表示できます。
 {: shortdesc}
 
 ## パブリック API のイベント

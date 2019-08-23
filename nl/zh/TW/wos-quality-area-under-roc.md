@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# ROC 下方的區域 ![測試版標記](images/beta.png)
+# ROC 下方的區域
 {: #quality_roc}
 
 接收端操作特徵曲線下方的區域提供查全率和誤肯定率曲線下方的區域。它會針對錯檢率，計算靈敏度。

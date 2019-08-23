@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加權 F1 測量 ![測試版標記](images/beta.png)
+# 加權 F1 測量
 {: #quality_wght_f1-measure}
 
 「加權 F1 測量」提供 F1 測量的加權平均值，且其加權等於類別機率。

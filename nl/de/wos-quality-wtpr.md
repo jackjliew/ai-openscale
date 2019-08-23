@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Gewichtete Wahr-positiv-Rate (wTPR) ![Beta-Tag](images/beta.png)
+# Gewichtete Wahr-positiv-Rate (wTPR)
 {: #quality-wtpr}
 
 Die gewichtete Wahr-positiv-Rate (True Positive Rate, TPR) gibt den gewichteten Mittelwert der Klassen-TPR mit Gewichtungen gleich der Klassenwahrscheinlichkeit an.
@@ -55,8 +55,8 @@ Die gewichtete Wahr-positiv-Rate (True Positive Rate, TPR) gibt den gewichteten 
 Die Wahr-positiv-Rate wird anhand der folgenden Formel berechnet:
 
 ```
-                                              Anzahl der wahr-positiven Ergebnisse
+                  Anzahl der wahr-positiven Ergebnisse
 Wahr-positiv-Rate (TPR) =  _______________________________________________________________________________
 
-                           (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
+        (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-negativen Ergebnisse)
 ```

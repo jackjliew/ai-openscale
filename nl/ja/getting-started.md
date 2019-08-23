@@ -67,7 +67,7 @@ subcollection: ai-openscale
 
 設定と専門知識のレベルに応じて、いくつかのセットアップ・オプションがあります。
 
-- [以下の自動セットアップ](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)では、バックグラウンドでタスクを実行することによって、プロセスをガイドします。
+- [以下の自動セットアップ](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start)では、バックグラウンドでタスクを実行することによって、プロセスをガイドします。
 
    ツアーの使用は、そのツアーの次の部分まで見て、クリックして移動できることを意味します。
    
@@ -75,7 +75,7 @@ subcollection: ai-openscale
 
    インターフェースを使用して、サンプル・モデルと注入されたデータで共通のタスクを実行します。
    
-- [アドバンスト・チュートリアル](/docs/services/ai-openscale?topic=ai-openscale-crt-ov)により、より多くのテクニカル・ユーザーが、前提条件のサービスのプロビジョニングおよび構成を自動化する Python モジュールをインストールできます。 このアドバンスト・チュートリアルは、コーディング、Python、およびノートブックを理解しているデータ・サイエンティストまたはユーザーを対象としています。 これは、{{site.data.keyword.aios_short}} クライアントを使用して機能をプログラムで実行する方法の例です。 このチュートリアルで使用されるノートブックは、[自動セットアップ](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)を行った場合と同じ場所になります。
+- [アドバンスト・チュートリアル](/docs/services/ai-openscale?topic=ai-openscale-crt-ov)により、より多くのテクニカル・ユーザーが、前提条件のサービスのプロビジョニングおよび構成を自動化する Python モジュールをインストールできます。 このアドバンスト・チュートリアルは、コーディング、Python、およびノートブックを理解しているデータ・サイエンティストまたはユーザーを対象としています。 これは、{{site.data.keyword.aios_short}} クライアントを使用して機能をプログラムで実行する方法の例です。 このチュートリアルで使用されるノートブックは、[自動セットアップ](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start)を行った場合と同じ場所になります。
 
    このモジュールでは、Python 3 がインストールされている必要があります。これには、pip パッケージ管理システムが含まれています。 手順に関しては、[{{site.data.keyword.aios_short}} をセットアップするための Python モジュールのインストール](/docs/services/ai-openscale?topic=ai-openscale-as-module)を参照してください。
 
@@ -92,7 +92,7 @@ subcollection: ai-openscale
 
 ツアーを始める前に、以下のリソースをセットアップしておく必要があります。
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
 自動セットアップ・ツアーは、ユーザーとの対話が最小限になるように設計されています。 このツアーは、ユーザーの代わりに以下を自動で決定します。
@@ -100,7 +100,7 @@ subcollection: ai-openscale
 - {{site.data.keyword.pm_full}} インスタンスが複数セットアップされている場合、インストール・プロセスは、インスタンスをリストする API 呼び出しを実行し、その結果、表示されたリストの一番先頭に現れた {{site.data.keyword.pm_short}} インスタンスを選択します。 
 - {{site.data.keyword.pm_full}} のライト・バージョンを新しく作成するために、{{site.data.keyword.aios_short}} インストーラーは、{{site.data.keyword.Bluemix}} アカウントのデフォルトのリソース・グループを使用します。
 
-### {{site.data.keyword.aios_full}} サービスのプロビジョン
+### {{site.data.keyword.aios_short}} サービスのプロビジョン
 {: #crt-wos-faststart}
 
 まだ {{site.data.keyword.aios_full}} をプロビジョンしていない場合は、確実にプロビジョンしてください。 
@@ -111,7 +111,7 @@ subcollection: ai-openscale
 
 1. **「カタログ」**>**「AI」**>**「{{site.data.keyword.aios_short}}」**をクリックします。
 2. サービスに名前を付け、プランを選択し、**「作成」**ボタンをクリックします。
-3. {{site.data.keyword.aios_short}} を開始するには、**「開始」**ボタンをクリックします。
+3. {{site.data.keyword.aios_short}} を開始するには、**「アプリケーションの起動 (Launch Application)」**ボタンをクリックします。
 
 ## 自動セットアップ
 {: #wos-work-demo}
@@ -121,14 +121,7 @@ subcollection: ai-openscale
 
    ![デモの「ようこそ」](images/cloud-auto-setup.png)
 
-   {{site.data.keyword.aios_short}} サービスがプロビジョンされる過程で、以下のように、デモ・シナリオを確認できます。
-
-   ![デモのプレビュー](images/fastpath_demo_11.31.58.png)
-
-プロビジョニングが完了したら、**「始めましょう」**ボタンをクリックして、{{site.data.keyword.aios_short}} ダッシュボードのツアーを実行し、[{{site.data.keyword.aios_short}} における結果の表示](#wos-open)に進みます。
-
-   ![デモの「始めましょう」](images/fastpath_demo_11.33.45.png)
-
+   {{site.data.keyword.aios_short}} サービスがプロビジョンされる過程で、デモ・シナリオを確認できます。プロビジョニングが完了したら、**「ツアーの開始」**ボタンをクリックして {{site.data.keyword.aios_short}} ダッシュボードのツアーを実行し、[{{site.data.keyword.aios_short}} における結果の表示](#wos-open)に進みます。
 
 ## {{site.data.keyword.aios_short}} における結果の表示
 {: #wos-open}
@@ -150,22 +143,9 @@ subcollection: ai-openscale
 {: #wos-monitoring}
 
 1.  「インサイト」ページで、`GermanCreditRiskModelICP` タイルをクリックして、モニター対象データに関する詳細を表示します。
-1.  グラフでマーカーをクリックしてドラッグし、データが表示される日時の期間を表示して、**「詳細の表示」**リンクをクリックします。 あるいは、グラフで別の期間をクリックして、表示するデータを変更することもできます。
+1.  グラフでマーカーをクリックしてドラッグし、データが表示される日時の期間を表示して、**「詳細の表示」**リンクをクリックします。 あるいは、グラフで別の期間をクリックして、表示するデータを変更することもできます。 
 
-     - 例えば、以下の画面には、特定の日時のデータが表示されています。 モジュールの実行タイミングによって日時は異なります。
-
-     - 時系列グラフの解釈について詳しくは、[公平性、毎分平均リクエスト数、正解率のモニター](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart)を参照してください。
-
-   ![デモの「始めましょう」](images/fastpath_demo_11.34.17.png)
-
-1.  `SEX` データのモニタリングに関する詳細を確認するには、ドロップダウン・メニューで `SEX` が選択されていることを確認します。
-
-    - 以下の画面キャプチャーでは、バイアスが存在することに注目してください。
-    
-   ![デモの「始めましょう」](images/fastpath_demo_11.34.27.png)
-
-    - 特定時間のデータ・ポイントのグラフの解釈については、[データの視覚化](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual)を参照してください。
-
+時系列グラフの解釈について詳しくは、[インサイトの取得](/docs/services/ai-openscale?topic=ai-openscale-it-ov)を参照してください。
 
 ### 説明性の表示
 {: #wos-explain}
@@ -178,20 +158,17 @@ subcollection: ai-openscale
 
    ![デモの「始めましょう」](images/fastpath_demo_11.35.12.png)
 
-トランザクションの検索と説明については、[説明性のモニター](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov)を参照してください。
+トランザクションの検索と説明については、[説明性のモニター](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)を参照してください。
 
    ![デモの「始めましょう」](images/fastpath_demo_11.35.50.png)
 
 ## ツアーの終了
 {: #wos-done-demo}
 
-1. **「終了」**ボタンをクリックします。
+ツアーが完了したら、各自のモデル・デプロイメントをダッシュボードに追加するか、またはチュートリアル・デプロイメントを続行できます。 
 
-   ![デモの「始めましょう」](images/fastpath_demo_11.37.22.png)
-
-2. **「始めましょう」**ボタンをクリックして、{{site.data.keyword.aios_short}} の処理を開始します。
-
-   ![デモの「始めましょう」](images/fastpath_demo_11.33.45.png)
+- 各自のモデルをダッシュボードに追加するには、**「ダッシュボードに追加」**ボタンをクリックします。
+- 引き続きチュートリアル・モデルを試すには、「German Credit Risk」タイルをクリックします。
 
 ## 次のステップ
 {: #gs-next}

@@ -27,6 +27,8 @@ subcollection: ai-openscale
 # IBM SPSS C&DS 架構
 {: #frmwrks-spss}
 
+您可以使用 IBM SPSS C&DS，在 {{site.data.keyword.aios_full}} 中執行內容記載、回饋記載，以及測量效能精確度、執行時期偏誤偵測、可解釋性，以及自動除去偏誤功能。
+
 {{site.data.keyword.aios_full}} 打算完整支援下列的 IBM SPSS Collaboration and Deployment Services (C&DS) 架構：
 {: shortdesc}
 

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 對數損失 ![測試版標記](images/beta.png)
+# 對數損失
 {: #quality_log_loss}
 
 「對數損失」提供對數目標類別機率（信賴度）的平均值。亦稱為「期望對數似然」(Expected log-likelihood)，是一種有效測量模型效能的方式。
@@ -48,6 +48,30 @@ subcollection: ai-openscale
 {: #quality_log_loss-display}
 
 ![顯示「對數損失」](images/quality-log-loss.png)
+
+### 公平性評分
+{: #quality_log_loss-display-fairness-score}
+
+對於對數損失度量，會顯示下列的公平性評分。 
+
+![顯示「查全率」評分百分比。](images/wos-quality-logloss-score.png)
+
+### 排程
+{: #quality_log_loss-display-schedule}
+
+**排程**窗格會顯示**前次評估**和**下次評估**的時間。品質度量每小時會評估一次。您可以按一下**立即檢查品質**，以強制評估。您也可以按一下**新增回饋資料**，以新增回饋。
+
+![顯示排程窗格，其中顯示前次評估時間和下次評估時間](images/wos-quality-schedule.png)
+
+
+### 建議
+{: #quality_log_loss-display-recommendations}
+
+為了協助您解讀圖表，**建議**窗格會顯示哪些趨勢代表改進中或惡化中的模型成效。
+
+![顯示建議窗格。](images/wos-quality-negative-recommendation.png)
+
+
 
 ## 數學計算
 {: #quality_log_loss-math}

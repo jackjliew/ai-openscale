@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# PR 아래 영역 ![베타 태그](images/beta.png)
+# PR 아래 영역
 {: #quality-area-pr}
 
 PR(Precision Recall) 아래 영역은 정밀도 및 재현율 곡선 아래에 영역을 제공하며, 클래스가 특히 불균형할 때 유용할 수 있습니다.
@@ -48,6 +48,30 @@ PR(Precision Recall) 아래 영역은 정밀도 및 재현율 곡선 아래에 �
 {: #quality-area-pr-display}
 
 ![PR 아래 영역이 하향 메트릭 추세로 표시됩니다. ](images/quality-area-under-pr.png)
+
+### 공정성 스코어
+{: #quality-area-pr-display-fairness-score}
+
+PR 아래 영역 메트릭의 경우 다음 공정성 스코어가 표시됩니다.  
+
+![PR 아래 영역 스코어 백분율이 표시됩니다.](images/wos-quality-area-pr-score.png)
+
+### 스케줄
+{: #quality-area-pr-display-schedule}
+
+**스케줄** 분할창은 **마지막 평가** 및 **다음 평가** 시간을 표시합니다. 수량 메트릭은 매시간 평가됩니다. **지금 품질 확인**을 클릭하여 평가를 강제 실행할 수 있습니다. **피드백 데이터 추가**를 클릭하여 피드백을 추가할 수도 있습니다. 
+
+![마지막 평가 시간과 다음 평가 시간을 표시하는 스케줄 분할창이 표시됩니다.](images/wos-quality-schedule.png)
+
+
+### 권장사항
+{: #quality-area-pr-display-recommendations}
+
+차트 해석에 도움이 되도록, 모델 효과를 개선 또는 개악하는 트랜드를 표시하는 **권장사항** 분할창이 표시합니다. 
+
+![권장사항 분할창이 표시됩니다.](images/wos-quality-positive-recommendation.png)
+
+
 
 
 ## 계산법

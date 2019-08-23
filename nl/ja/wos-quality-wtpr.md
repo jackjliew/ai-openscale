@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加重真陽性率 (wTPR) ![ベータ・タグ](images/beta.png)
+# 加重真陽性率 (wTPR)
 {: #quality-wtpr}
 
 加重真陽性率は、クラス確率に相当する値で重みづけしたクラス TPR の平均です。

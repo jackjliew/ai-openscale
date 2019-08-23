@@ -38,7 +38,7 @@ Geben Sie eine Datenbank an, die von Ihrer {{site.data.keyword.aios_short}}-Inst
 
 1.  Wählen Sie eine Datenbank aus. Dabei stehen die folgenden beiden Optionen zur Auswahl: die kostenlose Datenbank oder eine vorhandene oder neue Datenbank.
 
-    ![Datenbank auswählen](images/gs-config-database.png)
+    ![Darstellung der Anzeige zur Datenbankauswahl mit den zwei Optionen zur Verwendung entweder des kostenlosen Lite-Plans oder einer vorhandenen Datenbank](images/gs-config-database.png)
 
     Wenn Sie über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto verfügen, können Sie einen Service vom Typ `Databases for PostgreSQL` oder einen `Db2 Warehouse`-Service einrichten, um die Vorteile der Integration mit Watson Studio und Services für kontinuierliches Lernen optimal zu nutzen. Wenn Sie sich gegen die Einrichtung eines gebührenpflichtigen Service entscheiden, können Sie zwar den kostenlosen internen PostgreSQL-Speicher mit {{site.data.keyword.aios_short}} verwenden, aber Sie können kein kontinuierliches Lernen für Ihr Modell konfigurieren.
     {: note}
@@ -54,7 +54,7 @@ Geben Sie eine Datenbank an, die von Ihrer {{site.data.keyword.aios_short}}-Inst
 
 Wenn Sie mit der Verwendung der freien Datenbank fortfahren möchten, klicken Sie auf **Datenbank des kostenlosen Lite-Plans verwenden** und klicken Sie dann auf **Speichern**.
 
-  ![Datenbank auswählen](images/gs-config-database2.png)
+  ![Die Popup-Nachricht zur Datenbankspeicherung mit ausgewählter Schaltfläche zum Auswählen des Providers wird dargestellt](images/gs-config-database2.png)
   
 Sie können für die kostenlose Datenbank ein Upgrade auf eine andere Datenbank durchführen. Es ist jedoch nicht möglich, eine Compose for Postgres-, Database for Postgres- oder Db2-Instanz für die kostenlose Datenbank zu konfigurieren. Es ist nicht möglich, nach dem Upgrade zur Verwendung der kostenlosen Datenbank zurückzukehren. Alle aktuellen Daten, wie z. B. die Konfiguration, die Scoring-Ergebnisse und die Erklärungen, können nicht wiederverwendet werden. Wenn Sie ein anderes Schema oder eine andere Datenbank auswählen, wird die {{site.data.keyword.aios_short}}-Umgebung vollständig zurückgesetzt.
 
@@ -70,7 +70,7 @@ Sie können für die kostenlose Datenbank ein Upgrade auf eine andere Datenbank 
     {{site.data.keyword.aios_short}} verwendet eine PostgreSQL- oder Db2-Datenbank zum Speichern modellbezogener Daten (Rückmeldedaten, Scoring-Nutzdaten) und berechneter Metriken. Lite-Pläne mit Db2 werden gegenwärtig nicht unterstützt. Weitere Informationen zu Trainingsdaten finden Sie in [Warum benötigt {{site.data.keyword.aios_short}} Zugriff auf meine Trainingsdaten?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
-    ![Datenbank auswählen](images/gs-config-database3.png)
+    ![Darstellung der Anzeige zur Datenbankauswahl, mit Feldern zur Eingabe von Datenbanktyp, Datenbanknamen und Schema.](images/gs-config-database3.png)
 
 1.  Sie können auch auf **Anderen Standort auswählen** klicken, um eine Speicherposition der Datenbank außerhalb Ihres {{site.data.keyword.Bluemix_notm}}-Kontos anzugeben.
 
@@ -112,4 +112,4 @@ Sie können für die kostenlose Datenbank ein Upgrade auf eine andere Datenbank 
 ## Weitere Schritte
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} ist jetzt so eingerichtet, dass Sie [Scoring-Nutzdaten senden](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score) und [Monitore für die Bereitstellungen konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-mo-config) können.
+{{site.data.keyword.aios_short}} ist jetzt so eingerichtet, dass Sie [Scoring-Nutzdaten senden](/docs/services/ai-openscale?topic=ai-openscale-cdb-score) und [Monitore für die Bereitstellungen konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-mo-config) können.

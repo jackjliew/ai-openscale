@@ -63,7 +63,6 @@ uid	                                   name	                      service_type	 
 ```
 {: codeblock}
     
-    
 ## 新增 Microsoft Azure ML Service 訂閱
 {: #cml-azsrvsub}
 

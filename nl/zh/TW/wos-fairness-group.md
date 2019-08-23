@@ -31,7 +31,6 @@ subcollection: ai-openscale
 群組度量的「公平性」會促使模型傾向交付有利輸出結果給一個群組，而高過另一個群組。群組可以是任何群組，例如：年齡、性別或人種。
 {: shortdesc}
 
-
 ## 「群組的公平性」摘要
 {: #quality_group-glance}
 
@@ -72,3 +71,24 @@ subcollection: ai-openscale
 {: #quality_group-zip}
 
 {{site.data.keyword.aios_short}} 建議在**郵遞區號**屬性內配置偏誤監視器，以便對個別的郵遞區號評分。
+
+## 解讀顯示畫面
+{: #quality_group-display}
+
+### 群組的公平性評分
+{: #quality_group-display-fairnessscore}
+
+
+
+### 受監視的群組
+{: #quality_group-display-monitoredgroups}
+
+
+
+### 排程
+{: #quality_group-display-schedule}
+
+**排程**窗格顯示 
+
+
+

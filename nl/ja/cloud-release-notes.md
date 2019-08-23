@@ -31,6 +31,15 @@ subcollection: ai-openscale
 このドキュメントでは、{{site.data.keyword.aios_full_notm}} の新しい項目について概説します。
 {: shortdesc}
 
+## 2019 年 7 月 9 日
+{: #rn-9jul2019}
+
+{{site.data.keyword.aios_short}} には、以下の新機能と変更があります。
+
+- __*オンライン・ヘルプの更新と拡張*__: {{site.data.keyword.aios_short}} オンライン・ヘルプが最近再編成され、目次ペインでトピックを見つけやすくなりました。また、多くの新しいトピックが作成され、拡張されました。
+
+   詳しくは、[インサイトの取得](/docs/services/ai-openscale?topic=ai-openscale-io-ov)と[ライト・プランから有料プランへの {{site.data.keyword.aios_short}} のアップグレード](/docs/services/ai-openscale?topic=ai-openscale-cf-upgrade)を参照してください。
+   
 ## 2019 年 7 月 2 日
 {: #rn-2jul2019}
 
@@ -42,23 +51,23 @@ subcollection: ai-openscale
 
    詳しくは、[ドリフトの検出](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)を参照してください。
 
-- __*Microsoft Azure ML Service のサポート*__: {{site.data.keyword.aios_short}} は Microsoft Azure ML Service をサポートするようになりました。これにより、Azure ML サービスの AI モデルと {{site.data.keyword.aios_short}} の公平性、正確性、および説明性を統合できるようになりました。
+- __*Microsoft Azure ML Service のサポート*__: {{site.data.keyword.aios_short}} は Microsoft Azure ML Service をサポートするようになりました。これにより、Azure ML サービスの AI モデルを {{site.data.keyword.aios_short}} の公平性、正確性、および説明性に統合できるようになりました。
 
-   詳しくは、[Microsoft Azure ML Service のフレームワーク](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-frmwrks-azure-service)を参照してください。
+   詳しくは、[Microsoft Azure ML Service のフレームワーク](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service)を参照してください。
 
-- __*改善されたワークフロー*__: {{site.data.keyword.aios_short}} は、クリック数を減らして説明性を向上させ、効率的に作業できるようにワークフローを改善することに注力してきました。ナビゲーション・パネルで現在いる場所を確認できるので、簡単に構成タスク間を行き来できるようになりました。
+- __*改善されたワークフロー*__: {{site.data.keyword.aios_short}} は、クリック数の低減と説明性の向上により効率的に作業できるようにワークフローを改善することに注力してきました。 ナビゲーション・パネルで現在いる場所を確認できるので、簡単に構成タスク間を行き来できるようになりました。
 
    詳しくは、[デプロイメントでのモニタリングのための準備](/docs/services/ai-openscale?topic=ai-openscale-mo-config)を参照してください。
 
-- __*複数の機械学習プロバイダー*__: 機械学習プロバイダーまたはエンジンを 1 つだけに制限すべき理由はありません。最新バージョンの {{site.data.keyword.aios_short}} では、複数のプロバイダーを追加できるので、各プロバイダーの独自の機能を利用したり既存のアプリの利用を継続したりできます。
+- __*複数の機械学習プロバイダー*__: 機械学習プロバイダーまたはエンジンを 1 つだけに制限すべき理由はありません。 最新バージョンの {{site.data.keyword.aios_short}} では、複数のプロバイダーを追加できるので、各プロバイダーの独自の機能を利用したり既存のアプリの利用を継続したりできます。
 
    詳しくは、[複数の機械学習エンジンのサポート](/docs/services/ai-openscale?topic=ai-openscale-fmrk-workaround-multmleng)を参照してください。
 
-- __*箱から出してすぐに使える指標の追加*__: このバージョンの {{site.data.keyword.aios_short}} では、公平性、モデル性能、動作、パフォーマンス、および分析に関する多くの新しい指標が追加されました。これまでより大きな「箱」が必要になりました。
+- __*すぐに使用可能な指標の追加*__: このバージョンの {{site.data.keyword.aios_short}} では、公平性、モデル性能、動作、パフォーマンス、および分析に関する多くの新しい指標が追加されました。 これまでより多くの指標がすぐに使用可能となっています。
 
    詳しくは、[モデル性能の指標の概要](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics)を参照してから、[公正性](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_fairness)、[パフォーマンス](/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)、[分析](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_payload)、および[動作](/docs/services/ai-openscale?topic=ai-openscale-behavior-ovr)をクリックして参照してください。
 
-- __*バイアスに関する作業の効率化*__: バイアス構成として公平性属性が推奨され、値が自動設定されるので、デプロイされたモデル内で、{{site.data.keyword.aios_short}} が公平性のしきい値違反を検出できる場所が簡単にわかります。推奨された特徴量を受け入れてモニターすることも、値を変更することもできます。
+- __*バイアスに関する作業の効率化*__: バイアス構成として公平性属性が推奨され、値が自動設定されるので、デプロイされたモデル内で、{{site.data.keyword.aios_short}} が公平性のしきい値違反の可能性を検出する場所が簡単にわかります。 推奨された特徴量を受け入れてモニターすることも、値を変更することもできます。
 
    詳しくは、[公平性指標の概要](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_fairness)を参照してください。
 
@@ -189,7 +198,7 @@ subcollection: ai-openscale
 
 - __*一般出荷版*__: {{site.data.keyword.aios_full_notm}} の一般出荷版 (GA) リリースは {{site.data.keyword.Bluemix}} Standard (有料) のプランです。
 
-- __*{{site.data.keyword.icp4dfull_notm}} V1.2*__: {{site.data.keyword.wos4d_full}} V1.2 を使用している場合は、[インストール・チェックリスト](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#install)の文書 (インストール手順を含む) を参照してください。
+- __*{{site.data.keyword.icp4dfull_notm}} V1.2*__: {{site.data.keyword.wos4d_full}} V1.2 を使用している場合は、[インストール・チェックリスト](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#install)の文書 (インストール手順を含む) を参照してください。
 
 - __*モデル・タイプのサポート*__: {{site.data.keyword.aios_short}} では、{{site.data.keyword.pm_full}} の AI モデル・デプロイメントに加えて、Microsoft Azure、Amazon SageMaker、カスタム環境のモデル・デプロイメントもサポートしています。 詳しくは、[サポートされるモデル・タイプ](/docs/services/ai-openscale?topic=ai-openscale-in-ov)を参照してください。
 
@@ -218,4 +227,4 @@ subcollection: ai-openscale
 まだご不明な点がありますか?
 
 - [制限](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
-- [既知の問題](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)
+- [既知の問題](/docs/services/ai-openscale?topic=ai-openscale-rn-12ki#cloud-limitations)

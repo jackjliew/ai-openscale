@@ -28,6 +28,18 @@ subcollection: ai-openscale
 # Python SDK 教程（高级）
 {: #crt-ov}
 
+在本教程中，您将学习执行以下任务：
+
+- 运行 Python 笔记本以创建、训练和部署机器学习模型。
+- 创建数据集市，配置性能、准确性和公平性监视器，以及创建要监视的数据。
+- 在 {{site.data.keyword.aios_short}}“洞察”选项卡中查看结果。
+
+
+## Python 客户机
+{: #in-pyc}
+
+[{{site.data.keyword.aios_short}} Python 客户机](http://ai-openscale-python-client.mybluemix.net/){: external}是一个 Python 库，允许您直接使用 {{site.data.keyword.cloud_notm}} 上的 {{site.data.keyword.aios_short}} 服务。您可以使用 Python 客户机而不是 {{site.data.keyword.aios_short}} 客户机 UI 来直接配置日志记录数据库，绑定机器学习引擎以及选择并监视部署。有关以此方式使用 Python 客户机的示例，请参阅 [{{site.data.keyword.aios_short}} 样本笔记本](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks){: external}。
+
 ## 场景
 {: #crt-scenario}
 
@@ -74,7 +86,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - [创建 {{site.data.keyword.DSX}} 实例](https://{DomainName}/catalog/services/watson-studio){: external}（如果您还没有与帐户关联的实例）：
 
-  ![Watson Studio](images/watson_studio.png)
+  ![显示 Watson Studio 磁贴](images/watson_studio.png)
 
 - 指定服务的名称，选择 Lite（免费）套餐，然后单击**创建**按钮。
 
@@ -83,7 +95,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - [供应 {{site.data.keyword.cos_short}} 服务](https://{DomainName}/catalog/services/cloud-object-storage){: external}（如果您还没有与帐户关联的服务）：
 
-  ![Object Storage](images/object_storage.png)
+  ![显示 Object Storage 磁贴](images/object_storage.png)
 
 - 指定服务的名称，选择 Lite（免费）套餐，然后单击**创建**按钮。
 
@@ -92,7 +104,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - [供应 {{site.data.keyword.pm_short}} 实例](https://{DomainName}/catalog/services/machine-learning){: external}（如果您还没有与帐户关联的实例）：
 
-  ![Machine Learning](images/machine_learning.png)
+  ![显示 Machine Learning 磁贴](images/machine_learning.png)
 
 - 指定服务的名称，选择 Lite（免费）套餐，然后单击**创建**按钮。
 
@@ -103,7 +115,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - [供应 {{site.data.keyword.aios_short}} 实例](https://{DomainName}/catalog/services/watson-openscale){: external}（如果您还没有与帐户关联的实例）：
 
-  ![{{site.data.keyword.aios_short}} 磁贴](images/wos-cloud-tile.png)
+  ![显示 {{site.data.keyword.aios_short}} 磁贴](images/wos-cloud-tile.png)
 
 1. 单击**目录** > **AI** > **{{site.data.keyword.aios_short}}**。
 2. 指定服务的名称，选择套餐，然后单击**创建**按钮。
@@ -114,11 +126,11 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 如果您具有付费的 {{site.data.keyword.cloud_notm}} 帐户，那么可以供应 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服务来充分利用与 {{site.data.keyword.DSX}} 和持续学习服务的集成。如果选择不供应付费服务，那么可以将免费内部 PostgreSQL 存储与 {{site.data.keyword.aios_short}} 配合使用，但是将无法为模型配置持续学习。
 
-- [供应 Databases for PostgreSQL 服务](https://{DomainName}/catalog/services/databases-for-postgresql)或 [Db2 Warehouse 服务](https://{DomainName}/catalog/services/db2-warehouse)（如果您还没有与帐户关联的服务）：
+- [供应 Databases for PostgreSQL 服务](https://{DomainName}/catalog/services/databases-for-postgresql){: external}或 [Db2 Warehouse 服务](https://{DomainName}/catalog/services/db2-warehouse){: external}（如果您还没有与帐户关联的服务）：
 
-  ![DB for Postgres](images/dbpostgres.png)
+  ![显示 DB for Postgres 磁贴](images/dbpostgres.png)
 
-  ![Db2 Warehouse](images/db2_warehouse.png)
+  ![显示 Db2 Warehouse 磁贴](images/db2_warehouse.png)
 
 - 指定服务的名称，选择 Standard 套餐 (Databases for PostgreSQL) 或 Entry 套餐 (Db2 Warehouse)，然后单击**创建**按钮。
 
@@ -135,7 +147,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - 选择**标准**磁贴，以创建项目：
 
-  ![Watson Studio 选择“标准”项目](images/studio_create_standard.png)
+  ![显示 Watson Studio“选择标准项目”磁贴](images/studio_create_standard.png)
 
 - 指定项目的名称和描述，确保在**存储**下拉菜单中选择所创建的 Cloud Object Storage 服务，然后单击**创建**。
 
@@ -145,13 +157,13 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 ### 将 `Working with Watson Machine Learning` 笔记本添加到 {{site.data.keyword.DSX}} 项目
 {: #crt-add-notebook}
 
-- 下载以下文件：
+- 访问以下文件。如果您具有 GitHub 帐户，那么可登录以克隆和下载文件。否则，可以通过单击**原始**按钮来查看原始版本，并将文件的文本复制到扩展名为 .ipynb 的新文件中。
 
     - [使用 Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - 从 {{site.data.keyword.DSX}} 项目中的**资产**选项卡单击**添加到项目**按钮，然后从下拉菜单中选择**笔记本**：
 
-  ![添加连接](images/add_notebook.png)
+  ![显示“选择资产类型”，其中笔记本磁贴突出显示](images/add_notebook.png)
 
 - 选择**从文件**：
 
@@ -161,7 +173,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
   ![“新建笔记本”表单](images/new_notebook_name2a.png)
 
-- 在**选择运行时**部分中，选择 Python 3.5 with Spark 选项：
+- 在**选择运行时**部分中，选择最新的 Python with Spark 选项：
 
 - 单击**创建笔记本**。
 
@@ -175,7 +187,7 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 - 在“供应服务并配置凭证”部分中，进行以下更改：
 
-    - 遵循指示信息来创建、复制和粘贴 {{site.data.keyword.cloud_notm}} API 密钥。
+    - 遵循笔记本中的指示信息来创建、复制和粘贴 {{site.data.keyword.cloud_notm}} API 密钥。
 
     - 将 {{site.data.keyword.pm_full}} 服务凭证替换为先前创建的凭证。
 
@@ -202,11 +214,11 @@ Jupyter 笔记本将训练、创建和部署“德国信用风险”模型，配
 
 使用 [{{site.data.keyword.aios_short}} 仪表板](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}，单击**洞察**选项卡：
 
-  ![洞察](images/insight-dash-tab.png)
+  ![显示“洞察”图标](images/insight-dash-tab.png)
 
 “洞察”页面提供已部署模型的度量概述。针对超过在运行笔记本时设置阈值的“公平性”或“准确性”度量，您可以轻松查看相应的警报。本教程中使用的数据和设置将创建与此处显示的值类似的“准确性”和“公平性”度量。
 
-  ![洞察概述](images/insight-overview-adv-tutorial-2.png)
+  ![显示“洞察概述”仪表板，其中包含“德国信用风险模型”磁贴](images/insight-overview-adv-tutorial-2.png)
 
 ### 查看部署的监视数据
 {: #crt-view-mon-data}

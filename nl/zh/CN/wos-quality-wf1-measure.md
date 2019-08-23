@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加权 F1 度量 ![beta 标记](images/beta.png)
+# 加权 F1 度量
 {: #quality_wght_f1-measure}
 
 加权 F1 度量给出权重等于类概率的 F1 度量的加权平均值。

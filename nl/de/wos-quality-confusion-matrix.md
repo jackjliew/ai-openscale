@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Wahrheitsmatrix ![Beta-Tag](images/beta.png)
+# Wahrheitsmatrix
 {: #it-conf-mtx}
 
 Als Detail der Qualitätsmetriken können Sie die Datensätze anzeigen, die das Modell nicht korrekt analysiert hat. Bei solchen Anomalien kann es sich um falsch-positive oder falsch-negative Ergebnisse für binäre Klassifizierungsmodelle handeln oder um fehlerhafte Kassenzuweisungen für Modelle mit mehreren Klassen. Darüber hinaus können Sie eine Liste mit Rückmeldedatensätzen anzeigen, die vom Modell nicht korrekt analysiert wurden.

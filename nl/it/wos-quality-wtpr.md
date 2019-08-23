@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Tasso ponderato di veri positivi (wTPR - Weighted True Positive Rate) ![tag beta](images/beta.png)
+# Tasso ponderato di veri positivi (wTPR - Weighted True Positive Rate)
 {: #quality-wtpr}
 
 Il tasso ponderato di veri positivi fornisce la media ponderata della classe TPR con pesi uguali alla probabilità della classe.

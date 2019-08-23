@@ -50,7 +50,7 @@ subcollection: ai-openscale
     - 50,000 筆有效負載記錄（累加）
     - 50,000 筆回饋記錄（累加）
 
-- {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援「精簡 Db2」方案。
+- {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 資料庫，來儲存模型相關資料（回饋資料、評分有效負載）和計算後的度量。目前不支援 Lite Db2 方案。
 
 - 根據授權限制，每一個 {{site.data.keyword.aios_short}} 實例只能有 20 個所部署模型。
 
@@ -64,10 +64,10 @@ subcollection: ai-openscale
 
 <p>&nbsp;</p>
 
-## 常見問題
+## 共通問題
 {: #wos-common-issues}
 
-以下是位於 {{site.data.keyword.Bluemix}} 和 {{site.data.keyword.wos4d_full}} 上之 {{site.data.keyword.aios_full}} 的常見問題。
+以下是位於 {{site.data.keyword.Bluemix}} 和 {{site.data.keyword.wos4d_full}} 上之 {{site.data.keyword.aios_full}} 的共通問題。
 
 <p>&nbsp;</p>
 

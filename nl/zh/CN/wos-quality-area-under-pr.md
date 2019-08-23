@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# PR 下的面积 ![beta 标记](images/beta.png)
+# PR 下的面积
 {: #quality-area-pr}
 
 查准率/查全率下的面积给出查准率和查全率曲线下的面积，这在类特别不平衡时有用。
@@ -48,6 +48,30 @@ subcollection: ai-openscale
 {: #quality-area-pr-display}
 
 ![显示 PR 下的面积，其中度量趋势向下](images/quality-area-under-pr.png)
+
+### 公平性分数
+{: #quality-area-pr-display-fairness-score}
+
+对于“PR 下的面积”度量，将显示以下公平性分数。 
+
+![显示“PR 下的面积”分数百分比。](images/wos-quality-area-pr-score.png)
+
+### 调度
+{: #quality-area-pr-display-schedule}
+
+"**调度**窗格显示**上次评估**和**下次评估**时间。质量度量每小时进行评估。您可以通过单击**立即检查质量**来强制评估。您还可以通过单击**添加反馈数据**来添加反馈。
+
+![显示“调度”窗格，其中显示了上次评估时间和下次评估时间](images/wos-quality-schedule.png)
+
+
+### 建议
+{: #quality-area-pr-display-recommendations}
+
+为帮助解释图表，**建议**窗格显示哪些趋势指示模型有效性的改善或恶化。
+
+![显示“建议”窗格。](images/wos-quality-positive-recommendation.png)
+
+
 
 
 ## 测算

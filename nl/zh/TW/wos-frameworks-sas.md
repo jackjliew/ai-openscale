@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # SAS AI Solutions 架構
 {: #frmwrks-sas}
 
-{{site.data.keyword.aios_full}} 打算在未來版本中支援 SAS AI Solutions 架構。
+您可以使用 SAS AI Solutions，在 {{site.data.keyword.aios_full}} 中執行內容記載、回饋記載，以及測量效能精確度、執行時期偏誤偵測、可解釋性，以及自動除去偏誤功能。
+
+{{site.data.keyword.aios_full}} 完整支援下列的 SAS AI Solutions 架構：
 {: shortdesc}
 
 

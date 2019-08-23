@@ -38,9 +38,9 @@ Il primo passo nello strumento {{site.data.keyword.aios_short}} è quello di spe
 
 {{site.data.keyword.aios_short}} si collega ai modelli e alle distribuzioni AI in un'istanza di Azure ML Studio.
 
-1.  Dalla scheda **Configura**, fare clic su **Provider di machine learning**.
+1. Dalla scheda **Configura**, fare clic su **Provider di machine learning**. A seconda del proprio ambiente, è possibile che non si vedano tutti i seguenti provider:
 
-    ![viene visualizzato il pannello per la selezione del provider del servizio di machine learning con i riquadri per i motori di machine learning supportati](images/wos-machine-learning-providers-selection.png)
+   ![viene visualizzato il pannello per la selezione del provider del servizio di machine learning con i riquadri per i motori di machine learning supportati](images/wos-machine-learning-providers-selection.png)
 
 1.  Fare clic sul riquadro **Microsoft Azure ML Studio**.
 
@@ -52,6 +52,9 @@ Il primo passo nello strumento {{site.data.keyword.aios_short}} è quello di spe
     - Segreto client: il valore stringa effettivo del segreto, che verifica chi è l'utente e autentica e autorizza le chiamate che si fanno ad Azure Studio.
     - Tenant: l'ID tenant corrisponde alla propria organizzazione ed è un'istanza dedicata di Azure AD. Per trovare l'ID tenant, passare il puntatore sul nome account per ottenere l'ID tenant/directory oppure selezionare Azure Active Directory > Proprietà > ID directory nel portale Azure.
     - ID sottoscrizione: le credenziali di sottoscrizione che identificano in modo univoco la propria sottoscrizione Microsoft Azure. L'ID sottoscrizione forma parte dell'URI per ogni chiamata al servizio.
+    - Nome istanza del provider di servizi: il nome specifico assegnato a questo provider di servizi.
+    - Descrizione: (facoltativo) la descrizione in parole semplici di questa istanza del provider di servizi. Se si dispone di ambienti di produzione e di test, può essere utile includere tali informazioni.
+
 
     Consultare [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: external} per istruzioni su come ottenere le credenziali di Microsoft Azure.
     {: note}

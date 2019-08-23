@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: credentials, REST API, data mart
+keywords: credentials, REST API, datamart ID, IDs, binding ID,  deployment ID, subscription ID
 
 subcollection: ai-openscale
 
@@ -36,29 +36,29 @@ subcollection: ai-openscale
 ## 플랫폼 API 키 작성
 {: #cred-create-apikey}
 
-플랫폼 API 키를 작성하려면 다음 단계를 완료하십시오.
+IBM Cloud API 키를 작성하려면 다음 단계를 완료하십시오. 
 
-1. [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}에 로그인하십시오.
+- [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}에 로그인하십시오.
+- **관리** --> **액세스(IAM)** --> **{{site.data.keyword.cloud_notm}} API 키**를 선택하십시오. 
+- **IBM Cloud API 키 작성** 단추를 클릭하십시오. 
+- 키에 이름과 설명을 부여하고 **작성**을 클릭하십시오. 
 
-2. **관리** --> **보안** --> **플랫폼 API 키**를 선택하십시오. 
+## 서비스 ID 찾기:
+{: #cred-find-datamart-id}
 
-    ![플랫폼 API 키](images/cred-api-key.png)
-
-3. 플랫폼 API 키를 작성하고 저장하십시오.
-
-데이터 마트 또는 서비스 인스턴스 ID를 찾으려면 다음 단계를 완료하십시오.
+배치할 **모니터 구성**을 선택할 때 표시되는 {{site.data.keyword.aios_short}} **페이로드 로깅** 페이지에서 데이터 마트, 배치, 구독 또는 바인딩 ID를 찾으십시오. 
 
 1. 모델 배치 타일을 클릭하십시오. 
-2. **구성**![구성 아이콘](images/configure-deployment-button.png) 아이콘을 클릭하십시오. 
-3. **페이로드 로깅 엔드포인트 보기**를 클릭하십시오. 
-4. {{site.data.keyword.aios_short}} **페이로드 로깅** 페이지에서 **데이터 마트 ID** 필드를 찾으십시오. 
+2. **모니터 구성** ![구성 아이콘](images/configure-deployment-button.png)을 클릭하십시오. 
+3. **페이로드 로깅**을 클릭하십시오. 
+4. {{site.data.keyword.aios_short}} **페이로드 로깅** 페이지의 **세부사항** 분할창에서 찾으려는 ID를 찾으십시오. 예: **데이터 마트 ID** 필드: 
 
     ![데이터 마트 ID](images/data-mart-id.png)
 
 ## 명령 콘솔을 사용하여 서비스 인스턴스 인증 정보 작성
 {: #cred-creds}
 
-{{site.data.keyword.aios_short}}의 인증 정보를 작성하려면 {{site.data.keyword.cloud_notm}} [명령 콘솔](/docs/cli?topic=cloud-cli-ibmcloud-cli)을 사용하여 다음 단계를 완료하십시오.
+{{site.data.keyword.aios_short}}의 인증 정보를 작성하려면 {{site.data.keyword.cloud_notm}} [명령 콘솔](/docs/cli?){: external}을 사용하여 다음 단계를 완료하십시오.
 
 1. 다음 명령을 실행하여 API 키를 검색하십시오.
 
@@ -76,7 +76,12 @@ subcollection: ai-openscale
     Locked       false
     UUID         ApiKey-xxxxxxxxx-afd7-xxxxx-b0e1-xxxxxxxxxxx
     ```
+
 2. {{site.data.keyword.cloud_notm}} 계정에서 사용 중인 리소스 그룹을 확인하십시오.
+
+   1. 대시보드로 이동하십시오. 
+   2. **탐색 메뉴**에서 **리소스 목록**을 클릭하십시오. 
+   3. **그룹** 열에서 **그룹 또는 조직별 필터링** 드롭 다운 선택사항을 클릭하고 **기본값** 선택란을 설정하십시오. 
 
   ![클라우드의 리소스 그룹](images/cloud-resource.png)
 
@@ -93,6 +98,7 @@ subcollection: ai-openscale
     ```curl
     ibmcloud resource service-instance '<Your_Watson_OpenScale_instance_name>'
     ```
+
     **참고**: Windows에서 {{site.data.keyword.cloud_notm}} 명령 콘솔을 사용하는 경우 이전 명령에서 작은따옴표(')를 큰따옴표(")로 바꾸십시오.
 
     다음 정보가 표시됩니다.
@@ -120,8 +126,8 @@ subcollection: ai-openscale
 
 기계 학습 제공자를 지정하십시오.
 
-- [IBM Watson Machine Learning 서비스 인스턴스 지정](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
-- [Microsoft Azure ML Studio 인스턴스 지정](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
-- [Microsoft Azure ML 서비스 인스턴스 지정](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
-- [Amazon SageMaker ML 서비스 인스턴스 지정](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
-- [사용자 정의 ML 서비스 인스턴스 지정](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-co-connect)
+- [IBM Watson Machine Learning 서비스 인스턴스 지정](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
+- [Microsoft Azure ML Studio 인스턴스 지정](/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
+- [Microsoft Azure ML 서비스 인스턴스 지정](/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
+- [Amazon SageMaker ML 서비스 인스턴스 지정](/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
+- [사용자 정의 ML 서비스 인스턴스 지정](/docs/services/ai-openscale?topic=ai-openscale-co-connect)

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# R2 (決定係数) ![ベータ・タグ](images/beta.png)
+# R2 (決定係数)
 {: #quality_r_squared}
 
 R2 (決定係数) は、ターゲット分散と、ターゲット分散に対する予測誤差の分散の差異の比率です。 モデルの作成に使用したデータが、どれほど回帰に適合しているデータかがわかります。
@@ -56,7 +56,7 @@ R2 (決定係数) 指標は、次の数式で定義されます。
 
 ```
                   説明された分散
-R2 (決定係数) = 1 -  _____________________
+R2 (決定係数) =ai-open-scale-ibm-aios-scheduling  | 1 | スケジューリング・サービス-  _____________________
 
                     全体の分散
 ```

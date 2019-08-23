@@ -30,7 +30,7 @@ subcollection: ai-openscale
 IBM에서는 접근성을 제공합니다. 장애가 있는 사용자에게 도움이 되도록 준수 지침 다음에 오는 접근성 기능은 {{site.data.keyword.aios_full}} 컨텐츠와 문서에 포함되어 있습니다. {{site.data.keyword.aios_short}}의 사용자 인터페이스는 전체가 아니라 일부에만 액세스할 수 있습니다. 문서만 전체 제품 중 일부의 서브세트를 준수합니다.
 {: shortdesc}
 
-{{site.data.keyword.aios_short}} 문서는 <a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/" rel="noopener noreferrer" target="_blank">United States Access Board Section 508 Standards</a> 및 <a href="https://www.w3.org/TR/WCAG20/" rel="noopener noreferrer" target="_blank"> WCAG(Web Content Accessibility Guidelines) 2.0</a>을 준수하도록 최신 W3C 표준, <a href="https://www.w3.org/TR/wai-aria/" rel="noopener noreferrer" target="_blank">WAI-ARIA 1.0</a>을 사용합니다.
+{{site.data.keyword.aios_short}} 문서는 [미국 접근성 위원회 법률 508조 표준](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/){: external} 및 [웹 콘텐츠 접근성 가이드라인(WCAG) 2.0](https://www.w3.org/TR/WCAG20/){: external}을 준수하기 위해 최신 W3C 표준인 [WAI-ARIA 1.0](https://www.w3.org/TR/wai-aria/){: external}을 사용합니다. 
 
 {{site.data.keyword.aios_short}} 온라인 제품 문서에서는 접근성을 사용할 수 있습니다. 접근성은 거동이 불편하거나 시각 장애와 같은 신체적 장애가 있는 사용자가 기술 제품을 정상적으로 사용하도록 도움을 줍니다. 보조적 기술을 통해 쉽게 액세스 가능하도록 문서는 HTML로 제공됩니다.
 {{site.data.keyword.aios_short}}의 접근성 기능을 사용하여 다음 태스크를 수행할 수 있습니다.
@@ -39,7 +39,7 @@ IBM에서는 접근성을 제공합니다. 장애가 있는 사용자에게 도�
 - 화면 돋보기를 사용하여 화면에 표시되는 내용을 확대합니다.
 - 키보드만 사용하여 특정 기능 또는 동등한 기능을 수행할 수 있습니다.
 
-IBM의 접근성에 관한 약정은 [IBM 접근성](http://www.ibm.com/able)에서 자세한 정보를 참조하십시오.
+IBM의 접근성에 관한 약정은 [IBM 접근성](http://www.ibm.com/able){: external}에서 자세한 정보를 참조하십시오.
 
 ## TTY 서비스
 

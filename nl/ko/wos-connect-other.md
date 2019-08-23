@@ -34,19 +34,24 @@ subcollection: ai-openscale
 ## 사용자 정의 서비스 인스턴스 연결
 {: #co-config}
 
-{{site.data.keyword.aios_short}}은 서비스 인스턴스에서 AI 모델 및 배치에 연결됩니다. 사용자 정의 서비스를 연결할 수 있습니다. 
+{{site.data.keyword.aios_short}}은 서비스 인스턴스에서 AI 모델 및 배치에 연결됩니다. 사용자 정의 서비스를 연결할 수 있습니다.
 
-1. **구성** 탭에서 **기계 학습 제공자**를 클릭하십시오. 
+1. **구성** 탭에서 **기계 학습 제공자**를 클릭하십시오. 환경에 따라서는 다음 제공자를 모두 보지 못할 수 있습니다. 
 
    ![지원되는 기계 학습 엔진에 대한 타일과 함께 기계 학습 서비스 제공자 선택 화면이 표시됨](images/wos-machine-learning-providers-selection.png)
 
-2. **사용자 정의 환경** 타일을 선택하십시오. 
+2. **사용자 정의 환경** 타일을 선택하십시오.
 
-   ![사용자 정의 선택](images/ml-custom-provider.png)
+   ![사용자 정의 기계 학습 제공자 구성 화면이 인증 정보, 인스턴스 이름 및 설명에 대한 필드와 함께 표시됨](images/ml-custom-provider.png)
 
-3. 사용자 정의 기계 학습 제공자의 이름 및 설명을 입력한 후 **다음**을 클릭하십시오.  
+1.  인증 정보를 입력한 후 저장하십시오.
 
-4. [목록을 요청](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list)하거나 [개별 스코어링 엔드포인트를 입력하여](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints) 배치에 연결할지 선택하십시오. 
+    - 사용자 이름: 사용자 정의 기계 학습 제공자 사용자 이름입니다. 
+    - 비밀번호: 사용자 정의 기계 학습 제공자 비밀번호입니다. 
+    - 서비스 제공자 인스턴스 이름: 이 서비스 제공자에 지정된 특정 이름입니다. 
+    - 설명: (선택사항) 이 서비스 제공자 인스턴스의 일반어 설명입니다. 프로덕션 및 테스트 환경이 있으면 이는 해당 정보를 포함하기에 알맞은 위치입니다. 
+
+4. [목록을 요청](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list)하거나 [개별 스코어링 엔드포인트를 입력하여](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints) 배치에 연결할지 선택하십시오.
 
    ![사용자 정의 선택](images/ml-custom-connect-deployments.png)
     
@@ -55,33 +60,33 @@ subcollection: ai-openscale
 ### 배치 목록 요청
 {: #co-config-request-list}
 
-1. **배치 목록 요청** 타일을 선택한 경우에는 인증 정보 및 API 엔드포인트를 입력한 후 **저장**을 클릭하십시오. 
+1. **배치 목록 요청** 타일을 선택한 경우에는 인증 정보 및 API 엔드포인트를 입력한 후 **저장**을 클릭하십시오.
 
    ![서비스 인증 정보 입력](images/connect-custom-cred.png)
 
-2. 기계 학습 설정을 저장한 후 **대시보드**로 돌아가서 **인사이트** 탭을 클릭한 후 **배치 추가** 단추를 클릭하십시오. 
+2. 기계 학습 설정을 저장한 후에는 **대시보드**로 돌아가서 **인사이트** 탭을 클릭한 후 **대시보드에 추가** 단추를 클릭하십시오. 
 
-3. 목록에서 배치를 선택한 후 **구성**을 클릭하십시오. 
+3. 목록에서 배치를 선택한 후 **구성**을 클릭하십시오.
 
-이제 모니터를 구성할 준비가 되었습니다. 
+이제 모니터를 구성할 준비가 되었습니다.
 
 ### 개별 스코어링 엔드포인트 제공
 {: #co-config-scoring-endpoints}
 
-1. **개별 스코어링 엔드포인트 입력** 타일을 선택한 경우에는 API 엔드포인트에 대한 인증 정보를 입력한 후 **저장**을 클릭하십시오. 
+1. **개별 스코어링 엔드포인트 입력** 타일을 선택한 경우에는 API 엔드포인트에 대한 인증 정보를 입력한 후 **저장**을 클릭하십시오.
 
-2. 기계 학습 설정을 저장한 후 **대시보드**로 돌아가서 **인사이트** 탭을 클릭한 후 **배치 추가** 단추를 클릭하십시오. 
+2. 기계 학습 설정을 저장한 후에는 **대시보드**로 돌아가서 **인사이트** 탭을 클릭한 후 **대시보드에 추가** 단추를 클릭하십시오. 
 
-3. **엔드포인트 추가** 단추를 클릭하십시오. 
+3. **엔드포인트 추가** 단추를 클릭하십시오.
 
-4. 드롭 다운 메뉴에서 사용자 정의 환경을 선택하고 배치 이름 및 API 엔드포인트를 입력한 후 **저장**을 클릭하십시오. 
+4. 드롭 다운 메뉴에서 사용자 정의 환경을 선택하고 배치 이름 및 API 엔드포인트를 입력한 후 **저장**을 클릭하십시오.
 
-이제 모니터를 구성할 준비가 되었습니다. 
+이제 모니터를 구성할 준비가 되었습니다.
 
 ### 작동 방식
 {: #co-works}
 
-다음 이미지는 사용자 정의 환경 지원을 보여줍니다. 
+다음 이미지는 사용자 정의 환경 지원을 보여줍니다.
 
 ![사용자 정의 작동 방식](images/custom-how-works.png)
 
@@ -176,9 +181,9 @@ subcollection: ai-openscale
 
   이 예에서 `"personal"` 및 `"camping"`은 가능한 클래스이며 각 스코어링 출력의 스코어는 두 클래스 모두에 지정됩니다. 예측 확률이 누락되면, 편향성 발견은 작동하나 자동 편향성 제거는 작동하지 않습니다.
 
-  이전 스코어링 출력은 {{site.data.keyword.aios_short}}이 REST를 통해 호출할 수 있는 라이브 스코어링 엔드포인트에서 액세스 가능해야 합니다. AzureML, SageMaker 및 {{site.data.keyword.pm_full}}의 경우 {{site.data.keyword.aios_short}}이 직접 원시 스코어링 엔드포인트에 연결되므로 스코어링 스펙 구현에 대해 걱정하지 않아도 됩니다. 
+  이전 스코어링 출력은 {{site.data.keyword.aios_short}}이 REST를 통해 호출할 수 있는 라이브 스코어링 엔드포인트에서 액세스 가능해야 합니다. AzureML, SageMaker 및 {{site.data.keyword.pm_full}}의 경우 {{site.data.keyword.aios_short}}이 직접 원시 스코어링 엔드포인트에 연결되므로 스코어링 스펙 구현에 대해 걱정하지 않아도 됩니다.
 
 ### 다음 단계
 {: #co-next}
 
-이제 {{site.data.keyword.aios_short}}이 [모니터를 구성](/docs/services/ai-openscale?topic=ai-openscale-mo-config)할 준비가 되었습니다. 
+이제 {{site.data.keyword.aios_short}}이 [모니터를 구성](/docs/services/ai-openscale?topic=ai-openscale-mo-config)할 준비가 되었습니다.

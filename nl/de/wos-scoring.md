@@ -30,13 +30,15 @@ subcollection: ai-openscale
 
 Zum Konfigurieren von Überwachungen ist für {{site.data.keyword.aios_short}} das Senden von Scoring-Nutzdaten erforderlich, damit mit dem Protokollieren der zu überwachenden Daten begonnen werden kann.
 
-- Bei in {{site.data.keyword.pm_full}} bereitgestellten Modellen haben Sie die Möglichkeit, in {{site.data.keyword.pm_full}} ein Scoring für bereitgestellte Modelle durchzuführen oder die API für Nutzdatenprotokollierung für das Scoring zu verwenden. Bereitgestellte Modelle, für die ein Scoring in {{site.data.keyword.pm_short}} durchgeführt wird, werden automatisch an {{site.data.keyword.aios_short}} gesendet. 
-- Bei anderen Machine Learning-Engines, wie z. B. Microsoft Azure, Amazon SageMaker oder einer angepassten Machine Learning-Engine, müssen die Scoringnutzdaten über die API für die Nutzdatenprotokollierung gesendet werden. Weitere Informationen hierzu finden Sie im Abschnitt [Nutzdatenprotokollierung für andere Serviceinstanzen als {{site.data.keyword.pm_full}}-Serviceinstanzen](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
+- Für in {{site.data.keyword.pm_full}} bereitgestellte Modelle werden sie automatisch an {{site.data.keyword.aios_short}} gesendet. Für automatisch gesendete Scoring-Anforderungen müssen Sie diese Task nicht ausführen und es werden keine Code-Snippets angezeigt.
+- Bei anderen Machine Learning-Engines, wie z. B. Microsoft Azure, Amazon SageMaker oder einer angepassten Machine Learning-Engine, müssen die Scoringnutzdaten über die API für die Nutzdatenprotokollierung gesendet werden. Dazu müssen Sie ein Code-Snippet entweder im cURL- oder im Python-Format verwenden, das Sie von der Seite für Nutzdatenprotokollierung abrufen können. Weitere Informationen hierzu finden Sie im Abschnitt [Nutzdatenprotokollierung für andere Serviceinstanzen als {{site.data.keyword.pm_full}}-Serviceinstanzen](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
 
 ## Schritte zur Nutzdatenprotokollierung
 {: #cdb-score-apisteps}
 
-1. Wählen Sie eine Bereitstellung aus und wechseln Sie zur Seite **Nutzdatenprotokollierung**.
+1. Klicken Sie im {{site.data.keyword.aios_short}}-Dashboard auf eine Bereitstellungskachel.
+2. Klicken Sie auf **Überwachungen konfigurieren**. 
+3. Klicken Sie im Navigationsfenster auf **Nutzdatenprotokollierung**.
 2. Wählen Sie aus, ob der `cURL`- oder `Python`-Code verwendet werden soll, indem Sie auf die Registerkarte `cURL` oder `Python` klicken.
 3. Klicken Sie auf **In Zwischenablage kopieren** und fügen Sie die Zwischenablage ein, um Anforderungs- und Antwortdaten der Modellbereitstellung zu protokollieren. Weitere Informationen hierzu finden Sie im Abschnitt [Nutzdatenprotokollierung für andere Serviceinstanzen als {{site.data.keyword.pm_full}}-Serviceinstanzen](/docs/services/ai-openscale?topic=ai-openscale-cml-connect).
 
@@ -54,12 +56,12 @@ Scoring-Anforderungen sind ein integraler Bestandteil der {{site.data.keyword.ai
 
 - Bei Tabellen-, Text- und Imagemodellen generiert die folgende Basisanforderung Datenpunkte:
 
-   - 1 Scoring-Anforderung generiert 5000 Datenpunkte.
+   -ai-open-scale-ibm-aios-scheduling  | 1 | Die Anforderung zur Planung des Service-Scoring generiert 5000 Datenpunkte.
 
 - Für Tabellenklassifizierungsmodelle gibt es zusätzliche Scoring-Anforderungen, die für eine kontrastive Erklärung konzipiert sind. Die folgenden Anforderungen werden zur Basisanforderung hinzugefügt:
 
    - 100 Scoring-Anforderungen generieren 51 zusätzliche Datenpunkte pro Anforderung.
-   - 101 Scoring-Anforderungen generieren 1 zusätzlichen Datenpunkt pro Anforderung.
+   - 101 Scoring-Anforderungen generieren ai-open-scale-ibm-aios-scheduling  | 1 | Zusätzlicher Datenpunkt für Planungsservice pro Anforderung.
 
 
 ## Weitere Schritte

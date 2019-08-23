@@ -28,6 +28,18 @@ subcollection: ai-openscale
 # Python SDK チュートリアル (上級)
 {: #crt-ov}
 
+このチュートリアルでは、以下のタスクの実行方法を取り上げます。
+
+- Python ノートブックを実行して機械学習モデルを作成、トレーニング、およびデプロイします。
+- データマートを作成し、パフォーマンス、正確度、公平性のモニターを構成し、モニター対象のデータを作成します。
+- {{site.data.keyword.aios_short}} の「インサイト」タブで結果を表示します。
+
+
+## Python クライアント
+{: #in-pyc}
+
+[{{site.data.keyword.aios_short}} Python クライアント](http://ai-openscale-python-client.mybluemix.net/){: external}は、{{site.data.keyword.cloud_notm}} 上で {{site.data.keyword.aios_short}} サービスを直接扱うことができる Python ライブラリーです。 {{site.data.keyword.aios_short}} クライアント UI ではなく Python クライアントを使用すると、ロギング・データベースの構成、機械学習エンジンのバインド、デプロイメントの選択とモニターを直接行うことができます。 例えば、このように Python クライアントを使用する場合には、[{{site.data.keyword.aios_short}} サンプル・ノートブック](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks){: external}を参照してください。
+
 ## シナリオ
 {: #crt-scenario}
 
@@ -74,7 +86,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 - [{{site.data.keyword.DSX}} インスタンス](https://{DomainName}/catalog/services/watson-studio){: external}を作成します (アカウントに関連付けられているものがまだない場合)。
 
-  ![Watson Studio](images/watson_studio.png)
+  ![Watson Studio タイルが表示されています](images/watson_studio.png)
 
 - サービスに名前を付け、「Lite」(無料) プランを選択し、**「作成」**ボタンをクリックします。
 
@@ -83,7 +95,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 - [{{site.data.keyword.cos_short}} サービスをプロビジョンします](https://{DomainName}/catalog/services/cloud-object-storage){: external} (アカウントに関連付けられているものがまだない場合)。
 
-  ![Object Storage](images/object_storage.png)
+  ![Object Storage タイルが表示されています。](images/object_storage.png)
 
 - サービスに名前を付け、「Lite」(無料) プランを選択し、**「作成」**ボタンをクリックします。
 
@@ -92,7 +104,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 - [{{site.data.keyword.pm_short}} インスタンスをプロビジョンします](https://{DomainName}/catalog/services/machine-learning){: external} (アカウントに関連付けられているものがまだない場合)。
 
-  ![Machine Learning](images/machine_learning.png)
+  ![Machine Learning タイルが表示されています](images/machine_learning.png)
 
 - サービスに名前を付け、「Lite」(無料) プランを選択し、**「作成」**ボタンをクリックします。
 
@@ -103,7 +115,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 - [{{site.data.keyword.aios_short}} インスタンスをプロビジョンします](https://{DomainName}/catalog/services/watson-openscale){: external} (アカウントに関連付けられているものがまだない場合)。
 
-  ![{{site.data.keyword.aios_short}} タイル](images/wos-cloud-tile.png)
+  ![{{site.data.keyword.aios_short}} タイルが表示されています](images/wos-cloud-tile.png)
 
 1. **「カタログ」**>**「AI」**>**「{{site.data.keyword.aios_short}}」**をクリックします。
 2. サービスに名前を付け、プランを選択し、**「作成」**ボタンをクリックします。
@@ -114,11 +126,11 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 有料の {{site.data.keyword.cloud_notm}} アカウントを持っている場合、`Databases for PostgreSQL` サービスまたは `Db2 Warehouse` サービスをプロビジョンし、{{site.data.keyword.DSX}} サービスと統合して継続的な学習サービスを十分に活用できます。 有料サービスをプロビジョンしない場合、無料の内部 PostgreSQL ストレージを {{site.data.keyword.aios_short}} で使用できますが、ご使用のモデル向けに継続的な学習を構成することはできません。
 
-- [Databases for PostgreSQL サービス](https://{DomainName}/catalog/services/databases-for-postgresql)または [Db2 Warehouse サービス](https://{DomainName}/catalog/services/db2-warehouse)をプロビジョンします (アカウントに関連付けられているものがまだない場合)。
+- [Databases for PostgreSQL サービス](https://{DomainName}/catalog/services/databases-for-postgresql){: external}または [Db2 Warehouse サービス](https://{DomainName}/catalog/services/db2-warehouse){: external}をプロビジョンします (アカウントに関連付けられているものがまだない場合)。
 
-  ![DB for Postgres](images/dbpostgres.png)
+  ![DB for Postgres タイルが表示されています](images/dbpostgres.png)
 
-  ![Db2 Warehouse](images/db2_warehouse.png)
+  ![Db2 Warehouse タイルが表示されています](images/db2_warehouse.png)
 
 - サービスに名前を付け、Standard プラン (Databases for PostgreSQL) または Entry プラン (Db2 Warehouse) を選択し、**「作成」**ボタンをクリックします。
 
@@ -135,7 +147,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 - プロジェクトを作成するため、**「Standard」**タイルを選択します。
 
-  ![Watson Studio の「Standard」プロジェクトの選択](images/studio_create_standard.png)
+  ![Watson Studio の Standard プロジェクトを選択するタイルが表示されています](images/studio_create_standard.png)
 
 - プロジェクトに名前と説明を入力します。**「Storage」**ドロップダウンで、作成した Cloud Object Storage サービスが選択されていることを確認し、**「Create」**をクリックします。
 
@@ -145,13 +157,13 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 ### `Working with Watson Machine Learning` ノートブックを {{site.data.keyword.DSX}} プロジェクトに追加する
 {: #crt-add-notebook}
 
-- 以下のファイルをダウンロードします。
+- 以下のファイルにアクセスします。GitHub アカウントを所有している場合は、サインインしてファイルを複製およびダウンロードします。アカウントがない場合は、**「Raw」**ボタンをクリックして Raw バージョンを表示し、ファイルのテキストを拡張子が .ipynb の新しいファイルにコピーします。
 
     - [Working with Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - {{site.data.keyword.DSX}} プロジェクトの**「Assets」**タブで**「Add to project」**ボタンをクリックし、ドロップダウンから**「Notebook」**を選択します。
 
-  ![接続の追加](images/add_notebook.png)
+  ![Notebook タイルが強調表示されている「アセット・タイプの選択」が表示されています](images/add_notebook.png)
 
 - **「From file」**を選択します。
 
@@ -161,7 +173,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
   ![新規ノートブック・フォーム](images/new_notebook_name2a.png)
 
-- **「Select runtime」**セクションで、「Python 3.5 with Spark」オプションを選択します。
+- **「Select runtime」**セクションで、最新の「Python with Spark」オプションを選択します。
 
 - **「Create Notebook」**をクリックします。
 
@@ -175,7 +187,7 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 - 「Provision services and configure credentials」セクションで以下のように変更します。
 
-    - 説明に従い、{{site.data.keyword.cloud_notm}} API キーを作成、コピー、および貼り付けします。
+    - ノートブックの説明に従い、{{site.data.keyword.cloud_notm}} API キーを作成、コピー、および貼り付けします。
 
     - {{site.data.keyword.pm_full}} サービス資格情報を、以前に作成した資格情報に置き換えます。
 
@@ -202,11 +214,11 @@ Jupyter ノートブックは、German Credit Risk モデルをトレーニン�
 
 [{{site.data.keyword.aios_short}} ダッシュボード](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}を使用して**「インサイト」**タブをクリックします。
 
-  ![インサイト](images/insight-dash-tab.png)
+  ![「インサイト」アイコンが表示されています](images/insight-dash-tab.png)
 
 「インサイト」ページには、デプロイ済みモデルの指標の概要が表示されます。 ノートブックの実行時に設定したしきい値を超えている公平性または正解率の指標の警告を簡単に確認できます。 このチュートリアルで使用するデータと設定により、以下のような正解率と公平性の指標が作成されます。
 
-  ![「インサイト」の概要](images/insight-overview-adv-tutorial-2.png)
+  ![インサイト概要ダッシュボードに German Credit Risk モデルのタイルが表示されています。](images/insight-overview-adv-tutorial-2.png)
 
 ### デプロイメントのモニタリング・データの表示
 {: #crt-view-mon-data}

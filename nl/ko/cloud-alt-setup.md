@@ -40,7 +40,7 @@ subcollection: ai-openscale
 ## 시작하기 전에
 {: #as-prereqs}
 
-1. [{{site.data.keyword.cloud_notm}} API 키를 작성하고 다운로드하십시오](/docs/iam?topic=iam-userapikey#create_user_key). 후속 단계에서 API 키를 입력해야 합니다.
+1. [{{site.data.keyword.cloud_notm}} API 키를 작성하고 이를 다운로드하십시오](/docs/iam?topic=iam-userapikey#create_user_key){: external}. 후속 단계에서 API 키를 입력해야 합니다.
 
 2. [Python 3의 임의 릴리스 설치](https://www.python.org/downloads/){: external}.
 
@@ -85,9 +85,10 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
 - 인사이트 페이지에서는 구성되는 임계값에 의해 판별되는 공정성 및 정확성에 관한 문제를 한 눈에 볼 수 있습니다.
 
-- 각 배치는 타일식으로 표시됩니다. 모듈은 다음 화면 캡처에서 보듯이 `GermanCreditRiskModel`이라는 배치로 구성됩니다.
+- 각 배치는 타일식으로 표시됩니다. 튜토리얼 중 하나를 따르는 경우에는 대시보드에 `GermanCreditRiskModel`이라고 하는 배치가 나타납니다. 다음 샘플은 다수의 배치 및 모니터링된 모델이 있는 대시보드를 표시합니다. 
 
-  ![인사이트 개요](images/setup01-0206.png)
+    ![각각 타일로 표시된 다수의 배치가 있는 인사이트 대시보드](images/insight-dashboard.png)
+
 
 ### 모니터링 데이터 보기
 {: #as-monitoring}
@@ -97,17 +98,17 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
    - 예를 들면, 다음 화면은 특정 날짜 및 시간에 대한 데이터를 표시합니다. 날짜 및 시간은 언제 모듈을 실행하는지에 따라서 다릅니다.
 
-   - 시계열 차트를 해석하는 것에 대한 정보는 [공정성, 분당 평균 요청 및 정확성 모니터링](/docs/services/ai-openscale?topic=ai-openscale-it-ov)을 참조하십시오.
+   - 시계열 차트의 해석에 대한 정보는 [인사이트 확보](/docs/services/ai-openscale?topic=ai-openscale-it-ov)를 참조하십시오. 
 
-    ![모니터 데이터](images/setup02-0206.png)
+    ![모니터 데이터가 표시됨](images/setup02-0206.png)
 
 3. `AGE` 데이터 모니터링에 대한 세부사항을 보려면 드롭 다운 메뉴에서 `AGE`가 선택되었는지 확인하십시오.
 
   - 다음 화면 캡처에서, 편향성이 없음을 확인하십시오.
 
-  - 특정 시간에 데이터 점의 차트를 해석하는 것에 대한 정보는 [공정성, 분당 평균 요청 및 정확성 모니터링](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp)을 참조하십시오.
+  - 특정 시간의 데이터 점 차트 해석에 대한 정보는 [특정 시간의 데이터 시각화](/docs/services/ai-openscale?topic=ai-openscale-it-vdet)를 참조하십시오. 
 
-    ![세부사항 보기](images/setup03-0206.png)
+    ![세부사항 보기가 표시됨](images/setup03-0206.png)
 
 ### 설명 가능성 보기
 {: #as-explain}
@@ -125,5 +126,5 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
 - 편향성에 대한 자세한 내용은 [공정성](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)을 참조하십시오.
 - 모델이 결과를 얼마나 잘 예상하는지에 대한 자세한 내용은 [정확성](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)을 참조하십시오.
-- 차트 및 데이터 해석에 대한 자세한 내용은 [공정성, 분당 평균 요청 및 정확성 모니터링](/docs/services/ai-openscale?topic=ai-openscale-it-ov)을 참조하십시오.
+- 차트 및 데이터의 해석에 대한 자세한 내용은 [인사이트 확보](/docs/services/ai-openscale?topic=ai-openscale-it-ov)를 참조하십시오. 
 - 기본 요인이 결과에 영향을 미치는 방법에 대한 자세한 내용은 [설명 가능성 모니터링](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)을 참조하십시오.

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 再現率 ![ベータ・タグ](images/beta.png)
+# 再現率
 {: #quality_recall}
 
 再現率は、肯定クラスの予測の正解率です。
@@ -44,10 +44,35 @@ subcollection: ai-openscale
 - **グラフ値**: 時間フレーム内の最後の値
 - **使用可能な指標の詳細**: 混同行列
 
-## 表示内容についての解釈
+## 「再現率」指標の表示の解釈
 {: #quality_recall-display}
 
 ![再現率グラフが表示されています。](images/quality-recall.png)
+
+### 公平性スコア
+{: #quality_recall-display-fairness-score}
+
+「再現率」指標の場合、次の公平性スコアが表示されます。 
+
+![再現率スコアのパーセンテージが表示されています](images/wos-quality-recall-score.png)
+
+### スケジュール
+{: #quality_recall-display-schedule}
+
+**「スケジュール」**ペインには**「最新の評価」**と**「次の評価」**の時刻が表示されます。品質指標は毎時間評価されます。評価を強制的に実行するには、**「今すぐ品質を評価」**をクリックします。フィードバックを追加するには、**「フィードバック・データの追加」**をクリックします。
+
+![スケジュール・ペインが表示されています。このペインには、最新の評価の時刻と次の評価の時刻が表示されています。](images/wos-quality-schedule.png)
+
+
+### 推奨
+{: #quality_recall-display-recommendations}
+
+グラフを解釈できるように、**「推奨」**ペインには、モデルの有効性の向上を示す傾向や悪化を示す傾向が表示されます。
+
+![推奨ペインが表示されています。](images/wos-quality-positive-recommendation.png)
+
+
+
 
 ## 計算
 {: #quality_recall-math}

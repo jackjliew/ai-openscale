@@ -8,46 +8,20 @@ Watson OpenScale
     getting-started.md
     [了解有关 Watson OpenScale 的信息](https://www.ibm.com/cloud/watson-openscale/)
     wos-accessibility.md
-    cloud-faststart.md
+    cloud-interactive-setup.md
     cloud-alt-setup.md
     cloud-tutorial-adv.md
     cloud-addl-rsc.md
 
     {: .topicgroup}
     框架和模型支持
-        wos-frameworks-ovr.md
+        wos-frameworks-wml-cloud.md
+        wos-frameworks-azure-ml-studio.md
+        wos-frameworks-azure-ml-service.md
+        wos-frameworks-aws-sagemaker.md
+        wos-frameworks-custom.md
         wos-framework-workaround.md
         wos-framework-multi-eng.md
-
-    {: .topicgroup}
-    Watson Machine Learning
-        wos-frameworks-wml-cloud.md
-        wos-connect-wml.md
-
-    {: .topicgroup}
-    Microsoft Azure ML Studio
-        wos-frameworks-azure-ml-studio.md
-        wos-connect-azureml.md
-        wos-payload-azure-studio.md
-
-    {: .topicgroup}
-    Microsoft Azure ML Service
-        wos-frameworks-azure-ml-service.md
-        wos-connect-azureml-srvc.md
-        wos-payload-azure-service.md
-
-    {: .topicgroup}
-    Amazon SageMaker
-        wos-frameworks-aws-sagemaker.md
-        wos-connect-sagemaker.md
-        wos-payload-aws.md
-
-    {: .topicgroup}
-    定制机器学习引擎
-        wos-frameworks-custom.md
-        wos-custom-ml-ovr.md
-        wos-connect-other.md
-        wos-custom-ml-examples.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -64,6 +38,7 @@ Watson OpenScale
         wos-config-file.md
         wos-feedback.md
         wos-schema-definition.md
+        cloud-upgrading.md
 
     {: .topicgroup}
     配置监视器
@@ -78,8 +53,13 @@ Watson OpenScale
     获取洞察
         wos-insight-overview.md
         wos-insight-timechart.md
-        wos-analyze-metrics-transactions.md
+        wos-insight-viz-data-by-time.md
+        wos-insight-debias.md
         wos-insight-explain.md
+        wos-insight-categorical.md
+        wos-insight-imagemodel.md
+        wos-insight-unstructmodel.md
+        wos-insight-contrastive.md
 
     {: .topicgroup}
     公平性
@@ -101,7 +81,7 @@ Watson OpenScale
         wos-quality-logarithmic-loss.md
 
     {: .topicgroup}
-    漂移检测
+    漂移
         wos-behavior-drift.md
 
     {: .topicgroup}
@@ -132,7 +112,7 @@ Watson OpenScale
     cloud-release-notes.md
     wos-troubleshoot.md
     wos-FAQs.md
-    wos-known-wos-issues.md
+    cloud-known-wos-issues.md
 
     {: .topicgroup}
     开发人员社区

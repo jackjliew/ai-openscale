@@ -67,5 +67,5 @@ subcollection: ai-openscale
 ## 다음 단계
 {: #cml-next}
 
-- {{site.data.keyword.aios_short}} 클라이언트로 계속 진행하려면 [정확성 또는 품질 모니터 구성](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)을 참조하십시오. 
+- {{site.data.keyword.aios_short}} 클라이언트로 계속 진행하려면 [정확성 또는 품질 모니터 구성](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)을 참조하십시오.
 - Python 명령 라이브러리를 계속 사용하려면 [Python 클라이언트 문서](http://ai-openscale-python-client.mybluemix.net/){: external}를 참조하십시오.

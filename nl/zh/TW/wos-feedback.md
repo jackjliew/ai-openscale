@@ -213,13 +213,20 @@ JSON 格式由物件集合組成，且其中的欄位對應至直欄名稱。下
 ### 上傳 CSV 檔案
 {: #fmt-upld-fdbk-data-upld-csv}
 
-如果要上傳 CSV 檔案，請使用**新增回饋資料**按鈕。
+如果要上傳 CSV 檔案，請使用**新增回饋資料**按鈕。如果要隨本指導教學繼續完成下列步驟，請開啟並複製 [`credit_feedback_data.csv`](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv)檔的內容。
 
 1. 從 {{site.data.keyword.aios_short}} 儀表板中，按一下部署圖磚。
-2. 從模型部署視窗中，按一下**配置** ![顯示部署配置按鈕](images/configure-deployment-button.png) 圖示。
-3. 按一下**新增回饋資料**按鈕，選取含有回饋資料的 CSV 檔案，然後按一下**開啟**。
+2. 從模型部署視窗中，按一下**配置監視器** ![顯示「部署配置」按鈕](images/configure-deployment-button.png)。
+3. 在導覽窗格中，按一下**品質**。
+4. 按一下**回饋**，然後按一下**新增回饋資料**按鈕。
+5. 選取含有回饋資料的 CSV 檔案，然後按一下**開啟**。在本指導教學中，請選取您已下載的 `credit_feedback_data.csv` 檔。
+
+    檔案大小目前限制為 8 MB。
+    {: note}
+
 4. 從下拉功能表中，按一下欄位定界字元，並按一下**選取**。
 
+新增 CSV 檔案時，會提供回饋資料給您的模型。
 ### 上傳 JSON 檔案
 {: #fmt-upld-fdbk-data-upld-json}
 
@@ -230,3 +237,8 @@ JSON 格式由物件集合組成，且其中的欄位對應至直欄名稱。下
     ![JSON 測試](images/json_test02.png)
 
 1.  現在，開啟您所下載的 JSON 檔案，將內容複製到**測試**標籤中的 JSON 欄位。按一下**預測**按鈕，為訓練有效負載評分並傳送給您的模型。
+
+### 檢視結果
+{: #fmt-upld-fdbk-view-results-after}
+
+如果要立即檢查結果，請從**洞察**頁面中選取一項部署，按一下其中一個**品質**度量，然後按一下**立即檢查品質**。

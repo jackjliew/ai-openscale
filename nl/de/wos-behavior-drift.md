@@ -25,10 +25,10 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Drifterkennung ![Beta-Tag](images/beta.png)
+# Ausmaß der Drift ![Beta-Tag](images/beta.png)
 {: #behavior-drift-ovr}
 
-Im Laufe der Zeit ändern sich die Bedeutung und die Auswirkungen bestimmter Merkmale bei einem Modellwechsel. Dies wirkt sich auf die zugeordneten Anwendungen und die daraus resultierenden Geschäftsergebnisse aus. Die Drifterkennung bietet {{site.data.keyword.aios_short}} eine Möglichkeit, Modellmetriken, Modellleistung und die Art und Weise zu verfolgen, in der sich die Gewichtung von Merkmalen im Laufe der Zeit ändert.
+Im Laufe der Zeit ändern sich die Bedeutung und die Auswirkungen bestimmter Merkmale bei einem Modell. Dies wirkt sich auf die zugeordneten Anwendungen und die daraus resultierenden Geschäftsergebnisse aus. Die Drifterkennung bietet {{site.data.keyword.aios_short}} eine Möglichkeit, Modellmetriken, Modellleistung und die Art und Weise zu verfolgen, in der sich die Gewichtung von Merkmalen im Laufe der Zeit ändert. Die Genauigkeit Ihres Modells bei Vorhersagen nimmt möglicherweise nach und nach ab, wenn sich Daten ändern. Beim Ausmaß der Drift handelt es sich um das Ausmaß der Verschlechterung der Vorhersageleistung im Laufe der Zeit. Verwenden Sie die Informationen zur Drift, um die entsprechenden Korrekturmaßnahmen zu ergreifen.
 {: shortdesc}
 
 ## Erläuterungen zur Drifterkennung
@@ -65,5 +65,7 @@ Drifttransaktionen sind in der Anzeige mit den Transaktionsdetails verfügbar. I
 
 ## Weitere Schritte
 
-- Informationen zum Interpretieren der Drift finden Sie im Abschnitt [Überwachung der Drifterkennung konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).
-- Machen Sie sich anhand der [Erläuterungen zum Modelldrift mit IBM Watson OpenScale](https://medium.com/@manish.bhide/4c5401aa8da4) mit dem Potenzial vertraut, das die Drifterkennung bietet.
+- Informationen zum Einrichten der Drifterkennung finden Sie im Abschnitt [Drifterkennungsüberwachung konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).
+- Zu Minderung der Drift, nachdem diese von Watson OpenScale festgestellt wurde, müssen Sie eine neue Version des Modells erstellen, durch die das Problem behoben wird. Als Ausgangspunkt eignen sich die Datenpunkte, die als Ursache für die Drift hervorgehoben sind. Geben Sie die neuen Daten in das Vorhersagemodell ein, nachdem Sie die Transaktionen, für die eine Drift vorliegt, manuell gekennzeichnet haben, und verwenden Sie sie für das erneute Training des Modells.
+
+

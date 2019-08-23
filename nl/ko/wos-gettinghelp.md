@@ -43,11 +43,11 @@ subcollection: ai-openscale
 
 포럼을 사용하여 질문을 작성하는 경우 {{site.data.keyword.aios_short}} 개발 팀에서 확인할 수 있도록 질문에 태그를 지정하십시오.
 
-{{site.data.keyword.aios_short}}에 관한 기술 관련 질문이 있으면 [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale)에 질문을 게시하고 질문에 `watson-openscale` 태그를 지정하십시오.
+{{site.data.keyword.aios_short}}에 관한 기술 관련 질문이 있으면 [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale){: external}에 질문을 게시하고 질문에 `watson-openscale` 태그를 지정하십시오.
 
-서비스 및 시작하기 지시사항에 대한 질문은 [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale) 포럼을 사용하십시오. `openscale` 태그를 지정하십시오. 포럼 사용에 대한 세부사항은 [도움말 가져오기](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html)를 참조하십시오.
+서비스 및 시작하기 지시사항에 대한 질문은 [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale){: external} 포럼을 사용하십시오. `openscale` 태그를 지정하십시오. 포럼 사용에 대한 세부사항은 [도움말 가져오기](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html){: external}를 참조하십시오.
 
-IBM 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 정보는 [지원 문의](https://cloud.ibm.com/unifiedsupport/supportcenter)를 참조하고 **사례 작성**을 클릭하십시오.
+IBM 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 정보는 [지원 문의](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}를 참조하고 **사례 작성**을 클릭하십시오.
 
 ## 더 자세한 정보가 필요하십니까?
 {: #looking}

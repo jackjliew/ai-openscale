@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 정밀도 ![베타 태그](images/beta.png)
+# 정밀도
 {: #quality_precision}
 
 정밀도는 양성 클래스 예측에서 올바른 예측의 비율을 제공합니다.

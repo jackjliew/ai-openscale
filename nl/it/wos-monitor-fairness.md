@@ -92,4 +92,4 @@ Infine, {{site.data.keyword.aios_short}} utilizza una soglia per decidere che i 
 ## Passi successivi
 {: #mf-next}
 
-Dalla pagina **Configura monitor**, è possibile selezionare un'altra categoria di monitoraggio.
+Per continuare la configurazione dei monitor, fare clic sulla scheda **Deviazione** e fare clic su **Inizia**. Per ulteriori informazioni, consultare [Configurazione del monitor Rilevamento deviazione](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).

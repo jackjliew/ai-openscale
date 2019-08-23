@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Gewichtetes F1-Maß ![Beta-Tag](images/beta.png)
+# Gewichtetes F1-Maß
 {: #quality_wght_f1-measure}
 
 Das gewichtete F1-Maß gibt den gewichteten Mittelwert des F1-Maßes mit Gewichtungen gleich der Klassenwahrscheinlichkeit an.

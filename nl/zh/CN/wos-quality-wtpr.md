@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加权真正率 (wTPR) ![beta 标记](images/beta.png)
+# 加权真正率 (wTPR)
 {: #quality-wtpr}
 
 加权真正率给出权重等于类概率的 TPR 类的加权平均值。

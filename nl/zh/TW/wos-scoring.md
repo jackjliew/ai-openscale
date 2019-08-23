@@ -30,13 +30,15 @@ subcollection: ai-openscale
 
 如果要配置監視器，{{site.data.keyword.aios_short}} 會要求您傳送評分有效負載，以便開始記載將要監視的資料。
 
-- 對於部署在 {{site.data.keyword.pm_full}} 中的模型，您可以選擇在 {{site.data.keyword.pm_full}} 中對所部署的模型評分，或是使用有效負載記載 API 來評分。如果是在 {{site.data.keyword.pm_short}} 中對所部署模型評分，則會自動將它們傳送給 {{site.data.keyword.aios_short}}。 
-- 對於其他的機器學習引擎（例如 Microsoft Azure、Amazon SageMaker 或自訂機器學習引擎），則必須使用「有效負載記載 API」來傳送評分有效負載。如需相關資訊，請參閱[非 {{site.data.keyword.pm_full}} 服務實例的有效負載記載](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
+- 對於部署在 {{site.data.keyword.pm_full}} 中的模型，則會自動將它們傳送給 {{site.data.keyword.aios_short}}。對於會自動傳送的評分要求，您不必完成這項作業，且不會出現任何程式碼 Snippet。
+- 對於其他的機器學習引擎（例如 Microsoft Azure、Amazon SageMaker 或自訂機器學習引擎），則必須使用「有效負載記載 API」來傳送評分有效負載。因此，您必須使用 cURL 或 Python 格式的程式碼 Snippet，且您可以從「有效負載記載」頁面來擷取它。如需相關資訊，請參閱[非 {{site.data.keyword.pm_full}} 服務實例的有效負載記載](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
 
 ## 有效負載記載的相關步驟
 {: #cdb-score-apisteps}
 
-1. 選取一項部署，並移至**有效負載記載**頁面。
+1. 從 {{site.data.keyword.aios_short}} 儀表板中，按一下部署圖磚。
+2. 按一下**配置監視器**。 
+3. 在導覽窗格中，按一下**有效負載記載**。
 2. 按一下 `cURL` 或 `Python` 標籤，選擇要使用 `cURL` 還是 `Python` 程式碼。
 3. 按一下**複製到剪貼簿**，並將它貼到日誌模型部署要求和回應資料中。如需相關資訊，請參閱[非 {{site.data.keyword.pm_full}} 服務實例的有效負載記載](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
 
@@ -54,12 +56,12 @@ subcollection: ai-openscale
 
 - 對於列表、文字、影像模型，下列基準線要求會產生資料點：
 
-   - 1 項評分要求會產生 5000 個資料點。
+   -ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling servicescoring request generates 5000 data points.
 
 - 單就列表分類模型而言，會發出額外的評分要求，以提供對比解釋。上述基準線要求中會新增下列要求：
 
    - 若有 100 項評分要求，則每一項要求各會額外產生 51 個資料點。
-   - 若有 101 項評分要求，則每一項要求各會額外產生 1 個資料點。
+   - 101 scoring requests generatesai-open-scale-ibm-aios-scheduling  | 1 | Scheduling serviceadditional data point per request.
 
 
 ## 後續步驟

@@ -202,7 +202,7 @@ kubectl 클라이언트는 다음 두 가지 방법으로 구성할 수 있습�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep common-api)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       Running   1          6h
+    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     상태가 **실행 중**이며 완전히 준비된 **1/1**인지 확인하십시오.  다음 예에서는 팟으로 `ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c`를 사용합니다.
@@ -305,7 +305,7 @@ kubectl 클라이언트는 다음 두 가지 방법으로 구성할 수 있습�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep configuration)
     NAME                                                     READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-configuration-554f548667-7l782    1/1       Running   1          6h
+    ai-open-scale-ibm-aios-configuration-554f548667-7l782    1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     상태가 **실행 중**이며 완전히 준비된 **1/1**인지 확인하십시오.  다음 예에서는 팟으로 `ai-open-scale-ibm-aios-configuration-554f548667-7l782`를 사용합니다.
@@ -506,7 +506,7 @@ kubectl 클라이언트는 다음 두 가지 방법으로 구성할 수 있습�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep datamart)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb                1/1       Running   1          6h
+    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb                1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     상태가 **실행 중**이며 완전히 준비된 **1/1**인지 확인하십시오.  다음 예에서는 팟으로 `ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb`를 사용합니다.
@@ -715,7 +715,7 @@ kubectl 클라이언트는 다음 두 가지 방법으로 구성할 수 있습�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep feedback)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f               2/2       Running   1          6h
+    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f               2/2       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     상태가 **실행 중**이며 완전히 준비된 **2/2**인지 확인하십시오.  다음 예에서는 팟으로 `ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f`를 사용합니다.
@@ -823,7 +823,7 @@ kubectl 클라이언트는 다음 두 가지 방법으로 구성할 수 있습�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep ml-gateway-discovery)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt   1/1       Running   1          6h
+    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt   1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     상태가 **실행 중**이며 완전히 준비된 **1/1**인지 확인하십시오.  다음 예에서는 팟으로 `ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt`를 사용합니다.
@@ -1025,7 +1025,7 @@ kubectl 클라이언트는 다음 두 가지 방법으로 구성할 수 있습�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep payload-logging-api)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65    1/1       Running   1          6h
+    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65    1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     상태가 **실행 중**이며 완전히 준비된 **1/1**인지 확인하십시오.  다음 예에서는 팟으로 `ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65`를 사용합니다.
@@ -1125,7 +1125,7 @@ kubectl 클라이언트는 다음 두 가지 방법으로 구성할 수 있습�
     ```bash
     $ kubectl get pod -n aiopenscale | (head -n 1; grep payload-logging)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       Running   1          6h
+    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     상태가 **실행 중**이며 완전히 준비된 **1/1**인지 확인하십시오.  다음 예에서는 팟으로 `ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8`을 사용합니다.
@@ -1546,7 +1546,7 @@ kubectl 클라이언트는 다음 두 가지 방법으로 구성할 수 있습�
   es-ibm-es-rest-deploy-585df7f77c-j2d5k                3/3       Running             0          22d
   es-ibm-es-ui-deploy-6f59c7764c-7tlzn                  3/3       Running             55         16d
   es-ibm-es-zookeeper-sts-0                             1/1       Running             0          17d
-  es-ibm-es-zookeeper-sts-1                             1/1       Running             1          15d
+  es-ibm-es-zookeeper-sts-1                             1/1       Running            ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         15d
   es-ibm-es-zookeeper-sts-2                             1/1       Running   488        9d
   ```
 

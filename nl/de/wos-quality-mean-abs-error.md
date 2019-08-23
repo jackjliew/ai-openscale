@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Mittlerer absoluter Fehler ![Beta-Tag](images/beta.png)
+# Mittlerer absoluter Fehler
 {: #quality_abserror}
 
 Der mittlere absolute Fehler gibt den Mittelwert der absoluten Differenz zwischen Modellvorhersage und -zielwert an.
@@ -55,8 +55,8 @@ Der mittlere absolute Fehler gibt den Mittelwert der absoluten Differenz zwische
 Der mittlere absolute Fehler wird berechnet, indem alle absoluten Fehler addiert und durch die Anzahl der Fehler dividiert werden.
 
 ```
-                               SUM  | Yi - Xi |
+                         SUM  | Yi - Xi |
 Mittlere absolute Fehler =  _____________________
 
-                              Anzahl der Fehler
+                          Anzahl der Fehler
 ```

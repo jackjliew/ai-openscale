@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Gewichtete Genauigkeit ![Beta-Tag](images/beta.png)
+# Gewichtete Genauigkeit
 {: #quality_wgth_prec}
 
 Die gewichtete Genauigkeit gibt den gewichteten Mittelwert der Genauigkeit mit Gewichtungen gleich der Klassenwahrscheinlichkeit an.
@@ -56,8 +56,8 @@ Die Genauigkeit (P) ist definiert als die Anzahl der wahr-positiven Ergebnisse (
 
 
 ```
-                                  Anzahl der wahr-positiven Ergebnisse
+                        Anzahl der wahr-positiven Ergebnisse
 Genauigkeit =  __________________________________________________________________________________
 
-               (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-positiven Ergebnisse)
+             (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-positiven Ergebnisse)
 ```

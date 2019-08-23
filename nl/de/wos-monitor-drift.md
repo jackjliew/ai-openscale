@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Überwachung der Drifterkennung konfigurieren
+# Überwachung der Drifterkennung konfigurieren ![Beta-Tag](images/beta.png)
 {: #behavior-drift-config}
 
 Sie müssen die Überwachung der Drifterkennung in {{site.data.keyword.aios_full}} konfigurieren, bevor diese mit der Analyse des Modells beginnen kann. Zwei Möglichkeiten stehen zur Auswahl: Sie können das Modell online trainieren oder ein Notebook verwenden.
@@ -38,9 +38,9 @@ Sie können Ihr Modell mit {{site.data.keyword.aios_short}} online trainieren, w
 
 Bei der Verwendung von {{site.data.keyword.pm_full}} steht Ihnen die Option zur Verfügung, die Drifterkennung über die {{site.data.keyword.aios_short}}-Benutzerschnittstelle zu konfigurieren.
 
-1. Klicken Sie auf der Registerkarte **Drift** auf der Seite **Was ist Drift?** auf **Starten**, um den Konfigurationsprozess zu starten.
+1. Klicken Sie in der Registerkarte **Drift** unter **Was ist Drift**? auf **Beginnen**, um den Konfigurationsprozess zu starten.
 
-   ![Seite 'Was ist Drift?'](images/drift-config-1.png)
+   ![Seite 'Was ist Drift?'](images/wos-drift-config-1.png)
 
 2. Klicken Sie auf die Kachel **In Watson OpenScale trainieren**.
 
@@ -67,17 +67,17 @@ Diese Option ist hilfreich, wenn die Trainingsdaten nicht in Db2 oder {{site.dat
 1. Erstellen Sie ein Notebook, um das Drifterkennungsmodell zu generieren. Verwenden Sie das [Beispielnotebook](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb), das in der {{site.data.keyword.aios_short}}-Benutzerschnittstelle zur Verfügung steht.
 2. Komprimieren Sie das Drifterkennungsmodell mit einer Komprimierungssoftware in einer .TAR.GZ-Datei.
 
-1. Klicken Sie auf der Registerkarte **Drift** auf der Seite **Was ist Drift?** auf **Starten**, um den Konfigurationsprozess zu starten.
+1. Klicken Sie in der Registerkarte **Drift** unter **Was ist Drift**? auf **Beginnen**, um den Konfigurationsprozess zu starten.
 
-   ![Seite 'Was ist Drift?'](images/drift-config-1.png)
+   ![Seite 'Was ist Drift?'](images/wos-drift-config-1.png)
 
 2. Klicken Sie auf die Kachel **In einem Notebook trainieren**.
 
-   ![Seite 'Was ist Drift?'](images/drift-config-2.png)
+   ![Seite für Driftkonfiguration mit Online-Option und Notebook-Option](images/drift-config-2.png)
 
 3. Ziehen Sie die komprimierte Modelldatei in die Zielzone oder wählen Sie sie aus und klicken Sie dann auf **Weiter**.
 
-   ![Seite 'Was ist Drift?'](images/drift-config-2b.png)
+   ![Seite 'Was ist Drift?'](images/wos-drift-config-2b.png)
    
 3. Laden Sie das Drifterkennungsmodell hoch und klicken Sie auf **Weiter**.
 
@@ -96,4 +96,4 @@ Diese Option ist hilfreich, wenn die Trainingsdaten nicht in Db2 oder {{site.dat
 ## Weitere Schritte
 {: #behavior-drift-config-next-steps}
 
-- Machen Sie sich anhand der [Erläuterungen zum Modelldrift mit IBM Watson OpenScale](https://medium.com/@manish.bhide/4c5401aa8da4) mit dem Potenzial der Drifterkennung vertraut.
+- Weitere Informationen zur Interpretation der Drift finden Sie im Abschnitt [Ausmaß der Drift](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr).

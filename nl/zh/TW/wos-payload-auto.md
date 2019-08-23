@@ -40,13 +40,13 @@ subcollection: ai-openscale
 
    視有效負載格式而定：{{site.data.keyword.aios_short}}（類似於 {{site.data.keyword.pm_full}}）或使用者的格式會以對應的格式來傳回輸出。如果是使用者的格式，則會將它轉換成 {{site.data.keyword.aios_short}} 的格式，並在有效負載記載表格中儲存成有效負載記錄。如果評分輸入格式是 {{site.data.keyword.aios_short}} 的格式，就不會儲存有效負載（此有效負載來自 {{site.data.keyword.aios_short}}，而非來自使用者）。
 
-   如需相關資訊，請參閱[使用兩種有效負載格式](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-notsuppt)。
+   如需相關資訊，請參閱[使用兩種有效負載格式](#fmrk-workaround-notsuppt)。
 
 - 選項 2：如果因某些原因，不可能將這樣的邏輯內嵌在單一 REST API 端點中，您可以定義兩個端點。 
 
    其中一個端點供您的應用程式使用，不過，您必須新增有效負載記載，並將它轉換成預期的格式。第二個端點供 {{site.data.keyword.aios_short}} 用來進行必要的計算，例如：偏誤和可解釋性。這個端點不需要任何有效負載記載。在 {{site.data.keyword.aios_short}} 配置期間，第二個端點應指向採用相容格式的端點。
 
-   如需相關資訊，請參閱[使用兩個端點](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-opt2-cs1)。
+   如需相關資訊，請參閱[使用兩個端點](#fmrk-workaround-opt2-cs1)。
 
 - 選項 3：將有效負載記載模組移至原始端點或下游應用程式。 
 

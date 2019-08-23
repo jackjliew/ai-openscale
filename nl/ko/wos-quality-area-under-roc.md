@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# ROC 아래 영역 ![베타 태그](images/beta.png)
+# ROC 아래 영역
 {: #quality_roc}
 
 ROC(Receiver Operating Characteristic) 아래 영역 곡선은 재현율 및 거짓 양성 비율 곡선 아래에 영역을 제공하며 폴아웃 비율에 대한 민감성을 계산합니다.

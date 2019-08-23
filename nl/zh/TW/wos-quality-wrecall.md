@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加權查全率 ![測試版標記](images/beta.png)
+# 加權查全率
 {: #quality_weighted_recall}
 
 「加權查全率」提供查全率的加權平均值，且其加權等於類別機率。

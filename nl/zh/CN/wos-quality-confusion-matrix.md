@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 混淆矩阵 ![beta 标签](images/beta.png)
+# 混淆矩阵
 {: #it-conf-mtx}
 
 作为质量度量的详细信息，您可以查看模型未正确分析的记录。对于二元分类模型，此类异常可能表示误报或漏报，对于多类模型，则可能表示类赋值不正确。您还可以查看模型未正确分析的反馈记录的列表。

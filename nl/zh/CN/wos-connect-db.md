@@ -38,7 +38,7 @@ subcollection: ai-openscale
 
 1.  选择数据库。您有两个选项：免费数据库，或者现有数据库或新数据库。
 
-    ![选择数据库](images/gs-config-database.png)
+    ![显示“选择数据库”屏幕，其中包含两个选项，指示使用免费 Lite 套餐或使用现有数据库](images/gs-config-database.png)
 
     如果您具有付费的 {{site.data.keyword.cloud_notm}} 帐户，那么可以供应 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服务来充分利用与 Watson Studio 和持续学习服务的集成。如果选择不供应付费服务，那么可以将免费内部 PostgreSQL 存储与 {{site.data.keyword.aios_short}} 配合使用，但是将无法为模型配置持续学习。
     {: note}
@@ -54,7 +54,7 @@ subcollection: ai-openscale
 
 要继续使用免费数据库，请单击**使用免费 Lite 套餐数据库**磁贴，然后单击**保存**。
 
-  ![选择数据库](images/gs-config-database2.png)
+  ![显示“已保存数据库”弹出消息，并已选定“选择提供程序”按钮](images/gs-config-database2.png)
   
 可以从免费数据库升级到其他数据库，但无法将 Compose for Postgres、Database for Postgres 或 Db2 实例重新配置为免费数据库。升级之后，便无法再次使用免费数据库。并非所有当前数据（例如配置、评分结果和说明）都能重复使用。通过选择另一个模式或数据库，{{site.data.keyword.aios_short}} 环境将完全重置。
 
@@ -70,7 +70,7 @@ subcollection: ai-openscale
     {{site.data.keyword.aios_short}} 使用 PostgreSQL 或 Db2 数据库来存储模型相关数据（反馈数据或评分有效内容）和计算的度量。当前不支持 Lite Db2 套餐。有关训练数据的更多信息，请参阅 [ 为什么 {{site.data.keyword.aios_short}} 需要访问我的培训数据？](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
-    ![选择数据库](images/gs-config-database3.png)
+    ![显示“选择数据库”屏幕，其中包含用于输入数据库类型、数据库名称和模式的字段。](images/gs-config-database3.png)
 
 1.  您还可以单击**选择其他位置**以在 {{site.data.keyword.Bluemix_notm}} 帐户之外指定数据库位置。
 
@@ -112,4 +112,4 @@ subcollection: ai-openscale
 ## 后续步骤
 {: #cdb-next}
 
-{{site.data.keyword.aios_short}} 现在可供您用于[发送评分有效内容](/docs/services/ai-openscale?topic=ai-openscale-connect-db#cdb-score)和[为部署配置监视器](/docs/services/ai-openscale?topic=ai-openscale-mo-config)。
+{{site.data.keyword.aios_short}} 现在可供您用于[发送评分有效内容](/docs/services/ai-openscale?topic=ai-openscale-cdb-score)和[为部署配置监视器](/docs/services/ai-openscale?topic=ai-openscale-mo-config)。

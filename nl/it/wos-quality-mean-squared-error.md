@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Errore quadratico medio ![tag beta](images/beta.png)
+# Errore quadratico medio
 {: #quality_squerror}
 
 L'errore quadratico medio dà la media della differenza quadratica tra la previsione del modello e il valore obiettivo. Può essere utilizzato come misura della qualità di uno stimatore.

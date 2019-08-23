@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 誤肯定率 (FPR) ![測試版標記](images/beta.png)
+# 誤肯定率 (FPR)
 {: #quality_fpr_false}
 
 誤肯定率提供肯定類別中不正確預測的比例。

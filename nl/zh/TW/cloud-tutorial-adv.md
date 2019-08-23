@@ -28,6 +28,18 @@ subcollection: ai-openscale
 # Python SDK 指導教學（進階）
 {: #crt-ov}
 
+在本指導教學中，您將學習執行下列作業：
+
+- 執行 Python 記事本，以建立、訓練及部署機器學習模型。
+- 建立資料集區，配置效能、精確度和公平性監視器，以及建立要監視的資料。
+- 在 {{site.data.keyword.aios_short}} Insights 標籤中檢視結果。
+
+
+## Python 用戶端
+{: #in-pyc}
+
+[{{site.data.keyword.aios_short}} Python 用戶端](http://ai-openscale-python-client.mybluemix.net/){: external} 是一個 Python 程式庫，可讓您直接在 {{site.data.keyword.cloud_notm}} 上使用 {{site.data.keyword.aios_short}} 服務。您可以使用 Python 用戶端而非 {{site.data.keyword.aios_short}} 用戶端使用者介面，以直接配置記載資料庫、連結您的機器學習引擎，以及選取及監視部署。如需以此方式使用 Python 用戶端的相關範例，請參閱 [{{site.data.keyword.aios_short}} 樣本記事本](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks){: external}。
+
 ## 實務
 {: #crt-scenario}
 
@@ -74,7 +86,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
 - 如果您的帳戶尚無相關聯的實例，請[建立一個 {{site.data.keyword.DSX}} 實例](https://{DomainName}/catalog/services/watson-studio){: external}：
 
-  ![Watson Studio](images/watson_studio.png)
+  ![顯示 Watson Studio 圖磚](images/watson_studio.png)
 
 - 為您的服務命名，選擇 Lite（免費）方案，並按一下**建立**按鈕。
 
@@ -83,7 +95,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
 - 如果您的帳戶尚無相關聯的服務，[請佈建一項 {{site.data.keyword.cos_short}} 服務](https://{DomainName}/catalog/services/cloud-object-storage){: external}。
 
-  ![Object Storage](images/object_storage.png)
+  ![顯示 Object Storage 圖磚](images/object_storage.png)
 
 - 為您的服務命名，選擇 Lite（免費）方案，並按一下**建立**按鈕。
 
@@ -92,7 +104,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
 - 如果您的帳戶尚無相關聯的實例，請[佈建一個 {{site.data.keyword.pm_short}} 實例](https://{DomainName}/catalog/services/machine-learning){: external}：
 
-  ![Machine Learning](images/machine_learning.png)
+  ![顯示 Machine Learning 圖磚](images/machine_learning.png)
 
 - 為您的服務命名，選擇 Lite（免費）方案，並按一下**建立**按鈕。
 
@@ -103,7 +115,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
 - 如果您的帳戶尚無相關聯的實例，請[佈建一個 {{site.data.keyword.aios_short}} 實例](https://{DomainName}/catalog/services/watson-openscale){: external}：
 
-  ![{{site.data.keyword.aios_short}} 圖磚](images/wos-cloud-tile.png)
+  顯示 ![{{site.data.keyword.aios_short}} 圖磚](images/wos-cloud-tile.png)
 
 1. 按一下**型錄** > **AI** > **{{site.data.keyword.aios_short}}**。
 2. 為您的服務命名，選擇一種方案，並按一下**建立**按鈕。
@@ -114,11 +126,11 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
 如果您已有一個付費 {{site.data.keyword.cloud_notm}} 帳戶，您可以佈建 `Databases for PostgreSQL` 或 `Db2 Warehouse` 服務，以便充分利用與 {{site.data.keyword.DSX}} 的整合及持續學習服務。如果您選擇不佈建付費服務，您可以將免費的內部 PostgreSQL 儲存空間與 {{site.data.keyword.aios_short}} 搭配使用，只是這就無法為模型配置持續學習。
 
-- [佈建 Databases for PostgreSQL 服務](https://{DomainName}/catalog/services/databases-for-postgresql)或 [Db2 Warehouse 服務](https://{DomainName}/catalog/services/db2-warehouse)（如果您的帳戶尚無此服務的話）：
+- [佈建 Databases for PostgreSQL 服務](https://{DomainName}/catalog/services/databases-for-postgresql){: external}或 [Db2 Warehouse 服務](https://{DomainName}/catalog/services/db2-warehouse){: external}（如果您的帳戶尚無此服務的話）：
 
-  ![DB for Postgres](images/dbpostgres.png)
+  ![顯示 DB for Postgres 圖磚](images/dbpostgres.png)
 
-  ![Db2 Warehouse](images/db2_warehouse.png)
+  ![顯示 Db2 Warehouse 圖磚](images/db2_warehouse.png)
 
 - 為您的服務命名，選擇「標準」方案 (Databases for PostgreSQL) 或「入門」方案 (Db2 Warehouse)，並按一下**建立**按鈕。
 
@@ -135,7 +147,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
 - 選取**標準**圖磚，以建立專案：
 
-  ![Watson Studio - 選取「標準」專案](images/studio_create_standard.png)
+  ![顯示「Watson Studio - 選取標準專案」圖磚](images/studio_create_standard.png)
 
 - 為專案提供名稱和說明，在**儲存空間**下拉功能表中，確定已選取您建立的 Cloud Object Storage 服務，並按一下**建立**。
 
@@ -146,13 +158,13 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 ### 將 `Working with Watson Machine Learning` 記事本新增至 {{site.data.keyword.DSX}} 專案
 {: #crt-add-notebook}
 
-- 下載下列檔案：
+- 存取下列檔案。如果您具有 GitHub 帳戶，可以登入以複製及下載檔案。否則，您可以按一下**原始**按鈕，以檢視原始版本，並將檔案文字複製到新檔案，且其副檔名為 .ipynb。
 
     - [使用 Watson Machine Learning](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - 從 {{site.data.keyword.DSX}} 專案的**資產**標籤中，按一下**新增至專案**按鈕，並從下拉功能表中選取**記事本**：
 
-  ![新增連線](images/add_notebook.png)
+  ![顯示「選擇資產類型」，其中強調顯示了記事本圖磚](images/add_notebook.png)
 
 - 選取**從檔案**：
 
@@ -162,7 +174,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
   ![新建記事本表單](images/new_notebook_name2a.png)
 
-- 在**選取執行時期**區段中，選擇 Python 3.5 with Spark 選項：
+- 在**選取執行時期**區段中，選擇最新的 Python 3.5 with Spark 選項：
 
 - 按一下**建立記事本**。
 
@@ -176,7 +188,7 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 
 - 在「佈建服務及配置認證」區段中，進行下列變更：
 
-    - 遵循指示來建立、複製和貼上 {{site.data.keyword.cloud_notm}} API 金鑰。
+    - 遵循記事本中的指示，來建立、複製和貼上 {{site.data.keyword.cloud_notm}} API 金鑰。
 
     - 將 {{site.data.keyword.pm_full}} 服務認證取代為您先前建立的認證。
 
@@ -204,11 +216,11 @@ Jupyter 記事本會訓練、建立和部署一個 German Credit Risk 模型，�
 使用 [{{site.data.keyword.aios_short}} 儀表板](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}，按一下**洞察**標籤：
 
 
-  ![洞察](images/insight-dash-tab.png)
+  ![顯示「洞察」圖示](images/insight-dash-tab.png)
 
 「洞察」頁面提供已部署模型的度量概觀。如果「公平性」或「精確度」度量超出執行記事本時所設定的臨界值，您很容易就可以看到相關警示。本指導教學中使用的資料和設定會建立與這裡所示類似的「精確度」和「公平性」度量。
 
-  ![「洞察」概觀](images/insight-overview-adv-tutorial-2.png)
+  ![顯示「洞察概觀」儀表板，其中有一個 German Credit Risk 模型的圖磚](images/insight-overview-adv-tutorial-2.png)
 
 ### 檢視您部署的監視資料
 {: #crt-view-mon-data}

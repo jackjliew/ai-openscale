@@ -59,7 +59,7 @@ subscription.payload_logging.store(records=records_list)
 
 ペイロード・ロギング・テーブルの内容は、データベースに直接接続するか、または Python SDK を使用してプレビューできます。Python SDK を使用した場合のプレビューは、以下の出力例に示されています。 
 
-![ペイロード・ロギング・テーブルの Python SDK の出力例](images/wosntbok.png)
+![ペイロード・ロギング・テーブルの Python SDK での出力例](images/wosntbok.png)
 
 
 ## REST API によるペイロードのロギング
@@ -85,11 +85,7 @@ req_response = requests.post(endpoint,
                              headers = headers)
 ```
 
-
-
 ## 次のステップ
-{: #cdb-payload-nxt-stps}
 
-詳しくは、[Payload Logging](http://aiopenscale-api.mybluemix.net/#/Payload%20Logging%20(Public%20API)/publishScoringPayload){: external} を参照してください。
-
+ペイロード・ロギングのセットアップが完了したら、モデルの詳細を入力してモニタリングの構成を続行します。詳しくは、[モデル詳細の入力](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-work-model-dets)を参照してください。
 

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 混同行列 ![ベータ・タグ](images/beta.png)
+# 混同行列
 {: #it-conf-mtx}
 
 品質指標の詳細情報として、モデルが誤って分析したレコードを表示することができます。 このような異常は、二項分類モデルの場合は誤検出か検出漏れである可能性があり、多項モデルの場合はクラスの割り当ての誤りの可能性があります。 モデルが正しく分析しなかったフィードバック・レコードのリストを表示することもできます。
@@ -35,7 +35,7 @@ subcollection: ai-openscale
 
 ![品質指標の詳細テーブル](images/quality_metrics_002.png)
 
-二項の問題が検出された場合、{{site.data.keyword.aios_full}} はターゲット・カテゴリーを `positive` または `negative` のいずれかのレベルに割り当てます。この場合、混同行列出力は、positive カテゴリーのラベルを 2 番目の行または列に置くという規則に従います。
+二項の問題が検出された場合、{{site.data.keyword.aios_full}} はターゲット・カテゴリーを `positive` または `negative` のいずれかのレベルに割り当てます。 この場合、混同行列出力は、positive カテゴリーのラベルを 2 番目の行または列に置くという規則に従います。
 
 
 ## 手順

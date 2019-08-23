@@ -60,11 +60,11 @@ subcollection: ai-openscale
 ## Watson Studio 프로젝트 설정
 {: #gs-setup}
 
-1.  [Watson Studio 계정](https://dataplatform.ibm.com/){: external}에 로그인하고 새 프로젝트를 작성하여 시작하십시오. **프로젝트 작성**을 클릭하십시오. 
+1.  [Watson Studio 계정](https://dataplatform.ibm.com/){: external}에 로그인하고 새 프로젝트를 작성하여 시작하십시오. **프로젝트 작성**을 클릭하십시오.
 
     ![Watson Studio 프로젝트 작성](images/studio_create_proj.png)
 
-1.  **표준** 타일을 클릭하십시오. 
+1.  **표준** 타일을 클릭하십시오.
 
     ![Watson Studio 표준 프로젝트 선택](images/studio_create_standard.png)
 
@@ -112,14 +112,14 @@ subcollection: ai-openscale
 2.  서비스의 이름을 지정하고 **Lite 플랜**을 선택한 다음 **작성**을 클릭하십시오.
 
 1.  {{site.data.keyword.aios_short}} 인스턴스의 **관리** 탭을 선택하고 **애플리케이션 시작** 단추를 클릭하십시오. **{{site.data.keyword.aios_short}} 시작** 데모 페이지가 열립니다.
-2. 이 튜토리얼의 경우 **사양합니다**를 클릭하십시오. 
+2. 이 튜토리얼의 경우 **사양합니다**를 클릭하십시오.
 
 ### 데이터베이스 선택
 {: #gs-db-choice}
 
 이제 데이터베이스를 선택해야 합니다. 무료 데이터베이스 또는 기존/신규 데이터베이스의 두 가지 옵션이 있습니다.
 
-2. 이 튜토리얼의 경우 **무료 Lite 플랜 데이터베이스 사용** 타일을 선택하십시오. 
+2. 이 튜토리얼의 경우 **무료 Lite 플랜 데이터베이스 사용** 타일을 선택하십시오.
 
    무료 데이터베이스에는 몇 가지 중요한 제한사항이 있습니다. 호스팅하는 데이터베이스에 대한 별도의 액세스 권한이 제공되지 않습니다. 데이터베이스 및 데이터에 대한 {{site.data.keyword.aios_short}} 액세스를 제공합니다. GDPR을 준수하지 않습니다. 이러한 각 옵션에 대한 전체 세부사항은 [데이터베이스 지정](/docs/services/ai-openscale?topic=ai-openscale-connect-db) 주제를 참조하십시오. 기존 데이터베이스는 PostgreSQL 데이터베이스 또는 Db2 데이터베이스일 수 있습니다.
     {: tip}
@@ -141,7 +141,7 @@ subcollection: ai-openscale
 {: #gs-ctmod}
 
 
-1.  **Watson Machine Learning** 타일을 클릭한 후 **저장**을 클릭하십시오. 
+1.  **Watson Machine Learning** 타일을 클릭한 후 **저장**을 클릭하십시오.
 
 1.  이 튜토리얼의 경우 메뉴에서 {{site.data.keyword.pm_full}} 인스턴스를 선택하고 **다음**을 클릭하십시오.
 
@@ -309,13 +309,13 @@ subcollection: ai-openscale
 
     ![인사이트 탭 - 데이터 없음](images/gs-insight-overview.png)
 
-1.  그런 다음 **모니터 구성**을 클릭하십시오. 
+1.  그런 다음 **모니터 구성**을 클릭하십시오.
 
     ![편집 아이콘 표시](images/gs-insight-edit-icon.png)
 
-1.  **정확성**을 클릭한 후 **피드백**을 클릭하십시오. 
-1.  **피드백 데이터 추가** 단추를 클릭하고 다운로드한 `credit_feedback_data.csv` 파일을 선택한 후 **열기**를 클릭하십시오.  
-2. **쉼표(,)** 구분 기호를 선택한 후 **선택**을 클릭하십시오. 
+1.  **정확성**을 클릭한 후 **피드백**을 클릭하십시오.
+1.  **피드백 데이터 추가** 단추를 클릭하고 다운로드한 `credit_feedback_data.csv` 파일을 선택한 후 **열기**를 클릭하십시오. 
+2. **쉼표(,)** 구분 기호를 선택한 후 **선택**을 클릭하십시오.
 
     파일 크기가 현재 8MB로 제한됩니다.
     {: note}
@@ -327,16 +327,16 @@ CSV 파일을 추가하면 모델에 피드백 데이터가 제공됩니다.
 ## 드리프트 모니터 구성
 {: gs-drift-config}
 
-드리프트 모니터 구성 방법에 대한 정보는 [드리프트 발견 모니터 구성](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)을 참조하십시오. 
+드리프트 모니터 구성 방법에 대한 정보는 [드리프트 발견 모니터 구성](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)을 참조하십시오.
 
 ## 결과 보기
 {: #gs-viewres}
 
 정확성 모니터링을 구성한 후 한 시간 후에 정확성 확인이 실행됩니다. 프로덕션 시스템에서 대시보드가 피드백 데이터를 누적하는 데 시간이 필요합니다. 이 튜토리얼의 경우, **인사이트** 대시보드에서 결과를 볼 수 있도록 피드백 데이터를 추가한 후에 수동으로 정확성 확인을 트리거하고자 할 것입니다.
 
-결과를 즉시 확인하려면 **인사이트** 페이지에서 배치를 선택한 후 **공정성 지금 확인** 또는 **품질 지금 확인**을 클릭하십시오. 
+결과를 즉시 확인하려면 **인사이트** 페이지에서 배치를 선택한 후 **공정성 지금 확인** 또는 **품질 지금 확인**을 클릭하십시오.
 
-결과 해석에 대한 자세한 내용은 [인사이트 확보](/docs/services/ai-openscale?topic=ai-openscale-io-ov)를 참조하십시오. 
+결과 해석에 대한 자세한 내용은 [인사이트 확보](/docs/services/ai-openscale?topic=ai-openscale-io-ov)를 참조하십시오.
 
 ## 관련 정보
 {: #wos-info}

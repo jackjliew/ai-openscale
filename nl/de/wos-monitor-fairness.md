@@ -92,4 +92,4 @@ Da dieser Endpunkt die Verzerrung zur Laufzeit bearbeitet, wird er weiterhin Hin
 ## Weitere Schritte
 {: #mf-next}
 
-Auf der Seite **Überwachungen konfigurieren** können Sie eine weitere Überwachungskategorie auswählen.
+Klicken Sie auf die Registerkarte **Drift** und dann auf **Beginnen**, um mit der Konfiguration der Überwachung fortzufahren. Weitere Informationen hierzu enthält der Abschnitt [Drifterkennungsüberwachung konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).

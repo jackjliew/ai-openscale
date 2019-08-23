@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Configurazione del monitor di rilevamento deviazione
+# Configurazione del monitor di rilevamento deviazione ![tag beta](images/beta.png)
 {: #behavior-drift-config}
 
 È necessario configurare il monitor di deviazione {{site.data.keyword.aios_full}} prima che possa iniziare ad analizzare il modello. Ci sono due opzioni, addestrare il modello online o utilizzare un notebook.
@@ -40,7 +40,7 @@ Se si utilizza {{site.data.keyword.pm_full}}, è possibile utilizzare l'interfac
 
 1. Dalla scheda **Deviazione**, sulla pagina **Cos'è il monitor Deviazione?** fare clic su **Inizia** per avviare il processo di configurazione.
 
-   ![Pagina Cos'è il monitor Deviazione?](images/drift-config-1.png)
+   ![Pagina Cos'è il monitor Deviazione?](images/wos-drift-config-1.png)
 
 2. Fare clic sul riquadro **Training in Watson OpenScale**.
 
@@ -60,7 +60,7 @@ Se si utilizza {{site.data.keyword.pm_full}}, è possibile utilizzare l'interfac
 ## Passi per configurare la deviazione utilizzando un notebook
 {: #behavior-drift-config-steps-ntbk}
 
-Se si utilizza un provider di machine learning diverso da {{site.data.keyword.pm_full}}, come Microsoft Azure, Amazon SageMaker o un motore di machine learning personalizzato, è necessario utilizzare un notebook per configurare il rilevamento deviazione. È possibile configurare la deviazione anche per {{site.data.keyword.pm_full}} utilizzando questo metodo. 
+Se si utilizza un provider di machine learning diverso da {{site.data.keyword.pm_full}}, come Microsoft Azure, Amazon SageMaker o un motore di machine learning personalizzato, è necessario utilizzare un notebook per configurare il rilevamento deviazione. È possibile configurare la deviazione anche per {{site.data.keyword.pm_full}} utilizzando questo metodo.
 
 Questa opzione è utile se i dati di training non sono memorizzati in Db2 o {{site.data.keyword.cos_full}}. Utilizzando un notebook, è necessario leggere i dati di training in un frame di dati. Il notebook specializzato che è possibile scaricare da {{site.data.keyword.aios_short}}, crea un output specializzato che è possibile caricare su {{site.data.keyword.aios_short}}.
 
@@ -69,15 +69,15 @@ Questa opzione è utile se i dati di training non sono memorizzati in Db2 o {{si
 
 1. Dalla scheda **Deviazione**, sulla pagina **Cos'è il monitor Deviazione?** fare clic su **Inizia** per avviare il processo di configurazione.
 
-   ![Pagina Cos'è il monitor Deviazione?](images/drift-config-1.png)
+   ![Pagina Cos'è il monitor Deviazione?](images/wos-drift-config-1.png)
 
 2. Fare clic sul riquadro **Training in un notebook**.
 
-   ![Pagina Cos'è il monitor Deviazione?](images/drift-config-2.png)
+   ![Pagina di configurazione della deviazione con un'opzione online e un'opzione notebook](images/drift-config-2.png)
 
 3. Trascinare il file del modello compresso nella zona di destinazione oppure sfogliare per selezionarla e fare clic su **Avanti**.
 
-   ![Pagina Cos'è il monitor Deviazione?](images/drift-config-2b.png)
+   ![Pagina Cos'è il monitor Deviazione?](images/wos-drift-config-2b.png)
    
 3. Caricare il modello di rilevamento della deviazione e fare clic su **Avanti**.
 
@@ -96,4 +96,4 @@ Questa opzione è utile se i dati di training non sono memorizzati in Db2 o {{si
 ## Passi successivi
 {: #behavior-drift-config-next-steps}
 
-- Aumentare l'IQ di deviazione leggendo [Comprensione della deviazione modello con IBM Watson OpenScale](https://medium.com/@manish.bhide/4c5401aa8da4)
+- Per ulteriori informazioni sull'interpretazione della deviazione, consultare [Entità della deviazione](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)

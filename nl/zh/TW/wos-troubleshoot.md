@@ -29,10 +29,10 @@ subcollection: ai-openscale
 # 疑難排解
 {: #ts-trouble}
 
-## {{site.data.keyword.aios_full}} 常見問題
+## {{site.data.keyword.aios_full}} 共通問題
 {: #ts-trouble-common}
 
-以下是 {{site.data.keyword.aios_full}} on Cloud 和 {{site.data.keyword.wos4d_full}} 兩者的常見問題。
+以下是 {{site.data.keyword.aios_full}} on Cloud 和 {{site.data.keyword.wos4d_full}} 兩者的共通問題。
 
 ### 未適當顯示有效負載分析
 {: #ts-trouble-common-payloadfileformat}
@@ -202,7 +202,7 @@ subcollection: ai-openscale
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep common-api)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       Running   1          6h
+    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     請確定狀態是**執行中**，並已完全備妥 **1/1**。在下列範例中，我們將使用 `ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c` 作為 Pod。
@@ -305,7 +305,7 @@ subcollection: ai-openscale
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep configuration)
     NAME                                                     READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-configuration-554f548667-7l782    1/1       Running   1          6h
+    ai-open-scale-ibm-aios-configuration-554f548667-7l782    1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     請確定狀態是**執行中**，並已完全備妥 **1/1**。在下列範例中，我們將使用 `ai-open-scale-ibm-aios-configuration-554f548667-7l782` 作為 Pod。
@@ -506,7 +506,7 @@ subcollection: ai-openscale
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep datamart)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb                1/1       Running   1          6h
+    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb                1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     請確定狀態是**執行中**，並已完全備妥 **1/1**。在下列範例中，我們將使用 `ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb` 作為 Pod。
@@ -715,7 +715,7 @@ subcollection: ai-openscale
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep feedback)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f               2/2       Running   1          6h
+    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f               2/2       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     請確定狀態是**執行中**，並已完全備妥 **2/2**。在下列範例中，我們將使用 `ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f` 作為 Pod。
@@ -823,7 +823,7 @@ subcollection: ai-openscale
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep ml-gateway-discovery)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt   1/1       Running   1          6h
+    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt   1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     請確定狀態是**執行中**，並已完全備妥 **1/1**。在下列範例中，我們將使用 `ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt` 作為 Pod。
@@ -1025,7 +1025,7 @@ subcollection: ai-openscale
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep payload-logging-api)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65    1/1       Running   1          6h
+    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65    1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     請確定狀態是**執行中**，並已完全備妥 **1/1**。在下列範例中，我們將使用 `ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65` 作為 Pod。
@@ -1125,7 +1125,7 @@ subcollection: ai-openscale
     ```bash
     $ kubectl get pod -n aiopenscale | (head -n 1; grep payload-logging)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       Running   1          6h
+    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     請確定狀態是**執行中**，並已完全備妥 **1/1**。在下列範例中，我們將使用 `ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8` 作為 Pod。
@@ -1546,7 +1546,7 @@ subcollection: ai-openscale
   es-ibm-es-rest-deploy-585df7f77c-j2d5k                3/3       Running             0          22d
   es-ibm-es-ui-deploy-6f59c7764c-7tlzn                  3/3       Running             55         16d
   es-ibm-es-zookeeper-sts-0                             1/1       Running             0          17d
-  es-ibm-es-zookeeper-sts-1                             1/1       Running             1          15d
+  es-ibm-es-zookeeper-sts-1                             1/1       Running            ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         15d
   es-ibm-es-zookeeper-sts-2                             1/1       Running   488        9d
   ```
 

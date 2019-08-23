@@ -61,8 +61,6 @@ subcollection: ai-openscale
 
 [Python 클라이언트](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: external} 또는 [Rest API](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: external}를 사용하여 다음 예에 표시된 대로 {{site.data.keyword.aios_short}} UI를 통해 수동으로 레이블이 지정된 피드백 데이터를 추가해야 합니다.
 
-정확성 모니터링 제한사항은 [지원되는 프레임워크](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)를 검토하십시오.
-
 ### 편향성 제거된 정확성
 {: #acc-debias-view}
 

@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # SAS AI Solutions-Frameworks
 {: #frmwrks-sas}
 
-Bei {{site.data.keyword.aios_full}} ist eine Unterstützung der SAS AI Solutions-Frameworks in einem zukünftigen Release geplant.
+Mit SAS AI Solutions können Sie Nutzdatenprotokollierung, Rückmeldungsprotokollierung sowie Messungen der Leistungsgenauigkeit, Verzerrungserkennung zur Laufzeit, der Erklärbarkeit und der Funktion für automatische Verzerrungsbereinigung in {{site.data.keyword.aios_full}} ausführen.
+
+{{site.data.keyword.aios_full}} unterstützt die folgenden SAS AI Solutions-Frameworks vollständig:
 {: shortdesc}
 
 

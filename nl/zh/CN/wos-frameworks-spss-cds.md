@@ -27,6 +27,8 @@ subcollection: ai-openscale
 # IBM SPSS C&DS 框架
 {: #frmwrks-spss}
 
+您可以使用 IBM SPSS C&DS 在 {{site.data.keyword.aios_full}} 中执行有效内容日志记录、反馈日志记录以及度量性能准确性、运行时偏差检测、可解释性和自动除偏功能。
+
 {{site.data.keyword.aios_full}} 计划完全支持以下 IBM SPSS Collaboration and Deployment Services (C&DS) 框架：
 {: shortdesc}
 

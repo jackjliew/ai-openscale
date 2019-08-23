@@ -100,7 +100,7 @@ subcollection: ai-openscale
 ## {{site.data.keyword.aios_short}} の構成
 {: #gs-confaios}
 
-機械学習モデルがデプロイされているので、モデルの信頼性と透明性を確保するために {{site.data.keyword.aios_short}} を構成できます。
+機械学習モデルがデプロイされたので、次に、モデルの信頼性と透明性を確保するために {{site.data.keyword.aios_short}} を構成します。
 
 ### {{site.data.keyword.aios_short}} のプロビジョン
 {: #gs-provaios}

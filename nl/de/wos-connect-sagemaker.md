@@ -38,23 +38,25 @@ Sie können Ihren Machine-Learning-Anbieter auch mithilfe des Python-SDK hinzuf�
 
 {{site.data.keyword.aios_short}} stellt die Verbindung zu AI-Modellen und Bereitstellungen in einer Amazon SageMaker-Serviceinstanz her.
 
-1.  Klicken Sie auf der Registerkarte **Konfigurieren** auf **Machine Learning-Anbieter**. 
+1. Klicken Sie auf der Registerkarte **Konfigurieren** auf **Machine Learning-Provider**. Abhängig von Ihrer Umgebung werden möglicherweise nicht alle der folgenden Provider angezeigt:
 
-    ![Die Anzeige für die Auswahl des Machine Learning-Anbieters mit Kacheln für die unterstützten Machine Learning-Engines wird angezeigt.](images/wos-machine-learning-providers-selection.png)
+   ![Darstellung der Anzeige für die Auswahl des Machine Learning-Providers, mit Kacheln für die unterstützten Machine Learning-Engines.](images/wos-machine-learning-providers-selection.png)
 
-1.  Klicken Sie auf die Kachel **Amazon SageMaker**. 
+1.  Klicken Sie auf die Kachel **Amazon SageMaker**.
 
     ![Berechtigungsnachweise für Amazon SageMaker-Service eingeben](images/connect-sage-cred.png)
 
-1.  Geben Sie Ihre Berechtigungsnachweise ein und speichern Sie sie: 
+1.  Geben Sie Ihre Berechtigungsnachweise ein und speichern Sie sie:
 
-    - Zugriffsschlüssel-ID: Ihre AWS-Zugriffsschlüssel-ID, `aws_access_key_id`, die Sie identifiziert und Ihre AWS-Aufrufe authentifiziert und autorisiert. 
-    - Geheimer Zugriffsschlüssel: Ihr geheimer AWS-Zugriffsschlüssel, `aws_secret_access_key`, der erforderlich ist, um Ihre Identität zu verifizieren und Ihre AWS-Aufrufe zu authentifizieren und zu autorisieren. 
-    - Region: Geben Sie die Region ein, in der Ihre Zugriffsschlüssel-ID erstellt wurde. Schlüssel werden in der Region gespeichert und verwendet, in der sie erstellt wurden, und können nicht an eine andere Region übertragen werden. 
+    - Zugriffsschlüssel-ID: Ihre AWS-Zugriffsschlüssel-ID, `aws_access_key_id`, die Sie identifiziert und Ihre AWS-Aufrufe authentifiziert und autorisiert.
+    - Geheimer Zugriffsschlüssel: Ihr geheimer AWS-Zugriffsschlüssel, `aws_secret_access_key`, der erforderlich ist, um Ihre Identität zu verifizieren und Ihre AWS-Aufrufe zu authentifizieren und zu autorisieren.
+    - Region: Geben Sie die Region ein, in der Ihre Zugriffsschlüssel-ID erstellt wurde. Schlüssel werden in der Region gespeichert und verwendet, in der sie erstellt wurden, und können nicht an eine andere Region übertragen werden.
+    - Instanzname des Service-Providers: Der spezifische Name, der diesem Service-Provider zugeordnet ist.
+    - Beschreibung: (optional) Ihre Beschreibung dieser Service-Provider-Instanz in einfacher Sprache. Wenn Sie Produktions- und Testumgebungen haben, wäre dies ein guter Ort, um diese Informationen einzuschließen.
 
-1.  In {{site.data.keyword.aios_short}} sind die bereitgestellten Modelle aufgelistet. Wählen Sie die Modelle aus, die Sie überwachen möchten. 
+1.  In {{site.data.keyword.aios_short}} sind die bereitgestellten Modelle aufgelistet. Wählen Sie die Modelle aus, die Sie überwachen möchten.
 
 ### Weitere Schritte
 {: #csm-next}
 
-Nun können Sie in {{site.data.keyword.aios_short}} die [Überwachungen konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-mo-config). 
+Nun können Sie in {{site.data.keyword.aios_short}} die [Überwachungen konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-mo-config).

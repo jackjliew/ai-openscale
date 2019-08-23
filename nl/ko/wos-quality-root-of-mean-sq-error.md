@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 평균 제곱근 오차 ![베타 태그](images/beta.png)
+# 평균 제곱근 오차
 {: #supqualdets_squ_errors_mean}
 
 평균 제곱근 오차(RMSE) 보기는 모델의 예측 값과 관측 값 간의 차를 보여줍니다.

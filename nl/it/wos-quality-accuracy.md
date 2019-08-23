@@ -61,8 +61,6 @@ Accuratezza può significare cose diverse a seconda del tipo di algoritmo:
 
 È necessario aggiungere i dati di feedback etichettati manualmente attraverso l'interfaccia utente {{site.data.keyword.aios_short}}, come mostrato nei seguenti esempi, utilizzando un [client Python](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: external} o [l'API Rest](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: external}.
 
-Esaminare [Framework supportati](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) per conoscere le limitazioni del monitoraggio dell'accuratezza.
-
 ### Accuratezza senza distorsione
 {: #acc-debias-view}
 

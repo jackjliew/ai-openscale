@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# F1 수치 ![베타 태그](images/beta.png)
+# F1 수치
 {: #quality_f1-measr}
 
 F1 수치는 정밀도와 재현율의 조화 평균을 제공합니다.
@@ -52,7 +52,7 @@ F1 수치는 정밀도와 재현율의 조화 평균을 제공합니다.
 ## 계산법
 {: #quality_f1-measr-math}
 
-F1 수치는 정밀도와 재현율의 가중치 적용 조화 평균입니다. 
+F1 수치는 정밀도와 재현율의 가중치 적용 조화 평균입니다.
 
 ```
           (정밀도 * 재현율)

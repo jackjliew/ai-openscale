@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 対数損失 ![ベータ・タグ](images/beta.png)
+# 対数損失
 {: #quality_log_loss}
 
 対数損失は、ターゲット・クラスの確率 (確信度) の対数の平均です。 これは、予想対数尤度とも呼ばれ、モデルのパフォーマンスを表す有効な指標です。
@@ -48,6 +48,30 @@ subcollection: ai-openscale
 {: #quality_log_loss-display}
 
 ![対数損失が表示されています](images/quality-log-loss.png)
+
+### 公平性スコア
+{: #quality_log_loss-display-fairness-score}
+
+「対数損失」指標の場合、次の公平性スコアが表示されます。 
+
+![再現率スコアのパーセンテージが表示されています](images/wos-quality-logloss-score.png)
+
+### スケジュール
+{: #quality_log_loss-display-schedule}
+
+**「スケジュール」**ペインには**「最新の評価」**と**「次の評価」**の時刻が表示されます。品質指標は毎時間評価されます。評価を強制的に実行するには、**「今すぐ品質を評価」**をクリックします。フィードバックを追加するには、**「フィードバック・データの追加」**をクリックします。
+
+![スケジュール・ペインが表示されています。このペインには、最新の評価の時刻と次の評価の時刻が表示されています。](images/wos-quality-schedule.png)
+
+
+### 推奨
+{: #quality_log_loss-display-recommendations}
+
+グラフを解釈できるように、**「推奨」**ペインには、モデルの有効性の向上を示す傾向や悪化を示す傾向が表示されます。
+
+![推奨ペインが表示されています。](images/wos-quality-negative-recommendation.png)
+
+
 
 ## 計算
 {: #quality_log_loss-math}

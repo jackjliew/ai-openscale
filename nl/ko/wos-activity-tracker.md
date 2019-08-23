@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Activity Tracker 이벤트
 {: #at-events}
 
-{{site.data.keyword.cloud_notm}} 계정에 서비스로 프로비저닝된 {{site.data.keyword.aios_short}}이 있으면 [{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov)에서 다음 이벤트를 볼 수 있습니다.
+{{site.data.keyword.cloud_notm}} 계정에 서비스로 프로비저닝된 {{site.data.keyword.aios_short}}이 있으면 [{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov){: external}에서 다음 이벤트를 볼 수 있습니다.
 {: shortdesc}
 
 ## 공용 API용 이벤트

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Matrice di confusione ![tag beta](images/beta.png)
+# Matrice di confusione
 {: #it-conf-mtx}
 
 Come un dettaglio delle metriche di qualità, è possibile visualizzare i record che il modello ha analizzato in modo non corretto. Tali anomalie possono essere falsi positivi o falsi negativi per i modelli di classificazione binari o possono essere assegnazioni di classi non corrette per i modelli multi-classe. È anche possibile visualizzare un elenco di record di feedback che il modello non ha analizzato correttamente.

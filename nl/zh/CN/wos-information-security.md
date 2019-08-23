@@ -37,15 +37,15 @@ IBM 致力于为客户和合作伙伴提供创新的数据隐私、安全和监�
 
 如果需要为创建的 {{site.data.keyword.cloud}} {{site.data.keyword.watson}} 资源请求 GDPR 支持
 
--   在欧盟 (EU) 内，请参阅[请求对欧盟内创建的 {{site.data.keyword.Bluemix}} Watson 资源的支持](/docs/services/watson?topic=watson-gdpr-sar#request-EU)。
--   在欧盟以外的地区，请参阅[请求对欧盟以外的资源的支持](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU)。
+-   在欧盟 (EU) 内，请参阅[请求对欧盟内创建的 {{site.data.keyword.Bluemix}} Watson 资源的支持](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: external}。
+-   在欧盟以外的地区，请参阅[请求对欧盟以外的资源的支持](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU){: external}。
 
 ## 欧盟通用数据保护条例 (GDPR)
 {: #is-gdpr}
 
 IBM 致力于为客户和合作伙伴提供创新的数据隐私、安全和监管解决方案，以帮助他们实现 GDPR 合规性。
 
-在[此处](../../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/gdpr){: external} 了解有关 IBM 自己的 GDPR 就绪性旅程以及支持您合规旅程的 GDPR 功能和产品的更多信息。
+请在[此处](http://www.ibm.com/gdpr){: external}了解有关 IBM 自己的 GDPR 自身的 GDPR 准备之旅，以及我们为支持您完成合规旅程而提供的 GDPR 功能和产品。
 
 ## 标注和删除 {{site.data.keyword.aios_short}} 中的数据
 {: #is-stda}

@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # Framework di soluzioni AI SAS
 {: #frmwrks-sas}
 
-{{site.data.keyword.aios_full}} prevede di supportare i framework delle soluzioni AI SAS in una futura release.
+È possibile utilizzare SAS AI Solutions per eseguire la registrazione del payload, del feedback e per misurare l'accuratezza delle prestazioni, il rilevamento della distorsione al run-time, l'esplicabilità e la funzione di annullamento della distorsione automatico in {{site.data.keyword.aios_full}}.
+
+{{site.data.keyword.aios_full}} supporta completamente i seguenti framework di soluzioni AI SAS:
 {: shortdesc}
 
 

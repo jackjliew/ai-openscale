@@ -37,10 +37,6 @@ Il servizio {{site.data.keyword.aios_short}} supporta i seguenti motori di machi
 - [Personalizzato](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-custom#frmwrks-custom)
 - [SPSS C&DS](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss) (disponibile solo in {{site.data.keyword.wos4d_full}})
 
-- [SAS AI Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-sas#frmwrks-sas)
-{: download}
-- [Google Cloud ML Engine](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-google#frmwrks-google)
-{: download}
 
 Il supporto completo include le seguenti funzioni per il framework, il problema e il tipo di dati specifico:
 
@@ -67,7 +63,7 @@ Tabella 1. Dettagli supporto modello
 | **Classificazione immagine**      | No - argomento ricerca attiva | No - argomento ricerca attiva | Sì<sup>1</sup> | No ||
 {: caption="Dettagli supporto modello" caption-side="top"}
 
-<sup>1</sup> Se il modello/framework emette probabilità previsionali
+<sup>1</sup> L'esplicabilità è supportata se il modello/framework emette probabilità previsionali.
 
 <p>&nbsp;</p>
 

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 평균 절대 오차 ![베타 태그](images/beta.png)
+# 평균 절대 오차
 {: #quality_abserror}
 
 평균 절대 오차는 모델 예측과 목표값 간 절대 오차의 평균을 제공합니다.

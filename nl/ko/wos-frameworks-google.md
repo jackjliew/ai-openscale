@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # Google Cloud ML 엔진 프레임워크
 {: #frmwrks-google}
 
-{{site.data.keyword.aios_full}}은 향후 릴리스에서 Google Cloud 기계 학습 엔진 프레임워크를 지원할 계획입니다.
+Google Cloud ML Engine을 사용하여 {{site.data.keyword.aios_full}}에서 페이로드 로깅, 피드백 로깅을 수행하고 성능 정확성, 런타임 편향성 감지, 설명 가능성 및 자동-편향성 함수를 측정할 수 있습니다. 
+
+{{site.data.keyword.aios_full}}에서는 다음 Google Cloud Machine Learning Engine 프레임워크를 전적으로 지원합니다.
 {: shortdesc}
 
 표 1. 프레임워크 지원 세부사항

@@ -41,12 +41,12 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}}은 {{site.data.keyword.pm_full}} 인스턴스에서 AI 모델 및 배치에 연결됩니다.
 
-1.  **구성** 탭에서 **기계 학습 제공자**를 클릭하십시오. 
+1.  **구성** 탭에서 **기계 학습 제공자**를 클릭하십시오.
 
     ![지원되는 기계 학습 엔진에 대한 타일과 함께 기계 학습 서비스 제공자 선택 화면이 표시됨](images/wos-machine-learning-providers-selection.png)
 
 2.  {{site.data.keyword.pm_full}} 타일을 선택하십시오. {{site.data.keyword.aios_short}}에서 사용자의 {{site.data.keyword.Bluemix_notm}} 계정을 확인하여 기존 {{site.data.keyword.pm_full}} WML 인스턴스를 찾습니다. 
-3. **Watson Machine Learning 서비스** 드롭 다운 메뉴에서 인스턴스를 선택하십시오. 
+3. **Watson Machine Learning 서비스** 드롭 다운 메뉴에서 인스턴스를 선택하십시오.
 
     ![{{site.data.keyword.pm_short}} 서비스 선택](images/gs-set-wml.png)
 
@@ -56,9 +56,9 @@ subcollection: ai-openscale
 
     **저장**을 클릭하십시오.
 
-1.  {{site.data.keyword.aios_short}}이 배치된 모델을 나열합니다. 모니터할 모델을 선택한 후 **구성**을 클릭하십시오. 
+1.  {{site.data.keyword.aios_short}}이 배치된 모델을 나열합니다. 모니터할 모델을 선택한 후 **구성**을 클릭하십시오.
 
 ### 다음 단계
 {: #wml-next}
 
-이제 {{site.data.keyword.aios_short}}이 [모니터를 구성](/docs/services/ai-openscale?topic=ai-openscale-mo-config)할 준비가 되었습니다. 
+이제 {{site.data.keyword.aios_short}}이 [모니터를 구성](/docs/services/ai-openscale?topic=ai-openscale-mo-config)할 준비가 되었습니다.

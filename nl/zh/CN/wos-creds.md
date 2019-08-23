@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: credentials, REST API, data mart
+keywords: credentials, REST API, datamart ID, IDs, binding ID,  deployment ID, subscription ID
 
 subcollection: ai-openscale
 
@@ -36,29 +36,29 @@ subcollection: ai-openscale
 ## 创建平台 API 秘钥
 {: #cred-create-apikey}
 
-要创建 Platform API 密钥，请完成以下步骤：
+要创建 IBM Cloud API 密钥，请完成以下步骤：
 
-1. 登录到 [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}。
+- 登录到 [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}。
+- 选择**管理** --> **访问 (IAM)** --> **{{site.data.keyword.cloud_notm}} API 密钥**
+- 单击**创建 IBM Cloud API 密钥**按钮。
+- 为您的密钥提供名称和描述，然后单击 **创建**。
 
-2. 选择**管理** --> **安全性** --> **Platform API 密钥**
+## 查找服务标识：
+{: #cred-find-datamart-id}
 
-    ![Platform API 密钥](images/cred-api-key.png)
+在针对部署选择**配置监视器**时显示的 {{site.data.keyword.aios_short}} **有效内容日志记录**页面上查找数据集市、部署、预订或绑定标识。
 
-3. 创建并保存 Platform API 密钥。
-
-要查找数据集市（或服务实例）标识，请执行以下操作：
-
-1. 单击模型部署磁贴。
-2. 单击**配置** ![“配置”图标](images/configure-deployment-button.png) 图标。
-3. 单击**查看有效内容日志记录端点**。
-4. 在 {{site.data.keyword.aios_short}} **有效内容日志记录**页面上，查找**数据集市标识**字段。
+1. 单击模型部署磁贴。 
+2. 单击**配置监视器** ![“配置”图标](images/configure-deployment-button.png)。
+3. 单击**有效内容日志记录**。
+4. 在 {{site.data.keyword.aios_short}} **有效内容日志记录**页面上的**详细信息**窗格中，查找要查找的标识。例如，**数据集市标识**字段：
 
     ![数据集市标识](images/data-mart-id.png)
 
 ## 使用命令控制台创建服务实例凭证
 {: #cred-creds}
 
-要为 {{site.data.keyword.aios_short}} 创建凭证，请使用 {{site.data.keyword.cloud_notm}} [命令控制台](/docs/cli?topic=cloud-cli-ibmcloud-cli)完成以下步骤：
+要为 {{site.data.keyword.aios_short}} 创建凭证，请使用 {{site.data.keyword.cloud_notm}} [命令控制台](/docs/cli?){: external}完成以下步骤：
 
 1. 通过运行以下命令来检索 API 密钥：
 
@@ -76,7 +76,12 @@ subcollection: ai-openscale
     Locked       false
     UUID         ApiKey-xxxxxxxxx-afd7-xxxxx-b0e1-xxxxxxxxxxx
     ```
+
 2. 验证您在 {{site.data.keyword.cloud_notm}} 帐户中使用的资源组。
+
+   1. 转至仪表板。
+   2. 从**导航菜单**中，单击**资源列表**。
+   3. 从**组**列中，单击**按组或组织过滤**下拉选择，然后设置**缺省**复选框。
 
   ![云中的资源组](images/cloud-resource.png)
 
@@ -93,6 +98,7 @@ subcollection: ai-openscale
     ```curl
     ibmcloud resource service-instance '<Your_Watson_OpenScale_instance_name>'
     ```
+
     **注**：如果您是在 Windows 上使用 {{site.data.keyword.cloud_notm}} 命令控制台，请将以上命令中的单引号 (') 替换为双引号 (")。
 
     将显示以下信息：
@@ -120,8 +126,8 @@ subcollection: ai-openscale
 
 指定机器学习提供程序：
 
-- [指定 IBM Watson Machine Learning 服务实例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
-- [指定 Microsoft Azure ML Studio 实例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
-- [指定 Microsoft Azure ML Service 实例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
-- [指定 Amazon SageMaker ML 服务实例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
-- [指定定制 ML 服务实例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-co-connect)
+- [指定 IBM Watson Machine Learning 服务实例](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
+- [指定 Microsoft Azure ML Studio 实例](/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
+- [指定 Microsoft Azure ML Service 实例](/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
+- [指定 Amazon SageMaker ML 服务实例](/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
+- [指定定制 ML 服务实例](/docs/services/ai-openscale?topic=ai-openscale-co-connect)

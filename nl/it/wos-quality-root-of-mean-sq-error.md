@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Radice dell'errore quadratico medio ![tag beta](images/beta.png)
+# Radice dell'errore quadratico medio
 {: #supqualdets_squ_errors_mean}
 
 La radice dell'errore quadratico medio (o RMSE - root-mean-squared error) mostra la differenza tra i valori previsti e osservati nel proprio modello.

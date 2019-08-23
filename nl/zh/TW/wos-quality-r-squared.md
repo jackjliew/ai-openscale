@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# R 平方 ![測試版標記](images/beta.png)
+# R 平方
 {: #quality_r_squared}
 
 「R 平方」是指目標變異與目標變異預測錯誤之變異兩者之間的誤差率。它可告訴您用來建立模型的資料有多適合迴歸。
@@ -55,8 +55,8 @@ subcollection: ai-openscale
 「R 平方」度量是以下列公式來定義。
 
 ```
-                    可解釋的變異
-R 平方 = 1 -      _____________________
+                  explained variation
+R squared =ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service-  _____________________
 
                     變異總計
 ```

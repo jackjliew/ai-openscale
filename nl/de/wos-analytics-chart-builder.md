@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Diagrammerstellungsfunktion ![Beta-Tag](images/beta.png)
 {: #chart_builder}
 
-Erstellen Sie mit der Diagrammerstellungsfunktion von {{site.data.keyword.aios_short}} angepasste Visualisierungen, damit Sie Modellvorhersagen und -eingaben zur Laufzeit besser verstehen können. Die Diagrammerstellungsfunktion bietet die Möglichkeit, die Ausgabe zur Modellvorhersage für die Merkmale oder Datenbereiche anzuzeigen, die von einem Unternehmen als besonders wichtig erachtet werden. Dies erleichtert es, neue Trends in den Daten zu entdecken, die die Geschäfts- und Datenwissenschaftsteams dann dazu veranlassen könnten, Änderungen am AI-Modell vorzunehmen.
+Erstellen Sie mit der Diagrammerstellungsfunktion von {{site.data.keyword.aios_short}} angepasste Visualisierungen, damit Sie Modellvorhersagen und -eingaben zur Laufzeit besser verstehen können. Die Diagrammerstellungsfunktion bietet die Möglichkeit, die Ausgabe zur Modellvorhersage für die Merkmale oder Datenbereiche anzuzeigen, die von einem Unternehmen als besonders wichtig erachtet werden. Dies erleichtert es, neue Trends in den Daten zu entdecken, die die Geschäfts- und Datenwissenschaftsteams dann dazu veranlassen könnten, Änderungen am AI-Modell vorzunehmen. 
 {: shortdesc}
 
 Wenn Sie z. B. mit dem Kreditrisikomodell aus den Lernprogrammen vertraut sind, können Sie die Aufteilung in Vorhersageklassen für verschiedene Bereiche des Attributs für den Kreditverlauf erkennen. 

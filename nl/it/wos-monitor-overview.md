@@ -31,16 +31,16 @@ subcollection: ai-openscale
 Configurare e abilitare i monitor per ogni distribuzioni di cui si sta tenendo traccia con {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
+Ad esempio, se si sta utilizzando il **modello German Credit Risk** per il supporto didattico interattivo, selezionare la distribuzione modello, impostare il tipo di dati per la registrazione del payload e confermare le impostazioni che vengono presentate come parte della sezione dei dettagli del modello.
+
 ## Selezione di una distribuzione
 {: #mo-select-deploy}
 
-1. Dalla scheda **Insight**, fare clic sul pulsante **Aggiungi distribuzioni**. 
+1. Dalla scheda **Insight**, fare clic sul pulsante **Aggiungi al dashboard**. 
 
-   ![Pagina Seleziona distribuzione](images/config-select-deploy.png)
+   Viene visualizzato un elenco di distribuzioni di modelli disponibili. Se non si vedono distribuzioni di modelli, è necessario distribuire un modello utilizzando il provider di machine learning. Per il supporto didattico, selezionare il **modello German Credit Risk**.
 
-   Viene visualizzato un elenco di distribuzioni di modelli disponibili.
-
-   ![Preparazione per il monitoraggio](images/wos-select-model-deployment.png)
+   ![viene visualizzato il pannello Seleziona una distribuzione modello. Ha le selezioni per un provider di machine learning e una distribuzione.](images/wos-select-model-deployment.png)
 
 2. Fare clic su una distribuzione di modello, quindi su **Configura**.
 
@@ -53,20 +53,20 @@ Configurare e abilitare i monitor per ogni distribuzioni di cui si sta tenendo t
 ## Fornire i dettagli della registrazione del payload
 {: #mo-work-data}
 
-È necessario fornire informazioni sui dati del modello e di training. Per ulteriori informazioni sui dati di training, consultare [Perché {{site.data.keyword.aios_short}} ha bisogno di accedere ai miei dati di training?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+È necessario fornire informazioni sui dati del modello e di training. Per ulteriori informazioni sui dati di training, consultare [Perché {{site.data.keyword.aios_short}} ha bisogno di accedere ai miei dati di training?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) Per il supporto didattico, nel campo **Tipo di dati**, selezionare **Numerico/categoriale** e per **Tipo di algoritmo**, selezionare **Classificazione binaria**.
 
-![Preparazione alla spiegazione](images/config-what-monitor.png)
+![viene visualizzato il pannello Specifica tipo di input, con le selezioni per il tipo di dati e il tipo di algoritmo](images/config-what-monitor.png)
 
 - Se si utilizza un'istanza {{site.data.keyword.pm_full}} che si trova nella stessa regione dell'istanza {{site.data.keyword.aios_short}}, anche se è necessario selezionare il tipo di dati e il tipo di algoritmo, alcune informazioni di registrazione del payload sono configurate automaticamente. 
 - Altrimenti dalla scheda e dalle finestre **Registrazione payload**, è necessario immettere le informazioni sui tipi di dati e di algoritmi e la registrazione del payload. 
 
-   Ci sono requisiti specifici a seconda delle selezioni. Per ulteriori informazioni, consultare [Dati numerici/categoriali](https://test.cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan).
+   Ci sono requisiti specifici a seconda delle selezioni. Per ulteriori informazioni, consultare [Dati numerici/categoriali](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan).
 
    Prima di poter configurare i monitor, è necessario copiare uno dei frammenti di codice da eseguire. Eseguire il comando cURL nell'applicazione client o il comando Python nel notebook di data science. Questo fornisce un modo per registrare le richieste di distribuzione modello e per scrivere i dati di risposta nel database di payload.
    
 Dopo aver inviato i dettagli di registrazione del payload, utilizzando il metodo {{site.data.keyword.pm_full}} locale o utilizzando l'API, è necessario tornare alla schermata **Registrazione payload** e fare clic su **Ho terminato**.
 
-![è raffigurata la schermata di registrazione payload](images/payload-logging-gosales001.png)
+![viene visualizzato il pannello Registrazione payload ](images/payload-logging-gosales001.png)
 
 Se il calcolo del punteggio viene inviato correttamente a {{site.data.keyword.aios_short}}, viene visualizzato il seguente pannello dopo aver fatto clic sul pulsante **Ho terminato**. Il pulsante è nascosto e si vede il messaggio, **Registrazione attivata correttamente**.
 
@@ -76,19 +76,19 @@ Se il calcolo del punteggio viene inviato correttamente a {{site.data.keyword.ai
 ### Fornire i dettagli sul modello
 {: #mo-work-model-dets}
 
-Fornire le informazioni sul modello in modo che {{site.data.keyword.aios_short}} possa accedere al database e comprendere come è configurato il modello.
+Fornire le informazioni sul modello in modo che {{site.data.keyword.aios_short}} possa accedere al database e comprendere come è configurato il modello. Ad esempio, se si sta utilizzando il **modello German Credit Risk** per il supporto didattico interattivo, molti dei seguenti campi vengono completati automaticamente.
 
 Nello specifico, per configurare i monitor, è necessario eseguire le seguenti attività:
 
 1. Specificare l'ubicazione dei dati di training. Immettere il percorso, il nome host o l'indirizzo IP, il nome del database e le informazioni di autenticazione.
 2. All'interno del database, è necessario selezionare la tabella di training selezionando lo schema e la tabella.
-3. Selezionare la colonna etichetta dalla tabella di training.
+3. Selezionare la colonna etichetta dalla tabella di training, ad esempio, per il supporto didattico, fare clic sul riquadro **Risk**.
 4. Selezionare le funzioni che sono state utilizzate per addestrare la distribuzione AI.
 5. Selezionare le funzioni testo e categoriali.
-6. Selezionare la colonna di previsione di distribuzione.
+6. Selezionare la colonna di previsione di distribuzione, ad esempio, per il supporto didattico, fare clic sul riquadro **predictedLabel**.
 7. Infine, è possibile esaminare i dettagli del modello prima di salvarlo.
 
-Le seguenti sezioni forniscono alcune informazioni specifiche che si incontrano in base al tipo di modello, [Dati numerici/categoriali](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan) o [Immagini e testo non strutturato](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datai).
+Le seguenti sezioni forniscono alcune informazioni specifiche che si incontrano in base al tipo di modello, [Dati numerici/categoriali](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan) o [Immagini e testo non strutturato](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datai).
 
 
 ### Dati numerici/categoriali
@@ -161,4 +161,4 @@ Esaminare il riepilogo delle selezioni e fare clic su **Salva** per continuare.
 ### Passi successivi
 {: #mo-next}
 
-Per continuare la configurazione dei monitor, fare clic sulla scheda **Accuratezza** e fare clic su **Inizia**.Per ulteriori informazioni, consultare [Configurazione dei monitor Accuratezza o Qualità](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).
+Per continuare la configurazione dei monitor, fare clic sulla scheda **Qualità** e fare clic su **Inizia**. Per ulteriori informazioni, consultare [Configurazione del monitor Qualità](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).

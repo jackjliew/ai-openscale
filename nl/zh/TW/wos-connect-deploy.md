@@ -29,19 +29,20 @@ subcollection: ai-openscale
 # 選取要監視的部署
 {: #dpl-select}
 
-從部署清單中選取以便監視。
+如果要將監視器新增至 {{site.data.keyword.aios_short}} 儀表板，您必須已部署模型，而這些模型可透過您配置給 {{site.data.keyword.aios_short}} 的其中一個機器學習提供者取得。請從要監視的機器學習提供者和部署清單中選取。
 {: shortdesc}
 
 ## 選擇部署
 {: #dpl-config}
 
+1.  從 {{site.data.keyword.aios_short}} 儀表板，按一下**新增至儀表板**。
 1.  {{site.data.keyword.aios_short}} 會檢查您的機器學習提供者，以編譯所部署的模型清單。從部署清單中，您可以選取您想監視的部署。
 
-    ![選取部署](images/wos-select-model-deployment.png)
+    ![會顯示「選取部署」蹦現視窗，其中已選取機器學習提供者，且會列出該提供者的可用部署清單](images/wos-select-model-deployment.png)
 
 1.  按一下**配置**。
 
-您已順利選取部署。 
+您已順利選取要監視的部署。現在，您必須配置這個模型的監視器。 
 
 ## 後續步驟
 {: #dpl-next}

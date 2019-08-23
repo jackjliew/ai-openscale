@@ -37,10 +37,6 @@ Der {{site.data.keyword.aios_short}}-Service unterstützt die folgenden Machine 
 - [Angepasst](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-custom#frmwrks-custom)
 - [SPSS C&DS](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss) (nur in {{site.data.keyword.wos4d_full}} verfügbar)
 
-- [SAS AI Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-sas#frmwrks-sas)
-{: download}
-- [Google Cloud ML Engine](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-google#frmwrks-google)
-{: download}
 
 Die vollständige Unterstützung umfasst die folgenden Funktionen für das jeweilige Framework, das jeweilige Problem und den jeweiligen Datentyp:
 
@@ -67,7 +63,7 @@ Tabelle 1. Details der Modellunterstützung
 | **Imageklassifikation**      | Nein - Gegenstand der aktiven Forschung | Nein - Gegenstand der aktiven Forschung | Ja<sup>1</sup> | Nein ||
 {: caption="Details der Modellunterstützung" caption-side="top"}
 
-<sup>1</sup> Wenn vom Modell/Framework Vorhersagewahrscheinlichkeiten ausgegeben werden
+<sup>1</sup> Erklärbarkeit wird unterstützt, wenn Ihr Modell/Framework Vorhersagewahrscheinlichkeiten ausgibt.
 
 <p>&nbsp;</p>
 

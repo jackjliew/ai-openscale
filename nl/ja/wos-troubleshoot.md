@@ -202,7 +202,7 @@ kubectl クライアントを構成するには、2 つの方法があります�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep common-api)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       Running   1          6h
+    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     状況が **running** で、完全に準備ができた状態 (**1/1**) になっていることを確認します。  以下の例では、ポッドとして `ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c` を使用します。
@@ -305,7 +305,7 @@ cloudctl がラップトップにある場合は、以下のコマンドを実�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep configuration)
     NAME                                                     READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-configuration-554f548667-7l782    1/1       Running   1          6h
+    ai-open-scale-ibm-aios-configuration-554f548667-7l782    1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     状況が **running** で、完全に準備ができた状態 (**1/1**) になっていることを確認します。  以下の例では、ポッドとして `ai-open-scale-ibm-aios-configuration-554f548667-7l782` を使用します。
@@ -506,7 +506,7 @@ kubectl クライアントを構成するには、2 つの方法があります�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep datamart)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb                1/1       Running   1          6h
+    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb                1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     状況が **running** で、完全に準備ができた状態 (**1/1**) になっていることを確認します。  以下の例では、ポッドとして `ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb` を使用します。
@@ -715,7 +715,7 @@ kubectl クライアントを構成するには、2 つの方法があります�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep feedback)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f               2/2       Running   1          6h
+    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f               2/2       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     状況が **running** で、完全に準備ができた状態 (**2/2**) になっていることを確認します。  以下の例では、ポッドとして `ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f` を使用します。
@@ -823,7 +823,7 @@ kubectl クライアントを構成するには、2 つの方法があります�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep ml-gateway-discovery)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt   1/1       Running   1          6h
+    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt   1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     状況が **running** で、完全に準備ができた状態 (**1/1**) になっていることを確認します。  以下の例では、ポッドとして `ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt` を使用します。
@@ -1025,7 +1025,7 @@ kubectl クライアントを構成するには、2 つの方法があります�
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep payload-logging-api)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65    1/1       Running   1          6h
+    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65    1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     状況が **running** で、完全に準備ができた状態 (**1/1**) になっていることを確認します。  以下の例では、ポッドとして `ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65` を使用します。
@@ -1125,7 +1125,7 @@ kubectl クライアントを構成するには、2 つの方法があります�
     ```bash
     $ kubectl get pod -n aiopenscale | (head -n 1; grep payload-logging)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       Running   1          6h
+    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
     ```
 
     状況が **running** で、完全に準備ができた状態 (**1/1**) になっていることを確認します。  以下の例では、ポッドとして `ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8` を使用します。
@@ -1546,7 +1546,7 @@ kubectl クライアントを構成するには、2 つの方法があります�
   es-ibm-es-rest-deploy-585df7f77c-j2d5k                3/3       Running             0          22d
   es-ibm-es-ui-deploy-6f59c7764c-7tlzn                  3/3       Running             55         16d
   es-ibm-es-zookeeper-sts-0                             1/1       Running             0          17d
-  es-ibm-es-zookeeper-sts-1                             1/1       Running             1          15d
+  es-ibm-es-zookeeper-sts-1                             1/1       Running            ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         15d
   es-ibm-es-zookeeper-sts-2                             1/1       Running   488        9d
   ```
 

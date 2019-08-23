@@ -34,19 +34,24 @@ subcollection: ai-openscale
 ## カスタム・サービス・インスタンスの接続
 {: #co-config}
 
-{{site.data.keyword.aios_short}} を、サービス・インスタンスの AI モデルとデプロイメントに接続します。カスタム・サービスを接続できます。
+{{site.data.keyword.aios_short}} を、サービス・インスタンスの AI モデルとデプロイメントに接続します。 カスタム・サービスを接続できます。
 
-1. **「構成」**タブで、**「機械学習プロバイダー (Machine learning provider)」**をクリックします。
+1. **「構成」**タブで、**「機械学習プロバイダー (Machine learning provider)」**をクリックします。ご使用の環境によっては、以下のプロバイダーの一部が表示されないことがあります。
 
    ![機械学習サービス・プロバイダーの選択画面に、サポートされる機械学習エンジンのタイルが表示されます](images/wos-machine-learning-providers-selection.png)
 
 2. **「カスタム環境」**タイルを選択します。
 
-   ![カスタムの選択](images/ml-custom-provider.png)
+   ![カスタム機械学習プロバイダー構成画面に、資格情報、インスタンス名、および説明のフィールドが表示されています](images/ml-custom-provider.png)
 
-3. カスタム機械学習プロバイダーの名前と説明を入力して、**「次へ」**をクリックします。 
+1.  資格情報を入力して保存します。
 
-4. デプロイメントに接続するために、[リストを要求する](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list)か、[評価エンドポイントを個々に入力する](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints)かを選択します。
+    - ユーザー名: カスタム機械学習プロバイダーのユーザー名。
+    - パスワード: カスタム機械学習プロバイダーのパスワード。
+    - サービス・プロバイダー・インスタンス名: このサービス・プロバイダーに割り当てられている特定の名前。
+    - 説明: (オプション) このサービス・プロバイダー・インスタンスの簡単な説明。実動環境とテスト環境を運用している場合、その情報を含めることをお勧めします。
+
+4. デプロイメントへの接続を、[リストを要求する](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-request-list)ことで行うか、[評価エンドポイントを個々に入力する](/docs/services/ai-openscale?topic=ai-openscale-co-connect#co-config-scoring-endpoints)ことで行うかを選択します。
 
    ![カスタムの選択](images/ml-custom-connect-deployments.png)
     
@@ -59,7 +64,7 @@ subcollection: ai-openscale
 
    ![サービス資格情報の入力](images/connect-custom-cred.png)
 
-2. 機械学習のセットアップを保存した後に、**「ダッシュボード」**に戻り、**「インサイト」**タブをクリックしてから**「デプロイメントの追加 (Add deployments)」**ボタンをクリックします。
+2. 機械学習のセットアップを保存した後に、**「ダッシュボード」**に戻り、**「インサイト」**タブをクリックしてから**「ダッシュボードに追加」**ボタンをクリックします。
 
 3. リストからデプロイメントを選択し、**「構成」**をクリックします。
 
@@ -70,7 +75,7 @@ subcollection: ai-openscale
 
 1. **「個々の評価エンドポイントの入力」**タイルを選択した場合は、API エンドポイントの資格情報を入力してから**「保存」**をクリックします。
 
-2. 機械学習のセットアップを保存した後に、**「ダッシュボード」**に戻り、**「インサイト」**タブをクリックしてから**「デプロイメントの追加 (Add deployments)」**ボタンをクリックします。
+2. 機械学習のセットアップを保存した後に、**「ダッシュボード」**に戻り、**「インサイト」**タブをクリックしてから**「ダッシュボードに追加」**ボタンをクリックします。
 
 3. **「エンドポイントの追加 (Add Endpoint)」**ボタンをクリックします。
 

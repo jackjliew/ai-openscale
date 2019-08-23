@@ -31,7 +31,6 @@ subcollection: ai-openscale
 Die Fairness gibt als Gruppenmetrik die Neigung des Modells an, günstige Ergebnisse an andere Gruppe zu übergeben. Bei einer Gruppe kann es sich z. B. um eine Altersgruppe, eine dem Geschlecht nach gebildete Gruppe oder eine Ethnie handeln.
 {: shortdesc}
 
-
 ## Fairness bei Gruppen - auf einen Blick
 {: #quality_group-glance}
 
@@ -56,19 +55,40 @@ Die Fairness gibt als Gruppenmetrik die Neigung des Modells an, günstige Ergebn
 ### Ethnizität (ethnicity)
 {: #quality_group-ethnicity}
 
-{{site.data.keyword.aios_short}} empfiehlt, im Attribut für **Ethnizität** den Wert für `weiß` (White-caucasian) als Referenzwert und andere Ethnien als zu überwachende Werte für die Verzerrungsüberwachung zu konfigurieren. 
+{{site.data.keyword.aios_short}} empfiehlt, im Attribut für **Ethnizität** den Wert für `weiß` (White-caucasian) als Referenzwert und andere Ethnien als zu überwachende Werte für die Verzerrungsüberwachung zu konfigurieren.
 
 ### Familienstand (marital status)
 {: #quality_group-marital}
 
-{{site.data.keyword.aios_short}} empfiehlt, im Attribut für **Familienstand** den Wert für `verheiratet` (married) als Referenzwert und `ledig` (single) als zu überwachenden Wert für die Verzerrungsüberwachung zu konfigurieren. 
+{{site.data.keyword.aios_short}} empfiehlt, im Attribut für **Familienstand** den Wert für `verheiratet` (married) als Referenzwert und `ledig` (single) als zu überwachenden Wert für die Verzerrungsüberwachung zu konfigurieren.
 
 ### Alter (age)
 {: #quality_group-age}
 
-{{site.data.keyword.aios_short}} empfiehlt, im Attribut für **Alter** die Verzerrungsüberwachung so zu konfigurieren, dass die verschiedenen Altersgruppen eine umsetzbare Verzerrungsbereinigung ermöglichen. 
+{{site.data.keyword.aios_short}} empfiehlt, im Attribut für **Alter** die Verzerrungsüberwachung so zu konfigurieren, dass die verschiedenen Altersgruppen eine umsetzbare Verzerrungsbereinigung ermöglichen.
 
 ### Postleitzahl (zip code)
 {: #quality_group-zip}
 
 {{site.data.keyword.aios_short}} empfiehlt, im Attribut für **Postleitzahl** die Verzerrungsüberwachung so zu konfigurieren, dass ein Scoring für die einzelnen Postleitzahlen durchgeführt wird.
+
+## Anzeige interpretieren
+{: #quality_group-display}
+
+### Fairness-Score für eine Gruppe
+{: #quality_group-display-fairnessscore}
+
+
+
+### Überwachte Gruppe
+{: #quality_group-display-monitoredgroups}
+
+
+
+### Zeitplan
+{: #quality_group-display-schedule}
+
+Das Fenster **Zeitplan** zeigt Folgendes an: 
+
+
+

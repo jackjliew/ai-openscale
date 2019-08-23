@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 假正率 (FPR) ![beta 标记](images/beta.png)
+# 误报率 (FPR)
 {: #quality_fpr_false}
 
 假正率给出不正确预测在正类中的比例。

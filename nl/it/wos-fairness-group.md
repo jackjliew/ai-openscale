@@ -31,7 +31,6 @@ subcollection: ai-openscale
 La correttezza per una metrica di gruppo dà la propensione del modello ad offrire risultati favorevoli ad un gruppo rispetto a un altro. È possibile utilizzare qualsiasi gruppo, ad es. age, sex o race.
 {: shortdesc}
 
-
 ## Correttezza per un gruppo a colpo d'occhio
 {: #quality_group-glance}
 
@@ -72,3 +71,24 @@ La correttezza per una metrica di gruppo dà la propensione del modello ad offri
 {: #quality_group-zip}
 
 {{site.data.keyword.aios_short}} raccomanda che all'interno dell'attributo **zip code**, il monitor di distorsione sia configurato in modo tale che sia effettuato il calcolo del punteggio dei singoli CAP.
+
+## Interpretazione del pannello
+{: #quality_group-display}
+
+### Punteggio di correttezza per un gruppo
+{: #quality_group-display-fairnessscore}
+
+
+
+### Gruppi monitorati
+{: #quality_group-display-monitoredgroups}
+
+
+
+### Pianifica
+{: #quality_group-display-schedule}
+
+Il riquadro **Pianifica** mostra  
+
+
+

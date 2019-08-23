@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # Google Cloud ML Engine フレームワーク
 {: #frmwrks-google}
 
-{{site.data.keyword.aios_full}} は将来のリリースで Google Cloud Machine Learning Engine フレームワークをサポートする予定です。
+Google Cloud ML Engine を使用して、ペイロード・ロギングとフィードバック・ロギングを実行し、{{site.data.keyword.aios_full}} でパフォーマンスの正確度、実行時のバイアス検出、説明性、および自動バイアス緩和機能を測定することができます。
+
+{{site.data.keyword.aios_full}} では、以下の Google Cloud Machine Learning Engine フレームワークが完全にサポートされています。
 {: shortdesc}
 
 表 1. フレームワークのサポート詳細

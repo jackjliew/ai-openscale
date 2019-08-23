@@ -38,9 +38,9 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}} 连接到 Amazon SageMaker 服务实例中的 AI 模型和部署。
 
-1.  从**配置**选项卡中，单击**机器学习提供程序**。
+1. 从**配置**选项卡中，单击**机器学习提供程序**。根据您的环境，您可能看不到以下所有提供程序：
 
-    ![显示“选择机器学习服务提供程序”屏幕，其中包含受支持的机器学习引擎的磁贴](images/wos-machine-learning-providers-selection.png)
+   ![显示“选择机器学习服务提供程序”屏幕，其中包含受支持的机器学习引擎的磁贴](images/wos-machine-learning-providers-selection.png)
 
 1.  单击 **Amazon SageMaker** 磁贴。
 
@@ -51,6 +51,8 @@ subcollection: ai-openscale
     - 访问密钥标识：您的 AWS 访问密钥标识 `aws_access_key_id`，用于验证您的身份，并认证和授权您对 AWS 进行的呼叫。
     - 访问密钥：您的 AWS 访问密钥 `aws_secret_access_key`，需要此密钥才能验证您的身份，并认证和授权您对 AWS 进行的呼叫。
     - 区域：输入在其中创建了访问密钥标识的区域。密钥在其创建所在区域中进行存储和使用，并且不能转移到其他区域。
+    - 服务提供程序实例名称：分配给此服务提供程序的特定名称。
+    - 描述：（可选）此服务提供程序实例的简明语言描述。如果您具有生产和测试环境，那么这将是包含该信息的理想位置。
 
 1.  {{site.data.keyword.aios_short}} 列出已部署模型；选择要监视的模型。
 

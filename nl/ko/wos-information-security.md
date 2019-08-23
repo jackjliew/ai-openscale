@@ -41,15 +41,15 @@ IBM은 고객 및 파트너에게 혁신적인 데이터 개인정보 보호, �
 
 작성된 {{site.data.keyword.cloud}} {{site.data.keyword.watson}} 리소스에 대한 GDPR 지원을 요청해야 하는 경우
 
--   유럽 연합(EU)인 경우, [유럽 연합에서 작성된 {{site.data.keyword.Bluemix}} Watson 리소스에 대한 지원 요청](/docs/services/watson?topic=watson-gdpr-sar#request-EU)을 참조하십시오.
--   EU 외부인 경우, [유럽 연합 외부의 리소스에 대한 지원 요청](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU)을 참조하십시오.
+-   유럽 연합(EU)인 경우, [유럽 연합에서 작성된 {{site.data.keyword.Bluemix}} Watson 리소스에 대한 지원 요청](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: external}을 참조하십시오.
+-   EU 외부인 경우, [유럽 연합 외부의 리소스에 대한 지원 요청](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU){: external}을 참조하십시오.
 
 ## 유럽 연합의 일반 개인정보 보호법률(GDPR)
 {: #is-gdpr}
 
 IBM은 고객 및 파트너가 GDPR을 준수하는 데 도움을 줄 수 있도록 혁신적인 데이터 개인정보 보호, 보안 및 통제 솔루션을 제공하려 노력하고 있습니다.
 
-준수 준비를 지원하기 위한 IBM의 자체 GDPR 준비 과정 및 GDPR 기능과 오퍼링에 대한 자세한 정보는 [여기](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/gdpr)에서 확인하십시오.{: external}.
+[여기서](http://www.ibm.com/gdpr){: external} IBM의 자체 GDPR 준비 과정 및 귀사의 준수 과정을 지원하기 위한 GDPR 기능과 오퍼링에 대해 학습하십시오. 
 
 ## {{site.data.keyword.aios_short}}에서 데이터 레이블링 및 삭제
 {: #is-stda}

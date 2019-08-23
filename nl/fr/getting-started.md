@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -72,7 +72,7 @@ telles que le gradient d'arbres et les réseaux neuronaux, peuvent générer des
 pour garantir l'approbation réglementaire, par exemple quant à l'article 22 du RGPD (règlement général sur la protection des données)
 ou à la loi fédérale américaine FCRA (Fair Credit Reporting Act) gérée par le Consumer Financial Protection Bureau.
 
-Le modèle de risque de crédit fourni dans ce tutoriel utilise un ensemble de données de formation contenant 20 attributs sur chaque demandeur de prêt. Deux de ces attributs, l'âge et le sexe, peuvent être testés quant au biais. Ce tutoriel se concentrera sur le biais par rapport à ces deux attributs. Pour plus d'informations sur les données de formation, voir [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+Le modèle de risque de crédit fourni dans ce tutoriel utilise un ensemble de données de formation contenant 20 attributs sur chaque demandeur de prêt. Deux de ces attributs, l'âge et le sexe, peuvent être testés quant au biais. Ce tutoriel se concentrera sur le biais par rapport à ces deux attributs. Pour plus d'informations sur les données de formation, consultez [Pourquoi {{site.data.keyword.aios_short}} a-t-il besoin d'accéder à mes données de formation ?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
 
 {{site.data.keyword.aios_short}}
 surveillera la propension du modèle déployé à donner un résultat favorable ("aucun risque") pour un groupe (le groupe de référence) sur un autre (le groupe surveillé). Dans ce tutoriel, le groupe surveillé est celui des `femmes` pour le sexe, et `19 à 25 ans` pour l'âge.
@@ -82,7 +82,7 @@ surveillera la propension du modèle déployé à donner un résultat favorable 
 
 Il y a plusieurs options de configuration, selon votre préférence et votre niveau d'expertise.
 
-- [La configuration automatisée suivante](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)
+- [La configuration automatisée suivante](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start)
 vous guide dans le processus en effectuant des tâches pour vous en arrière-plan.
 
    L'utilisation d'une visite guidée signifie que vous pouvez regarder et cliquer pour passer à la partie suivante.
@@ -94,12 +94,11 @@ vous permet de prendre le contrôle avec un script facile à suivre.
    
 - [Le tutoriel avancé](/docs/services/ai-openscale?topic=ai-openscale-crt-ov)
 permet aux utilisateurs plus techniques d'installer un module Python
-qui automatise la mise à disposition et la configuration des services requis. Il est destiné aux spécialistes des données ou aux utilisateurs à l'aise avec le codage, Python et les bloc-notes. C'est un exemple d'utilisation du client {{site.data.keyword.aios_short}} pour effectuer des opérations par programme. Le bloc-notes utilisé dans ce tutoriel aboutit au même résultat que la [configuration automatisée](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start).
+qui automatise la mise à disposition et la configuration des services requis. Il est destiné aux spécialistes des données ou aux utilisateurs à l'aise avec le codage, Python et les bloc-notes. C'est un exemple d'utilisation du client {{site.data.keyword.aios_short}} pour effectuer des opérations par programme. Le bloc-notes utilisé dans ce tutoriel aboutit au même résultat que la [configuration automatisée](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start).
 
-   Ce module nécessite que Python 3 soit installé, ce qui inclut le système de gestion de package pip. Pour les instructions, voir
-[Installation d'un module Python pour configurer {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module).
+   Ce module nécessite que Python 3 soit installé, ce qui inclut le système de gestion de package pip. Pour les instructions, consultez [Installation d'un module Python pour configurer {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module).
 
-Pour d'autres liens de tutoriels, voir [Autres ressources](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov).
+Pour d'autres liens de tutoriels, consultez [Autres ressources](/docs/services/ai-openscale?topic=ai-openscale-arsc-ov).
 
 ## Configuration automatique
 {: #wos-fast-start}
@@ -112,11 +111,10 @@ Pour voir rapidement comment {{site.data.keyword.aios_short}} surveille un modè
 
 Avant de commencer la visite guidée, vous devez avoir configuré les ressources suivantes :
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
-La visite de configuration automatisée est conçue pour fonctionner avec le moins possible d'interaction de l'utilisateur.
-Elle prend automatiquement pour vous les décisions suivantes :
+La visite de configuration automatisée est conçue pour fonctionner avec le moins possible d'interaction de l'utilisateur. Elle prend automatiquement pour vous les décisions suivantes :
 
 - Si vous avez plusieurs instances d'{{site.data.keyword.pm_full}},
 le processus d'installation effectue un appel API pour les répertorier
@@ -124,7 +122,7 @@ et choisit la première de la liste.
 - Pour créer une nouvelle version Lite d'{{site.data.keyword.pm_full}},
 le programme d'installation de {{site.data.keyword.aios_short}} utilise le groupe de ressources par défaut de votre compte {{site.data.keyword.Bluemix}}.
 
-### Mettez à disposition un service {{site.data.keyword.aios_full}}
+### Mettez à disposition un service {{site.data.keyword.aios_short}}
 {: #crt-wos-faststart}
 
 Si vous ne l'avez pas déjà fait, mettez à disposition {{site.data.keyword.aios_full}}. 
@@ -135,24 +133,20 @@ Si vous ne l'avez pas déjà fait, mettez à disposition {{site.data.keyword.aio
 
 1. Cliquez sur **Catalogue** > **IA** > **{{site.data.keyword.aios_short}}**.
 2. Donnez un nom à votre service, choisissez un forfait et cliquez sur le bouton **Créer**.
-3. Pour démarrer {{site.data.keyword.aios_short}}, cliquez sur le bouton **Commencer**.
+3. Pour démarrer {{site.data.keyword.aios_short}}, cliquez sur le bouton **Lancer l'application**.
 
-## Utilisation de la démonstration de l'interface utilisateur
+## Configuration automatique
 {: #wos-work-demo}
 
 1.  Connectez-vous à votre instance {{site.data.keyword.aios_short}} sur {{site.data.keyword.Bluemix}}.
-1.  Pour utiliser le scénario de démonstration, cliquez sur **Lancer la démonstration**.
+1.  Pour configurer automatiquement votre instance {{site.data.keyword.aios_short}} avec des données exemples, cliquez sur **Configuration automatique**.
 
-   ![Bienvenue dans la démonstration](images/fastpath_demo_11.31.04.png)
+   ![Bienvenue dans la démonstration](images/cloud-auto-setup.png)
 
-   Lors de l'application des accès aux services {{site.data.keyword.aios_short}}, vous pouvez consulter le scénario de démonstration :
-
-   ![Aperçu de la démonstration](images/fastpath_demo_11.31.58.png)
-
-Une fois l'application des accès terminée, cliquez sur le bouton **C'est parti** pour visiter le tableau de bord {{site.data.keyword.aios_short}}, puis allez à la section [Affichage des résultats dans {{site.data.keyword.aios_short}}](#wos-open).
-
-   ![Lancement de la démonstration](images/fastpath_demo_11.33.45.png)
-
+   Pendant la mise à disposition des services {{site.data.keyword.aios_short}}, vous pouvez regarder le scénario de démonstration.
+Une fois la mise à disposition terminée, cliquez sur le bouton **Démarrer la visite**
+pour visiter le tableau de bord {{site.data.keyword.aios_short}},
+puis allez à la section [Affichage des résultats dans {{site.data.keyword.aios_short}}](#wos-open).
 
 ## Affichage des résultats dans {{site.data.keyword.aios_short}}
 {: #wos-open}
@@ -175,23 +169,9 @@ La page Analyses permet de voir d'un coup d'oeil les problèmes d'équité et d'
 {: #wos-monitoring}
 
 1.  Sur la page Analyses, cliquez sur le carreau `GermanCreditRiskModelICP` pour afficher les détails des données surveillées.
-1.  Cliquez sur le marqueur du graphe et faites-le glisser pour afficher une période de date et d'heure présentant les données, puis cliquez sur le lien **Afficher les détails**. Vous avez également la possibilité de cliquer sur différentes périodes de temps dans le graphe pour modifier les données affichées.
+1.  Cliquez sur le marqueur du graphe et faites-le glisser pour afficher une période de date et d'heure présentant les données, puis cliquez sur le lien **Afficher les détails**. Vous avez également la possibilité de cliquer sur différentes périodes de temps dans le graphe pour modifier les données affichées. 
 
-     - Par exemple, l'écran suivant affiche les données d'une date/heure donnée. Les dates et heures varient en fonction du moment où vous exécutez le module.
-
-     - Pour savoir comment interpréter le graphe de temps,
-voir [Surveillance de l'équité, du nombre moyen de demandes par minute et de l'exactitude](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart).
-
-   ![Lancement de la démonstration](images/fastpath_demo_11.34.17.png)
-
-1.  Pour voir les détails de la surveillance des données de `SEXE`, sélectionnez `SEXE` dans le menu déroulant.
-
-    - Remarquez que la capture d'écran suivante présente un biais.
-    
-   ![Lancement de la démonstration](images/fastpath_demo_11.34.27.png)
-
-    - Pour plus d'informations sur l'interprétation du graphe des points de données à une heure spécifique, voir [Visualisation des données](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual).
-
+Pour savoir comment interpréter le graphe de temps, voir [Obtention d'analyses](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
 ### Afficher l'explicabilité
 {: #wos-explain}
@@ -204,20 +184,17 @@ Les ID des transactions de la dernière heure qui présentent un biais s'affiche
 
    ![Lancement de la démonstration](images/fastpath_demo_11.35.12.png)
 
-Pour savoir comment trouver et expliquer les transactions, voir [Surveillance de l'explicabilité](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov).
+Pour savoir comment trouver et expliquer les transactions, consultez [Surveillance de l'explicabilité](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
    ![Lancement de la démonstration](images/fastpath_demo_11.35.50.png)
 
 ## Terminaison de la visite guidée
 {: #wos-done-demo}
 
-1. Cliquez sur le bouton **Terminé**.
+Une fois que vous avez terminé la visite, vous pouvez ajouter votre propre déploiement de modèle dans le tableau de bord ou continuer à explorer le déploiement du tutoriel. 
 
-   ![Lancement de la démonstration](images/fastpath_demo_11.37.22.png)
-
-2. Cliquez sur le bouton **C'est parti** pour commencer à utiliser {{site.data.keyword.aios_short}}.
-
-   ![Lancement de la démonstration](images/fastpath_demo_11.33.45.png)
+- Pour ajouter votre propre modèle au tableau de bord, cliquez sur le bouton **Ajouter au tableau de bord**.
+- Pour continuer à explorer le modèle du tutoriel, cliquez sur le carreau German Credit Risk.
 
 ## Etapes suivantes
 {: #gs-next}

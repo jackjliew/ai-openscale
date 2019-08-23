@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Falsch-positiv-Rate (FPR) ![Beta-Tag](images/beta.png)
+# Falsch-positiv-Rate (FPR)
 {: #quality_fpr_false}
 
 Die Rate falsch-positiver Ergebnisse gibt den Anteil der falschen Vorhersagen in der positiven Klasse an.
@@ -55,7 +55,7 @@ Die Rate falsch-positiver Ergebnisse gibt den Anteil der falschen Vorhersagen in
 Die Falsch-positiv-Rate wird als Gesamtzahl der falsch-positiven Ergebnisse dividiert durch die Anzahl falsch-positiven Ergebnisse und die Anzahl der richtig-negativen Ergebnisse berechnet.
 
 ```
-                                         Anzahl falsch-positiver Ergebnisse
+                        Anzahl falsch-positiver Ergebnisse
 Falsch-positiv-Rate =  __________________________________________________________________________
 
                        (Anzahl falsch-positiver Ergebnisse + Anzahl richtig-negativer Ergebnisse)

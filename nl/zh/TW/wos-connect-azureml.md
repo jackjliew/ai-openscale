@@ -38,9 +38,9 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}} 會連接至 Azure ML Studio 實例中的 AI 模型和部署。
 
-1.  從**配置**標籤，按一下**機器學習提供者**。
+1. 從**配置**標籤，按一下**機器學習提供者**。視您的環境而定，您不見得能看到下列所有的提供者：
 
-    ![會顯示選取您的機器學習服務提供者畫面，其中含有支援的機器學習引擎圖磚](images/wos-machine-learning-providers-selection.png)
+   ![會顯示選取您的機器學習服務提供者畫面，其中含有支援的機器學習引擎圖磚](images/wos-machine-learning-providers-selection.png)
 
 1.  按一下 **Microsoft Azure ML Studio** 圖磚。
 
@@ -52,6 +52,9 @@ subcollection: ai-openscale
     - 用戶端密碼：密碼的實際字串值，用來驗證您的身分，並針對您對 Azure Studio 所發出的呼叫進行鑑別及授權。
     - 租戶：您的租戶 ID 會對應至您的組織，並且是一個專用的 Azure AD 實例。如果要尋找租戶 ID，請將游標放在您的帳戶名稱上，以取得目錄 / 租戶 ID，或是在 Azure 入口網站中，選取 Azure Active Directory > 內容 > 目錄 ID。
     - 訂閱 ID：用來唯一識別您 Microsoft Azure 訂閱的訂閱認證。訂閱 ID 形成了每一次服務呼叫中的 URI 部分。
+    - 服務提供者實例名稱：指派給這個服務提供者的特定名稱。
+    - 說明：（選用）此服務提供者實例的純語言說明。如果您具有正式作業環境和測試環境，這會是一個提供該資訊的好位置。
+
 
     如需如何取得 Microsoft Azure 認證的指示，請參閱[作法：使用入口網站來建立可存取資源的 Azure AD 應用程式和服務主體](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: external}。{: note}
 

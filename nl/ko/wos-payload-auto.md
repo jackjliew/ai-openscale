@@ -40,13 +40,13 @@ subcollection: ai-openscale
 
    페이로드 형식에 따라 다름: {{site.data.keyword.aios_short}}({{site.data.keyword.pm_full}} 유형) 또는 사용자의 엔드포인트에서 해당 형식으로 출력을 리턴합니다. 형식이 사용자의 형식인 경우 {{site.data.keyword.aios_short}} 형식으로 변환하고 페이로드 로깅 표에 페이로드 레코드로 저장하십시오. 스코어링 입력 형식이 {{site.data.keyword.aios_short}} 형식이면 페이로드를 저장하지 마십시오(이 페이로드는 사용자가 아니라 {{site.data.keyword.aios_short}}에서 가져옴).
 
-   자세한 정보는 [두 페이로드 형식 사용](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-notsuppt)을 참조하십시오.
+   자세한 정보는 [두 페이로드 형식 사용](#fmrk-workaround-notsuppt)을 참조하십시오.
 
 - 옵션 2: 특정 이유 때문에 단일 REST API 엔드포인트에서 해당 로직을 임베드하는 경우 두 엔드포인트를 정의할 수 있습니다. 
 
    그러나 애플리케이션에서 한 엔드포인트를 사용하는 경우 페이로드 로깅을 추가하고 예상 형식으로 변환해야 합니다. 두 번째 엔드포인트는 편향과 설명 가능성 등의 필수 계산을 수행하기 위해 {{site.data.keyword.aios_short}}에서 사용합니다. 이 엔드포인트에는 페이로드 로깅이 필요하지 않습니다. {{site.data.keyword.aios_short}} 구성 중에 두 번째 엔드포인트가 호환 가능 형식의 엔드포인트를 가리켜야 합니다.
 
-   자세한 정보는 [두 엔드포인트 사용](/docs/services/ai-openscale?topic=ai-openscale-integrating-3rd-party-ml-engines-with-watson-openscale#fmrk-workaround-opt2-cs1)을 참조하십시오.
+   자세한 정보는 [두 엔드포인트 사용](#fmrk-workaround-opt2-cs1)을 참조하십시오.
 
 - 옵션 3: 페이로드 로깅 모듈을 원래 엔드포인트 또는 다운스트림 애플리케이션으로 이동하십시오. 
 

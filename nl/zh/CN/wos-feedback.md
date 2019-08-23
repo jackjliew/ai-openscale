@@ -214,13 +214,20 @@ JSON 格式由字段与列名对应的对象集合组成。以下样本显示完
 ### 上载 CSV 文件
 {: #fmt-upld-fdbk-data-upld-csv}
 
-要上载 CSV 文件，请使用**添加反馈数据**按钮。
+要上载 CSV 文件，请使用**添加反馈数据**按钮。要遵循教程中包含的以下步骤，请打开并复制 [`credit_feedback_data.csv`](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) 文件的内容。
 
 1. 从 {{site.data.keyword.aios_short}} 仪表板中，单击部署磁贴。
-2. 从模型部署窗口中，单击**配置** ![显示部署配置按钮](images/configure-deployment-button.png) 图标。
-3. 单击**添加反馈数据**按钮，选择包含反馈数据的 CSV 文件，然后单击**打开**。
+2. 从模型部署窗口中，单击**配置监视器** ![显示部署配置按钮](images/configure-deployment-button.png)。
+3. 在导航窗格中，单击**质量**。
+4. 单击**反馈**，然后单击**添加反馈数据**按钮。
+5. 选择包含反馈数据的 CSV 文件，然后单击**打开**。对于教程，请选择已下载的 `credit_feedback_data.csv` 文件。
+
+    文件大小当前限制为 8 MB。
+    {: note}
+
 4. 从下拉菜单中，单击字段分隔符，然后单击**选择**。
 
+添加 CSV 文件会向模型提供反馈数据。
 ### 上载 JSON 文件
 {: #fmt-upld-fdbk-data-upld-json}
 
@@ -231,3 +238,8 @@ JSON 格式由字段与列名对应的对象集合组成。以下样本显示完
     ![JSON 测试](images/json_test02.png)
 
 1.  现在，打开所下载的 JSON 文件，并将内容复制到**测试**选项卡中的 JSON 字段。单击**预测**按钮以向模型发送训练载荷并对其进行评分。
+
+### 查看结果
+{: #fmt-upld-fdbk-view-results-after}
+
+要立即检查结果，请从**洞察**页面中选择部署，再单击其中一个**质量**度量，然后单击**立即检查质量**。

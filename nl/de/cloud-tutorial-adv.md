@@ -28,6 +28,18 @@ subcollection: ai-openscale
 # Lernprogramm für Python-SDK (Erweitert)
 {: #crt-ov}
 
+In diesem Lernprogramm lernen Sie, die folgenden Tasks auszuführen:
+
+- Ausführen eines Python-Notebooks sowie Trainieren und Bereitstellen eines Modells für maschinelles Lernen.
+- Erstellen eines Datamarts, Konfigurieren von Überwachungen für Leistung, Genauigkeit und Fairness sowie Erstellen der zu überwachenden Daten.
+- Anzeigen der Ergebnisse in der {{site.data.keyword.aios_short}}-Registerkarte 'Insights'.
+
+
+## Python-Client
+{: #in-pyc}
+
+Der [Python-Client für {{site.data.keyword.aios_short}}](http://ai-openscale-python-client.mybluemix.net/){: external} ist eine Python-Bibliothek, die Ihnen ermöglicht, direkt mit dem {{site.data.keyword.aios_short}}-Service in {{site.data.keyword.cloud_notm}} zu arbeiten. Anstelle der Benutzerschnittstelle des {{site.data.keyword.aios_short}}-Clients können Sie den Python-Client verwenden, um eine Datenbank für die Protokollierung direkt zu konfigurieren, Ihre Machine Learning-Engine zu binden und Bereitstellungen auszuwählen und zu überwachen. Beispiele, in denen der Python-Client auf diese Weise verwendet wird, enthalten die [{{site.data.keyword.aios_short}}-Beispielnotebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks){: external}.
+
 ## Szenario
 {: #crt-scenario}
 
@@ -74,7 +86,7 @@ Melden Sie sich an Ihrem [{{site.data.keyword.cloud_notm}}-Konto ](https://{Doma
 
 - [Erstellen Sie eine {{site.data.keyword.DSX}}-Instanz](https://{DomainName}/catalog/services/watson-studio){: external}, sofern Ihrem Konto noch keine solche Instanz zugeordnet ist:
 
-  ![Watson Studio](images/watson_studio.png)
+  ![Darstellung der Kachel für Watson Studio](images/watson_studio.png)
 
 - Benennen Sie Ihren Service, wählen Sie den kostenlosen Plan 'Lite' aus und klicken Sie auf die Schaltfläche **Erstellen**.
 
@@ -83,7 +95,7 @@ Melden Sie sich an Ihrem [{{site.data.keyword.cloud_notm}}-Konto ](https://{Doma
 
 - [Richten Sie einen {{site.data.keyword.cos_short}}-Service](https://{DomainName}/catalog/services/cloud-object-storage){: external} ein, sofern Ihrem Konto noch kein solcher Service zugeordnet ist:
 
-  ![Object Storage](images/object_storage.png)
+  ![Darstellung der Kachel für Object Storage](images/object_storage.png)
 
 - Benennen Sie Ihren Service, wählen Sie den kostenlosen Plan 'Lite' aus und klicken Sie auf die Schaltfläche **Erstellen**.
 
@@ -92,7 +104,7 @@ Melden Sie sich an Ihrem [{{site.data.keyword.cloud_notm}}-Konto ](https://{Doma
 
 - [Richten Sie eine {{site.data.keyword.pm_short}}-Instanz](https://{DomainName}/catalog/services/machine-learning){: external} ein, sofern Ihrem Konto noch keine solche Instanz zugeordnet ist:
 
-  ![Machine Learning](images/machine_learning.png)
+  ![Darstellung der Kachel für Machine Learning](images/machine_learning.png)
 
 - Benennen Sie Ihren Service, wählen Sie den kostenlosen Plan 'Lite' aus und klicken Sie auf die Schaltfläche **Erstellen**.
 
@@ -103,7 +115,7 @@ Stellen Sie sicher, dass Sie {{site.data.keyword.aios_full}} einrichten, sofern 
 
 - [Richten Sie eine {{site.data.keyword.aios_short}}-Instanz](https://{DomainName}/catalog/services/watson-openscale){: external} ein, sofern Ihrem Konto noch keine solche Instanz zugeordnet ist:
 
-  ![{{site.data.keyword.aios_short}}-Kachel](images/wos-cloud-tile.png)
+  Darstellung der Kachel für ![{{site.data.keyword.aios_short}}](images/wos-cloud-tile.png)
 
 1. Klicken Sie auf **Katalog** > **AI** > **{{site.data.keyword.aios_short}}**.
 2. Geben Sie Ihrem Service einen Namen, wählen Sie einen Plan aus und klicken Sie auf die Schaltfläche **Erstellen**.
@@ -114,11 +126,11 @@ Stellen Sie sicher, dass Sie {{site.data.keyword.aios_full}} einrichten, sofern 
 
 Wenn Sie über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto verfügen, können Sie einen Service vom Typ `Databases for PostgreSQL` oder einen `Db2 Warehouse`-Service einrichten, um die Vorteile der Integration mit {{site.data.keyword.DSX}} und Services für kontinuierliches Lernen optimal zu nutzen. Wenn Sie sich gegen die Einrichtung eines gebührenpflichtigen Service entscheiden, können Sie zwar den kostenlosen internen PostgreSQL-Speicher mit {{site.data.keyword.aios_short}} verwenden, aber Sie können kein kontinuierliches Lernen für Ihr Modell konfigurieren.
 
-- [Richten Sie einen Databases for PostgreSQL-Service](https://{DomainName}/catalog/services/databases-for-postgresql) oder einen [Db2 Warehouse-Service](https://{DomainName}/catalog/services/db2-warehouse) ein, sofern Ihrem Konto noch kein solcher Service zugeordnet ist:
+- [Richten Sie einen Databases for PostgreSQL-Service](https://{DomainName}/catalog/services/databases-for-postgresql){: external} oder einen [Db2 Warehouse-Service](https://{DomainName}/catalog/services/db2-warehouse){: external} ein, sofern Ihrem Konto noch kein solcher Service zugeordnet ist:
 
-  ![DB for Postgres](images/dbpostgres.png)
+  ![Darstellung der Kachel für DB for Postgres](images/dbpostgres.png)
 
-  ![Db2 Warehouse](images/db2_warehouse.png)
+  ![Darstellung der Kachel für Db2 Warehouse](images/db2_warehouse.png)
 
 - Benennen Sie Ihren Service, wählen Sie den Plan 'Standard' (Databases for PostgreSQL) oder den Einstiegsplan (Db2 Warehouse) aus und klicken Sie auf die Schaltfläche **Erstellen**.
 
@@ -135,7 +147,7 @@ Wenn Sie über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto v
 
 - Wählen Sie zum Erstellen des Projekts die Kachel **Standard** aus:
 
-  ![Projekt 'Standard' in Watson Studio auswählen](images/studio_create_standard.png)
+  ![Darstellung der Kachel für die Auswahl des Projekts 'Standard' in Watson Studio](images/studio_create_standard.png)
 
 - Geben Sie Ihrem Projekt einen Namen und eine Beschreibung, stellen Sie sicher, dass im Dropdown-Fenster für **Speicher** der von Ihnen erstellte Object Storage-Service ausgewählt ist, und klicken Sie auf **Erstellen**.
 
@@ -145,13 +157,13 @@ Wenn Sie über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto v
 ### Notebook `Mit Watson Machine Learning arbeiten` zu Ihrem {{site.data.keyword.DSX}}-Projekt hinzufügen
 {: #crt-add-notebook}
 
-- Laden Sie die folgende Datei herunter:
+- Greifen Sie auf die folgende Datei zu. Wenn Sie ein GitHub-Konto haben, können Sie sich anmelden, um die Datei zu klonen und herunterzuladen. Andernfalls können Sie die Rohversion anzeigen, indem Sie auf die Schaltfläche **Unformatiert** klicken und den Text der Datei in eine neue Datei mit der Erweiterung '. ipynb' kopieren.
 
     - [Mit Watson Machine Learning arbeiten](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
 
 - Klicken Sie auf der Registerkarte **Assets** in Ihrem {{site.data.keyword.DSX}}-Projekt auf die Schaltfläche **Zu Projekt hinzufügen** und wählen Sie im Dropdown-Fenster den Eintrag **Notebook** aus:
 
-  ![Verbindung hinzufügen](images/add_notebook.png)
+  ![Darstellung der hervorgehobenen Kachel zur Auswahl des Assettyps mit einem Notebook](images/add_notebook.png)
 
 - Wählen Sie **Aus Datei** aus:
 
@@ -161,7 +173,7 @@ Wenn Sie über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto v
 
   ![Formular für neues Notebook](images/new_notebook_name2a.png)
 
-- Wählen Sie im Abschnitt **Laufzeit auswählen** eine Option von Python 3.5 mit Spark aus:
+- Wählen Sie im Abschnitt **Laufzeit auswählen** die neueste Option von Python mit Spark aus:
 
 - Klicken Sie auf **Notebook erstellen**.
 
@@ -175,7 +187,7 @@ Das Notebook `Mit Watson Machine Learning arbeiten` enthält detaillierte Anweis
 
 - Nehmen Sie im Abschnitt 'Services einrichten und Berechtigungsnachweise konfigurieren' die folgenden Änderungen vor:
 
-    - Folgen Sie den Anweisungen zum Erstellen, Kopieren und Einfügen eines {{site.data.keyword.cloud_notm}}-API-Schlüssels.
+    - Folgen Sie den Anweisungen im Notebook zum Erstellen, Kopieren und Einfügen eines {{site.data.keyword.cloud_notm}}-API-Schlüssels.
 
     - Ersetzen Sie die Berechtigungsnachweise für {{site.data.keyword.pm_full}} durch die, die Sie zuvor erstellt haben.
 
@@ -202,11 +214,11 @@ Als Endergebnis haben Sie das Modell **Spark German Risk Deployment** auf Ihrer 
 
 Klicken Sie im [{{site.data.keyword.aios_short}}-Dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external} auf die Registerkarte **Insights**:
 
-  ![Insights](images/insight-dash-tab.png)
+  ![Darstellung des Symbols für Insights](images/insight-dash-tab.png)
 
 Auf der Seite 'Insights' können Sie sich einen Überblick über die Metriken für Ihre bereitgestellten Modelle verschaffen. Sie können ohne großen Aufwand Alerts für Fairness- oder Genauigkeitsmetriken anzeigen, die den festgelegten Schwellenwert übersteigen, wenn Sie das Notebook ausführen. Die in diesem Lernprogramm verwendeten Daten und Einstellungen dürften Genauigkeits- und Fairnessmetriken ähnlich den hier gezeigten erstellt haben.
 
-  ![Überblick über 'Insights'](images/insight-overview-adv-tutorial-2.png)
+  ![Darstellung des Insight-Übersichtsdashboards mit Kachel für das deutsche Kreditrisikomodell](images/insight-overview-adv-tutorial-2.png)
 
 ### Überwachungsdaten für Ihre Bereitstellung anzeigen
 {: #crt-view-mon-data}

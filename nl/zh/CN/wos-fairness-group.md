@@ -31,7 +31,6 @@ subcollection: ai-openscale
 组度量的“公平性”使模型倾向于传递一个组相对于另一个组更有利的结果。组可以是任意组，例如年龄、性别或种族。
 {: shortdesc}
 
-
 ## 组的公平性概览
 {: #quality_group-glance}
 
@@ -72,3 +71,24 @@ subcollection: ai-openscale
 {: #quality_group-zip}
 
 {{site.data.keyword.aios_short}} 建议在 **zip code** 属性中配置偏差监视器，以便对个别邮政编码进行评分。
+
+## 解释显示内容
+{: #quality_group-display}
+
+### 组的公平性分数
+{: #quality_group-display-fairnessscore}
+
+
+
+### 受监视组
+{: #quality_group-display-monitoredgroups}
+
+
+
+### 调度
+{: #quality_group-display-schedule}
+
+**调度**窗格显示 
+
+
+

@@ -43,14 +43,14 @@ subcollection: ai-openscale
 
 除了偵測受保護屬性，{{site.data.keyword.aios_short}} 還會建議應將每一個屬性內的哪些值設為受監視和參照值。因此，舉例來說，{{site.data.keyword.aios_short}} 建議在「性別」屬性內配置偏誤監視器，以便讓 "Woman" 和 "Non-Binary" 成為受監視值，讓 "Male" 成為參照值。如果您想變更任何建議，可以透過偏誤配置畫面來編輯它們。 
 
-建議的偏誤監視器有助於加快配置，並確保您會檢查 AI 模型的機密屬性是否公平。由於監管者開始密切注意演算上的偏誤，對於組織，清楚瞭解其模型如何執行，以及針對特定群組所產生的輸出結果是否不公平，就變得很重要。 
+建議的偏誤監視器有助於加快配置，並確保您會檢查 AI 模型的機密屬性是否公平。由於監管者開始密切注意演算上的偏誤，對於組織，清楚瞭解其模型如何執行，以及針對特定群組所產生的輸出結果是否不公平，就變得很重要。
 
 ## 瞭解公平性
 {: #mf-understand}
 
 {{site.data.keyword.aios_short}} 會在執行時期檢查所部署模型的偏誤。如果要偵測所部署模型的偏誤，您必須定義公平性屬性（例如「年齡」或「性別」），如下列[配置「公平性」監視器](#mf-config)一節中所詳述。
 
-請務必在 Watson {{site.data.keyword.pm_short}} 中，指定模型或函數的輸出綱目，才能在 {{site.data.keyword.aios_short}} 中啟用偏誤檢查。您可以在 `store_model` API 的 meta 資料部分中，使用 `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` 內容來指定輸出綱目。如需相關資訊，請參閱 [{{site.data.keyword.pm_full}} 用戶端說明文件](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}。
+請務必在 {{site.data.keyword.pm_short}} 中，指定模型或函數的輸出綱目，才能在 {{site.data.keyword.aios_short}} 中啟用偏誤檢查。您可以在 `store_model` API 的 meta 資料部分中，使用 `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` 內容來指定輸出綱目。如需相關資訊，請參閱 [{{site.data.keyword.pm_full}} 用戶端說明文件](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}。
 
 ### 如何運作
 {: #mf-works}
@@ -100,7 +100,7 @@ subcollection: ai-openscale
 
 會使用兩個不同的資料集來計算公平性和精確度。公平性是以「有效負載 + 擾動資料」來計算。精確度是以回饋資料來計算。為了計算精確度，{{site.data.keyword.aios_short}} 需要手動標示資料，這只會呈現在回饋表格中。
 
-這些判定的結果會提供於偏誤視覺化中，其中包含下列視圖： 
+這些判定的結果會提供於偏誤視覺化中，其中包含下列視圖。（必須要有支援資料，才能看見這些視圖）
 
 - **有效負載 + 擾動**：如果未符合評估所需的最低記錄數目，則包含所選那個小時內所收到的評分要求，外加過去幾個小時內的其他記錄。如果受監視特性的值有變更，會包含用來測試模型回應的其他擾動/合成記錄。
 
@@ -138,7 +138,8 @@ subcollection: ai-openscale
    
 
    
-- **除去偏誤**：處理執行時期和擾動資料之後的除去偏誤演算法的輸出。
+- **除去偏誤**：處理執行時期和擾動資料之後的除去偏誤演算法的輸出。選取**除去偏誤**圓鈕時，會顯示相對於正式作業中的模型，除去偏誤模型中的變更。圖表會反映群組的輸出結果狀態已改進。
+
 
    請留意下列的除去偏誤明細：
    

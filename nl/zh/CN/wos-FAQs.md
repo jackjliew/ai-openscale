@@ -86,7 +86,7 @@ subcollection: ai-openscale
 ### 我想要在自己的服务器上运行 {{site.data.keyword.aios_short}}。我应该分配多少计算机处理能力？
 {: #faq-sizing}
 
-针对三节点和六节点配置的[硬件配置](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#inst-hwt)，存在特定准则。IBM 技术销售团队还可帮助您调整特定配置的规模。由于 {{site.data.keyword.aios_short}} 作为 {{site.data.keyword.icp4dfull_notm}} 的附加组件运行，因此需要考虑两种软件产品的需求。
+针对三节点和六节点配置的[硬件配置](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#inst-hwt)，存在特定准则。IBM 技术销售团队还可帮助您调整特定配置的规模。由于 {{site.data.keyword.aios_short}} 作为 {{site.data.keyword.icp4dfull_notm}} 的附加组件运行，因此需要考虑两种软件产品的需求。
 
 ### 如何将预测列从整数数据类型转换为分类数据类型？
 {: #wos-faqs-convert-data-types}

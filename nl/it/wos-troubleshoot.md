@@ -203,7 +203,7 @@ Ci sono due modi per configurare il client kubectl.
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep common-api)
     NOME                                                           PRONTO    STATO         RIAVVII   DURATA
-    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       In esecuzione 1         6h
+    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       In esecuzione  ai-open-scale-ibm-aios-scheduling  | 1 | Servizio pianificazione         6h
     ```
 
     Assicurarsi che lo stato sia **In esecuzione** e che sia completamente pronto **1/1**.  Verrà utilizzato `ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c` come pod per i seguenti esempi.
@@ -306,8 +306,8 @@ Se cloudctl è disponibile sul laptop, eseguire il seguente comando per configur
 
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep configuration)
-    NOME                                                     PRONTO    STATO         RIAVVII    DURATA
-    ai-open-scale-ibm-aios-configuration-554f548667-7l782    1/1       In esecuzione 1          6h
+    NOME                                                           PRONTO    STATO         RIAVVII   DURATA
+    ai-open-scale-ibm-aios-configuration-554f548667-7l782             1/1       In esecuzione  ai-open-scale-ibm-aios-scheduling  | 1 | Servizio pianificazione         6h
     ```
 
     Assicurarsi che lo stato sia **In esecuzione** e che sia completamente pronto **1/1**.  Verrà utilizzato `ai-open-scale-ibm-aios-configuration-554f548667-7l782` come pod per i seguenti esempi.
@@ -509,8 +509,8 @@ Ci sono due modi per configurare il client kubectl.
 
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep datamart)
-    NOME                                                        PRONTO    STATO         RIAVVII   DURATA
-    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb             1/1       In esecuzione 1         6h
+    NOME                                                           PRONTO    STATO         RIAVVII   DURATA
+    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb             1/1       In esecuzione  ai-open-scale-ibm-aios-scheduling  | 1 | Servizio pianificazione         6h
     ```
 
     Assicurarsi che lo stato sia **In esecuzione** e che sia completamente pronto **1/1**.  Verrà utilizzato `ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb` come pod per i seguenti esempi.
@@ -720,8 +720,8 @@ Ci sono due modi per configurare il client kubectl.
 
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep feedback)
-    NOME                                                        PRONTO    STATO         RIAVVII   DURATA
-    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f             2/2       In esecuzione 1         6h
+    NOME                                                           PRONTO    STATO         RIAVVII   DURATA
+    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f             2/2       In esecuzione  ai-open-scale-ibm-aios-scheduling  | 1 | Servizio pianificazione         6h
     ```
 
     Assicurarsi che lo stato sia **In esecuzione** e che sia completamente pronto **2/2**.  Verrà utilizzato `ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f` come pod per i seguenti esempi.
@@ -829,8 +829,8 @@ Ci sono due modi per configurare il client kubectl.
 
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep ml-gateway-discovery)
-    NOME                                                            PRONTO    STATO         RIAVVII   DURATA
-    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt    1/1       In esecuzione 1         6h
+    NOME                                                           PRONTO    STATO         RIAVVII   DURATA
+    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt             1/1       In esecuzione  ai-open-scale-ibm-aios-scheduling  | 1 | Servizio pianificazione         6h
     ```
 
     Assicurarsi che lo stato sia **In esecuzione** e che sia completamente pronto **1/1**.  Verrà utilizzato `ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt` come pod per i seguenti esempi.
@@ -1034,7 +1034,7 @@ Ci sono due modi per configurare il client kubectl.
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep payload-logging-api)
     NOME                                                           PRONTO    STATO         RIAVVII   DURATA
-    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65    1/1       In esecuzione 1         6h
+    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65             1/1       In esecuzione  ai-open-scale-ibm-aios-scheduling  | 1 | Servizio pianificazione         6h
     ```
 
     Assicurarsi che lo stato sia **In esecuzione** e che sia completamente pronto **1/1**.  Verrà utilizzato `ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65` come pod per i seguenti esempi.
@@ -1135,7 +1135,7 @@ Ci sono due modi per configurare il client kubectl.
     ```bash
     $ kubectl get pod -n aiopenscale | (head -n 1; grep payload-logging)
     NOME                                                           PRONTO    STATO          RIAVVII    DURATA
-    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       In esecuzione   1          6h
+    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       In esecuzione  ai-open-scale-ibm-aios-scheduling  | 1 | Servizio pianificazione         6h
     ```
 
     Assicurarsi che lo stato sia **In esecuzione** e che sia completamente pronto **1/1**.  Verrà utilizzato `ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8` come pod per i seguenti esempi.
@@ -1549,19 +1549,19 @@ Il flusso di eventi è composto da diversi servizi.  Vedere la sottocartella per
 
   ```bash
   $ kubectl get pods -n eventstream
-  NOME                                                  PRONTO    STATO              RIAVVII     DURATA
-  es-ibm-es-access-controller-deploy-54cd9bc959-899s7   2/2       In esecuzione       0          20g
-  es-ibm-es-access-controller-deploy-54cd9bc959-zcgx8   2/2       In esecuzione       0          16g
-  es-ibm-es-kafka-sts-0                                 4/4       In esecuzione       15         17g
-  es-ibm-es-kafka-sts-1                                 4/4       In esecuzione       264        15g
-  es-ibm-es-kafka-sts-2                                 4/4       In esecuzione       370        22g
-  es-ibm-es-proxy-deploy-5866fbd8cb-jk6rd               1/1       In esecuzione       0          9g
-  es-ibm-es-proxy-deploy-5866fbd8cb-rjx5q               1/1       In esecuzione       0          9g
-  es-ibm-es-rest-deploy-585df7f77c-j2d5k                3/3       In esecuzione       0          22g
-  es-ibm-es-ui-deploy-6f59c7764c-7tlzn                  3/3       In esecuzione       55         16g
-  es-ibm-es-zookeeper-sts-0                             1/1       In esecuzione       0          17g
-  es-ibm-es-zookeeper-sts-1                             1/1       In esecuzione       1          15g
-  es-ibm-es-zookeeper-sts-2                             1/1       In esecuzione       488        9g
+  NOME                                                  PRONTO    STATO               RIAVVII    DURATA
+  es-ibm-es-access-controller-deploy-54cd9bc959-899s7   2/2       In esecuzione       0          20d
+  es-ibm-es-access-controller-deploy-54cd9bc959-zcgx8   2/2       In esecuzione       0          16d
+  es-ibm-es-kafka-sts-0                                 4/4       In esecuzione       15         17d
+  es-ibm-es-kafka-sts-1                                 4/4       In esecuzione       264        15d
+  es-ibm-es-kafka-sts-2                                 4/4       In esecuzione       370        22d
+  es-ibm-es-proxy-deploy-5866fbd8cb-jk6rd               1/1       In esecuzione       0          9d
+  es-ibm-es-proxy-deploy-5866fbd8cb-rjx5q               1/1       In esecuzione       0          9d
+  es-ibm-es-rest-deploy-585df7f77c-j2d5k                3/3       In esecuzione       0          22d
+  es-ibm-es-ui-deploy-6f59c7764c-7tlzn                  3/3       In esecuzione       55         16d
+  es-ibm-es-zookeeper-sts-0                             1/1       In esecuzione       0          17d
+  es-ibm-es-zookeeper-sts-1                             1/1       In esecuzione       ai-open-scale-ibm-aios-scheduling  | 1 | Servizio pianificazione         15d
+  es-ibm-es-zookeeper-sts-2                             1/1       In esecuzione  488        9d
   ```
 
 ---

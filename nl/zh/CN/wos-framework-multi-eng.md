@@ -48,6 +48,12 @@ subcollection: ai-openscale
 
 保存配置后，可以选择转至仪表板，选择部署还是配置监视器。
 
+## 编辑机器学习提供程序
+{: #fmrk-workaround-editingproviders-dashboard}
+
+是否需要对机器学习提供程序进行编辑？单击磁贴菜单 ![磁贴菜单图标](images/v-three-dots.png) 图标，然后单击**查看和编辑详细信息**。
+
+   ![显示机器学习提供程序查看和编辑选项](images/wos-machine-learning-providers-edit.png)
 
 ## 使用 Python SDK 绑定方法添加机器学习提供程序
 {: #fmrk-workaround-multmleng-binding}

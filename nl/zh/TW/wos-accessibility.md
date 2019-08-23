@@ -30,7 +30,7 @@ subcollection: ai-openscale
 IBM 對協助工具有所承諾。{{site.data.keyword.aios_full}} 內容和說明文件中包含遵循合規準則的協助工具特性，可供有身體障礙的使用者充分利用。部分 {{site.data.keyword.aios_short}} 使用者介面可供存取，但並非全部。只有說明文件以及整體產品中的某一部分符合標準。
 {: shortdesc}
 
-{{site.data.keyword.aios_short}} 說明文件使用最新的 W3C 標準 <a href="https://www.w3.org/TR/wai-aria/" rel="noopener noreferrer" target="_blank">WAI-ARIA 1.0</a>，以確保符合<a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/" rel="noopener noreferrer" target="_blank">美國無障礙委員會第 508 節標準</a>和 <a href="https://www.w3.org/TR/WCAG20/" rel="noopener noreferrer" target="_blank">Web 內容協助工具準則 (WCAG) 2.0</a> 的標準。
+{{site.data.keyword.aios_short}} 說明文件使用最新的 W3C 標準 [WAI-ARIA 1.0](https://www.w3.org/TR/wai-aria/){: external}，以確保符合[美國無障礙委員會第 508 節標準](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/){: external}和 [Web 內容協助工具準則 (WCAG) 2.0](https://www.w3.org/TR/WCAG20/){: external} 的標準。
 
 {{site.data.keyword.aios_short}} 線上產品說明文件已啟用協助工具。協助工具特性可以幫助有身體障礙的使用者（例如行動不便或視力不佳）順利使用資訊技術產品。說明文件以 HTML 形式提供，以便透過輔助技術輕鬆存取。
 利用 {{site.data.keyword.aios_short}} 的協助工具特性，您可以執行下列作業：
@@ -39,7 +39,7 @@ IBM 對協助工具有所承諾。{{site.data.keyword.aios_full}} 內容和說�
 - 使用螢幕放大鏡，來放大螢幕所顯示的內容。
 - 只用鍵盤來操作特定特性或同等特性。
 
-如需 IBM 對協助工具之承諾的相關資訊，請參閱 [IBM 協助工具](http://www.ibm.com/able)。
+如需 IBM 對協助工具之承諾的相關資訊，請參閱 [IBM 協助工具](http://www.ibm.com/able){: external}。
 
 ## TTY 服務
 

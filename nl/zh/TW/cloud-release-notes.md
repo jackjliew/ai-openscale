@@ -31,6 +31,15 @@ subcollection: ai-openscale
 本文件概述 {{site.data.keyword.aios_full_notm}} 的新特性。
 {: shortdesc}
 
+## 2019 年 7 月 9 日
+{: #rn-9jul2019}
+
+{{site.data.keyword.aios_short}} 的新特性及變更如下。
+
+- __*Updated and expanded online help*__：{{site.data.keyword.aios_short}} 線上說明最近已重組，藉由使用內容窗格，尋找主題更輕鬆。此外，還撰寫和擴增了許多新主題。
+
+   如需相關資訊，請參閱[取得洞察](/docs/services/ai-openscale?topic=ai-openscale-io-ov)和[將  {{site.data.keyword.aios_short}} 從 Lite 方案升級至付款方案](/docs/services/ai-openscale?topic=ai-openscale-cf-upgrade)。
+   
 ## 2019 年 7 月 2 日
 {: #rn-2jul2019}
 
@@ -44,7 +53,7 @@ subcollection: ai-openscale
 
 - __*Microsoft Azure ML Service 支援*__：{{site.data.keyword.aios_short}} 現在支援 Microsoft Azure ML Service，藉以將您的 Azure ML 服務 AI 模型與 {{site.data.keyword.aios_short}} 的公平性、精確度和可解釋性整合在一起。
 
-   如需相關資訊，請參閱 [Microsoft Azure ML Service 架構](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-frmwrks-azure-service)。
+   如需相關資訊，請參閱 [Microsoft Azure ML Service 架構](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service)。
 
 - __*工作流程已改良*__：{{site.data.keyword.aios_short}} 努力改良工作流程，以致於您可以更快處理您的工作，點選次數減少，取得的可解釋性增多。導覽畫面可讓您看到您的所在位置，並且輕鬆在配置作業之間來回切換。
 
@@ -189,7 +198,7 @@ subcollection: ai-openscale
 
 - __*通用版*__：{{site.data.keyword.aios_full_notm}} 通用版 (GA) 屬於 {{site.data.keyword.Bluemix}} 標準（付費）方案。
 
-- __*{{site.data.keyword.icp4dfull_notm}} 1.2 版*__：如果您使用的是 {{site.data.keyword.wos4d_full}} 1.2 版，請參閱這裡的說明文件（包括安裝指示）：[安裝核對清單](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#install)
+- __*{{site.data.keyword.icp4dfull_notm}} 1.2 版*__：如果您使用的是 {{site.data.keyword.wos4d_full}} 1.2 版，請參閱這裡的說明文件（包括安裝指示）：[安裝核對清單](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#install)
 
 - __*支援您的模型類型*__：除了 {{site.data.keyword.pm_full}} 中的 AI 模型部署，{{site.data.keyword.aios_short}} 還支援 Microsoft Azure、Amazon SageMaker 和「自訂」環境中的模型部署。如需相關資訊，請參閱[支援的模型類型](/docs/services/ai-openscale?topic=ai-openscale-in-ov)。
 
@@ -218,4 +227,4 @@ subcollection: ai-openscale
 還有其他問題嗎？
 
 - [限制](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
-- [已知問題](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)
+- [已知問題](/docs/services/ai-openscale?topic=ai-openscale-rn-12ki#cloud-limitations)

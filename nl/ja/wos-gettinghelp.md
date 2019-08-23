@@ -43,11 +43,11 @@ subcollection: ai-openscale
 
 フォーラムを使用して質問するときは、{{site.data.keyword.aios_short}} 開発チームの目に留まるように、質問にタグを付けてください。
 
-{{site.data.keyword.aios_short}} について技術的な質問がある場合は、[StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale) に質問を投稿してください。質問には `watson-openscale` のタグを付けてください。
+{{site.data.keyword.aios_short}} について技術的な質問がある場合は、[StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale){: external} に質問を投稿してください。質問には `watson-openscale` のタグを付けてください。
 
-サービスおよび開始の手順に関する質問については、[IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale) フォーラムを使用してください。 `openscale` タグを含めてください。 フォーラムの使用について詳しくは、[ヘルプの利用](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html)を参照してください。
+サービスおよび開始の手順に関する質問については、[IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale){: external} フォーラムを使用してください。 `openscale` タグを含めてください。 フォーラムの使用について詳しくは、[ヘルプの利用](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html){: external}を参照してください。
 
-IBM サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://cloud.ibm.com/unifiedsupport/supportcenter)を参照して、**「アカウントの作成」**をクリックしてください。
+IBM サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}を参照して、**「アカウントの作成」**をクリックしてください。
 
 ## さらに詳しい情報
 {: #looking}

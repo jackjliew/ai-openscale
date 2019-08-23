@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Tasso di falsi positivi (FPR - False positive rate) ![tag beta](images/beta.png)
+# Tasso di falsi positivi (FPR - False positive rate)
 {: #quality_fpr_false}
 
 Il tasso di falsi positivi fornisce la proporzione di previsioni errate nella classe dei positivi.

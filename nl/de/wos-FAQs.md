@@ -86,7 +86,7 @@ Wenn bei Ihnen der Wechsel vom Lite-Plan ansteht, gibt es einen **Standard**-Pre
 ### Ich möchte {{site.data.keyword.aios_short}} auf meinen eigenen Servern ausführen. Wie viel Verarbeitungskapazität sollte ich zuordnen?
 {: #faq-sizing}
 
-Es gibt bestimmte Richtlinien für die [Hardwarekonfiguration](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#inst-hwt) für Konfigurationen mit drei Knoten und sechs Knoten. Das IBM Technical Sales-Team kann Ihnen auch bei der Dimensionierung Ihrer spezifischen Konfiguration behilflich sein. Da {{site.data.keyword.aios_short}} als Add-on für {{site.data.keyword.icp4dfull_notm}} ausgeführt wird, müssen Sie die Anforderungen für beide Softwareprodukte berücksichtigen.
+Es gibt bestimmte Richtlinien für die [Hardwarekonfiguration](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#inst-hwt) für Konfigurationen mit drei Knoten und sechs Knoten. Das IBM Technical Sales-Team kann Ihnen auch bei der Dimensionierung Ihrer spezifischen Konfiguration behilflich sein. Da {{site.data.keyword.aios_short}} als Add-on für {{site.data.keyword.icp4dfull_notm}} ausgeführt wird, müssen Sie die Anforderungen für beide Softwareprodukte berücksichtigen.
 
 ### Wie konvertiere ich die Daten in einer Vorhersagespalte vom ganzzahligen Datentyp in den kategorialen Datentyp?
 {: #wos-faqs-convert-data-types}

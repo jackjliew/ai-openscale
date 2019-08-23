@@ -44,25 +44,21 @@ subcollection: ai-openscale
 
 その方法については、次のアドバンスト・チュートリアルを参照してください。
 
-- [{{site.data.keyword.pm_full}} での作業](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [{{site.data.keyword.pm_full}} での作業](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
 カスタム・モニターはいつでも無効にでき、また再び有効にすることもできます。 不要になったカスタム・モニターは削除できます。
 
-詳しくは、[Python SDK の資料](http://ai-openscale-python-client.mybluemix.net/)を参照してください。
+詳しくは、[Python SDK の資料](http://ai-openscale-python-client.mybluemix.net/){: external}を参照してください。
 
 ## カスタム指標へのアクセスとその視覚化
 {: #cst_mtrcs_viz}
 
 カスタム指標にアクセスして視覚化するには、プログラマチック・インターフェースを使用できます。 その方法については、次のアドバンスト・チュートリアルを参照してください。
 
-- [{{site.data.keyword.pm_full}} での作業](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [{{site.data.keyword.pm_full}} での作業](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [Working with Custom Machine Learning engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-   詳しくは、[Python SDK の資料](http://ai-openscale-python-client.mybluemix.net/)を参照してください。
+   詳しくは、[Python SDK の資料](http://ai-openscale-python-client.mybluemix.net/){: external}を参照してください。
 
 カスタム指標を視覚化すると、{{site.data.keyword.aios_short}} ダッシュボード上で表示されます。
-
-<!---
-![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
---->

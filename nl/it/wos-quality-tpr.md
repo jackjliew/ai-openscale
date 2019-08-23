@@ -25,10 +25,10 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Tasso di veri positivi (TPR - True positive rate) ![tag beta](images/beta.png)
+# Tasso di veri positivi (TPR - True positive rate)
 {: #quality_tpr}
 
-Il tasso di veri positivi (TPR) dà la proporzione delle previsioni corrette nelle previsioni della classe dei positivi.
+Il tasso di veri positivi (TPR) dà la proporzione delle previsioni corrette nelle previsioni della classe dei positivi. 
 {: shortdesc}
 
 ## Tasso di veri positivi (TPR - True positive rate) a colpo d'occhio

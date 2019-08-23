@@ -31,6 +31,15 @@ subcollection: ai-openscale
 In diesem Dokument werden neue Funktionen für {{site.data.keyword.aios_full_notm}} beschrieben.
 {: shortdesc}
 
+## 9. Juli 2019
+{: #rn-9jul2019}
+
+Die folgenden neuen Funktionen und Änderungen sind für {{site.data.keyword.aios_short}} verfügbar.
+
+- __*Aktualisierte und erweiterte Onlinehilfe*__: Die {{site.data.keyword.aios_short}}-Onlinehilfe wurde kürzlich neu organisiert, um die Suche nach Themen über das Inhaltsfenster zu erleichtern. Darüber hinaus wurden viele neue Themen verfasst und erweitert.
+
+   Weitere Informationen finden Sie in den Abschnitten [Insights abrufen](/docs/services/ai-openscale?topic=ai-openscale-io-ov) und [{{site.data.keyword.aios_short}} von einem Lite- auf einen gebührenpflichtigen Plan aktualisieren](/docs/services/ai-openscale?topic=ai-openscale-cf-upgrade).
+   
 ## 02. Juli 2019
 {: #rn-2jul2019}
 
@@ -44,13 +53,13 @@ Die folgenden neuen Funktionen und Änderungen sind für {{site.data.keyword.aio
 
 - __*Microsoft Azure ML Service-Unterstützung*__: {{site.data.keyword.aios_short}} unterstützt jetzt Microsoft Azure ML Service, das die Integration der AI-Modelle von Microsoft Azure ML Service mit Fairness, Genauigkeit und Erklärbarkeit von {{site.data.keyword.aios_short}} ermöglicht.
 
-   Weitere Informationen finden Sie im Abschnitt [Microsoft Azure ML Service-Frameworks](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-frmwrks-azure-service).
+   Weitere Informationen finden Sie im Abschnitt [Microsoft Azure ML Service-Frameworks](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service).
 
 - __*Verbesserter Workflow*__: Ein besonderer Schwerpunkt wurde von {{site.data.keyword.aios_short}} auf die Verbesserung des Workflows gelegt, sodass Sie Ihre Arbeit nun umgehend mit weniger Klicks und mehr erklärenden Informationen erledigen können. Das Navigationsfenster zeigt an, an welchem Punkt Sie sich befinden, und ermöglicht es Ihnen, zwischen Konfigurationsaufgaben hin- und herzuspringen.
 
    Weitere Informationen hierzu finden Sie im Abschnitt [Überwachungen für eine Bereitstellung vorbereiten](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
 
-- __*Mehrere Machine Learning-Anbieter*__: Warum sollte man an einen einzigen Machine Learning-Anbieter oder eine einzige Machine Learning-Engine gebunden sein? Mit der neuesten Version von {{site.data.keyword.aios_short}} können Sie mehrere Anbieter hinzufügen, damit Sie von den jeweiligen Vorteilen profitieren und bei veralteten Versionen von Apps für Kontinuität sorgen können.
+- __*Mehrere Machine Learning-Provider*__: Warum sollte man an einen einzigen Machine Learning-Provider oder eine einzige Machine Learning-Engine gebunden sein? Mit der neuesten Version von {{site.data.keyword.aios_short}} können Sie mehrere Anbieter hinzufügen, damit Sie von den jeweiligen Vorteilen profitieren und bei veralteten Versionen von Apps für Kontinuität sorgen können.
 
    Weitere Informationen hierzu enthält der Abschnitt [Unterstützung für mehrere Machine Learning-Engines](/docs/services/ai-openscale?topic=ai-openscale-fmrk-workaround-multmleng).
 
@@ -189,7 +198,7 @@ Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Beta-R
 
 - __*Allgemeine Verfügbarkeit*__: Das GA-Release von {{site.data.keyword.aios_full_notm}} als {{site.data.keyword.Bluemix}}-Standardplan (gebührenpflichtig).
 
-- __*{{site.data.keyword.icp4dfull_notm}} 1.2*__: Ziehen Sie bei Verwendung von {{site.data.keyword.wos4d_full}} die Dokumentation einschließlich der Installationsanweisungen im Abschnitt [Installationscheckliste](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#install) zurate.
+- __*{{site.data.keyword.icp4dfull_notm}} 1.2*__: Ziehen Sie bei Verwendung von {{site.data.keyword.wos4d_full}} die Dokumentation einschließlich der Installationsanweisungen im Abschnitt [Installationscheckliste](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#install) zurate.
 
 - __*Unterstützung für Ihren Modelltyp*__: Zusätzlich zu den Bereitstellungen von AI-Modellen in {{site.data.keyword.pm_full}} unterstützt {{site.data.keyword.aios_short}} Modellbereitstellungen in Microsoft Azure, Amazon SageMaker und angepassten Umgebungen. Weitere Informationen enthält der Abschnitt [Unterstützte Modelltypen](/docs/services/ai-openscale?topic=ai-openscale-in-ov).
 
@@ -201,7 +210,7 @@ Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Beta-R
 
 - __*Datenspeicher*__: Qualitätsüberwachung, ohne auf {{site.data.keyword.pm_full}} angewiesen zu sein, und die Möglichkeit, Ihre eigene Datenbank zu verwenden, ganz gleich, ob es sich um Db2, Postgres oder Db2 on Cloud handelt.
 
-- __*Funktional erweiterte Benutzerschnittstelle (UI)*__: Die Benutzerschnittstelle (UI) für {{site.data.keyword.aios_short}} wurde verbessert und enthält jetzt eine Laufzeithistogrammverteilung mit der Funktion zum Umschalten für Trainingsdaten, Modell-ID & Versionierung und eine Tabelle mit Transaktions-IDs aus dem Histogramm. Weitere Informationen enthält der Abschnitt [Visualisierung von Daten für eine bestimmte Uhrzeit anzeigen](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet).
+- __*Funktional erweiterte Benutzerschnittstelle (UI)*__: Die Benutzerschnittstelle (UI) für {{site.data.keyword.aios_short}} wurde verbessert und enthält jetzt eine Laufzeithistogrammverteilung mit der Funktion zum Umschalten für Trainingsdaten, Modell-ID & Versionierung und eine Tabelle mit Transaktions-IDs aus dem Histogramm. Weitere Informationen enthält der Abschnitt [Visualisierung von Daten für eine bestimmte Stunde anzeigen](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-vdet).
 
 - __*Alternative Option zur Konfiguration des Lernprogramms*__: Um die Einrichtung und Konfiguration der erforderlichen {{site.data.keyword.Bluemix}}-Services zu automatisieren und eine IBM {{site.data.keyword.aios_full}}-Anwendung einschließlich Stichprobendaten anzuzeigen, können Sie ein Python-Modul installieren und ausführen. Näheres hierzu enthält [Python-Modul zum Konfigurieren von {{site.data.keyword.aios_short}} installieren](/docs/services/ai-openscale?topic=ai-openscale-as-module).
 
@@ -218,4 +227,4 @@ Die folgenden {{site.data.keyword.aios_short}}-Funktionen wurden seit dem Beta-R
 Haben Sie immer noch offene Fragen?
 
 - [Einschränkungen](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
-- [Bekannte Probleme](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)
+- [Bekannte Probleme](/docs/services/ai-openscale?topic=ai-openscale-rn-12ki#cloud-limitations)

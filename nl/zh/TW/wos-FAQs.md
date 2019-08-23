@@ -86,7 +86,7 @@ Watson OpenScale 會追蹤及測量 AI 在整個生命週期中的輸出結果�
 ### 我想在自己的伺服器上執行 {{site.data.keyword.aios_short}}。我應該配置多少電腦處理能力？
 {: #faq-sizing}
 
-對於三節點和六節點配置，會有特定的[硬體配置](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#inst-hwt)準則。您的「IBM 技術銷售團隊」也可以協助您調整您特定配置的大小。由於 {{site.data.keyword.aios_short}} 是以 {{site.data.keyword.icp4dfull_notm}} 的附加程式形式執行，您需要兼顧這兩個軟體產品的需求。
+對於三節點和六節點配置，會有特定的[硬體配置](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#inst-hwt)準則。您的「IBM 技術銷售團隊」也可以協助您調整您特定配置的大小。由於 {{site.data.keyword.aios_short}} 是以 {{site.data.keyword.icp4dfull_notm}} 的附加程式形式執行，您需要兼顧這兩個軟體產品的需求。
 
 ### 如何將預測直欄從整數資料類型轉換成種類資料類型？
 {: #wos-faqs-convert-data-types}

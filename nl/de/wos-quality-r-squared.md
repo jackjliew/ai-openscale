@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# R im Quadrat ![Beta-Tag](images/beta.png)
+# R im Quadrat
 {: #quality_r_squared}
 
 R im Quadrat gibt das Verhältnis der Differenz zwischen Zielvarianz und Varianz für einen Vorhersagefehler in Bezug zur Zielvarianz an. Dieser Wert gibt Aufschluss über die Eignung der Daten, die Sie zum Erstellen des Modells verwendet haben, für die Regression.
@@ -47,7 +47,7 @@ R im Quadrat gibt das Verhältnis der Differenz zwischen Zielvarianz und Varianz
 ## Anzeige interpretieren
 {: #quality_r_squared-display}
 
-![Abbildung des Diagramms für R im Quadrat](images/xxxx.png)
+![Darstellung des Diagramms für R im Quadrat](images/xxxx.png)
 
 ## Berechnung
 {: #quality_r_squared-math}
@@ -55,8 +55,8 @@ R im Quadrat gibt das Verhältnis der Differenz zwischen Zielvarianz und Varianz
 Die Metrik 'R im Quadrat' ist durch die folgende Formel definiert.
 
 ```
-                 erklärte Variation
-R-Quadrat = 1 -  __________________
+                  erklärte Variation
+R im Quadrat =ai-open-scale-ibm-aios-scheduling  | 1 | Zeitplanungsservice-  _____________________
 
-                 gesamte Variation
+                    gesamte Variation
 ```

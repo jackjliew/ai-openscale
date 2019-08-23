@@ -27,6 +27,8 @@ subcollection: ai-openscale
 # IBM SPSS C&DS 프레임워크
 {: #frmwrks-spss}
 
+IBM SPSS C&DS를 사용하여 {{site.data.keyword.aios_full}}에서 페이로드 로깅, 피드백 로깅을 수행하고 성능 정확성, 런타임 편향성 감지, 설명 가능성 및 자동-편향성 함수를 측정할 수 있습니다. 
+
 {{site.data.keyword.aios_full}}은 다음과 같은 IBM SPSS Collaboration and Deployment Services(C&DS) 프레임워크를 완전히 지원할 계획입니다.
 {: shortdesc}
 

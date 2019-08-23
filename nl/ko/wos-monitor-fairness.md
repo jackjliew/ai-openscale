@@ -92,4 +92,4 @@ subcollection: ai-openscale
 ## 다음 단계
 {: #mf-next}
 
-**모니터 구성** 페이지에서 다른 모니터링 카테고리를 선택할 수 있습니다.
+모니터 구성을 계속하려면 **드리프트** 탭을 클릭한 후 **시작**을 클릭하십시오. 자세한 정보는 [드리프트 감지 모니터 구성](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)을 참조하십시오. 

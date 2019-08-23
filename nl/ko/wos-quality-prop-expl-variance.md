@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 설명 분산의 비율 ![베타 태그](images/beta.png)
+# 설명 분산의 비율
 {: #quality_var}
 
 설명 분산의 비율은 설명 분산과 목표 분산의 비율을 제공합니다. 설명 분산은 대상 분산과 예측 오차 분산 간의 차이입니다.

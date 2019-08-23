@@ -46,4 +46,4 @@ subcollection: ai-openscale
 
 {{site.data.keyword.aios_short}} 支援下列效能度量：
 
-- [傳輸量](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)
+- [傳輸量](/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

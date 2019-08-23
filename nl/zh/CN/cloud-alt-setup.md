@@ -40,7 +40,7 @@ subcollection: ai-openscale
 ## 开始之前
 {: #as-prereqs}
 
-1. [创建 {{site.data.keyword.cloud_notm}} API 密钥并将其下载](/docs/iam?topic=iam-userapikey#create_user_key)。您将需要在稍后的步骤中输入该 API 密钥。
+1. [创建 {{site.data.keyword.cloud_notm}} API 密钥并将其下载](/docs/iam?topic=iam-userapikey#create_user_key){: external}。您将需要在稍后的步骤中输入该 API 密钥。
 
 2. [安装 Python 3 的任何发行版](https://www.python.org/downloads/){: external}。
 
@@ -85,9 +85,10 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
 - “洞察”页面概括显示根据所配置的阈值确定的任何公平性和准确性问题。
 
-- 每个部署显示为磁贴。模块配置了一个名为 `GermanCreditRiskModel` 的部署，如以下截屏中所示：
+- 每个部署显示为磁贴。如果您遵循的是其中任何一个教程，那么在仪表板中，您会看到名为 `GermanCreditRiskModel` 的部署。以下样本显示包含许多已部署和受监视的模型的仪表板：
 
-  ![洞察概述](images/setup01-0206.png)
+    ![包含许多部署的洞察仪表板，每个部署显示为一个磁贴](images/insight-dashboard.png)
+
 
 ### 查看监视数据
 {: #as-monitoring}
@@ -97,17 +98,17 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
    - 例如，以下屏幕显示特定日期和时间的数据。日期和时间根据您运行模块的时间而异。
 
-   - 有关解释时间序列图表的信息，请参阅[监视公平性、每分钟的平均请求数以及准确性](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
+   - 有关解释时间序列图表的信息，请参阅[获取洞察](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
 
-    ![监视数据](images/setup02-0206.png)
+    ![显示监视器数据](images/setup02-0206.png)
 
 3. 要查看有关 `AGE` 数据监视的详细信息，请确保从下拉菜单中选择 `AGE`。
 
   - 请注意，在以下截屏中，不存在任何偏差。
 
-  - 有关解释特定小时所对应数据点的图表的信息，请参阅[监视公平性、每分钟的平均请求数以及准确性](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp)。
+  - 有关解释特定小时所对应数据点的图表的信息，请参阅[可视化特定小时的数据](/docs/services/ai-openscale?topic=ai-openscale-it-vdet)。
 
-    ![查看详细信息](images/setup03-0206.png)
+    ![显示视图详细信息](images/setup03-0206.png)
 
 ### 查看可解释性
 {: #as-explain}
@@ -125,5 +126,5 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
 - 要了解偏差，请参阅[公平性](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)。
 - 要了解模型预测结果的良好程度，请参阅[准确性](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)。
-- 要了解如何解释图表和数据，请参阅[监视公平性、每分钟的平均请求数以及准确性](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
+- 要了解有关解释图表和数据的信息，请参阅[获取洞察](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
 - 要了解基础因素如何影响结果，请参阅[监视可解释性](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)。

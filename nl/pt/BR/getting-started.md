@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -68,7 +68,7 @@ O {{site.data.keyword.aios_short}} monitorará a propensão do modelo implementa
 
 Há várias opções de configuração, dependendo de sua preferência e nível de conhecimento.
 
-- [A configuração automatizada a seguir](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) conduz você pelo processo, executando tarefas no segundo plano.
+- [A configuração automatizada a seguir](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start) conduz você pelo processo, executando tarefas no segundo plano.
 
    O uso de um tour significa que é possível assistir e clicar até a próxima parte do tour.
    
@@ -76,7 +76,7 @@ Há várias opções de configuração, dependendo de sua preferência e nível 
 
    Use a interface para executar tarefas comuns com um modelo de amostra e dados injetados.
    
-- [O tutorial avançado](/docs/services/ai-openscale?topic=ai-openscale-crt-ov) permite que usuários mais técnicos instalem um módulo Python que automatiza o fornecimento e a configuração de serviços de pré-requisito. Esse tutorial avançado destina-se a cientistas de dados ou usuários que estão familiarizados com codificação, Python e Blocos de notas. É um exemplo de como o cliente do {{site.data.keyword.aios_short}} pode ser usado para executar a funcionalidade programaticamente. O bloco de notas que é usado neste tutorial resulta no mesmo local que seguir a [configuração automatizada](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start).
+- [O tutorial avançado](/docs/services/ai-openscale?topic=ai-openscale-crt-ov) permite que usuários mais técnicos instalem um módulo Python que automatiza o fornecimento e a configuração de serviços de pré-requisito. Esse tutorial avançado destina-se a cientistas de dados ou usuários que estão familiarizados com codificação, Python e Blocos de notas. É um exemplo de como o cliente do {{site.data.keyword.aios_short}} pode ser usado para executar a funcionalidade programaticamente. O bloco de notas que é usado neste tutorial resulta no mesmo local que seguir a [configuração automatizada](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start).
 
    Este módulo requer que o Python 3 esteja instalado, o que inclui o sistema de gerenciamento de pacote pip. Para obter instruções, consulte [Instalando um módulo Python para configurar o {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module).
 
@@ -93,7 +93,7 @@ Para ver rapidamente como o {{site.data.keyword.aios_short}} monitora um modelo,
 
 Antes de iniciar o tour, deve-se ter os recursos a seguir configurados:
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
 O tour de configuração automatizada foi projetado para trabalhar com a mínima interação possível do usuário. Ele toma automaticamente as decisões a seguir para você:
@@ -101,7 +101,7 @@ O tour de configuração automatizada foi projetado para trabalhar com a mínima
 - Se você tiver várias instâncias do {{site.data.keyword.pm_full}} configuradas, o processo de instalação executará uma chamada da API para listar as instâncias e escolherá a instância do {{site.data.keyword.pm_short}} que aparecer primeiro na lista resultante. 
 - Para criar uma nova versão Lite do {{site.data.keyword.pm_full}}, o instalador do {{site.data.keyword.aios_short}} usa o grupo de recursos padrão para sua conta do {{site.data.keyword.Bluemix}}.
 
-### Provisione um serviço {{site.data.keyword.aios_full}}
+### Provisão de um serviço do {{site.data.keyword.aios_short}}
 {: #crt-wos-faststart}
 
 Se você ainda não tiver feito isso, assegure-se de provisionar o {{site.data.keyword.aios_full}}. 
@@ -112,24 +112,17 @@ Se você ainda não tiver feito isso, assegure-se de provisionar o {{site.data.k
 
 1. Clique em **Catálogo** > **IA** > **{{site.data.keyword.aios_short}}**.
 2. Dê um nome ao seu serviço, escolha um plano e clique no botão **Criar**.
-3. Para iniciar o {{site.data.keyword.aios_short}}, clique no botão **Introdução**.
+3. Para iniciar o {{site.data.keyword.aios_short}}, clique no botão **Ativar aplicativo**.
 
-## Trabalhando com a demo de UI
+## Configuração automática
 {: #wos-work-demo}
 
 1.  Conecte-se à sua instância do {{site.data.keyword.aios_short}} no {{site.data.keyword.Bluemix}}.
-1.  Para trabalhar com o cenário demo, clique em **Executar demo**.
+1.  Para configurar sua instância do {{site.data.keyword.aios_short}} automaticamente por meio de dados de amostra, clique em **Configuração automática**.
 
-   ![Demo welcome](images/fastpath_demo_11.31.04.png)
+   ![Demo welcome](images/cloud-auto-setup.png)
 
-   À medida que os serviços do {{site.data.keyword.aios_short}} estão sendo provisionados, é possível revisar o cenário demo:
-
-   ![visualização prévia de demo](images/fastpath_demo_11.31.58.png)
-
-Quando o fornecimento estiver concluído, clique no botão **Vamos** para fazer o tour pelo painel do {{site.data.keyword.aios_short}} e continue com [Visualizando resultados no {{site.data.keyword.aios_short}}](#wos-open).
-
-   ![Demo Vamos](images/fastpath_demo_11.33.45.png)
-
+   À medida que os serviços do {{site.data.keyword.aios_short}} são provisionados, é possível revisar o cenário demo. Quando o fornecimento estiver concluído, clique no botão **Iniciar tour** para fazer um tour no painel do {{site.data.keyword.aios_short}} e continue com [Visualizando resultados no {{site.data.keyword.aios_short}}](#wos-open).
 
 ## Visualizando resultados no
 {{site.data.keyword.aios_short}}
@@ -152,22 +145,9 @@ Em uma visão rápida, a página Insights mostra quaisquer problemas com justiç
 {: #wos-monitoring}
 
 1.  Na página Insights, clique no ladrilho `GermanCreditRiskModelICP` para visualizar detalhes sobre os dados monitorados.
-1.  Clique e arraste o marcador no gráfico para visualizar um período de dia e horário que mostra os dados e, em seguida, clique no link **Visualizar detalhes**. Como alternativa, é possível clicar em diferentes períodos no gráfico para mudar os dados que você vê.
+1.  Clique e arraste o marcador no gráfico para visualizar um período de dia e horário que mostra os dados e, em seguida, clique no link **Visualizar detalhes**. Como alternativa, é possível clicar em diferentes períodos no gráfico para mudar os dados que você vê. 
 
-     - Por exemplo, a tela a seguir mostra os dados para uma data e um horário específicos. As datas e os horários variam, dependendo de quando você executa o módulo.
-
-     - Para obter informações sobre como interpretar o gráfico de séries temporais, consulte [Monitorando a justiça, a média de solicitações por minuto e a precisão](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart).
-
-   ![Demo Lets go](images/fastpath_demo_11.34.17.png)
-
-1.  Para ver detalhes sobre o monitoramento de dados `SEX`, certifique-se de que `SEX` esteja selecionado no menu suspenso.
-
-    - Observe que, na captura de tela a seguir, a propensão existe.
-    
-   ![Demo Lets go](images/fastpath_demo_11.34.27.png)
-
-    - Para obter informações sobre como interpretar o gráfico dos pontos de dados em uma hora específica, consulte [Visualização de dados](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual).
-
+Para obter informações sobre como interpretar o gráfico de séries temporais, consulte [Obtendo insights](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
 ### Visualizar explicabilidade
 {: #wos-explain}
@@ -180,20 +160,17 @@ Os IDs de transação para a hora passada são listados para as transações que
 
    ![Demo Lets go](images/fastpath_demo_11.35.12.png)
 
-Para obter informações sobre como localizar e explicar transações, consulte [Monitorando a explicabilidade](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov).
+Para obter informações sobre como localizar e explicar transações, consulte [Monitorando a explicabilidade](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
    ![Demo Lets go](images/fastpath_demo_11.35.50.png)
 
 ## Concluindo o tour
 {: #wos-done-demo}
 
-1. Clique no botão **Pronto**.
+Depois de concluir o tour, é possível incluir sua própria implementação de modelo no painel ou continuar a explorar a implementação do tutorial. 
 
-   ![Demo Lets go](images/fastpath_demo_11.37.22.png)
-
-2. Clique no botão **Vamos** para começar a trabalhar com o {{site.data.keyword.aios_short}}.
-
-   ![Demo Lets go](images/fastpath_demo_11.33.45.png)
+- Para incluir o seu próprio modelo no painel, clique no botão **Incluir no painel**.
+- Para continuar a explorar o modelo do tutorial, clique no bloco Risco de crédito alemão.
 
 ## Próximos passos
 {: #gs-next}

@@ -40,7 +40,7 @@ subcollection: ai-openscale
 ## 開始之前
 {: #as-prereqs}
 
-1. [建立 {{site.data.keyword.cloud_notm}}API 金鑰並下載它](/docs/iam?topic=iam-userapikey#create_user_key)。您將需要在後續步驟中輸入 API 金鑰。
+1. [建立 {{site.data.keyword.cloud_notm}}API 金鑰並下載它](/docs/iam?topic=iam-userapikey#create_user_key){: external}。您將需要在後續步驟中輸入 API 金鑰。
 
 2. [安裝 Python 3 任何版次](https://www.python.org/downloads/){: external}。
 
@@ -84,9 +84,10 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
 - 「洞察」頁面會根據所配置的臨界值，顯示公平性和精確度的任何問題，並且一目瞭然。
 
-- 每一項部署各會顯示成一個磚。模組已配置一項稱為 `GermanCreditRiskModel` 的部署，如下列畫面擷取所示：
+- 每一項部署各會顯示成一個磚。如果您遵循下列任一指導教學，在您的儀表板中，您會看到一項部署，稱為 `GermanCreditRiskModel`。下列範例顯示一個儀表板，其中具有許多已部署及受監視的模型：
 
-  ![「洞察」概觀](images/setup01-0206.png)
+    ![「洞察」儀表板，其中具有許多部署，每一項部署各顯示成一個圖磚](images/insight-dashboard.png)
+
 
 ### 檢視監視資料
 {: #as-monitoring}
@@ -96,17 +97,17 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
    - 例如，下列畫面顯示特定日期和時間的資料。日期和時間會因您執行模組的時間而異。
 
-   - 如需解讀時間序列圖表的相關資訊，請參閱[監視「公平性」、「每分鐘的平均要求數」和「精確度」](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
+   - 如需如何解讀時間序列圖表的相關資訊，請參閱[取得洞察](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
 
-    ![監視資料](images/setup02-0206.png)
+    ![顯示監視器資料](images/setup02-0206.png)
 
 3. 如果要查看 `AGE` 資料監視的相關明細，請確定已從下拉功能表中選取 `AGE`。
 
   - 請注意，在下列畫面擷取中，不存在任何偏誤。
 
-  - 如需解讀某一小時之資料點圖表的相關資訊，請參閱[監視「公平性」、「每分鐘的平均要求數」和「精確度」](/docs/services/ai-openscale?topic=ai-openscale-it-ov#it-intp)。
+  - 如需如何解讀某一小時之資料點圖表的相關資訊，請參閱[將某一小時的資料視覺化](/docs/services/ai-openscale?topic=ai-openscale-it-vdet)。
 
-    ![檢視明細](images/setup03-0206.png)
+    ![顯示「檢視明細」](images/setup03-0206.png)
 
 ### 檢視可解釋性
 {: #as-explain}
@@ -124,5 +125,5 @@ ibm-ai-openscale-cli --apikey <Your API key>
 
 - 如果要瞭解偏誤，請參閱[公平性](/docs/services/ai-openscale?topic=ai-openscale-mf-monitor)。
 - 如果要瞭解您模型預測輸出結果的精準程度，請參閱[精確度](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)。
-- 如果要瞭解如何解讀圖表和資料，請參閱[監視「公平性」、「每分鐘的平均要求數」和「精確度」](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
+- 如果想瞭解如何解讀圖表及資料，請參閱[取得洞察](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
 - 如果要瞭解基礎因素如何影響輸出結果，請參閱[監視可解釋性](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)。

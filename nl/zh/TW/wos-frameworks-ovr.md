@@ -37,10 +37,6 @@ subcollection: ai-openscale
 - [自訂](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-custom#frmwrks-custom)
 - [SPSS C&DS](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss)（只適用於 {{site.data.keyword.wos4d_full}}）
 
-- [SAS AI Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-sas#frmwrks-sas)
-{: download}
-- [Google Cloud ML Engine](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-google#frmwrks-google)
-{: download}
 
 完整支援包括特定架構、問題和資料類型的下列特性：
 
@@ -67,7 +63,7 @@ subcollection: ai-openscale
 |**影像分類**|否 - 進行中的研究主題|否 - 進行中的研究主題|是<sup>1</sup>|否||
 {: caption="模型支援明細" caption-side="top"}
 
-<sup>1</sup> 如果您的模型 / 架構會輸出預測機率
+<sup>1</sup> 如果您的模型 / 架構會輸出預測機率，則支援可解釋性。
 
 <p>&nbsp;</p>
 

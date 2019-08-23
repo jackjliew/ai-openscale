@@ -37,10 +37,6 @@ subcollection: ai-openscale
 - [カスタム](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-custom#frmwrks-custom)
 - [SPSS C&DS](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss) ({{site.data.keyword.wos4d_full}}でのみ使用可能)
 
-- [SAS AI Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-sas#frmwrks-sas)
-{: download}
-- [Google Cloud ML Engine](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-google#frmwrks-google)
-{: download}
 
 完全なサポートには、特定のフレームワーク、問題、データ・タイプ用の以下の項目も含まれます。
 
@@ -67,7 +63,7 @@ subcollection: ai-openscale
 | **イメージ分類**      | いいえ: アクティブな調査トピック | いいえ: アクティブな調査トピック | はい<sup>1</sup> | いいえ ||
 {: caption="モデルのサポート詳細" caption-side="top"}
 
-<sup>1</sup> モデル/フレームワークが予測確率を出力する場合
+<sup>1</sup> 説明性は、モデル/フレームワークが予測確率を出力する場合にサポートされています。
 
 <p>&nbsp;</p>
 

@@ -28,14 +28,14 @@ subcollection: ai-openscale
 # Protokollierung von Nutzdaten und Rückmeldedaten in {{site.data.keyword.aios_short}}
 {: #cdb-payload}
 
-Bei {{site.data.keyword.aios_short}} müssen alle Transaktionen, die an die bereitgestellten Modelle gesendet werden, als Nutzdatensätze im {{site.data.keyword.aios_short}}-Datamart protokolliert werden. Die Nutzdaten für die Ein- und die Ausgabe (Anforderungen und Antworten) müssen das für {{site.data.keyword.aios_short}} erforderliche, in den Spezifikationen beschriebene Format aufweisen.
+Bei {{site.data.keyword.aios_short}} müssen alle Transaktionen, die an die bereitgestellten Modelle gesendet werden, als Nutzdatensätze im {{site.data.keyword.aios_short}}-Datamart protokolliert werden. Die Nutzdaten für die Ein- und die Ausgabe (Anforderungen und Antworten) müssen das für {{site.data.keyword.aios_short}} erforderliche, in den Spezifikationen beschriebene Format aufweisen. 
 {: shortdesc}
 
 {{site.data.keyword.aios_short}} unterstützt die Protokollierung von Nutzdaten und Rückmeldedaten über die folgenden Methoden:
 
 - [Unter Verwendung des Python-Clients](/docs/services/ai-openscale?topic=ai-openscale-cdb-payload#cdb-payload-log-pythonsdk)
 - [Unter Verwendung der REST-API](/docs/services/ai-openscale?topic=ai-openscale-cdb-payload#cdb-payload-log-rest-api)
-- [Automatisch für unterstützte Machine Learning-Anbieter](/docs/services/ai-openscale?topic=ai-openscale-fmrk-workaround-pyld-lg)
+- [Automatisch für unterstützte Machine Learning-Provider](/docs/services/ai-openscale?topic=ai-openscale-fmrk-workaround-pyld-lg)
 
 ## Nutzdaten mit Python-SDK protokollieren
 {: #cdb-payload-log-pythonsdk}
@@ -85,11 +85,7 @@ req_response = requests.post(endpoint,
                              headers = headers)
 ```
 
-
-
 ## Weitere Schritte
-{: #cdb-payload-nxt-stps}
 
-Weitere Informationen finden Sie unter [Nutzdatenprotokollierung](http://aiopenscale-api.mybluemix.net/#/Payload%20Logging%20(Public%20API)/publishScoringPayload).{: external}
-
+Nach dem Einrichten der Nutzdatenprotokollierung können Sie die Konfiguration von Überwachungen fortsetzen, indem Sie Modelldetails eingeben. Weitere Informationen finden Sie im Abschnitt [Modelldetails angeben](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-work-model-dets).
 

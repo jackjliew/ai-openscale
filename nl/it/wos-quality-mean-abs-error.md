@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Errore assoluto medio ![tag beta](images/beta.png)
+# Errore assoluto medio
 {: #quality_abserror}
 
 L'errore assoluto medio dà la media della differenza assoluta tra la previsione del modello e il valore obiettivo.

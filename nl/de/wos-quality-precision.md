@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Genauigkeit ![Beta-Tag](images/beta.png)
+# Genauigkeit
 {: #quality_precision}
 
 Die Genauigkeit gibt den Anteil der richtigen Vorhersagen an den Vorhersagen der positiven Klasse an.
@@ -56,8 +56,8 @@ Die Genauigkeit (P) ist definiert als die Anzahl der wahr-positiven Ergebnisse (
 
 
 ```
-                                  Anzahl der wahr-positiven Ergebnisse
+             Anzahl der wahr-positiven Ergebnisse
 Genauigkeit =  __________________________________________________________________________________
 
-               (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-positiven Ergebnisse)
+             (Anzahl der wahr-positiven Ergebnisse + Anzahl der falsch-positiven Ergebnisse)
 ```

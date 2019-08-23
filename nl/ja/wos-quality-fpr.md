@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 偽陽性率 (FPR) ![ベータ・タグ](images/beta.png)
+# 偽陽性率 (FPR)
 {: #quality_fpr_false}
 
 偽陽性率は、肯定クラスの予測の不正解率です。

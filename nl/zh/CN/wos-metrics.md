@@ -44,25 +44,21 @@ subcollection: ai-openscale
 
 以下高级教程说明如何执行此操作：
 
-- [使用 {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [使用定制 Machine Learning 引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [使用 {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [使用定制 Machine Learning 引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
 您可以随时禁用和启用定制监视。如果不再需要定制监视器，那么可以将其移除。
 
-有关更多信息，请参阅 [Python SDK 文档](http://ai-openscale-python-client.mybluemix.net/)。
+有关更多信息，请参阅 [Python SDK 文档](http://ai-openscale-python-client.mybluemix.net/){: external}。
 
 ## 访问和可视化定制度量
 {: #cst_mtrcs_viz}
 
 要访问和可视化定制度量，您可以使用程序化接口。 以下高级教程说明如何执行此操作：
 
-- [使用 {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [使用定制 Machine Learning 引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [使用 {{site.data.keyword.pm_full}}](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [使用定制 Machine Learning 引擎](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-   有关更多信息，请参阅 [Python SDK 文档](http://ai-openscale-python-client.mybluemix.net/)。
+   有关更多信息，请参阅 [Python SDK 文档](http://ai-openscale-python-client.mybluemix.net/){: external}。
 
 定制度量的可视化显示在 {{site.data.keyword.aios_short}} 仪表板上。
-
-<!---
-![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
---->

@@ -85,11 +85,7 @@ req_response = requests.post(endpoint,
                              headers = headers)
 ```
 
-
-
 ## Passi successivi
-{: #cdb-payload-nxt-stps}
 
-Per ulteriori informazioni, consultare [Registrazione payload](http://aiopenscale-api.mybluemix.net/#/Payload%20Logging%20(Public%20API)/publishScoringPayload){: external}
-
+Dopo aver impostato la registrazione del payload, è possibile continuare a configurare i monitor immettendo i dettagli del modello. Per ulteriori informazioni, consultare [Fornire i dettagli sul modello](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-work-model-dets).
 

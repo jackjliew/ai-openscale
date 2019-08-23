@@ -46,4 +46,4 @@ subcollection: ai-openscale
 
 以下のパフォーマンス指標が {{site.data.keyword.aios_short}} によってサポートされています。
 
-- [スループット](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)
+- [スループット](/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

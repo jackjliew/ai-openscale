@@ -55,14 +55,13 @@ binding_uid = client.data_mart.bindings.add('My Azure ML Service engine', AzureM
 ```
 {: codeblock}
 
-샘플 출력: 
+샘플 출력:
 
 ```
 uid	                                   name	                      service_type	                   created
 410e730f-8462-45fe-8b41-a029d6d6043a	My Azure ML Service engine azure_machine_learning_service2019-06-10T22:10:29.398Z
 ```
 {: codeblock}
-    
     
 ## Microsoft Azure ML 서비스 구독 추가
 {: #cml-azsrvsub}
@@ -110,7 +109,7 @@ subscriptions_uids = client.data_mart.subscriptions.get_uids()
 ## 스코어링 및 페이로드 로깅
 {: #cml-azsrvscore}
 
-모델을 스코어링하십시오. 전체 예는 [Azure 기계 학습 서비스 엔진에 대한 작업 노트북](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: external}을 참조하십시오. 
+모델을 스코어링하십시오. 전체 예는 [Azure 기계 학습 서비스 엔진에 대한 작업 노트북](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Azure%20ML%20Studio%20Engine.ipynb){: external}을 참조하십시오.
 
 페이로드 로깅 테이블에 요청 및 응답 저장:
 
@@ -126,7 +125,7 @@ subscription.payload_logging.store(records=records_list)
 {: codeblock}
 {: python}
    
-Python 이외의 언어의 경우에는 REST API를 사용하여 직접 페이로드 로깅을 수행할 수도 있습니다. 
+Python 이외의 언어의 경우에는 REST API를 사용하여 직접 페이로드 로깅을 수행할 수도 있습니다.
    
 ```
     token_endpoint = "https://iam.cloud.ibm.com/identity/token"

@@ -31,16 +31,16 @@ subcollection: ai-openscale
 {{site.data.keyword.aios_short}} で追跡するデプロイメントごとにモニターをセットアップして有効にします。
 {: shortdesc}
 
+たとえば、対話式チュートリアルで **German Credit Risk モデル**を使用する場合は、モデル・デプロイメントを選択し、ペイロード・ロギングのデータ・タイプを設定し、モデル詳細セクションの一部として表示されている設定を確認します。
+
 ## デプロイメントの選択
 {: #mo-select-deploy}
 
-1. **「インサイト」**タブで、**「デプロイメントの追加 (Add deployments)」**ボタンをクリックします。 
+1. **「インサイト」**タブで、**「ダッシュボードに追加」**ボタンをクリックします。 
 
-   ![デプロイメントの選択ページ](images/config-select-deploy.png)
+   使用可能なモデル・デプロイメントのリストが表示されます。モデル・デプロイメントが表示されない場合は、機械学習プロバイダーを使用してモデルをデプロイする必要があります。チュートリアルでは、**German Credit Risk モデル**を選択します。
 
-   使用可能なモデル・デプロイメントのリストが表示されます。
-
-   ![モニタリングのための準備](images/wos-select-model-deployment.png)
+   ![モデル・デプロイメント選択画面が表示されています。この画面には、機械学習プロバイダーとデプロイメントの選択内容が表示されます。](images/wos-select-model-deployment.png)
 
 2. モデル・デプロイメントをクリックしてから、**「構成」**をクリックします。
 
@@ -54,13 +54,14 @@ subcollection: ai-openscale
 {: #mo-work-data}
 
 モデルと訓練データに関する情報を入力する必要があります。 訓練データの詳細については、[{{site.data.keyword.aios_short}} が訓練データにアクセスする必要があるのはなぜですか?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) を参照してください。
+    チュートリアルでは、**「データ・タイプ」**フィールドで**「数値/分類」**を選択し、**「アルゴリズムのタイプ」**で**「二項分類」**を選択します。
 
-![説明の準備](images/config-what-monitor.png)
+![「入力のタイプの指定」画面にデータ・タイプとアルゴリズム・タイプの選択内容が表示されています](images/config-what-monitor.png)
 
-- {{site.data.keyword.aios_short}} インスタンスと同じ地域の {{site.data.keyword.pm_full}} インスタンスを使用する場合は、データ・タイプとアルゴリズム・タイプを選択する必要がありますが、一部のペイロード・ロギング情報は自動的に構成されます。
+- {{site.data.keyword.aios_short}} インスタンスと同じ地域の {{site.data.keyword.pm_full}} インスタンスを使用する場合は、データ・タイプとアルゴリズム・タイプを選択する必要がありますが、一部のペイロード・ロギング情報は自動的に構成されます。 
 - そうでない場合は、**「ペイロード・ロギング (Payload logging)」**タブおよびウィンドウで、データ、アルゴリズム・タイプ、およびペイロード・ロギングに関する情報を入力する必要があります。 
 
-   選択内容に応じて固有の要件があります。 詳しくは、[数値/カテゴリカル・データ](https://test.cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan)を参照してください。
+   選択内容に応じて固有の要件があります。 詳しくは、[数値/カテゴリカル・データ](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan)を参照してください。
 
    モニターを構成するには、実行するコード・スニペットの 1 つをコピーしておく必要があります。 クライアント・アプリケーションで cURL コマンドを実行するか、データ・サイエンス・ノートブックで Python コマンドを実行します。 これにより、モデル・デプロイメントの要求をログに記録し、応答データをペイロード・データベースに書き込むことができます。
    
@@ -68,7 +69,7 @@ subcollection: ai-openscale
 
 ![ペイロード・ロギング画面が表示されています](images/payload-logging-gosales001.png)
 
-評価が正しく {{site.data.keyword.aios_short}} に送信されていた場合は、**「完了 (I'm finished)」**ボタンをクリックすると次の画面が表示されます。ボタンが非表示になり、**「ロギングは正常にアクティブになりました (Logging activated successfully)」**というメッセージが表示されます。
+評価が正しく {{site.data.keyword.aios_short}} に送信されていた場合は、**「完了 (I'm finished)」**ボタンをクリックすると次の画面が表示されます。 ボタンが非表示になり、**「ロギングは正常にアクティブになりました (Logging activated successfully)」**というメッセージが表示されます。
 
 ![データが正常にアップロードされた後のペイロード・ロギング画面が表示されています](images/payload-logging-gosales002.png)
 
@@ -76,19 +77,19 @@ subcollection: ai-openscale
 ### モデル詳細の入力
 {: #mo-work-model-dets}
 
-{{site.data.keyword.aios_short}} がデータベースにアクセスしてモデルのセットアップ方法を理解できるように、モデルに関する情報を入力します。
+{{site.data.keyword.aios_short}} がデータベースにアクセスして、モデルがどのようにセットアップされているかを理解できるように、モデルに関する情報を入力します。たとえば、対話式チュートリアルで **German Credit Risk モデル**を使用する場合は、以下のフィールドの多くが自動的に入力されます。
 
 具体的には、モニターを構成するために以下のタスクを実行する必要があります。
 
 1. 訓練データの場所を指定します。 これを行うには、場所、ホスト名または IP アドレス、データベース名、および認証情報を入力します。
 2. データベース内で、スキーマとテーブルを選択して訓練テーブルを選択する必要があります。
-3. 訓練テーブルからラベル列を選択します。
+3. 訓練テーブルのラベル列を選択します。たとえばチュートリアルでは、**「リスクあり (Risk)」**タイルをクリックします。
 4. AI デプロイメントの訓練に使用された特徴量を選択します。
 5. テキストの特徴量とカテゴリカルの特徴量を選択します。
-6. デプロイメント予測列を選択します。
+6. デプロイメント予測列を選択します。たとえばチュートリアルでは、**「predictedLabel」**タイルをクリックします。
 7. 最後に、モデルの詳細を確認してから、そのモデルを保存できます。
 
-以下のセクションでは、モデルのタイプ ([数値/カテゴリカル・データ](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan)または[画像と非構造化テキスト](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datai)) に応じて必要になる具体的な情報について説明します。
+以下のセクションでは、モデルのタイプ ([数値/カテゴリカル・データ](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan)または[画像と非構造化テキスト](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datai)) に応じて必要になる具体的な情報について説明します。
 
 
 ### 数値/カテゴリカル・データ
@@ -161,4 +162,4 @@ subcollection: ai-openscale
 ### 次のステップ
 {: #mo-next}
 
-モニターの構成を続けるには、**「正解率」**タブをクリックし、**「開始」**をクリックします。詳しくは、[正解率モニターまたはモデル性能モニターの構成](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)を参照してください。
+モニタリングの構成を続けるには、**「品質」**タブをクリックして**「開始」**をクリックします。詳しくは、[モデル性能モニタリングの構成](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor)を参照してください。

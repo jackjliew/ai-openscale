@@ -37,10 +37,6 @@ subcollection: ai-openscale
 - [사용자 정의](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-custom#frmwrks-custom)
 - [SPSS C&DS](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss)({{site.data.keyword.wos4d_full}}에서만 사용 가능)
 
-- [SAS AI Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-sas#frmwrks-sas)
-{: download}
-- [Google Cloud ML Engine](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-google#frmwrks-google)
-{: download}
 
 전체 지원에는 특정 프레임워크, 문제점 및 데이터 유형에 대한 다음 특성이 포함됩니다.
 
@@ -67,7 +63,7 @@ subcollection: ai-openscale
 | **이미지 분류**      | 아니오 - 현재 연구 중인 주제 | 아니오 - 현재 연구 중인 주제 | 예<sup>1</sup> |아니오 ||
 {: caption="모델 지원 세부사항" caption-side="top"}
 
-<sup>1</sup> 모델 / 프레임워크에서 예측 확률을 출력하는 경우
+<sup>1</sup> 설명 가능성은 모델 / 프레임워크에서 예측 확률을 출력하는 경우에 지원됩니다. 
 
 <p>&nbsp;</p>
 

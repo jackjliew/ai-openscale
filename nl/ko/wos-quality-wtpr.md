@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 가중된 참 양성 비율(wTPR) ![베타 태그](images/beta.png)
+# 가중된 참 양성 비율(wTPR)
 {: #quality-wtpr}
 
 가중된 참 양성 비율은 클래스 확률과 동일한 가중치로 가중된 클래스 TPR 평균을 제공합니다.

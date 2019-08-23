@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 平均绝对误差 ![beta 标记](images/beta.png)
+# 平均绝对误差
 {: #quality_abserror}
 
 平均绝对误差给出模型预测与目标值之间的绝对差值的平均值。

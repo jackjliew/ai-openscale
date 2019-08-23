@@ -43,11 +43,11 @@ subcollection: ai-openscale
 
 在使用论坛提问时，请给问题加上标记，以便 {{site.data.keyword.aios_short}} 开发团队能看到您的问题。
 
-如果您有关于 {{site.data.keyword.aios_short}} 的技术问题，请在 [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale) 上发布问题，并使用 `watson-openscale` 标记您的问题。
+如果您有关于 {{site.data.keyword.aios_short}} 的技术问题，请在 [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale){: external} 上发布问题，并使用 `watson-openscale` 标记您的问题。
 
-有关服务的问题和入门指示信息，请使用 [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale) 论坛。包括 `openscale` 标记。 有关使用论坛的更多详细信息，请参阅[获取帮助](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html)。
+有关服务的问题和入门指示信息，请使用 [IBM developerWorks dW Answers](https://developer.ibm.com/?s=openscale){: external} 论坛。包括 `openscale` 标记。 有关使用论坛的更多详细信息，请参阅[获取帮助](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html){: external}。
 
-有关开具 IBM 支持凭单或有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://cloud.ibm.com/unifiedsupport/supportcenter)，然后单击**创建案例**。
+有关开具 IBM 支持凭单或有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}，然后单击**创建案例**。
 
 ## 还在查找更多信息？
 {: #looking}

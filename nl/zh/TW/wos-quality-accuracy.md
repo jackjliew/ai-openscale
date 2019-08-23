@@ -61,8 +61,6 @@ subcollection: ai-openscale
 
 您需要依下列範例所示，透過 {{site.data.keyword.aios_short}} 使用者介面，使用 [Python 用戶端](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: external}或 [Rest API](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: external}，來新增手動標示的回饋資料。
 
-檢閱[支援的架構](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)，以了解精確度監視限制。
-
 ### 已除去偏誤的精確度
 {: #acc-debias-view}
 

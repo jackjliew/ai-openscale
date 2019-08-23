@@ -30,13 +30,15 @@ subcollection: ai-openscale
 
 要配置监视器，{{site.data.keyword.aios_short}} 要求您发送评分有效内容，以便开始记录将受监视的数据。
 
-- 对于 {{site.data.keyword.pm_full}} 中部署的模型，可以选择对 {{site.data.keyword.pm_full}} 中的已部署模型进行评分或者使用有效内容日志记录 API。对于在 {{site.data.keyword.pm_short}} 中进行评分的已部署模型，会将这些模型自动发送到 {{site.data.keyword.aios_short}}。 
-- 对于其他机器学习引擎（例如 Microsoft Azure、Amazon SageMaker 或定制机器学习引擎），必须使用有效内容日志记录 API 来发送评分有效内容。有关更多信息，请参阅[非 {{site.data.keyword.pm_full}} 服务实例的有效内容日志记录](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
+- 对于 {{site.data.keyword.pm_full}} 中部署的模型，会将这些模型自动发送到 {{site.data.keyword.aios_short}}。对于自动发送的评分请求，您无需完成此任务，并且不会出现任何代码片段。
+- 对于其他机器学习引擎（例如 Microsoft Azure、Amazon SageMaker 或定制机器学习引擎），必须使用有效内容日志记录 API 来发送评分有效内容。为此，必须使用可从“有效内容日志记录”页面中检索的 cURL 或 Python 格式的代码片段。有关更多信息，请参阅[非 {{site.data.keyword.pm_full}} 服务实例的有效内容日志记录](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
 
 ## 有效内容日志记录的步骤
 {: #cdb-score-apisteps}
 
-1. 选择部署，然后转至**有效内容日志记录**页面。
+1. 从 {{site.data.keyword.aios_short}} 仪表板中，单击部署磁贴。
+2. 单击**配置监视器**。 
+3. 在导航窗格中，单击**有效内容日志记录**。
 2. 通过单击 `cURL` 或 `Python` 选项卡，选择使用 `cURL` 还是 `Python` 代码。
 3. 单击**复制到剪贴板**并将其粘贴到日志模型部署请求和响应数据中。有关更多信息，请参阅[非 {{site.data.keyword.pm_full}} 服务实例的有效内容日志记录](/docs/services/ai-openscale?topic=ai-openscale-cml-connect)。
 
@@ -54,12 +56,12 @@ subcollection: ai-openscale
 
 - 对于表格、文本和图像模型，以下基线请求将生成数据点：
 
-   - 1 个评分请求生成 5000 个数据点。
+   -ai-open-scale-ibm-aios-scheduling  | 1 | 调度 servicescoring 请求生成 5000 个数据点。
 
 - 仅对于表格分类模型，将发出其他评分请求以进行对比说明。以下请求会添加到上述基线请求：
 
    - 100 个评分请求中每个请求生成 51 个附加数据点。
-   - 101 个评分请求中每个请求生成 1 个附加数据点。
+   - 101 scoring requests generatesai-open-scale-ibm-aios-scheduling  | 1 | 每分钟调度 serviceadditional 数据点。
 
 
 ## 后续步骤

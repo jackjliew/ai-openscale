@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# F1-Maß ![Beta-Tag](images/beta.png)
+# F1-Maß
 {: #quality_f1-measr}
 
 Das F1-Maß liefert das harmonische Mittel für Genauigkeit und Trefferquote.

@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: credentials, REST API, data mart
+keywords: credentials, REST API, datamart ID, IDs, binding ID,  deployment ID, subscription ID
 
 subcollection: ai-openscale
 
@@ -36,29 +36,29 @@ Für Unternehmenskonten kann ein Administrator das Datamart erstellen, andere Be
 ## Plattform-API-Schlüssel erstellen
 {: #cred-create-apikey}
 
-Führen Sie zum Erstellen eines Plattform-API-Schlüssels die folgenden Schritte aus:
+Führen Sie zum Erstellen eines IBM Cloud-API-Schlüssels die folgenden Schritte aus:
 
-1. Melden Sie sich bei [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external} an.
+- Melden Sie sich bei [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external} an.
+- Wählen Sie folgende Optionen aus: **Verwalten** --> **Zugriff (IAM)** --> **{{site.data.keyword.cloud_notm}} API-Schlüssel**
+- Klicken Sie auf die Schaltfläche **IBM Cloud-API-Schlüssel erstellen**.
+- Versehen Sie Ihren Schlüssel mit Namen und Beschreibung und klicken Sie auf **Erstellen**.
 
-2. Wählen Sie **Verwalten** --> **Sicherheit** --> **Plattform-API-Schlüssel** aus. 
+## Service-IDs suchen:
+{: #cred-find-datamart-id}
 
-    ![Plattform-API-Schlüssel](images/cred-api-key.png)
+Suchen Sie Ihre Datamart-, Bereitstellungs-, Abonnement- oder Bindungs-IDs auf der Seite {{site.data.keyword.aios_short}} **Nutzdatenprotokollierung**, die angezeigt wird, wenn Sie **Überwachungen konfigurieren** für eine Bereitstellung auswählen.
 
-3. Erstellen und speichern Sie einen Plattform-API-Schlüssel.
-
-Sie finden Sie Ihre Datamart-ID (oder Serviceinstanz-ID):
-
-1. Klicken Sie auf die Kachel für Modellbereitstellung.
-2. Klicken Sie auf das Symbol **Konfigurieren** ![Symbol für Konfigurieren](images/configure-deployment-button.png).
-3. Klicken Sie auf **Endpunkt der Nutzdatenprotokollierung anzeigen**.
-4. Suchen Sie auf der Seite {{site.data.keyword.aios_short}}**Nutzdatenprotokollierung** das Feld **Datamart-ID**.
+1. Klicken Sie auf die Kachel für Modellbereitstellung. 
+2. Klicken Sie auf **Überwachungen konfigurieren** ![Symbol für Konfiguration](images/configure-deployment-button.png).
+3. Klicken Sie auf **Nutzdatenprotokollierung**.
+4. Suchen Sie auf der Seite {{site.data.keyword.aios_short}} **Nutzdatenprotokollierung** im Fenster **Details** die gewünschte ID. Beispiel: Das Feld **Datamart-ID**:
 
     ![Datamart-ID](images/data-mart-id.png)
 
 ## Über die Befehlskonsole Berechtigungsnachweise für die Serviceinstanz erstellen
 {: #cred-creds}
 
-Führen Sie zum Erstellen von Berechtigungsnachweisen für {{site.data.keyword.aios_short}} mit der {{site.data.keyword.cloud_notm}} [Befehlskonsole](/docs/cli?topic=cloud-cli-ibmcloud-cli) die folgenden Schritte aus:
+Führen Sie zum Erstellen von Berechtigungsnachweisen für {{site.data.keyword.aios_short}} mit der {{site.data.keyword.cloud_notm}} [Befehlskonsole](/docs/cli?){: external} die folgenden Schritte aus:
 
 1. Rufen Sie Ihren API-Schlüssel durch Ausführen des folgenden Befehls ab:
 
@@ -76,7 +76,12 @@ Führen Sie zum Erstellen von Berechtigungsnachweisen für {{site.data.keyword.a
     Locked       false
     UUID         ApiKey-xxxxxxxxx-afd7-xxxxx-b0e1-xxxxxxxxxxx
     ```
+
 2. Überprüfen Sie, welche Ressourcengruppe Sie in Ihrem {{site.data.keyword.cloud_notm}}-Konto verwenden.
+
+   1. Rufen Sie das Dashboard auf.
+   2. Klicken Sie im **Navigationsmenü** auf **Ressourcenliste**.
+   3. Klicken Sie in der Spalte **Gruppe** auf die Dropdown-Liste **Nach Gruppe oder Organisation filtern** und legen Sie das Kontrollkästchen **Standard** fest.
 
   ![Ressourcengruppe in der Cloud](images/cloud-resource.png)
 
@@ -93,6 +98,7 @@ Führen Sie zum Erstellen von Berechtigungsnachweisen für {{site.data.keyword.a
     ```curl
     ibmcloud resource service-instance '<Namen_Ihrer_Watson_OpenScale-Instanz>'
     ```
+
     **Hinweis**: Wenn Sie die {{site.data.keyword.cloud_notm}}-Befehlskonsole unter Windows verwenden, ersetzen Sie die einzelnen Hochkommas (') in den zuvor genannten Befehlen jeweils durch Anführungszeichen (").
 
     Es werden die folgenden Informationen angezeigt:
@@ -118,10 +124,10 @@ Führen Sie zum Erstellen von Berechtigungsnachweisen für {{site.data.keyword.a
 ## Weitere Schritte
 {: #cred-create-next-steps}
 
-Geben Sie Ihren Machine Learning-Anbieter an:
+Geben Sie Ihren Machine Learning-Provider an:
 
-- [IBM Watson Machine Learning-Serviceinstanz angeben](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
-- [Microsoft Azure ML Studio-Instanz angeben](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
-- [Microsoft Azure ML Service-Instanz angeben](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
-- [Amazon SageMaker ML-Serviceinstanz angeben](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
-- [Angepasste ML-Serviceinstanz angeben](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-co-connect)
+- [IBM Watson Machine Learning-Serviceinstanz angeben](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
+- [Microsoft Azure ML Studio-Instanz angeben](/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
+- [Microsoft Azure ML Service-Instanz angeben](/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
+- [Amazon SageMaker ML-Serviceinstanz angeben](/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
+- [Angepasste ML-Serviceinstanz angeben](/docs/services/ai-openscale?topic=ai-openscale-co-connect)

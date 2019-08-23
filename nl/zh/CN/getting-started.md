@@ -67,7 +67,7 @@ subcollection: ai-openscale
 
 根据您的首选项和专业知识级别，有多个设置选项。
 
-- [以下自动化设置](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)通过在后台执行任务来指导您完成此过程。
+- [以下自动化设置](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start)通过在后台执行任务来指导您完成此过程。
 
    使用教程意味着您可以观看并单击浏览教程的下一部分。
    
@@ -75,7 +75,7 @@ subcollection: ai-openscale
 
    使用界面可通过样本模型和注入的数据执行常见任务。
    
-- [高级教程](/docs/services/ai-openscale?topic=ai-openscale-crt-ov)让技术更高超的用户能够安装用于自动供应和配置必备服务的 Python 模块。此高级教程适用于数据研究员或者能够使用 Python 和笔记本熟练编写代码的用户。它举例说明如何可以使用 {{site.data.keyword.aios_short}} 客户机以编程方式执行功能。本教程中使用的笔记本导致[自动设置](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start)后位置相同。
+- [高级教程](/docs/services/ai-openscale?topic=ai-openscale-crt-ov)让技术更高超的用户能够安装用于自动供应和配置必备服务的 Python 模块。此高级教程适用于数据研究员或者能够使用 Python 和笔记本熟练编写代码的用户。它举例说明如何可以使用 {{site.data.keyword.aios_short}} 客户机以编程方式执行功能。本教程中使用的笔记本导致[自动设置](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start)后位置相同。
 
    此模块要求安装 Python 3，其中包含 pip 软件包管理系统。有关指示信息，请参阅[安装 Python 模块以设置 {{site.data.keyword.aios_short}}](/docs/services/ai-openscale?topic=ai-openscale-as-module)。
 
@@ -92,7 +92,7 @@ subcollection: ai-openscale
 
 在开始教程之前，必须已设置下列资源：
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
 自动化设置教程旨在运用尽可能最少的用户交互。它自动为您制定以下决策：
@@ -100,7 +100,7 @@ subcollection: ai-openscale
 - 如果已设置多个 {{site.data.keyword.pm_full}} 实例，那么安装过程将运行用于列出实例的 API 调用，并选择最先显示在生成的列表中的任何 {{site.data.keyword.pm_short}} 实例。 
 - 要创建新的 Lite 版本 {{site.data.keyword.pm_full}}，{{site.data.keyword.aios_short}} 安装程序将使用 {{site.data.keyword.Bluemix}} 帐户的缺省资源组。
 
-### 供应 {{site.data.keyword.aios_full}} 服务
+### 供应 {{site.data.keyword.aios_short}} 服务
 {: #crt-wos-faststart}
 
 如果您尚未供应，请确保供应 {{site.data.keyword.aios_full}}。 
@@ -111,7 +111,7 @@ subcollection: ai-openscale
 
 1. 单击**目录** > **AI** > **{{site.data.keyword.aios_short}}**。
 2. 指定服务的名称，选择套餐，然后单击**创建**按钮。
-3. 要启动 {{site.data.keyword.aios_short}}，请单击**入门**按钮。
+3. 要启动 {{site.data.keyword.aios_short}}，请单击**启动应用程序**按钮。
 
 ## 自动设置
 {: #wos-work-demo}
@@ -121,14 +121,7 @@ subcollection: ai-openscale
 
    ![演示欢迎](images/cloud-auto-setup.png)
 
-   在供应 {{site.data.keyword.aios_short}} 服务时，您可以查看演示方案：
-
-   ![演示预览](images/fastpath_demo_11.31.58.png)
-
-供应完成后，单击**执行**按钮以浏览 {{site.data.keyword.aios_short}} 仪表板，然后继续[在 {{site.data.keyword.aios_short}} 中查看结果](#wos-open)。
-
-   ![演示执行](images/fastpath_demo_11.33.45.png)
-
+   在供应 {{site.data.keyword.aios_short}} 服务时，您可以查看演示方案。供应完成后，单击**启动教程**按钮以浏览 {{site.data.keyword.aios_short}} 仪表板，然后继续[在 {{site.data.keyword.aios_short}} 中查看结果](#wos-open)。
 
 ## 在 {{site.data.keyword.aios_short}} 中查看结果
 {: #wos-open}
@@ -150,22 +143,9 @@ subcollection: ai-openscale
 {: #wos-monitoring}
 
 1.  从“洞察”页面中，单击 `GermanCreditRiskModelICP` 磁贴以查看有关受监视数据的详细信息。
-1.  单击标记并在图表中将其拖动，以查看显示数据的日期和时间段，然后单击**查看详细信息**链接。或者，可以单击图表中的不同时间段，以更改查看的数据。
+1.  单击标记并在图表中将其拖动，以查看显示数据的日期和时间段，然后单击**查看详细信息**链接。或者，可以单击图表中的不同时间段，以更改查看的数据。 
 
-     - 例如，以下屏幕显示特定日期和时间的数据。日期和时间根据您运行模块的时间而异。
-
-     - 有关解释时间序列图表的信息，请参阅[监视公平性、每分钟的平均请求数以及准确性](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart)。
-
-   ![演示执行](images/fastpath_demo_11.34.17.png)
-
-1.  要查看有关 `SEX` 数据监视的详细信息，请确保从下拉菜单中选择 `SEX`。
-
-    - 请注意，在以下截屏中，存在偏差。
-    
-   ![演示执行](images/fastpath_demo_11.34.27.png)
-
-    - 有关解释特定小时所对应数据点的图表的信息，请参阅[数据可视化](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual)。
-
+有关解释时间序列图表的信息，请参阅[获取洞察](/docs/services/ai-openscale?topic=ai-openscale-it-ov)。
 
 ### 查看可解释性
 {: #wos-explain}
@@ -178,20 +158,17 @@ subcollection: ai-openscale
 
    ![演示执行](images/fastpath_demo_11.35.12.png)
 
-有关查找和解释事务的信息，请参阅[监视可解释性](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov)。
+有关查找和解释事务的信息，请参阅[监视可解释性](/docs/services/ai-openscale?topic=ai-openscale-ie-ov)。
 
    ![演示执行](images/fastpath_demo_11.35.50.png)
 
 ## 完成教程
 {: #wos-done-demo}
 
-1. 单击**完成**按钮。
+完成教程后，您可以将自己的部署添加到仪表板或继续浏览教程部署。 
 
-   ![演示执行](images/fastpath_demo_11.37.22.png)
-
-2. 单击**执行**按钮以开始使用 {{site.data.keyword.aios_short}}。
-
-   ![演示执行](images/fastpath_demo_11.33.45.png)
+- 要将您自己的模型添加到仪表板，请单击**添加到仪表板**按钮。
+- 要继续浏览教程模型，请单击“德国信用风险”磁贴。
 
 ## 后续步骤
 {: #gs-next}

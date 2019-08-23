@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加重 F1 値 ![ベータ・タグ](images/beta.png)
+# 加重 F1 値
 {: #quality_wght_f1-measure}
 
 加重 F1 値は、クラス確率に相当する値で重みづけした F1 値の平均です。

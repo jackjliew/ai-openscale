@@ -25,9 +25,6 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-
-
-
 # 分析の概要
 {: #anlz_metrics_payload}
 
@@ -35,11 +32,11 @@ subcollection: ai-openscale
 {: shortdesc}
 
 - 予測クラスと各クラス内の確信度の分布を参照する。 詳しくは、[
-確信度別予測結果](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_payload)を参照してください。
-- 特徴量、予測クラス、確信度の中から選択して、カスタム・グラフを作成する。 詳しくは、[グラフ・ビルダー](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-chart_builder)を参照してください。
+確信度別予測結果](/docs/services/ai-openscale?topic=ai-openscale-anlz_metrics_payload-confidence)を参照してください。
+- 特徴量、予測クラス、確信度の中から選択して、カスタム・グラフを作成する。 詳しくは、[グラフ・ビルダー](/docs/services/ai-openscale?topic=ai-openscale-chart_builder)を参照してください。
 
 ## 詳細
 {: #anlz_metrics_payload-further}
 
-- [Model Behavioural Insights using IBM Watson OpenScale](https://medium.com/trusted-ai/model-behavioural-insights-using-ibm-watson-openscale-f8bcd2311f4e)
+- [Model Behavioural Insights using IBM Watson OpenScale](https://medium.com/trusted-ai/model-behavioural-insights-using-ibm-watson-openscale-f8bcd2311f4e){: external}
 

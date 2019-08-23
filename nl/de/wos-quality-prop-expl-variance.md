@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Proportion der erklärten Varianz ![Beta-tag](images/beta.png)
+# Proportion der erklärten Varianz
 {: #quality_var}
 
 Die Proportion der erklärten Varianz stellt das Verhältnis der erklärten Varianz zur Zielvarianz dar. Die erklärte Varianz gibt die Differenz zwischen der Zielvarianz und der Varianz eines Vorhersagefehlers an.

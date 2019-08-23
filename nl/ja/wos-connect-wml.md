@@ -45,7 +45,7 @@ subcollection: ai-openscale
 
     ![機械学習サービス・プロバイダーの選択画面に、サポートされる機械学習エンジンのタイルが表示されます](images/wos-machine-learning-providers-selection.png)
 
-2.  {{site.data.keyword.pm_full}} タイルを選択します。{{site.data.keyword.aios_short}} によって {{site.data.keyword.Bluemix_notm}} アカウントが調べられ、既存の {{site.data.keyword.pm_full}} インスタンスが検出されます。 
+2.  {{site.data.keyword.pm_full}} タイルを選択します。 {{site.data.keyword.aios_short}} によって {{site.data.keyword.Bluemix_notm}} アカウントが調べられ、既存の {{site.data.keyword.pm_full}} インスタンスが検出されます。 
 3. **「Watson Machine Learning service」**ドロップダウン・メニューからインスタンスを選択します。
 
     ![{{site.data.keyword.pm_short}} サービスの選択](images/gs-set-wml.png)

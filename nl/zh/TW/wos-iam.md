@@ -42,7 +42,7 @@ subcollection: ai-openscale
 
 定義存取原則的範圍之後，您可以指派一個角色，決定該使用者的存取權層次。請檢閱下列各表，其概述每個角色在 {{site.data.keyword.aios_short}} 服務內所容許的動作。
 
-利用平台管理角色，可以指派各種層次的許可權給使用者，以便在帳戶內以及對服務執行平台動作。例如，針對型錄資源指派的平台管理角色可讓使用者完成建立、刪除、編輯及檢視服務實例等動作。而且，針對帳戶管理服務指派的平台管理角色可讓使用者完成邀請及移除使用者、使用資源群組，以及檢視計費資訊等動作。如需帳戶管理服務的相關資訊，請參閱[指派帳戶管理服務的存取權](/docs/iam?topic=iam-account-services#account-services)。
+利用平台管理角色，可以指派各種層次的許可權給使用者，以便在帳戶內以及對服務執行平台動作。例如，針對型錄資源指派的平台管理角色可讓使用者完成建立、刪除、編輯及檢視服務實例等動作。而且，針對帳戶管理服務指派的平台管理角色可讓使用者完成邀請及移除使用者、使用資源群組，以及檢視計費資訊等動作。如需帳戶管理服務的相關資訊，請參閱[指派帳戶管理服務的存取權](/docs/iam?topic=iam-account-services#account-services){: external}。
 
 建立原則時請選取適用的所有角色。每個角色都容許完成不同的動作，而且不會繼承權限較低角色的動作。
 {: tip}
@@ -64,6 +64,6 @@ subcollection: ai-openscale
 {: #platformrolestable1}
 
 
-對於服務存取角色（可讓使用者存取 {{site.data.keyword.aios_short}} 以及能夠呼叫 REST API），{{site.data.keyword.aios_short}} 會因循上述表格中所列出的平台管理角色。如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理對資源的存取權](/docs/iam?topic=iam-iammanidaccser#iammanidaccser)。
+對於服務存取角色（可讓使用者存取 {{site.data.keyword.aios_short}} 以及能夠呼叫 REST API），{{site.data.keyword.aios_short}} 會因循上述表格中所列出的平台管理角色。如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理對資源的存取權](/docs/iam?topic=iam-iammanidaccser#iammanidaccser){: external}。
 
  

@@ -213,13 +213,20 @@ Il formato JSON consiste di una raccolta di ogegtti con campi corrispondenti ai 
 ### Caricamento di un file CSV
 {: #fmt-upld-fdbk-data-upld-csv}
 
-Per caricare un file CSV, utilizzare il pulsante **Aggiungi dati di feedback**.
+Per caricare un file CSV, utilizzare il pulsante **Aggiungi dati di feedback**. Per procedere con i passi seguenti come parte del supporto didattico, aprire e copiare il contenuto del file [`credit_feedback_data.csv`](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv).
 
 1. Dal dashboard {{site.data.keyword.aios_short}}, fare clic sul riquadro di distribuzione.
-2. Dalla finestra di distribuzione del modello, fare clic sull'icona **Configurazione**![viene visualizzato il pulsante di configurazione della distribuzione](images/configure-deployment-button.png).
-3. Fare clic sul pulsante **Aggiungi dati di feedback**, selezionare il file CSV che contiene i dati di feedback e fare clic su **Apri**.
+2. Dalla finestra di distribuzione del modello, fare clic su **Monitor di configurazione**![viene visualizzato il pulsante di configurazione della distribuzione](images/configure-deployment-button.png).
+3. Nel riquadro di navigazione, fare clic su **Qualità**.
+4. Fare clic su **Feedback** e fare clic sul pulsante **Aggiungi dati di feedback**.
+5. Selezionare il file CSV che contiene i dati di feedback e fare clic su **Apri**. Per il supporto didattico, selezionare il file `credit_feedback_data.csv` scaricato.
+
+    Attualmente, le dimensioni dei file sono limitate a 8 MB.
+    {: note}
+
 4. Dal menu a discesa, fare clic sul delimitatore campo e su **Seleziona**.
 
+L'aggiunta del file CSV fornisce i dati di feedback al modello.
 ### Caricamento di un file JSON
 {: #fmt-upld-fdbk-data-upld-json}
 
@@ -230,3 +237,8 @@ Per caricare un file CSV, utilizzare il pulsante **Aggiungi dati di feedback**.
     ![Verifica JSON](images/json_test02.png)
 
 1.  Ora, aprire il file JSON scaricato e copiare il contenuto nel campo JSON nella scheda **Verifica**. Fare clic sul pulsante **Previsione** per inviare e assegnare un punteggio ai payload di training al modello.
+
+### Visualizzazione dei risultati
+{: #fmt-upld-fdbk-view-results-after}
+
+Per verificare immediatamente i risultati, dalla pagina **Insight**, selezionare una distribuzione, fare clic su una delle metriche **Qualità** e fare clic su **Controlla qualità ora**.

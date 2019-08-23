@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 比例可释方差 ![beta 标记](images/beta.png)
+# 可解释方差的比例
 {: #quality_var}
 
 比例可释方差给出可释方差与目标方差的比率。“预期方差”是指目标方差与预测误差方差之间的差异。

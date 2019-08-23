@@ -25,10 +25,11 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 漂移偵測 ![測試版標記](images/beta.png)
+# 漂移幅度 ![測試版標記](images/beta.png)
 {: #behavior-drift-ovr}
 
 模型中某些特性的重要性和影響，會隨時間而變更。這會影響相關聯的應用程式和產生的商業結果。透過漂移偵測，{{site.data.keyword.aios_short}} 讓您能夠追蹤模型度量、模型效能，以及特性的加權如何隨著時間而變更。
+隨著資料變更，模型做出精確預測的能力可能會降低。漂移幅度是指預測效能隨時間而降低的程度。請使用漂移的相關資訊，以採取更正動作。
 {: shortdesc}
 
 ## 瞭解漂移偵測
@@ -66,5 +67,7 @@ subcollection: ai-openscale
 
 ## 後續步驟
 
-- 如需如何解讀漂移的相關資訊，請參閱[配置漂移偵測監視器](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)
-- 閱讀[利用 IBM Watson OpenScale 瞭解模型漂移](https://medium.com/@manish.bhide/4c5401aa8da4)，以增加您的漂移 IQ
+- 如需如何設置漂移偵測的相關資訊，請參閱[配置漂移偵測監視器](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)。
+- 如果要減輕漂移，在 Watson OpenScale 偵測到漂移之後，您必須建置新版本的模型，來修正問題。理想的下手點是一些強調顯示成漂移原因的資料點。在您手動標示漂移的交易之後，請在預測模型中引進新的資料，然後使用它們來重新訓練模型。
+
+

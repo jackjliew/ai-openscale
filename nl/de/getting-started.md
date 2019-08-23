@@ -67,7 +67,7 @@ Das in diesem Lernprogramm bereitgestellte Kreditrisikomodell verwendet ein Trai
 
 Abhängig von Ihrer Präferenz und Ihrem Fachwissen gibt es mehrere Konfigurationsoptionen.
 
-- Die folgende [automatisierte Konfiguration](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start) führt Sie durch den Prozess, indem Tasks im Hintergrund ausgeführt werden.
+- Die folgende [automatisierte Konfiguration](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start) führt Sie durch den Prozess, indem Tasks im Hintergrund ausgeführt werden.
 
    Die Verwendung einer Tour bedeutet, dass Sie die Tour anzeigen und per Mausklick zum nächsten Teil der Tour wechseln können.
    
@@ -75,7 +75,7 @@ Abhängig von Ihrer Präferenz und Ihrem Fachwissen gibt es mehrere Konfiguratio
 
    Verwenden Sie die Schnittstelle, um einheitlich verwendete Tasks mit einem Beispielmodell und eingefügten Daten durchzuführen.
    
-- Das [Lernprogramm für Fortgeschrittene](/docs/services/ai-openscale?topic=ai-openscale-crt-ov) versetzt technisch versiertere Benutzer in die Lage, ein Python-Modul zu installieren, das die Einrichtung/Bereitstellung und Konfiguration von vorausgesetzten Services automatisiert. Dieses Lernprogramm für fortgeschrittene Benutzer richtet sich an Data-Scientists oder Benutzer, die mit dem Schreiben von Code, mit Python und mit Notebooks vertraut sind. Es veranschaulicht, wie der {{site.data.keyword.aios_short}}-Client verwendet werden kann, um Funktionen programmgesteuert auszuführen. Das Notebook, das in diesem Lernprogramm verwendet wird, ist an derselben Position zu finden wie bei der [automatisierten Konfiguration](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start).
+- Das [Lernprogramm für Fortgeschrittene](/docs/services/ai-openscale?topic=ai-openscale-crt-ov) versetzt technisch versiertere Benutzer in die Lage, ein Python-Modul zu installieren, das die Einrichtung/Bereitstellung und Konfiguration von vorausgesetzten Services automatisiert. Dieses Lernprogramm für fortgeschrittene Benutzer richtet sich an Data-Scientists oder Benutzer, die mit dem Schreiben von Code, mit Python und mit Notebooks vertraut sind. Es veranschaulicht, wie der {{site.data.keyword.aios_short}}-Client verwendet werden kann, um Funktionen programmgesteuert auszuführen. Das Notebook, das in diesem Lernprogramm verwendet wird, ist an derselben Position zu finden wie bei der [automatisierten Konfiguration](/docs/services/ai-openscale?topic=ai-openscale-wos-fast-start#wos-fast-start).
 
    Dieses Modul erfordert, dass Python 3 installiert ist, worin das Paketmanagementsystem pip enthalten ist. Entsprechende Anweisungen enthält [Python-Modul zum Konfigurieren von {{site.data.keyword.aios_short}} installieren](/docs/services/ai-openscale?topic=ai-openscale-as-module).
 
@@ -92,7 +92,7 @@ Wenn Sie schnell sehen möchten, wie von {{site.data.keyword.aios_short}} ein Mo
 
 Bevor Sie mit der Tour beginnen, müssen die folgenden Ressourcen konfiguriert sein:
 
-- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup)
+- [{{site.data.keyword.ibmid}}](/docs/account?topic=account-signup){: external}
 - [{{site.data.keyword.aios_full}}](/docs/services/ai-openscale?topic=ai-openscale-gettingstarted#crt-wos-faststart)
 
 Die Tour für automatisierte Konfiguration ist so konzipiert, dass sie mit der geringstmöglichen Benutzerinteraktion auskommt. Folgenden Entscheidungen werden automatisch getroffen:
@@ -100,7 +100,7 @@ Die Tour für automatisierte Konfiguration ist so konzipiert, dass sie mit der g
 - Wenn mehrere {{site.data.keyword.pm_full}}-Instanzen eingerichtet sind, wird der API-Aufruf zum Auflisten der Instanzen ausgeführt und eine beliebige {{site.data.keyword.pm_short}}-Instanz wird als erste Instanz der betreffenden Liste angezeigt. 
 - Zum Erstellen einer neuen Lite-Version von {{site.data.keyword.pm_full}} verwendet das {{site.data.keyword.aios_short}}-Installationsprogramm die Standardressourcengruppe für Ihr {{site.data.keyword.Bluemix}}-Konto.
 
-### {{site.data.keyword.aios_full}}-Service einrichten
+### {{site.data.keyword.aios_short}}-Service bereitstellen
 {: #crt-wos-faststart}
 
 Stellen Sie sicher, dass Sie {{site.data.keyword.aios_full}} einrichten, sofern dies nicht bereits geschehen ist. 
@@ -111,7 +111,7 @@ Stellen Sie sicher, dass Sie {{site.data.keyword.aios_full}} einrichten, sofern 
 
 1. Klicken Sie auf **Katalog** > **AI** > **{{site.data.keyword.aios_short}}**.
 2. Geben Sie Ihrem Service einen Namen, wählen Sie einen Plan aus und klicken Sie auf die Schaltfläche **Erstellen**.
-3. Klicken Sie zum Starten von {{site.data.keyword.aios_short}} auf die Schaltfläche **Los geht's!**
+3. Klicken Sie zum Starten von {{site.data.keyword.aios_short}} auf die Schaltfläche **Anwendung starten**.
 
 ## Automatische Konfiguration
 {: #wos-work-demo}
@@ -121,14 +121,7 @@ Stellen Sie sicher, dass Sie {{site.data.keyword.aios_full}} einrichten, sofern 
 
    ![Demo 'Willkommen'](images/cloud-auto-setup.png)
 
-   Wenn die {{site.data.keyword.aios_short}}-Services bereitgestellt werden, können Sie das Demoszenario überprüfen:
-
-   ![Demovorschau](images/fastpath_demo_11.31.58.png)
-
-Klicken Sie nach dem Abschluss der Bereitstellung auf die Schaltfläche **Los geht's**, um eine Tour durch das {{site.data.keyword.aios_short}}-Dashboard zu starten. Fahren Sie mit [Ergebnisse in {{site.data.keyword.aios_short}} anzeigen](#wos-open) fort.
-
-   ![Demo zum Einstieg](images/fastpath_demo_11.33.45.png)
-
+   Wenn die {{site.data.keyword.aios_short}}-Services bereitgestellt werden, können Sie das Demoszenario überprüfen. Klicken Sie nach dem Abschluss der Bereitstellung auf die Schaltfläche **Tour starten**, um eine Tour durch das {{site.data.keyword.aios_short}}-Dashboard zu starten. Fahren Sie mit [Ergebnisse in {{site.data.keyword.aios_short}} anzeigen](#wos-open) fort.
 
 ## Ergebnisse in {{site.data.keyword.aios_short}} anzeigen
 {: #wos-open}
@@ -150,22 +143,9 @@ Auf der Seite 'Insights' werden auf einen Blick alle eventuellen Probleme im Zus
 {: #wos-monitoring}
 
 1.  Klicken Sie auf der Seite 'Insights' auf die Kachel `GermanCreditRiskModelICP`, um Details zu den überwachten Daten anzuzeigen.
-1.  Klicken Sie auf die Markierung und ziehen Sie sie über das Diagramm, um einen Tag und einen Zeitraum anzuzeigen, zu dem Daten dargestellt werden; klicken Sie danach auf den Link **Details anzeigen**. Alternativ können Sie auf unterschiedliche Zeiträume im Diagramm klicken, um das angezeigte Datum zu ändern.
+1.  Klicken Sie auf die Markierung und ziehen Sie sie über das Diagramm, um einen Tag und einen Zeitraum anzuzeigen, zu dem Daten dargestellt werden; klicken Sie danach auf den Link **Details anzeigen**. Alternativ können Sie auf unterschiedliche Zeiträume im Diagramm klicken, um das angezeigte Datum zu ändern. 
 
-     - Die folgende Anzeige enthält beispielsweise Daten für ein bestimmtes Datum und eine bestimmte Uhrzeit. Die Daten und Zeiten variieren je nachdem, wann Sie das Modul ausführen.
-
-     - Informationen zur Interpretation des Zeitreihendiagramms erhalten Sie in [Fairness, durchschnittliche Zahl der Anforderungen pro Minute und Genauigkeit überwachen](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart).
-
-   ![Demo zum Einstieg](images/fastpath_demo_11.34.17.png)
-
-1.  Damit Details zur Überwachung von Daten zum `GESCHLECHT` angezeigt werden, stellen Sie sicher, dass im Dropdown-Menü die Option `GESCHLECHT` ausgewählt ist.
-
-    - Beachten Sie, dass im folgenden Screenshot eine Verzerrung vorhanden ist.
-    
-   ![Demo zum Einstieg](images/fastpath_demo_11.34.27.png)
-
-    - Informationen zum Interpretieren des Diagramms der Datenpunkte zu einer bestimmten Stunde finden Sie unter [Datenvisualisierung](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-itc-timechart#itc-data-visual).
-
+Informationen zur Interpretation des Zeitreihendiagramms erhalten Sie im Abschnitt [Insights abrufen](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
 ### Erklärbarkeit anzeigen
 {: #wos-explain}
@@ -178,20 +158,17 @@ Für diejenigen Transaktionen, die eine Verzerrung aufweisen, werden die Transak
 
    ![Demo zum Einstieg](images/fastpath_demo_11.35.12.png)
 
-Informationen zum Suchen und Erklären von Transaktionen finden Sie im Abschnitt [Erklärbarkeit überwachen](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-ie-ov).
+Informationen zum Suchen und Erklären von Transaktionen finden Sie im Abschnitt [Erklärbarkeit überwachen](/docs/services/ai-openscale?topic=ai-openscale-ie-ov).
 
    ![Demo zum Einstieg](images/fastpath_demo_11.35.50.png)
 
 ## Tour beenden
 {: #wos-done-demo}
 
-1. Klicken Sie auf die Schaltfläche **Fertig**.
+Nachdem Sie die Tour beendet haben, können Sie entweder Ihre eigene Modellbereitstellung zum Dashboard hinzufügen oder das bereitgestellte Lernprogramm weiter erkunden. 
 
-   ![Demo zum Einstieg](images/fastpath_demo_11.37.22.png)
-
-2. Klicken Sie auf die Schaltfläche **Los geht's**, um mit der Verwendung von {{site.data.keyword.aios_short}} zu beginnen.
-
-   ![Demo zum Einstieg](images/fastpath_demo_11.33.45.png)
+- Um Ihr eigenes Modell zum Dashboard hinzuzufügen, klicken Sie auf die Schaltfläche **Zum Dashboard hinzufügen**.
+- Für die weitere Erkundung des Modells im Lernprogramm klicken Sie auf die Kachel für deutsches Kreditrisiko.
 
 ## Weitere Schritte
 {: #gs-next}

@@ -61,8 +61,6 @@ subcollection: ai-openscale
 
 您需要使用 [Python 客户机](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: external}或 [Rest API](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: external} 通过 {{site.data.keyword.aios_short}} UI 来添加手动标记的反馈数据，如以下示例中所示。
 
-请查看[支持的框架](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)以了解准确性监视限制。
-
 ### 已除偏准确性
 {: #acc-debias-view}
 

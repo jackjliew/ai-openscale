@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Mittlerer quadratischer Fehler ![Beta-Tag](images/beta.png)
+# Mittlerer quadratischer Fehler
 {: #quality_squerror}
 
 Der mittlere quadratische Fehler gibt den Mittelwert der quadrierten Differenz zwischen Modellvorhersage und -zielwert an. Er kann als Maß für die Qualität eines Schätzverfahrens verwendet werden.
@@ -55,8 +55,8 @@ Der mittlere quadratische Fehler gibt den Mittelwert der quadrierten Differenz z
 Der mittlere quadratische Fehler in seiner einfachsten Form wird durch die folgende Formel dargestellt.
 
 ```
-                                 SUMME  (Yi - ^Yi) * (Yi - ^Yi)
+                         SUMME  (Yi - ^Yi) * (Yi - ^Yi)
 Mittlere quadratische Fehler  =  ____________________________
 
-                                      Anzahl der Fehler
+                             Anzahl der Fehler
 ```

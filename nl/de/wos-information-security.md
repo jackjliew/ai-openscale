@@ -38,15 +38,15 @@ Die hierin beschriebenen Produkte, Services und sonstigen Funktionen eignen sich
 
 Wenn Sie Unterstützung zur DSGVO für {{site.data.keyword.cloud}} {{site.data.keyword.watson}}-Ressourcen anfordern möchten, die ...
 
--   ... in der Europäischen Union (EU) erstellt werden, finden Sie Informationen hierzu unter [Unterstützung für {{site.data.keyword.Bluemix}} Watson-Ressourcen anfordern, die in der Europäischen Union erstellt werden](/docs/services/watson?topic=watson-gdpr-sar#request-EU).
--   ... die außerhalb der Europäischen Union (EU) erstellt werden, lesen Sie [Unterstützung für Ressourcen anfordern, die außerhalb der Europäischen Union erstellt werden](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU).
+-   ... in der Europäischen Union (EU) erstellt werden, finden Sie Informationen hierzu unter [Unterstützung für {{site.data.keyword.Bluemix}} Watson-Ressourcen anfordern, die in der Europäischen Union erstellt werden](/docs/services/watson?topic=watson-gdpr-sar#request-EU){: external}.
+-   ... die außerhalb der Europäischen Union (EU) erstellt werden, lesen Sie [Unterstützung für Ressourcen anfordern, die außerhalb der Europäischen Union erstellt werden](/docs/services/watson?topic=watson-gdpr-sar#request-non-EU){: external}.
 
 ## Datenschutzgrundverordnung der Europäischen Union (DSGVO)
 {: #is-gdpr}
 
 IBM hat sich dazu verpflichtet, seine Kunden und Partner durch die Bereitstellung innovativer Lösungen für Datenschutz, Sicherheit und Governance auf dem Weg zur Einhaltung der DSGVO zu unterstützen.
 
-Weitere Informationen zu den eigenen Maßnahmen von IBM zur Einhaltung der DSGVO sowie zu den Leistungsmerkmalen und Angeboten, die Ihnen dabei helfen, die Einhaltung der DSGVO vorzubereiten, finden Sie [hier](../../icons/launch-glyph.svg "Symbol für externen Link") (http://www.ibm.com/gdpr){: external}.
+Weitere Informationen zu den eigenen Maßnahmen von IBM zur Einhaltung der DSGVO sowie zu den Leistungsmerkmalen und Angeboten, die Sie in der Einhaltung der DSGVO unterstützen, finden Sie [hier](http://www.ibm.com/gdpr){: external}.
 
 ## Daten in {{site.data.keyword.aios_short}} kennzeichnen und löschen
 {: #is-stda}

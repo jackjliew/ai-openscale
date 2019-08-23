@@ -31,16 +31,16 @@ subcollection: ai-openscale
 Richten Sie für jede Bereitstellung, die Sie mit {{site.data.keyword.aios_short}} verfolgen, Überwachungen ein und aktivieren Sie diese.
 {: shortdesc}
 
+Wenn Sie beispielsweise das **deutsche Kreditrisikomodell** für das interaktive Lernprogramm verwenden, wählen Sie die Modellbereitstellung aus, legen den Datentyp für die Nutzdatenprotokollierung fest und bestätigen die Einstellungen, die als Teil des Abschnitts für Modelldetails angezeigt werden.
+
 ## Bereitstellung auswählen
 {: #mo-select-deploy}
 
-1. Klicken Sie auf der Registerkarte **Insights** auf die Schaltfläche **Bereitstellungen hinzufügen**. 
+1. Klicken Sie in der Registerkarte **Insights** auf die Schaltfläche **Zum Dashboard hinzufügen**. 
 
-   ![Seite 'Bereitstellung auswählen'](images/config-select-deploy.png)
+   Eine Liste der verfügbaren Modellbereitstellungen wird angezeigt. Wenn keine Modellbereitstellungen angezeigt werden, müssen Sie ein Modell mit Ihrem Machine Learning-Provider bereitstellen. Für das Lernprogramm wählen Sie das **deutsche Kreditrisikomodell** aus.
 
-   Eine Liste der verfügbaren Modellbereitstellungen wird angezeigt.
-
-   ![Für Überwachung vorbereiten](images/wos-select-model-deployment.png)
+   ![Darstellung der Anzeige 'Modellbereitstellung auswählen', mit Auswahlmöglichkeiten für einen Machine Learning-Provider und eine Bereitstellung.](images/wos-select-model-deployment.png)
 
 2. Klicken Sie auf eine Modellbereitstellung und anschließend auf **Konfigurieren**.
 
@@ -53,42 +53,42 @@ Richten Sie für jede Bereitstellung, die Sie mit {{site.data.keyword.aios_short
 ## Details zur Nutzdatenprotokollierung angeben
 {: #mo-work-data}
 
-Sie müssen Informationen zu Ihrem Modell und zu Ihren Trainingsdaten angeben. Weitere Informationen zu den Trainingsdaten finden Sie unter [Warum muss {{site.data.keyword.aios_short}} auf meine Trainingsdaten zugreifen?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
+Sie müssen Informationen zu Ihrem Modell und zu Ihren Trainingsdaten angeben. Weitere Informationen zu Trainingsdaten finden Sie in [Warum benötigt {{site.data.keyword.aios_short}} Zugriff auf meine Trainingsdaten?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata) Wählen Sie für das Lernprogramm im Feld **Datentyp** die Option **Numerisch/kategorial** und für **Algorithmustyp** die Option **Binäre Klassifizierung** aus.
 
-![Erklärung vorbereiten](images/config-what-monitor.png)
+![Darstellung der Anzeige 'Eingabetyp angeben' mit Auswahlmöglichkeiten für Datentyp und Algorithmustyp](images/config-what-monitor.png)
 
-- Wenn Sie eine {{site.data.keyword.pm_full}}-Instanz verwenden, die sich in derselben Region wie die {{site.data.keyword.aios_short}}-Instanz befindet, müssen Sie zwar den Datentyp und den Algorithmustyp auswählen, es werden jedoch einige Angaben für die Nutzdatenprotokollierung automatisch für Sie konfiguriert.
+- Wenn Sie eine {{site.data.keyword.pm_full}}-Instanz verwenden, die sich in derselben Region wie die {{site.data.keyword.aios_short}}-Instanz befindet, müssen Sie zwar den Datentyp und den Algorithmustyp auswählen, es werden jedoch einige Angaben für die Nutzdatenprotokollierung automatisch für Sie konfiguriert. 
 - Andernfalls müssen Sie auf der Registerkarte **Nutzdatenprotokollierung** und in den zugehörigen Fenstern Informationen zu Ihren Daten- und Algorithmustypen und zur Nutzdatenprotokollierung eingeben. 
 
-   Je nach Auswahl gibt es bestimmte Anforderungen. Weitere Informationen hierzu finden Sie im Abschnitt [Numerische/kategoriale Daten](https://test.cloud.ibm.com/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan).
+   Je nach Auswahl gibt es bestimmte Anforderungen. Weitere Informationen hierzu finden Sie im Abschnitt [Numerische/kategoriale Daten](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan).
 
    Vor dem Konfigurieren der Überwachung müssen Sie ein auszuführendes Codefragment kopieren. Führen Sie den cURL-Befehl in Ihrer Clientanwendung oder den Python-Befehl in Ihrem Data-Science-Notebook aus. Auf diese Weise können Sie Modellbereitstellungsanforderungen und Antwortdaten in der Nutzdatendatenbank protokollieren.
    
 Nach dem Senden der Details der Nutzdatenprotokollierung mithilfe der lokalen {{site.data.keyword.pm_full}}-Methode oder mithilfe der API müssen Sie zur Anzeige **Nutzdaten-Protokollierung** zurückkehren und auf **Fertig** klicken.
 
-![Abbildung mit der Anzeige für die Nutzdatenprotokollierung](images/payload-logging-gosales001.png)
+![Darstellung der Anzeige für Nutzdatenprotokollierung](images/payload-logging-gosales001.png)
 
 Wenn das Scoring ordnungsgemäß an {{site.data.keyword.aios_short}} gesendet wurde, erscheint nach dem Klick auf die Schaltfläche **Fertig** die im Folgenden abgebildete Anzeige. Die Schaltfläche ist ausgeblendet und es wird eine Nachricht mit dem folgenden Inhalt angezeigt: **Protokollierung erfolgreich aktiviert**.
 
-![Abbildung mit der Anzeige für die Nutzdatenprotokollierung nach dem erfolgreichen Hochladen von Daten](images/payload-logging-gosales002.png)
+![Darstellung der Anzeige für die Nutzdatenprotokollierung nach dem erfolgreichen Hochladen von Daten](images/payload-logging-gosales002.png)
 
 
 ### Modelldetails angeben
 {: #mo-work-model-dets}
 
-Geben Sie Informationen zu Ihrem Modell an, damit {{site.data.keyword.aios_short}} auf die Datenbank zugreifen kann und über Angaben zur Konfiguration des Modells verfügt.
+Geben Sie Informationen zu Ihrem Modell an, damit {{site.data.keyword.aios_short}} auf die Datenbank zugreifen kann und über Angaben zur Konfiguration des Modells verfügt. Wenn Sie beispielsweise das **deutsche Kreditrisikomodell** für das interaktive Lernprogramm verwenden, werden viele der folgenden Felder automatisch für Sie ausgefüllt.
 
 Sie müssen die folgenden Aufgaben ausführen, die insbesondere für die Überwachungskonfiguration von Bedeutung sind:
 
 1. Geben Sie die Position der Trainingsdaten an. Geben Sie dazu die Position, den Hostnamen oder die IP-Adresse, den Datenbanknamen und die Authentifizierungsdaten ein.
 2. Wählen Sie in der Datenbank die Trainingstabelle aus, indem Sie das Schema und die Tabelle auswählen.
-3. Wählen Sie die Kennzeichnungsspalte in der Trainingstabelle aus.
+3. Wählen Sie die Kennzeichnungsspalte in der Trainingstabelle aus, z. B. für das Lernprogramm, und klicken Sie auf die Kachel **Risiko**.
 4. Wählen Sie die Merkmale aus, die zum Training der AI-Bereitstellung verwendet wurden.
 5. Wählen Sie die Textmerkmale und die kategorialen Merkmale aus.
-6. Wählen Sie die Spalte für die Bereitstellungsvorhersage aus.
+6. Wählen Sie die Spalte für Bereitstellungsvorhersage aus, z. B. für das Lernprogramm, und klicken Sie auf die Kachel **predictedLabel**.
 7. Überprüfen Sie die Modelldetails gegebenenfalls, bevor Sie sie speichern.
 
-In den folgenden Abschnitten werden bestimmte Informationen angezeigt, die Ihnen je nach Modelltyp ([numerische/kategoriale Daten](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datan) oder [Bilder und unstrukturierter Text](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-mo-config#mo-datai)) begegnen werden.
+In den folgenden Abschnitten werden bestimmte Informationen angezeigt, die Ihnen je nach Modelltyp ([numerische/kategoriale Daten](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan) oder [Bilder und unstrukturierter Text](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datai)) begegnen werden.
 
 
 ### Numerische/kategoriale Daten
@@ -100,7 +100,7 @@ Bei numerischen oder kategorialen Daten müssen Sie Informationen zu den Trainin
 
     - Wählen Sie den [Algorithmustyp](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-understand) aus und klicken Sie auf **Weiter**:
 
-      Das Format der Trainingsdaten muss dem Modell entsprechen. Wenn das Modell z. B. `M` und `W` für das Merkmal `Geschlecht` erwartet, müssen die Trainingsdaten `M` und `W` enthalten und nicht `Männlich` und `Weiblich`. Das aktuelle Release von {{site.data.keyword.aios_short}} unterstützt nur Db2-Datenbank und Cloud Object Storage als Speicherposition.
+      Das Format der Trainingsdaten muss dem Modell entsprechen. Wenn das Modell z. B. `M` und `W` für das Merkmal `Geschlecht` erwartet, müssen die Trainingsdaten `M` und `W` enthalten und nicht `Männlich` und `Weiblich`.  Das aktuelle Release von {{site.data.keyword.aios_short}} unterstützt nur Db2-Datenbank und Cloud Object Storage als Speicherposition.
         {: important}
 
     - Geben Sie die Speicherposition an (entweder `Db2` oder `Cloud Object Storage`) und fahren Sie wie folgt fort:
@@ -161,4 +161,4 @@ Bei numerischen oder kategorialen Daten müssen Sie Informationen zu den Trainin
 ### Weitere Schritte
 {: #mo-next}
 
-Klicken Sie auf die Registerkarte **Genauigkeit** und dann auf **Beginnen**, um mit der Konfiguration der Überwachungen fortzufahren. Weitere Informationen hierzu enthält der Abschnitt [Genauigkeits- oder Qualitätsüberwachung konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).
+Klicken Sie auf die Registerkarte **Qualität** und auf **Beginnen**, um mit der Konfiguration der Überwachungen fortzufahren. Weitere Informationen hierzu enthält der Abschnitt [Qualitätsüberwachung konfigurieren](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor).

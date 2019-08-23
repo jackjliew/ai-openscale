@@ -31,25 +31,31 @@ subcollection: ai-openscale
 {{site.data.keyword.aios_short}} unterstützt mehrere Machine Learning-Engines in einer einzigen Instanz. Sie können die Komponenten über die {{site.data.keyword.aios_short}}-Dashboardkonfiguration oder das [Python-SDK](http://ai-openscale-python-client.mybluemix.net/?cm_mc_uid=70732728440115575086192&cm_mc_sid_50200000=62539451560175957820) bereitstellen.
 {: shortdesc}
 
-Bei der erstmaligen Einrichtung von {{site.data.keyword.aios_short}} haben Sie möglicherweise die Benutzerschnittstelle oder die Option für die automatisierte Konfiguration verwendet, um Ihre erste Machine Learning-Engine bereitzustellen. Zum Hinzufügen von Machine Learning-Engines müssen Sie die Registerkarte 'Konfiguration' des {{site.data.keyword.aios_short}}-Dashboards oder das Python-SDK verwenden. 
+Bei der erstmaligen Einrichtung von {{site.data.keyword.aios_short}} haben Sie möglicherweise die Benutzerschnittstelle oder die Option für die automatisierte Konfiguration verwendet, um Ihre erste Machine Learning-Engine bereitzustellen. Zum Hinzufügen von Machine Learning-Engines müssen Sie die Registerkarte 'Konfiguration' des {{site.data.keyword.aios_short}}-Dashboards oder das Python-SDK verwenden.
 
 ## Anbieter über das Dashboard hinzufügen
 {: #fmrk-workaround-multmleng-dashboard}
 
-1. Klicken Sie nach dem Aufrufen von {{site.data.keyword.aios_short}} auf der Registerkarte **Konfigurieren** auf die Schaltfläche **Machine Learning-Anbieter hinzufügen**.
+1. Klicken Sie nach dem Aufrufen von {{site.data.keyword.aios_short}} auf der Registerkarte **Konfigurieren** auf die Schaltfläche **Machine Learning-Provider hinzufügen**.
 
-   ![Schaltfläche 'Anbieter hinzufügen' im Fenster für Machine Learning-Anbieter](images/wos-configure-multi-providers.png)
+   ![Schaltfläche 'Anbieter hinzufügen' im Fenster für Machine Learning-Provider](images/wos-configure-multi-providers.png)
 
 2. Klicken Sie auf die Kachel des gewünschten Anbieters und klicken Sie auf **Weiter**.
 
-   ![Abbildung mit der Auswahlanzeige für Machine Learning-Anbieter](images/wos-machine-learning-providers-selection.png)
+   ![Darstellung der Auswahlanzeige für Machine Learning-Provider](images/wos-machine-learning-providers-selection.png)
 
 3. Geben Sie die erforderlichen Informationen, z. B. die Berechtigungsnachweise, ein und klicken Sie auf **Speichern**.
 
 Nach dem Speichern der Konfiguration haben Sie die Möglichkeit, auf das Dashboard zurückzugreifen, Bereitstellungen auszuwählen oder die Überwachung zu konfigurieren.
 
+## Machine Learning-Provider bearbeiten
+{: #fmrk-workaround-editingproviders-dashboard}
 
-## Machine Learning-Anbieter mit Python-SDK-Bindungsmethode hinzufügen
+Sie müssen einen Machine Learning-Provider bearbeiten? Klicken Sie auf das Symbol für das Kachelmenü ![Symbol für Kachelmenü](images/v-three-dots.png) und dann auf **Details anzeigen und bearbeiten**.
+
+   ![Die Anzeige- und Bearbeitungsoption für Machine Learning-Provider wird dargestellt](images/wos-machine-learning-providers-edit.png)
+
+## Machine Learning-Provider mit Python-SDK-Bindungsmethode hinzufügen
 {: #fmrk-workaround-multmleng-binding}
 
 Mit der Python-API-Methode `client.data_mart.bindings.add` können Sie mehr als eine Machine Learning-Engine an {{site.data.keyword.aios_short}} binden. 
@@ -82,7 +88,7 @@ Mit der Python-API-Methode `client.data_mart.bindings.add` können Sie mehr als 
 
   `binding_uid_4 = client.data_mart.bindings.add('My Azure ML Service engine', AzureServiceMachineLearningInstance(AZURE_SRVR_ENGINE_CREDENTIALS))`
 
-### Liste mit Machine Learning-Anbietern erzeugen
+### Liste mit Machine Learning-Providern erzeugen
 {: #fmrk-workaround-multmleng-binding-list}
 
 Wenn Sie eine Liste aller Bindungen anzeigen möchten, führen Sie die Methode `list` aus:

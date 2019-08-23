@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# R 方 ![beta 标记](images/beta.png)
+# R 平方
 {: #quality_r_squared}
 
 R 方是目标方差与预测误差方差之间的差值占目标方差的比率。它可以指示用于创建模型的数据与回归的拟合度。
@@ -56,7 +56,7 @@ R 方是目标方差与预测误差方差之间的差值占目标方差的比率
 
 ```
                   explained variation
-R squared = 1 -  _____________________
+R squared =ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service-  _____________________
 
                     total variation
 ```

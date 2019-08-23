@@ -61,8 +61,6 @@ subcollection: ai-openscale
 
 以下の例に示すように {{site.data.keyword.aios_short}} UI により、または [Python クライアント](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: external}を使用して、あるいは [Rest API](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: external} により、手動でラベル付けされたフィードバック・データを追加する必要があります。
 
-正解率モニタリングの制約事項については、[サポートされるフレームワーク](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram)を参照してください。
-
 ### バイアス緩和済みの正解率
 {: #acc-debias-view}
 

@@ -46,4 +46,4 @@ Al fine di un corretto monitoraggio, ogni richiesta di calcolo del punteggio dov
 
 Le seguenti metriche delle prestazioni sono supportate da {{site.data.keyword.aios_short}}:
 
-- [Velocità di trasmissione dei dati](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)
+- [Velocità di trasmissione dei dati](/docs/services/ai-openscale?topic=ai-openscale-performance_mets_through)

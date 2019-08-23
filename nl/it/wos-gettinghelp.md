@@ -44,13 +44,13 @@ La scheda Guida ( ![icona scheda guida](images/insight-help-tab.png) ) fornisce 
 
 Quando utilizzi i forum per fare una domanda, contrassegna con un tag la tua domanda in modo che sia visualizzabile dai team di sviluppo {{site.data.keyword.aios_short}}.
 
-Se si hanno domande tecniche su {{site.data.keyword.aios_short}}, postare la propria domanda su [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale) e contrassegnare la propria domanda con `watson-openscale`.
+Se si hanno domande tecniche su {{site.data.keyword.aios_short}}, postare la propria domanda su [StackOverflow](https://stackoverflow.com/questions/tagged/watson-openscale){: external} e contrassegnare la propria domanda con `watson-openscale`.
 
 Per
 domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks
-dW Answers](https://developer.ibm.com/?s=openscale). Includere il tag openscale. Consultare la sezione relativa a [come ottenere supporto ](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html) per ulteriori dettagli sull'utilizzo dei forum.
+dW Answers](https://developer.ibm.com/?s=openscale){: external}. Includere il tag openscale. Consultare la sezione relativa a [come ottenere supporto ](https://developer.ibm.com/answers/smartspace/dw-answers-help/index.html){: external} per ulteriori dettagli sull'utilizzo dei forum.
 
-Per informazioni sull'apertura di un ticket di supporto IBM, o sui livelli di supporto e le severità dei ticket, consultare [Come contattare il supporto ](https://cloud.ibm.com/unifiedsupport/supportcenter) e fare clic su **Crea un caso**.
+Per informazioni sull'apertura di un ticket di supporto IBM, o sui livelli di supporto e le severità dei ticket, consultare [Come contattare il supporto ](https://cloud.ibm.com/unifiedsupport/supportcenter){: external} e fare clic su **Crea un caso**.
 
 ## Servono altre informazini?
 {: #looking}

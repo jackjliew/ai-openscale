@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加权查准率 ![beta 标记](images/beta.png)
+# 加权查准率
 {: #quality_wgth_prec}
 
 加权查准率给出权重等于类概率的查准率的加权平均值。

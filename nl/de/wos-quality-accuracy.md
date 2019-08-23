@@ -61,11 +61,9 @@ Genauigkeit kann je nach Typ des Algorithmus unterschiedliche Dinge bedeuten:
 
 Sie müssen mithilfe eines [Python-Clients](http://ai-openscale-python-client.mybluemix.net/#feedbacklogging){: external} oder einer [REST-API](https://cloud.ibm.com/apidocs/ai-openscale#post-feedback-payload){: external} manuell gekennzeichnete Rückmeldedaten über die {{site.data.keyword.aios_short}}-Benutzerschnittstelle hinzufügen.
 
-Überprüfen Sie die [unterstützten Frameworks](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-fram) auf Einschränkungen hinsichtlich der Genauigkeitsüberwachung.
-
 ### Verzerrungsbereinigte Genauigkeit
 {: #acc-debias-view}
 
-Wenn die entsprechenden Daten zur Unterstützung vorhanden sind, wird die Genauigkeit sowohl anhand des ursprünglichen Modells als auch anhand des verzerrungsbereinigten Modells berechnet.{{site.data.keyword.aios_full_notm}} berechnet die Genauigkeit für die verzerrungsbereinigte Ausgabe und speichert sie als zusätzliche Spalte in der Nutzdatenprotokolltabelle.
+Wenn die entsprechenden Daten zur Unterstützung vorhanden sind, wird die Genauigkeit sowohl anhand des ursprünglichen Modells als auch anhand des verzerrungsbereinigten Modells berechnet. {{site.data.keyword.aios_full_notm}} berechnet die Genauigkeit für die verzerrungsbereinigte Ausgabe und speichert sie als zusätzliche Spalte in der Nutzdatenprotokolltabelle.
 
 ![Modellvisualisierung mit der berechneten Genauigkeit für das ursprüngliche und das verzerrungsbereinigte Modell](images/debiased-accuracy.png)

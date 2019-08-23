@@ -85,11 +85,7 @@ req_response = requests.post(endpoint,
                              headers = headers)
 ```
 
-
-
 ## 다음 단계
-{: #cdb-payload-nxt-stps}
 
-자세한 정보는 [페이로드 로깅](http://aiopenscale-api.mybluemix.net/#/Payload%20Logging%20(Public%20API)(/publishScoringPayload)을 참조하십시오.{: external}
-
+페이로드 로깅이 설정되면 모델 세부사항을 입력하여 모니터 구성을 계속할 수 있습니다. 자세한 정보는 [모델 세부사항 제공](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-work-model-dets)을 참조하십시오.
 

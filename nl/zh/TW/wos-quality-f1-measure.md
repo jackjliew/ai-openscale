@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# F1-測量 ![測試版標記](images/beta.png)
+# F1-Measure
 {: #quality_f1-measr}
 
 「F1-測量」提供查準率和查全率的調和平均值。

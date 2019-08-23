@@ -38,9 +38,9 @@ Il primo passo nello strumento {{site.data.keyword.aios_short}} è quello di spe
 
 {{site.data.keyword.aios_short}} si collega ai modelli e alle distribuzioni AI in un'istanza del servizio Amazon SageMaker.
 
-1.  Dalla scheda **Configura**, fare clic su **Provider di machine learning**.
+1. Dalla scheda **Configura**, fare clic su **Provider di machine learning**. A seconda del proprio ambiente, è possibile che non si vedano tutti i seguenti provider:
 
-    ![viene visualizzato il pannello per la selezione del provider del servizio di machine learning con i riquadri per i motori di machine learning supportati](images/wos-machine-learning-providers-selection.png)
+   ![viene visualizzato il pannello per la selezione del provider del servizio di machine learning con i riquadri per i motori di machine learning supportati](images/wos-machine-learning-providers-selection.png)
 
 1.  Fare clic sul riquadro **Amazon SageMaker**.
 
@@ -51,6 +51,8 @@ Il primo passo nello strumento {{site.data.keyword.aios_short}} è quello di spe
     - ID chiave di accesso: l'ID chiave di accesso AWS, `aws_access_key_id`, che verifica chi è l'utente e autentica e autorizza le chiamate che si fanno a AWS.
     - Chiave di accesso segreta: la chiave di accesso segreta AWS, `aws_secret_access_key`, che è richiesta per verificare chi è l'utente e per autenticare e autorizzare le chiamate che si fanno a AWS.
     - Regione: immettere la regione in cui è stato creato l'ID chiave di accesso. Le chiavi sono memorizzate e utilizzate nella regione in cui sono state create e non possono essere trasferite in un'altra regione.
+    - Nome istanza del provider di servizi: il nome specifico assegnato a questo provider di servizi.
+    - Descrizione: (facoltativo) la descrizione in parole semplici di questa istanza del provider di servizi. Se si dispone di ambienti di produzione e di test, può essere utile includere tali informazioni.
 
 1.  {{site.data.keyword.aios_short}} elenca i modelli distribuiti; selezionare quelli che si desidera monitorare.
 

@@ -31,7 +31,6 @@ subcollection: ai-openscale
 グループに関する公平性という指標は、あるグループに対して別のグループよりも好ましい結果を出すモデルの傾向を表すことができます。 グループとしては、年齢、性別、人種などのグループがあります。
 {: shortdesc}
 
-
 ## グループに関する公平性の概要
 {: #quality_group-glance}
 
@@ -46,7 +45,7 @@ subcollection: ai-openscale
 ## 保護属性
 {: #quality_group-atts}
 
-{{site.data.keyword.aios_short}} は、モデル内に既知の保護属性が存在するかどうかを自動的に検知します。 保護属性を検知すると、{{site.data.keyword.aios_short}} は、潜在的にセンシティブな属性についてのバイアスを稼働環境で確実に追跡するために、存在している各属性についてバイアス・モニターを構成するように自動的に推奨します。 
+{{site.data.keyword.aios_short}} は、モデル内に既知の保護属性が存在するかどうかを自動的に検知します。 保護属性を検知すると、{{site.data.keyword.aios_short}} は、この潜在的にセンシティブな属性についてのバイアスを稼働環境で確実に追跡するために、存在している各属性についてバイアス・モニターを構成するように自動的に推奨します。 
 
 ### 性別
 {: #quality_group-sex}
@@ -72,3 +71,24 @@ subcollection: ai-openscale
 {: #quality_group-zip}
 
 {{site.data.keyword.aios_short}} は、**郵便番号**属性について、個々の郵便番号を評価するバイアス・モニターを構成することを推奨します。
+
+## 表示内容についての解釈
+{: #quality_group-display}
+
+### グループの公平性スコア
+{: #quality_group-display-fairnessscore}
+
+
+
+### モニタリング対象グループ
+{: #quality_group-display-monitoredgroups}
+
+
+
+### スケジュール
+{: #quality_group-display-schedule}
+
+**「スケジュール」**ペインの表示内容: 
+
+
+

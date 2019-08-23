@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 平均絶対誤差 (MAE) ![ベータ・タグ](images/beta.png)
+# 平均絶対誤差
 {: #quality_abserror}
 
 平均絶対誤差 (MAE) は、モデル予測とターゲット値の絶対差の平均です。

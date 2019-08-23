@@ -25,10 +25,10 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 真陽性率 (TPR) ![ベータ・タグ](images/beta.png)
+# 真陽性率 (TPR)
 {: #quality_tpr}
 
-真陽性率 (TPR) は、肯定クラスの予測の正解率です。
+真陽性率 (TPR) は、肯定クラスの予測で正しい予測をする比率です。
 {: shortdesc}
 
 ## 一目でわかる真陽性率 (TPR)

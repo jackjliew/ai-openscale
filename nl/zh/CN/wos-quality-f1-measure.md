@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# F1 度量 ![beta 标记](images/beta.png)
+# F1 度量
 {: #quality_f1-measr}
 
 F1 度量给出查准率和查全率的调和均值。

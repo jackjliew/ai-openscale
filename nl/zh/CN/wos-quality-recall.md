@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 查全率 ![beta 标记](images/beta.png)
+# 查全率
 {: #quality_recall}
 
 查全率给出正确预测在正类中的比例。
@@ -44,10 +44,35 @@ subcollection: ai-openscale
 - **图表值**：时间范围内的最后一个值
 - **度量详细信息是否可用**：混淆矩阵
 
-## 解释显示内容
+## 解释查全率度量显示
 {: #quality_recall-display}
 
 ![显示查全率图表。](images/quality-recall.png)
+
+### 公平性分数
+{: #quality_recall-display-fairness-score}
+
+对于查全率度量，将显示以下公平性分数。 
+
+![显示查全率分数百分比。](images/wos-quality-recall-score.png)
+
+### 调度
+{: #quality_recall-display-schedule}
+
+"**调度**窗格显示**上次评估**和**下次评估**时间。质量度量每小时进行评估。您可以通过单击**立即检查质量**来强制评估。您还可以通过单击**添加反馈数据**来添加反馈。
+
+![显示“调度”窗格，其中显示了上次评估时间和下次评估时间](images/wos-quality-schedule.png)
+
+
+### 建议
+{: #quality_recall-display-recommendations}
+
+为帮助解释图表，**建议**窗格显示哪些趋势指示模型有效性的改善或恶化。
+
+![显示“建议”窗格。](images/wos-quality-positive-recommendation.png)
+
+
+
 
 ## 测算
 {: #quality_recall-math}

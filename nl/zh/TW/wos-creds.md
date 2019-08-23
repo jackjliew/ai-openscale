@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-06-28"
 
-keywords: credentials, REST API, data mart
+keywords: credentials, REST API, datamart ID, IDs, binding ID,  deployment ID, subscription ID
 
 subcollection: ai-openscale
 
@@ -36,29 +36,29 @@ subcollection: ai-openscale
 ## 建立平台 API 金鑰
 {: #cred-create-apikey}
 
-如果要建立「平台 API 金鑰」，請完成下列步驟：
+如果要建立 IBM Cloud API 金鑰，請完成下列步驟：
 
-1. 登入 [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}。
+- 登入 [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: external}。
+- 選取**管理** --> **存取 (IAM)** --> **{{site.data.keyword.cloud_notm}} API 金鑰**
+- 按一下**建立 IBM Cloud API 金鑰**按鈕。
+- 提供您的金鑰名稱和說明，並按一下**建立**。
 
-2. 選取**管理** --> **安全** --> **平台 API 金鑰**
+## 尋找服務 ID：
+{: #cred-find-datamart-id}
 
-    ![平台 API 金鑰](images/cred-api-key.png)
+在 {{site.data.keyword.aios_short}} **有效負載記載**頁面上，尋找您的資料集區、部署、訂閱或連結 ID，此頁面會在您針對部署選取**配置監視器**時顯示。
 
-3. 建立並儲存「平台 API 金鑰」。
-
-如果要尋找資料集區（或服務實例）ID，請執行下列動作：
-
-1. 按一下模型部署圖磚。
-2. 按一下**配置** ![配置圖示](images/configure-deployment-button.png) 圖示。
-3. 按一下**檢視有效負載記載端點**。
-4. 在 {{site.data.keyword.aios_short}} **有效負載記載**頁面上，尋找**資料集區 ID** 欄位。
+1. 按一下模型部署圖磚。 
+2. 按一下**配置監視器** ![「配置」圖示](images/configure-deployment-button.png)。
+3. 按一下**有效負載記載**。
+4. 在 {{site.data.keyword.aios_short}} **有效負載記載**頁面的**明細**窗格中，找出您正在尋找的 ID。以**資料集區 ID** 欄位為例：
 
     ![資料集區 ID](images/data-mart-id.png)
 
 ## 使用指令主控台來建立服務實例認證
 {: #cred-creds}
 
-如果要為 {{site.data.keyword.aios_short}} 建立認證，請使用 {{site.data.keyword.cloud_notm}} [指令主控台](/docs/cli?topic=cloud-cli-ibmcloud-cli)來完成下列步驟：
+如果要為 {{site.data.keyword.aios_short}} 建立認證，請使用 {{site.data.keyword.cloud_notm}} [指令主控台](/docs/cli?){: external}來完成下列步驟：
 
 1. 執行下列指令，以擷取您的 API 金鑰：
 
@@ -76,7 +76,12 @@ subcollection: ai-openscale
     Locked       false
     UUID         ApiKey-xxxxxxxxx-afd7-xxxxx-b0e1-xxxxxxxxxxx
     ```
+
 2. 驗證您在 {{site.data.keyword.cloud_notm}} 帳戶中使用的「資源群組」。
+
+   1. 移至「儀表板」。
+   2. 從**導覽功能表**中，按一下**資源清單**。
+   3. 從**群組**直欄中，按一下**依群組或組織來過濾**下拉選單，並設定**預設值**勾選框。
 
   ![雲端中的資源群組](images/cloud-resource.png)
 
@@ -93,6 +98,7 @@ subcollection: ai-openscale
     ```curl
     ibmcloud resource service-instance '<Your_Watson_OpenScale_instance_name>'
     ```
+
     **附註**：如果您是在 Windows 上使用 {{site.data.keyword.cloud_notm}} 指令主控台，請以雙引號 (") 取代上述指令中的單引號 (')。
 
     會顯示下列資訊：
@@ -120,8 +126,8 @@ subcollection: ai-openscale
 
 指定您的機器學習提供者：
 
-- [指定 IBM Watson Machine Learning 服務實例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
-- [指定 Microsoft Azure ML Studio 實例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
-- [指定 Microsoft Azure ML Service 實例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
-- [指定 Amazon SageMaker ML 服務實例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
-- [指定「自訂」ML 服務實例](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-co-connect)
+- [指定 IBM Watson Machine Learning 服務實例](/docs/services/ai-openscale?topic=ai-openscale-wml-connect)
+- [指定 Microsoft Azure ML Studio 實例](/docs/services/ai-openscale?topic=ai-openscale-connect-azure)
+- [指定 Microsoft Azure ML Service 實例](/docs/services/ai-openscale?topic=ai-openscale-connect-azureservice)
+- [指定 Amazon SageMaker ML 服務實例](/docs/services/ai-openscale?topic=ai-openscale-csm-connect)
+- [指定「自訂」ML 服務實例](/docs/services/ai-openscale?topic=ai-openscale-co-connect)

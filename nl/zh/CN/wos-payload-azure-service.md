@@ -63,7 +63,6 @@ uid	                                   name	                      service_type	 
 ```
 {: codeblock}
     
-    
 ## 添加 Microsoft Azure ML Service 预订
 {: #cml-azsrvsub}
 

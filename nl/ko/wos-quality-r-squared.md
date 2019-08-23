@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# R 제곱 ![베타 태그](images/beta.png)
+# R 제곱
 {: #quality_r_squared}
 
 R 제곱은 목표 분산과 목표 분산에 대한 예측 오차의 분산 간 차의 비율로, 모델 작성에 사용된 데이터가 회귀에 얼마나 적합한지 알 수 있습니다.
@@ -55,8 +55,8 @@ R 제곱은 목표 분산과 목표 분산에 대한 예측 오차의 분산 간
 R 제곱 메트릭은 다음 공식으로 정의됩니다.
 
 ```
-               설명 분산
-R 제곱 = 1 -  _____________________
+                  explained variation
+R squared =ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service-  _____________________
 
                     총 분산
 ```

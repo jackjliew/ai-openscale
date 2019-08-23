@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # 複数の機械学習エンジンのサポート
 {: #fmrk-workaround-multmleng}
 
-{{site.data.keyword.aios_short}} は、単一インスタンスで複数の機械学習エンジンに対応できます。機械学習エンジンは {{site.data.keyword.aios_short}} ダッシュボードの構成または [Python SDK](http://ai-openscale-python-client.mybluemix.net/?cm_mc_uid=70732728440115575086192&cm_mc_sid_50200000=62539451560175957820) を使用してプロビジョンできます。
+{{site.data.keyword.aios_short}} は、単一インスタンスで複数の機械学習エンジンに対応できます。 機械学習エンジンは {{site.data.keyword.aios_short}} ダッシュボードの構成または [Python SDK](http://ai-openscale-python-client.mybluemix.net/?cm_mc_uid=70732728440115575086192&cm_mc_sid_50200000=62539451560175957820) を使用してプロビジョンできます。
 {: shortdesc}
 
 {{site.data.keyword.aios_short}} の初回セットアップ時に、ユーザー・インターフェースまたは自動セットアップ・オプションを使用して、最初の機械学習エンジンをプロビジョンしている場合があります。 機械学習エンジンを追加するには、{{site.data.keyword.aios_short}} ダッシュボードの構成タブを使用するか、Python SDK を使用する必要があります。
@@ -46,8 +46,14 @@ subcollection: ai-openscale
 
 3. 必要な情報 (資格情報など) を入力して、**「保存」**をクリックします。
 
-構成を保存したら、ダッシュボードに移動したり、デプロイメントを選択したり、モニターを構成したりできます。
+構成を保存した後は、ダッシュボードに移動する、デプロイメントを選択する、またはモニターを構成するという選択を行えます。
 
+## 機械学習プロバイダーの編集
+{: #fmrk-workaround-editingproviders-dashboard}
+
+機械学習プロバイダーを編集する必要がある場合には、タイル・メニュー ![タイル・メニュー・アイコン](images/v-three-dots.png) アイコンをクリックし、**「詳細の表示と編集 (View & edit details)」**をクリックします。
+
+   ![機械学習プロバイダーのビューと編集オプションが表示されています](images/wos-machine-learning-providers-edit.png)
 
 ## Python SDK バインディング・メソッドを使用した機械学習プロバイダーの追加
 {: #fmrk-workaround-multmleng-binding}

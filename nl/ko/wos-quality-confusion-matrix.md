@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 오차 행렬 ![베타 태그](images/beta.png)
+# 오차 행렬
 {: #it-conf-mtx}
 
 품질 메트릭의 세부사항으로 모델이 잘못 분석한 레코드를 확인할 수 있습니다. 이러한 이상 항목은 2진 분류 모델에 대해 거짓 양성 또는 거짓 음성일 수 있으며 다중 클래스 모델에 대한 잘못된 클래스 지정일 수 있습니다. 또한 모델이 올바르게 분석하지 않은 피드백 레코드 목록도 볼 수 있습니다.
@@ -35,7 +35,7 @@ subcollection: ai-openscale
 
 ![품질 메트릭의 세부사항 테이블](images/quality_metrics_002.png)
 
-2진 문제점의 경우 {{site.data.keyword.aios_full}}은 대상 카테고리를 `positive` 또는 `negative` 레벨에 지정합니다. 이를 위해 오차 행렬 출력은 긍정 카테고리에 대한 레이블이 두 번째 행 또는 열에 있는 규칙을 따릅니다. 
+2진 문제점의 경우 {{site.data.keyword.aios_full}}은 대상 카테고리를 `positive` 또는 `negative` 레벨에 지정합니다. 이를 위해 오차 행렬 출력은 긍정 카테고리에 대한 레이블이 두 번째 행 또는 열에 있는 규칙을 따릅니다.
 
 
 ## 단계

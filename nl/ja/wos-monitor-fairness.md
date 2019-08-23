@@ -92,4 +92,4 @@ subcollection: ai-openscale
 ## 次のステップ
 {: #mf-next}
 
-**「モニターの構成」**ページで、別のモニタリング・カテゴリーを選択できます。
+モニタリングの構成を続けるには、**「ドリフト」**タブをクリックし、**「開始」**をクリックします。詳しくは、[ドリフト検出モニターの構成](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)を参照してください。

@@ -25,10 +25,11 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 품질 메트릭 개요 ![베타 태그](images/beta.png)
+# 품질 메트릭 개요
 {: #anlz_metrics}
 
 품질 모니터링을 사용하여 모델이 결과를 얼마나 잘 예측하는지 판별할 수 있습니다. 품질 모니터링이 사용으로 설정된 경우 기본적으로 1시간마다 메트릭 세트를 생성합니다. 필요한 경우 **품질 지금 확인** 단추를 클릭하거나 Python 클라이언트를 사용하여 이러한 메트릭을 생성할 수 있습니다.
+{: shortdesc}
 
 품질 메트릭스는 다음 정보를 기반으로 계산됩니다.
 
@@ -56,11 +57,21 @@ Microsoft Azure ML Studio, Microsoft Azure ML 서비스 또는 Amazon Sagemaker 
 
 - [ROC 아래 영역](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_roc)
 - [PR 아래 영역](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-area-pr)
+- [설명 분산의 비율](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_var)
+- [평균 절대 오차](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_abserror)
+- [평균 제곱 오차](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_squerror)
+- [R 제곱](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_r_squared)
+- [평균 제곱근 오차](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-supqualdets_squ_errors_mean)
 - [정확성](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-accuracy-opener)
+- [가중된 참 양성 비율(wTPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-wtpr)
 - [참 양성 비율(TPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_tpr)
+- [가중된 거짓 양성 비율(wFPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wfpr_weighted)
 - [거짓 양성 비율(FPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_fpr_false)
+- [가중된 재현율](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_weighted_recall)
 - [재현율](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_recall)
+- [가중된 정밀도](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wgth_prec)
 - [정밀도](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_precision)
+- [가중된 F1 수치](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wght_f1-measure)
 - [F1 수치](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_f1-measr)
 - [로그 손실](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_log_loss)
 
@@ -75,3 +86,8 @@ Microsoft Azure ML Studio, Microsoft Azure ML 서비스 또는 Amazon Sagemaker 
 오차 행렬은 모니터링된 배치 응답에 대한 어느 피드백 데이터가 올바른지 또는 올바르지 않은지를 이해하는 데 도움을 줍니다.
 
 자세한 정보는 [오차 행렬](/docs/services/ai-openscale?topic=ai-openscale-it-conf-mtx)을 참조하십시오.
+
+## 다음 단계
+
+- {{site.data.keyword.aios_short}}에서 품질 문제점(예: 정확성 임계값 위반)을 감지하면 사용자는 문제점을 해결하는 새 모델 버전을 빌드해야 합니다. 피드백 테이블에서 수동으로 레이블링된 데이터를 사용하여 원래 훈련 데이터와 함께 모델을 재훈련시켜야 합니다. 
+

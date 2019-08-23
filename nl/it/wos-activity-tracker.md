@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Eventi di Activity Tracker
 {: #at-events}
 
-Quando si dispone di {{site.data.keyword.aios_short}} fornito come servizio nel proprio account {{site.data.keyword.cloud_notm}}, è possibile visualizzare i seguenti eventi in Activity Tracker di [{{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
+Quando si dispone di {{site.data.keyword.aios_short}} fornito come servizio nel proprio account {{site.data.keyword.cloud_notm}}, è possibile visualizzare i seguenti eventi in [{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov){: external}.
 {: shortdesc}
 
 ## Eventi per le API pubbliche

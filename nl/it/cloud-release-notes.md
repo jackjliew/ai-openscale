@@ -31,6 +31,15 @@ subcollection: ai-openscale
 Questo documento descrive le nuove funzioni per {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
 
+## 9 luglio 2019
+{: #rn-9jul2019}
+
+Sono disponibili le seguenti nuove funzioni e modifiche per {{site.data.keyword.aios_short}}.
+
+- __*Guida online aggiornata e espansa*__: la guida online di  {{site.data.keyword.aios_short}} è stata riorganizzata di recente per facilitare la ricerca di argomenti utilizzando il riquadro dei contenuti. Inoltre, sono stati scritti molti nuovi argomenti e ne sono stati ampliati altri.
+
+   Per ulteriori informazioni, consultare [Acquisizione degli insight](/docs/services/ai-openscale?topic=ai-openscale-io-ov) e [Aggiornamento di  {{site.data.keyword.aios_short}} da un piano lite a uno a pagamento](/docs/services/ai-openscale?topic=ai-openscale-cf-upgrade).
+   
 ## 2 luglio 2019
 {: #rn-2jul2019}
 
@@ -44,7 +53,7 @@ Sono disponibili le seguenti nuove funzioni e modifiche per {{site.data.keyword.
 
 - __*Supporto di Microsoft Azure ML Service*__: {{site.data.keyword.aios_short}} ora supporta Microsoft Azure ML Service, che fornisce un mezzo per integrare i propri modelli di AI del servizio Azure ML con la correttezza, l'accuratezza e l'esplicabilità di {{site.data.keyword.aios_short}}.
 
-   Per ulteriori informazioni, consultare [Framework Microsoft Azure ML Service](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-frmwrks-azure-service).
+   Per ulteriori informazioni, consultare [Framework Microsoft Azure ML Service](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service).
 
 - __*Flusso di lavoro migliorato*__: {{site.data.keyword.aios_short}} ha lavorato sul miglioramento del flusso di lavoro, così ora è possibile accelerare il lavoro grazie a un numero inferiori si selezioni e maggiore esplicabilità. Il pannello di navigazione permette di vedere dove ci si trova e rende facile andare avanti e indietro tra le attività di configurazione.
 
@@ -189,7 +198,7 @@ Le funzioni {{site.data.keyword.aios_short}} che sono state aggiunte o migliorat
 
 - __*Disponibilità generale*__: la release GA (General Availability) di {{site.data.keyword.aios_full_notm}} come piano {{site.data.keyword.Bluemix}} Standard (a pagamento).
 
-- __*{{site.data.keyword.icp4dfull_notm}} V1.2*__: se si utilizza {{site.data.keyword.wos4d_full}} V1.2, consultare la documentazione, incluse le istruzioni di installazione, qui: [Checklist di installazione](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#install)
+- __*{{site.data.keyword.icp4dfull_notm}} V1.2*__: se si utilizza {{site.data.keyword.wos4d_full}} V1.2, consultare la documentazione, incluse le istruzioni di installazione, qui: [Checklist di installazione](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#install)
 
 - __*Supporto per il proprio tipo di modello*__: oltre alle distribuzioni di modelli AI in {{site.data.keyword.pm_full}}, {{site.data.keyword.aios_short}} supporta le distribuzioni di modelli in Microsoft Azure, Amazon SageMaker e ambienti personalizzati. Consultare [Tipi di modello supportati](/docs/services/ai-openscale?topic=ai-openscale-in-ov) per ulteriori informazioni.
 
@@ -218,4 +227,4 @@ Le funzioni {{site.data.keyword.aios_short}} che sono state aggiunte o migliorat
 Altre domande?
 
 - [Limitazioni](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
-- [Problemi noti](/docs/services/ai-openscale?topic=ai-openscale-in-ov#rn-12ki)
+- [Problemi noti](/docs/services/ai-openscale?topic=ai-openscale-rn-12ki#cloud-limitations)

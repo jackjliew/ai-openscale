@@ -60,33 +60,33 @@ Watson OpenScale은 장소에 관계없이 빌드되어 실행 중인 모델에 
 ### {{site.data.keyword.aios_short}}의 가격은 얼마입니까?
 {: #faq-pricing}
 
-Lite 플랜에서 전환할 준비가 되면 설명 가능성에 대한 트랜잭션, 피드백 행 또는 페이로드 수에 대한 제한 없이 최대 24개의 배치된 모델에 대한 모니터링을 포함하는 **표준** 가격 플랜이 제공됩니다. [{{site.data.keyword.Bluemix}} 카탈로그](https://cloud.ibm.com/catalog/services/watson-openscale?cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_OpenScale-_-AIOSProductPage){: external}에서 최신 정보를 확인할 수 있습니다. 
+Lite 플랜에서 전환할 준비가 되면 설명 가능성에 대한 트랜잭션, 피드백 행 또는 페이로드 수에 대한 제한 없이 최대 24개의 배치된 모델에 대한 모니터링을 포함하는 **표준** 가격 플랜이 제공됩니다. [{{site.data.keyword.Bluemix}} 카탈로그](https://cloud.ibm.com/catalog/services/watson-openscale?cm_sp=WatsonPlatform-WatsonPlatform-_-OnPageNavCTA-IBMWatson_OpenScale-_-AIOSProductPage){: external}에서 최신 정보를 확인할 수 있습니다.
 
 
 ### {{site.data.keyword.aios_short}}의 무료 평가판이 있습니까?
 {: #faq-freetrial}
 
-{{site.data.keyword.aios_short}}은 Lite 플랜을 통해 무료 평가판을 제공합니다. 등록하려면 [{{site.data.keyword.aios_short}} 웹 페이지](https://www.ibm.com/cloud/watson-openscale/){: external}를 방문하여 **지금 시작하기**를 클릭하십시오. 원하는 기간만큼 Lite 플랜을 사용할 수 있습니다(월별 사용량 제한이 적용되며 매달 새로 고쳐짐). 
+{{site.data.keyword.aios_short}}은 Lite 플랜을 통해 무료 평가판을 제공합니다. 등록하려면 [{{site.data.keyword.aios_short}} 웹 페이지](https://www.ibm.com/cloud/watson-openscale/){: external}를 방문하여 **지금 시작하기**를 클릭하십시오. 원하는 기간만큼 Lite 플랜을 사용할 수 있습니다(월별 사용량 제한이 적용되며 매달 새로 고쳐짐).
 
 ### 내 AI 모델은 모두 Azure에 있습니다. Microsoft Azure ML 엔진을 {{site.data.keyword.aios_short}}과 함께 사용할 수 있습니까?
 {: #faq-azure}
 
-{{site.data.keyword.aios_short}}은 Microsoft Azure ML Studio와 Microsoft Azure ML 서비스 엔진을 모두 지원합니다. 자세한 정보는 [Microsoft Azure ML Studio 프레임워크](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure) 및 [Microsoft Azure ML 서비스 프레임워크](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service)를 참조하십시오. 
+{{site.data.keyword.aios_short}}은 Microsoft Azure ML Studio와 Microsoft Azure ML 서비스 엔진을 모두 지원합니다. 자세한 정보는 [Microsoft Azure ML Studio 프레임워크](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure) 및 [Microsoft Azure ML 서비스 프레임워크](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-azure-service)를 참조하십시오.
 
 ### 내 AI 모델은 모두 Amazon에 있습니다. Amazon SageMaker ML 엔진을 {{site.data.keyword.aios_short}}과 함께 사용할 수 있습니까?
 {: #faq-sagemaker}
 
-{{site.data.keyword.aios_short}}은 Amazon SageMaker ML 엔진을 지원합니다. 자세한 정보는 [Amazon SageMaker 프레임워크](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-aws-sage)를 참조하십시오. 
+{{site.data.keyword.aios_short}}은 Amazon SageMaker ML 엔진을 지원합니다. 자세한 정보는 [Amazon SageMaker 프레임워크](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-aws-sage)를 참조하십시오.
 
-### {{site.data.keyword.aios_short}}을 {{site.data.keyword.icp4dfull_notm}}에서 사용할 수 있습니까? 
+### {{site.data.keyword.aios_short}}을 {{site.data.keyword.icp4dfull_notm}}에서 사용할 수 있습니까?
 {: #faq-icp}
 
-{{site.data.keyword.aios_short}}은 {{site.data.keyword.icp4dfull_notm}}용 프리미엄 추가 기능 중 하나입니다.  
+{{site.data.keyword.aios_short}}은 {{site.data.keyword.icp4dfull_notm}}용 프리미엄 추가 기능 중 하나입니다. 
 
 ### 나만의 서버에서 {{site.data.keyword.aios_short}}을 실행하고 싶습니다. 컴퓨터 처리 능력을 얼마나 할당해야 합니까?
 {: #faq-sizing}
 
-3노드 및 6노드 구성을 위한 [하드웨어 구성](/docs/services/ai-openscale-icp?topic=ai-openscale-icp-inst-install-icp#inst-hwt)에 대한 구체적인 지침이 있습니다. IBM 기술 영업 팀이 구체적인 구성의 크기를 지정하는 데 도움을 줄 수도 있습니다. {{site.data.keyword.aios_short}}은 {{site.data.keyword.icp4dfull_notm}}의 추가 기능으로 실행되므로 두 소프트웨어 제품 모두에 대한 요구사항을 고려해야 합니다. 
+3노드 및 6노드 구성을 위한 [하드웨어 구성](/docs/services/ai-openscale?topic=ai-openscale-inst-install-icp#inst-hwt)에 대한 구체적인 지침이 있습니다. IBM 기술 영업 팀이 구체적인 구성의 크기를 지정하는 데 도움을 줄 수도 있습니다. {{site.data.keyword.aios_short}}은 {{site.data.keyword.icp4dfull_notm}}의 추가 기능으로 실행되므로 두 소프트웨어 제품 모두에 대한 요구사항을 고려해야 합니다.
 
 ### 어떻게 예측 열을 정수 데이터 유형에서 카테고리 데이터 유형으로 변환합니까?
 {: #wos-faqs-convert-data-types}

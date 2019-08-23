@@ -28,7 +28,9 @@ subcollection: ai-openscale
 # SAS AI ソリューションのフレームワーク
 {: #frmwrks-sas}
 
-{{site.data.keyword.aios_full}} は将来のリリースで SAS AI Solutions フレームワークをサポートする予定です。
+SAS AI Solutions を使用して、ペイロード・ロギングとフィードバック・ロギングを実行し、{{site.data.keyword.aios_full}} でパフォーマンスの正確度、実行時のバイアス検出、説明性、および自動バイアス緩和機能を測定することができます。
+
+{{site.data.keyword.aios_full}} では、以下の SAS AI ソリューションのフレームワークが完全にサポートされています。
 {: shortdesc}
 
 

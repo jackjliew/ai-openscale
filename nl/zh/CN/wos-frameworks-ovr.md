@@ -37,10 +37,6 @@ subcollection: ai-openscale
 - [定制](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-custom#frmwrks-custom)
 - [SPSS C&DS](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-spss#frmwrks-spss)（仅在 {{site.data.keyword.wos4d_full}} 中可用）
 
-- [SAS AI Studio](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-sas#frmwrks-sas)
-{: download}
-- [Google Cloud ML Engine](/docs/services/ai-openscale?topic=ai-openscale-frmwrks-google#frmwrks-google)
-{: download}
 
 完全支持包含特定框架、问题和数据类型的以下功能：
 
@@ -67,7 +63,7 @@ subcollection: ai-openscale
 | **图像分类**       | 否 - 活动研究主题 | 否 - 活动研究主题 | 是<sup>1</sup> |否||
 {: caption="模型支持详细信息" caption-side="top"}
 
-<sup>1</sup> 如果模型/框架输出预测概率
+<sup>1</sup> 如果模型/框架输出预测概率，那么支持可解释性。
 
 <p>&nbsp;</p>
 

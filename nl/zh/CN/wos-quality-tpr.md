@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 真正率 (TPR) ![beta 标记](images/beta.png)
+# 真正率 (TPR)
 {: #quality_tpr}
 
 真正率 (TPR) 给出正确预测在正类预测中的比例。

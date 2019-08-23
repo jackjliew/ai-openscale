@@ -25,10 +25,10 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Rilevamento deviazione ![tag beta](images/beta.png)
+# Entità deviazione ![tag beta](images/beta.png)
 {: #behavior-drift-ovr}
 
-Nel corso del tempo, l'importanza e l'impatto di alcune funzioni in un modello cambiano. Ciò influisce sulle applicazioni associate e sugli esiti risultanti. Attraverso il rilevamento della deviazioe, {{site.data.keyword.aios_short}} fornisce un modo per tracciare le metriche del modello, le prestazioni del modello e il modo in cui i pesi delle funzioni cambiano nel tempo. 
+Nel corso del tempo, l'importanza e l'impatto di alcune funzioni in un modello cambiano. Ciò influisce sulle applicazioni associate e sugli esiti risultanti. Attraverso il rilevamento della deviazioe, {{site.data.keyword.aios_short}} fornisce un modo per tracciare le metriche del modello, le prestazioni del modello e il modo in cui i pesi delle funzioni cambiano nel tempo. Man mano che i dati cambiano, la capacità del modello di fare previsioni accurate può degradare. L'entità della deviazione è l'entità del degrado delle prestazioni predittive nel tempo. Utilizzare le informazioni sulla deviazione per intraprendere un'azione correttiva.
 {: shortdesc}
 
 ## Cos'è il rilevamento deviazione
@@ -65,5 +65,7 @@ Le transazioni con deviazione sono disponibili nella schermata dei dettagli dell
 
 ## Passi successivi
 
-- Per informazioni su come interpretare la deviazione, consultare [Configurazione del monitor di rilevamento della deviazione](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config)
-- Aumentare l'IQ di deviazione leggendo [Comprensione della deviazione modello con IBM Watson OpenScale](https://medium.com/@manish.bhide/4c5401aa8da4)
+- Per informazioni su come configurare il rilevamento della deviazione, consultare [Configurazione del monitor di rilevamento della deviazione](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).
+- Per attenuare la deviazione, dopo che è stata rilevata da Watson OpenScale, è necessario creare una nuova versione del modello che risolva il problema. Un buon posto per iniziare è con i punti di dati evidenziati come causa della deviazione. Introdurre i nuovi dati nel modello predittivo dopo aver etichettato manualmente le transazioni deviate e utilizzarle per rieseguire il training del modello.
+
+

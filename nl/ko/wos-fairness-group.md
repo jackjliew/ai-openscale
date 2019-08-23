@@ -31,7 +31,6 @@ subcollection: ai-openscale
 그룹에 대한 공정성 메트릭은 다른 그룹에 비해 한 그룹이 더 선호하는 결과를 제공하는 모델의 경향을 나타냅니다. 그룹은 연령, 성별 또는 인종 등의 그룹일 수 있습니다.
 {: shortdesc}
 
-
 ## 그룹에 대한 공정성 개요
 {: #quality_group-glance}
 
@@ -72,3 +71,24 @@ subcollection: ai-openscale
 {: #quality_group-zip}
 
 {{site.data.keyword.aios_short}}에서는 **우편번호** 속성 내에서 개별 우편번호를 스코어링하도록 편향 모니터를 구성할 것을 권장합니다.
+
+## 표시 내용 해석
+{: #quality_group-display}
+
+### 그룹에 대한 공정성 스코어
+{: #quality_group-display-fairnessscore}
+
+
+
+### 모니터되는 그룹
+{: #quality_group-display-monitoredgroups}
+
+
+
+### 스케줄
+{: #quality_group-display-schedule}
+
+**스케줄** 분할창 표시 
+
+
+

@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 가중된 F1 수치 ![베타 태그](images/beta.png)
+# 가중된 F1 수치
 {: #quality_wght_f1-measure}
 
 가중된 F1 수치는 클래스 확률과 동일한 가중치로 가중된 F1 수치 평균을 제공합니다.

@@ -44,25 +44,21 @@ Führen Sie die folgenden Tasks aus, um mit angepassten Metriken zu arbeiten:
 
 In den folgenden Lernprogrammen für Fortgeschrittene wird die Vorgehensweise veranschaulicht:
 
-- [Mit {{site.data.keyword.pm_full}} arbeiten](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [Mit der angepassten Machine Learning-Engine arbeiten](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [Mit {{site.data.keyword.pm_full}} arbeiten](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [Mit der angepassten Machine Learning-Engine arbeiten](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
 Sie können die angepasste Überwachung jederzeit inaktivieren und wieder aktivieren. Wenn Sie die angepasste Überwachung nicht mehr benötigen, können Sie sie entfernen.
 
-Weitere Informationen finden Sie in der [Dokumentation zum Python-SDK](http://ai-openscale-python-client.mybluemix.net/).
+Weitere Informationen finden Sie in der [Dokumentation zum Python-SDK](http://ai-openscale-python-client.mybluemix.net/){: external}.
 
 ## Auf angepasste Metriken zugreifen und diese visualisieren
 {: #cst_mtrcs_viz}
 
 Sie können eine programmgesteuerte Schnittstelle verwenden, um auf angepasste Metriken zuzugreifen und diese zu visualisieren. In den folgenden Lernprogrammen für Fortgeschrittene wird die Vorgehensweise veranschaulicht:
 
-- [Mit {{site.data.keyword.pm_full}} arbeiten](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb)
-- [Mit der angepassten Machine Learning-Engine arbeiten](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb)
+- [Mit {{site.data.keyword.pm_full}} arbeiten](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine.ipynb){: external}
+- [Mit der angepassten Machine Learning-Engine arbeiten](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external}
 
-   Weitere Informationen finden Sie in der [Dokumentation zum Python-SDK](http://ai-openscale-python-client.mybluemix.net/).
+   Weitere Informationen finden Sie in der [Dokumentation zum Python-SDK](http://ai-openscale-python-client.mybluemix.net/){: external}.
 
 Visualisierungen der angepassten Metriken werden auch im {{site.data.keyword.aios_short}}-Dashboard angezeigt.
-
-<!---
-![screen shot with metrics from Advanced Tutorial](images/adv_tutorial_metrics.png)
---->

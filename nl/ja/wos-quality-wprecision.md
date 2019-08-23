@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 加重適合率 ![ベータ・タグ](images/beta.png)
+# 加重適合率
 {: #quality_wgth_prec}
 
 加重適合率は、クラス確率に相当する値で重みづけした適合率の平均です。

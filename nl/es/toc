@@ -7,124 +7,112 @@ Watson OpenScale
     {: .navgroup id="learn"}
     getting-started.md
     [Learn about Watson OpenScale](https://www.ibm.com/cloud/watson-openscale/)
-    accessibility.md
-    faststart.md
-    alt-setup.md
-    tutorial-adv.md
-    addl-rsc.md
+    wos-accessibility.md
+    cloud-interactive-setup.md
+    cloud-alt-setup.md
+    cloud-tutorial-adv.md
+    cloud-addl-rsc.md
 
     {: .topicgroup}
     Soporte de infraestructuras y modelos
-        frameworks-ovr.md
-        frameworks-wml-cloud.md
-        frameworks-azure-ml-studio.md
-        frameworks-azure-ml-service.md
-        frameworks-aws-sagemaker.md
-        frameworks-custom.md
-        framework-workaround.md
-        framework-multi-eng.md
+        wos-frameworks-wml-cloud.md
+        wos-frameworks-azure-ml-studio.md
+        wos-frameworks-azure-ml-service.md
+        wos-frameworks-aws-sagemaker.md
+        wos-frameworks-custom.md
+        wos-framework-workaround.md
+        wos-framework-multi-eng.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     Configuración de Watson OpenScale
-        creds.md
-        iam.md
-        connect-wml.md
-        connect-azureml.md
-        connect-sagemaker.md
-        custom-ml-ovr.md
-        connect-other.md
-        custom-ml-examples.md
-        connect-deploy.md
-        connect-db.md
-        scoring.md
-        payload-logging.md
-        connect-ml.md
-        payload-auto.md
-        config-file.md
-        feedback.md
-        schema-definition.md
+        wos-creds.md
+        wos-iam.md
+        wos-connect-deploy.md
+        wos-connect-db.md
+        wos-scoring.md
+        wos-payload-logging.md
+        wos-connect-ml.md
+        wos-payload-auto.md
+        wos-config-file.md
+        wos-feedback.md
+        wos-schema-definition.md
+        cloud-upgrading.md
 
     {: .topicgroup}
     Configuración de supervisores
-        monitor-overview.md
-        monitor-accuracy.md
-        monitor-fairness.md
-        metrics.md
-        fairness_metrics
+        wos-monitor-overview.md
+        wos-monitor-accuracy.md
+        wos-monitor-fairness.md
+        wos-monitor-drift.md
+        wos-metrics.md
+        wos-fairness_metrics
 
     {: .topicgroup}
     Obtener detalles
-        insight-overview.md
-        insight-timechart.md
-        analyze-metrics-transactions.md
-        insight-explain.md
+        wos-insight-overview.md
+        wos-insight-timechart.md
+        wos-insight-viz-data-by-time.md
+        wos-insight-debias.md
+        wos-insight-explain.md
+        wos-insight-categorical.md
+        wos-insight-imagemodel.md
+        wos-insight-unstructmodel.md
+        wos-insight-contrastive.md
 
     {: .topicgroup}
     Equidad
-        fairness-ovr.md
-        fairness-group.md
+        wos-fairness-ovr.md
+        wos-fairness-group.md
 
     {: .topicgroup}
     Calidad
-        quality-overview.md
-        quality-confusion-matrix.md
-        quality-area-under-roc.md
-        quality-area-under-pr.md
-        quality-prop-expl-variance.md
-        quality-mean-abs-error.md
-        quality-mean-squared-error.md
-        quality-r-squared.md
-        quality-root-of-mean-sq-error.md
-        quality-accuracy.md
-        quality-wtpr.md
-        quality-tpr.md
-        quality-wfpr.md
-        quality-fpr.md
-        quality-wrecall.md
-        quality-recall.md
-        quality-wprecision.md
-        quality-precision.md
-        quality-wf1-measure.md
-        quality-f1-measure.md
-        quality-logarithmic-loss.md
+        wos-quality-overview.md
+        wos-quality-confusion-matrix.md
+        wos-quality-area-under-roc.md
+        wos-quality-area-under-pr.md
+        wos-quality-accuracy.md
+        wos-quality-tpr.md
+        wos-quality-fpr.md
+        wos-quality-recall.md
+        wos-quality-precision.md
+        wos-quality-f1-measure.md
+        wos-quality-logarithmic-loss.md
 
     {: .topicgroup}
-    Comportamiento
-        behavior-overview.md
-        behavior-drift.md
-        behavior-anomalies.md
+    Desviación
+        wos-behavior-drift.md
 
     {: .topicgroup}
     Rendimiento
-        performance-throughput.md
+        wos-performance-throughput.md
 
     {: .topicgroup}
     Análisis
-        analytics-ovr.md
-        analytics-confidence.md
-        analytics-chart-builder.md
+        wos-analytics-ovr.md
+        wos-analytics-confidence.md
+        wos-analytics-chart-builder.md
 
-    openscale-recovery.md
+    cloud-openscale-recovery.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [Referencia de API](https://cloud.ibm.com/apidocs/ai-openscale)
-    [CLI de ModelOps](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
+    [CLI ModelOps](https://github.com/IBM-Watson/aiopenscale-modelops-cli)
     [Cliente Python](http://ai-openscale-python-client.mybluemix.net/)
-    activity-tracker.md
-    language-support.md
-    information-security.md
-    [Repositorio GitHub de Watson](https://github.com/watson-developer-cloud/)
+    wos-activity-tracker.md
+    wos-language-support.md
+    wos-information-security.md
+    [Repositorio Watson GitHub](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    gettinghelp.md
-    release-notes.md
-    troubleshoot.md
-    FAQs.md
-    known-wos-issues.md
+    wos-gettinghelp.md
+    cloud-release-notes.md
+    wos-troubleshoot.md
+    wos-FAQs.md
+    cloud-known-wos-issues.md
 
     {: .topicgroup}
     Comunidad de desarrolladores

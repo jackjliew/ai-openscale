@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 分散説明率 ![ベータ・タグ](images/beta.png)
+# 分散説明率
 {: #quality_var}
 
 分散説明率は、説明された分散とターゲット分散の比率です。 説明された分散とは、ターゲット分散と予測誤差の分散の間の差異です。

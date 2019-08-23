@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# 平均絕對誤差 ![測試版標記](images/beta.png)
+# 絕對平均值誤差
 {: #quality_abserror}
 
 「平均絕對誤差」提供模型預測與目標值間之絕對誤差的平均值。

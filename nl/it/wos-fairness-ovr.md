@@ -43,14 +43,14 @@ Attualmente, {{site.data.keyword.aios_short}} rileva e raccomanda i monitoraggi 
 
 Oltre a rilevare gli attributi protetti, {{site.data.keyword.aios_short}} consiglia quali valori all'interno di ciascun attributo devono essere impostati come valori monitorati e di riferimento. Così, ad esempio, {{site.data.keyword.aios_short}} raccomanda che all'interno dell'attributo "Sex", il monitor di distorsione sia configurato in modo tale che "Woman" e "Non-Binary" siano i valori monitorati e "Male" sia il valore di riferimento. Se si desidera modificare una delle raccomandazioni, è possibile farlo tramite il pannello di configurazione della distorsione. 
 
-I monitor di distorsione consigliati aiutano a velocizza la configurazione e assicurano che nei modelli AI venga controllata la correttezza rispetto agli attributi sensibili. Poiché i regolatori iniziano ad essere più attenti rispetto alla distorsione algoritmica, è ancora più importante per le organizzazioni capire come funzionano i modelli e se producono risultati scorretti per determinati gruppi. 
+I monitor di distorsione consigliati aiutano a velocizza la configurazione e assicurano che nei modelli AI venga controllata la correttezza rispetto agli attributi sensibili. Poiché i regolatori iniziano ad essere più attenti rispetto alla distorsione algoritmica, è ancora più importante per le organizzazioni capire come funzionano i modelli e se producono risultati scorretti per determinati gruppi.
 
 ## Informazioni sulla correttezza
 {: #mf-understand}
 
 {{site.data.keyword.aios_short}} controlla il modello distribuito alla ricerca di distorsioni in fase di runtime. Per rilevare la distorsione per un modello distribuito, è necessario definire gli attributi di correttezza, come età o genere, come dettagliato nella seguente sezione [Configurazione del monitor Correttezza](#mf-config).
 
-È obbligatorio specificare lo schema di output per un modello o funzione in Watson {{site.data.keyword.pm_short}}, affinché il controllo della distorsione sia abilitato in {{site.data.keyword.aios_short}}. Lo schema di output può essere specificato utilizzando la proprietà `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` nella parte dei metadati dell'API `store_model`. Per ulteriori informazioni, consultare la [Documentazione per il client {{site.data.keyword.pm_full}}](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}.
+È obbligatorio specificare lo schema di output per un modello o funzione in {{site.data.keyword.pm_short}}, affinché il controllo della distorsione sia abilitato in {{site.data.keyword.aios_short}}. Lo schema di output può essere specificato utilizzando la proprietà `client.repository.ModelMetaNames.OUTPUT_DATA_SCHEMA` nella parte dei metadati dell'API `store_model`. Per ulteriori informazioni, consultare la [Documentazione per il client {{site.data.keyword.pm_full}}](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external}.
 
 ### Funzionamento
 {: #mf-works}
@@ -100,7 +100,7 @@ Quando viene rilevata una potenziale distorsione, {{site.data.keyword.aios_short
 
 Vengono utilizzati due diversi dataset per il calcolo della correttezza e dell'accuratezza. La correttezza è calcolata utilizzando i dati del payload + i dati perturbati. L'accuratezza è calcolata utilizzando i dati di feedback. Per calcolare l'accuratezza, {{site.data.keyword.aios_short}} necessita di dati etichettati manualmente, che sono presenti solo nella tabella di feedback.
 
-I risultati di tali determinazioni sono disponibili nella visualizzazione della distorsione, che include le seguenti viste: 
+I risultati di tali determinazioni sono disponibili nella visualizzazione della distorsione, che include le seguenti viste. Si vedono solo le viste se ci sono dati da supportare
 
 - **Payload + Perturbati**: include la richiesta di calcolo del punteggio ricevuta per l'ora selezionata più record aggiuntivi da ore precedenti se non è stato soddisfatto il numero minimo di record richiesti per la valutazione. Include altri record perturbati/sintetizzati utilizzati per testare la risposta del modello quando il valore della funzione monitorata cambia.
 
@@ -138,7 +138,8 @@ I risultati di tali determinazioni sono disponibili nella visualizzazione della 
    
 
    
-- **Distorsione annullata**: l'output dell'algoritmo di annullamento distorsione dopo l'elaborazione dei dati di runtime e perturbati.
+- **Distorsione annullata**: l'output dell'algoritmo di annullamento distorsione dopo l'elaborazione dei dati di runtime e perturbati. Selezionando il pulsante di scelta **Modello con distorsione annullata** vengono mostrati i cambiamenti nel modello con distorsione annullata, rispetto al modello in produzione. Il grafico riflette lo stato migliorato del risultato per i gruppi.
+
 
    Prendere nota dei seguenti dettagli sulla distorsione annullata:
    

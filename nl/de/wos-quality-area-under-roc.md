@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Fläche unterhalb der ROC-Kurve![Beta-Tag](images/beta.png)
+# Fläche unterhalb der ROC-Kurve
 {: #quality_roc}
 
 Bei der Fläche unterhalb der ROC-Kurve (ROC = Receiver Operating Characteristic) handelt es sich um die Fläche unter der Kurve für Trefferquote und Falsch-positiv-Rate. Die Kurve berechnet die Anfälligkeit in Bezug auf die Falsch-positiv-Rate.
