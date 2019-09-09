@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, weighted recal
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Weighted recall ![beta tag](images/beta.png)
+# Weighted recall
 {: #quality_weighted_recall}
 
 Weighted recall gives the weighted mean of recall with weights equal to class probability.

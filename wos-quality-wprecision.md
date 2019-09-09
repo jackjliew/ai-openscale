@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, Weighted precision
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Weighted precision ![beta tag](images/beta.png)
+# Weighted precision
 {: #quality_wgth_prec}
 
 Weighted precision gives the weighted mean of precision with weights equal to class probability.

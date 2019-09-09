@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -33,7 +33,7 @@ To see details behind a particular Fairness statistic, click the chart for a spe
 
 Note the three filters at the top of the page (Feature, Date, and Hour) that let you select a different feature or time to review details.
 
-![Time series chart](images/wos-insight-data-detail.png)
+![Time series chart is displayed with columns representing payload and perturbed data for age and the number of favorable outcomes](images/wos-insight-data-detail.png)
 
 ## Interpreting the chart
 {: #it-intp}

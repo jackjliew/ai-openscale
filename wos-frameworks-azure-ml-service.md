@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: supported frameworks, models, model types, limitations, limits, azure
 
@@ -29,9 +29,9 @@ subcollection: ai-openscale
 {: #frmwrks-azure-service}
 
 You can use Microsoft Azure ML Service to perform payload logging, feedback logging, and to measure performance accuracy, run-time bias detection, explainability, and auto-debias function in {{site.data.keyword.aios_full}}.
+{: shortdesc}
 
 {{site.data.keyword.aios_full}} fully supports the following Microsoft Azure Machine Learning Service frameworks:
-{: shortdesc}
 
 Table 1. Framework support details
 
@@ -161,48 +161,26 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify a Mic
 
 You can also add your machine learning provider by using the Python SDK. For more information on performing this programmatically, see [Bind your Microsoft Azure Service machine learning engine](/docs/services/ai-openscale?topic=ai-openscale-cml-azsrvconfig#cml-azsrvbind).
 
-### Requirements 
-{: #connect-azureservice-reqs}
-
-To connect your Microsoft Azure instance to {{site.data.keyword.aios_short}}, you must provide the following credentials:
-
-#### Client ID
-{: #connect-azureservice-client-id}
-
-The actual string value of your client ID, which verifies who you are and authenticates and authorizes calls that you make to Azure Service.
-
-#### Client Secret
-{: #connect-azureservice-clientsecret}
-
-The actual string value of the secret, which verifies who you are and authenticates and authorizes calls that you make to Azure Service.
-
-#### Tenant
-{: #connect-azureservice-tenant}
-
-Your tenant ID corresponds to your organization and is a dedicated instance of Azure AD. To find the tenant ID, hover over your account name to get the directory / tenant ID, or select **Azure Active Directory** > **Properties** > **Directory ID** in the Azure portal.
-
-#### Subscription ID
-{: #connect-azureservice-subid}
-
-Subscription credentials that uniquely identify your Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
-
-For instructions about how to get your Microsoft Azure credentials, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: external}.
-
-### Steps to connect your Azure ML Service instance
+## Connect your Azure ML Service instance
 {: #ca-connect}
 
 {{site.data.keyword.aios_short}} connects to AI models and deployments in a Azure ML Service instance.
 
-1.  From the **Configure** ![configuration icon is shown](images/insight-config-tab.png) tab, in the navigation pane, click **Machine learning providers**.
+1.  From the **Configure** tab, in the navigation pane, click **Machine learning providers**.
 1.  Click the **Add machine learning provider** button, and then click the **Microsoft Azure ML Service** tile.
-
-       ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection-azr-srvc.png)
-
-
 1.  Enter and save your credentials:
 
-    ![Enter Azure ML Studio credentials](images/wos-connect-azure—srvc-cred.png)
+    - Client ID: The actual string value of your client ID, which verifies who you are and authenticates and authorizes calls that you make to Azure Service.
+    - Client Secret: The actual string value of the secret, which verifies who you are and authenticates and authorizes calls that you make to Azure Service.
+    - Tenant: Your tenant ID corresponds to your organization and is a dedicated instance of Azure AD. To find the tenant ID, hover over your account name to get the directory / tenant ID, or select Azure Active Directory > Properties > Directory ID in the Azure portal.
+    - Subscription ID: Subscription credentials which uniquely identify your Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
+    See [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: external} for instructions about how to get your Microsoft Azure credentials.
+    {: note}
+
+1.  {{site.data.keyword.aios_short}} lists your deployed models; select the ones you want to monitor and click **Configure**.
+
+You have successfully selected deployments.
 
 ## Payload logging with the Microsoft Azure ML Service engine
 {: #cml-azsrvconfig}
@@ -352,6 +330,6 @@ print("Request OK: " + str(req_response.ok))
 ## Next steps
 {: #ca-next}
 
-- {{site.data.keyword.aios_short}} is now ready for you to [add deployments to your dashboard](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-select-deploy) and [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+-{{site.data.keyword.aios_short}} is now ready for you to [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
 - [How does Azure Machine Learning service differ from Studio?](https://docs.microsoft.com/en-us/azure/machine-learning/service/overview-what-is-azure-ml#how-does-azure-machine-learning-service-differ-from-studio){: external}
 

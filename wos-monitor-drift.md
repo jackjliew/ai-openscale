@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: accuracy, drift, configuration, monitors
 
@@ -25,10 +25,10 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Configuring the drift detection monitor ![beta tag](images/beta.png)
+# Configuring the drift detection monitor
 {: #behavior-drift-config}
 
-You must configure the {{site.data.keyword.aios_full}} drift monitor before it can begin to analyze your model. You can train your model online by using the {{site.data.keyword.aios_full}} user interface or by using a notebook.
+You must configure the {{site.data.keyword.aios_full}} drift monitor before it can begin to analyze your model. You can train your drift detection model online by using the {{site.data.keyword.aios_full}} user interface or by using a notebook.
 {: shortdesc}
 
 You can train your model online by using {{site.data.keyword.aios_short}}
@@ -42,7 +42,7 @@ Throughout this process, {{site.data.keyword.aios_full}} analyzes your model and
 ### Alert threshold
 {: #behavior-drift-config-steps-wos-reqs-alert}
 
-{{site.data.keyword.aios_full}} tracks the degree of change in model accuracy when compared to accuracy at training time. The alert threshold, which must be at least 5%, indicates the degree of tolerance for change over time.
+(Required only for classification type models.) {{site.data.keyword.aios_full}} tracks the degree of change in model accuracy when compared to accuracy at training time. The alert threshold, which must be at least 5%, indicates the degree of tolerance for change over time.
 
 ### Sample size
 {: #behavior-drift-config-steps-wos-reqs-sample}
@@ -82,16 +82,17 @@ Reconfigure the drift monitor without re-training the drift model to update para
 
 
 
-## Steps to configure drift using a notebook
+## Steps to configure drift by using a notebook
 {: #behavior-drift-config-steps-ntbk}
 
-If you use a machine learning provider other than {{site.data.keyword.pm_full}}, such as Microsoft Azure, Amazon SageMaker, or a custom machine learning engine you must use a notebook to configure drift detection. It is possible to configure drift for {{site.data.keyword.pm_full}} by using this method, as well.
+Use a notebook to configure drift if you do not want to share the training data with {{site.data.keyword.aios_short}} or if you do not have a means to share the training data on Db2 or {{site.data.keyword.cos_full}}, which are the only two training data locations supported by {{site.data.keyword.aios_short}}. Same applies to WML models for which customers do not want to share the training data with us.
 
 This option is useful if the training data is not stored in Db2 or {{site.data.keyword.cos_full}}. Using a notebook, you must read the training data into a dataframe. The specialized notebook that you can download from {{site.data.keyword.aios_short}} then creates a specialized output that you can upload to {{site.data.keyword.aios_short}}.
 
 1. Create a notebook to generate the drift detection model. Use [the sample notebook](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: external} that is available from the {{site.data.keyword.aios_short}} UI.
-2. Use compression software to compress the drift detection model into a .tar.gz file.
-
+   
+   The drift detection model is converted into a .tar.gz file for you.
+   
 1. From the **Drift** tab, on the **What is Drift**? page, click **Begin** to start the configuration process.
 
    ![What is Drift? page](images/wos-drift-config-1.png)
@@ -113,4 +114,4 @@ This option is useful if the training data is not stored in Db2 or {{site.data.k
 ## Next steps
 {: #behavior-drift-config-next-steps}
 
-- For more information about interpreting drift, see [Drift magnitude](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)
+- For more information about interpreting drift, see [Drift](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)

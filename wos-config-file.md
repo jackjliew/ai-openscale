@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: JSON, configuration, configuring, deployment, subscription
 
@@ -31,7 +31,7 @@ subcollection: ai-openscale
 You can import a JSON file to create and configure all deployments of your asset for monitoring purpose. You can also export the configuration file to configure other assets and their deployments.
 {: shortdesc}
 
-For a good example of how to work with a JSON file, see the [Watson OpenScale One API Shot for subscription Python notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb). The notebook describes how to create and configure an Amazon SageMaker asset deployments using a JSON file in a single API call. The remainder of this topic references this notebook
+For a good example of how to work with a JSON file, see the [Watson OpenScale One API Shot for subscription Python notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20One%20API%20Shot%20for%20subscription.ipynb){: external}. The notebook describes how to create and configure an Amazon SageMaker asset deployments using a JSON file in a single API call. The remainder of this topic references this notebook
 
 ## Load the JSON file content as a Python dictionary
 {: #cf-load-as-dict}

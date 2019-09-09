@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, Weighted F1-Measure
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Weighted F1-Measure ![beta tag](images/beta.png)
+# Weighted F1-Measure
 {: #quality_wght_f1-measure}
 
 Weighted F1-Measure gives the weighted mean of F1-measure with weights equal to class probability.

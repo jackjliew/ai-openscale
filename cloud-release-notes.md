@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: release notes, what's new 
 
@@ -57,7 +57,7 @@ The following new features and changes to {{site.data.keyword.aios_short}} are a
 
 - __*Improved work flow*__: {{site.data.keyword.aios_short}} has been busy improving the workflow so that you can speed through your work with fewer clicks and more explainability. The navigation panel lets you see where you are and makes it easy to jump back and forth between configuration tasks.
 
-   For more information, see [Preparing monitors for a deployment](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+   For more information, see [Prepare model for monitoring](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
 
 - __*Multiple machine learning providers*__: Why be tied down to just one machine learning provider or engine? With the newest version of {{site.data.keyword.aios_short}}, you can add multiple providers so that you can take advantage of their unique features or provide continuity with legacy apps.
 
@@ -94,7 +94,7 @@ The following new features and changes to the service are available.
     - Support for the new ibm-ai-openscale 2.1.8 Python SDK
     - Other bug fixes and stability improvements
 
-   Install from PyPI by running the `pip install -U ibm-ai-openscale-cli` command, and get usage help by running the  `ibm-ai-openscale-cli --help` command. For more information, see the [PyPI project page](https://pypi.org/project/ibm-ai-openscale-cli).
+   Install from PyPI by running the `pip install -U ibm-ai-openscale-cli` command, and get usage help by running the  `ibm-ai-openscale-cli --help` command. For more information, see the [PyPI project page](https://pypi.org/project/ibm-ai-openscale-cli){: external}.
 
 ## 29 May 2019
 {: #rn-29May2019}
@@ -114,7 +114,7 @@ The following new features and changes to the service are available.
 
    For more information, see [Accuracy](/docs/services/ai-openscale?topic=ai-openscale-acc-monitor#acc-debias-view).
 
-- __*Support for multiple machine learning engines*__: {{site.data.keyword.aios_short}} supports multiple machine learning engines within a single instance provided that provisioning is performed through the [Python SDK](http://ai-openscale-python-client.mybluemix.net/?cm_mc_uid=70732728440115575086192&cm_mc_sid_50200000=62539451560175957820).
+- __*Support for multiple machine learning engines*__: {{site.data.keyword.aios_short}} supports multiple machine learning engines within a single instance provided that provisioning is performed through the [Python SDK](http://ai-openscale-python-client.mybluemix.net/?cm_mc_uid=70732728440115575086192&cm_mc_sid_50200000=62539451560175957820){: external}.
 
    For more information, see [Support for multiple machine learning engines](/docs/services/ai-openscale?topic=ai-openscale-fmrk-workaround-multmleng).
 
@@ -151,7 +151,7 @@ In addition to usability improvements and security updates, our developers have 
 
 - __*Express Path tool now supports customer models*__: Automates the onboarding process to {{site.data.keyword.aios_short}}.
 
-   For more information, see [ibm-ai-openscale-cli](https://pypi.org/project/ibm-ai-openscale-cli/).
+   For more information, see [ibm-ai-openscale-cli](https://pypi.org/project/ibm-ai-openscale-cli/){: external}.
 
 
 ## 5 March 2019
@@ -226,5 +226,5 @@ The following new features, changes, and known issues with the service are avail
 
 Still have questions?
 
-- [Limitations](/docs/services/ai-openscale?topic=ai-openscale-in-ov#in-lim)
-- [Known issues](/docs/services/ai-openscale?topic=ai-openscale-rn-12ki#cloud-limitations)
+- [Limitations](/docs/services/ai-openscale?topic=ai-openscale-rn-12ki#wos-limitations)
+- [Known issues](/docs/services/ai-openscale?topic=ai-openscale-rn-12ki#cloud-known-unknowns-issues)

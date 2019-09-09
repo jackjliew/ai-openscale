@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, precision
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Precision ![beta tag](images/beta.png)
+# Precision
 {: #quality_precision}
 
 Precision gives the proportion of correct predictions in predictions of positive class.

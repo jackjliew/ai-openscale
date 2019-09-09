@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: deployment, monitors, data
 
@@ -25,18 +25,18 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Preparing monitors for a deployment
+# Prepare models for monitoring
 {: #mo-config}
 
 Set up and enable monitors for each deployment that you are tracking with {{site.data.keyword.aios_short}}.
 {: shortdesc}
 
-For example, if you are using the **German Credit Risk model** for the interactive tutorial, select the model deployment, set the data type for payload logging, and confirm the settings that are presented as part of the model details section.
+For example, if you are using the **German Credit Risk** sample model for the interactive tutorial, select the model deployment, set the data type for payload logging, and confirm the settings that are presented as part of the model details section.
 
 ## Selecting a deployment
 {: #mo-select-deploy}
 
-1. From the **Insights** tab, click the **Add to dashboard** button. 
+1. From the **Insights dashboard**, on the **Model monitor** tab, click the **Add to dashboard** button. 
 
    A list of available model deployments appears. If you don't see any model deployments, you must deploy a model using your machine learning provider. For the tutorial, select the **German Credit Risk model**.
 
@@ -98,7 +98,18 @@ Specifically to configure monitors, you must provide the following information:
 
   For example, for the tutorial, click the **predictedLabel** tile.
 
+- The transaction ID column
+
+  For example, for the tutorial, click the **transaction_id** tile.
+
+
 When you finish providing all the required information, a summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, save your work.
+
+To understand the impact of the monitored model along with business applications, business events must be matched with related scoring payload data. For this reason, one column from a scoring payload that is logged to {{site.data.keyword.aios_short}} must contain a unique business transaction ID. The same transaction ID must be available in business events. For more details about applications, see [Configuring applications]().
+
+If there is no transaction ID column on the list, please either score your models or log scoring payload to {{site.data.keyword.aios_short}}, including meta information that contains the `transaction_id` field.
+{: note}
+
 
 The following sections give some specific information that you encounter depending on the type of model, either [Numeric/categorical data](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datan) or [Images and Unstructured text](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-datai).
 

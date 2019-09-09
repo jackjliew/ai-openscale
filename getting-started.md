@@ -10,7 +10,7 @@ takeaways:
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: ai, getting started, tutorial, understanding, video
 
@@ -97,7 +97,7 @@ Before you begin the tour, you must have the following resources set up:
 
 The automated setup tour is designed to work with the least possible user interaction. It automatically makes the following decisions for you:
 
-- If you have multiple {{site.data.keyword.pm_full}} instances set up, the install process runs and API call to list the instances and chooses whichever {{site.data.keyword.pm_short}} instance appears first in the resulting list. 
+- If you have multiple {{site.data.keyword.pm_full}} instances set up, the install process runs an API call to list the instances and chooses whichever {{site.data.keyword.pm_short}} instance appears first in the resulting list. 
 - To create a new lite version {{site.data.keyword.pm_full}}, {{site.data.keyword.aios_short}} installer uses the default resource group for your {{site.data.keyword.Bluemix}} account.
 
 ### Provision a {{site.data.keyword.aios_short}} service
@@ -121,9 +121,10 @@ If you haven't already, ensure that you provision {{site.data.keyword.aios_full}
 
    ![Demo welcome](images/cloud-auto-setup.png)
 
-   As the {{site.data.keyword.aios_short}} services are being provisioned, you can review the demo scenario. When provisioning is complete, click the **Start tour** button to tour the {{site.data.keyword.aios_short}} dashboard, and proceed with [Viewing results in {{site.data.keyword.aios_short}}](#wos-open).
+   As the {{site.data.keyword.aios_short}} services are being provisioned, you can review the demo scenario. When provisioning is complete, click the **Start tour** button to tour the {{site.data.keyword.aios_short}} dashboard, and proceed with [Viewing results in the {{site.data.keyword.aios_short}} model monitor](#wos-open).
 
-## Viewing results in {{site.data.keyword.aios_short}}
+
+## View insights in the {{site.data.keyword.aios_short}} model monitor
 {: #wos-open}
 
 To view insights into the fairness and accuracy of the model, details of data that is monitored, and explainability for an individual transaction, open the {{site.data.keyword.aios_short}} dashboard. Each deployment is shown as a tile. The tour configured a deployment called `GermanCreditRiskModel`, as shown in the following screen capture:
@@ -162,13 +163,87 @@ For information about finding and explaining transactions, see [Monitoring expla
 
    ![Demo Lets go](images/fastpath_demo_11.35.50.png)
 
+
+## Continue setup by configuring the application monitor  ![beta tag](images/beta.png)
+{: #wos-open-config-appmon}
+
+Set up an application in {{site.data.keyword.aios_short}} to monitor your business KPIs and to find how deployed models influence these KPIs. The deployed models must be associated with the application; and, business KPIs must be defined based on the business events data. Business events data must be logged to {{site.data.keyword.aios_short}} either by manually uploading a file with events data or by using the REST API.
+
+### Steps
+{: #wos-open-config-appmon-steps}
+
+1. From the **Insights dashboard**, on the **Application monitors** tab, click the **Add to dashboard** button to create a new application.
+1. In the **Application name** field, type **Loan Application**, and then click **Configure**.
+1. In the **Associated models** section, click the **Add associated model** button.
+1. Select the **Credit Risk model** deployment, and then click **Save**.
+1. In the **Event details** section, click **Load event data from file**.
+1. Download the [history_business_payloads_week.csv](https://raw.githubusercontent.com/pmservice/ai-openscale-tutorials/master/assets/historical_data/german_credit_risk/wos/history_business_payloads_week.csv) file.
+1. Select the downloaded file, and then click **Save**.
+1. In the **KPIs** section, click **Add KPI**.
+1. In the **KPI name** field, type **Accepted Credits**, and then click **Next**.
+1. On the **Configure the KPI** window, click the **Accepted** tile, and then click **Next**.
+1. Make the following selections:
+
+   - In the **Calculation** drop-down box, select **Sum**
+   - In the **Sum to calculate** drop-down box, select **Daily Sum**
+   - Click the **Lower Threshold** radio button and type **500** in the field and click **Save**.
+
+1. Use the preceding steps to add another KPI with the following values:
+
+   - Credit Amount Granted
+   - Amount Granted
+   - Sum/DailySum/Lower Threshold = 1 000 000
+
+1. In the **Logging endpoint** section, click the **Activate the application** button and then upload the `history_business_payloads_week.csv` file by dragging it to the drop location.
+
+
+## Viewing insights in the application monitor
+{: #wos-open-config-appmon-insights}
+
+To view insights into the business application - performance of business KPIs and their correlation with deployed models, open the {{site.data.keyword.aios_short}} **Insights dashboard**. Each application displays as a tile. The tour configured an application called **Credit Risk Application**, as shown in the following screen capture:
+
+![an application tile that shows loan application KPIs](images/wos-tutorial-loan-apptile.png)
+
+### View insights
+{: #wos-open-config-appmon-insights-dets}
+
+At a glance, the Insights page shows any issues with business KPIs, as determined by the thresholds that are configured.
+
+![The insights dashboard is shown with two tiles on the applications monitor tab](images/wos-tutorial-dashboard.png)
+
+### View model metrics influencing KPI
+{: #wos-open-config-appmon-insights-kpi-dets}
+
+1. From the **Insights** page, click the `Credit Risk Application` tile to view details about the KPIs.
+1. Click **KPI**.
+1. Click the **Correlations** tab.
+   
+   Correlations are calculated once per day; information on the **Correlations** tab usually appears within 24 hours.
+   {: note}
+   
+1. Review list of model metrics that influence the selected KPI.
+
+For information about interpreting the time series chart, see [Getting application insights](/docs/services/ai-openscale?topic=ai-openscale-io-app-ov).
+
+### View KPI performance
+{: #wos-open-config-appmon-insights-kpi-perf}
+
+1. From the **Insights dashboard**, on the **Applications monitor** tab, click the **Credit Risk Application** tile to view details about the KPIs.
+1. Select **KPI**.
+1. Select the **Performance** tab
+1. Click and drag the marker across the chart to view a day and time period that shows data and then click the View details link. Alternatively, you can click different time periods in the chart to change the data that you see.
+
+For information about interpreting the time series chart, see [Getting application insights](/docs/services/ai-openscale?topic=ai-openscale-io-app-ov).
+
+
 ## Finishing the tour
 {: #wos-done-demo}
 
-After you finish the tour, you can either add your own model deployment to the dashboard or continue to explore the tutorial deployment. 
+After you finish the tour and the application setup, you can either add your own model deployment to the dashboard or continue to explore the tutorial deployment. 
 
 - To add your own model to the dashboard, click the **Add to dashboard** button.
-- To continue exploring the tutorial model, click the German Credit Risk tile.
+- To continue exploring the tutorial model, click the **German Credit Risk** tile.
+- To continue exploring the application, click the **German Credit Risk application** tile.
 
 ## Next steps
 {: #gs-next}

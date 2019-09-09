@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: fairness, fairness monitor, payload, perturbation, training data, debiased, Logarithmic loss
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Logarithmic loss ![beta tag](images/beta.png)
+# Logarithmic loss
 {: #quality_log_loss}
 
 Logarithmic loss gives the mean of logarithms target class probabilities (confidence). It is also known as Expected log-likelihood and is an effective measure of model performance.

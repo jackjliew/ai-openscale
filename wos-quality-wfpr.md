@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, Weighted False Positive Rate, wFPR
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Weighted False Positive Rate (wFPR) ![beta tag](images/beta.png)
+# Weighted False Positive Rate (wFPR)
 {: #quality_wfpr_weighted}
 
 The Weighted False Positive Rate (wFPR) gives the weighted mean of class False Positive Rate (FPR) with weights equal to class probability.

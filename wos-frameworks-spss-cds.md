@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 
 keywords: supported frameworks, models, model types, limitations, limits, spss, c&ds
@@ -28,9 +28,9 @@ subcollection: ai-openscale
 {: #frmwrks-spss}
 
 You can use IBM SPSS C&DS to perform payload logging, feedback logging, and to measure performance accuracy, run-time bias detection, explainability, and auto-debias function in {{site.data.keyword.aios_full}}.
+{: shortdesc}
 
 {{site.data.keyword.aios_full}} plans to fully support the following IBM SPSS Collaboration and Deployment Services (C&DS) frameworks:
-{: shortdesc}
 
 Currently, support is limited to {{site.data.keyword.wos4d_full}}.
 {: note}

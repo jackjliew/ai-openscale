@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: dashboard, navigating, navigation, insights
 
@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Getting insights with {{site.data.keyword.aios_short}}
 {: #io-ov}
 
-You can track all the deployed models, also known as deployments, that you are monitoring through the {{site.data.keyword.aios_full}} dashboard. The dashboard is your main view into {{site.data.keyword.aios_short}} and provides you with the means of getting insights into how your models are performing.
+You can track all the deployed models, also known as deployments, that you are monitoring through the {{site.data.keyword.aios_full}} dashboard.
 {: shortdesc}
 
 ## Insights

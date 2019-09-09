@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, Area under PR
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Area under PR ![beta tag](images/beta.png)
+# Area under PR
 {: #quality-area-pr}
 
 Area under Precision Recall gives the area under the precision and recall curve, which can be useful when classes are particularly imbalanced.

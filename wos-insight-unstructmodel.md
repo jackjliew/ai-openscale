@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -57,12 +57,12 @@ subcollection: ai-openscale
 
 The following example of explainability shows a classification model that evaluates unstructured text. The explanation shows the keywords that had a positive as well as a negative impact on the model prediction. We also show the position of the identified keywords in the original text which was fed as input to the model.
 
-![Explainability image classification](images/insight-explain-text.png)
+![Explainability image classification chart is displayed. it shows confidence levels for the unstructured text](images/insight-explain-text.png)
 
 ## Unstructured text model example
 {: #ie-unstruct-ntbkssample}
 
 Use the following notebook to see detailed code samples and develop your own {{site.data.keyword.aios_short}} deployments:
 
-- [Tutorial on generating an explanation for a text-based model](https://github.ibm.com/aiopenscale/explainability/blob/master/public/notebooks/demo/text_explanation.ipynb){: external}
+- [Tutorial on generating an explanation for a text-based model](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20Explanation%20for%20Text%20Model.ipynb){: external}
 

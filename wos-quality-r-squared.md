@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, R squared
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# R squared ![beta tag](images/beta.png)
+# R squared
 {: #quality_r_squared}
 
 R squared is the ratio of difference between target variance and variance for prediction error to target variance. It can tell you how well the data that you used to create the model fits the regression.

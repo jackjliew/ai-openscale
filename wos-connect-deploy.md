@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 
 keywords: deployment, monitoring 
@@ -38,7 +38,7 @@ To add monitors to the {{site.data.keyword.aios_short}} dashboard, you must have
 1.  From the {{site.data.keyword.aios_short}} dashboard, click **Add to dashboard**.
 1.  {{site.data.keyword.aios_short}} checks your machine learning providers to compile a list of deployed models. From the list of deployments, you can select the ones that you want to monitor.
 
-    ![Select deployments](images/wos-select-model-deployment.png)
+    ![Select deployments pop-up window is shown with the machine learning provider selected and the list of deployments that are available for that provider](images/wos-select-model-deployment.png)
 
 1.  Click **Configure**.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: databases, connections, scoring, requests, schema, REST API, API
 
@@ -40,7 +40,7 @@ For {{site.data.keyword.aios_short}}, all transactions going to the deployed mod
 ## Logging the payload with Python SDK
 {: #cdb-payload-log-pythonsdk}
 
-For an example of full working code, see the [AI Openscale and Custom ML Engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb) sample notebook.
+For an example of full working code, see the [AI Openscale and Custom ML Engine](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/AI%20OpenScale%20and%20Custom%20ML%20Engine.ipynb){: external} sample notebook.
 
 The following code sample shows how to log the payload by using the Python SDK:
 

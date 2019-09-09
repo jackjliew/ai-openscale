@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, Mean squared error
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Mean squared error ![beta tag](images/beta.png)
+# Mean squared error
 {: #quality_squerror}
 
 Mean squared error gives the mean of squared difference between model prediction and target value. It can be used as the measure of the quality of an estimator.

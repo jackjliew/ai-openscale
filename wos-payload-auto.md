@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: machine learning engines, frameworks, Microsoft Azure, Amazone SageMaker, custom ML engine 
 
@@ -96,15 +96,15 @@ The following flowchart shows the custom machine learning engine solution in whi
 ### Steps
 {: #fmrk-workaround-smple-cd}
 
-1. Use a notebook to create a scoring endpoint for the credit risk model (scikit-learn) deployment on the Microsoft Azure Machine Learning Service. For more information, see [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20model%20with%20Azure%20ML%20Service%20and%20scikit-learn.ipynb).
-2. Create a custom machine learning engine and deploy it on Microsoft Azure Cloud as a Flask application. Create the perturbation and discovery endpoints. For more information, see [these deployment instructions](https://github.com/pmservice/ai-openscale-tutorials/tree/master/applications/custom-ml-engine-azure).
-3. Configure {{site.data.keyword.aios_short}} to work with the custom machine learning engine. For more information, see  [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/OpenScale%20and%20Custom%20ML%20Engine%20configuration.ipynb).
-4. Create a scoring endpoint wrapper that automates payload logging on the Microsoft Azure Machine Learning Service. For more information, see [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20scoring%20endpoint%20wrapper%20with%20payload%20logging.ipynb).
+1. Use a notebook to create a scoring endpoint for the credit risk model (scikit-learn) deployment on the Microsoft Azure Machine Learning Service. For more information, see [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20model%20with%20Azure%20ML%20Service%20and%20scikit-learn.ipynb){: external}.
+2. Create a custom machine learning engine and deploy it on Microsoft Azure Cloud as a Flask application. Create the perturbation and discovery endpoints. For more information, see [these deployment instructions](https://github.com/pmservice/ai-openscale-tutorials/tree/master/applications/custom-ml-engine-azure){: external}.
+3. Configure {{site.data.keyword.aios_short}} to work with the custom machine learning engine. For more information, see  [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/OpenScale%20and%20Custom%20ML%20Engine%20configuration.ipynb){: external}.
+4. Create a scoring endpoint wrapper that automates payload logging on the Microsoft Azure Machine Learning Service. For more information, see [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20scoring%20endpoint%20wrapper%20with%20payload%20logging.ipynb){: external}.
 
 Pay special attention to the following items:
 
 - Credentials: To make the tutorial easier to follow, the {{site.data.keyword.aios_short}} credentials are hard-coded within the code (scoring endpoint wrapper). You must update these values to your actual credentials.
 - Python SDK vs. REST API: The tutorial uses the Python SDK to log the payload. You could also use the REST API to do this, however you must generate or refresh the token on your own. 
-- {{site.data.keyword.cloud_notm}} vs. Cloud Pak for Data: If you are using {{site.data.keyword.wos4d_notm}}, the credentials are in a different format [here is the sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine%20-%20ICP.ipynb). The {{site.data.keyword.aios_short}} client class is also different. It uses the `APIClient4ICP` client class.
+- {{site.data.keyword.cloud_notm}} vs. Cloud Pak for Data: If you are using {{site.data.keyword.wos4d_notm}}, the credentials are in a different format [here is the sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20and%20Watson%20ML%20Engine%20-%20ICP.ipynb){: external}. The {{site.data.keyword.aios_short}} client class is also different. It uses the `APIClient4ICP` client class.
 - Payload logging as separate endpoint/package — extraction of payload logging & conversion methods to separate package or endpoint. In that way it could be re-used if you would like to inject batch of payloads outside scoring endpoint wrapper.
 

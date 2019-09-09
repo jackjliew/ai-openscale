@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: supported frameworks, models, model types, limitations, limits, AWS, Sagemaker, Amazon
 
@@ -29,9 +29,9 @@ subcollection: ai-openscale
 {: #frmwrks-aws-sage}
 
 You can use Amazon SageMaker to perform payload logging, feedback logging, and to measure performance accuracy, run-time bias detection, explainability, and auto-debias function in {{site.data.keyword.aios_full}}.
+{: shortdesc}
 
 {{site.data.keyword.aios_full}} fully supports the following Amazon SageMaker frameworks:
-{: shortdesc}
 
 Table 1. Framework support details
 
@@ -68,35 +68,26 @@ Your first step in the {{site.data.keyword.aios_short}} tool is to specify an Am
 
 You can also add your machine learning provider by using the Python SDK. For more information on performing this programmatically, see [Bind your Amazon SageMaker machine learning engine](/docs/services/ai-openscale?topic=ai-openscale-cml-connect#cml-smbind).
 
-### Requirements
-{: #csm-config-reqs}
-
-#### Access Key ID
-
-Your AWS access key ID, `aws_access_key_id`, which verifies who you are and authenticates and authorizes calls that you make to AWS.
-
-#### Secret Access Key
-
-Your AWS secret access key, `aws_secret_access_key`, which is required to verify who you are and to authenticate and authorize calls that you make to AWS.
-
-#### Region
-
-Enter the region where your Access Key ID was created. Keys are stored and used in the region in which they were created and cannot be transferred to another region. 
-
-    
 ### Connect your Amazon SageMaker service instance
 {: #csm-config}
 
 {{site.data.keyword.aios_short}} connects to AI models and deployments in an Amazon SageMaker service instance.
 
-1.  From the **Configure** ![configuration icon is shown](images/insight-config-tab.png) tab, in the navigation pane, click **Machine learning providers**.
+1.  From the **Configure** tab, in the navigation pane, click **Machine learning providers**.
+
+    ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection.png)
+
 1.  Click the **Add machine learning provider** button, and then click the **Amazon SageMaker** tile.
 
-    ![the select your machine learning service provider screen is shown with tiles for the supported machine learning engines](images/wos-machine-learning-providers-selection-amazon.png)
+    ![Enter Amazon SageMaker service credentials](images/connect-sage-cred.png)
 
 1.  Enter and save your credentials:
 
-    ![Enter Amazon SageMaker service credentials](images/connect-sage-cred.png)
+    - Access Key ID: Your AWS access key ID, `aws_access_key_id`, which verifies who you are and authenticates and authorizes calls that you make to AWS.
+    - Secret Access Key: Your AWS secret access key, `aws_secret_access_key`, which is required to verify who you are and to authenticate and authorize calls that you make to AWS.
+    - Region: Enter the region where your Access Key ID was created. Keys are stored and used in the region in which they were created and cannot be transferred to another region. 
+
+1.  {{site.data.keyword.aios_short}} lists your deployed models; select the ones you want to monitor.
 
 ## Payload logging with the Amazon SageMaker machine learning engine
 {: #cml-smconfig}
@@ -222,5 +213,5 @@ Enter the region where your Access Key ID was created. Keys are stored and used 
 ## Next steps
 {: #csm-next}
 
-- {{site.data.keyword.aios_short}} is now ready for you to [add deployments to your dashboard](/docs/services/ai-openscale?topic=ai-openscale-mo-config#mo-select-deploy) and [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
-- [Monitor Sagemaker machine learning with Watson OpenScale](https://developer.ibm.com/patterns/monitor-amazon-sagemaker-machine-learning-models-with-ai-openscale/){: external}
+- {{site.data.keyword.aios_short}} is now ready for you to [configure monitors](/docs/services/ai-openscale?topic=ai-openscale-mo-config).
+- [Monitor Sagemaker machine learning with Watson OpenScale](https://developer.ibm.com/patterns/monitor-amazon-sagemaker-machine-learning-models-with-ai-openscale//){: external}

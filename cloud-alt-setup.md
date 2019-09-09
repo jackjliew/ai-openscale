@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: Python, install, python module, setup, set up, insights, explainability
 
@@ -71,7 +71,7 @@ ibm-ai-openscale-cli --apikey <Your API key>
 ```
 {: codeblock}
 
-## Viewing results in {{site.data.keyword.aios_short}}
+## Viewing results in the {{site.data.keyword.aios_short}} model monitor
 {: #as-open}
 
 To view insights into the fairness and accuracy of the model, details of data that is monitored, and explainability for an individual transaction, open the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/){: external}.
@@ -85,9 +85,10 @@ From the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.
 
 - At a glance, the Insights page shows any issues with fairness and accuracy, as determined by the thresholds that are configured.
 
-- Each deployment is shown as a tile. The module configured a deployment called `GermanCreditRiskModel`, as shown in the following screen capture:
+- Each deployment is shown as a tile. If you are following any one of the tutorials, in your dashboard, you see a deployment called `GermanCreditRiskModel`. The following sample shows a dashboard with many deployed and monitored models:
 
-  ![Insight overview](images/setup01-0206.png)
+    ![Insight dashboard with many deployments, each shown as a tile](images/wos-insight-dashboard.png)
+
 
 ### View monitoring data
 {: #as-monitoring}
@@ -99,7 +100,7 @@ From the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.
 
    - For information about interpreting the time series chart, see [Getting insights](/docs/services/ai-openscale?topic=ai-openscale-it-ov).
 
-    ![Monitor data](images/setup02-0206.png)
+    ![Monitor data is shown](images/setup02-0206.png)
 
 3. To see details about `AGE` data monitoring, ensure that `AGE` is selected from the drop-down menu.
 
@@ -107,7 +108,7 @@ From the [{{site.data.keyword.aios_short}} dashboard](https://aiopenscale.cloud.
 
   - For information about interpreting the chart of the data points at a specific hour, see [Visualizing data for a specific hour](/docs/services/ai-openscale?topic=ai-openscale-it-vdet).
 
-    ![View details](images/setup03-0206.png)
+    ![View details are shown](images/setup03-0206.png)
 
 ### View explainability
 {: #as-explain}

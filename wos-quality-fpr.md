@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, False positive rate, fpr
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# False positive rate (FPR) ![beta tag](images/beta.png)
+# False positive rate (FPR)
 {: #quality_fpr_false}
 
 The false positive rate gives the proportion of incorrect predictions in positive class.

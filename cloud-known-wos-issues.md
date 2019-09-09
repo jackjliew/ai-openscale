@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: supported frameworks, models, model types, limitations, limits
 
@@ -45,11 +45,7 @@ The following limitations and known issues are common to both {{site.data.keywor
 ### Common limitations
 {: #wos-limitations}
 
-- For {{site.data.keyword.pm_full}}, scoring input for image classification models that are sent for payload logging cannot exceedai-open-scale-ibm-aios-scheduling  | 1 | Scheduling serviceMB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
-
-
 - Explainability for unstructured text models is not supported for continuous script languages, such as Japanese, Chinese, and Korean, which don't use whitespace or punctuation characters to separate words.
-
 
 
 <p>&nbsp;</p>
@@ -239,13 +235,13 @@ The {{site.data.keyword.aios_short}} service tooling requires the same level of 
 ### Python client
 {: #abt-python}
 
-The [{{site.data.keyword.aios_short}} Python client](http://ai-openscale-python-client.mybluemix.net/){: external} is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure the datamart database, bind your machine learning engine, and select and monitor deployments. For examples using the Python client in this way, see the [{{site.data.keyword.aios_short}} sample notebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks).
+The [{{site.data.keyword.aios_short}} Python client](http://ai-openscale-python-client.mybluemix.net/){: external} is a Python library that allows you to work directly with the {{site.data.keyword.aios_short}} service. You can use the Python client, instead of the {{site.data.keyword.aios_short}} client UI, to directly configure the datamart database, bind your machine learning engine, and select and monitor deployments. For examples using the Python client in this way, see the [{{site.data.keyword.aios_short}} sample notebooks](https://github.com/pmservice/ai-openscale-tutorials/tree/master/notebooks){: external}.
 
 
 ## Issues specific to {{site.data.keyword.aios_short}}
 {: #cloud-issues}
 
-The following limitation and issues are specific to {{site.data.keyword.aios_short}} for {{site.data.keyword.Bluemix}}.
+The following limitations and known issues are specific to {{site.data.keyword.aios_short}} for {{site.data.keyword.Bluemix}}.
 
 <p>&nbsp;</p>
 
@@ -259,6 +255,16 @@ The following limitation and issues are specific to {{site.data.keyword.aios_sho
 - {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model related data (feedback data, scoring payload) and calculated metrics. Lite Db2 plans are not currently supported.
 
 - The free Lite plan database is not GDPR compliant. If your model processes personally identifiable information (PII), you must purchase a new database or use an existing database that does conform to GDPR rules.
+
+### Known issues
+{: #cloud-known-unknowns-issues}
+
+<p>&nbsp;</p>
+
+#### Drift configuration is started but never finishes
+{: #wos-common-issues-timeout}
+
+Drift configuration is started but never finishes and continues to show the spinner icon. Typically drift config takes about ten minutes but in cases when you see the spinner running for a very long time it is possible that the system is left in an inconsistent state. There is a workaround to this behavior: Edit the drift configuration. Then save it. The system should come out of this state and complete configuration. Contact IBM Support if this does not rectify the situation.
 
 
 

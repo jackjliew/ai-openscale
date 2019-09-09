@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -42,7 +42,7 @@ subcollection: ai-openscale
 
 Select the **Debiased Scoring Endpoint** link to find your de-biasing REST API endpoint
 
-![Debias API endpoint](images/insight-debias-api.png)
+![Debias API endpoint details screen is displayed with the cURL example showing in the code snippet box](images/insight-debias-api.png)
 
 ## Next steps
 {: #it-dbo-nextsteps}

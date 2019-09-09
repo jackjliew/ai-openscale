@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -31,4 +31,4 @@ subcollection: ai-openscale
 Introductory text
 {: shortdesc}
 
-More text
+More text.

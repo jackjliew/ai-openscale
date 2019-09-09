@@ -15,6 +15,7 @@ Watson OpenScale
 
     {: .topicgroup}
     Framework & model support
+        wos-frameworks-ovr.md
         wos-frameworks-wml-cloud.md
         wos-frameworks-azure-ml-studio.md
         wos-frameworks-azure-ml-service.md
@@ -41,16 +42,21 @@ Watson OpenScale
         cloud-upgrading.md
 
     {: .topicgroup}
-    Configuring monitors
+    Configuring model monitors
         wos-monitor-overview.md
         wos-monitor-accuracy.md
         wos-monitor-fairness.md
         wos-monitor-drift.md
         wos-metrics.md
-        wos-fairness_metrics
 
     {: .topicgroup}
-    Get insights
+    Configuring application monitors
+        wos-monitor-app-overview.md
+        wos-monitor-bkpi.md
+        wos-monitor-event-details.md
+
+    {: .topicgroup}
+    Get model insights
         wos-insight-overview.md
         wos-insight-timechart.md
         wos-insight-viz-data-by-time.md
@@ -59,7 +65,15 @@ Watson OpenScale
         wos-insight-categorical.md
         wos-insight-imagemodel.md
         wos-insight-unstructmodel.md
+        wos-insight-tabularmodel.md        
         wos-insight-contrastive.md
+
+    {: .topicgroup}
+    Get application insights
+        wos-insight-app-overview.md
+        wos-insight-app-correlations.md
+        wos-insight-app-performance_metrics.md
+        wos-insight-app-charts.md
 
     {: .topicgroup}
     Fairness
@@ -82,7 +96,9 @@ Watson OpenScale
 
     {: .topicgroup}
     Drift
+        wos-behavior-overview.md
         wos-behavior-drift.md
+        wos-behavior-anomalies.md
 
     {: .topicgroup}
     Performance
@@ -112,6 +128,7 @@ Watson OpenScale
     wos-gettinghelp.md
     cloud-release-notes.md
     wos-troubleshoot.md
+    cloud-openscale-recovery.md
     wos-FAQs.md
     cloud-known-wos-issues.md
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -65,17 +65,13 @@ subcollection: ai-openscale
 
 For an image classification model example of explainability, you can see which parts of an image contributed positively to the predicted outcome and which contributed negatively. In the following example, the image in the positive pane shows the parts which impacted positively to the prediction and the image in the negative pane shows the parts of images that had a negative impact on the outcome.
 
-![Explainability image classification](images/insight-explain-image.png)
-
-For {{site.data.keyword.pm_full}}, scoring input for image classification models that are sent for payload logging cannot exceedai-open-scale-ibm-aios-scheduling  | 1 | Scheduling serviceMB. To avoid time out issues, images must not exceed 125 x 125 pixels and must be sent sequentially so that the explanation for the second image is requested when the first one is completed.
-{: note}
-
+![Explainability image classification confidence detail displays with an image of a dog that also has parts of the picture highlighted to show what part of the image helped in determining that the image is a dog](images/insight-explain-image.png)
 
 ## Image model examples
 {: #ie-image-working-ntbks}
 
 Use the following two notebooks to see detailed code samples and develop your own {{site.data.keyword.aios_short}} deployments:
 
-- [Tutorial on generating an explanation for an image-based model](https://github.ibm.com/aiopenscale/explainability/blob/master/public/notebooks/demo/image_explanation.ipynb){: external}
-- [Tutorial on generating an explanation for an image-based binary classifier model](https://github.ibm.com/aiopenscale/explainability/blob/master/public/notebooks/demo/image_explanation_binary.ipynb){: external}
+- [Tutorial on generating an explanation for an image-based model](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20Explanation%20for%20Image%20Multiclass%20Classification%20Model.ipynb){: external}
+- [Tutorial on generating an explanation for an image-based binary classifier model](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/Watson%20OpenScale%20Explanation%20for%20Image%20Binary%20Classification%20Model.ipynb){: external}
 

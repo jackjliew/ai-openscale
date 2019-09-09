@@ -1,6 +1,6 @@
 # ai-openscale - IBM Watson OpenScale
 
-This repository is for the IBM Watson OpenScale for IBM Cloud PRODUCTION build.
+This repository is for the IBM Watson OpenScale for IBM Cloud STAGING build.
 
 The following document explains everything that a content designer would need to know to work with this product and specifically with the Markdown files in this repository.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: databases, connections, scoring, requests
 
@@ -38,7 +38,7 @@ Specify a database for your {{site.data.keyword.aios_short}} instance to use.
 
 1.  Choose a database. You have two options: the free database, or an existing or new database.
 
-    ![Select database](images/gs-config-database.png)
+    ![Select your database screen displays with two options to use the free lite plan or use an existing database](images/gs-config-database.png)
 
     If you have a paid {{site.data.keyword.cloud_notm}} account, you may provision a `Databases for PostgreSQL` or `Db2 Warehouse` service to take full advantage of integration with Watson Studio and continuous learning services. If you choose not to provision a paid service, you can use the free internal PostgreSQL storage with {{site.data.keyword.aios_short}}, but you will not be able to configure continuous learning for your model.
     {: note}
@@ -54,7 +54,7 @@ Specify a database for your {{site.data.keyword.aios_short}} instance to use.
 
 To proceed with using the free database, click **Use the free Lite plan database** tile, and then click **Save**.
 
-  ![Select database](images/gs-config-database2.png)
+  ![the database saved pop-up message is shown with the select provider button selected](images/gs-config-database2.png)
   
 You can upgrade to another database from the free database, however it is not possible to reconfigure a Compose for Postgres, Database for Postgres, or Db2 instance to the free database. After you upgrade it is impossible to return to using the free database. All the current data, such as the configuration, the scoring results, and explanations cannot be reused. By selecting another schema or database, the {{site.data.keyword.aios_short}} environment is completely reset.
 
@@ -70,7 +70,7 @@ You can upgrade to another database from the free database, however it is not po
     {{site.data.keyword.aios_short}} uses a PostgreSQL or Db2 database to store model related data (feedback data, scoring payload) and calculated metrics. Lite Db2 plans are not currently supported. For more information about training data, see [Why does {{site.data.keyword.aios_short}} need access to my training data?](/docs/services/ai-openscale?topic=ai-openscale-trainingdata#trainingdata)
     {: note}
 
-    ![Select database](images/gs-config-database3.png)
+    ![Select your database screen displays with fields for you to enter database type, database name and schema.](images/gs-config-database3.png)
 
 1.  You can also click **Select a different location** to specify a database location outside of your {{site.data.keyword.Bluemix_notm}} account.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 
 keywords: troubleshooting, bias
@@ -213,7 +213,7 @@ There are two ways to configure kubectl client.
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep common-api)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
+    ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c             1/1       Running    1         6h
     ```
 
     Ensure that the status is **running** and it is fully ready **1/1**.  We will use `ai-open-scale-ibm-aios-common-api-577b75c445-2dg9c` as our pod for the following examples.
@@ -316,7 +316,7 @@ If cloudctl is available on your laptop, run the following command to configure 
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep configuration)
     NAME                                                     READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-configuration-554f548667-7l782    1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
+    ai-open-scale-ibm-aios-configuration-554f548667-7l782    1/1       Running    1         6h
     ```
 
     Ensure that the status is **running** and it is fully ready **1/1**.  We will use `ai-open-scale-ibm-aios-configuration-554f548667-7l782` as our pod for the following examples.
@@ -517,7 +517,7 @@ There are two ways to configure kubectl client.
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep datamart)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb                1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
+    ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb                1/1       Running    1         6h
     ```
 
     Ensure that the status is **running** and it is fully ready **1/1**.  We will use `ai-open-scale-ibm-aios-datamart-7b84c7667-spzsb` as our pod for the following examples.
@@ -726,7 +726,7 @@ There are two ways to configure kubectl client.
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep feedback)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f               2/2       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
+    ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f               2/2       Running    1         6h
     ```
 
     Ensure that the status is **running** and it is fully ready **2/2**.  We will use `ai-open-scale-ibm-aios-feedback-75d466f5d8-hxx9f` as our pod for the following examples.
@@ -834,7 +834,7 @@ There are two ways to configure kubectl client.
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep ml-gateway-discovery)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt   1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
+    ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt   1/1       Running    1         6h
     ```
 
     Ensure that the status is **running** and it is fully ready **1/1**.  We will use `ai-open-scale-ibm-aios-ml-gateway-discovery-5d8c5db99b-qjxgt` as our pod for the following examples.
@@ -1036,7 +1036,7 @@ There are two ways to configure kubectl client.
     ```bash
     $ kubectl -n aiopenscale get pods | (head -n 1; grep payload-logging-api)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65    1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
+    ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65    1/1       Running    1         6h
     ```
 
     Ensure that the status is **running** and it is fully ready **1/1**.  We will use `ai-open-scale-ibm-aios-payload-logging-api-744888549d-qvz65` as our pod for the following examples.
@@ -1136,7 +1136,7 @@ There are two ways to configure kubectl client.
     ```bash
     $ kubectl get pod -n aiopenscale | (head -n 1; grep payload-logging)
     NAME                                                           READY     STATUS    RESTARTS   AGE
-    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       Running  ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         6h
+    ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8        1/1       Running    1         6h
     ```
 
     Ensure that the status is **running** and it is fully ready **1/1**.  We will use `ai-open-scale-ibm-aios-payload-logging-865d488bfc-nqmz8` as our pod for the following examples.
@@ -1547,18 +1547,18 @@ The event stream consists of several services.  Please see subfolder for details
   ```bash
   $ kubectl get pods -n eventstream
   NAME                                                  READY     STATUS              RESTARTS   AGE
-  es-ibm-es-access-controller-deploy-54cd9bc959-899s7   2/2       Running             0          20d
-  es-ibm-es-access-controller-deploy-54cd9bc959-zcgx8   2/2       Running             0          16d
-  es-ibm-es-kafka-sts-0                                 4/4       Running             15         17d
+  es-ibm-es-access-controller-deploy-54cd9bc959-899s7   2/2       Running               0        20d
+  es-ibm-es-access-controller-deploy-54cd9bc959-zcgx8   2/2       Running               0        16d
+  es-ibm-es-kafka-sts-0                                 4/4       Running              15        17d
   es-ibm-es-kafka-sts-1                                 4/4       Running             264        15d
   es-ibm-es-kafka-sts-2                                 4/4       Running             370        22d
-  es-ibm-es-proxy-deploy-5866fbd8cb-jk6rd               1/1       Running             0          9d
-  es-ibm-es-proxy-deploy-5866fbd8cb-rjx5q               1/1       Running             0          9d
-  es-ibm-es-rest-deploy-585df7f77c-j2d5k                3/3       Running             0          22d
-  es-ibm-es-ui-deploy-6f59c7764c-7tlzn                  3/3       Running             55         16d
-  es-ibm-es-zookeeper-sts-0                             1/1       Running             0          17d
-  es-ibm-es-zookeeper-sts-1                             1/1       Running            ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling service         15d
-  es-ibm-es-zookeeper-sts-2                             1/1       Running   488        9d
+  es-ibm-es-proxy-deploy-5866fbd8cb-jk6rd               1/1       Running               0         9d
+  es-ibm-es-proxy-deploy-5866fbd8cb-rjx5q               1/1       Running               0         9d
+  es-ibm-es-rest-deploy-585df7f77c-j2d5k                3/3       Running               0        22d
+  es-ibm-es-ui-deploy-6f59c7764c-7tlzn                  3/3       Running              55        16d
+  es-ibm-es-zookeeper-sts-0                             1/1       Running               0        17d
+  es-ibm-es-zookeeper-sts-1                             1/1       Running               1        15d
+  es-ibm-es-zookeeper-sts-2                             1/1       Running             488         9d
   ```
 
 ---

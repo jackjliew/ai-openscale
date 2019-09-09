@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Quality metrics overview ![beta tag](images/beta.png)
+# Quality metrics overview
 {: #anlz_metrics}
 
 Use quality monitoring to determine how well your model predicts outcomes. When quality monitoring is enabled, it generates a set of metrics every hour by default. You can generate these metrics on demand by clicking the **Check quality now** button or by using the Python client.
@@ -55,25 +55,25 @@ To review related details, such as confusion matrix for binary and multi-class c
 
 The following quality metrics are supported by {{site.data.keyword.aios_short}}:
 
-- [Area under ROC](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_roc)
-- [Area under PR](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-area-pr)
-- [Proportion explained variance](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_var)
-- [Mean absolute error](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_abserror)
-- [Mean squared error](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_squerror)
-- [R squared](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_r_squared)
-- [Root of mean squared error](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-supqualdets_squ_errors_mean)
-- [Accuracy](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-accuracy-opener)
-- [Weighted True Positive Rate (wTPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality-wtpr)
-- [True positive rate (TPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_tpr)
-- [Weighted False Positive Rate (wFPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wfpr_weighted)
-- [False positive rate (FPR)](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_fpr_false)
-- [Weighted recall](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_weighted_recall)
-- [Recall](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_recall)
-- [Weighted precision](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wgth_prec)
-- [Precision](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_precision)
-- [Weighted F1-Measure](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_wght_f1-measure)
-- [F1-Measure](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_f1-measr)
-- [Logarithmic loss](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_log_loss)
+- [Area under ROC](/docs/services/ai-openscale?topic=ai-openscale-quality_roc)
+- [Area under PR](/docs/services/ai-openscale?topic=ai-openscale-quality-area-pr)
+- [Proportion explained variance](/docs/services/ai-openscale?topic=ai-openscale-quality_var)
+- [Mean absolute error](/docs/services/ai-openscale?topic=ai-openscale-quality_abserror)
+- [Mean squared error](/docs/services/ai-openscale?topic=ai-openscale-quality_squerror)
+- [R squared](/docs/services/ai-openscale?topic=ai-openscale-quality_r_squared)
+- [Root of mean squared error](/docs/services/ai-openscale?topic=ai-openscale-supqualdets_squ_errors_mean)
+- [Accuracy](/docs/services/ai-openscale?topic=ai-openscale-accuracy-opener)
+- [Weighted True Positive Rate (wTPR)](/docs/services/ai-openscale?topic=ai-openscale-quality-wtpr)
+- [True positive rate (TPR)](/docs/services/ai-openscale?topic=ai-openscale-quality_tpr)
+- [Weighted False Positive Rate (wFPR)](/docs/services/ai-openscale?topic=ai-openscale-quality_wfpr_weighted)
+- [False positive rate (FPR)](/docs/services/ai-openscale?topic=ai-openscale-quality_fpr_false)
+- [Weighted recall](/docs/services/ai-openscale?topic=ai-openscale-quality_weighted_recall)
+- [Recall](/docs/services/ai-openscale?topic=ai-openscale-quality_recall)
+- [Weighted precision](/docs/services/ai-openscale?topic=ai-openscale-quality_wgth_prec)
+- [Precision](/docs/services/ai-openscale?topic=ai-openscale-quality_precision)
+- [Weighted F1-Measure](/docs/services/ai-openscale?topic=ai-openscale-quality_wght_f1-measure)
+- [F1-Measure](/docs/services/ai-openscale?topic=ai-openscale-quality_f1-measr)
+- [Logarithmic loss](/docs/services/ai-openscale?topic=ai-openscale-quality_log_loss)
 
 ## Supported quality details
 {: #anlz_metrics_supqualdets_suppr_dets}

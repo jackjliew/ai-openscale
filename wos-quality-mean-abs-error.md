@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, Mean absolute error
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Mean absolute error ![beta tag](images/beta.png)
+# Mean absolute error
 {: #quality_abserror}
 
 Mean absolute error gives the mean of absolute difference between model prediction and target value.

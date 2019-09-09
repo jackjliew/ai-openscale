@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Root of mean squared error ![beta tag](images/beta.png)
+# Root of mean squared error
 {: #supqualdets_squ_errors_mean}
 
 The root-mean-squared error (RMSE) view shows the difference between the predicted and observed values in your model.

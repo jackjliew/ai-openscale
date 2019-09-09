@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: feedback data, data, feedback, models
 
@@ -212,7 +212,7 @@ You can upload feedback data from a CSV file directly in the {{site.data.keyword
 ### Uploading a CSV file
 {: #fmt-upld-fdbk-data-upld-csv}
 
-To upload a CSV file, use the **Add feedback data** button. To follow along with the following steps as part of the tutorial, open and copy the contents of the [`credit_feedback_data.csv`](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv) file.
+To upload a CSV file, use the **Add feedback data** button. To follow along with the following steps as part of the tutorial, open and copy the contents of the [`credit_feedback_data.csv`](https://raw.githubusercontent.com/watson-developer-cloud/doc-tutorial-downloads/master/ai-openscale/credit_feedback_data.csv){: external} file.
 
 1. From the {{site.data.keyword.aios_short}} dashboard, click the deployment tile.
 2. From the model deployment window, click **Configuration monitors** ![the deployment configuration button is shown](images/configure-deployment-button.png).

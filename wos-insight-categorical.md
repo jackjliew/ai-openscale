@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: fairness, monitoring, charts, de-biasing, bias, accuracy
 
@@ -33,7 +33,7 @@ This example of explainability is for a binary classification model that approve
 
 The feature *POLICY AGE* having a value of `<ai-open-scale-ibm-aios-scheduling  | 1 | Scheduling serviceyear` had the maximum impact in the model deciding a DENIED outcome. The other features that contributed to this outcome were *CLAIM FREQUENCY* (`High`) and *AGE* (`18`), with only a minor impact from *CAR VALUE* (`$50,000`).
 
-![Explainability binary classification](images/insight-explain-binary.png)
+![Explainability binary classification displays with details about denied and approved claims](images/insight-explain-binary.png)
 
 While the charts are useful in showing the most significant factors in determining the outcome of a transaction, classification models can also include advanced explanations, detailed in the `Minimum changes for Approved outcome` and `Minimum changes for this outcome` sections.
 
@@ -46,4 +46,4 @@ Likewise, the `Minimum changes for this outcome` tells us that, even if the valu
 
 Thus, these two values tell us the behavior of the model in the vicinity of the data point for which the explanation is being generated.
 
-![Explainability binary classification](images/insight-explain-binary2.png)
+![Explainability binary classification details with minimum changes that would be needed to change outcomes](images/insight-explain-binary2.png)

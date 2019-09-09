@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -196,7 +196,7 @@ You can view the recommended debiased scoring endpoint:
 
 The following fairness metrics are supported by {{site.data.keyword.aios_short}}:
 
-- [Fairness for a group](https://test.cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-quality_group)
+- [Fairness for a group](/docs/services/ai-openscale?topic=ai-openscale-quality_group)
 
 The following protected attributes are supported by {{site.data.keyword.aios_short}}: 
 

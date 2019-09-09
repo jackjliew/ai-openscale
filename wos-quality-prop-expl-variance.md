@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds, Proportion explained variance
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Proportion explained variance ![beta tag](images/beta.png)
+# Proportion explained variance
 {: #quality_var}
 
 Proportion explained variance gives the ratio of explained variance and target variance. Explained variance is the difference between target variance and variance of prediction error.

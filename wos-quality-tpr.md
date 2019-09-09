@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# True positive rate (TPR) ![beta tag](images/beta.png)
+# True positive rate (TPR)
 {: #quality_tpr}
 
 The True positive rate (TPR) gives the proportion of correct predictions in predictions of positive class. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-09-09"
 
 keywords: metrics, monitoring, custom metrics, thresholds
 
@@ -25,7 +25,7 @@ subcollection: ai-openscale
 {:swift: .ph data-hd-programlang='swift'}
 {:faq: data-hd-content-type='faq'}
 
-# Weighted True Positive Rate (wTPR) ![beta tag](images/beta.png)
+# Weighted True Positive Rate (wTPR)
 {: #quality-wtpr}
 
 The Weighted True Positive Rate gives the weighted mean of class TPR with weights equal to class probability.
