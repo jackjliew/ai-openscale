@@ -28,7 +28,7 @@ subcollection: ai-openscale
 # Drift detection
 {: #behavior-ovr}
 
-{{site.data.keyword.aios_short}} detects both [drift in accuracy](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr) and [drift in data](/docs/services/ai-openscale?topic=ai-openscale-behavior-anomalies). Drift is supported for structured data only. Regression models support data drift, while classification models support both data and accuracy drift.
+{{site.data.keyword.aios_short}} detects both [drift in accuracy](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr) and [drift in data](/docs/services/ai-openscale?topic=ai-openscale-behavior-anomalies). 
 {: shortdesc}
 
 - [Drop in accuracy](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-ovr)
@@ -40,3 +40,12 @@ subcollection: ai-openscale
   Estimates the drop in consistency of the data at runtime as compared to the characteristics of the data at training time. 
   
 A drop in either model accuracy or data consistency lead to a negative impact on the business outcomes that are associated with the model and must be addressed by retraining the model.
+
+## Limitations
+{: #behavior-ovr-limitations}
+
+The following limitations apply to the drift monitor:
+
+- Drift is supported for structured data only. 
+- Although classification models support both data and accuracy drift, regression models support only data drift. 
+- Drift is not supported for Python functions.

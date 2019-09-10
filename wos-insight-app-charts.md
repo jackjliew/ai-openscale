@@ -47,9 +47,9 @@ Watson OpenScale discovers if the relationship between selected KPI and associat
 
 The relationship between KPI and model metric can be one of the following broad categories:
 
-- **Strong correlation**: For every positive or negative change in model accuracy, there is definitely a corresponding positive or negative change in business KPI values. Clearly the two are related. This would be mathematically equivalent to the correlation coefficient of one (_r_ = 1).
-- **Some correlation**: For every positive or negative change in model accuracy, there is enough corresponding positive or negative change in business KPI values to state that there is correlation. The two are clearly related, just not very strongly. This would be mathematically equivalent to the correlation coefficient of one half (_r_ = 0.5).
-- **No correlation**: For every positive or negative change in model accuracy, there isn’t a corresponding positive or negative change in business KPI values. The two just aren’t related. This would be mathematically equivalent to the correlation coefficient of zero (_r_ = 0).
+- **Strong correlation**: For every positive or negative change in model accuracy, there is definitely a corresponding positive or negative change in business KPI values. Clearly the two are related. 
+- **Some correlation**: For every positive or negative change in model accuracy, there is enough corresponding positive or negative change in business KPI values to state that there is correlation. The two are clearly related, just not very strongly. 
+- **No correlation**: For every positive or negative change in model accuracy, there isn’t a corresponding positive or negative change in business KPI values. The two just aren’t related.
 
 The **Strong correlation** and **Some correlation** values are quantified in the following way:
 
