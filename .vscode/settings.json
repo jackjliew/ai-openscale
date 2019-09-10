@@ -1,4 +1,7 @@
 {
     "git.allowForcePush": true,
-    "git.autofetch": true
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "git.autofetch": true,
+    "npm.fetchOnlinePackageInfo": false
 }

@@ -32,3 +32,5 @@ Introductory text
 {: shortdesc}
 
 More text.
+
+- bullets
