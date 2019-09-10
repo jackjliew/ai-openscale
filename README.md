@@ -17,7 +17,7 @@ The following document explains everything that a content designer would need to
 ### Back up writers
 
 - Kevin MacDonald (former lead writer)
-- Jessica DiCarlo (former writer)
+- Jessica DiCarlo (former writer) In Pittsburgh office
 
 
 ## Recurring meetings
