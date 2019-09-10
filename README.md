@@ -30,7 +30,7 @@ Thursday: Weekly Dev Playbacks, weekly at 10:00am Eastern, chair: Rishi Patel ht
 
 ### Squad meetings / [4] Four-in-a-box
 
-As of 2019-08-02
+As of 2019-09-09
 
 | Squad | Time (EST) | Lead |
 |:---:|:---:|:---:|
