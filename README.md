@@ -11,7 +11,7 @@ The following document explains everything that a content designer would need to
 
 - Hai-Nhu Tran (director)
 - Wendy Switzer (manager)
-- Mike Sochka (lead writer)
+- Mike Sochka (lead writer/content designer)
 - Inge Halilovic (content strategist)
 
 ### Back up writers
