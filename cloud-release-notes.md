@@ -31,6 +31,22 @@ subcollection: ai-openscale
 This document outlines new features for {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
 
+## 9 August 2019
+{: #rn-9aug2019}
+
+The following new features and changes to {{site.data.keyword.aios_short}} are available.
+
+- __*Drift detection GA*__:
+  
+  Drift detection is now in GA and includes both drift in accuracy and drift in data.
+  For more information, see [Drift detection](/docs/services/ai-openscale?topic=ai-openscale-behavior-ovr).
+  
+- __*Business KPIs*__:  ![beta tag](images/beta.png)
+  Through an application monitor, you can monitor business KPIs as well as understand the impact of model metrics, such as model drift on an application’s business key performance indicators (KPIs).
+  
+  For more information, see [Configuring the application monitor](/docs/services/ai-openscale?topic=ai-openscale-app-monitor).
+
+
 ## 9 July 2019
 {: #rn-9jul2019}
 
