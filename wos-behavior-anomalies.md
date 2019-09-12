@@ -46,8 +46,9 @@ Drift is the degradation of predictive performance over time because of hidden c
 ### Do the math
 {: #behavior-anomalies-math}
 
-Data drift determines the extent of the drift in the features of the model. Every three hours, {{site.data.keyword.aios_short}} calculates data drift by analyzing all transactions for data inconsistency by
-comparing the transaction data with the training data. Where there are changes or discrepancies, {{site.data.keyword.aios_short}} calculates the extent of the data drift.
+
+
+Every three hours, {{site.data.keyword.aios_short}} analyzes each transaction for data inconsistency, by comparing the transaction content with the training data patterns. If a transaction violates one or more of the training data patterns, the transaction is marked as drifted. {{site.data.keyword.aios_short}} then estimates the magnitude of data inconsistency as the fraction of drifted transactions to the total number of transactions analyzed. Further, {{site.data.keyword.aios_short}} analyzes all the drifted transactions; and then, groups transactions that violate similar training data patterns into different clusters. In each cluster, {{site.data.keyword.aios_short}} also estimates the important features that played a major role in the data inconsistency and classifies their feature impact as large, some, and small.
 
 ### Drift visualization
 {: #behavior-anomalies-display}
