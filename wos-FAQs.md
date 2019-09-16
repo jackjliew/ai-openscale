@@ -55,20 +55,14 @@ Here you'll find some of the most frequently-asked questions from users of {{sit
 
 {{site.data.keyword.aios_full}} tracks and measures outcomes from your AI models, and helps ensure they remain fair, explainable and compliant wherever your models were built or are running. {{site.data.keyword.aios_short}} also detects and helps correct the drift in accuracy when an AI model is in production
 
-Get a quick overview of {{site.data.keyword.aios_short}} by watching the following videos.
+Get a quick overview of {{site.data.keyword.aios_short}} by watching the following video:
 
 <p>
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" id="ibmmediacenter" title="Mitigating AI Bias with IBM Watson OpenScale" type="text/html" width="640" height="390" src="https://mediacenter.ibm.com/media/1_fvsfm0fo" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+     <iframe class="embed-responsive-item" id="WOS-bias-vid" title="Mitigating AI Bias with IBM Watson OpenScale" type="text/html" src="https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kplayer&entry_id=1_1shu3261&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
   </div>
 </p>
 
-<p>&nbsp;</p>
-<p>
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" id="ibm" title="Watch Watson OpenScale detect and mitigate drift" type="text/html" width="640" height="390" src="https://www.ibm.com/cloud/watson-openscale/drift#" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
-  </div>
-</p>
 
 <p>&nbsp;</p>
 
