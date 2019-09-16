@@ -47,14 +47,16 @@ Get a quick overview of {{site.data.keyword.aios_short}} by watching the followi
 
 <p>
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" id="ibmmediacenter" title="Mitigating AI Bias with IBM Watson OpenScale" type="text/html" width="640" height="390" src="https://mediacenter.ibm.com/media/1_fvsfm0fo" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+     <iframe class="embed-responsive-item" id="WOS-bias-vid" title="Mitigating AI Bias with IBM Watson OpenScale" type="text/html" src="https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kplayer&entry_id=1_1shu3261&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
   </div>
 </p>
 
 <p>&nbsp;</p>
 <p>
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" id="ibm" title="Watch Watson OpenScale detect and mitigate drift" type="text/html" width="640" height="390" src="https://www.ibm.com/cloud/watson-openscale/drift#" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+
+<iframe class="embed-responsive-item" id="WOS-ibm-drift-vid" title="Watch Watson OpenScale detect and mitigate drift" type="text/html" src="https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&playerId=ibm-dynid-1_playercontainer&entry_id=1_8tp11bp7&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
   </div>
 </p>
 
