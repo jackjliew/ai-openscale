@@ -43,7 +43,7 @@ subcollection: ai-openscale
 ## Overview
 {: #gs-view-demo}
 
-Get a quick overview of {{site.data.keyword.aios_short}} by watching the following videos.
+Get a quick overview of {{site.data.keyword.aios_short}} by watching the following video.
 
 <p>
   <div class="embed-responsive embed-responsive-16by9">
