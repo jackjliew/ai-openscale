@@ -35,19 +35,29 @@ subcollection: ai-openscale
 # Getting started tutorial (automated setup)
 {: #gettingstarted}
 
-{{site.data.keyword.aios_full}} allows enterprises to automate and operationalize AI lifecycle in business applications, ensuring AI models are free from bias, can be easily explained and understood by business users, and are auditable in business transactions. {{site.data.keyword.aios_short}} supports AI models built and run in the tools and model serve frameworks of your choice.
+{{site.data.keyword.aios_full}} tracks and measures outcomes from your AI models, and helps ensure they remain fair, explainable and compliant wherever your models were built or are running. {{site.data.keyword.aios_short}} also detects and helps correct the drift in accuracy when an AI model is in production
 {: shortdesc}
+
+{{site.data.keyword.aios_full}} allows enterprises to automate and operationalize AI lifecycle in business applications, ensuring AI models are free from bias, can be easily explained and understood by business users, and are auditable in business transactions. {{site.data.keyword.aios_short}} supports AI models built and run in the tools and model serve frameworks of your choice.
 
 ## Overview
 {: #gs-view-demo}
 
-Get a quick overview of {{site.data.keyword.aios_short}} by watching this video.
+Get a quick overview of {{site.data.keyword.aios_short}} by watching the following videos.
 
 <p>
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" id="youtubeplayer" title="Trust and Transparency in AI" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/6Ei8rPVtCf8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+    <iframe class="embed-responsive-item" id="ibmmediacenter" title="Mitigating AI Bias with IBM Watson OpenScale" type="text/html" width="640" height="390" src="https://mediacenter.ibm.com/media/1_fvsfm0fo" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
   </div>
 </p>
+
+<p>&nbsp;</p>
+<p>
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" id="ibm" title="Watch Watson OpenScale detect and mitigate drift" type="text/html" width="640" height="390" src="https://www.ibm.com/cloud/watson-openscale/drift#" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+  </div>
+</p>
+
 
 ## Use case of {{site.data.keyword.aios_short}}
 {: #gs-use}
