@@ -25,6 +25,21 @@ subcollection: ai-openscale
 For each deployment, you can see explainability data for specific transactions. Transactions appear only when there is data to support the monitors and is based on the thresholds that you set, the time that monitors are scheduled to run, and availability of payload data from {{site.data.keyword.pm_full}}.
 {: shortdesc}
 
+Get a quick overview of explainability in {{site.data.keyword.aios_short}} by watching the following video:
+
+
+<p>
+  <div class="embed-responsive embed-responsive-16by9">
+
+
+     <iframe class="embed-responsive-item" id="WOS-bias-vid" title="Explainable AI Outcomes with IBM Watson OpenScale" type="text/html"src="https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kplayer&entry_id=1_fvsfm0fo&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+  </div>
+</p>
+
+<p>&nbsp;</p>
+
+
 ## Viewing explanations by transaction ID
 {: #ie-view}
 
