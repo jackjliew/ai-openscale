@@ -57,44 +57,6 @@ Drift is the degradation of predictive performance over time because of hidden c
 Every three hours, {{site.data.keyword.aios_short}} analyzes each transaction to estimate if the model prediction is accurate. If the model prediction is inaccurate, the transaction is marked as drifted. The Estimated accuracy is then calculated as the fraction of non-drifted transactions to the total number of transactions analyzed. The Base accuracy is the accuracy of the model on the training data. {{site.data.keyword.aios_short}} calculates the extent of the drift in accuracy as the difference between Base accuracy and Estimated accuracy. Further, {{site.data.keyword.aios_short}} analyzes all the drifted transactions; and then, groups transactions based on the similarity of each feature's contribution to the drift in accuracy. In each cluster, {{site.data.keyword.aios_short}} also estimates the important features that played a major role in the drift in accuracy and classifies their feature impact as large, some, and small. 
 
 
-### Drift visualization
-{: #behavior-drift-display}
-
-The drift visualization includes both graphical and numeric statistical data:
-
-![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-example.png)
-
-By clicking the chart, you can display specific transactions that contribute to drift. The top reasons for detected drift display and includes a natural-language description of the observation as well as a list of unexpected values.
-
-Specifically, from the **Select a transaction set from the chart or list below** section, you can choose the following views:
-
-- Transactions responsible for drop in accuracy
-  
-  The following example shows transactions that are responsible for drop in accuracy and data consistency for the German Credit Risk sample model:
-  
-  ![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-example-accuracy.png)
-
-- Transactions responsible for drop in accuracy and data consistency
-   
-  The following example shows transactions that are responsible for drop in accuracy and data consistency for the German Credit Risk sample model:
-  
-  ![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-example.png)
-  
-- Transactions responsible for drop in data consistency
-  
-  The following example shows transactions that are responsible for drop in accuracy and data consistency for the German Credit Risk sample model:
-  
-  ![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-example-data.png)
-
-The following example shows transactions that are responsible for drop in accuracy and data consistency for the German Credit Risk sample model:
-
-
-![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-example.png)
-
-Drift transactions are available in the transaction details screen, where you can click **Explain** to understand how a specific transaction has made it into the drift category:
-
-![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-transactions.png)
-
 
 ## Next steps
 

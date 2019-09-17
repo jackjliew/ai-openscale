@@ -50,22 +50,6 @@ Drift is the degradation of predictive performance over time because of hidden c
 
 Every three hours, {{site.data.keyword.aios_short}} analyzes each transaction for data inconsistency, by comparing the transaction content with the training data patterns. If a transaction violates one or more of the training data patterns, the transaction is marked as drifted. {{site.data.keyword.aios_short}} then estimates the magnitude of data inconsistency as the fraction of drifted transactions to the total number of transactions analyzed. Further, {{site.data.keyword.aios_short}} analyzes all the drifted transactions; and then, groups transactions that violate similar training data patterns into different clusters. In each cluster, {{site.data.keyword.aios_short}} also estimates the important features that played a major role in the data inconsistency and classifies their feature impact as large, some, and small.
 
-### Drift visualization
-{: #behavior-anomalies-display}
-
-The drift visualization includes both graphical and numeric statistical data:
-
-![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-example.png)
-
-By clicking the chart, you can display specific transactions that contribute to drift. The top reasons for detected drift display and includes a natural-language description of the observation as well as a list of unexpected values.
-
-![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-example.png)
-
-Drift transactions are available in the transaction details screen, where you can click **Explain** to understand how a specific transaction has made it into the drift category:
-
-![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-transactions.png)
-
-
 ## Next steps
 {: #behavior-anomalies-ns}
 

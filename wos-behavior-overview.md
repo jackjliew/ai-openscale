@@ -41,6 +41,40 @@ subcollection: ai-openscale
   
 A drop in either model accuracy or data consistency lead to a negative impact on the business outcomes that are associated with the model and must be addressed by retraining the model.
 
+### Drift visualization
+{: #behavior-drift-display}
+
+The drift visualization includes both graphical and numeric statistical data:
+
+![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-example.png)
+
+By clicking the chart, you can display specific transactions that contribute to drift. The top reasons for detected drift display and includes a natural-language description of the observation as well as a list of unexpected values.
+
+Specifically, from the **Select a transaction set from the chart or list below** section, you can choose the following views:
+
+- Transactions responsible for drop in accuracy
+  
+  The following example shows transactions that are responsible for drop in accuracy and data consistency for the German Credit Risk sample model:
+  
+  ![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-example-accuracy.png)
+
+- Transactions responsible for drop in accuracy and data consistency
+   
+  The following example shows transactions that are responsible for drop in accuracy and data consistency for the German Credit Risk sample model:
+  
+  ![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-example.png)
+  
+- Transactions responsible for drop in data consistency
+  
+  The following example shows transactions that are responsible for drop in accuracy and data consistency for the German Credit Risk sample model:
+  
+  ![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-example-data.png)
+
+- Drift transactions are available in the transaction details screen, where you can click **Explain** to understand how a specific transaction has made it into the drift category:
+  
+  ![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-transactions.png)
+
+
 ## Limitations
 {: #behavior-ovr-limitations}
 
