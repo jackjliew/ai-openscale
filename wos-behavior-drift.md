@@ -49,14 +49,12 @@ Drift is the degradation of predictive performance over time because of hidden c
 ### How it works
 {: #behavior-drift-works}
 
-{{site.data.keyword.aios_short}} analyzes all transactions to find the ones that contribute to drift. It then groups the records based on the attribute values that were significant in contributing to drift.
-
-
+{{site.data.keyword.aios_short}} analyzes all transactions to find the ones that contribute to accuracy drift. It then groups the transactions based on the similarity of each feature's contribution to the drift in accuracy.
 
 ### Do the math
 {: #behavior-drift-math}
 
-Accuracy drift determines the extent of the drift in accuracy of the model. Every three hours, {{site.data.keyword.aios_short}} calculates drift by analyzing the same training data that has already been analyzed by your predictive model. It then compares the results to the model's predictions. Where there are changes or discrepancies, {{site.data.keyword.aios_short}} calculates the extent of the drift and, based on the threshold that you set, alerts you to the occurrence. 
+Every three hours, {{site.data.keyword.aios_short}} analyzes each transaction to estimate if the model prediction is accurate. If the model prediction is inaccurate, the transaction is marked as drifted. The Estimated accuracy is then calculated as the fraction of non-drifted transactions to the total number of transactions analyzed. The Base accuracy is the accuracy of the model on the training data. {{site.data.keyword.aios_short}} calculates the extent of the drift in accuracy as the difference between Base accuracy and Estimated accuracy. Further, {{site.data.keyword.aios_short}} analyzes all the drifted transactions; and then, groups transactions based on the similarity of each feature's contribution to the drift in accuracy. In each cluster, {{site.data.keyword.aios_short}} also estimates the important features that played a major role in the drift in accuracy and classifies their feature impact as large, some, and small. 
 
 
 ### Drift visualization
