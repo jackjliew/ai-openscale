@@ -44,7 +44,7 @@ The following messages while completing the **Model details** section during con
 
 To fix the issue, you must determine which of the following conditions is causing the error and take corrective action:
 
-- If you use {{site.data.keyword.pm_full}} as your machine learning provider and the model type is XGBoost/scikit-learn refer to the {{site.data.keyword.pm_short}} [Python SDK documentation](http://wml-api-pyclient-dev.mybluemix.net/#repository) for important information about how to store the model.
+- If you use {{site.data.keyword.pm_full}} as your machine learning provider and the model type is XGBoost/scikit-learn refer to the {{site.data.keyword.pm_short}} [Python SDK documentation](http://wml-api-pyclient-dev.mybluemix.net/#repository){: external} for important information about how to store the model.
 
 - For all other cases, you must ensure that the training data column names match.
 
