@@ -29,7 +29,7 @@ subcollection: ai-openscale
 # Troubleshooting
 {: #ts-trouble}
 
-## Common issues for {{site.data.keyword.aios_full}}
+## Common issues for {{site.data.keyword.aios_short}}
 {: #ts-trouble-common}
 
 The following issues are common for both {{site.data.keyword.aios_full}} on Cloud and {{site.data.keyword.wos4d_full}}.
@@ -71,7 +71,7 @@ When you use the active debias API, there is a limit of 1000 records that can be
 
 To avoid loss of data, you must use the active debias API to score in chunks of 1000 records or fewer.
 
-## Issues specific to {{site.data.keyword.wos4d_full}}
+## Issues specific to {{site.data.keyword.wos4d_full_notm}}
 {: #ts-trouble-icp}
 
 The following issues are specific to {{site.data.keyword.wos4d_full}}:
