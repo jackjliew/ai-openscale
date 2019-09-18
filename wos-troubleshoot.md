@@ -34,6 +34,22 @@ subcollection: ai-openscale
 
 The following issues are common for both {{site.data.keyword.aios_full}} on Cloud and {{site.data.keyword.wos4d_full}}.
 
+### Error in running drift with XGBoost model
+{: #ts-trouble-common-xgboost-wml-model-details}
+
+The following messages while completing the **Model details** section during configuration indicate an input schema mismatch:
+
+- Field `feature_fields` references column `<name>`, which is missing in `input_schema`
+- Feature not found in input schema
+
+To fix the issue, you must determine which of the following conditions is causing the error and take corrective action:
+
+- If you use {{site.data.keyword.pm_full}} as your machine learning provider and the model type is XGBoost/scikit-learn refer to the {{site.data.keyword.pm_short}} [Python SDK documentation](http://wml-api-pyclient-dev.mybluemix.net/#repository) for important information about how to store the model.
+
+- For all other cases, you must ensure that the training data column names match.
+
+
+
 ### Payload analytics does not display properly
 {: #ts-trouble-common-payloadfileformat}
 
