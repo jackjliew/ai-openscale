@@ -31,6 +31,11 @@ subcollection: ai-openscale
 This document outlines new features for {{site.data.keyword.aios_full_notm}}.
 {: shortdesc}
 
+## 24 September 2019
+{: #rn-24sep2019}
+
+A new version of the {{site.data.keyword.aios_short}} Python SDK, ibm_ai_openscale-2.1.16, has been released. In addition to bug fixes, such as addressing the {{site.data.keyword.icpfull}} timeout issue the new version contains drift monitoring (including status messaging) and the ability to get a count of payload records. 
+
 ## 9 August 2019
 {: #rn-9aug2019}
 
