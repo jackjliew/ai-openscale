@@ -67,7 +67,7 @@ To automate the provisioning and configuration of the required {{site.data.keywo
 Run the following command:
 
 ```
-ibm-ai-openscale-cli --apikey <Your API key>
+ibm-ai-openscale-cli -a <Your API key>
 ```
 {: codeblock}
 
