@@ -71,7 +71,6 @@ Watson OpenScale
     {: .topicgroup}
     Get application insights
         wos-insight-app-overview.md
-        wos-insight-app-correlations.md
         wos-insight-app-performance_metrics.md
         wos-insight-app-charts.md
 
