@@ -89,6 +89,10 @@ Use a notebook to configure drift if you do not want to share the training data 
 
 This option is useful if the training data is not stored in Db2 or {{site.data.keyword.cos_full}}. Using a notebook, you must read the training data into a dataframe. The specialized notebook that you can download from {{site.data.keyword.aios_short}} then creates a specialized output that you can upload to {{site.data.keyword.aios_short}}.
 
+To generate the drift detection model, you must use scikit-learn version 0.20.2 in notebooks. 
+{: note}
+
+
 1. Create a notebook to generate the drift detection model. Use [the sample notebook](https://github.com/IBM-Watson/aios-data-distribution/blob/master/training_statistics_notebook.ipynb){: external} that is available from the {{site.data.keyword.aios_short}} UI.
    
    The drift detection model is converted into a .tar.gz file for you.

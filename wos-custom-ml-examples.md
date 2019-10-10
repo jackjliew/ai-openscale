@@ -36,6 +36,9 @@ Use the following examples to set up your own custom machine learning engine.
 
 The [Custom ML Engine example published on git](https://github.com/pmservice/ai-openscale-tutorials/tree/master/applications/custom-ml-engine-bluemix) is using python and flask to serve scikit-learn model.
 
+To generate the drift detection model, you must use scikit-learn version 0.20.2 in the notebook. 
+{: note}
+
 The [README file](https://github.com/pmservice/ai-openscale-tutorials/tree/master/applications/custom-ml-engine-bluemix) describes how the app can be deployed locally for testing purposes as well as cf application on IBM Cloud. The implementation of REST API endpoints can be found in [app.py file](https://github.com/pmservice/ai-openscale-tutorials/blob/master/applications/custom-ml-engine-bluemix/app.py).
 
 ## Node.js

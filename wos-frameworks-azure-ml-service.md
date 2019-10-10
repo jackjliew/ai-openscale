@@ -42,6 +42,9 @@ Table 1. Framework support details
 | scikit-learn | Regression | Structured |
 {: caption="Framework support details" caption-side="top"}
 
+To generate the drift detection model, you must use scikit-learn version 0.20.2 in notebooks. 
+{: note}
+
 ## Adding Microsoft Azure ML Service to {{site.data.keyword.aios_short}}
 {: #frmwrks-azureservice-addsrvc}
 

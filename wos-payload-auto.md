@@ -93,10 +93,13 @@ The following flowchart shows the custom machine learning engine solution in whi
 
 ![REST API endpoints specification](images/woscustommlworkflow.png)
 
+To generate the drift detection model, you must use scikit-learn version 0.20.2 in notebooks. 
+{: note}
+
 ### Steps
 {: #fmrk-workaround-smple-cd}
 
-1. Use a notebook to create a scoring endpoint for the credit risk model (scikit-learn) deployment on the Microsoft Azure Machine Learning Service. For more information, see [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20model%20with%20Azure%20ML%20Service%20and%20scikit-learn.ipynb){: external}.
+1. Use a notebook to create a scoring endpoint for the credit risk model (scikit-learn version 0.20.2) deployment on the Microsoft Azure Machine Learning Service. For more information, see [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20model%20with%20Azure%20ML%20Service%20and%20scikit-learn.ipynb){: external}.
 2. Create a custom machine learning engine and deploy it on Microsoft Azure Cloud as a Flask application. Create the perturbation and discovery endpoints. For more information, see [these deployment instructions](https://github.com/pmservice/ai-openscale-tutorials/tree/master/applications/custom-ml-engine-azure){: external}.
 3. Configure {{site.data.keyword.aios_short}} to work with the custom machine learning engine. For more information, see  [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/OpenScale%20and%20Custom%20ML%20Engine%20configuration.ipynb){: external}.
 4. Create a scoring endpoint wrapper that automates payload logging on the Microsoft Azure Machine Learning Service. For more information, see [this sample notebook](https://github.com/pmservice/ai-openscale-tutorials/blob/master/notebooks/azure/Credit%20scoring%20endpoint%20wrapper%20with%20payload%20logging.ipynb){: external}.

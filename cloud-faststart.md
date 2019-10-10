@@ -327,7 +327,7 @@ Adding the CSV file provides feedback data to your model.
 ## Configure the Drift monitor
 {: #gs-drift-config}
 
-For information about how to configure the Drift monitory, see [Configure the Drift Detection monitor](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).
+For information about how to configure the Drift monitor, see [Configure the Drift Detection monitor](/docs/services/ai-openscale?topic=ai-openscale-behavior-drift-config).
 
 ## Viewing results
 {: #gs-viewres}
