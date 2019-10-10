@@ -100,7 +100,7 @@ Specifically to configure monitors, you must provide the following information:
 
 - The transaction ID column
 
-  For example, for the tutorial, click the **transaction_id** tile.
+  For example, for the tutorial, click the **transaction_id** tile. The `transaction_id` value is required to connect a machine learning model with business applications and KPIs. Without a matching `transaction_id` column, it is impossible to track correlation between the two monitors.
 
 
 When you finish providing all the required information, a summary of your selections is presented for review. If you want to change anything, click the **Edit** link for that section, otherwise, save your work.
