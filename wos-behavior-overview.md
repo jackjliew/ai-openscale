@@ -74,6 +74,8 @@ Specifically, from the **Select a transaction set from the chart or list below**
   
   ![fairness metrics chart showing drift lower than the set threshold](images/wos-drift-detection-transactions.png)
 
+To send email notifications, click the **Share the recommendations** button. To enable this feature, you must first connect to an SMTP server that is configured in IBM® Cloud Pak for Data. For more information, see [Enabling email notifications](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/com.ibm.icpdata.doc/zen/install/smpt-config.html). ({{site.data.keyword.wos4d_full}} only.)
+{: note}
 
 ## Limitations
 {: #behavior-ovr-limitations}
