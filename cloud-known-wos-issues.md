@@ -135,7 +135,7 @@ If you are using a different load balancer, other than HAProxy, you may need to 
 
       curl -k -X GET \
       -user "$USERNAME:$PASSWORD" \
-      "https://{{icp_hostname}:{{icp_port}}/v1/preauth/validateAuth"
+      "https://{{icp_hostname}/v1/preauth/validateAuth"
 
       # the previous CURL request will return an auth token under "accessToken", that you will use as {icp_token} in the following payload logging request 
       # TODO: manually define and pass:
